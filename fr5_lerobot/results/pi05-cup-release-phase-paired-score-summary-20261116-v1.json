@@ -1,0 +1,1262 @@
+{
+  "schema": "fr5-cup-release-phase-paired-score-v1",
+  "original_inputs": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-fixed-clock-recovered-pgi-inputs-20261116-v7.json",
+  "corrected_inputs": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-fixed-clock-recovered-pgi-inputs-corrected-phase-20261116-v1.json",
+  "execution_receipt": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-release-phase-paired-inference-execution-20261116-v1.json",
+  "execution_status": "completed",
+  "source_root": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized",
+  "journal": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/target-command-journal.json",
+  "scope": {
+    "training_source_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "heldout_source_indices": [
+      7
+    ],
+    "evaluation_group": "heldout_source_7",
+    "case_count": 4,
+    "kind": "feedback_recovered"
+  },
+  "feedback": {
+    "current_valid_cases": 4,
+    "current_unknown_cases": 0,
+    "unknown_history_observations": 10
+  },
+  "action_shape": [
+    50,
+    7
+  ],
+  "execution_prefix_points": 3,
+  "scored_horizons": [
+    3,
+    10
+  ],
+  "clock": "recorded camera monotonic plus tick/6 seconds; original executed jaw targets",
+  "timing": "clamped integer percent; one-point deadband; one tick allowed after recorded opening",
+  "selector_matched_source": "applied saved proposal traces; not_applied is unassessed",
+  "scoring_device": "cpu",
+  "inference_reruns": 0,
+  "training_runs": 0,
+  "robot_connections": 0,
+  "robot_commands": 0,
+  "task_success_verified": false,
+  "limitations": [
+    "Offline scores establish no physical motion or task success.",
+    "Prefix10 is diagnostic; the saved policy execution prefix is three points.",
+    "Both prompts are scored against the original recorded jaw commands.",
+    "Late opening remains unassessed when already open or the deadline lies outside the prefix.",
+    "Other input tensors and tensor dtypes retain the saved probe assertions; CPU checks compare archived channel values, shapes, changed indices and RNG states."
+  ],
+  "validation": {
+    "cpu_unit_tests": 18,
+    "passed": true,
+    "modules": [
+      "fr5_lerobot.tests.test_score_cup_release_phase_probe",
+      "fr5_lerobot.tests.test_score_cup_feedback_recovery"
+    ],
+    "scoring_dependencies_equal_to_shared_workspace": [
+      "evaluate_cup_timing_policy.py",
+      "probe_cup_release_phase.py",
+      "score_cup_feedback_recovery.py",
+      "score_cup_proposal_trace.py",
+      "score_cup_boundary_replay.py"
+    ]
+  },
+  "full_score": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-release-phase-paired-score-20261116-v1.json",
+  "runs": [
+    {
+      "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-cup-fixed-clock-n3-20261116-v7/step-000128",
+      "task_override": null,
+      "seeds": [
+        20261105,
+        20261113,
+        20261114,
+        20261115,
+        20261116,
+        20261117,
+        20261201,
+        20261202,
+        20261203,
+        20261204,
+        20261205,
+        20261206
+      ],
+      "paired_evidence": {
+        "case_seed_pairs": 48,
+        "paired_complete_draws": 48,
+        "pre_sampling_cuda_rng_equal": 48,
+        "denoising_steps_equal": 48,
+        "other_tensors_claimed_equal_draws": 48,
+        "unpaired_complete_draws": {
+          "original": 0,
+          "corrected": 0
+        },
+        "all_draws_paired": true,
+        "channels": {
+          "observation.cup_action_clock": {
+            "equal_draws": 24,
+            "changed_draws": 24,
+            "saved_evidence_consistent_draws": 48,
+            "shape": [
+              1,
+              25
+            ],
+            "changed_element_count_range": [
+              2,
+              2
+            ]
+          },
+          "observation.language.tokens": {
+            "equal_draws": 24,
+            "changed_draws": 24,
+            "saved_evidence_consistent_draws": 48,
+            "shape": [
+              1,
+              512
+            ],
+            "changed_element_count_range": [
+              353,
+              354
+            ]
+          },
+          "observation.language.attention_mask": {
+            "equal_draws": 24,
+            "changed_draws": 24,
+            "saved_evidence_consistent_draws": 48,
+            "shape": [
+              1,
+              512
+            ],
+            "changed_element_count_range": [
+              1,
+              1
+            ]
+          }
+        },
+        "released_clock_changed_indices": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            9
+          ]
+        ],
+        "other_tensor_keys": [
+          "observation.images.base_0_rgb",
+          "observation.state"
+        ],
+        "other_tensor_equality_evidence": "saved probe assertion; these tensor values were not archived",
+        "contact_controls": {
+          "case_seed_pairs": 24,
+          "raw_first_complete_actions_equal": 24,
+          "raw_first_complete_actions_changed": 0,
+          "selected_complete_actions_equal": 24,
+          "selected_complete_actions_changed": 0,
+          "paired_candidates": 24,
+          "paired_candidates_complete_actions_equal": 24,
+          "saved_input_channels_equal_draws": 24,
+          "all_50x7_actions_elementwise_equal": true
+        },
+        "released_interventions": {
+          "case_seed_pairs": 24,
+          "raw_first_complete_actions_equal": 0,
+          "raw_first_complete_actions_changed": 24,
+          "selected_complete_actions_equal": 0,
+          "selected_complete_actions_changed": 24,
+          "clock_phase_slots_only_draws": 24
+        },
+        "consistent_with_saved_probe_evidence": true,
+        "issues": []
+      },
+      "probe_float_thresholds": {
+        "early_close_below_fraction": 0.88,
+        "full_open_at_least_fraction": 0.98
+      },
+      "model": "fixed-v7",
+      "prompt": "original",
+      "prediction_source": "/home/data4/hts/demo1/fr5-learning/evaluations/pi05-cup-release-phase-fixed-v7-original-20261116-v1.json",
+      "execution": {
+        "model": "fixed-v7",
+        "prompt": "original",
+        "pid": 970130,
+        "started_at_unix": 1794829757.81852,
+        "finished_at_unix": 1794829928.059328,
+        "exit_code": 0
+      },
+      "conditions": {
+        "original": {
+          "summary": {
+            "total": 48,
+            "assessed": 48,
+            "unassessed": 0,
+            "reported_matched": 24,
+            "trace_matched": 24,
+            "single_draw_without_selector": 24,
+            "draw_counts": {
+              "1": 48
+            },
+            "first_selected_complete_actions_equal": 48,
+            "selected": {
+              "prefix_3": {
+                "early_close_draws": 1,
+                "early_open_draws": 0,
+                "early_close_events": 1,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              },
+              "prefix_10": {
+                "early_close_draws": 1,
+                "early_open_draws": 0,
+                "early_close_events": 1,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              }
+            },
+            "selector_status": {
+              "not_applied": 24,
+              "matched": 24
+            },
+            "unknown_feedback_predictions": 0,
+            "raw_first": {
+              "prefix_3": {
+                "early_close_draws": 1,
+                "early_open_draws": 0,
+                "early_close_events": 1,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              },
+              "prefix_10": {
+                "early_close_draws": 1,
+                "early_open_draws": 0,
+                "early_close_events": 1,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              }
+            }
+          },
+          "geometry_summary": {
+            "raw_first": {
+              "assessed": 48,
+              "rejected": 0,
+              "close_then_reopen": 1
+            },
+            "selected": {
+              "assessed": 48,
+              "rejected": 0,
+              "close_then_reopen": 1
+            }
+          }
+        },
+        "corrected": {
+          "summary": {
+            "total": 48,
+            "assessed": 48,
+            "unassessed": 0,
+            "reported_matched": 0,
+            "trace_matched": 0,
+            "single_draw_without_selector": 48,
+            "draw_counts": {
+              "1": 48
+            },
+            "first_selected_complete_actions_equal": 48,
+            "selected": {
+              "prefix_3": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              },
+              "prefix_10": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              }
+            },
+            "selector_status": {
+              "not_applied": 48
+            },
+            "unknown_feedback_predictions": 0,
+            "raw_first": {
+              "prefix_3": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              },
+              "prefix_10": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              }
+            }
+          },
+          "geometry_summary": {
+            "raw_first": {
+              "assessed": 48,
+              "rejected": 0,
+              "close_then_reopen": 0
+            },
+            "selected": {
+              "assessed": 48,
+              "rejected": 0,
+              "close_then_reopen": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-cup-fixed-clock-n3-20261116-v7/step-000128",
+      "task_override": "抓取桌面上的透明杯子，在空中维持5秒后放下",
+      "seeds": [
+        20261105,
+        20261113,
+        20261114,
+        20261115,
+        20261116,
+        20261117,
+        20261201,
+        20261202,
+        20261203,
+        20261204,
+        20261205,
+        20261206
+      ],
+      "paired_evidence": {
+        "case_seed_pairs": 48,
+        "paired_complete_draws": 48,
+        "pre_sampling_cuda_rng_equal": 48,
+        "denoising_steps_equal": 48,
+        "other_tensors_claimed_equal_draws": 48,
+        "unpaired_complete_draws": {
+          "original": 0,
+          "corrected": 0
+        },
+        "all_draws_paired": true,
+        "channels": {
+          "observation.cup_action_clock": {
+            "equal_draws": 24,
+            "changed_draws": 24,
+            "saved_evidence_consistent_draws": 48,
+            "shape": [
+              1,
+              25
+            ],
+            "changed_element_count_range": [
+              2,
+              2
+            ]
+          },
+          "observation.language.tokens": {
+            "equal_draws": 24,
+            "changed_draws": 24,
+            "saved_evidence_consistent_draws": 48,
+            "shape": [
+              1,
+              512
+            ],
+            "changed_element_count_range": [
+              353,
+              354
+            ]
+          },
+          "observation.language.attention_mask": {
+            "equal_draws": 24,
+            "changed_draws": 24,
+            "saved_evidence_consistent_draws": 48,
+            "shape": [
+              1,
+              512
+            ],
+            "changed_element_count_range": [
+              1,
+              1
+            ]
+          }
+        },
+        "released_clock_changed_indices": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            9
+          ]
+        ],
+        "other_tensor_keys": [
+          "observation.images.base_0_rgb",
+          "observation.state"
+        ],
+        "other_tensor_equality_evidence": "saved probe assertion; these tensor values were not archived",
+        "contact_controls": {
+          "case_seed_pairs": 24,
+          "raw_first_complete_actions_equal": 24,
+          "raw_first_complete_actions_changed": 0,
+          "selected_complete_actions_equal": 24,
+          "selected_complete_actions_changed": 0,
+          "paired_candidates": 24,
+          "paired_candidates_complete_actions_equal": 24,
+          "saved_input_channels_equal_draws": 24,
+          "all_50x7_actions_elementwise_equal": true
+        },
+        "released_interventions": {
+          "case_seed_pairs": 24,
+          "raw_first_complete_actions_equal": 0,
+          "raw_first_complete_actions_changed": 24,
+          "selected_complete_actions_equal": 0,
+          "selected_complete_actions_changed": 24,
+          "clock_phase_slots_only_draws": 24
+        },
+        "consistent_with_saved_probe_evidence": true,
+        "issues": []
+      },
+      "probe_float_thresholds": {
+        "early_close_below_fraction": 0.88,
+        "full_open_at_least_fraction": 0.98
+      },
+      "model": "fixed-v7",
+      "prompt": "five-second",
+      "prediction_source": "/home/data4/hts/demo1/fr5-learning/evaluations/pi05-cup-release-phase-fixed-v7-five-second-20261116-v1.json",
+      "execution": {
+        "model": "fixed-v7",
+        "prompt": "five-second",
+        "pid": 973904,
+        "started_at_unix": 1794829928.0599396,
+        "finished_at_unix": 1794830095.0240638,
+        "exit_code": 0
+      },
+      "conditions": {
+        "original": {
+          "summary": {
+            "total": 48,
+            "assessed": 48,
+            "unassessed": 0,
+            "reported_matched": 24,
+            "trace_matched": 24,
+            "single_draw_without_selector": 24,
+            "draw_counts": {
+              "1": 48
+            },
+            "first_selected_complete_actions_equal": 48,
+            "selected": {
+              "prefix_3": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              },
+              "prefix_10": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              }
+            },
+            "selector_status": {
+              "not_applied": 24,
+              "matched": 24
+            },
+            "unknown_feedback_predictions": 0,
+            "raw_first": {
+              "prefix_3": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              },
+              "prefix_10": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              }
+            }
+          },
+          "geometry_summary": {
+            "raw_first": {
+              "assessed": 48,
+              "rejected": 0,
+              "close_then_reopen": 0
+            },
+            "selected": {
+              "assessed": 48,
+              "rejected": 0,
+              "close_then_reopen": 0
+            }
+          }
+        },
+        "corrected": {
+          "summary": {
+            "total": 48,
+            "assessed": 48,
+            "unassessed": 0,
+            "reported_matched": 0,
+            "trace_matched": 0,
+            "single_draw_without_selector": 48,
+            "draw_counts": {
+              "1": 48
+            },
+            "first_selected_complete_actions_equal": 48,
+            "selected": {
+              "prefix_3": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              },
+              "prefix_10": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              }
+            },
+            "selector_status": {
+              "not_applied": 48
+            },
+            "unknown_feedback_predictions": 0,
+            "raw_first": {
+              "prefix_3": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              },
+              "prefix_10": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              }
+            }
+          },
+          "geometry_summary": {
+            "raw_first": {
+              "assessed": 48,
+              "rejected": 0,
+              "close_then_reopen": 0
+            },
+            "selected": {
+              "assessed": 48,
+              "rejected": 0,
+              "close_then_reopen": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-cup-input-coverage-n3-20261116-v8/step-000256",
+      "task_override": null,
+      "seeds": [
+        20261105,
+        20261113,
+        20261114,
+        20261115,
+        20261116,
+        20261117,
+        20261201,
+        20261202,
+        20261203,
+        20261204,
+        20261205,
+        20261206
+      ],
+      "paired_evidence": {
+        "case_seed_pairs": 48,
+        "paired_complete_draws": 48,
+        "pre_sampling_cuda_rng_equal": 48,
+        "denoising_steps_equal": 48,
+        "other_tensors_claimed_equal_draws": 48,
+        "unpaired_complete_draws": {
+          "original": 0,
+          "corrected": 0
+        },
+        "all_draws_paired": true,
+        "channels": {
+          "observation.cup_action_clock": {
+            "equal_draws": 24,
+            "changed_draws": 24,
+            "saved_evidence_consistent_draws": 48,
+            "shape": [
+              1,
+              25
+            ],
+            "changed_element_count_range": [
+              2,
+              2
+            ]
+          },
+          "observation.language.tokens": {
+            "equal_draws": 24,
+            "changed_draws": 24,
+            "saved_evidence_consistent_draws": 48,
+            "shape": [
+              1,
+              512
+            ],
+            "changed_element_count_range": [
+              353,
+              354
+            ]
+          },
+          "observation.language.attention_mask": {
+            "equal_draws": 24,
+            "changed_draws": 24,
+            "saved_evidence_consistent_draws": 48,
+            "shape": [
+              1,
+              512
+            ],
+            "changed_element_count_range": [
+              1,
+              1
+            ]
+          }
+        },
+        "released_clock_changed_indices": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            9
+          ]
+        ],
+        "other_tensor_keys": [
+          "observation.images.base_0_rgb",
+          "observation.state"
+        ],
+        "other_tensor_equality_evidence": "saved probe assertion; these tensor values were not archived",
+        "contact_controls": {
+          "case_seed_pairs": 24,
+          "raw_first_complete_actions_equal": 24,
+          "raw_first_complete_actions_changed": 0,
+          "selected_complete_actions_equal": 24,
+          "selected_complete_actions_changed": 0,
+          "paired_candidates": 24,
+          "paired_candidates_complete_actions_equal": 24,
+          "saved_input_channels_equal_draws": 24,
+          "all_50x7_actions_elementwise_equal": true
+        },
+        "released_interventions": {
+          "case_seed_pairs": 24,
+          "raw_first_complete_actions_equal": 0,
+          "raw_first_complete_actions_changed": 24,
+          "selected_complete_actions_equal": 0,
+          "selected_complete_actions_changed": 24,
+          "clock_phase_slots_only_draws": 24
+        },
+        "consistent_with_saved_probe_evidence": true,
+        "issues": []
+      },
+      "probe_float_thresholds": {
+        "early_close_below_fraction": 0.88,
+        "full_open_at_least_fraction": 0.98
+      },
+      "model": "coverage-v8",
+      "prompt": "original",
+      "prediction_source": "/home/data4/hts/demo1/fr5-learning/evaluations/pi05-cup-release-phase-coverage-v8-original-20261116-v1.json",
+      "execution": {
+        "model": "coverage-v8",
+        "prompt": "original",
+        "pid": 976333,
+        "started_at_unix": 1794830095.0248623,
+        "finished_at_unix": 1794830262.5265822,
+        "exit_code": 0
+      },
+      "conditions": {
+        "original": {
+          "summary": {
+            "total": 48,
+            "assessed": 48,
+            "unassessed": 0,
+            "reported_matched": 24,
+            "trace_matched": 24,
+            "single_draw_without_selector": 24,
+            "draw_counts": {
+              "1": 48
+            },
+            "first_selected_complete_actions_equal": 48,
+            "selected": {
+              "prefix_3": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              },
+              "prefix_10": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              }
+            },
+            "selector_status": {
+              "not_applied": 24,
+              "matched": 24
+            },
+            "unknown_feedback_predictions": 0,
+            "raw_first": {
+              "prefix_3": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              },
+              "prefix_10": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              }
+            }
+          },
+          "geometry_summary": {
+            "raw_first": {
+              "assessed": 48,
+              "rejected": 0,
+              "close_then_reopen": 0
+            },
+            "selected": {
+              "assessed": 48,
+              "rejected": 0,
+              "close_then_reopen": 0
+            }
+          }
+        },
+        "corrected": {
+          "summary": {
+            "total": 48,
+            "assessed": 48,
+            "unassessed": 0,
+            "reported_matched": 0,
+            "trace_matched": 0,
+            "single_draw_without_selector": 48,
+            "draw_counts": {
+              "1": 48
+            },
+            "first_selected_complete_actions_equal": 48,
+            "selected": {
+              "prefix_3": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              },
+              "prefix_10": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              }
+            },
+            "selector_status": {
+              "not_applied": 48
+            },
+            "unknown_feedback_predictions": 0,
+            "raw_first": {
+              "prefix_3": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              },
+              "prefix_10": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              }
+            }
+          },
+          "geometry_summary": {
+            "raw_first": {
+              "assessed": 48,
+              "rejected": 0,
+              "close_then_reopen": 0
+            },
+            "selected": {
+              "assessed": 48,
+              "rejected": 0,
+              "close_then_reopen": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-cup-input-coverage-n3-20261116-v8/step-000256",
+      "task_override": "抓取桌面上的透明杯子，在空中维持5秒后放下",
+      "seeds": [
+        20261105,
+        20261113,
+        20261114,
+        20261115,
+        20261116,
+        20261117,
+        20261201,
+        20261202,
+        20261203,
+        20261204,
+        20261205,
+        20261206
+      ],
+      "paired_evidence": {
+        "case_seed_pairs": 48,
+        "paired_complete_draws": 48,
+        "pre_sampling_cuda_rng_equal": 48,
+        "denoising_steps_equal": 48,
+        "other_tensors_claimed_equal_draws": 48,
+        "unpaired_complete_draws": {
+          "original": 0,
+          "corrected": 0
+        },
+        "all_draws_paired": true,
+        "channels": {
+          "observation.cup_action_clock": {
+            "equal_draws": 24,
+            "changed_draws": 24,
+            "saved_evidence_consistent_draws": 48,
+            "shape": [
+              1,
+              25
+            ],
+            "changed_element_count_range": [
+              2,
+              2
+            ]
+          },
+          "observation.language.tokens": {
+            "equal_draws": 24,
+            "changed_draws": 24,
+            "saved_evidence_consistent_draws": 48,
+            "shape": [
+              1,
+              512
+            ],
+            "changed_element_count_range": [
+              353,
+              354
+            ]
+          },
+          "observation.language.attention_mask": {
+            "equal_draws": 24,
+            "changed_draws": 24,
+            "saved_evidence_consistent_draws": 48,
+            "shape": [
+              1,
+              512
+            ],
+            "changed_element_count_range": [
+              1,
+              1
+            ]
+          }
+        },
+        "released_clock_changed_indices": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            9
+          ]
+        ],
+        "other_tensor_keys": [
+          "observation.images.base_0_rgb",
+          "observation.state"
+        ],
+        "other_tensor_equality_evidence": "saved probe assertion; these tensor values were not archived",
+        "contact_controls": {
+          "case_seed_pairs": 24,
+          "raw_first_complete_actions_equal": 24,
+          "raw_first_complete_actions_changed": 0,
+          "selected_complete_actions_equal": 24,
+          "selected_complete_actions_changed": 0,
+          "paired_candidates": 24,
+          "paired_candidates_complete_actions_equal": 24,
+          "saved_input_channels_equal_draws": 24,
+          "all_50x7_actions_elementwise_equal": true
+        },
+        "released_interventions": {
+          "case_seed_pairs": 24,
+          "raw_first_complete_actions_equal": 0,
+          "raw_first_complete_actions_changed": 24,
+          "selected_complete_actions_equal": 0,
+          "selected_complete_actions_changed": 24,
+          "clock_phase_slots_only_draws": 24
+        },
+        "consistent_with_saved_probe_evidence": true,
+        "issues": []
+      },
+      "probe_float_thresholds": {
+        "early_close_below_fraction": 0.88,
+        "full_open_at_least_fraction": 0.98
+      },
+      "model": "coverage-v8",
+      "prompt": "five-second",
+      "prediction_source": "/home/data4/hts/demo1/fr5-learning/evaluations/pi05-cup-release-phase-coverage-v8-five-second-20261116-v1.json",
+      "execution": {
+        "model": "coverage-v8",
+        "prompt": "five-second",
+        "pid": 978923,
+        "started_at_unix": 1794830262.5273514,
+        "finished_at_unix": 1794830426.7315047,
+        "exit_code": 0
+      },
+      "conditions": {
+        "original": {
+          "summary": {
+            "total": 48,
+            "assessed": 48,
+            "unassessed": 0,
+            "reported_matched": 24,
+            "trace_matched": 24,
+            "single_draw_without_selector": 24,
+            "draw_counts": {
+              "1": 48
+            },
+            "first_selected_complete_actions_equal": 48,
+            "selected": {
+              "prefix_3": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              },
+              "prefix_10": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              }
+            },
+            "selector_status": {
+              "not_applied": 24,
+              "matched": 24
+            },
+            "unknown_feedback_predictions": 0,
+            "raw_first": {
+              "prefix_3": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              },
+              "prefix_10": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              }
+            }
+          },
+          "geometry_summary": {
+            "raw_first": {
+              "assessed": 48,
+              "rejected": 0,
+              "close_then_reopen": 0
+            },
+            "selected": {
+              "assessed": 48,
+              "rejected": 0,
+              "close_then_reopen": 0
+            }
+          }
+        },
+        "corrected": {
+          "summary": {
+            "total": 48,
+            "assessed": 48,
+            "unassessed": 0,
+            "reported_matched": 0,
+            "trace_matched": 0,
+            "single_draw_without_selector": 48,
+            "draw_counts": {
+              "1": 48
+            },
+            "first_selected_complete_actions_equal": 48,
+            "selected": {
+              "prefix_3": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              },
+              "prefix_10": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              }
+            },
+            "selector_status": {
+              "not_applied": 48
+            },
+            "unknown_feedback_predictions": 0,
+            "raw_first": {
+              "prefix_3": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              },
+              "prefix_10": {
+                "early_close_draws": 0,
+                "early_open_draws": 0,
+                "early_close_events": 0,
+                "early_open_events": 0,
+                "late_open_assessed": 0,
+                "late_or_missing_open": 0,
+                "late_open_status": {
+                  "release_deadline_outside_prefix": 24,
+                  "already_open_at_observation": 24
+                },
+                "late_open_unassessed": 48
+              }
+            }
+          },
+          "geometry_summary": {
+            "raw_first": {
+              "assessed": 48,
+              "rejected": 0,
+              "close_then_reopen": 0
+            },
+            "selected": {
+              "assessed": 48,
+              "rejected": 0,
+              "close_then_reopen": 0
+            }
+          }
+        }
+      }
+    }
+  ]
+}

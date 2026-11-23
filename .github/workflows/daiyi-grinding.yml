@@ -1,0 +1,36 @@
+name: Daiyi grinding
+
+on:
+  push:
+    paths:
+      - 'packages/daiyi_grinding/**'
+      - '.github/workflows/daiyi-grinding.yml'
+  pull_request:
+    paths:
+      - 'packages/daiyi_grinding/**'
+      - '.github/workflows/daiyi-grinding.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/daiyi_grinding
+    env:
+      MUJOCO_GL: egl
+      LIBGL_ALWAYS_SOFTWARE: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install EGL
+        run: sudo apt-get update && sudo apt-get install -y libegl1 libgl1
+      - name: Install project
+        run: bash scripts/bootstrap.sh
+      - name: Check source
+        run: |
+          .venv/bin/python -m ruff check src tests
+          .venv/bin/python -m ruff format --check src tests
+      - name: Verify entry points and simulation
+        run: bash scripts/verify.sh

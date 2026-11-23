@@ -1,0 +1,915 @@
+{
+  "schema": "fr5-cup-trial-action-time-audit-v1",
+  "dataset_role": "evaluation_only",
+  "robot_commands": 0,
+  "model_inferences": 0,
+  "task_success_verified": false,
+  "physical_successes": 0,
+  "demonstrations": {
+    "user_confirmed_count": 8,
+    "train_sources": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "holdout_sources": [
+      7
+    ],
+    "failed_trials": "evaluation_only"
+  },
+  "fixed_reference_cup_relative_xyz_mm": [
+    159.7,
+    71.3,
+    95.8
+  ],
+  "summary": {
+    "recorded_prediction_chunks": 36,
+    "complete_executed_chunks": 35,
+    "unexecuted_chunks": 1,
+    "partial_executed_chunks": 0,
+    "submitted_targets": 105,
+    "acknowledged_targets": 105,
+    "submission_raw_actions_matching_model_reply": 105,
+    "recorded_feedback_frames": 321,
+    "recorded_trial_move_gripper_commands": 0,
+    "timing_s": {
+      "request_to_observation_ready_s": {
+        "count": 35,
+        "median": 0.17570923899984336,
+        "min": 0.0011185440002918767,
+        "max": 0.3094899709999481,
+        "sum": 6.180127571000412
+      },
+      "camera_to_packet_received_s": {
+        "count": 35,
+        "median": 0.06584626399990157,
+        "min": 0.02101265900000726,
+        "max": 0.11126881100017272,
+        "sum": 2.3371736040016913
+      },
+      "camera_to_observation_ready_s": {
+        "count": 35,
+        "median": 0.10211576099982267,
+        "min": 0.05669417199987947,
+        "max": 0.15654238900015116,
+        "sum": 3.654144490998533
+      },
+      "observation_ready_to_predict_start_s": {
+        "count": 35,
+        "median": 0.000729953999780264,
+        "min": 0.0006437500001084118,
+        "max": 0.0015332269999817072,
+        "sum": 0.029756557001292094
+      },
+      "client_prediction_call_s": {
+        "count": 35,
+        "median": 0.5641500060000908,
+        "min": 0.49513836999994965,
+        "max": 1.6410418370005573,
+        "sum": 21.98946319800143
+      },
+      "server_model_inference_s": {
+        "count": 35,
+        "median": 0.35865979600930586,
+        "min": 0.33336293895263225,
+        "max": 1.0850473030586727,
+        "sum": 14.267227449803613
+      },
+      "client_prediction_nonmodel_s": {
+        "count": 35,
+        "median": 0.19849590699050168,
+        "min": 0.1436739790124193,
+        "max": 0.5559945339418846,
+        "sum": 7.722235748197818
+      },
+      "result_to_first_submit_s": {
+        "count": 35,
+        "median": 0.0899469789997056,
+        "min": 0.07645987700016121,
+        "max": 0.11114141500002006,
+        "sum": 3.1425897899966913
+      },
+      "camera_to_first_submit_s": {
+        "count": 35,
+        "median": 0.7597488729998076,
+        "min": 0.6762284590004128,
+        "max": 1.7885437370000545,
+        "sum": 28.815954035997947
+      },
+      "first_submit_to_last_ack_s": {
+        "count": 35,
+        "median": 0.5349377259999528,
+        "min": 0.5259386910001922,
+        "max": 0.54079135999973,
+        "sum": 18.70030542300219
+      },
+      "previous_last_ack_to_first_submit_s": {
+        "count": 34,
+        "median": 0.8258533804998933,
+        "min": 0.7465714300001309,
+        "max": 1.8308999119999498,
+        "sum": 30.640277703997526
+      },
+      "previous_last_ack_to_request_s": {
+        "count": 34,
+        "median": 6.504249995487044e-05,
+        "min": 5.2332999985083006e-05,
+        "max": 0.00017202399976667948,
+        "sum": 0.0026740059979601938
+      }
+    },
+    "ack_endpoint_throughput_hz": 2.1280656479015714,
+    "first_submit_to_final_ack_s": 49.34058312699972,
+    "all_submitted_targets": {
+      "count": 105,
+      "compared_count": 105,
+      "unassessed_count": 0,
+      "positive_at_camera_negative_at_submit_count": 3,
+      "camera_anchor_directions": {
+        "positive": 54,
+        "negative_under_1mm": 32,
+        "negative_at_least_1mm": 19
+      },
+      "pre_submit_directions": {
+        "positive": 55,
+        "negative_under_1mm": 36,
+        "negative_at_least_1mm": 14
+      },
+      "camera_anchor_progress_mm": {
+        "count": 105,
+        "median": 0.07336973879654707,
+        "min": -3.7572909268666734,
+        "max": 4.36907483854095
+      },
+      "pre_submit_progress_mm": {
+        "count": 105,
+        "median": 0.03292014629585438,
+        "min": -2.3946558068985553,
+        "max": 3.1698585747030634
+      }
+    },
+    "chunk_endpoint_at_first_submit": {
+      "count": 35,
+      "compared_count": 35,
+      "unassessed_count": 0,
+      "positive_at_camera_negative_at_submit_count": 0,
+      "camera_anchor_directions": {
+        "positive": 18,
+        "negative_under_1mm": 7,
+        "negative_at_least_1mm": 10
+      },
+      "pre_submit_directions": {
+        "positive": 18,
+        "negative_under_1mm": 7,
+        "negative_at_least_1mm": 10
+      },
+      "camera_anchor_progress_mm": {
+        "count": 35,
+        "median": 0.09207438434270898,
+        "min": -3.7572909268666734,
+        "max": 4.36907483854095
+      },
+      "pre_submit_progress_mm": {
+        "count": 35,
+        "median": 0.1891618490128657,
+        "min": -3.8248426145252594,
+        "max": 4.37983179640046
+      }
+    },
+    "chunk_endpoint_at_own_submit": {
+      "count": 35,
+      "compared_count": 35,
+      "unassessed_count": 0,
+      "positive_at_camera_negative_at_submit_count": 2,
+      "camera_anchor_directions": {
+        "positive": 18,
+        "negative_under_1mm": 7,
+        "negative_at_least_1mm": 10
+      },
+      "pre_submit_directions": {
+        "positive": 16,
+        "negative_under_1mm": 13,
+        "negative_at_least_1mm": 6
+      },
+      "camera_anchor_progress_mm": {
+        "count": 35,
+        "median": 0.09207438434270898,
+        "min": -3.7572909268666734,
+        "max": 4.36907483854095
+      },
+      "pre_submit_progress_mm": {
+        "count": 35,
+        "median": -0.10106001672550491,
+        "min": -2.2644537547603747,
+        "max": 3.1393723960369115
+      }
+    },
+    "sign_change_cases": [
+      {
+        "chunk_index": 14,
+        "request_id": "95cbc32057b94f3b8ee8024f9a88750b",
+        "sequence": 42,
+        "action_index": 0,
+        "model_target_source": {
+          "chunk_reply": {
+            "path": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/chunk-00014.json"
+          },
+          "request_id": "95cbc32057b94f3b8ee8024f9a88750b",
+          "action_index": 0,
+          "field": "reply.actions[action_index]",
+          "submission_raw_action_matches_reply": true
+        },
+        "camera_anchor_xyz_mm": [
+          166.07275308799137,
+          89.89641584594972,
+          118.73703549168593
+        ],
+        "model_target_xyz_mm": [
+          164.84999656677246,
+          90.45960009098053,
+          118.47314983606339
+        ],
+        "submitted_monotonic": 4081.182333806,
+        "observation_age_at_submit_s": 0.7433002069997201,
+        "pre_submit_feedback": {
+          "frame_index": 118,
+          "evidence": {
+            "path": "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/materialized/continuous/capture.jsonl",
+            "line": 119,
+            "host": "4090"
+          },
+          "camera_source_monotonic": 4081.038286557,
+          "received_monotonic": 4081.035097713,
+          "tcp_base_xyz_mm": [
+            -221.89111328125,
+            -751.7296752929688,
+            117.24021911621094
+          ],
+          "cup_relative_xyz_mm": [
+            166.00677408408512,
+            89.91442121704347,
+            118.61977932713515
+          ],
+          "reason": null
+        },
+        "pre_submit_feedback_age_s": 0.1472360929997194,
+        "comparison": {
+          "camera_anchor_progress_mm": 0.08057847518493588,
+          "pre_submit_progress_mm": -0.011122323867844841,
+          "camera_anchor_direction": "positive",
+          "pre_submit_direction": "negative_under_1mm",
+          "positive_at_camera_negative_at_submit": true,
+          "state_change_since_camera_mm": 0.1357439887061099,
+          "state_progress_since_camera_mm": 0.09170079905278072
+        },
+        "target_at_chunk_first_submit": {
+          "camera_anchor_progress_mm": 0.08057847518493588,
+          "pre_submit_progress_mm": -0.011122323867844841,
+          "camera_anchor_direction": "positive",
+          "pre_submit_direction": "negative_under_1mm",
+          "positive_at_camera_negative_at_submit": true,
+          "state_change_since_camera_mm": 0.1357439887061099,
+          "state_progress_since_camera_mm": 0.09170079905278072
+        },
+        "sign_change_window": "camera_to_chunk_first_submit"
+      },
+      {
+        "chunk_index": 14,
+        "request_id": "95cbc32057b94f3b8ee8024f9a88750b",
+        "sequence": 44,
+        "action_index": 2,
+        "model_target_source": {
+          "chunk_reply": {
+            "path": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/chunk-00014.json"
+          },
+          "request_id": "95cbc32057b94f3b8ee8024f9a88750b",
+          "action_index": 2,
+          "field": "reply.actions[action_index]",
+          "submission_raw_action_matches_reply": true
+        },
+        "camera_anchor_xyz_mm": [
+          166.07275308799137,
+          89.89641584594972,
+          118.73703549168593
+        ],
+        "model_target_xyz_mm": [
+          162.913516163826,
+          90.91946482658386,
+          118.1609034538269
+        ],
+        "submitted_monotonic": 4081.530683133,
+        "observation_age_at_submit_s": 1.091649533999771,
+        "pre_submit_feedback": {
+          "frame_index": 120,
+          "evidence": {
+            "path": "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/materialized/continuous/capture.jsonl",
+            "line": 121,
+            "host": "4090"
+          },
+          "camera_source_monotonic": 4081.438007723,
+          "received_monotonic": 4081.435093476,
+          "tcp_base_xyz_mm": [
+            -222.94406127929688,
+            -751.145751953125,
+            116.5303955078125
+          ],
+          "cup_relative_xyz_mm": [
+            164.95382608603825,
+            90.49834455688722,
+            117.90995571873671
+          ],
+          "reason": null
+        },
+        "pre_submit_feedback_age_s": 0.0955896569998913,
+        "comparison": {
+          "camera_anchor_progress_mm": 0.287483444209677,
+          "pre_submit_progress_mm": -0.17145579485744378,
+          "camera_anchor_direction": "positive",
+          "pre_submit_direction": "negative_under_1mm",
+          "positive_at_camera_negative_at_submit": true,
+          "state_change_since_camera_mm": 1.5160398278318483,
+          "state_progress_since_camera_mm": 0.45893923906712075
+        },
+        "target_at_chunk_first_submit": {
+          "camera_anchor_progress_mm": 0.287483444209677,
+          "pre_submit_progress_mm": 0.19578264515689625,
+          "camera_anchor_direction": "positive",
+          "pre_submit_direction": "positive",
+          "positive_at_camera_negative_at_submit": false,
+          "state_change_since_camera_mm": 0.1357439887061099,
+          "state_progress_since_camera_mm": 0.09170079905278072
+        },
+        "sign_change_window": "within_executed_prefix"
+      },
+      {
+        "chunk_index": 19,
+        "request_id": "ae099a9e1f48430c8ef042992ee04dd8",
+        "sequence": 59,
+        "action_index": 2,
+        "model_target_source": {
+          "chunk_reply": {
+            "path": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/chunk-00019.json"
+          },
+          "request_id": "ae099a9e1f48430c8ef042992ee04dd8",
+          "action_index": 2,
+          "field": "reply.actions[action_index]",
+          "submission_raw_action_matches_reply": true
+        },
+        "camera_anchor_xyz_mm": [
+          153.27596964072575,
+          91.08727277954347,
+          118.41216061375624
+        ],
+        "model_target_xyz_mm": [
+          151.76133811473846,
+          91.16889536380768,
+          117.12560057640076
+        ],
+        "submitted_monotonic": 4088.296563018,
+        "observation_age_at_submit_s": 1.0548632429999998,
+        "pre_submit_feedback": {
+          "frame_index": 161,
+          "evidence": {
+            "path": "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/materialized/continuous/capture.jsonl",
+            "line": 162,
+            "host": "4090"
+          },
+          "camera_source_monotonic": 4088.241846352,
+          "received_monotonic": 4088.245116536,
+          "tcp_base_xyz_mm": [
+            -234.80563354492188,
+            -750.5737915039062,
+            116.14493560791016
+          ],
+          "cup_relative_xyz_mm": [
+            153.09225382041325,
+            91.07030500610597,
+            117.52449581883437
+          ],
+          "reason": null
+        },
+        "pre_submit_feedback_age_s": 0.05144648200030133,
+        "comparison": {
+          "camera_anchor_progress_mm": 0.5175576443976162,
+          "pre_submit_progress_mm": -0.10106001672550491,
+          "camera_anchor_direction": "positive",
+          "pre_submit_direction": "negative_under_1mm",
+          "positive_at_camera_negative_at_submit": true,
+          "state_change_since_camera_mm": 0.9066356468351636,
+          "state_progress_since_camera_mm": 0.6186176611231211
+        },
+        "target_at_chunk_first_submit": {
+          "camera_anchor_progress_mm": 0.5175576443976162,
+          "pre_submit_progress_mm": 0.5454524646495003,
+          "camera_anchor_direction": "positive",
+          "pre_submit_direction": "positive",
+          "positive_at_camera_negative_at_submit": false,
+          "state_change_since_camera_mm": 0.12233854578113378,
+          "state_progress_since_camera_mm": -0.027894820251884056
+        },
+        "sign_change_window": "within_executed_prefix"
+      }
+    ],
+    "sign_change_windows": {
+      "camera_to_chunk_first_submit": 1,
+      "within_executed_prefix": 2
+    },
+    "sign_change_negative_at_least_1mm_count": 0,
+    "latency_cause_established": null,
+    "latency_cause_reason": "Archived state changes identify numerical sign changes; they do not separate latency from residual motion, within-prefix motion and feedback uncertainty.",
+    "physical_wrong_direction_established": null,
+    "physical_wrong_direction_reason": "Fixed-reference distance and submillimetre sign changes do not provide independent physical task ground truth.",
+    "largest_negative_chunk_endpoint": {
+      "chunk_index": 30,
+      "endpoint_at_first_submit": {
+        "pre_submit_feedback": {
+          "frame_index": 261,
+          "evidence": {
+            "path": "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/materialized/continuous/capture.jsonl",
+            "line": 262,
+            "host": "4090"
+          },
+          "camera_source_monotonic": 4104.915473515,
+          "received_monotonic": 4104.917123792,
+          "tcp_base_xyz_mm": [
+            -257.6000061035156,
+            -752.27490234375,
+            115.78791046142578
+          ],
+          "cup_relative_xyz_mm": [
+            130.2978812618195,
+            89.36919416626222,
+            117.16747067234999
+          ],
+          "reason": null
+        },
+        "pre_submit_feedback_age_s": 0.08035029999973631,
+        "camera_anchor_progress_mm": -3.7572909268666734,
+        "pre_submit_progress_mm": -3.8248426145252594,
+        "camera_anchor_direction": "negative_at_least_1mm",
+        "pre_submit_direction": "negative_at_least_1mm",
+        "positive_at_camera_negative_at_submit": false,
+        "state_change_since_camera_mm": 0.16380559300168615,
+        "state_progress_since_camera_mm": 0.06755168765858599
+      },
+      "endpoint_at_own_submit": {
+        "camera_anchor_progress_mm": -3.7572909268666734,
+        "pre_submit_progress_mm": -2.2644537547603747,
+        "camera_anchor_direction": "negative_at_least_1mm",
+        "pre_submit_direction": "negative_at_least_1mm",
+        "positive_at_camera_negative_at_submit": false,
+        "state_change_since_camera_mm": 2.457460832728541,
+        "state_progress_since_camera_mm": -1.4928371721062987
+      },
+      "model_target_source": {
+        "chunk_reply": {
+          "path": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/chunk-00030.json"
+        },
+        "request_id": "d9af911a9bad4d5e8777444c308b1930",
+        "action_index": 2,
+        "field": "reply.actions[action_index]",
+        "submission_raw_action_matches_reply": true
+      },
+      "measured_progress_from_camera_mm": -3.5176184853236023,
+      "post_ack_endpoint_error_mm": 0.2593676080244821
+    },
+    "inter_block_holds": {
+      "count": 34,
+      "wire_servoj_count": 3824,
+      "wire_not_previous_endpoint_count": 0,
+      "measured_displacement_mm": {
+        "count": 34,
+        "median": 0.162502622465465,
+        "min": 0.021571988578457598,
+        "max": 0.6130200596458609
+      },
+      "measured_max_excursion_mm": {
+        "count": 34,
+        "median": 0.162502622465465,
+        "min": 0.021571988578457598,
+        "max": 0.6130200596458609
+      }
+    },
+    "terminal_hold_until_stop": {
+      "began_monotonic": 4111.564635328,
+      "ended_monotonic": 4113.319373889,
+      "duration_s": 1.7547385610005222,
+      "previous_submission": {
+        "path": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/submitted-targets.jsonl",
+        "line": 105,
+        "host": null
+      },
+      "previous_acknowledgement": {
+        "path": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/acknowledged-targets.jsonl",
+        "line": 105,
+        "host": null
+      },
+      "wire_servoj_count": 219,
+      "wire_not_previous_endpoint_count": 0,
+      "first_different_wire_event": null,
+      "feedback_count": 11,
+      "usable_feedback_count": 11,
+      "first_feedback": {
+        "frame_index": 301,
+        "evidence": {
+          "path": "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/materialized/continuous/capture.jsonl",
+          "line": 302,
+          "host": "4090"
+        },
+        "camera_source_monotonic": 4111.619498784,
+        "received_monotonic": 4111.619135443,
+        "tcp_base_xyz_mm": [
+          -272.5509948730469,
+          -754.1184692382812,
+          113.2563705444336
+        ],
+        "cup_relative_xyz_mm": [
+          115.34689249228825,
+          87.52562727173097,
+          114.6359307553578
+        ],
+        "reason": null
+      },
+      "last_feedback": {
+        "frame_index": 311,
+        "evidence": {
+          "path": "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/materialized/continuous/capture.jsonl",
+          "line": 312,
+          "host": "4090"
+        },
+        "camera_source_monotonic": 4113.307682859,
+        "received_monotonic": 4113.309158064,
+        "tcp_base_xyz_mm": [
+          -272.82708740234375,
+          -754.0121459960938,
+          113.42424774169922
+        ],
+        "cup_relative_xyz_mm": [
+          115.07079996299137,
+          87.63195051391847,
+          114.80380795262343
+        ],
+        "reason": null
+      },
+      "feedback_span_s": 1.6900226210000255,
+      "measured_displacement_mm": 0.34016829647186275,
+      "measured_max_excursion_mm": 0.3414437786225387,
+      "measurement_reason": null
+    },
+    "pre_submit_feedback_age_s": {
+      "count": 105,
+      "median": 0.08933045200046763,
+      "min": 0.0003365210000083607,
+      "max": 0.18960997400063206
+    },
+    "submit_to_ack_s": {
+      "count": 105,
+      "median": 0.17819265799971618,
+      "min": 0.17032606899965685,
+      "max": 0.18099419700001818,
+      "sum": 18.694799543002773
+    },
+    "matching_wire_endpoints": 105,
+    "chunk_endpoint_post_ack_error_mm": {
+      "count": 35,
+      "median": 0.16616110306490434,
+      "min": 0.04790663166705227,
+      "max": 0.6032443054918502
+    },
+    "post_ack_feedback_available_targets": 35,
+    "post_ack_execution_error_unassessed_targets": 70,
+    "first_predicted_negative_progress": {
+      "chunk_index": 15,
+      "request_id": "c2898d2c5f5f485383cacebd93fd90f3",
+      "recorded_status": "available",
+      "complete_executed_prefix": true,
+      "submitted_count": 3,
+      "evidence": {
+        "chunk": {
+          "path": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/chunk-00015.json"
+        },
+        "prediction": {
+          "path": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/stream-prediction/000000.jsonl",
+          "line": 16,
+          "host": null
+        },
+        "source_capture": {
+          "path": "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/materialized/continuous/capture.jsonl",
+          "line": 123,
+          "host": "4090"
+        }
+      },
+      "source_frame_index": 122,
+      "camera_anchor_xyz_mm": [
+        163.14706339072575,
+        90.89006818969972,
+        118.01877377293593
+      ],
+      "coordinate_reason": null,
+      "timing": {
+        "timestamps": {
+          "camera_source_monotonic": 4081.741165329,
+          "camera_packet_received_monotonic": 4081.805842752,
+          "source_feedback_received_monotonic": 4081.745223137,
+          "requested_monotonic": 4081.708327592,
+          "observation_ready_monotonic": 4081.842135878,
+          "predict_started_monotonic": 4081.842791627,
+          "received_monotonic": 4082.384388362,
+          "first_submit_monotonic": 4082.474977062,
+          "last_ack_monotonic": 4083.01166106,
+          "previous_last_ack_monotonic": 4081.708272497
+        },
+        "durations_s": {
+          "request_to_observation_ready_s": 0.13380828600020322,
+          "camera_to_packet_received_s": 0.06467742299992096,
+          "camera_to_observation_ready_s": 0.10097054900006697,
+          "observation_ready_to_predict_start_s": 0.0006557490000886901,
+          "client_prediction_call_s": 0.5415967349999846,
+          "server_model_inference_s": 0.3670391449704766,
+          "client_prediction_nonmodel_s": 0.174557590029508,
+          "result_to_first_submit_s": 0.09058869999989838,
+          "camera_to_first_submit_s": 0.7338117330000387,
+          "first_submit_to_last_ack_s": 0.5366839979997167,
+          "previous_last_ack_to_first_submit_s": 0.7667045650000546,
+          "previous_last_ack_to_request_s": 5.5094999879656825e-05
+        },
+        "unavailable": {}
+      },
+      "preceding_hold": {
+        "began_monotonic": 4081.708272497,
+        "ended_monotonic": 4082.474977062,
+        "duration_s": 0.7667045650000546,
+        "previous_submission": {
+          "path": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/submitted-targets.jsonl",
+          "line": 45,
+          "host": null
+        },
+        "previous_acknowledgement": {
+          "path": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/acknowledged-targets.jsonl",
+          "line": 45,
+          "host": null
+        },
+        "wire_servoj_count": 96,
+        "wire_not_previous_endpoint_count": 0,
+        "first_different_wire_event": null,
+        "feedback_count": 5,
+        "usable_feedback_count": 5,
+        "first_feedback": {
+          "frame_index": 122,
+          "evidence": {
+            "path": "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/materialized/continuous/capture.jsonl",
+            "line": 123,
+            "host": "4090"
+          },
+          "camera_source_monotonic": 4081.741165329,
+          "received_monotonic": 4081.745223137,
+          "tcp_base_xyz_mm": [
+            -224.75082397460938,
+            -750.7540283203125,
+            116.63921356201172
+          ],
+          "cup_relative_xyz_mm": [
+            163.14706339072575,
+            90.89006818969972,
+            118.01877377293593
+          ],
+          "reason": null
+        },
+        "last_feedback": {
+          "frame_index": 126,
+          "evidence": {
+            "path": "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/materialized/continuous/capture.jsonl",
+            "line": 127,
+            "host": "4090"
+          },
+          "camera_source_monotonic": 4082.437136571,
+          "received_monotonic": 4082.435355737,
+          "tcp_base_xyz_mm": [
+            -224.98504638671875,
+            -750.7133178710938,
+            116.77759552001953
+          ],
+          "cup_relative_xyz_mm": [
+            162.91284097861637,
+            90.93077863891847,
+            118.15715573094374
+          ],
+          "reason": null
+        },
+        "feedback_span_s": 0.6901326000001973,
+        "measured_displacement_mm": 0.27507643539933097,
+        "measured_max_excursion_mm": 0.27507643539933097,
+        "measurement_reason": null
+      },
+      "hold_kind": "inter_block_hold",
+      "recorded_proposal_draws": 1,
+      "recorded_draw_durations_s": [
+        0.3670391449704766
+      ],
+      "endpoint_at_first_submit": {
+        "pre_submit_feedback": {
+          "frame_index": 126,
+          "evidence": {
+            "path": "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/materialized/continuous/capture.jsonl",
+            "line": 127,
+            "host": "4090"
+          },
+          "camera_source_monotonic": 4082.437136571,
+          "received_monotonic": 4082.435355737,
+          "tcp_base_xyz_mm": [
+            -224.98504638671875,
+            -750.7133178710938,
+            116.77759552001953
+          ],
+          "cup_relative_xyz_mm": [
+            162.91284097861637,
+            90.93077863891847,
+            118.15715573094374
+          ],
+          "reason": null
+        },
+        "pre_submit_feedback_age_s": 0.039621325000098295,
+        "camera_anchor_progress_mm": -0.2840520230178001,
+        "pre_submit_progress_mm": -0.1801924019923895,
+        "camera_anchor_direction": "negative_under_1mm",
+        "pre_submit_direction": "negative_under_1mm",
+        "positive_at_camera_negative_at_submit": false,
+        "state_change_since_camera_mm": 0.27507643539933097,
+        "state_progress_since_camera_mm": -0.10385962102541058
+      },
+      "endpoint_at_own_submit": {
+        "chunk_index": 15,
+        "request_id": "c2898d2c5f5f485383cacebd93fd90f3",
+        "sequence": 47,
+        "delivery_token": 48,
+        "action_index": 2,
+        "evidence": {
+          "submission": {
+            "path": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/submitted-targets.jsonl",
+            "line": 48,
+            "host": null
+          },
+          "acknowledgement": {
+            "path": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/acknowledged-targets.jsonl",
+            "line": 48,
+            "host": null
+          }
+        },
+        "model_target_source": {
+          "chunk_reply": {
+            "path": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/chunk-00015.json"
+          },
+          "request_id": "c2898d2c5f5f485383cacebd93fd90f3",
+          "action_index": 2,
+          "field": "reply.actions[action_index]",
+          "submission_raw_action_matches_reply": true
+        },
+        "camera_anchor_xyz_mm": [
+          163.14706339072575,
+          90.89006818969972,
+          118.01877377293593
+        ],
+        "model_target_xyz_mm": [
+          159.68038141727448,
+          91.49135649204254,
+          118.1306540966034
+        ],
+        "coordinate_reason": null,
+        "submitted_monotonic": 4082.833171132,
+        "acknowledged_monotonic": 4083.01166106,
+        "observation_age_at_submit_s": 1.09200580300012,
+        "submit_to_ack_s": 0.17848992799963526,
+        "pre_submit_feedback": {
+          "frame_index": 128,
+          "evidence": {
+            "path": "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/materialized/continuous/capture.jsonl",
+            "line": 129,
+            "host": "4090"
+          },
+          "camera_source_monotonic": 4082.741325214,
+          "received_monotonic": 4082.745205811,
+          "tcp_base_xyz_mm": [
+            -226.2517852783203,
+            -750.455322265625,
+            116.78334045410156
+          ],
+          "cup_relative_xyz_mm": [
+            161.6461020870148,
+            91.18877424438722,
+            118.16290066502577
+          ],
+          "reason": null
+        },
+        "pre_submit_feedback_age_s": 0.08796532100041077,
+        "comparison": {
+          "camera_anchor_progress_mm": -0.2840520230178001,
+          "pre_submit_progress_mm": -0.11480531215864431,
+          "camera_anchor_direction": "negative_under_1mm",
+          "pre_submit_direction": "negative_under_1mm",
+          "positive_at_camera_negative_at_submit": false,
+          "state_change_since_camera_mm": 1.5371671032675942,
+          "state_progress_since_camera_mm": -0.16924671085915577
+        },
+        "target_at_chunk_first_submit": {
+          "camera_anchor_progress_mm": -0.2840520230178001,
+          "pre_submit_progress_mm": -0.1801924019923895,
+          "camera_anchor_direction": "negative_under_1mm",
+          "pre_submit_direction": "negative_under_1mm",
+          "positive_at_camera_negative_at_submit": false,
+          "state_change_since_camera_mm": 0.27507643539933097,
+          "state_progress_since_camera_mm": -0.10385962102541058
+        },
+        "sign_change_window": null,
+        "wire": {
+          "first_servoj_in_window": {
+            "sequence": 2579,
+            "issued_monotonic": 4082.839346009,
+            "returned_monotonic": 4082.842633972,
+            "return_code": 0,
+            "error": null,
+            "_evidence": {
+              "path": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/stream-wire/000000.jsonl",
+              "line": 2579,
+              "host": null
+            }
+          },
+          "first_matching_endpoint": {
+            "sequence": 2600,
+            "issued_monotonic": 4083.007364755,
+            "returned_monotonic": 4083.010334468,
+            "return_code": 0,
+            "error": null,
+            "_evidence": {
+              "path": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/stream-wire/000000.jsonl",
+              "line": 2600,
+              "host": null
+            }
+          },
+          "endpoint_candidate_count": 1,
+          "reason": null
+        },
+        "submit_to_endpoint_rpc_return_s": 0.1771633359999214,
+        "endpoint_rpc_return_to_ack_s": 0.0013265919997138553,
+        "post_ack_feedback": {
+          "frame_index": 130,
+          "evidence": {
+            "path": "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/materialized/continuous/capture.jsonl",
+            "line": 131,
+            "host": "4090"
+          },
+          "camera_source_monotonic": 4083.036508053,
+          "received_monotonic": 4083.035126707,
+          "tcp_base_xyz_mm": [
+            -228.0172882080078,
+            -750.140625,
+            116.7835922241211
+          ],
+          "cup_relative_xyz_mm": [
+            159.8805991573273,
+            91.50347151001222,
+            118.1631524350453
+          ],
+          "reason": null
+        },
+        "feedback_after_ack_s": 0.023465647000193712,
+        "measured_progress_from_camera_mm": -0.31682023739516296,
+        "measured_progress_from_pre_submit_mm": -0.1475735265360072,
+        "post_ack_endpoint_error_mm": 0.20319955485619387,
+        "pre_to_post_feedback_interval_s": 0.28992089600023974,
+        "measured_pre_to_post_displacement_mm": 1.7933307076819769
+      }
+    }
+  },
+  "limitations": [
+    "TCP feedback is the last archived sample strictly before submission, not every native packet; receipt time and sample age define its availability. No future feedback is interpolated.",
+    "submitted_monotonic is sampled immediately before submit_ordered. ServoJ windows identify endpoint candidates by time and recorded joint values; wire records have no delivery token.",
+    "Client prediction time includes RPC and reply validation. Server inference_seconds sums all recorded draws. Their difference includes all work outside that timer.",
+    "Submit-to-ACK and inter-block holds use host timestamps. ACK indicates endpoint RPC return; physical change is separately measured by the first archived feedback after ACK and before the next submission or StopMotion. These samples do not determine exact physical settle time.",
+    "The fixed demonstration pickup is expressed in the initial cup frame, with tool0 TCP matching the flange. Submillimetre negative progress is numerical direction, not established physical error. Timing and direction comparisons alone do not establish a latency cause."
+  ],
+  "trial": "pi05-cup-hover-speed-roll64-trial02-20261115",
+  "trial_root": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115",
+  "sources": {
+    "trial_root": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115",
+    "capture_jsonl": "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/materialized/continuous/capture.jsonl",
+    "capture_host": "4090",
+    "reference": {
+      "path": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/runtime-source/cup_timing.py",
+      "symbol": "PICKUP_FLANGE_FROM_CUP_MM"
+    },
+    "coordinate_conversion": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/runtime-source/cup_relative_runtime.py",
+    "request_timing": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/runtime-source/stream_runtime.py",
+    "model_draw_timing": "/home/dianrobot/.local/state/fr5-recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/runtime-source/cup_action_selection.py"
+  },
+  "detail_artifact": {
+    "host": "4090",
+    "path": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-trial02-action-time-audit-20261117-v1/action-time-detail.json"
+  },
+  "created_at_utc": "2026-11-17T09:33:49.082025+00:00",
+  "original_trial_verdict": "failure",
+  "original_trial_task_success_verified": false
+}

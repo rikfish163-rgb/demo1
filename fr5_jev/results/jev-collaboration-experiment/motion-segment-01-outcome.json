@@ -1,0 +1,9 @@
+{
+  "decision_record": "/home/dianrobot/demo1/fairino-review/jev-collaboration-experiment/motion-segment-01.json",
+  "status": "completed_and_stopped",
+  "selected_by": "jev",
+  "executor_report": "/home/dianrobot/demo1/fairino-review/cup-reuse-20261022-102342/approved-pregrasp-80mm-segment-01.json",
+  "observation_record": "/home/dianrobot/demo1/fairino-review/jev-collaboration-experiment/after-segment-01/observation.json",
+  "llm_review_before_decision": "/home/dianrobot/demo1/fairino-review/jev-collaboration-experiment/scene-review-segment-01.json",
+  "completed_at_unix": 1792658660.240898
+}

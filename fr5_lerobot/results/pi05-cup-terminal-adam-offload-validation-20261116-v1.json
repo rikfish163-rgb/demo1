@@ -1,0 +1,17 @@
+{
+  "schema": "fr5-cup-terminal-adam-offload-validation-v1",
+  "source": "/home/data4/hts/demo1/fr5-learning/src/fr5-pi05-cup-terminal-xyz-adam-offload-20261116-v14",
+  "gpu": 9,
+  "gpu_before": "9, 5, 0",
+  "unit_tests": 4,
+  "unit_failures": 0,
+  "unit_errors": 0,
+  "unit_skipped": 0,
+  "gpu_moment_bytes": 8388608,
+  "gpu_freed_allocated_bytes": 8388608,
+  "gpu_restore_allocated_bytes": 8388608,
+  "exact_multistep_update_tests_passed": true,
+  "passed": true,
+  "robot_commands": 0,
+  "task_success_verified": false
+}

@@ -1,0 +1,42 @@
+{
+  "robot_ip": "192.168.58.2",
+  "max_lift_mm": 10,
+  "closing_targets": [
+    90,
+    80,
+    76
+  ],
+  "closing_speed": 5,
+  "force": 10,
+  "move_speed": 1,
+  "return_to_original_support": true,
+  "only_prealigned_instance": true,
+  "reviewed_at_unix": 1793272814.5500672,
+  "same_cup_and_contact_pose": true,
+  "both_fingers_outside_cup": true,
+  "vertical_swept_path_clear": true,
+  "no_visible_hands": true,
+  "initial_tcp": [
+    -61.765879956577606,
+    -584.9346602278526,
+    89.83912329203842,
+    91.77985382080078,
+    -2.9347360134124756,
+    -65.75154113769531
+  ],
+  "authorization_source": "User authorized autonomous cup pickup/replacement and recovery. Current camera reconnected and live scene reviewed; return already held cup from10mm probe to original support, no new lift or closure.",
+  "evidence": [
+    "/dev/shm/fr5-post-reboot-current/color.jpg"
+  ],
+  "recovery_only": true,
+  "source_support_provenance": "Exact episode000005 contact_tcp printed in this conversation before reboot; original RAM scope lost. Current pose/visible scene match probe endpoint, all states stable.",
+  "reviewed_actual_start": [
+    -61.7639045715332,
+    -584.932861328125,
+    99.8358383178711,
+    91.78022003173828,
+    -2.9340286254882812,
+    -65.75165557861328
+  ],
+  "max_session_s": 900
+}

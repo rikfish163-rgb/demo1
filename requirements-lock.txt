@@ -1,0 +1,4 @@
+# Gemini 335 preview, Python 3.12.
+numpy==2.5.3
+opencv-python-headless==5.0.0.93
+pyorbbecsdk2==2.1.2

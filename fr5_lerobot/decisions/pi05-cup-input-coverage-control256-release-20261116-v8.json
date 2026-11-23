@@ -1,0 +1,12 @@
+{
+  "schema": "fr5-cup-release-decision-v1",
+  "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-cup-input-coverage-control-n3-20261116-v8/step-000256",
+  "status": "not_released",
+  "assessment": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-input-coverage256-paired-assessment-20261116-v8.json",
+  "reason": "Original training observations still produce more than 2 mm motion on recorded steady full-open prefixes.",
+  "assessable_prefix3_timing": "pass",
+  "whole_heldout_gate": "inconclusive",
+  "new_controller_validation": "not_run",
+  "robot_commands": 0,
+  "task_success_verified": false
+}

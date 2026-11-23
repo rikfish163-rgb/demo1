@@ -1,0 +1,2 @@
+# Orbbec Gemini 335 used by this workstation; do not grant access to other USB devices.
+SUBSYSTEM=="usb", ATTR{idVendor}=="2bc5", ATTR{idProduct}=="0800", ATTR{serial}=="CP1E54200015", MODE="0660", GROUP="plugdev", TAG+="uaccess"

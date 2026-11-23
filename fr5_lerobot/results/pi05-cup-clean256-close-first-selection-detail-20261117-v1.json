@@ -1,0 +1,573 @@
+{
+  "schema": "fr5-cup-close-first-selection-detail-v1",
+  "device": "cpu",
+  "model_inference_calls": 0,
+  "robot_commands": 0,
+  "task_success_verified": false,
+  "cases": [
+    {
+      "case_id": "source3-cycle1-close_at-1468",
+      "seed": 20261114,
+      "tracking": {
+        "rim_minus_jaw_mm": null,
+        "native_contact": 0
+      },
+      "timing": {
+        "phase": "at_pickup",
+        "hover_seconds": null,
+        "visual": "missing",
+        "support_gap_mm": null,
+        "setdown_age_s": null
+      },
+      "relative_state": [
+        0.15971373459608634,
+        0.07124783882422867,
+        0.09580579613211568,
+        1.619724588132105,
+        -0.02219824247294827,
+        -1.1745416587248076,
+        1.0,
+        1.0
+      ],
+      "history_0": {
+        "age_s": 0.5002505230004317,
+        "state": [
+          0.1596833543470629,
+          0.07123972114844741,
+          0.09579708336356099,
+          1.6197180633874342,
+          -0.022245636337378673,
+          -1.174447915454437,
+          1.0,
+          1.0
+        ]
+      },
+      "close_at_pickup": false,
+      "pickup_distance_mm": 0.054249631657785,
+      "rim_distance_mm": null,
+      "predicted_first3": [
+        [
+          0.15962666273117065,
+          0.07120692729949951,
+          0.09578724205493927,
+          1.619739055633545,
+          -0.022181807085871696,
+          -1.174565076828003,
+          1.0005778074264526
+        ],
+        [
+          0.15953287482261658,
+          0.07118692994117737,
+          0.09579503536224365,
+          1.6197421550750732,
+          -0.022176148369908333,
+          -1.174597144126892,
+          0.9979693293571472
+        ],
+        [
+          0.1594516932964325,
+          0.07118450850248337,
+          0.095748171210289,
+          1.6197845935821533,
+          -0.022146178409457207,
+          -1.1746411323547363,
+          0.9972742795944214
+        ]
+      ],
+      "original_targets_first3": [
+        {
+          "tick": 1,
+          "nominal_time_monotonic": 47300.003898121664,
+          "raw_camera_frame": 170,
+          "raw_camera_time_monotonic": 47299.837231455,
+          "raw_camera_age_s": 0.16666666666424135,
+          "raw_robot_time_monotonic": 47299.83493676,
+          "raw_gripper_command": {
+            "sequence": 1,
+            "issued_monotonic": 47271.490953106,
+            "fraction": 1.0,
+            "source": "initial_hold"
+          },
+          "raw_cup_relative_action": [
+            0.15971373459608634,
+            0.07124783882422867,
+            0.09580579613211568,
+            1.619724588132105,
+            -0.02219824247294827,
+            -1.1745416587248076,
+            1.0
+          ]
+        },
+        {
+          "tick": 2,
+          "nominal_time_monotonic": 47300.170564788335,
+          "raw_camera_frame": 172,
+          "raw_camera_time_monotonic": 47300.137552146,
+          "raw_camera_age_s": 0.03301264233596157,
+          "raw_robot_time_monotonic": 47300.134952632,
+          "raw_gripper_command": {
+            "sequence": 6,
+            "issued_monotonic": 47300.090765161,
+            "fraction": 0.76,
+            "source": "MoveGripper"
+          },
+          "raw_cup_relative_action": [
+            0.1597163896253832,
+            0.07125345405860367,
+            0.09580843590262349,
+            1.6197251207643228,
+            -0.02222432272627963,
+            -1.1745620319071468,
+            0.76
+          ]
+        },
+        {
+          "tick": 3,
+          "nominal_time_monotonic": 47300.337231455,
+          "raw_camera_frame": 172,
+          "raw_camera_time_monotonic": 47300.137552146,
+          "raw_camera_age_s": 0.19967930900020292,
+          "raw_robot_time_monotonic": 47300.134952632,
+          "raw_gripper_command": {
+            "sequence": 6,
+            "issued_monotonic": 47300.090765161,
+            "fraction": 0.76,
+            "source": "MoveGripper"
+          },
+          "raw_cup_relative_action": [
+            0.1597163896253832,
+            0.07125345405860367,
+            0.09580843590262349,
+            1.6197251207643228,
+            -0.02222432272627963,
+            -1.1745620319071468,
+            0.76
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "source5-cycle1-close_at-2524",
+      "seed": 20261113,
+      "tracking": {
+        "rim_minus_jaw_mm": null,
+        "native_contact": 0
+      },
+      "timing": {
+        "phase": "at_pickup",
+        "hover_seconds": null,
+        "visual": "missing",
+        "support_gap_mm": null,
+        "setdown_age_s": null
+      },
+      "relative_state": [
+        0.15978685500060322,
+        0.07144586745407502,
+        0.09591190029331927,
+        1.6199721289554276,
+        -0.022095793994764284,
+        -1.1741046339899257,
+        1.0,
+        1.0
+      ],
+      "history_0": {
+        "age_s": 0.5004423680002219,
+        "state": [
+          0.15983686568175556,
+          0.07144879714157502,
+          0.09599499965855364,
+          1.619931249432695,
+          -0.0221790677130997,
+          -1.1741091613637789,
+          1.0,
+          1.0
+        ]
+      },
+      "close_at_pickup": false,
+      "pickup_distance_mm": 0.2033292426904139,
+      "rim_distance_mm": null,
+      "predicted_first3": [
+        [
+          0.15885405242443085,
+          0.07106412947177887,
+          0.09594263881444931,
+          1.6198973655700684,
+          -0.022206716239452362,
+          -1.1741664409637451,
+          0.9972295761108398
+        ],
+        [
+          0.15843206644058228,
+          0.07090803235769272,
+          0.09592164307832718,
+          1.6198937892913818,
+          -0.022218206897377968,
+          -1.1742253303527832,
+          1.0023088455200195
+        ],
+        [
+          0.1582653969526291,
+          0.07080788165330887,
+          0.09586788713932037,
+          1.6198961734771729,
+          -0.022215746343135834,
+          -1.174224853515625,
+          0.9979182481765747
+        ]
+      ],
+      "original_targets_first3": [
+        {
+          "tick": 1,
+          "nominal_time_monotonic": 39143.84260799667,
+          "raw_camera_frame": 184,
+          "raw_camera_time_monotonic": 39143.775946293,
+          "raw_camera_age_s": 0.06666170366952429,
+          "raw_robot_time_monotonic": 39143.771235147,
+          "raw_gripper_command": {
+            "sequence": 1,
+            "issued_monotonic": 39113.082206704,
+            "fraction": 1.0,
+            "source": "initial_hold"
+          },
+          "raw_cup_relative_action": [
+            0.15978402449523213,
+            0.07144629470016878,
+            0.09590703273960832,
+            1.6199718626393187,
+            -0.022103192589167663,
+            -1.1741126234731958,
+            1.0
+          ]
+        },
+        {
+          "tick": 2,
+          "nominal_time_monotonic": 39144.00927466334,
+          "raw_camera_frame": 185,
+          "raw_camera_time_monotonic": 39143.976146335,
+          "raw_camera_age_s": 0.033128328337625135,
+          "raw_robot_time_monotonic": 39143.97120764,
+          "raw_gripper_command": {
+            "sequence": 6,
+            "issued_monotonic": 39143.884413765,
+            "fraction": 0.76,
+            "source": "MoveGripper"
+          },
+          "raw_cup_relative_action": [
+            0.15978717543517354,
+            0.07144721022751253,
+            0.09590032650181536,
+            1.619978786858153,
+            -0.022116899546403165,
+            -1.1741063650446342,
+            0.76
+          ]
+        },
+        {
+          "tick": 3,
+          "nominal_time_monotonic": 39144.17594133,
+          "raw_camera_frame": 185,
+          "raw_camera_time_monotonic": 39143.976146335,
+          "raw_camera_age_s": 0.19979499500186648,
+          "raw_robot_time_monotonic": 39143.97120764,
+          "raw_gripper_command": {
+            "sequence": 6,
+            "issued_monotonic": 39143.884413765,
+            "fraction": 0.76,
+            "source": "MoveGripper"
+          },
+          "raw_cup_relative_action": [
+            0.15978717543517354,
+            0.07144721022751253,
+            0.09590032650181536,
+            1.619978786858153,
+            -0.022116899546403165,
+            -1.1741063650446342,
+            0.76
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "source5-cycle1-close_at-2524",
+      "seed": 20261114,
+      "tracking": {
+        "rim_minus_jaw_mm": null,
+        "native_contact": 0
+      },
+      "timing": {
+        "phase": "at_pickup",
+        "hover_seconds": null,
+        "visual": "missing",
+        "support_gap_mm": null,
+        "setdown_age_s": null
+      },
+      "relative_state": [
+        0.15978685500060322,
+        0.07144586745407502,
+        0.09591190029331927,
+        1.6199721289554276,
+        -0.022095793994764284,
+        -1.1741046339899257,
+        1.0,
+        1.0
+      ],
+      "history_0": {
+        "age_s": 0.5004423680002219,
+        "state": [
+          0.15983686568175556,
+          0.07144879714157502,
+          0.09599499965855364,
+          1.619931249432695,
+          -0.0221790677130997,
+          -1.1741091613637789,
+          1.0,
+          1.0
+        ]
+      },
+      "close_at_pickup": false,
+      "pickup_distance_mm": 0.2033292426904139,
+      "rim_distance_mm": null,
+      "predicted_first3": [
+        [
+          0.1585228592157364,
+          0.07125094532966614,
+          0.09586835652589798,
+          1.619934320449829,
+          -0.022207165136933327,
+          -1.1742010116577148,
+          1.004631757736206
+        ],
+        [
+          0.15779244899749756,
+          0.07115932554006577,
+          0.09584859758615494,
+          1.6199133396148682,
+          -0.022258268669247627,
+          -1.1742591857910156,
+          1.001023530960083
+        ],
+        [
+          0.1574004739522934,
+          0.07112022489309311,
+          0.09578900784254074,
+          1.619949460029602,
+          -0.02222903072834015,
+          -1.1743066310882568,
+          1.0014344453811646
+        ]
+      ],
+      "original_targets_first3": [
+        {
+          "tick": 1,
+          "nominal_time_monotonic": 39143.84260799667,
+          "raw_camera_frame": 184,
+          "raw_camera_time_monotonic": 39143.775946293,
+          "raw_camera_age_s": 0.06666170366952429,
+          "raw_robot_time_monotonic": 39143.771235147,
+          "raw_gripper_command": {
+            "sequence": 1,
+            "issued_monotonic": 39113.082206704,
+            "fraction": 1.0,
+            "source": "initial_hold"
+          },
+          "raw_cup_relative_action": [
+            0.15978402449523213,
+            0.07144629470016878,
+            0.09590703273960832,
+            1.6199718626393187,
+            -0.022103192589167663,
+            -1.1741126234731958,
+            1.0
+          ]
+        },
+        {
+          "tick": 2,
+          "nominal_time_monotonic": 39144.00927466334,
+          "raw_camera_frame": 185,
+          "raw_camera_time_monotonic": 39143.976146335,
+          "raw_camera_age_s": 0.033128328337625135,
+          "raw_robot_time_monotonic": 39143.97120764,
+          "raw_gripper_command": {
+            "sequence": 6,
+            "issued_monotonic": 39143.884413765,
+            "fraction": 0.76,
+            "source": "MoveGripper"
+          },
+          "raw_cup_relative_action": [
+            0.15978717543517354,
+            0.07144721022751253,
+            0.09590032650181536,
+            1.619978786858153,
+            -0.022116899546403165,
+            -1.1741063650446342,
+            0.76
+          ]
+        },
+        {
+          "tick": 3,
+          "nominal_time_monotonic": 39144.17594133,
+          "raw_camera_frame": 185,
+          "raw_camera_time_monotonic": 39143.976146335,
+          "raw_camera_age_s": 0.19979499500186648,
+          "raw_robot_time_monotonic": 39143.97120764,
+          "raw_gripper_command": {
+            "sequence": 6,
+            "issued_monotonic": 39143.884413765,
+            "fraction": 0.76,
+            "source": "MoveGripper"
+          },
+          "raw_cup_relative_action": [
+            0.15978717543517354,
+            0.07144721022751253,
+            0.09590032650181536,
+            1.619978786858153,
+            -0.022116899546403165,
+            -1.1741063650446342,
+            0.76
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "source5-cycle1-close_at-2524",
+      "seed": 20261115,
+      "tracking": {
+        "rim_minus_jaw_mm": null,
+        "native_contact": 0
+      },
+      "timing": {
+        "phase": "at_pickup",
+        "hover_seconds": null,
+        "visual": "missing",
+        "support_gap_mm": null,
+        "setdown_age_s": null
+      },
+      "relative_state": [
+        0.15978685500060322,
+        0.07144586745407502,
+        0.09591190029331927,
+        1.6199721289554276,
+        -0.022095793994764284,
+        -1.1741046339899257,
+        1.0,
+        1.0
+      ],
+      "history_0": {
+        "age_s": 0.5004423680002219,
+        "state": [
+          0.15983686568175556,
+          0.07144879714157502,
+          0.09599499965855364,
+          1.619931249432695,
+          -0.0221790677130997,
+          -1.1741091613637789,
+          1.0,
+          1.0
+        ]
+      },
+      "close_at_pickup": false,
+      "pickup_distance_mm": 0.2033292426904139,
+      "rim_distance_mm": null,
+      "predicted_first3": [
+        [
+          0.15746182203292847,
+          0.07040348649024963,
+          0.09597776085138321,
+          1.619821310043335,
+          -0.022473249584436417,
+          -1.1742439270019531,
+          0.996877133846283
+        ],
+        [
+          0.15603035688400269,
+          0.06972344219684601,
+          0.09597308933734894,
+          1.6198095083236694,
+          -0.02256319858133793,
+          -1.174234390258789,
+          0.9989099502563477
+        ],
+        [
+          0.15490812063217163,
+          0.06915172934532166,
+          0.09594646096229553,
+          1.6197999715805054,
+          -0.02261543460190296,
+          -1.1742557287216187,
+          0.995634913444519
+        ]
+      ],
+      "original_targets_first3": [
+        {
+          "tick": 1,
+          "nominal_time_monotonic": 39143.84260799667,
+          "raw_camera_frame": 184,
+          "raw_camera_time_monotonic": 39143.775946293,
+          "raw_camera_age_s": 0.06666170366952429,
+          "raw_robot_time_monotonic": 39143.771235147,
+          "raw_gripper_command": {
+            "sequence": 1,
+            "issued_monotonic": 39113.082206704,
+            "fraction": 1.0,
+            "source": "initial_hold"
+          },
+          "raw_cup_relative_action": [
+            0.15978402449523213,
+            0.07144629470016878,
+            0.09590703273960832,
+            1.6199718626393187,
+            -0.022103192589167663,
+            -1.1741126234731958,
+            1.0
+          ]
+        },
+        {
+          "tick": 2,
+          "nominal_time_monotonic": 39144.00927466334,
+          "raw_camera_frame": 185,
+          "raw_camera_time_monotonic": 39143.976146335,
+          "raw_camera_age_s": 0.033128328337625135,
+          "raw_robot_time_monotonic": 39143.97120764,
+          "raw_gripper_command": {
+            "sequence": 6,
+            "issued_monotonic": 39143.884413765,
+            "fraction": 0.76,
+            "source": "MoveGripper"
+          },
+          "raw_cup_relative_action": [
+            0.15978717543517354,
+            0.07144721022751253,
+            0.09590032650181536,
+            1.619978786858153,
+            -0.022116899546403165,
+            -1.1741063650446342,
+            0.76
+          ]
+        },
+        {
+          "tick": 3,
+          "nominal_time_monotonic": 39144.17594133,
+          "raw_camera_frame": 185,
+          "raw_camera_time_monotonic": 39143.976146335,
+          "raw_camera_age_s": 0.19979499500186648,
+          "raw_robot_time_monotonic": 39143.97120764,
+          "raw_gripper_command": {
+            "sequence": 6,
+            "issued_monotonic": 39143.884413765,
+            "fraction": 0.76,
+            "source": "MoveGripper"
+          },
+          "raw_cup_relative_action": [
+            0.15978717543517354,
+            0.07144721022751253,
+            0.09590032650181536,
+            1.619978786858153,
+            -0.022116899546403165,
+            -1.1741063650446342,
+            0.76
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "preview_url": "http://127.0.0.1:8765/",
+  "robot_commands": 0,
+  "status": "online",
+  "camera_serial": "CP1E54200015",
+  "color_shape": [
+    1080,
+    1920,
+    3
+  ],
+  "depth_shape": [
+    1080,
+    1920
+  ],
+  "frame_age_s": 0.35326109000016004
+}

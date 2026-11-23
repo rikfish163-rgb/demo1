@@ -1,0 +1,338 @@
+{
+  "schema": "cup-timing-recovered-pgi-phase-pair-evidence-v1",
+  "verified": true,
+  "original_input": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-fixed-clock-recovered-pgi-inputs-20261116-v7.json",
+  "corrected_input": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-fixed-clock-recovered-pgi-inputs-corrected-phase-20261116-v1.json",
+  "capture_tracking_trace": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-precontact-tracker-replay-20261115-v1/source-7.jsonl",
+  "original_source_summary": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-precontact-tracker-replay-20261115-v1/summary.json",
+  "timer_source": "/home/data4/hts/demo1/fr5-learning/audits/cup-timing-released-stage-20261116-v1/cup_timing.after.py",
+  "full_eight_source_audit": "/home/data4/hts/demo1/fr5-learning/audits/cup-timing-released-stage-20261116-v1/summary.json",
+  "aligned": true,
+  "setdown": true,
+  "cpu_only": true,
+  "robot_camera_connections": 0,
+  "policy_inference": false,
+  "rgbd_recomputed": false,
+  "paired_cases": 4,
+  "changed_phase_values": 2,
+  "changed_paths": [
+    "cases[1].timing_setdown.state.phase",
+    "cases[3].timing_setdown.state.phase"
+  ],
+  "other_input_value_changes": 0,
+  "all_requests_exactly_unchanged": true,
+  "all_tracking_exactly_unchanged": true,
+  "root_metadata_exactly_unchanged": true,
+  "cases": [
+    {
+      "case_id": "source7-cycle1-close_after-3327-recovered-195",
+      "source_frame_index": 195,
+      "input_json_case_index": 0,
+      "trace_line_1based": 196,
+      "request_source_time": 40788.123929001,
+      "camera_monotonic": 40788.123929001,
+      "feedback_monotonic": 40788.121438313,
+      "gripper_feedback_valid": true,
+      "gripper_position_percent": 78,
+      "gripper_motiondone": 2,
+      "native_contact": 1,
+      "preceding_invalid_feedback_frames": [
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194
+      ],
+      "prior_contact_monotonic": null,
+      "prior_contact_flange_mm": null,
+      "prior_was_released": false,
+      "was_released": false,
+      "old_phase": "grasp_contact",
+      "corrected_phase": "grasp_contact",
+      "input_matches_saved_tracking_and_timing": true,
+      "corrected_timing_matches_replay_in_all_fields": true,
+      "archived_timing": {
+        "state": {
+          "phase": "grasp_contact",
+          "hover_seconds": null,
+          "visual": "table_height",
+          "support_gap_mm": 0.0,
+          "setdown_age_s": null
+        },
+        "camera_monotonic": 40788.123929001,
+        "feedback_monotonic": 40788.121438313,
+        "contact_monotonic": 40788.123929001,
+        "flange_rise_mm": 0.0,
+        "rim_rise_mm": 1.0541209947733278e-14,
+        "pickup_reference_error_mm": [
+          0.039162148272339437,
+          -0.02513863372534786,
+          0.15785974102378475
+        ],
+        "hover_start_monotonic": null
+      },
+      "corrected_timing": {
+        "state": {
+          "phase": "grasp_contact",
+          "hover_seconds": null,
+          "visual": "table_height",
+          "support_gap_mm": 0.0,
+          "setdown_age_s": null
+        },
+        "camera_monotonic": 40788.123929001,
+        "feedback_monotonic": 40788.121438313,
+        "contact_monotonic": 40788.123929001,
+        "flange_rise_mm": 0.0,
+        "rim_rise_mm": 1.0541209947733278e-14,
+        "pickup_reference_error_mm": [
+          0.039162148272339437,
+          -0.02513863372534786,
+          0.15785974102378475
+        ],
+        "hover_start_monotonic": null
+      }
+    },
+    {
+      "case_id": "source7-cycle1-release_after-3434-recovered-309",
+      "source_frame_index": 309,
+      "input_json_case_index": 1,
+      "trace_line_1based": 310,
+      "request_source_time": 40807.136609855,
+      "camera_monotonic": 40807.136609855,
+      "feedback_monotonic": 40807.135746132,
+      "gripper_feedback_valid": true,
+      "gripper_position_percent": 99,
+      "gripper_motiondone": 1,
+      "native_contact": 0,
+      "preceding_invalid_feedback_frames": [
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308
+      ],
+      "prior_contact_monotonic": 40788.123929001,
+      "prior_contact_flange_mm": [
+        -103.11136627197266,
+        -719.947998046875,
+        92.81503295898438
+      ],
+      "prior_was_released": false,
+      "was_released": true,
+      "old_phase": "at_pickup",
+      "corrected_phase": "released",
+      "input_matches_saved_tracking_and_timing": true,
+      "corrected_timing_matches_replay_in_all_fields": true,
+      "archived_timing": {
+        "state": {
+          "phase": "at_pickup",
+          "hover_seconds": null,
+          "visual": "missing",
+          "support_gap_mm": null,
+          "setdown_age_s": null
+        },
+        "camera_monotonic": 40807.136609855,
+        "feedback_monotonic": 40807.135746132,
+        "contact_monotonic": null,
+        "flange_rise_mm": null,
+        "rim_rise_mm": null,
+        "pickup_reference_error_mm": [
+          0.07073258284265194,
+          0.0032427139309021413,
+          0.022796569637066
+        ],
+        "hover_start_monotonic": null
+      },
+      "corrected_timing": {
+        "state": {
+          "phase": "released",
+          "hover_seconds": null,
+          "visual": "missing",
+          "support_gap_mm": null,
+          "setdown_age_s": null
+        },
+        "camera_monotonic": 40807.136609855,
+        "feedback_monotonic": 40807.135746132,
+        "contact_monotonic": null,
+        "flange_rise_mm": null,
+        "rim_rise_mm": null,
+        "pickup_reference_error_mm": [
+          0.07073258284265194,
+          0.0032427139309021413,
+          0.022796569637066
+        ],
+        "hover_start_monotonic": null
+      }
+    },
+    {
+      "case_id": "source7-cycle2-close_after-3687-recovered-578",
+      "source_frame_index": 578,
+      "input_json_case_index": 2,
+      "trace_line_1based": 579,
+      "request_source_time": 40851.966621716,
+      "camera_monotonic": 40851.966621716,
+      "feedback_monotonic": 40851.971511878,
+      "gripper_feedback_valid": true,
+      "gripper_position_percent": 78,
+      "gripper_motiondone": 2,
+      "native_contact": 1,
+      "preceding_invalid_feedback_frames": [
+        567,
+        568,
+        569,
+        570,
+        571,
+        572,
+        573,
+        574,
+        575,
+        576,
+        577
+      ],
+      "prior_contact_monotonic": null,
+      "prior_contact_flange_mm": null,
+      "prior_was_released": false,
+      "was_released": false,
+      "old_phase": "grasp_contact",
+      "corrected_phase": "grasp_contact",
+      "input_matches_saved_tracking_and_timing": true,
+      "corrected_timing_matches_replay_in_all_fields": true,
+      "archived_timing": {
+        "state": {
+          "phase": "grasp_contact",
+          "hover_seconds": null,
+          "visual": "missing",
+          "support_gap_mm": 0.0,
+          "setdown_age_s": null
+        },
+        "camera_monotonic": 40851.966621716,
+        "feedback_monotonic": 40851.971511878,
+        "contact_monotonic": 40851.966621716,
+        "flange_rise_mm": 0.0,
+        "rim_rise_mm": null,
+        "pickup_reference_error_mm": [
+          0.037491310869995687,
+          -0.03099800872534786,
+          0.1645049436605035
+        ],
+        "hover_start_monotonic": null
+      },
+      "corrected_timing": {
+        "state": {
+          "phase": "grasp_contact",
+          "hover_seconds": null,
+          "visual": "missing",
+          "support_gap_mm": 0.0,
+          "setdown_age_s": null
+        },
+        "camera_monotonic": 40851.966621716,
+        "feedback_monotonic": 40851.971511878,
+        "contact_monotonic": 40851.966621716,
+        "flange_rise_mm": 0.0,
+        "rim_rise_mm": null,
+        "pickup_reference_error_mm": [
+          0.037491310869995687,
+          -0.03099800872534786,
+          0.1645049436605035
+        ],
+        "hover_start_monotonic": null
+      }
+    },
+    {
+      "case_id": "source7-cycle2-release_after-3792-recovered-692",
+      "source_frame_index": 692,
+      "input_json_case_index": 3,
+      "trace_line_1based": 693,
+      "request_source_time": 40870.979449687,
+      "camera_monotonic": 40870.979449687,
+      "feedback_monotonic": 40870.975896297,
+      "gripper_feedback_valid": true,
+      "gripper_position_percent": 99,
+      "gripper_motiondone": 1,
+      "native_contact": 0,
+      "preceding_invalid_feedback_frames": [
+        681,
+        682,
+        683,
+        684,
+        685,
+        686,
+        687,
+        688,
+        689,
+        690,
+        691
+      ],
+      "prior_contact_monotonic": 40851.966621716,
+      "prior_contact_flange_mm": [
+        -103.113037109375,
+        -719.953857421875,
+        92.8216781616211
+      ],
+      "prior_was_released": false,
+      "was_released": true,
+      "old_phase": "at_pickup",
+      "corrected_phase": "released",
+      "input_matches_saved_tracking_and_timing": true,
+      "corrected_timing_matches_replay_in_all_fields": true,
+      "archived_timing": {
+        "state": {
+          "phase": "at_pickup",
+          "hover_seconds": null,
+          "visual": "missing",
+          "support_gap_mm": null,
+          "setdown_age_s": null
+        },
+        "camera_monotonic": 40870.979449687,
+        "feedback_monotonic": 40870.975896297,
+        "contact_monotonic": null,
+        "flange_rise_mm": null,
+        "rim_rise_mm": null,
+        "pickup_reference_error_mm": [
+          0.07051133040124569,
+          0.0032427139309021413,
+          0.01767724590659725
+        ],
+        "hover_start_monotonic": null
+      },
+      "corrected_timing": {
+        "state": {
+          "phase": "released",
+          "hover_seconds": null,
+          "visual": "missing",
+          "support_gap_mm": null,
+          "setdown_age_s": null
+        },
+        "camera_monotonic": 40870.979449687,
+        "feedback_monotonic": 40870.975896297,
+        "contact_monotonic": null,
+        "flange_rise_mm": null,
+        "rim_rise_mm": null,
+        "pickup_reference_error_mm": [
+          0.07051133040124569,
+          0.0032427139309021413,
+          0.01767724590659725
+        ],
+        "hover_start_monotonic": null
+      }
+    }
+  ],
+  "limitations": [
+    "released 表示真实有效开爪反馈，不证明杯子放稳或抓杯成功。",
+    "配对只改变 phase；同权重策略因果 probe 和完整评分由独立流程执行。"
+  ]
+}

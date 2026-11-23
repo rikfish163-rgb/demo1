@@ -1,0 +1,64 @@
+{
+  "schema": "fr5-cup-paired-denoising-step-summary-v1",
+  "prediction": "/home/data4/hts/demo1/fr5-learning/evaluations/pi05-cup-coverage-v8-denoising-10-20-20261116-v2.json",
+  "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-cup-input-coverage-n3-20261116-v8/step-000256",
+  "input": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-approach-support-20261115-v4/inputs.json",
+  "seeds": [
+    20261105,
+    20261113,
+    20261114,
+    20261115,
+    20261116,
+    20261117,
+    20261201,
+    20261202,
+    20261203,
+    20261204,
+    20261205,
+    20261206
+  ],
+  "step_counts": [
+    10,
+    20
+  ],
+  "paired_draws": 324,
+  "all_preprocessed_tensors_equal": true,
+  "all_initial_noise_equal": true,
+  "all_pre_sampling_cuda_rng_equal": true,
+  "summary": {
+    "10": {
+      "draws_with_aliases": 324,
+      "unique_source_row_seed_draws": 312,
+      "unique_anchors": 26,
+      "steady_draws": 120,
+      "steady_drift_over_2mm_draws": 31,
+      "steady_full_open_drift_over_2mm_draws": 31,
+      "moving_draws": 180,
+      "opposed_recorded_move_draws": 1,
+      "recorded_all_open_close_label_deviation_draws": 76,
+      "median_endpoint_error_mm": 0.9979617939023421,
+      "maximum_endpoint_error_mm": 6.743621881340574,
+      "median_inference_seconds": 0.31422581744845957,
+      "median_predict_elapsed_seconds": 0.32029784499900416,
+      "selector_status": "not_applied"
+    },
+    "20": {
+      "draws_with_aliases": 324,
+      "unique_source_row_seed_draws": 312,
+      "unique_anchors": 26,
+      "steady_draws": 120,
+      "steady_drift_over_2mm_draws": 32,
+      "steady_full_open_drift_over_2mm_draws": 31,
+      "moving_draws": 180,
+      "opposed_recorded_move_draws": 1,
+      "recorded_all_open_close_label_deviation_draws": 76,
+      "median_endpoint_error_mm": 1.0449623614274899,
+      "maximum_endpoint_error_mm": 7.142225490151578,
+      "median_inference_seconds": 0.5274137445376255,
+      "median_predict_elapsed_seconds": 0.5334017425193451,
+      "selector_status": "not_applied"
+    }
+  },
+  "robot_commands": 0,
+  "task_success_verified": false
+}

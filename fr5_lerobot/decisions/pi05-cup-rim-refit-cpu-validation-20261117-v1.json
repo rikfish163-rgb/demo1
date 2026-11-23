@@ -1,0 +1,81 @@
+{
+  "schema": "fr5-cup-rim-refit-cpu-validation-v1",
+  "client_date": "2026-11-17",
+  "status": "cpu_observer_assessed_not_released",
+  "source": "/home/data4/hts/demo1/fr5-learning/src/fr5-pi05-cup-rim-refit-fallback-20261117-v16",
+  "local_tests": {
+    "command": [
+      "env",
+      "CUDA_VISIBLE_DEVICES=",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "/home/dianrobot/anaconda3/envs/lerobot/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "fr5_lerobot.tests.test_cup_tracking",
+      "fr5_jev.test_cup_localization"
+    ],
+    "tests": 14,
+    "exit_code": 0
+  },
+  "bundle_test": {
+    "command": [
+      "env",
+      "CUDA_VISIBLE_DEVICES=",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "/home/data4/hts/demo1/fr5-learning/.venv/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "fr5_lerobot.tests.test_stream_service.StreamServiceTests.test_cup_delta_metadata_and_bundle_seal_both_helpers"
+    ],
+    "tests": 1,
+    "subcases": 6,
+    "exit_code": 0
+  },
+  "selected_fit_tests": {
+    "tests": 26,
+    "exit_code": 0,
+    "source": "/home/data4/hts/demo1/fr5-learning/diagnostics/pi05-cup-terminal-xyz-fit-selection-20261117-v10"
+  },
+  "full_replay": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-rim-refit-fallback-original-eight-replay-20261117-v2",
+  "gpu_work_status": "suspended_by_user",
+  "new_demonstrations": 0,
+  "model_inference_calls": 0,
+  "robot_commands": 0,
+  "task_success_verified": false,
+  "initial_visual_test_source": "/home/data4/hts/demo1/fr5-learning/src/fr5-pi05-cup-rim-refit-20261117-v15",
+  "fallback_priority_tests": {
+    "tests": 7,
+    "exit_code": 0,
+    "command": [
+      "env",
+      "CUDA_VISIBLE_DEVICES=",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "/home/dianrobot/anaconda3/envs/lerobot/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "fr5_lerobot.tests.test_cup_tracking"
+    ]
+  },
+  "full_replay_exit_code": 0,
+  "full_replay_summary": {
+    "source_count": 8,
+    "frame_count": 4209,
+    "before_observed": 2961,
+    "after_observed": 3712,
+    "recovered_count": 751,
+    "lost_count": 0
+  },
+  "maximum_both_observed_coordinate_difference_mm": 16.222308313619447,
+  "close_readiness_report": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-rim-refit-fallback-close-readiness-20261117-v1.json",
+  "limitations": [
+    "Source 3 frame 170 remains missing because distributed raised-depth evidence is insufficient.",
+    "Both observers still differ by up to 16.222308313619447 mm when a rim is observed; millimetre accuracy is unverified.",
+    "Updated observer inputs and terminal step128/256 weights have not received GPU inference, controller or physical task validation."
+  ]
+}

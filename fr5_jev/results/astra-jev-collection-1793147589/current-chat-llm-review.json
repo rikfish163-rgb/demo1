@@ -1,0 +1,10 @@
+{
+  "source": "current_codex_chat",
+  "independent_astra_api_called": false,
+  "reviewed_at_unix": 1793147722.2353928,
+  "intervention_reason": "Inactive gripper with cup between jaws; initialization cannot be treated as controlled closing",
+  "decision_record": "/home/dianrobot/demo1/fairino-review/astra-jev-collection-1793147589/jev-decision.json",
+  "physical_commands_sent": 0,
+  "outcome": "await_physical_prerequisite",
+  "training_label": "blocked_observation_not_successful_demonstration"
+}

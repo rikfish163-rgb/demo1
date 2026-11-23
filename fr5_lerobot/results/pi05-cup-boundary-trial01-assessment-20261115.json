@@ -1,0 +1,123 @@
+{
+  "schema": "fr5-pi05-cup-trial-assessment-v1",
+  "episode": "pi05-cup-boundary-trial01-20261115",
+  "recording": "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-cup-boundary-trial01-20261115/materialized",
+  "diagnostic": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-boundary-trial01-diagnostic-20261115.json",
+  "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-stream-cup-setdown-n3-20261114-v2/step-000160",
+  "verdict": "failure",
+  "user_review": {
+    "schema": "fr5-policy-user-review-v1",
+    "verdict": "failure",
+    "user_statement": "杯子全程在桌上，未被推移",
+    "reviewer": "user",
+    "source": "direct_user_message",
+    "input_method": "chat_message",
+    "summary_sha256": "9619ac7e284c55acf464627d2136c97d0eb140f32f64756a737d5a92ba110fd9",
+    "scope_sha256": "b0a61540254f2da4c8d655760c29ef3f60e23b99153c6f83d66d40fab9c1bbfd",
+    "reviewed_at_unix": 1794736307.8009963,
+    "training_ready": false
+  },
+  "training_ready": false,
+  "task_success_verified": false,
+  "recorded_frames": 543,
+  "predictions": 63,
+  "submissions": 186,
+  "acknowledgements": 186,
+  "wire_method_counts": {
+    "ServoJ": 10947,
+    "MoveGripper": 0
+  },
+  "stop_result": 0,
+  "servo_end_result": 0,
+  "servo_overruns": 0,
+  "last_block_status": "rejected_before_execution",
+  "last_block_rejection": "Cup-relative close is outside the demonstrated contact neighborhood: horizontal 44.3 mm, vertical 40.9 mm",
+  "last_request": {
+    "source_time": 31150.830262157,
+    "cup_relative_state": [
+      0.20280105902432116,
+      0.08648658355899068,
+      0.13657074369920585,
+      1.617191522461276,
+      -0.02211172094643972,
+      -1.1743124937130063,
+      1.0,
+      1.0
+    ],
+    "cup_tracking": {
+      "rim_minus_jaw_mm": [
+        -53.59116244706058,
+        -19.028319374991497,
+        -27.226507197030685
+      ],
+      "native_contact": 0
+    },
+    "cup_timing": {
+      "phase": "approaching",
+      "hover_seconds": null,
+      "visual": "table_height",
+      "support_gap_mm": null,
+      "setdown_age_s": null
+    }
+  },
+  "last_prediction_first_three": [
+    [
+      0.20157650113105774,
+      0.08567402511835098,
+      0.13667412102222443,
+      1.6172211170196533,
+      -0.02207621932029724,
+      -1.1743345260620117,
+      0.7399834394454956
+    ],
+    [
+      0.20025895535945892,
+      0.08489822596311569,
+      0.13673481345176697,
+      1.6172175407409668,
+      -0.021978994831442833,
+      -1.1743674278259277,
+      1.001680612564087
+    ],
+    [
+      0.1991301327943802,
+      0.08429889380931854,
+      0.13683049380779266,
+      1.6172043085098267,
+      -0.022010713815689087,
+      -1.1744053363800049,
+      1.0004143714904785
+    ]
+  ],
+  "joint_error_deg_sparse_feedback": {
+    "samples": 3156,
+    "min": 0.0,
+    "median": 0.0035476684570028283,
+    "p95": 0.08661572452356481,
+    "max": 0.23507074912073023
+  },
+  "first_action_source_to_submit_seconds": {
+    "samples": 62,
+    "min": 0.6838071839993063,
+    "median": 0.7518390559980617,
+    "p95": 0.8388214328493632,
+    "max": 1.165190536998125
+  },
+  "target_timing": {
+    "status": "verified",
+    "rows": 186,
+    "source_and_index_verified": 186,
+    "actual_minus_predicted_target_seconds": {
+      "samples": 186,
+      "min": 0.6838071839993063,
+      "median": 0.7661799026682274,
+      "p95": 0.8476723609182955,
+      "max": 1.1893931996673928
+    }
+  },
+  "limitations": [
+    "No gripper command, contact, lift, hover or setdown occurred.",
+    "Six-Hz feedback does not resolve transient tracking error.",
+    "This failed rollout is evaluation only."
+  ]
+}

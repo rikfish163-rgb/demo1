@@ -1,0 +1,530 @@
+{
+  "schema": "fr5-cup-terminal-evaluation-inputs-v9",
+  "status": "prepared",
+  "case_count": 219,
+  "assessed_cases": 219,
+  "unassessed_cases": 0,
+  "phase_changed_cases": 7,
+  "phase_changed_values": 12,
+  "released_cases": 9,
+  "outputs": {
+    "heldout-inputs.json": {
+      "case_count": 43,
+      "assessed_cases": 43,
+      "unassessed_cases": 0,
+      "phase_changed_cases": 2,
+      "phase_changed_values": 2,
+      "released_cases": 2,
+      "phase_counts": {
+        "approaching": 13,
+        "at_pickup": 6,
+        "unknown": 4,
+        "grasp_contact": 2,
+        "hover": 6,
+        "returning": 7,
+        "at_table_height": 3,
+        "released": 2
+      },
+      "unassessed_case_ids": [],
+      "input": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-precontact-close-20261115-v4/heldout-inputs.json",
+      "output": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/heldout-inputs.json",
+      "preserved": {
+        "original_jpeg": true,
+        "camera_timestamp": true,
+        "robot_and_gripper_feedback": true,
+        "history": true,
+        "task": true,
+        "targets": true,
+        "tracking": true,
+        "contact_clock": true,
+        "hover_clock": true,
+        "support_gap": true,
+        "setdown_clock": true,
+        "other_timing_fields": true,
+        "failed_trial_role": true
+      }
+    },
+    "fit-inputs.json": {
+      "case_count": 100,
+      "assessed_cases": 100,
+      "unassessed_cases": 0,
+      "phase_changed_cases": 5,
+      "phase_changed_values": 10,
+      "released_cases": 5,
+      "phase_counts": {
+        "approaching": 10,
+        "at_pickup": 15,
+        "unknown": 10,
+        "grasp_contact": 5,
+        "hover": 30,
+        "returning": 16,
+        "at_table_height": 9,
+        "released": 5
+      },
+      "unassessed_case_ids": [],
+      "input": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-precontact-close-20261115-v4/fit-inputs.json",
+      "output": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/fit-inputs.json",
+      "preserved": {
+        "original_jpeg": true,
+        "camera_timestamp": true,
+        "robot_and_gripper_feedback": true,
+        "history": true,
+        "task": true,
+        "targets": true,
+        "tracking": true,
+        "contact_clock": true,
+        "hover_clock": true,
+        "support_gap": true,
+        "setdown_clock": true,
+        "other_timing_fields": true,
+        "failed_trial_role": true
+      }
+    },
+    "trial01-inputs.json": {
+      "case_count": 9,
+      "assessed_cases": 9,
+      "unassessed_cases": 0,
+      "phase_changed_cases": 0,
+      "phase_changed_values": 0,
+      "released_cases": 0,
+      "phase_counts": {
+        "approaching": 9
+      },
+      "unassessed_case_ids": [],
+      "input": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-precontact-close-20261115-v4/trial01-inputs.json",
+      "output": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/trial01-inputs.json",
+      "preserved": {
+        "original_jpeg": true,
+        "camera_timestamp": true,
+        "robot_and_gripper_feedback": true,
+        "history": true,
+        "task": true,
+        "targets": true,
+        "tracking": true,
+        "contact_clock": true,
+        "hover_clock": true,
+        "support_gap": true,
+        "setdown_clock": true,
+        "other_timing_fields": true,
+        "failed_trial_role": true
+      }
+    },
+    "trial02-inputs.json": {
+      "case_count": 36,
+      "assessed_cases": 36,
+      "unassessed_cases": 0,
+      "phase_changed_cases": 0,
+      "phase_changed_values": 0,
+      "released_cases": 0,
+      "phase_counts": {
+        "approaching": 36
+      },
+      "unassessed_case_ids": [],
+      "input": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-precontact-close-20261115-v4/trial02-inputs.json",
+      "output": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/trial02-inputs.json",
+      "preserved": {
+        "original_jpeg": true,
+        "camera_timestamp": true,
+        "robot_and_gripper_feedback": true,
+        "history": true,
+        "task": true,
+        "targets": true,
+        "tracking": true,
+        "contact_clock": true,
+        "hover_clock": true,
+        "support_gap": true,
+        "setdown_clock": true,
+        "other_timing_fields": true,
+        "failed_trial_role": true
+      }
+    },
+    "training-support-inputs.json": {
+      "case_count": 27,
+      "assessed_cases": 27,
+      "unassessed_cases": 0,
+      "phase_changed_cases": 0,
+      "phase_changed_values": 0,
+      "released_cases": 0,
+      "phase_counts": {
+        "approaching": 2,
+        "at_pickup": 25
+      },
+      "unassessed_case_ids": [],
+      "input": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-approach-support-20261115-v4/inputs.json",
+      "output": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/training-support-inputs.json",
+      "preserved": {
+        "original_jpeg": true,
+        "camera_timestamp": true,
+        "robot_and_gripper_feedback": true,
+        "history": true,
+        "task": true,
+        "targets": true,
+        "tracking": true,
+        "contact_clock": true,
+        "hover_clock": true,
+        "support_gap": true,
+        "setdown_clock": true,
+        "other_timing_fields": true,
+        "failed_trial_role": true
+      }
+    },
+    "recovered-feedback-inputs.json": {
+      "case_count": 4,
+      "assessed_cases": 4,
+      "unassessed_cases": 0,
+      "phase_changed_cases": 0,
+      "phase_changed_values": 0,
+      "released_cases": 2,
+      "phase_counts": {
+        "grasp_contact": 2,
+        "released": 2
+      },
+      "unassessed_case_ids": [],
+      "input": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-fixed-clock-recovered-pgi-inputs-corrected-phase-20261116-v1.json",
+      "output": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/recovered-feedback-inputs.json",
+      "preserved": {
+        "original_jpeg": true,
+        "camera_timestamp": true,
+        "robot_and_gripper_feedback": true,
+        "history": true,
+        "task": true,
+        "targets": true,
+        "tracking": true,
+        "contact_clock": true,
+        "hover_clock": true,
+        "support_gap": true,
+        "setdown_clock": true,
+        "other_timing_fields": true,
+        "failed_trial_role": true
+      }
+    }
+  },
+  "shared_for": [
+    "clean",
+    "terminal"
+  ],
+  "phase_evidence": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/phase-evidence.jsonl",
+  "original_phase_audit": {
+    "path": "/home/data4/hts/demo1/fr5-learning/audits/cup-timing-released-stage-20261116-v1/summary.json",
+    "frames": 4209,
+    "sources_count": 8,
+    "changed_phase_frames": 227,
+    "output_difference_counts": {
+      "camera_monotonic": 0,
+      "contact_monotonic": 0,
+      "feedback_monotonic": 0,
+      "flange_rise_mm": 0,
+      "hover_start_monotonic": 0,
+      "pickup_reference_error_mm": 0,
+      "rim_rise_mm": 0,
+      "state.hover_seconds": 0,
+      "state.phase": 227,
+      "state.setdown_age_s": 0,
+      "state.support_gap_mm": 0,
+      "state.visual": 0
+    },
+    "internal_difference_counts": {
+      "contact_time": 0,
+      "hover_start": 0,
+      "hover_seconds": 0,
+      "was_released": 0,
+      "retreat_peak": 0,
+      "setdown_since": 0,
+      "setdown_last": 0
+    },
+    "reused": true
+  },
+  "source_evidence": {
+    "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized": {
+      "id": "source-7",
+      "evidence": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-precontact-tracker-replay-20261115-v1/source-7.jsonl",
+      "method": "verified_original_frame_audit",
+      "rgbd_recomputed": false,
+      "frames_replayed": 0
+    },
+    "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-cup-tcp-tick240-trial-20261113-01/materialized": {
+      "id": "pi05-cup-tcp-tick240-trial-20261113-01",
+      "evidence": "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-cup-tcp-tick240-trial-20261113-01/materialized/continuous/capture.jsonl",
+      "method": "causal_rgbd_replay",
+      "rgbd_recomputed": true,
+      "frames_replayed": 133,
+      "changed_phase_frames": [],
+      "nonphase_timing_changes": 0,
+      "internal_clock_changes": 0
+    },
+    "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized": {
+      "id": "source-0",
+      "evidence": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-precontact-tracker-replay-20261115-v1/source-0.jsonl",
+      "method": "verified_original_frame_audit",
+      "rgbd_recomputed": false,
+      "frames_replayed": 0
+    },
+    "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized": {
+      "id": "source-3",
+      "evidence": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-precontact-tracker-replay-20261115-v1/source-3.jsonl",
+      "method": "verified_original_frame_audit",
+      "rgbd_recomputed": false,
+      "frames_replayed": 0
+    },
+    "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-192509-307a80/materialized": {
+      "id": "source-4",
+      "evidence": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-precontact-tracker-replay-20261115-v1/source-4.jsonl",
+      "method": "verified_original_frame_audit",
+      "rgbd_recomputed": false,
+      "frames_replayed": 0
+    },
+    "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-165538-d95608/materialized": {
+      "id": "source-5",
+      "evidence": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-precontact-tracker-replay-20261115-v1/source-5.jsonl",
+      "method": "verified_original_frame_audit",
+      "rgbd_recomputed": false,
+      "frames_replayed": 0
+    },
+    "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-cup-boundary-trial01-20261115/materialized": {
+      "id": "trial01",
+      "evidence": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-precontact-tracker-replay-20261115-v1/trial01.jsonl",
+      "method": "causal_saved_tracking_replay",
+      "rgbd_recomputed": false,
+      "frames_replayed": 529,
+      "changed_phase_frames": [],
+      "nonphase_timing_changes": 0,
+      "internal_clock_changes": 0
+    },
+    "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-cup-hover-speed-roll64-trial02-20261115/materialized": {
+      "id": "trial02",
+      "evidence": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-precontact-tracker-replay-20261115-v1/trial02.jsonl",
+      "method": "causal_saved_tracking_replay",
+      "rgbd_recomputed": false,
+      "frames_replayed": 302,
+      "changed_phase_frames": [],
+      "nonphase_timing_changes": 0,
+      "internal_clock_changes": 0
+    },
+    "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-183700-cc83dc/materialized": {
+      "id": "source-1",
+      "evidence": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-precontact-tracker-replay-20261115-v1/source-1.jsonl",
+      "method": "verified_original_frame_audit",
+      "rgbd_recomputed": false,
+      "frames_replayed": 0
+    },
+    "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-190231-0c1c42/materialized": {
+      "id": "source-2",
+      "evidence": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-precontact-tracker-replay-20261115-v1/source-2.jsonl",
+      "method": "verified_original_frame_audit",
+      "rgbd_recomputed": false,
+      "frames_replayed": 0
+    },
+    "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-chat-20261101-171627-cbdf83/materialized": {
+      "id": "source-6",
+      "evidence": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-precontact-tracker-replay-20261115-v1/source-6.jsonl",
+      "method": "verified_original_frame_audit",
+      "rgbd_recomputed": false,
+      "frames_replayed": 0
+    }
+  },
+  "unassessed_source_errors": {},
+  "preserved": {
+    "original_jpeg": true,
+    "camera_timestamp": true,
+    "robot_and_gripper_feedback": true,
+    "history": true,
+    "task": true,
+    "targets": true,
+    "tracking": true,
+    "contact_clock": true,
+    "hover_clock": true,
+    "support_gap": true,
+    "setdown_clock": true,
+    "other_timing_fields": true,
+    "failed_trial_role": true
+  },
+  "failed_trial_cases": 54,
+  "failed_trial_use": "evaluation_only",
+  "cpu_only": true,
+  "policy_inference": false,
+  "robot_camera_connections": 0,
+  "robot_commands": 0,
+  "commands": {
+    "prepare": "/home/data4/hts/demo1/fr5-learning/.venv/bin/python -B /home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/prepare_cup_terminal_evaluation.py --source-root /home/data4/hts/demo1/fr5-learning/src/fr5-pi05-cup-input-coverage-20261116-v11 --output-dir /home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9",
+    "tests": "PYTHONDONTWRITEBYTECODE=1 /home/dianrobot/anaconda3/envs/lerobot/bin/python -B -m unittest -q fr5_lerobot.tests.test_prepare_cup_terminal_evaluation",
+    "verify": "/home/data4/hts/demo1/fr5-learning/.venv/bin/python -B /home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/verify_prepared_inputs.py"
+  },
+  "limitations": [
+    "released 表示原帧的有效开爪阶段，不证明杯子放稳或抓杯成功。",
+    "策略正式评分与实机成功尚未验证。"
+  ],
+  "remote_host": "4090",
+  "output_directory": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9",
+  "validation": {
+    "schema": "fr5-cup-terminal-evaluation-inputs-validation-v9",
+    "verified": true,
+    "case_count": 219,
+    "phase_changed_cases": 7,
+    "phase_changed_values": 12,
+    "unique_source_frame_time_count": 215,
+    "source_frame_time_matches": 219,
+    "outside_phase_case_changes": 0,
+    "recorded_request_changes": 0,
+    "tracking_changes": 0,
+    "target_changes": 0,
+    "nonphase_timing_changes": 0,
+    "original_metadata_changes": 0,
+    "failed_trial_cases": 54,
+    "failed_trial_use": "evaluation_only",
+    "files": {
+      "heldout-inputs.json": {
+        "case_count": 43,
+        "phase_changed_cases": 2,
+        "phase_changed_values": 2,
+        "outside_phase_case_changes": 0,
+        "original_metadata_changes": 0,
+        "output_bytes": 6031283
+      },
+      "fit-inputs.json": {
+        "case_count": 100,
+        "phase_changed_cases": 5,
+        "phase_changed_values": 10,
+        "outside_phase_case_changes": 0,
+        "original_metadata_changes": 0,
+        "output_bytes": 15701215
+      },
+      "trial01-inputs.json": {
+        "case_count": 9,
+        "phase_changed_cases": 0,
+        "phase_changed_values": 0,
+        "outside_phase_case_changes": 0,
+        "original_metadata_changes": 0,
+        "output_bytes": 945623
+      },
+      "trial02-inputs.json": {
+        "case_count": 36,
+        "phase_changed_cases": 0,
+        "phase_changed_values": 0,
+        "outside_phase_case_changes": 0,
+        "original_metadata_changes": 0,
+        "output_bytes": 3279386
+      },
+      "training-support-inputs.json": {
+        "case_count": 27,
+        "phase_changed_cases": 0,
+        "phase_changed_values": 0,
+        "outside_phase_case_changes": 0,
+        "original_metadata_changes": 0,
+        "output_bytes": 2392841
+      },
+      "recovered-feedback-inputs.json": {
+        "case_count": 4,
+        "phase_changed_cases": 0,
+        "phase_changed_values": 0,
+        "outside_phase_case_changes": 0,
+        "original_metadata_changes": 0,
+        "output_bytes": 349754
+      }
+    },
+    "changed_cases": [
+      {
+        "input_name": "heldout-inputs.json",
+        "case_id": "source7-cycle1-retreat-3453",
+        "source_root": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized",
+        "source_frame_index": 320,
+        "source_time": 40808.937892571,
+        "changed_paths": [
+          "/timing_setdown/state/phase"
+        ]
+      },
+      {
+        "input_name": "heldout-inputs.json",
+        "case_id": "source7-cycle2-retreat-3810",
+        "source_root": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized",
+        "source_frame_index": 702,
+        "source_time": 40872.580503829,
+        "changed_paths": [
+          "/timing_setdown/state/phase"
+        ]
+      },
+      {
+        "input_name": "fit-inputs.json",
+        "case_id": "source0-cycle1-retreat-376",
+        "source_root": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized",
+        "source_frame_index": 402,
+        "source_time": 39977.681057908,
+        "changed_paths": [
+          "/observers/setdown/model_timing/phase",
+          "/observers/setdown/timing/state/phase"
+        ]
+      },
+      {
+        "input_name": "fit-inputs.json",
+        "case_id": "source3-cycle1-retreat-1601",
+        "source_root": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized",
+        "source_frame_index": 328,
+        "source_time": 47326.155566301,
+        "changed_paths": [
+          "/observers/setdown/model_timing/phase",
+          "/observers/setdown/timing/state/phase"
+        ]
+      },
+      {
+        "input_name": "fit-inputs.json",
+        "case_id": "source3-cycle2-retreat-1945",
+        "source_root": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized",
+        "source_frame_index": 704,
+        "source_time": 47388.898815974,
+        "changed_paths": [
+          "/observers/setdown/model_timing/phase",
+          "/observers/setdown/timing/state/phase"
+        ]
+      },
+      {
+        "input_name": "fit-inputs.json",
+        "case_id": "source4-cycle1-retreat-2304",
+        "source_root": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-192509-307a80/materialized",
+        "source_frame_index": 385,
+        "source_time": 47936.977566935,
+        "changed_paths": [
+          "/observers/setdown/model_timing/phase",
+          "/observers/setdown/timing/state/phase"
+        ]
+      },
+      {
+        "input_name": "fit-inputs.json",
+        "case_id": "source5-cycle1-retreat-2658",
+        "source_root": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-165538-d95608/materialized",
+        "source_frame_index": 326,
+        "source_time": 39167.492671427,
+        "changed_paths": [
+          "/observers/setdown/model_timing/phase",
+          "/observers/setdown/timing/state/phase"
+        ]
+      }
+    ],
+    "command": "/home/data4/hts/demo1/fr5-learning/.venv/bin/python -B /home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/verify_prepared_inputs.py",
+    "cpu_only": true,
+    "policy_inference": false,
+    "robot_camera_connections": 0,
+    "robot_commands": 0
+  },
+  "validation_report": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/validation.json",
+  "unique_source_frame_time_count": 215,
+  "modified_paths": [
+    "/home/dianrobot/demo1/fr5_lerobot/diagnostics/prepare_cup_terminal_evaluation.py",
+    "/home/dianrobot/demo1/fr5_lerobot/tests/test_prepare_cup_terminal_evaluation.py",
+    "/home/dianrobot/demo1/fr5_lerobot/artifacts/pi05-cup-terminal-evaluation-inputs-20261116-v9-summary.json"
+  ],
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 /home/dianrobot/anaconda3/envs/lerobot/bin/python -B -m unittest -q fr5_lerobot.tests.test_prepare_cup_terminal_evaluation",
+    "cwd": "/home/dianrobot/demo1",
+    "host": "local",
+    "tests_run": 14,
+    "exit_code": 0,
+    "result": "passed"
+  },
+  "evaluation_input_arguments": {
+    "--heldout-inputs": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/heldout-inputs.json",
+    "--fit-inputs": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/fit-inputs.json",
+    "--trial-inputs": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/trial01-inputs.json",
+    "--trial02-inputs": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/trial02-inputs.json",
+    "--training-support-inputs": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/training-support-inputs.json",
+    "--recovered-feedback-inputs": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/recovered-feedback-inputs.json"
+  }
+}

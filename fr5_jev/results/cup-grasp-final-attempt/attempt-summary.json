@@ -1,0 +1,175 @@
+{
+  "status": "failed_collision_stopped_no_closure_or_lift",
+  "robot_id": "J1",
+  "robot_ip": "192.168.58.2",
+  "user_contact_report_verbatim": "刚刚完全错误啊 你直接夹爪放到杯子里面了 这怎么能行呢 视觉怎么做的？",
+  "confirmed_failure": "User reports gripper fingers entered the cup interior during descent",
+  "completed_10mm_segments": 6,
+  "faulted_segment": 7,
+  "segment8_dispatched": false,
+  "motion_commands_sent": 7,
+  "gripper_commands_sent": 0,
+  "lift_commands_sent": 0,
+  "grasp_completed": false,
+  "initial_tcp": [
+    36.19812774658203,
+    -620.8099975585938,
+    198.81809997558594,
+    97.27074432373047,
+    -16.452516555786133,
+    -79.74446868896484
+  ],
+  "current_state": {
+    "program_state": 1,
+    "robot_state": 1,
+    "main_code": 0,
+    "sub_code": 0,
+    "robot_mode": 1,
+    "tool": 0,
+    "user": 0,
+    "EmergencyStop": 0,
+    "motion_done": 1,
+    "mc_queue_len": 0,
+    "collisionState": 1,
+    "safety_stop0_state": 0,
+    "safety_stop1_state": 0,
+    "gripper_fault": 0,
+    "gripper_position": 100,
+    "rbtEnableState": 1,
+    "gripper_motiondone": 1,
+    "gripper_active": 1,
+    "gripper_speed": 0,
+    "gripper_current": 0,
+    "gripper_fault_id": 0,
+    "joints": [
+      90.30239868164062,
+      -42.291053771972656,
+      73.57467651367188,
+      -0.8669409155845642,
+      166.12850952148438,
+      46.259403228759766
+    ],
+    "tcp": [
+      36.19340896606445,
+      -620.8091430664062,
+      132.76837158203125,
+      97.2708969116211,
+      -16.45166015625,
+      -79.74494934082031
+    ],
+    "flange": [
+      36.19349670410156,
+      -620.8084106445312,
+      132.77174377441406,
+      97.27095794677734,
+      -16.451461791992188,
+      -79.74472045898438
+    ],
+    "tcp_speed": [
+      0.5526580102775615,
+      0.07358175409348817
+    ],
+    "joint_speeds_deg_s": [
+      0.04351021039639136,
+      -0.02175510519819568,
+      0.0,
+      0.043510210396036086,
+      0.021755105197485136,
+      -0.043510210395680815
+    ],
+    "timestamp": 1792662970.801694
+  },
+  "approx_total_descent_mm": 66.04972839355469,
+  "collision_flag": 1,
+  "immediate_stop_return_code": 0,
+  "stop_latch": "/home/dianrobot/demo1/fairino-review/cup-reuse-20261022-102342/stop-cup-grasp-attempt",
+  "jev_decisions": [
+    {
+      "name": "phase-descent",
+      "gate": {
+        "choice": "descend_pregrasp",
+        "probability": 0.71,
+        "confidence": 0.61,
+        "margin": 0.48,
+        "policy": {
+          "policy_version": "risk-evidence-v1",
+          "risk": "noncontact_motion",
+          "min_confidence": 0.85,
+          "min_probability": 0.9,
+          "min_margin": 0.5,
+          "evidence_complete": true,
+          "matched_successes": 0,
+          "recent_failures": 0,
+          "empirically_calibrated": false
+        },
+        "physical_authorization_granted_by_policy": false,
+        "route": "needs_llm",
+        "reason": "Decision below the predeclared risk gate"
+      },
+      "latency_ms": 1162.1111579952412
+    },
+    {
+      "name": "phase-descent-resume-after-readonly-check",
+      "gate": {
+        "choice": "descend_pregrasp",
+        "probability": 0.67,
+        "confidence": 0.56,
+        "margin": 0.43000000000000005,
+        "policy": {
+          "policy_version": "risk-evidence-v1",
+          "risk": "noncontact_motion",
+          "min_confidence": 0.85,
+          "min_probability": 0.9,
+          "min_margin": 0.5,
+          "evidence_complete": true,
+          "matched_successes": 0,
+          "recent_failures": 0,
+          "empirically_calibrated": false
+        },
+        "physical_authorization_granted_by_policy": false,
+        "route": "needs_llm",
+        "reason": "Decision below the predeclared risk gate"
+      },
+      "latency_ms": 1128.2112129993038
+    },
+    {
+      "name": "phase-collision-hold",
+      "gate": {
+        "choice": "observe_scene",
+        "probability": 0.58,
+        "confidence": 0.37,
+        "margin": 0.26999999999999996,
+        "policy": {
+          "policy_version": "risk-evidence-v1",
+          "risk": "readonly",
+          "min_confidence": 0.5,
+          "min_probability": 0.65,
+          "min_margin": 0.15,
+          "evidence_complete": true,
+          "matched_successes": 0,
+          "recent_failures": 0,
+          "empirically_calibrated": false
+        },
+        "physical_authorization_granted_by_policy": false,
+        "route": "needs_llm",
+        "reason": "Decision below the predeclared risk gate"
+      },
+      "latency_ms": 1218.8956850004615
+    }
+  ],
+  "llm_motion_exception_records": [
+    "phase-descent-llm-review.json",
+    "phase-descent-resume-llm-review.json"
+  ],
+  "known_pipeline_gaps": [
+    "Camera freshness and positive depth did not verify grasp geometry",
+    "Cup localization/partial cylindrical surface fit did not distinguish the hollow opening from external side-contact surfaces",
+    "Complete finger/tool swept-volume clearance against rim, interior, handle and table was not established",
+    "Fixed XY target, grasp TCP and camera-to-base transform were not independently validated",
+    "LLM wrongly overrode low-confidence Jev routing using an approximate height estimate and an overhead image",
+    "Candidate validation and hard-check booleans overstated the available geometric evidence"
+  ],
+  "post_stop_scene": "Human hand touching/handling cup visible; prior cup pose cannot be reused",
+  "recovery": "No reset, motion, automatic retry or release; contact diagnosis and new geometry required",
+  "recorded_at_unix": 1792662970.8021204
+}

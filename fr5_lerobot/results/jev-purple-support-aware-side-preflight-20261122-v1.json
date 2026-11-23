@@ -1,0 +1,196 @@
+{
+  "schema": "fr5-jev-support-aware-side-candidate-v1",
+  "source_observation": "/home/data4/hts/demo1/fr5-learning/observations/jev-purple-side-20261122T163744-v1",
+  "candidate_basis": "selected visible purple surface and measured visible green support; archived geometry for next fresh preparation",
+  "contact_tcp_mm_deg": [
+    -157.7906178027523,
+    -737.3261306206002,
+    108.62443504313545,
+    89.5710810343794,
+    -0.15394922496554386,
+    -4.541781330680777
+  ],
+  "grasp_height_below_visible_top_mm": 5.0,
+  "side_retraction_along_tool_z_mm": 21.0,
+  "grasp_offset_flange_mm": [
+    5.208,
+    8.072,
+    162.0
+  ],
+  "sample_count": 1409,
+  "kinematics": {
+    "minimum_joint_margin_deg": 42.188995361328125,
+    "maximum_joint_step_deg": 0.2904663085937571,
+    "max_fk_error_mm": 7.503432995298223e-05,
+    "max_fk_rotation_error_deg": 1.1296288988660308e-05,
+    "max_link_center_displacement_mm": 291.8820570682736,
+    "max_urdf_flange_error_mm": 0.00029338933662438437
+  },
+  "tool_table_clearance_mm": {
+    "-1": 99.4185987050039,
+    "1": 100.99870170915001,
+    "housing": 34.93214633721574
+  },
+  "visible_support_candidate": {
+    "vertical_shift_along_table_normal_mm": 5,
+    "retreat_along_negative_tool_z_mm": 21,
+    "translation_in_base_mm": [
+      1.6528533971146915,
+      20.971813077380943,
+      4.842636874166812
+    ],
+    "candidate_contact_tcp_mm_deg": [
+      -157.7906178027523,
+      -737.3261306206002,
+      108.62443504313546,
+      89.5710810343794,
+      -0.15394922496554386,
+      -4.541781330680777
+    ],
+    "finger_nominal_bottom_top_above_table_mm": [
+      107.91908117550025,
+      127.9190811755003
+    ],
+    "purple_visible_local_z_min_mm": 134.5392325658443,
+    "purple_visible_local_z_p05_mm": 138.04522386569354,
+    "candidate_tip_in_original_contact_local_z_mm": 141.0,
+    "penetration_past_min_visible_point_mm": 6.460767434155713,
+    "penetration_past_p05_visible_point_mm": 2.9547761343064565,
+    "visible_purple_points_in_tip_strip": 640,
+    "tip_strip_visible_height_p10_p50_p90_mm": [
+      108.25601844084427,
+      119.52747487925123,
+      121.60403647516466
+    ],
+    "scope": "Only a geometric proposal: the fixed-attitude nearby path samples were uniformly translated for point-cloud comparison. It is not an IK/FK result, a prepared motion route, proof of grasp, or authorization for motion."
+  },
+  "robot_before": {
+    "program_state": 1,
+    "robot_state": 1,
+    "main_code": 0,
+    "sub_code": 0,
+    "robot_mode": 0,
+    "tool": 0,
+    "user": 0,
+    "EmergencyStop": 0,
+    "motion_done": 1,
+    "mc_queue_len": 0,
+    "collisionState": 0,
+    "safety_stop0_state": 0,
+    "safety_stop1_state": 0,
+    "gripper_fault": 0,
+    "gripper_position": 0,
+    "rbtEnableState": 1,
+    "gripper_motiondone": 0,
+    "gripper_active": 0,
+    "gripper_speed": 0,
+    "gripper_current": 0,
+    "gripper_fault_id": 0,
+    "joints": [
+      65.72565460205078,
+      -30.32183074951172,
+      52.30079650878906,
+      -18.19357681274414,
+      132.81100463867188,
+      3.9067816734313965
+    ],
+    "tcp": [
+      -272.17193603515625,
+      -754.4285888671875,
+      112.10824584960938,
+      92.77677154541016,
+      -1.33072030544281,
+      -67.21227264404297
+    ],
+    "flange": [
+      -272.1722717285156,
+      -754.4293212890625,
+      112.10684967041016,
+      92.77677154541016,
+      -1.33072030544281,
+      -67.21227264404297
+    ],
+    "tcp_speed": [
+      0.5377354007995478,
+      0.09281022859540652
+    ],
+    "joint_speeds_deg_s": [
+      0.021755105197485136,
+      0.0,
+      0.043510210395680815,
+      0.021755105197840408,
+      -0.021755105197485136,
+      -0.021755105198018043
+    ],
+    "timestamp": 1795341276.1231232
+  },
+  "robot_after": {
+    "program_state": 1,
+    "robot_state": 1,
+    "main_code": 0,
+    "sub_code": 0,
+    "robot_mode": 0,
+    "tool": 0,
+    "user": 0,
+    "EmergencyStop": 0,
+    "motion_done": 1,
+    "mc_queue_len": 0,
+    "collisionState": 0,
+    "safety_stop0_state": 0,
+    "safety_stop1_state": 0,
+    "gripper_fault": 0,
+    "gripper_position": 0,
+    "rbtEnableState": 1,
+    "gripper_motiondone": 0,
+    "gripper_active": 0,
+    "gripper_speed": 0,
+    "gripper_current": 0,
+    "gripper_fault_id": 0,
+    "joints": [
+      65.72543334960938,
+      -30.32204818725586,
+      52.30057907104492,
+      -18.193359375,
+      132.81121826171875,
+      3.9067816734313965
+    ],
+    "tcp": [
+      -272.1752624511719,
+      -754.4278564453125,
+      112.11268615722656,
+      92.77660369873047,
+      -1.3308579921722412,
+      -67.21270751953125
+    ],
+    "flange": [
+      -272.1693115234375,
+      -754.4287719726562,
+      112.10523986816406,
+      92.77691650390625,
+      -1.330551028251648,
+      -67.21249389648438
+    ],
+    "tcp_speed": [
+      0.6579250298622665,
+      0.04612353536442136
+    ],
+    "joint_speeds_deg_s": [
+      -0.021755105197485136,
+      -0.043510210396036086,
+      0.0,
+      0.02175510519819568,
+      0.0,
+      0.021755105198018043
+    ],
+    "timestamp": 1795341284.6894126
+  },
+  "checked_unix": 1795341284.6895528,
+  "motion_commands_sent": 0,
+  "gripper_commands_sent": 0,
+  "ready_for_execution": false,
+  "limitations": [
+    "Archived scene requires fresh RGB-D and reconstruction after gripper recovery.",
+    "Visible surfaces and tool boxes do not measure hidden geometry or independently prove object contact."
+  ],
+  "complete_routes_and_samples": "/home/data4/hts/demo1/fr5-learning/observations/jev-purple-side-20261122T163744-v1/support-aware-side-candidate-v1.json"
+}

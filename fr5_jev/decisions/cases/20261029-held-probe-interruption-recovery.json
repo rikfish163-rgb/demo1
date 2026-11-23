@@ -1,0 +1,22 @@
+{
+  "case_id": "held-probe-interruption-recovery-20261029",
+  "robot_id": "J1",
+  "tags": [
+    "cup",
+    "lift",
+    "gripper_feedback",
+    "continuous_workflow",
+    "recovery",
+    "storage"
+  ],
+  "observed_outcome": "Episode000005 reached10mm lift, then stationary monitor raisedUnexpected joint motion atLLMcheckpoint before50mm lift. Original failedframe wasnotpersisted; actualcause/magnitudeunresolved. AfterPCrebootandcamera reconnect, new30secondreadonlytelemetry stable/no controllerfault. Parentreturnedcup toknownsupport in6boundedMoveLcommands, opened100, withdrew80mm; finalfreshRGBshowscupstanding independently. Not a new successfulfull demonstration.",
+  "applicability": "Only diagnose source-record retention and phase-transition monitor behavior; anyphysicalrecoveryneedsnewcurrentstate/vision.",
+  "limitations": "No historical exactrejectedvelocityavailable, do notassertnoise wasproved orsilentlyrelabelinterruption. Recoverydoesnotcountas50mm success. Independentcontrollerfault/position/grasp checksremainrequired.",
+  "evidence": [
+    "/home/dianrobot/demo1/fr5_jev/results/recovery-after-reboot-20261029/remote-verification.json",
+    "/home/dianrobot/demo1/fr5_jev/results/telemetry-after-reboot-20261029/summary.json",
+    "4090:/home/data4/hts/demo1/fr5-learning/analysis/recovery-after-reboot-20261029"
+  ],
+  "recorded_unix": 1793275337.9144948,
+  "grants_execution_permission": false
+}

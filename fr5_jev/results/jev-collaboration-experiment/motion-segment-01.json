@@ -1,0 +1,312 @@
+{
+  "state": {
+    "schema": "fr5-cup-shadow-v1",
+    "source": "live_readonly",
+    "robot_id": "J1",
+    "robot_ip": "192.168.58.2",
+    "captured_at_unix": 1792658650.225232,
+    "robot": {
+      "stationary": true,
+      "fault_free": true,
+      "tcp_mm_deg": [
+        16.194122314453125,
+        -620.8128051757812,
+        258.8155822753906,
+        97.27088165283203,
+        -16.452373504638672,
+        -79.74467468261719
+      ],
+      "gripper_position_percent": 100
+    },
+    "camera": {
+      "available": true,
+      "serial": "CP1E54200015",
+      "capture_time_unix": 1792658650.1824443,
+      "age_s": 0.04635763168334961,
+      "source_image_size": {
+        "width": 1920,
+        "height": 1080
+      },
+      "expected_device_and_fresh": true
+    },
+    "facts": {
+      "task": "Complete the next single segment of the approved NONCONTACT approach, then stop",
+      "grasp_completed": false,
+      "lift_completed": false,
+      "random_cup_localizer_validated": false,
+      "grasp_tcp_validated": false,
+      "previous_extrinsic_preserved": true,
+      "extrinsic_status_in_source_file": "provisional_from_pre_slip_samples_not_validated",
+      "extrinsic_independently_validated": false,
+      "segment_index": 1,
+      "approved_segment": {
+        "index": 1,
+        "relative_translation_mm": [
+          20.0,
+          0.0,
+          0.0
+        ],
+        "absolute_target_tcp": [
+          36.1964111328125,
+          -620.8115844726562,
+          258.8166809082031,
+          97.27071380615234,
+          -16.452133178710938,
+          -79.74455261230469
+        ],
+        "xmlrpc_start": [
+          "StartJOG",
+          2,
+          1,
+          1,
+          1.0,
+          10.0,
+          20.0
+        ],
+        "normal_stop": [
+          "StopJOG",
+          3
+        ]
+      },
+      "plan_sha256": "de436fe22051266177a01c28e77a67babe1ee56454e59cb3e3db7b4b0e08b2c8",
+      "remaining_scope": "X+20 mm then Z-60 mm total; one 20 mm segment per decision; no closing or lift",
+      "this_trial_requires_no_contact_grasp_pose": true,
+      "provisional_calibration_is_not_a_general_grasp_validation": true,
+      "pending_sensing_work": false,
+      "next_known_action": "align_xy",
+      "why_more_observation_is_not_needed_now": "Fresh camera, deterministic preflight, a reviewed image and on-site confirmation are already present for this bounded noncontact segment"
+    },
+    "recent_outcomes": [
+      "Earlier approved entry and horizontal movements completed normally"
+    ],
+    "retrieved_examples": [],
+    "candidates": {
+      "align_xy": {
+        "validated": true,
+        "preconditions_met": true,
+        "validation_scope": "supervised_trial_of_one_approved_plan_instance",
+        "physical_prior_success_of_this_instance": false,
+        "generalization_validated": false,
+        "evidence": "Existing offline fault/replay tests, fresh 1 mm IK/FK checks, exact user approval, scene review and onsite clearance"
+      }
+    },
+    "llm_review": {
+      "source": "current_codex_chat",
+      "record": "/home/dianrobot/demo1/fairino-review/jev-collaboration-experiment/scene-review-segment-01.json",
+      "note": "Cup and open gripper remain visible; only the previously reviewed noncontact X+20 mm segment is offered. The operator has confirmed whole-arm/cable clearance. The visible hand/mouse is outside the target gripper approach area; full-arm clearance relies on that on-site confirmation. This is not cup contact or a generalized grasp validation.",
+      "api_model_call_claimed": false
+    }
+  },
+  "request": {
+    "model": "typesafe/jev-latest",
+    "state": {
+      "schema": "fr5-cup-shadow-v1",
+      "source": "live_readonly",
+      "robot_id": "J1",
+      "robot_ip": "192.168.58.2",
+      "captured_at_unix": 1792658650.225232,
+      "robot": {
+        "stationary": true,
+        "fault_free": true,
+        "tcp_mm_deg": [
+          16.194122314453125,
+          -620.8128051757812,
+          258.8155822753906,
+          97.27088165283203,
+          -16.452373504638672,
+          -79.74467468261719
+        ],
+        "gripper_position_percent": 100
+      },
+      "camera": {
+        "available": true,
+        "serial": "CP1E54200015",
+        "capture_time_unix": 1792658650.1824443,
+        "age_s": 0.04635763168334961,
+        "source_image_size": {
+          "width": 1920,
+          "height": 1080
+        },
+        "expected_device_and_fresh": true
+      },
+      "facts": {
+        "task": "Complete the next single segment of the approved NONCONTACT approach, then stop",
+        "grasp_completed": false,
+        "lift_completed": false,
+        "random_cup_localizer_validated": false,
+        "grasp_tcp_validated": false,
+        "previous_extrinsic_preserved": true,
+        "extrinsic_status_in_source_file": "provisional_from_pre_slip_samples_not_validated",
+        "extrinsic_independently_validated": false,
+        "segment_index": 1,
+        "approved_segment": {
+          "index": 1,
+          "relative_translation_mm": [
+            20.0,
+            0.0,
+            0.0
+          ],
+          "absolute_target_tcp": [
+            36.1964111328125,
+            -620.8115844726562,
+            258.8166809082031,
+            97.27071380615234,
+            -16.452133178710938,
+            -79.74455261230469
+          ],
+          "xmlrpc_start": [
+            "StartJOG",
+            2,
+            1,
+            1,
+            1.0,
+            10.0,
+            20.0
+          ],
+          "normal_stop": [
+            "StopJOG",
+            3
+          ]
+        },
+        "plan_sha256": "de436fe22051266177a01c28e77a67babe1ee56454e59cb3e3db7b4b0e08b2c8",
+        "remaining_scope": "X+20 mm then Z-60 mm total; one 20 mm segment per decision; no closing or lift",
+        "this_trial_requires_no_contact_grasp_pose": true,
+        "provisional_calibration_is_not_a_general_grasp_validation": true,
+        "pending_sensing_work": false,
+        "next_known_action": "align_xy",
+        "why_more_observation_is_not_needed_now": "Fresh camera, deterministic preflight, a reviewed image and on-site confirmation are already present for this bounded noncontact segment"
+      },
+      "recent_outcomes": [
+        "Earlier approved entry and horizontal movements completed normally"
+      ],
+      "retrieved_examples": [],
+      "candidates": {
+        "align_xy": {
+          "validated": true,
+          "preconditions_met": true,
+          "validation_scope": "supervised_trial_of_one_approved_plan_instance",
+          "physical_prior_success_of_this_instance": false,
+          "generalization_validated": false,
+          "evidence": "Existing offline fault/replay tests, fresh 1 mm IK/FK checks, exact user approval, scene review and onsite clearance"
+        }
+      },
+      "llm_review": {
+        "source": "current_codex_chat",
+        "record": "/home/dianrobot/demo1/fairino-review/jev-collaboration-experiment/scene-review-segment-01.json",
+        "note": "Cup and open gripper remain visible; only the previously reviewed noncontact X+20 mm segment is offered. The operator has confirmed whole-arm/cable clearance. The visible hand/mouse is outside the target gripper approach area; full-arm clearance relies on that on-site confirmation. This is not cup contact or a generalized grasp validation.",
+        "api_model_call_claimed": false
+      }
+    },
+    "questions": {
+      "next_skill": {
+        "type": "choice",
+        "instructions": "Choose the next task-level skill for grasping the upright cup. Use only the recorded facts, recent outcomes and retrieved examples. Missing evidence is unknown. Choose observe_scene when sensing can resolve it; request_astra when the skill library or known strategy cannot resolve it. Do not calculate coordinates, issue joint commands, or assume task success. The listed motion candidates have been filtered by deterministic code.",
+        "criteria": {
+          "observe_scene": "Refresh cup/tool localization and evidence before any physical action.",
+          "request_astra": "Escalate an unsupported, novel, ambiguous or repeatedly failing situation to Astra.",
+          "hold": "Wait with no new action while a prerequisite or observation is unavailable.",
+          "align_xy": "Choose an already verified horizontal alignment primitive for the localized cup."
+        }
+      }
+    }
+  },
+  "request_sha256": "1675d5bcc35f4f42d7d1f7fb109a585588ae8b9e7527923c5388a0f030b15ed8",
+  "gate_table_before_inference": {
+    "observe_scene": {
+      "policy_version": "risk-evidence-v1",
+      "risk": "readonly",
+      "min_confidence": 0.5,
+      "min_probability": 0.65,
+      "min_margin": 0.15,
+      "evidence_complete": true,
+      "matched_successes": 0,
+      "recent_failures": 0,
+      "empirically_calibrated": false
+    },
+    "request_astra": {
+      "policy_version": "risk-evidence-v1",
+      "risk": "readonly",
+      "min_confidence": 0.5,
+      "min_probability": 0.65,
+      "min_margin": 0.15,
+      "evidence_complete": true,
+      "matched_successes": 0,
+      "recent_failures": 0,
+      "empirically_calibrated": false
+    },
+    "hold": {
+      "policy_version": "risk-evidence-v1",
+      "risk": "readonly",
+      "min_confidence": 0.5,
+      "min_probability": 0.65,
+      "min_margin": 0.15,
+      "evidence_complete": true,
+      "matched_successes": 0,
+      "recent_failures": 0,
+      "empirically_calibrated": false
+    },
+    "align_xy": {
+      "policy_version": "risk-evidence-v1",
+      "risk": "noncontact_motion",
+      "min_confidence": 0.85,
+      "min_probability": 0.9,
+      "min_margin": 0.5,
+      "evidence_complete": true,
+      "matched_successes": 0,
+      "recent_failures": 0,
+      "empirically_calibrated": false
+    }
+  },
+  "hard_checks": {
+    "specific_authorization": true,
+    "onsite_confirmation": true,
+    "preflight_passed": true,
+    "scene_reviewed": true,
+    "bounded_executor_verified": true
+  },
+  "physical_commands_sent_by_decision": 0,
+  "started_at_unix": 1792658650.2289643,
+  "status": "decision_received",
+  "response": {
+    "model": "typesafe/jev-latest",
+    "answers": {
+      "next_skill": {
+        "type": "choice",
+        "choice": "align_xy",
+        "confidence": 0.95,
+        "probabilities": {
+          "align_xy": 0.96,
+          "hold": 0.0,
+          "observe_scene": 0.03,
+          "request_astra": 0.01
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 1611,
+      "output_tokens": 51
+    }
+  },
+  "latency_ms": 1353.5005379962968,
+  "gate": {
+    "choice": "align_xy",
+    "probability": 0.96,
+    "confidence": 0.95,
+    "margin": 0.9299999999999999,
+    "policy": {
+      "policy_version": "risk-evidence-v1",
+      "risk": "noncontact_motion",
+      "min_confidence": 0.85,
+      "min_probability": 0.9,
+      "min_margin": 0.5,
+      "evidence_complete": true,
+      "matched_successes": 0,
+      "recent_failures": 0,
+      "empirically_calibrated": false
+    },
+    "physical_authorization_granted_by_policy": false,
+    "route": "selected",
+    "reason": "Passed the predeclared risk gate"
+  },
+  "finished_at_unix": 1792658651.582965
+}

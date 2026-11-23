@@ -1,0 +1,1555 @@
+{
+  "status": "archived_visible_surface_geometric_assessment",
+  "source": {
+    "directory": "/home/data4/hts/demo1/fr5-learning/observations/jev-purple-side-20261122T163744-v1",
+    "scene": "scene.npz",
+    "metadata": "observation.json",
+    "prepared_geometry": "prepared-geometry.json",
+    "path_samples": "path-samples.json",
+    "tool_model": "/home/data4/hts/demo1/fr5-learning/src/fr5-jev-pi05-tools-20261122-v9/hardware/tool-reference.json",
+    "camera_to_base": "observation.json calibration.base_from_color_camera_mm",
+    "motion_commands": 0,
+    "gripper_commands": 0
+  },
+  "measurement_method": {
+    "green_rgb_seed_pixel": [
+      1130,
+      490
+    ],
+    "connected_color_mask_pixels": 17823,
+    "eroded_green_valid_depth_points": 14692,
+    "uneroded_green_valid_depth_points": 16077,
+    "rgb_to_aligned_depth": "fr5_jev.rgbd_geometry.sample_rgb_points",
+    "rgb_mask_erosion_kernel_px": 5,
+    "depth_patch_radius_px": 1,
+    "maximum_patch_spread_mm": 8.0,
+    "table_normal_base": [
+      -0.002085620221432401,
+      0.007675231621309602,
+      0.9999683700036972
+    ],
+    "table_offset_mm": -6.556139439820521,
+    "height_definition": "dot(table_normal_base, point_base_mm) - table_offset_mm",
+    "pose_transform": "fr5_runtime.kinematics.transform; Rz*Ry*Rx",
+    "signed_distance_definition": "positive: shortest 3D distance from a sampled point to box; negative: depth of a sampled point inside the box; zero: boundary. This is a point-cloud distance, not a complete surface clearance.",
+    "jaw_sweep": "For the close/open range, each open-finger local box is extended toward the center by 40 mm; actual closure/aperture was not observed.",
+    "tool_box_model_note": "Nominal housing is an enlarged unverified model. Finger geometry and clearance padding are engineering estimates, not independently verified physical bounds."
+  },
+  "green_support_height_mm": {
+    "all_valid_eroded_p0_p10_p50_p90_p95_p99_p100": [
+      30.27118135593581,
+      52.12111177593838,
+      62.25236185779981,
+      66.42354859680133,
+      69.43383740637695,
+      73.5698944032958,
+      97.94707950755591
+    ],
+    "robust_plane_fit": {
+      "inlier_tolerance_mm": 2,
+      "count": 6958,
+      "fraction_of_valid": 0.47359106997005174,
+      "median_inlier_height_above_table_mm": 62.98555223763603,
+      "inlier_height_p05_p95_mm": [
+        61.09491108784365,
+        64.77925293278692
+      ],
+      "rms_residual_mm": 1.0497323152328741,
+      "height_linear_coefficients_for_contact_local_x_z_1": [
+        -0.006273024545492557,
+        -0.001938527266868606,
+        63.4150693494222
+      ]
+    },
+    "interpretation": "Selected green region includes edge and noisy depth samples; fitted inlier cluster is the visible approximately planar surface, not a measured hidden support volume."
+  },
+  "prepared_contact": {
+    "tcp_mm_deg": [
+      -159.443471199867,
+      -758.2979436979812,
+      103.78179816896865,
+      89.5710810343794,
+      -0.15394922496554386,
+      -4.541781330680777
+    ],
+    "box_normal_extents_above_table_mm": {
+      "-1": {
+        "0": {
+          "min_above_table_mm": 102.91908117550024,
+          "max_above_table_mm": 122.91908117550028
+        },
+        "3": {
+          "min_above_table_mm": 99.91908117550024,
+          "max_above_table_mm": 125.91908117550028
+        }
+      },
+      "1": {
+        "0": {
+          "min_above_table_mm": 102.91908117550025,
+          "max_above_table_mm": 122.9190811755003
+        },
+        "3": {
+          "min_above_table_mm": 99.91908117550025,
+          "max_above_table_mm": 125.9190811755003
+        }
+      },
+      "housing": {
+        "0": {
+          "min_above_table_mm": 44.847081162761754,
+          "max_above_table_mm": 164.8470811627618
+        },
+        "12": {
+          "min_above_table_mm": 32.847081162761754,
+          "max_above_table_mm": 176.8470811627618
+        }
+      }
+    },
+    "grasp_center_height_above_table_mm": 112.91908116276181,
+    "visible_purple_height_p10_p50_p90_mm": [
+      112.32482672125673,
+      120.99111451404632,
+      122.92944583865598
+    ],
+    "visible_purple_local_z_p0_p05_p50_p95_p100_mm": [
+      134.5392325658443,
+      138.04522386569354,
+      161.98011205824926,
+      186.22778570697486,
+      192.53432530305028
+    ]
+  },
+  "path_point_cloud_distances": {
+    "prepared": {
+      "approach_near": {
+        "samples": 61,
+        "boxes": {
+          "-1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 29.26413973840522,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1266,
+              538
+            ]
+          },
+          "-1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 29.26413973840522,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1266,
+              538
+            ]
+          },
+          "-1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 25.033091517199026,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1266,
+              538
+            ]
+          },
+          "-1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 25.033091517199026,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1266,
+              538
+            ]
+          },
+          "1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 27.333068867882087,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 26.224480974391028,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 23.700425879989947,
+            "maximum_inside_points": 0,
+            "fraction": 0.9666666666666667,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 23.213223068546753,
+            "maximum_inside_points": 0,
+            "fraction": 0.9666666666666667,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "housing_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 23.01882300183499,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          },
+          "housing_pad_12_sweep_0": {
+            "minimum_signed_distance_mm": 11.018823001834988,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          }
+        }
+      },
+      "approach_contact": {
+        "samples": 21,
+        "boxes": {
+          "-1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 10.1923290482102,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 10.1923290482102,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 6.199008995690118,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 6.199008995690118,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 27.333068867882083,
+            "maximum_inside_points": 0,
+            "fraction": 0.35000000000000003,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 26.213223068546757,
+            "maximum_inside_points": 0,
+            "fraction": 0.05,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 23.700425879989947,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 23.213223068546753,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "housing_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 3.0188230018349884,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          },
+          "housing_pad_12_sweep_0": {
+            "minimum_signed_distance_mm": -8.981176998165012,
+            "maximum_inside_points": 1229,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          }
+        }
+      },
+      "close": {
+        "samples": 3,
+        "boxes": {
+          "-1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 10.1923290482102,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 10.1923290482102,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 6.199008995690118,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 6.199008995690118,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 27.333068867882094,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 26.213223068546764,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 23.700425879989957,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 23.21322306854676,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "housing_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 3.0188230018349884,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          },
+          "housing_pad_12_sweep_0": {
+            "minimum_signed_distance_mm": -8.981176998165012,
+            "maximum_inside_points": 1229,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          }
+        }
+      },
+      "return": {
+        "samples": 51,
+        "boxes": {
+          "-1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 10.1923290482102,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 10.1923290482102,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 6.199008995690118,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 6.199008995690118,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 27.333068867882094,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 26.213223068546764,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 23.700425879989957,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 23.21322306854676,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "housing_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 3.01882300183496,
+            "maximum_inside_points": 0,
+            "fraction": 0.76,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          },
+          "housing_pad_12_sweep_0": {
+            "minimum_signed_distance_mm": -8.98117699816504,
+            "maximum_inside_points": 1229,
+            "fraction": 0.76,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          }
+        }
+      },
+      "release": {
+        "samples": 3,
+        "boxes": {
+          "-1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 10.1923290482102,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 10.1923290482102,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 6.199008995690118,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 6.199008995690118,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 27.333068867882094,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 26.213223068546764,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 23.700425879989957,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 23.21322306854676,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "housing_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 3.0188230018349884,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          },
+          "housing_pad_12_sweep_0": {
+            "minimum_signed_distance_mm": -8.981176998165012,
+            "maximum_inside_points": 1229,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          }
+        }
+      },
+      "retreat_probe": {
+        "samples": 12,
+        "boxes": {
+          "-1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 10.1923290482102,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 10.1923290482102,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 6.199008995690118,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 6.199008995690118,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 27.333068867882076,
+            "maximum_inside_points": 0,
+            "fraction": 0.8181818181818182,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 26.213223068546757,
+            "maximum_inside_points": 0,
+            "fraction": 0.36363636363636365,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 23.700425879989947,
+            "maximum_inside_points": 0,
+            "fraction": 0.8181818181818182,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 23.213223068546753,
+            "maximum_inside_points": 0,
+            "fraction": 0.36363636363636365,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "housing_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 3.0188230018349884,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          },
+          "housing_pad_12_sweep_0": {
+            "minimum_signed_distance_mm": -8.981176998165012,
+            "maximum_inside_points": 1229,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          }
+        }
+      },
+      "retreat_clear": {
+        "samples": 71,
+        "boxes": {
+          "-1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 19.51383323615235,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 19.51383323615235,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 15.97916858506792,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 15.97916858506792,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 27.333068867882076,
+            "maximum_inside_points": 0,
+            "fraction": 0.12857142857142856,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 26.213223068546757,
+            "maximum_inside_points": 0,
+            "fraction": 0.07142857142857142,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 23.70042587998994,
+            "maximum_inside_points": 0,
+            "fraction": 0.12857142857142856,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 23.213223068546753,
+            "maximum_inside_points": 0,
+            "fraction": 0.07142857142857142,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "housing_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 13.018823001835045,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          },
+          "housing_pad_12_sweep_0": {
+            "minimum_signed_distance_mm": 1.0188230018350453,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          }
+        }
+      }
+    },
+    "candidate_translation_only": {
+      "approach_near": {
+        "samples": 61,
+        "boxes": {
+          "-1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 38.674424900961164,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1250,
+              585
+            ]
+          },
+          "-1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 36.68993939313897,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1217,
+              582
+            ]
+          },
+          "-1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 35.19036498418638,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1246,
+              585
+            ]
+          },
+          "-1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 33.174321828052065,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1217,
+              582
+            ]
+          },
+          "1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 37.30007520313685,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1159,
+              565
+            ]
+          },
+          "1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 36.12373526720866,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1159,
+              565
+            ]
+          },
+          "1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 32.657210213862385,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1159,
+              565
+            ]
+          },
+          "1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 32.04502667357115,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1159,
+              565
+            ]
+          },
+          "housing_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 44.01882300183499,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          },
+          "housing_pad_12_sweep_0": {
+            "minimum_signed_distance_mm": 32.01882300183499,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          }
+        }
+      },
+      "approach_contact": {
+        "samples": 21,
+        "boxes": {
+          "-1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 31.496451473413472,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 31.496451473413472,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 27.75915338260062,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 27.75915338260062,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 32.1637717476835,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 31.238331628051878,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 28.6197156013642,
+            "maximum_inside_points": 0,
+            "fraction": 0.9,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 28.21322306854676,
+            "maximum_inside_points": 0,
+            "fraction": 0.9500000000000001,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "housing_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 24.01882300183499,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          },
+          "housing_pad_12_sweep_0": {
+            "minimum_signed_distance_mm": 12.018823001834988,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          }
+        }
+      },
+      "close": {
+        "samples": 3,
+        "boxes": {
+          "-1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 31.496451473413472,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 31.496451473413472,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 27.75915338260062,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 27.75915338260062,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 32.1637717476835,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 31.238331628051878,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 28.619715601364206,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 28.21322306854676,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "housing_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 24.01882300183499,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          },
+          "housing_pad_12_sweep_0": {
+            "minimum_signed_distance_mm": 12.018823001834988,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          }
+        }
+      },
+      "return": {
+        "samples": 51,
+        "boxes": {
+          "-1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 31.496451473413472,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 31.496451473413472,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 27.75915338260062,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 27.75915338260062,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 32.1637717476835,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 31.238331628051878,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 28.619715601364206,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 28.21322306854676,
+            "maximum_inside_points": 0,
+            "fraction": 1.0,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "housing_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 24.01882300183496,
+            "maximum_inside_points": 0,
+            "fraction": 0.84,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          },
+          "housing_pad_12_sweep_0": {
+            "minimum_signed_distance_mm": 12.01882300183496,
+            "maximum_inside_points": 0,
+            "fraction": 0.76,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          }
+        }
+      },
+      "release": {
+        "samples": 3,
+        "boxes": {
+          "-1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 31.496451473413472,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 31.496451473413472,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 27.75915338260062,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 27.75915338260062,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 32.1637717476835,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 31.238331628051878,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 28.619715601364206,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 28.21322306854676,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "housing_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 24.01882300183499,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          },
+          "housing_pad_12_sweep_0": {
+            "minimum_signed_distance_mm": 12.018823001834988,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          }
+        }
+      },
+      "retreat_probe": {
+        "samples": 12,
+        "boxes": {
+          "-1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 31.496451473413472,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 31.496451473413472,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 27.75915338260062,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "-1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 27.75915338260062,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1267,
+              528
+            ]
+          },
+          "1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 32.1637717476835,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 31.238331628051878,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 28.619715601364195,
+            "maximum_inside_points": 0,
+            "fraction": 0.09090909090909091,
+            "witness_rgb_pixel": [
+              1157,
+              562
+            ]
+          },
+          "1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 28.21322306854676,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1159,
+              560
+            ]
+          },
+          "housing_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 24.01882300183499,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          },
+          "housing_pad_12_sweep_0": {
+            "minimum_signed_distance_mm": 12.018823001834988,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          }
+        }
+      },
+      "retreat_clear": {
+        "samples": 71,
+        "boxes": {
+          "-1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 36.79713971872206,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1264,
+              571
+            ]
+          },
+          "-1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 35.76954954263352,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1217,
+              582
+            ]
+          },
+          "-1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 33.247807250792086,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1264,
+              571
+            ]
+          },
+          "-1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 32.76954954263352,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1217,
+              582
+            ]
+          },
+          "1_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 33.545604787452554,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1157,
+              563
+            ]
+          },
+          "1_pad_0_sweep_1": {
+            "minimum_signed_distance_mm": 32.31042753371627,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1159,
+              565
+            ]
+          },
+          "1_pad_3_sweep_0": {
+            "minimum_signed_distance_mm": 29.35811615634458,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1157,
+              563
+            ]
+          },
+          "1_pad_3_sweep_1": {
+            "minimum_signed_distance_mm": 28.738879801864957,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1159,
+              565
+            ]
+          },
+          "housing_pad_0_sweep_0": {
+            "minimum_signed_distance_mm": 34.018823001835045,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          },
+          "housing_pad_12_sweep_0": {
+            "minimum_signed_distance_mm": 22.018823001835045,
+            "maximum_inside_points": 0,
+            "fraction": 0.0,
+            "witness_rgb_pixel": [
+              1134,
+              616
+            ]
+          }
+        }
+      }
+    }
+  },
+  "border_sensitivity_contact_housing": {
+    "prepared": {
+      "0": {
+        "signed_distance_mm": 2.739031578451417,
+        "inside_points": 0,
+        "witness_rgb_pixel": [
+          1184,
+          619
+        ],
+        "witness_height_above_table_mm": 47.61903711326468
+      },
+      "12": {
+        "signed_distance_mm": -9.260968421548583,
+        "inside_points": 1352,
+        "witness_rgb_pixel": [
+          1184,
+          619
+        ],
+        "witness_height_above_table_mm": 47.61903711326468
+      }
+    },
+    "candidate_translation_only": {
+      "0": {
+        "signed_distance_mm": 23.817470136244353,
+        "inside_points": 0,
+        "witness_rgb_pixel": [
+          1128,
+          616
+        ],
+        "witness_height_above_table_mm": 59.89603746092993
+      },
+      "12": {
+        "signed_distance_mm": 10.394088504008096,
+        "inside_points": 0,
+        "witness_rgb_pixel": [
+          1166,
+          619
+        ],
+        "witness_height_above_table_mm": 38.66236129687323
+      }
+    }
+  },
+  "height_only": {
+    "witness_rgb_pixel": [
+      1134,
+      616
+    ],
+    "witness_height_above_table_mm": 57.870334949110415,
+    "required_raise_for_witness_to_be_10mm_below_padded_housing_bottom_mm": 35.02325378634866,
+    "finger_nominal_bottom_above_table_after_raise_mm": 137.94233496184893,
+    "purple_visible_top_reference_above_table_mm": 122.91908116276181,
+    "conclusion": "The raise needed to put the padded housing 10 mm above even this observed green point puts both modeled fingers above the visible purple top; vertical adjustment alone does not retain a useful side contact."
+  },
+  "candidate_for_fresh_preparation": {
+    "vertical_shift_along_table_normal_mm": 5,
+    "retreat_along_negative_tool_z_mm": 21,
+    "translation_in_base_mm": [
+      1.6528533971146915,
+      20.971813077380943,
+      4.842636874166812
+    ],
+    "candidate_contact_tcp_mm_deg": [
+      -157.7906178027523,
+      -737.3261306206002,
+      108.62443504313546,
+      89.5710810343794,
+      -0.15394922496554386,
+      -4.541781330680777
+    ],
+    "finger_nominal_bottom_top_above_table_mm": [
+      107.91908117550025,
+      127.9190811755003
+    ],
+    "purple_visible_local_z_min_mm": 134.5392325658443,
+    "purple_visible_local_z_p05_mm": 138.04522386569354,
+    "candidate_tip_in_original_contact_local_z_mm": 141.0,
+    "penetration_past_min_visible_point_mm": 6.460767434155713,
+    "penetration_past_p05_visible_point_mm": 2.9547761343064565,
+    "visible_purple_points_in_tip_strip": 640,
+    "tip_strip_visible_height_p10_p50_p90_mm": [
+      108.25601844084427,
+      119.52747487925123,
+      121.60403647516466
+    ],
+    "scope": "Only a geometric proposal: the fixed-attitude nearby path samples were uniformly translated for point-cloud comparison. It is not an IK/FK result, a prepared motion route, proof of grasp, or authorization for motion."
+  },
+  "conclusions": [
+    "No sampled green depth point lies inside the nominal housing at the prepared contact or on the checked contact/return/retreat samples. A physical collision cannot be confirmed or excluded from this view.",
+    "The housing with its existing 12 mm padding intersects observed green points at the prepared contact and return. The nominal gap to observed points is small and the hidden base shape is not measured.",
+    "Both nominal and padded finger boxes and a conservative full jaw sweep are above or apart from the sampled green points on the checked phases, under the archived tool model.",
+    "The translated candidate separates the padded housing from the sampled green points but leaves a shallow visible purple overlap; actual graspability, support connection, hidden geometry, arm, cable, feedback, reachability, and a fresh scene remain unverified."
+  ],
+  "limitations": [
+    "One archived RGB-D frame; unobserved support footprint and side surfaces are not reconstructed.",
+    "Depth and grasp TCP end-to-end accuracy are not validated; camera calibration held-out errors and per-patch spread do not bound all errors.",
+    "Point-cloud sampling, color/depth boundaries, unknown jaw closure and the approximate enlarged housing prevent a complete collision proof.",
+    "This record only informs a new fresh preparation; it does not authorize an action."
+  ]
+}

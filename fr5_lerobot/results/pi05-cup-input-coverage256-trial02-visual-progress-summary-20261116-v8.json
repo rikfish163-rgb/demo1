@@ -1,0 +1,595 @@
+{
+  "schema": "fr5-cup-visual-progress-score-v1",
+  "geometry": {
+    "frame": "base axes, millimetres; tool0/user0; cup-frame origin cancels",
+    "wire_pose_units": "XYZ metres, RPY radians; absolute poses, not tick deltas",
+    "jaw_helper": "fr5_jev.cup_tracking._jaw_center",
+    "jaw_helper_source": "/home/data4/hts/demo1/fr5-learning/src/fr5-pi05-cup-input-coverage-20261116-v11/fr5_jev/cup_tracking.py",
+    "nominal_jaw_tip_center_flange_mm": [
+      5.208,
+      8.072,
+      162.0
+    ],
+    "rim_reference_mm": [
+      -13.5,
+      -3.4,
+      13.9
+    ],
+    "reference_source": "lerobot_robot_fairino.cup_action_selection.close_at_pickup",
+    "fixed_pickup_diagnostic_reference_m": [
+      0.1597,
+      0.0713,
+      0.0958
+    ],
+    "projection": "rim_observed - (nominal_jaw_at_action - nominal_jaw_at_observation)",
+    "close_threshold_fraction": 0.88,
+    "close_threshold_source": "diagnostics.score_cup_boundary_replay.CLOSE",
+    "first_close_tick": "First of all 50 wire targets below the close threshold; one-based, null when absent.",
+    "projection_eligibility": "Valid no-contact approach/pickup observation and tick strictly before first_close_tick.",
+    "prefix3_progress": "before_error - projected_error_at_tick3; positive means closer; requires all three ticks assessed",
+    "assessment": "Draw assessment requires all three prefix ticks; partial_prefix3 is a subset of unassessed draws.",
+    "branches": "selected = saved selected_index; rawfirst = saved proposal index 0"
+  },
+  "scope": "Original saved Gemini visual observations plus rigid projections of already generated actions, conditional on the cup remaining stationary before closure.",
+  "limitations": [
+    "Projected poses were not executed or measured; projections do not establish task success.",
+    "The PGI-140 tip is nominal, and the existing close_at_pickup reference has calibration limits.",
+    "The first close tick and all later ticks are unassessed; partial prefixes have no prefix3 progress.",
+    "Missing or invalid observations and contact/other phases stay unassessed; fixed demonstration pickup distance is a separate diagnostic."
+  ],
+  "robot_commands": 0,
+  "model_inferences": 0,
+  "execution_verified": false,
+  "task_success_verified": false,
+  "full_report": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-input-coverage256-trial02-visual-progress-20261116-v8.json",
+  "reports": {
+    "control": {
+      "prediction": "/home/data4/hts/demo1/fr5-learning/evaluations/pi05-cup-input-coverage-control256-suite-20261116-v8/trial02-original.json",
+      "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-cup-input-coverage-control-n3-20261116-v8/step-000256",
+      "seeds": [
+        20261105,
+        20261113,
+        20261114,
+        20261115,
+        20261116,
+        20261117,
+        20261201,
+        20261202,
+        20261203,
+        20261204,
+        20261205,
+        20261206
+      ],
+      "summary": {
+        "draws": 432,
+        "proposal_draws": 480,
+        "selected_changed": 48,
+        "eligible": 72,
+        "missing": 360,
+        "invalid": 0,
+        "unassessed": 360,
+        "partial_prefix3": 0,
+        "unassessed_reasons": {
+          "missing_rim": 360
+        },
+        "selected": {
+          "before_error": {
+            "mean_mm": 52.91750305886841,
+            "median_mm": 52.57160536104882,
+            "minimum_mm": 49.29797886591991,
+            "maximum_mm": 57.37166378411493
+          },
+          "projected_error_by_tick": [
+            {
+              "tick": 1,
+              "draws": 432,
+              "assessed": 72,
+              "unassessed": 360,
+              "unassessed_reasons": {
+                "missing_rim": 360
+              },
+              "error": {
+                "mean_mm": 51.904642073029464,
+                "median_mm": 51.5453600778738,
+                "minimum_mm": 47.6927145383847,
+                "maximum_mm": 57.0133250414598
+              },
+              "progress": {
+                "draws": 72,
+                "positive": 71,
+                "negative": 1,
+                "zero": 0,
+                "progress": {
+                  "mean_mm": 1.0128609858389488,
+                  "median_mm": 1.022067981385451,
+                  "minimum_mm": -0.09106057748329732,
+                  "maximum_mm": 2.0351847772877534
+                }
+              }
+            },
+            {
+              "tick": 2,
+              "draws": 432,
+              "assessed": 72,
+              "unassessed": 360,
+              "unassessed_reasons": {
+                "missing_rim": 360
+              },
+              "error": {
+                "mean_mm": 50.904560586848845,
+                "median_mm": 50.46590986858013,
+                "minimum_mm": 46.300652837936454,
+                "maximum_mm": 56.59267073285281
+              },
+              "progress": {
+                "draws": 72,
+                "positive": 71,
+                "negative": 1,
+                "zero": 0,
+                "progress": {
+                  "mean_mm": 2.012942472019568,
+                  "median_mm": 2.105417302693599,
+                  "minimum_mm": -0.08905905043025086,
+                  "maximum_mm": 3.6944353796149088
+                }
+              }
+            },
+            {
+              "tick": 3,
+              "draws": 432,
+              "assessed": 72,
+              "unassessed": 360,
+              "unassessed_reasons": {
+                "missing_rim": 360
+              },
+              "error": {
+                "mean_mm": 49.94169370572557,
+                "median_mm": 49.56714510465227,
+                "minimum_mm": 44.98859580574776,
+                "maximum_mm": 56.21812580524902
+              },
+              "progress": {
+                "draws": 72,
+                "positive": 71,
+                "negative": 1,
+                "zero": 0,
+                "progress": {
+                  "mean_mm": 2.975809353142847,
+                  "median_mm": 3.15291728526973,
+                  "minimum_mm": -0.17678870477416808,
+                  "maximum_mm": 5.222831859089062
+                }
+              }
+            }
+          ],
+          "partial_prefix3": 0,
+          "prefix3": {
+            "draws": 72,
+            "positive": 71,
+            "negative": 1,
+            "zero": 0,
+            "progress": {
+              "mean_mm": 2.975809353142847,
+              "median_mm": 3.15291728526973,
+              "minimum_mm": -0.17678870477416808,
+              "maximum_mm": 5.222831859089062
+            }
+          },
+          "fixed_pickup_diagnostic": {
+            "draws": 432,
+            "positive": 215,
+            "negative": 217,
+            "zero": 0,
+            "progress": {
+              "mean_mm": 0.15357889897118102,
+              "median_mm": -0.011412669384418095,
+              "minimum_mm": -4.156764377659144,
+              "maximum_mm": 5.449575360465346
+            }
+          },
+          "paired_direction_on_eligible": {
+            "visual_nonnegative/fixed_nonnegative": 71,
+            "visual_negative/fixed_negative": 1
+          }
+        },
+        "rawfirst": {
+          "before_error": {
+            "mean_mm": 53.02091803580981,
+            "median_mm": 52.743187351850274,
+            "minimum_mm": 49.29797886591991,
+            "maximum_mm": 57.37166378411493
+          },
+          "projected_error_by_tick": [
+            {
+              "tick": 1,
+              "draws": 432,
+              "assessed": 71,
+              "unassessed": 361,
+              "unassessed_reasons": {
+                "missing_rim": 360,
+                "at_or_after_close": 7
+              },
+              "error": {
+                "mean_mm": 51.94252676121954,
+                "median_mm": 51.5502144202203,
+                "minimum_mm": 47.6927145383847,
+                "maximum_mm": 57.0133250414598
+              },
+              "progress": {
+                "draws": 71,
+                "positive": 70,
+                "negative": 1,
+                "zero": 0,
+                "progress": {
+                  "mean_mm": 1.025955511634066,
+                  "median_mm": 1.056442320429987,
+                  "minimum_mm": -0.09106057748329732,
+                  "maximum_mm": 2.0351847772877534
+                }
+              }
+            },
+            {
+              "tick": 2,
+              "draws": 432,
+              "assessed": 70,
+              "unassessed": 362,
+              "unassessed_reasons": {
+                "missing_rim": 360,
+                "at_or_after_close": 28
+              },
+              "error": {
+                "mean_mm": 50.99021882500117,
+                "median_mm": 50.628493256808795,
+                "minimum_mm": 46.300652837936454,
+                "maximum_mm": 56.59267073285281
+              },
+              "progress": {
+                "draws": 70,
+                "positive": 69,
+                "negative": 1,
+                "zero": 0,
+                "progress": {
+                  "mean_mm": 2.0306992108086317,
+                  "median_mm": 2.1112056408743136,
+                  "minimum_mm": -0.08905905043025086,
+                  "maximum_mm": 3.6944353796149088
+                }
+              }
+            },
+            {
+              "tick": 3,
+              "draws": 432,
+              "assessed": 70,
+              "unassessed": 362,
+              "unassessed_reasons": {
+                "missing_rim": 360,
+                "at_or_after_close": 46
+              },
+              "error": {
+                "mean_mm": 50.02345992492816,
+                "median_mm": 49.606904697289394,
+                "minimum_mm": 44.98859580574776,
+                "maximum_mm": 56.21812580524902
+              },
+              "progress": {
+                "draws": 70,
+                "positive": 69,
+                "negative": 1,
+                "zero": 0,
+                "progress": {
+                  "mean_mm": 2.9974581108816336,
+                  "median_mm": 3.186256740314448,
+                  "minimum_mm": -0.17678870477416808,
+                  "maximum_mm": 5.222831859089062
+                }
+              }
+            }
+          ],
+          "partial_prefix3": 1,
+          "prefix3": {
+            "draws": 70,
+            "positive": 69,
+            "negative": 1,
+            "zero": 0,
+            "progress": {
+              "mean_mm": 2.9974581108816336,
+              "median_mm": 3.186256740314448,
+              "minimum_mm": -0.17678870477416808,
+              "maximum_mm": 5.222831859089062
+            }
+          },
+          "fixed_pickup_diagnostic": {
+            "draws": 432,
+            "positive": 231,
+            "negative": 201,
+            "zero": 0,
+            "progress": {
+              "mean_mm": 0.235357865030098,
+              "median_mm": 0.15450603272058316,
+              "minimum_mm": -4.156764377659144,
+              "maximum_mm": 5.449575360465346
+            }
+          },
+          "paired_direction_on_eligible": {
+            "visual_nonnegative/fixed_nonnegative": 69,
+            "visual_negative/fixed_negative": 1
+          }
+        }
+      }
+    },
+    "coverage": {
+      "prediction": "/home/data4/hts/demo1/fr5-learning/evaluations/pi05-cup-input-coverage-coverage256-suite-20261116-v8/trial02-original.json",
+      "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-cup-input-coverage-n3-20261116-v8/step-000256",
+      "seeds": [
+        20261105,
+        20261113,
+        20261114,
+        20261115,
+        20261116,
+        20261117,
+        20261201,
+        20261202,
+        20261203,
+        20261204,
+        20261205,
+        20261206
+      ],
+      "summary": {
+        "draws": 432,
+        "proposal_draws": 472,
+        "selected_changed": 40,
+        "eligible": 72,
+        "missing": 360,
+        "invalid": 0,
+        "unassessed": 360,
+        "partial_prefix3": 0,
+        "unassessed_reasons": {
+          "missing_rim": 360
+        },
+        "selected": {
+          "before_error": {
+            "mean_mm": 52.91750305886841,
+            "median_mm": 52.57160536104882,
+            "minimum_mm": 49.29797886591991,
+            "maximum_mm": 57.37166378411493
+          },
+          "projected_error_by_tick": [
+            {
+              "tick": 1,
+              "draws": 432,
+              "assessed": 72,
+              "unassessed": 360,
+              "unassessed_reasons": {
+                "missing_rim": 360
+              },
+              "error": {
+                "mean_mm": 51.89605150006367,
+                "median_mm": 51.552377054111936,
+                "minimum_mm": 47.650138253326425,
+                "maximum_mm": 57.02877480152598
+              },
+              "progress": {
+                "draws": 72,
+                "positive": 71,
+                "negative": 1,
+                "zero": 0,
+                "progress": {
+                  "mean_mm": 1.0214515588047413,
+                  "median_mm": 1.0059891901592657,
+                  "minimum_mm": -0.012131835707130278,
+                  "maximum_mm": 2.039395013047674
+                }
+              }
+            },
+            {
+              "tick": 2,
+              "draws": 432,
+              "assessed": 72,
+              "unassessed": 360,
+              "unassessed_reasons": {
+                "missing_rim": 360
+              },
+              "error": {
+                "mean_mm": 50.90261647766087,
+                "median_mm": 50.48634116306092,
+                "minimum_mm": 46.25560988912133,
+                "maximum_mm": 56.630941171673534
+              },
+              "progress": {
+                "draws": 72,
+                "positive": 72,
+                "negative": 0,
+                "zero": 0,
+                "progress": {
+                  "mean_mm": 2.0148865812075436,
+                  "median_mm": 2.068317433540102,
+                  "minimum_mm": 0.0748139119821758,
+                  "maximum_mm": 3.6747144183047666
+                }
+              }
+            },
+            {
+              "tick": 3,
+              "draws": 432,
+              "assessed": 72,
+              "unassessed": 360,
+              "unassessed_reasons": {
+                "missing_rim": 360
+              },
+              "error": {
+                "mean_mm": 49.966514619530784,
+                "median_mm": 49.58254894909121,
+                "minimum_mm": 44.93413486915048,
+                "maximum_mm": 56.28749498948913
+              },
+              "progress": {
+                "draws": 72,
+                "positive": 72,
+                "negative": 0,
+                "zero": 0,
+                "progress": {
+                  "mean_mm": 2.950988439337622,
+                  "median_mm": 3.0890780822096957,
+                  "minimum_mm": 0.08887530438521907,
+                  "maximum_mm": 5.1891688147995225
+                }
+              }
+            }
+          ],
+          "partial_prefix3": 0,
+          "prefix3": {
+            "draws": 72,
+            "positive": 72,
+            "negative": 0,
+            "zero": 0,
+            "progress": {
+              "mean_mm": 2.950988439337622,
+              "median_mm": 3.0890780822096957,
+              "minimum_mm": 0.08887530438521907,
+              "maximum_mm": 5.1891688147995225
+            }
+          },
+          "fixed_pickup_diagnostic": {
+            "draws": 432,
+            "positive": 213,
+            "negative": 219,
+            "zero": 0,
+            "progress": {
+              "mean_mm": 0.057957333250506074,
+              "median_mm": -0.03946957675967511,
+              "minimum_mm": -4.416401952879589,
+              "maximum_mm": 5.420731275635546
+            }
+          },
+          "paired_direction_on_eligible": {
+            "visual_nonnegative/fixed_nonnegative": 71,
+            "visual_nonnegative/fixed_negative": 1
+          }
+        },
+        "rawfirst": {
+          "before_error": {
+            "mean_mm": 53.02091803580981,
+            "median_mm": 52.743187351850274,
+            "minimum_mm": 49.29797886591991,
+            "maximum_mm": 57.37166378411493
+          },
+          "projected_error_by_tick": [
+            {
+              "tick": 1,
+              "draws": 432,
+              "assessed": 71,
+              "unassessed": 361,
+              "unassessed_reasons": {
+                "missing_rim": 360,
+                "at_or_after_close": 3
+              },
+              "error": {
+                "mean_mm": 51.934914166895275,
+                "median_mm": 51.561273242484845,
+                "minimum_mm": 47.650138253326425,
+                "maximum_mm": 57.02877480152598
+              },
+              "progress": {
+                "draws": 71,
+                "positive": 70,
+                "negative": 1,
+                "zero": 0,
+                "progress": {
+                  "mean_mm": 1.0335681059583375,
+                  "median_mm": 1.0335603426743774,
+                  "minimum_mm": -0.012131835707130278,
+                  "maximum_mm": 2.039395013047674
+                }
+              }
+            },
+            {
+              "tick": 2,
+              "draws": 432,
+              "assessed": 70,
+              "unassessed": 362,
+              "unassessed_reasons": {
+                "missing_rim": 360,
+                "at_or_after_close": 23
+              },
+              "error": {
+                "mean_mm": 50.99294291379207,
+                "median_mm": 50.656981454412985,
+                "minimum_mm": 46.25560988912133,
+                "maximum_mm": 56.630941171673534
+              },
+              "progress": {
+                "draws": 70,
+                "positive": 70,
+                "negative": 0,
+                "zero": 0,
+                "progress": {
+                  "mean_mm": 2.027975122017727,
+                  "median_mm": 2.1061978417092355,
+                  "minimum_mm": 0.0748139119821758,
+                  "maximum_mm": 3.6747144183047666
+                }
+              }
+            },
+            {
+              "tick": 3,
+              "draws": 432,
+              "assessed": 70,
+              "unassessed": 362,
+              "unassessed_reasons": {
+                "missing_rim": 360,
+                "at_or_after_close": 37
+              },
+              "error": {
+                "mean_mm": 50.05505507592569,
+                "median_mm": 49.65416161012209,
+                "minimum_mm": 44.93413486915048,
+                "maximum_mm": 56.28749498948913
+              },
+              "progress": {
+                "draws": 70,
+                "positive": 70,
+                "negative": 0,
+                "zero": 0,
+                "progress": {
+                  "mean_mm": 2.965862959884115,
+                  "median_mm": 3.097842215533305,
+                  "minimum_mm": 0.08887530438521907,
+                  "maximum_mm": 5.1891688147995225
+                }
+              }
+            }
+          ],
+          "partial_prefix3": 1,
+          "prefix3": {
+            "draws": 70,
+            "positive": 70,
+            "negative": 0,
+            "zero": 0,
+            "progress": {
+              "mean_mm": 2.965862959884115,
+              "median_mm": 3.097842215533305,
+              "minimum_mm": 0.08887530438521907,
+              "maximum_mm": 5.1891688147995225
+            }
+          },
+          "fixed_pickup_diagnostic": {
+            "draws": 432,
+            "positive": 231,
+            "negative": 201,
+            "zero": 0,
+            "progress": {
+              "mean_mm": 0.14974797182061728,
+              "median_mm": 0.07443048936669783,
+              "minimum_mm": -4.416401952879589,
+              "maximum_mm": 5.420731275635546
+            }
+          },
+          "paired_direction_on_eligible": {
+            "visual_nonnegative/fixed_nonnegative": 69,
+            "visual_nonnegative/fixed_negative": 1
+          }
+        }
+      }
+    }
+  }
+}

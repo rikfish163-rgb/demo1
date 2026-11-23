@@ -1,0 +1,643 @@
+{
+  "status": "offline_geometry_review_not_executable",
+  "source_observation": "fairino-review/cup-approach-model-1793114850/before",
+  "tool_model": {
+    "source": "user_confirmed_measurements_and_symmetric_installation",
+    "dimensions_mm": {
+      "flange_to_tip": 162,
+      "finger_extension": 66,
+      "open_inner_gap": 80,
+      "finger_width": 20,
+      "finger_thickness": 23,
+      "flange_diameter": 78,
+      "open_inner_gap_at_root": 86
+    },
+    "nominal_grasp_center_flange_mm": [
+      0,
+      0,
+      129
+    ],
+    "reference": "midpoint of inner finger faces 33 mm from tip",
+    "user_confirmed": true,
+    "independent_metric_verification": false,
+    "controller_configuration_changed": false,
+    "cup_mm": {
+      "rim_outer_diameter": 75,
+      "midbody_outer_diameter": 70,
+      "height": 110
+    }
+  },
+  "cup_model": {
+    "cup_axis_at_table_base_mm": [
+      -342.5366824338556,
+      -818.9197345897192,
+      -3.7199529968710654
+    ],
+    "rim_center_hypothesis_base_mm": [
+      -343.8433027488175,
+      -819.3953838662276,
+      106.27125802072926
+    ],
+    "rim_edge_inliers": 401,
+    "angular_bins_of_36": 36,
+    "radial_inlier_rms_mm": 0.7877516859576279,
+    "method": "Current RGB rim known75mm height110mm fit; not independent accuracy bound"
+  },
+  "paper_plane": {
+    "normal_base": [
+      -0.011878366499653702,
+      -0.004324084331894252,
+      0.999920100160003
+    ],
+    "offset_mm": 3.8901984737214153,
+    "inliers": 6548,
+    "rms_mm": 1.5331832394752782
+  },
+  "nominal_tool_projection": {
+    "landmarks_pixel": {
+      "flange": [
+        680.8881810092664,
+        1030.5918821565817
+      ],
+      "nominal_TCP": [
+        456.43324333600384,
+        922.6059958168981
+      ],
+      "tool_tip_axis": [
+        401.21859286539984,
+        896.0420759859901
+      ],
+      "X_minus_jaw_center": [
+        471.3735946964882,
+        842.6380966464612
+      ],
+      "X_plus_jaw_center": [
+        442.4361656356192,
+        997.5250436503769
+      ],
+      "Y_minus_alternative": [
+        520.9056404210797,
+        865.1880054208425
+      ],
+      "Y_plus_alternative": [
+        379.0135654428291,
+        991.5546082885287
+      ]
+    },
+    "nominal_TCP_base_mm": [
+      269.5489858744256,
+      -723.8255310852423,
+      319.0552259751388
+    ],
+    "opening_axis_direction_agreement": {
+      "X_deg": 0.16843611142001122,
+      "Y_deg": 37.56133158584177
+    },
+    "preferred_opening_axis": "flange_X",
+    "candidate_boxes": {
+      "finger_-1": {
+        "local_bounds_mm": [
+          [
+            -63.0,
+            -10,
+            96
+          ],
+          [
+            -40.0,
+            10,
+            162
+          ]
+        ],
+        "corners_flange_mm": [
+          [
+            -63.0,
+            -10.0,
+            96.0
+          ],
+          [
+            -63.0,
+            -10.0,
+            162.0
+          ],
+          [
+            -63.0,
+            10.0,
+            96.0
+          ],
+          [
+            -63.0,
+            10.0,
+            162.0
+          ],
+          [
+            -40.0,
+            -10.0,
+            96.0
+          ],
+          [
+            -40.0,
+            -10.0,
+            162.0
+          ],
+          [
+            -40.0,
+            10.0,
+            96.0
+          ],
+          [
+            -40.0,
+            10.0,
+            162.0
+          ]
+        ],
+        "corners_base_mm": [
+          [
+            216.6030575147281,
+            -769.3431681849031,
+            335.874066095473
+          ],
+          [
+            277.1579186958932,
+            -794.5890107377815,
+            328.67988642541314
+          ],
+          [
+            221.2458096627402,
+            -763.4941360358416,
+            354.4276014839474
+          ],
+          [
+            281.8006708439053,
+            -788.73997858872,
+            347.2334218138876
+          ],
+          [
+            224.03137178437106,
+            -749.1849305192509,
+            327.6603214362753
+          ],
+          [
+            284.58623296553617,
+            -774.4307730721292,
+            320.46614176621546
+          ],
+          [
+            228.67412393238317,
+            -743.3358983701893,
+            346.2138568247497
+          ],
+          [
+            289.2289851135482,
+            -768.5817409230676,
+            339.0196771546899
+          ]
+        ],
+        "corners_pixel": [
+          [
+            546.1191203308031,
+            840.0983567670693
+          ],
+          [
+            431.77339514243545,
+            787.0955677151123
+          ],
+          [
+            520.2831527969627,
+            863.0075039326132
+          ],
+          [
+            402.10204054007977,
+            807.6482786322501
+          ],
+          [
+            538.2365631572388,
+            876.4113117391846
+          ],
+          [
+            425.67921170273576,
+            823.6077162047266
+          ],
+          [
+            512.5025801490847,
+            900.3248732320121
+          ],
+          [
+            396.23172677181435,
+            845.1913036372575
+          ]
+        ]
+      },
+      "finger_1": {
+        "local_bounds_mm": [
+          [
+            40.0,
+            -10,
+            96
+          ],
+          [
+            63.0,
+            10,
+            162
+          ]
+        ],
+        "corners_flange_mm": [
+          [
+            40.0,
+            -10.0,
+            96.0
+          ],
+          [
+            40.0,
+            -10.0,
+            162.0
+          ],
+          [
+            40.0,
+            10.0,
+            96.0
+          ],
+          [
+            40.0,
+            10.0,
+            162.0
+          ],
+          [
+            63.0,
+            -10.0,
+            96.0
+          ],
+          [
+            63.0,
+            -10.0,
+            162.0
+          ],
+          [
+            63.0,
+            10.0,
+            96.0
+          ],
+          [
+            63.0,
+            10.0,
+            162.0
+          ]
+        ],
+        "corners_base_mm": [
+          [
+            249.86898663530303,
+            -679.0693212474171,
+            299.09077479558766
+          ],
+          [
+            310.4238478164681,
+            -704.3151638002954,
+            291.8965951255278
+          ],
+          [
+            254.51173878331514,
+            -673.2202890983555,
+            317.6443101840621
+          ],
+          [
+            315.06659996448025,
+            -698.4661316512338,
+            310.4501305140023
+          ],
+          [
+            257.297300904946,
+            -658.9110835817648,
+            290.87703013639
+          ],
+          [
+            317.8521620861111,
+            -684.1569261346432,
+            283.68285046633014
+          ],
+          [
+            261.9400530529581,
+            -653.0620514327032,
+            309.4305655248644
+          ],
+          [
+            322.49491423412314,
+            -678.3078939855816,
+            302.2363858548046
+          ]
+        ],
+        "corners_pixel": [
+          [
+            512.5457315631493,
+            994.7625003612061
+          ],
+          [
+            405.7970255476745,
+            942.7280775090351
+          ],
+          [
+            487.2045510412286,
+            1021.6598876955388
+          ],
+          [
+            377.12411342732946,
+            967.3922001985266
+          ],
+          [
+            505.6183433230096,
+            1026.6752327016936
+          ],
+          [
+            400.43065414088085,
+            974.879677734729
+          ],
+          [
+            480.39886128329584,
+            1054.3015002769948
+          ],
+          [
+            371.9783695627898,
+            1000.3013083317464
+          ]
+        ]
+      },
+      "housing_conservative_unverified": {
+        "local_bounds_mm": [
+          [
+            -70,
+            -60,
+            0
+          ],
+          [
+            70,
+            60,
+            96
+          ]
+        ],
+        "corners_flange_mm": [
+          [
+            -70.0,
+            -60.0,
+            0.0
+          ],
+          [
+            -70.0,
+            -60.0,
+            96.0
+          ],
+          [
+            -70.0,
+            60.0,
+            0.0
+          ],
+          [
+            -70.0,
+            60.0,
+            96.0
+          ],
+          [
+            70.0,
+            -60.0,
+            0.0
+          ],
+          [
+            70.0,
+            -60.0,
+            96.0
+          ],
+          [
+            70.0,
+            60.0,
+            0.0
+          ],
+          [
+            70.0,
+            60.0,
+            96.0
+          ]
+        ],
+        "corners_base_mm": [
+          [
+            114.6555877635466,
+            -753.379638837383,
+            302.45432429361585
+          ],
+          [
+            202.73538584524127,
+            -790.1008643688424,
+            291.99006295534707
+          ],
+          [
+            142.5121006516193,
+            -718.2854459430138,
+            413.77553662446246
+          ],
+          [
+            230.591898733314,
+            -755.0066714744731,
+            403.3112752861937
+          ],
+          [
+            159.87141375267757,
+            -630.6773226116737,
+            252.45761767241254
+          ],
+          [
+            247.95121183437223,
+            -667.3985481431332,
+            241.9933563341437
+          ],
+          [
+            187.72792664075027,
+            -595.5831297173045,
+            363.77883000325915
+          ],
+          [
+            275.80772472244496,
+            -632.304355248764,
+            353.3145686649903
+          ]
+        ],
+        "corners_pixel": [
+          [
+            765.9316183089113,
+            851.3383980980041
+          ],
+          [
+            605.6216434396467,
+            779.0013207844514
+          ],
+          [
+            646.0522416448216,
+            1011.1823876006692
+          ],
+          [
+            448.5042691165471,
+            916.2137090912369
+          ],
+          [
+            706.3532398388813,
+            1044.7802155196796
+          ],
+          [
+            559.6698018936843,
+            974.1715491415541
+          ],
+          [
+            584.2203440326107,
+            1234.347129177207
+          ],
+          [
+            407.0170383428032,
+            1142.9254571135243
+          ]
+        ]
+      }
+    },
+    "manual_surface_diagnostics": [
+      {
+        "name": "upper_visible_surface",
+        "pixel": [
+          465,
+          792
+        ],
+        "depth_median_mm": 503.0,
+        "patch_range_mm": 6.0,
+        "base_mm": [
+          252.18709524318965,
+          -795.4706397132695,
+          345.29587341835435
+        ],
+        "flange_mm": [
+          -77.77142108781891,
+          -0.640235887793942,
+          137.6153685261331
+        ],
+        "correspondence": "manual visible surface; not established same local Z or same physical face"
+      },
+      {
+        "name": "lower_visible_surface",
+        "pixel": [
+          435,
+          950
+        ],
+        "depth_median_mm": 540.0,
+        "patch_range_mm": 3.0,
+        "base_mm": [
+          287.3872748573554,
+          -705.3696434031433,
+          305.9039123437874
+        ],
+        "flange_mm": [
+          26.633396475008446,
+          -2.661776398988973,
+          139.74050896418464
+        ],
+        "correspondence": "manual visible surface; not established same local Z or same physical face"
+      }
+    ],
+    "surface_pair_midpoint_flange_mm": [
+      -25.56901230640523,
+      -1.6510061433914576,
+      138.67793874515888
+    ],
+    "warning": "Opening-axis direction is supported; surface midpoint and chosen TCP are not the same physical measurement. Nominal zero offset is not independently validated."
+  },
+  "noncontact_wrist_roll_review": {
+    "nominal_tool_max_radius_from_flange_mm": 174.10628937519746,
+    "conservative_ball_radius_mm": 200.0,
+    "flange_height_above_table_mm": 330.3203659956358,
+    "ball_table_clearance_mm": 130.32036599563583,
+    "cup_axis_lateral_distance_mm": 445.8749512198539,
+    "ball_to_cup_cylinder_lateral_clearance_lower_bound_mm": 208.37495121985393,
+    "tool_Z_angle_above_table_deg": -6.7904448977955205,
+    "roll_about_tool_positive_Z_for_equal_finger_height_deg": 21.548794198249837,
+    "covers_all_intermediate_wrist_roll_orientations_for_nominal_tool": true,
+    "direction_requires_positive_J6_equals_positive_tool_Z": true,
+    "checks_not_completed": [
+      "J1 full arm and J2/environment collision",
+      "Cable swept volume including loose loop",
+      "Controller kinematics / joint limits / current execution state",
+      "Independent complete tool envelope measurement"
+    ],
+    "scope": "The radius-200 ball is a conservative nominal-tool envelope only, not a whole-arm safety certificate."
+  },
+  "pregrasp_review": {
+    "executable": false,
+    "preferred_geometric_family": "outside-side-entry at body height; do not descend through the rim",
+    "nominal_clearance_per_side_mm": {
+      "rim": 2.5,
+      "midbody": 5.0
+    },
+    "current_tool_Z_is_not_parallel_to_table": true,
+    "complete_finger_path_check_available": false,
+    "remaining_work": [
+      "Resolve nominal projection vs visible surfaces without confusing outside surfaces with contact centers.",
+      "Plan new-scene flank-side approach, sample complete finger/housing volumes against cup, table and environment.",
+      "Verify IK/FK and all-arm/cable clearance separately."
+    ]
+  },
+  "motion_commands_sent": 0,
+  "gripper_commands_sent": 0,
+  "tool_boxes_for_this_exterior_move": {
+    "-1": {
+      "local_bounds_mm": [
+        [
+          -57.79243728722695,
+          -1.9279999872614846,
+          96
+        ],
+        [
+          -34.79243728722695,
+          18.072000012738517,
+          162
+        ]
+      ],
+      "padding_mm": 3,
+      "source": "User80mm tip aperture,20mm finger height,23mm width; fitted effective center, ray-visibility and new-view edge checks. Constant80mm full-length gap conservatively substitutes wider86mm root."
+    },
+    "1": {
+      "local_bounds_mm": [
+        [
+          45.20756271277305,
+          -1.9279999872614846,
+          96
+        ],
+        [
+          68.20756271277304,
+          18.072000012738517,
+          162
+        ]
+      ],
+      "padding_mm": 3,
+      "source": "User80mm tip aperture,20mm finger height,23mm width; fitted effective center, ray-visibility and new-view edge checks. Constant80mm full-length gap conservatively substitutes wider86mm root."
+    },
+    "housing": {
+      "local_bounds_mm": [
+        [
+          -70,
+          -60,
+          0
+        ],
+        [
+          70,
+          60,
+          96
+        ]
+      ],
+      "padding_mm": 12,
+      "source": "Retained enlarged nominal housing"
+    }
+  },
+  "current_robot_pose": [
+    -193.6981658935547,
+    -662.1398315429688,
+    83.19087982177734,
+    89.46806335449219,
+    -0.49148139357566833,
+    -45.00007629394531
+  ],
+  "model_limitations": [
+    "3mm finger padding is an engineering allowance supported by manual dimensions and image consistency, not a certified total-error bound.",
+    "Only exterior moves satisfying retained10mm residual clearance will be dispatched with this model.",
+    "No final side-entry/closing permission follows."
+  ]
+}

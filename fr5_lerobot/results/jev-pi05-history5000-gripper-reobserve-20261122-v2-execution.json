@@ -1,0 +1,138 @@
+{
+  "episode": "jev-pi05-history5000-gripper-reobserve-20261122T223204-v2",
+  "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-jev-history-balanced-base-20261121-v2/step-005000",
+  "task": "抓取桌面上的紫色方块，在空中维持5秒后放下",
+  "execution_prefix_steps": 3,
+  "native_prediction_shape": [
+    50,
+    7
+  ],
+  "observation_rule": "prefix_or_completed_native_gripper_command",
+  "execute_entry_status": "executed_duration_limit",
+  "termination_reason": "explicit_duration_limit",
+  "termination_error": null,
+  "physical_task_status": "pickup_not_observed",
+  "task_success_verified": false,
+  "training_ready": false,
+  "recorded_frames": 558,
+  "recorded_duration_s": 92.91536347499823,
+  "native_prediction_records": 50,
+  "targets_submitted": 128,
+  "targets_acknowledged": 127,
+  "stop_pending_targets": 1,
+  "wire_method_counts": {
+    "ServoJ": 7823,
+    "MoveGripper": 14
+  },
+  "actual_tcp_start": [
+    -262.76824951171875,
+    -752.354248046875,
+    162.5113067626953,
+    92.77300262451172,
+    -1.4656606912612915,
+    -67.45477294921875
+  ],
+  "actual_tcp_end": [
+    -238.56570434570312,
+    -736.1640625,
+    215.7782440185547,
+    94.03575897216797,
+    -0.40523019433021545,
+    -67.507080078125
+  ],
+  "tcp_endpoint_delta_mm": [
+    24.202545166015625,
+    16.190185546875,
+    53.266937255859375
+  ],
+  "tcp_endpoint_displacement_mm": 60.70627566549381,
+  "tcp_max_displacement_from_start_mm": 60.70627566549381,
+  "joint_endpoint_delta_deg": [
+    1.286376953125,
+    -5.499473571777344,
+    2.1098098754882812,
+    5.265605926513672,
+    1.3026885986328125,
+    0.3319826126098633
+  ],
+  "gripper_position_range_percent": [
+    0,
+    100
+  ],
+  "gripper_end": {
+    "gripper_active": 1,
+    "gripper_position": 77,
+    "gripper_motiondone": 1,
+    "gripper_fault": 0,
+    "gripper_speed": 0
+  },
+  "arm_fault_frames": 0,
+  "native_gripper_prefix_retirements": 14,
+  "native_gripper_prefix_consumed_counts": {
+    "1": 10,
+    "2": 2,
+    "3": 2
+  },
+  "controller_snapshot": {
+    "status": "closed",
+    "reason": "explicit_duration_limit",
+    "failure": null,
+    "callback_failure": null,
+    "stop_result": 0,
+    "servo_end_result": 0,
+    "servo_commands": 7823,
+    "gripper_commands": 14,
+    "servo_overruns": 0,
+    "last_issued_monotonic": 10074.148301902,
+    "last_returned_monotonic": 10074.16248132,
+    "last_joint_target_deg": [
+      67.649156266859,
+      -39.37665032762153,
+      53.637976832060396,
+      -8.550572396575854,
+      134.98460659812696,
+      4.448690901989755
+    ],
+    "gripper_target_percent": 77,
+    "gripper_completion_feedback": {
+      "target_percent": 77,
+      "position_percent": 77.0,
+      "motiondone": 1,
+      "feedback_monotonic": 10068.831033071,
+      "command_began_monotonic": 10066.774113429,
+      "completed_monotonic": 10068.837201039,
+      "meaning": "measured actuator completion, not grasp success"
+    },
+    "peripheral_servo_pauses": 14,
+    "peripheral_servo_pause_seconds": 27.48910250899462,
+    "gripper_command_inflight": false,
+    "ordered_last_token": 128,
+    "ordered_acknowledged_token": 127,
+    "ordered_pending": {
+      "token": 128,
+      "version": 128,
+      "joints": [
+        67.64870704942085,
+        -39.379831320112864,
+        53.6358431368985,
+        -8.549045548234186,
+        134.98392207631645,
+        4.4486716804980855
+      ],
+      "gripper": 77,
+      "joint_ack": false,
+      "gripper_ack": true
+    },
+    "pending_callbacks": 0,
+    "inflight_commands": 0,
+    "undelivered_callbacks": [],
+    "startup_inflight": false,
+    "workers_alive": []
+  },
+  "all_wire_callbacks_drained": true,
+  "remote_materialized": "/home/data4/hts/demo1/fr5-learning/recording-spool/jev-pi05-history5000-gripper-reobserve-20261122T223204-v2/materialized",
+  "review_video": "/home/data4/hts/demo1/fr5-learning/reviews/jev-pi05-history5000-gripper-reobserve-20261122T223204-v2/full-process.mp4",
+  "review_video_exists": true,
+  "review_video_bytes": 19484251,
+  "measurement_basis": "Actual synchronized FR5 feedback and native command/ACK records; physical pickup assessed from scene observations."
+}

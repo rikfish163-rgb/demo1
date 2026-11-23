@@ -1,0 +1,77 @@
+{
+  "episode": "jev-pi05-history5000-empty-gripper-live-20261122T194040-v1",
+  "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-jev-history-balanced-base-20261121-v2/step-005000",
+  "task": "抓取桌面上的紫色方块，在空中维持5秒后放下",
+  "execution_prefix_steps": 3,
+  "native_prediction_shape": [
+    50,
+    7
+  ],
+  "execute_entry_status": "executed_then_stopped",
+  "termination_reason": "error",
+  "termination_error": "RuntimeError: Policy target is 3.05s late for request 1819974f2fad4eecab36ce0e7160afae, action 1 (limit 3.0s); error",
+  "physical_task_status": "pickup_not_observed",
+  "task_success_verified": false,
+  "training_ready": false,
+  "recorded_frames": 539,
+  "recorded_duration_s": 89.81880914400244,
+  "native_prediction_records": 51,
+  "wire_method_counts": {
+    "ServoJ": 8168,
+    "MoveGripper": 11
+  },
+  "actual_tcp_start": [
+    -272.1724853515625,
+    -754.4291381835938,
+    112.10990142822266,
+    92.77660369873047,
+    -1.3308579921722412,
+    -67.21248626708984
+  ],
+  "actual_tcp_end": [
+    -262.7769775390625,
+    -752.3502807617188,
+    162.5354766845703,
+    92.771728515625,
+    -1.4666274785995483,
+    -67.45581817626953
+  ],
+  "tcp_endpoint_delta_mm": [
+    9.3955078125,
+    2.078857421875,
+    50.425575256347656
+  ],
+  "tcp_endpoint_displacement_mm": 51.335522352157035,
+  "tcp_max_displacement_from_start_mm": 51.481192598719616,
+  "joint_endpoint_delta_deg": [
+    0.6361160278320312,
+    -3.5565261840820312,
+    -0.7718734741210938,
+    4.376039505004883,
+    0.8712921142578125,
+    0.21080732345581055
+  ],
+  "gripper_position_range_percent": [
+    0.0,
+    100.0
+  ],
+  "gripper_contact_feedback_frames": 180,
+  "gripper_end": {
+    "gripper_active": 1,
+    "gripper_position": 76,
+    "gripper_motiondone": 1,
+    "gripper_fault": 0,
+    "gripper_speed": 0
+  },
+  "arm_fault_frames": 0,
+  "controller_stopped": true,
+  "controller_stop_return": 0,
+  "servo_end_return": 0,
+  "all_wire_callbacks_drained": true,
+  "remote_materialized": "/home/data4/hts/demo1/fr5-learning/recording-spool/jev-pi05-history5000-empty-gripper-live-20261122T194040-v1/materialized",
+  "review_video": "/home/data4/hts/demo1/fr5-learning/reviews/jev-pi05-history5000-empty-gripper-live-20261122T194040-v1/full-process.mp4",
+  "review_video_exists": true,
+  "review_video_bytes": 18812251,
+  "measurement_basis": "Actual synchronized recorded FR5 feedback; TCP/flange tool0, contact feedback is actuator evidence.",
+  "local_review_montage": "/home/dianrobot/.local/state/fr5-system/monitor/jev-pi05-history5000-empty-gripper-live-20261122T194040-v1-start-end.jpg"
+}

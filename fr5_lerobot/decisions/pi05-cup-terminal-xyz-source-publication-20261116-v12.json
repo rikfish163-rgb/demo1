@@ -1,0 +1,19 @@
+{
+  "schema": "fr5-cup-source-publication-v1",
+  "source": "/home/data4/hts/demo1/fr5-learning/src/fr5-pi05-cup-terminal-xyz-20261116-v12",
+  "parent_source": "/home/data4/hts/demo1/fr5-learning/src/fr5-pi05-cup-input-coverage-20261116-v11",
+  "source_files_elementwise_equal": [
+    "fr5_lerobot/training/train_stream_pi05.py",
+    "fr5_lerobot/training/stream_terminal_loss.py",
+    "fr5_lerobot/training/stream_checkpoint.py",
+    "fr5_jev/cup_timing.py",
+    "fr5_lerobot/tests/test_stream_terminal_loss.py",
+    "fr5_lerobot/tests/test_stream_service.py",
+    "fr5_lerobot/diagnostics/probe_cup_terminal_gradients.py",
+    "fr5_lerobot/tests/test_probe_cup_terminal_gradients.py"
+  ],
+  "cpu_related_tests_passed": 32,
+  "gradient_probe_status": "assessed_native_equal_positive_gradient_and_tolerated_zero",
+  "training_started": true,
+  "gradient_assessment": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-xyz-gradient-assessment-20261116-v1.json"
+}

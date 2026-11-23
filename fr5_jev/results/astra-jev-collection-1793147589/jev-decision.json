@@ -1,0 +1,376 @@
+{
+  "state": {
+    "schema": "fr5-cup-shadow-v1",
+    "source": "live_readonly",
+    "robot_id": "J1",
+    "robot_ip": "192.168.58.2",
+    "captured_at_unix": 1793147721.416057,
+    "robot": {
+      "stationary": true,
+      "fault_free": true,
+      "tcp_mm_deg": [
+        -211.99685668945312,
+        -672.0158081054688,
+        83.06085205078125,
+        89.48806762695312,
+        -0.48936358094215393,
+        -44.98360824584961
+      ],
+      "gripper_position_percent": 0,
+      "gripper_active": false,
+      "gripper_motiondone": 0,
+      "gripper_speed_percent": 0,
+      "tool_number": 0,
+      "user_frame_number": 0
+    },
+    "camera": {
+      "available": true,
+      "serial": "CP1E54200015",
+      "capture_time_unix": 1793147721.2283943,
+      "age_s": 0.21500396728515625,
+      "source_image_size": {
+        "width": 1920,
+        "height": 1080
+      },
+      "expected_device_and_fresh": true
+    },
+    "calibration": {
+      "source": "/home/dianrobot/demo1/fairino-review/handeye-supplement-1792943852/camera-to-j1-mm.json",
+      "sha256": "84b132c7225f4c7f54aa012deea1e795e8ac6781e001171a6fded4635de9cc44",
+      "source_status": "validated_in_sampled_region_not_applied",
+      "use": "read_only_localization",
+      "robot": "J1",
+      "camera_serial": "CP1E54200015",
+      "direction": "p_J1_base_mm = R @ p_color_camera_mm + t_mm",
+      "base_from_color_camera_mm": [
+        [
+          -0.9998776492192564,
+          0.01424961412396987,
+          0.006452525791632864,
+          2.542558942109179
+        ],
+        [
+          0.01405765362073402,
+          0.9994841185863763,
+          -0.028876964319231372,
+          -902.9708377628368
+        ],
+        [
+          -0.006860682652126726,
+          -0.028782723827543783,
+          -0.9995621470637102,
+          850.0103056886765
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "K": [
+        [
+          1034.244140625,
+          0.0,
+          968.01708984375
+        ],
+        [
+          0.0,
+          1034.731689453125,
+          533.7714233398438
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "D": [
+        0.005178163293749094,
+        -0.04317966476082802,
+        -0.0006754357018508017,
+        0.0009328450541943312,
+        0.029671844094991684,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "square_mm": 24.25,
+      "handeye_geometry_validated_in_sampled_region": true,
+      "heldout_rms_mm": 1.5856820907275573,
+      "heldout_max_point_mm": 2.3466028465208617,
+      "report": "/home/dianrobot/demo1/fairino-review/handeye-supplement-1792943852/calibration-report.json",
+      "requires_camera_and_robot_base_unchanged": true,
+      "depth_accuracy_validated": false,
+      "grasp_tcp_validated": false,
+      "end_to_end_grasp_accuracy_validated": false,
+      "actuation_authorized_by_this_record": false
+    },
+    "facts": {
+      "task": "Grasp cup, verify a short lift, collect demonstration evidence",
+      "user_authorization": "Start Astra + Jev cup grasp and accumulate experience; no repeated authorization requested",
+      "controller_enable_state": 0,
+      "gripper_active": false,
+      "gripper_feedback_usable_for_position": false,
+      "last_scene_review": "Cup between jaws, viewed in this chat",
+      "scene_evidence": "/home/dianrobot/demo1/fairino-review/astra-jev-collection-1793147589/initial/color.jpg",
+      "activation_requires_empty_gripper": true,
+      "operator_cup_removal_pending": true,
+      "repeated_observation_does_not_resolve_physical_blocker": true,
+      "grasp_verified": false
+    },
+    "recent_outcomes": [
+      "Live telemetry and independent GetGripperConfig agree that the gripper is inactive",
+      "No actuation has been sent in this episode; user has been asked once for the necessary physical removal"
+    ],
+    "retrieved_examples": [
+      {
+        "case_id": "j1-lateral-centering-displaced-cup-20261027",
+        "matched_tags": [
+          "contact",
+          "cup",
+          "failure"
+        ],
+        "observed_outcome": {
+          "jev_selected": true,
+          "arm_tool_x_mm": -6,
+          "controller_completed_and_stopped": true,
+          "gripper_position": 100,
+          "cup_displacement_fit_mm": 3.6059,
+          "user_confirmed_no_manual_intervention": true,
+          "grasp_success_verified": false
+        },
+        "applicability": "User confirmation that both fingers are outside cup establishes initial topology only, not clearance of a lateral correction. Image-line fit and monotonic separation of a modeled near finger did not establish the opposite finger clearance. Validate actual fingertip shape and relative contact geometry before another forward or lateral command.",
+        "limitations": [
+          "Exact contact surface remains unverified.",
+          "Do not infer a new tool/camera calibration from one contact event or automatically reverse the previous move.",
+          "Do not close or lift based on this outcome."
+        ],
+        "evidence": "/home/dianrobot/demo1/fairino-review/cup-pick-return-1793115257/center6-summary.json",
+        "grants_execution_permission": false
+      },
+      {
+        "case_id": "j1-grasp-descent-entered-cup-20261022",
+        "matched_tags": [
+          "cup",
+          "failure"
+        ],
+        "observed_outcome": {
+          "status": "failed_collision_stopped_no_closure_or_lift",
+          "completed_10mm_segments": 6,
+          "faulted_segment": 7,
+          "approx_total_descent_mm": 66.04972839355469,
+          "collision_detected": true,
+          "immediate_stop_return_code": 0,
+          "user_confirmed_fingers_entered_cup_interior": true,
+          "gripper_commands": 0,
+          "grasp_completed": false,
+          "lift_completed": false,
+          "jev_motion_gate_passed": false,
+          "llm_motion_override_occurred": true
+        },
+        "applicability": "Negative case: current fixed-XY RGB-D/overhead-image approach let fingers enter a hollow cup; IK/FK and rough height/aperture feedback are insufficient for exterior grasp clearance.",
+        "limitations": [
+          "Do not reuse this failed descent or its poses",
+          "No verified escape trajectory; do not reset collision or retry automatically",
+          "Old camera transform is preserved but not independently validated",
+          "Jev selected descent below threshold; actual continuation was an LLM exception, not autonomous Jev control",
+          "Human cup handling visible after stop invalidates the old cup pose"
+        ],
+        "evidence": "/home/dianrobot/demo1/fairino-review/cup-grasp-final-attempt/attempt-summary.json",
+        "grants_execution_permission": false
+      }
+    ],
+    "candidates": {}
+  },
+  "request": {
+    "model": "typesafe/jev-latest",
+    "state": {
+      "schema": "fr5-cup-shadow-v1",
+      "source": "live_readonly",
+      "robot_id": "J1",
+      "robot_ip": "192.168.58.2",
+      "captured_at_unix": 1793147721.416057,
+      "robot": {
+        "stationary": true,
+        "fault_free": true,
+        "tcp_mm_deg": [
+          -211.99685668945312,
+          -672.0158081054688,
+          83.06085205078125,
+          89.48806762695312,
+          -0.48936358094215393,
+          -44.98360824584961
+        ],
+        "gripper_position_percent": 0,
+        "gripper_active": false,
+        "gripper_motiondone": 0,
+        "gripper_speed_percent": 0,
+        "tool_number": 0,
+        "user_frame_number": 0
+      },
+      "candidates": {},
+      "camera": {
+        "available": true,
+        "serial": "CP1E54200015",
+        "expected_device_and_fresh": true,
+        "age_s": 0.21500396728515625
+      },
+      "facts": {
+        "task": "Grasp cup, verify a short lift, collect demonstration evidence",
+        "user_authorization": "Start Astra + Jev cup grasp and accumulate experience; no repeated authorization requested",
+        "controller_enable_state": 0,
+        "gripper_active": false,
+        "gripper_feedback_usable_for_position": false,
+        "last_scene_review": "Cup between jaws, viewed in this chat",
+        "scene_evidence": "/home/dianrobot/demo1/fairino-review/astra-jev-collection-1793147589/initial/color.jpg",
+        "activation_requires_empty_gripper": true,
+        "operator_cup_removal_pending": true,
+        "repeated_observation_does_not_resolve_physical_blocker": true,
+        "grasp_verified": false
+      },
+      "recent_outcomes": [
+        "Live telemetry and independent GetGripperConfig agree that the gripper is inactive",
+        "No actuation has been sent in this episode; user has been asked once for the necessary physical removal"
+      ],
+      "retrieved_examples": [
+        {
+          "case_id": "j1-lateral-centering-displaced-cup-20261027",
+          "observed_outcome": {
+            "jev_selected": true,
+            "arm_tool_x_mm": -6,
+            "controller_completed_and_stopped": true,
+            "gripper_position": 100,
+            "cup_displacement_fit_mm": 3.6059,
+            "user_confirmed_no_manual_intervention": true,
+            "grasp_success_verified": false
+          },
+          "limitations": [
+            "Exact contact surface remains unverified.",
+            "Do not infer a new tool/camera calibration from one contact event or automatically reverse the previous move.",
+            "Do not close or lift based on this outcome."
+          ],
+          "grants_execution_permission": false
+        },
+        {
+          "case_id": "j1-grasp-descent-entered-cup-20261022",
+          "observed_outcome": {
+            "status": "failed_collision_stopped_no_closure_or_lift",
+            "completed_10mm_segments": 6,
+            "faulted_segment": 7,
+            "approx_total_descent_mm": 66.04972839355469,
+            "collision_detected": true,
+            "immediate_stop_return_code": 0,
+            "user_confirmed_fingers_entered_cup_interior": true,
+            "gripper_commands": 0,
+            "grasp_completed": false,
+            "lift_completed": false,
+            "jev_motion_gate_passed": false,
+            "llm_motion_override_occurred": true
+          },
+          "limitations": [
+            "Do not reuse this failed descent or its poses",
+            "No verified escape trajectory; do not reset collision or retry automatically",
+            "Old camera transform is preserved but not independently validated",
+            "Jev selected descent below threshold; actual continuation was an LLM exception, not autonomous Jev control",
+            "Human cup handling visible after stop invalidates the old cup pose"
+          ],
+          "grants_execution_permission": false
+        }
+      ]
+    },
+    "questions": {
+      "next_skill": {
+        "type": "choice",
+        "instructions": "Choose the next task-level skill for grasping the upright cup. Use only the recorded facts, recent outcomes and retrieved examples. Missing evidence is unknown. Choose observe_scene when sensing can resolve it; request_astra when the skill library or known strategy cannot resolve it. Do not calculate coordinates, issue joint commands, or assume task success. The listed motion candidates have been filtered by deterministic code.",
+        "criteria": {
+          "observe_scene": "Refresh cup/tool localization and evidence before any physical action.",
+          "request_astra": "Escalate an unsupported, novel, ambiguous or repeatedly failing situation to Astra.",
+          "hold": "Wait with no new action while a prerequisite or observation is unavailable."
+        }
+      }
+    }
+  },
+  "request_sha256": "fcd8eaedc943e1866713923c97f64f90e155b37a36c1108164e83fb461002424",
+  "compact_request": true,
+  "gate_table_before_inference": {
+    "observe_scene": {
+      "policy_version": "risk-evidence-v4-bounded-empty-sensing",
+      "risk": "readonly",
+      "min_confidence": 0.5,
+      "min_probability": 0.65,
+      "min_margin": 0.15,
+      "evidence_complete": true,
+      "matched_successes": 0,
+      "recent_failures": 0,
+      "empirically_calibrated": false
+    },
+    "request_astra": {
+      "policy_version": "risk-evidence-v4-bounded-empty-sensing",
+      "risk": "readonly",
+      "min_confidence": 0.5,
+      "min_probability": 0.65,
+      "min_margin": 0.15,
+      "evidence_complete": true,
+      "matched_successes": 0,
+      "recent_failures": 0,
+      "empirically_calibrated": false
+    },
+    "hold": {
+      "policy_version": "risk-evidence-v4-bounded-empty-sensing",
+      "risk": "readonly",
+      "min_confidence": 0.5,
+      "min_probability": 0.65,
+      "min_margin": 0.15,
+      "evidence_complete": true,
+      "matched_successes": 0,
+      "recent_failures": 0,
+      "empirically_calibrated": false
+    }
+  },
+  "hard_checks": {},
+  "physical_commands_sent_by_decision": 0,
+  "started_at_unix": 1793147721.444884,
+  "status": "decision_received",
+  "response": {
+    "model": "typesafe/jev-latest",
+    "answers": {
+      "next_skill": {
+        "type": "choice",
+        "choice": "hold",
+        "confidence": 0.19,
+        "probabilities": {
+          "hold": 0.46,
+          "observe_scene": 0.37,
+          "request_astra": 0.17
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 1495,
+      "output_tokens": 42
+    }
+  },
+  "latency_ms": 789.6490350012755,
+  "gate": {
+    "choice": "hold",
+    "probability": 0.46,
+    "confidence": 0.19,
+    "margin": 0.09000000000000002,
+    "policy": {
+      "policy_version": "risk-evidence-v4-bounded-empty-sensing",
+      "risk": "readonly",
+      "min_confidence": 0.5,
+      "min_probability": 0.65,
+      "min_margin": 0.15,
+      "evidence_complete": true,
+      "matched_successes": 0,
+      "recent_failures": 0,
+      "empirically_calibrated": false
+    },
+    "physical_authorization_granted_by_policy": false,
+    "route": "needs_llm",
+    "reason": "Decision below the predeclared risk gate"
+  },
+  "finished_at_unix": 1793147722.235077
+}

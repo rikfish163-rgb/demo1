@@ -1,0 +1,69 @@
+{
+  "schema": "fr5-cup-terminal-xyz-gradient-assessment-v1",
+  "status": "passed",
+  "margin_mm": 0.25,
+  "coefficient": 6.0,
+  "cases": [
+    {
+      "case_id": "original-source0-first-close-offset-6-row-249",
+      "source_index": 0,
+      "status": "finite_nonzero_gradient",
+      "xyz_error_mm": [
+        1.2717721351839075,
+        1.8684737107591802,
+        1.9479720272042447
+      ],
+      "expected_terminal_loss": 0.13105053171368722,
+      "recorded_terminal_loss": 0.13105054199695587,
+      "within_original_margin": false,
+      "native_terminal_full_actions_equal": true,
+      "invariants_passed": true,
+      "all_required_gradient_groups_finite": true
+    },
+    {
+      "case_id": "original-source2-first-close-offset-6-row-1207",
+      "source_index": 2,
+      "status": "within_margin_zero_gradient",
+      "xyz_error_mm": [
+        0.23922276415723184,
+        0.16115733234109292,
+        0.1960568587520647
+      ],
+      "expected_terminal_loss": 0.0,
+      "recorded_terminal_loss": 0.0,
+      "within_original_margin": true,
+      "native_terminal_full_actions_equal": true,
+      "invariants_passed": true,
+      "all_required_gradient_groups_finite": true
+    },
+    {
+      "case_id": "original-neighbor-chunk-00027-row-2780",
+      "source_index": 5,
+      "status": "within_margin_zero_gradient",
+      "xyz_error_mm": [
+        0.04659960289813065,
+        0.03469095110464216,
+        0.1646456696457406
+      ],
+      "expected_terminal_loss": 0.0,
+      "recorded_terminal_loss": 0.0,
+      "within_original_margin": true,
+      "native_terminal_full_actions_equal": true,
+      "invariants_passed": true,
+      "all_required_gradient_groups_finite": true
+    }
+  ],
+  "positive_loss_cases_with_all_required_gradients": 1,
+  "within_margin_zero_gradient_cases": 2,
+  "failed_cases": 0,
+  "ready_for_paired_training": true,
+  "raw_probe_status": "failed",
+  "raw_probe_exit_code": 1,
+  "peak_allocated_bytes": 20514554368,
+  "peak_reserved_bytes": 20990394368,
+  "robot_commands": 0,
+  "optimizer_steps": 0,
+  "task_success_verified": false,
+  "probe": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-xyz-gradient-probe-20261116-v1.json",
+  "receipt": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-xyz-gradient-execution-20261116-v1.json"
+}

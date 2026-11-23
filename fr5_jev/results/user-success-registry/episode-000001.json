@@ -1,0 +1,17 @@
+{
+  "episode_id": "episode-000001",
+  "logical_user_verdict": "success",
+  "independent_logical_tasks": 1,
+  "source_recording_segments": 2,
+  "user_statement": "记录为成功 你把中间那个黑色的说明删除 前后是一样的 应该可以视为一段轨迹",
+  "source": "direct_user_message",
+  "confirmed_unix": 1793266327.7189229,
+  "review_video": "/dev/shm/fr5-full-approach-and-pick-20261029/full-process-clean.mp4",
+  "sources": [
+    "/dev/shm/fr5-fixed-attitude-1793262160",
+    "/dev/shm/fr5-current-grasp-1793263400"
+  ],
+  "assembled_episode": "/dev/shm/fr5-success-episode-000001",
+  "data_assembly_status": "pending_technical_validation",
+  "training_ready": false
+}

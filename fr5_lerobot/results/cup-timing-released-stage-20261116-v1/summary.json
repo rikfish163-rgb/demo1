@@ -1,0 +1,1682 @@
+{
+  "schema": "cup-timing-released-stage-audit-v1",
+  "verified": true,
+  "method": {
+    "input_directory": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-precontact-tracker-replay-20261115-v1",
+    "original_summary": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-precontact-tracker-replay-20261115-v1/summary.json",
+    "captures": "capture",
+    "tracking": "tracking.new",
+    "baseline_timing": "timing.new",
+    "aligned": true,
+    "setdown": true,
+    "cpu_only": true,
+    "rgbd_recomputed": false,
+    "policy_inference": false,
+    "robot_camera_connections": 0
+  },
+  "frames": 4209,
+  "sources_count": 8,
+  "cycles_count": 10,
+  "phase_counts": {
+    "old": {
+      "approaching": 1873,
+      "at_pickup": 378,
+      "grasp_contact": 111,
+      "lifting": 348,
+      "hover": 297,
+      "returning": 297,
+      "at_table_height": 70,
+      "released": 607,
+      "unknown": 228
+    },
+    "new": {
+      "approaching": 1873,
+      "at_pickup": 151,
+      "grasp_contact": 111,
+      "lifting": 348,
+      "hover": 297,
+      "returning": 297,
+      "at_table_height": 70,
+      "released": 834,
+      "unknown": 228
+    }
+  },
+  "changed_phase_frames": 227,
+  "baseline_difference_counts": {},
+  "output_difference_counts": {
+    "camera_monotonic": 0,
+    "contact_monotonic": 0,
+    "feedback_monotonic": 0,
+    "flange_rise_mm": 0,
+    "hover_start_monotonic": 0,
+    "pickup_reference_error_mm": 0,
+    "rim_rise_mm": 0,
+    "state.hover_seconds": 0,
+    "state.phase": 227,
+    "state.setdown_age_s": 0,
+    "state.support_gap_mm": 0,
+    "state.visual": 0
+  },
+  "internal_difference_counts": {
+    "contact_time": 0,
+    "hover_start": 0,
+    "hover_seconds": 0,
+    "was_released": 0,
+    "retreat_peak": 0,
+    "setdown_since": 0,
+    "setdown_last": 0
+  },
+  "release_scope_violations": 0,
+  "invalid_feedback_frames": 228,
+  "invalid_feedback_changed_or_not_unknown": 0,
+  "hover_frames": 297,
+  "hover_changed_frames": 0,
+  "close_to_before_release_frames": 1238,
+  "close_to_before_release_unchanged": true,
+  "close_hover_release_before_windows_unchanged": true,
+  "contact_hover_events_unchanged": true,
+  "first_released_phase_matches_valid_feedback": true,
+  "source7_first_valid_open_frames": [
+    {
+      "source": "source-7",
+      "frame": 309,
+      "gripper_feedback_valid": true,
+      "gripper_position_percent": 99,
+      "native_contact": 0,
+      "prior_contact_monotonic": 40788.123929001,
+      "prior_contact_flange_mm": [
+        -103.11136627197266,
+        -719.947998046875,
+        92.81503295898438
+      ],
+      "old": {
+        "state": {
+          "phase": "at_pickup",
+          "hover_seconds": null,
+          "visual": "missing",
+          "support_gap_mm": null,
+          "setdown_age_s": null
+        },
+        "camera_monotonic": 40807.136609855,
+        "feedback_monotonic": 40807.135746132,
+        "contact_monotonic": null,
+        "flange_rise_mm": null,
+        "rim_rise_mm": null,
+        "pickup_reference_error_mm": [
+          0.07073258284265194,
+          0.0032427139309021413,
+          0.022796569637066
+        ],
+        "hover_start_monotonic": null
+      },
+      "new": {
+        "state": {
+          "phase": "released",
+          "hover_seconds": null,
+          "visual": "missing",
+          "support_gap_mm": null,
+          "setdown_age_s": null
+        },
+        "camera_monotonic": 40807.136609855,
+        "feedback_monotonic": 40807.135746132,
+        "contact_monotonic": null,
+        "flange_rise_mm": null,
+        "rim_rise_mm": null,
+        "pickup_reference_error_mm": [
+          0.07073258284265194,
+          0.0032427139309021413,
+          0.022796569637066
+        ],
+        "hover_start_monotonic": null
+      }
+    },
+    {
+      "source": "source-7",
+      "frame": 692,
+      "gripper_feedback_valid": true,
+      "gripper_position_percent": 99,
+      "native_contact": 0,
+      "prior_contact_monotonic": 40851.966621716,
+      "prior_contact_flange_mm": [
+        -103.113037109375,
+        -719.953857421875,
+        92.8216781616211
+      ],
+      "old": {
+        "state": {
+          "phase": "at_pickup",
+          "hover_seconds": null,
+          "visual": "missing",
+          "support_gap_mm": null,
+          "setdown_age_s": null
+        },
+        "camera_monotonic": 40870.979449687,
+        "feedback_monotonic": 40870.975896297,
+        "contact_monotonic": null,
+        "flange_rise_mm": null,
+        "rim_rise_mm": null,
+        "pickup_reference_error_mm": [
+          0.07051133040124569,
+          0.0032427139309021413,
+          0.01767724590659725
+        ],
+        "hover_start_monotonic": null
+      },
+      "new": {
+        "state": {
+          "phase": "released",
+          "hover_seconds": null,
+          "visual": "missing",
+          "support_gap_mm": null,
+          "setdown_age_s": null
+        },
+        "camera_monotonic": 40870.979449687,
+        "feedback_monotonic": 40870.975896297,
+        "contact_monotonic": null,
+        "flange_rise_mm": null,
+        "rim_rise_mm": null,
+        "pickup_reference_error_mm": [
+          0.07051133040124569,
+          0.0032427139309021413,
+          0.01767724590659725
+        ],
+        "hover_start_monotonic": null
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-0",
+      "split": "train",
+      "frames": 649,
+      "phase_counts": {
+        "old": {
+          "approaching": 363,
+          "at_pickup": 54,
+          "grasp_contact": 11,
+          "lifting": 33,
+          "hover": 31,
+          "returning": 31,
+          "at_table_height": 2,
+          "released": 102,
+          "unknown": 22
+        },
+        "new": {
+          "approaching": 363,
+          "at_pickup": 15,
+          "grasp_contact": 11,
+          "lifting": 33,
+          "hover": 31,
+          "returning": 31,
+          "at_table_height": 2,
+          "released": 141,
+          "unknown": 22
+        }
+      },
+      "changed_phase_frames": [
+        387,
+        388,
+        389,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        399,
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425
+      ],
+      "changed_phase_frame_ranges": [
+        [
+          387,
+          425
+        ]
+      ],
+      "baseline_difference_counts": {},
+      "output_difference_counts": {
+        "state.phase": 39
+      },
+      "internal_difference_counts": {},
+      "invalid_feedback_frames": 22,
+      "invalid_feedback_changed_or_not_unknown": 0,
+      "before_first_contact_changed_frames": 0,
+      "confirmed_release_events": [
+        {
+          "frame": 387,
+          "position_percent": 99,
+          "feedback_valid": true,
+          "native_contact": 0,
+          "prior_contact_monotonic": 39955.265189983,
+          "prior_contact_flange_mm": [
+            -22.642822265625,
+            -740.7483520507812,
+            93.18657684326172
+          ],
+          "old_phase": "at_pickup",
+          "new_phase": "released"
+        }
+      ],
+      "cycles": [
+        {
+          "source": "source-0",
+          "repetition": 1,
+          "feedback_contact_frame": 268,
+          "feedback_release_frame": 387,
+          "contact_event": {
+            "old": {
+              "frame": 268,
+              "camera_monotonic": 39955.265189983
+            },
+            "new": {
+              "frame": 268,
+              "camera_monotonic": 39955.265189983
+            }
+          },
+          "hover_event": {
+            "old": {
+              "frame": 312,
+              "camera_monotonic": 39962.670538739
+            },
+            "new": {
+              "frame": 312,
+              "camera_monotonic": 39962.670538739
+            }
+          },
+          "released_event": {
+            "old": {
+              "frame": 426,
+              "camera_monotonic": 39981.683832151
+            },
+            "new": {
+              "frame": 387,
+              "camera_monotonic": 39975.179385789
+            }
+          },
+          "close_to_before_release_frames": 119,
+          "close_to_before_release_changed_frames": [],
+          "close_command_window": {
+            "frames": [
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260
+            ],
+            "changed_frames": []
+          },
+          "hover_start_window": {
+            "frames": [
+              309,
+              310,
+              311,
+              312,
+              313,
+              314,
+              315
+            ],
+            "changed_frames": []
+          },
+          "before_release_command_window": {
+            "frames": [
+              373,
+              374,
+              375
+            ],
+            "changed_frames": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "source-1",
+      "split": "train",
+      "frames": 370,
+      "phase_counts": {
+        "old": {
+          "approaching": 174,
+          "at_pickup": 36,
+          "grasp_contact": 10,
+          "lifting": 34,
+          "hover": 21,
+          "returning": 29,
+          "at_table_height": 4,
+          "released": 40,
+          "unknown": 22
+        },
+        "new": {
+          "approaching": 174,
+          "at_pickup": 14,
+          "grasp_contact": 10,
+          "lifting": 34,
+          "hover": 21,
+          "returning": 29,
+          "at_table_height": 4,
+          "released": 62,
+          "unknown": 22
+        }
+      },
+      "changed_phase_frames": [
+        308,
+        309,
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327,
+        328,
+        329
+      ],
+      "changed_phase_frame_ranges": [
+        [
+          308,
+          329
+        ]
+      ],
+      "baseline_difference_counts": {},
+      "output_difference_counts": {
+        "state.phase": 22
+      },
+      "internal_difference_counts": {},
+      "invalid_feedback_frames": 22,
+      "invalid_feedback_changed_or_not_unknown": 0,
+      "before_first_contact_changed_frames": 0,
+      "confirmed_release_events": [
+        {
+          "frame": 308,
+          "position_percent": 99,
+          "feedback_valid": true,
+          "native_contact": 0,
+          "prior_contact_monotonic": 45024.067414396,
+          "prior_contact_flange_mm": [
+            -121.04395294189453,
+            -731.3650512695312,
+            92.27545166015625
+          ],
+          "old_phase": "at_pickup",
+          "new_phase": "released"
+        }
+      ],
+      "cycles": [
+        {
+          "source": "source-1",
+          "repetition": 1,
+          "feedback_contact_frame": 199,
+          "feedback_release_frame": 308,
+          "contact_event": {
+            "old": {
+              "frame": 199,
+              "camera_monotonic": 45024.067414396
+            },
+            "new": {
+              "frame": 199,
+              "camera_monotonic": 45024.067414396
+            }
+          },
+          "hover_event": {
+            "old": {
+              "frame": 243,
+              "camera_monotonic": 45031.472551558
+            },
+            "new": {
+              "frame": 243,
+              "camera_monotonic": 45031.472551558
+            }
+          },
+          "released_event": {
+            "old": {
+              "frame": 330,
+              "camera_monotonic": 45045.882686721
+            },
+            "new": {
+              "frame": 308,
+              "camera_monotonic": 45042.280074159
+            }
+          },
+          "close_to_before_release_frames": 109,
+          "close_to_before_release_changed_frames": [],
+          "close_command_window": {
+            "frames": [
+              185,
+              186,
+              187,
+              188,
+              189,
+              190,
+              191
+            ],
+            "changed_frames": []
+          },
+          "hover_start_window": {
+            "frames": [
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246
+            ],
+            "changed_frames": []
+          },
+          "before_release_command_window": {
+            "frames": [
+              294,
+              295,
+              296
+            ],
+            "changed_frames": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "source-2",
+      "split": "train",
+      "frames": 402,
+      "phase_counts": {
+        "old": {
+          "approaching": 180,
+          "at_pickup": 40,
+          "grasp_contact": 11,
+          "lifting": 33,
+          "hover": 38,
+          "returning": 31,
+          "at_table_height": 3,
+          "released": 41,
+          "unknown": 25
+        },
+        "new": {
+          "approaching": 180,
+          "at_pickup": 19,
+          "grasp_contact": 11,
+          "lifting": 33,
+          "hover": 38,
+          "returning": 31,
+          "at_table_height": 3,
+          "released": 62,
+          "unknown": 25
+        }
+      },
+      "changed_phase_frames": [
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355,
+        356,
+        357,
+        358,
+        359,
+        360
+      ],
+      "changed_phase_frame_ranges": [
+        [
+          340,
+          360
+        ]
+      ],
+      "baseline_difference_counts": {},
+      "output_difference_counts": {
+        "state.phase": 21
+      },
+      "internal_difference_counts": {},
+      "invalid_feedback_frames": 25,
+      "invalid_feedback_changed_or_not_unknown": 0,
+      "before_first_contact_changed_frames": 0,
+      "confirmed_release_events": [
+        {
+          "frame": 340,
+          "position_percent": 100,
+          "feedback_valid": true,
+          "native_contact": 0,
+          "prior_contact_monotonic": 46545.51990113,
+          "prior_contact_flange_mm": [
+            -273.427978515625,
+            -632.7455444335938,
+            90.49576568603516
+          ],
+          "old_phase": "at_pickup",
+          "new_phase": "released"
+        }
+      ],
+      "cycles": [
+        {
+          "source": "source-2",
+          "repetition": 1,
+          "feedback_contact_frame": 211,
+          "feedback_release_frame": 340,
+          "contact_event": {
+            "old": {
+              "frame": 211,
+              "camera_monotonic": 46545.51990113
+            },
+            "new": {
+              "frame": 211,
+              "camera_monotonic": 46545.51990113
+            }
+          },
+          "hover_event": {
+            "old": {
+              "frame": 255,
+              "camera_monotonic": 46552.824852943
+            },
+            "new": {
+              "frame": 255,
+              "camera_monotonic": 46552.824852943
+            }
+          },
+          "released_event": {
+            "old": {
+              "frame": 361,
+              "camera_monotonic": 46570.536838508
+            },
+            "new": {
+              "frame": 340,
+              "camera_monotonic": 46567.034560656
+            }
+          },
+          "close_to_before_release_frames": 128,
+          "close_to_before_release_changed_frames": [],
+          "close_command_window": {
+            "frames": [
+              196,
+              197,
+              198,
+              199,
+              200,
+              201,
+              202
+            ],
+            "changed_frames": []
+          },
+          "hover_start_window": {
+            "frames": [
+              252,
+              253,
+              254,
+              255,
+              256,
+              257,
+              258
+            ],
+            "changed_frames": []
+          },
+          "before_release_command_window": {
+            "frames": [
+              324,
+              325,
+              326
+            ],
+            "changed_frames": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "source-3",
+      "split": "train",
+      "frames": 754,
+      "phase_counts": {
+        "old": {
+          "approaching": 256,
+          "at_pickup": 66,
+          "grasp_contact": 28,
+          "lifting": 77,
+          "hover": 64,
+          "returning": 59,
+          "at_table_height": 10,
+          "released": 149,
+          "unknown": 45
+        },
+        "new": {
+          "approaching": 256,
+          "at_pickup": 30,
+          "grasp_contact": 28,
+          "lifting": 77,
+          "hover": 64,
+          "returning": 59,
+          "at_table_height": 10,
+          "released": 185,
+          "unknown": 45
+        }
+      },
+      "changed_phase_frames": [
+        317,
+        318,
+        319,
+        320,
+        322,
+        324,
+        325,
+        326,
+        327,
+        328,
+        329,
+        330,
+        331,
+        332,
+        333,
+        334,
+        335,
+        336,
+        337,
+        693,
+        696,
+        697,
+        698,
+        699,
+        700,
+        701,
+        702,
+        703,
+        704,
+        705,
+        707,
+        708,
+        709,
+        710,
+        711,
+        712
+      ],
+      "changed_phase_frame_ranges": [
+        [
+          317,
+          320
+        ],
+        [
+          322,
+          322
+        ],
+        [
+          324,
+          337
+        ],
+        [
+          693,
+          693
+        ],
+        [
+          696,
+          705
+        ],
+        [
+          707,
+          712
+        ]
+      ],
+      "baseline_difference_counts": {},
+      "output_difference_counts": {
+        "state.phase": 36
+      },
+      "internal_difference_counts": {},
+      "invalid_feedback_frames": 45,
+      "invalid_feedback_changed_or_not_unknown": 0,
+      "before_first_contact_changed_frames": 0,
+      "confirmed_release_events": [
+        {
+          "frame": 317,
+          "position_percent": 99,
+          "feedback_valid": true,
+          "native_contact": 0,
+          "prior_contact_monotonic": 47302.038831766,
+          "prior_contact_flange_mm": [
+            -97.04767608642578,
+            -730.5142822265625,
+            92.5627212524414
+          ],
+          "old_phase": "at_pickup",
+          "new_phase": "released"
+        },
+        {
+          "frame": 693,
+          "position_percent": 99,
+          "feedback_valid": true,
+          "native_contact": 0,
+          "prior_contact_monotonic": 47366.083059492,
+          "prior_contact_flange_mm": [
+            -97.04833221435547,
+            -730.5186767578125,
+            92.5816421508789
+          ],
+          "old_phase": "at_pickup",
+          "new_phase": "released"
+        }
+      ],
+      "cycles": [
+        {
+          "source": "source-3",
+          "repetition": 1,
+          "feedback_contact_frame": 183,
+          "feedback_release_frame": 317,
+          "contact_event": {
+            "old": {
+              "frame": 183,
+              "camera_monotonic": 47302.038831766
+            },
+            "new": {
+              "frame": 183,
+              "camera_monotonic": 47302.038831766
+            }
+          },
+          "hover_event": {
+            "old": {
+              "frame": 239,
+              "camera_monotonic": 47311.345437815
+            },
+            "new": {
+              "frame": 239,
+              "camera_monotonic": 47311.345437815
+            }
+          },
+          "released_event": {
+            "old": {
+              "frame": 321,
+              "camera_monotonic": 47325.054747301
+            },
+            "new": {
+              "frame": 317,
+              "camera_monotonic": 47324.354274144
+            }
+          },
+          "close_to_before_release_frames": 134,
+          "close_to_before_release_changed_frames": [],
+          "close_command_window": {
+            "frames": [
+              169,
+              170,
+              171,
+              172,
+              173,
+              174,
+              175
+            ],
+            "changed_frames": []
+          },
+          "hover_start_window": {
+            "frames": [
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242
+            ],
+            "changed_frames": []
+          },
+          "before_release_command_window": {
+            "frames": [
+              303,
+              304,
+              305
+            ],
+            "changed_frames": []
+          }
+        },
+        {
+          "source": "source-3",
+          "repetition": 2,
+          "feedback_contact_frame": 567,
+          "feedback_release_frame": 693,
+          "contact_event": {
+            "old": {
+              "frame": 567,
+              "camera_monotonic": 47366.083059492
+            },
+            "new": {
+              "frame": 567,
+              "camera_monotonic": 47366.083059492
+            }
+          },
+          "hover_event": {
+            "old": {
+              "frame": 616,
+              "camera_monotonic": 47374.188697758
+            },
+            "new": {
+              "frame": 616,
+              "camera_monotonic": 47374.188697758
+            }
+          },
+          "released_event": {
+            "old": {
+              "frame": 694,
+              "camera_monotonic": 47387.197611292
+            },
+            "new": {
+              "frame": 693,
+              "camera_monotonic": 47387.09758993
+            }
+          },
+          "close_to_before_release_frames": 127,
+          "close_to_before_release_changed_frames": [],
+          "close_command_window": {
+            "frames": [
+              552,
+              553,
+              554,
+              555,
+              556,
+              557,
+              558
+            ],
+            "changed_frames": []
+          },
+          "hover_start_window": {
+            "frames": [
+              613,
+              614,
+              615,
+              616,
+              617,
+              618,
+              619
+            ],
+            "changed_frames": []
+          },
+          "before_release_command_window": {
+            "frames": [
+              679,
+              680,
+              681
+            ],
+            "changed_frames": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "source-4",
+      "split": "train",
+      "frames": 435,
+      "phase_counts": {
+        "old": {
+          "approaching": 178,
+          "at_pickup": 45,
+          "grasp_contact": 12,
+          "lifting": 40,
+          "hover": 32,
+          "returning": 30,
+          "at_table_height": 35,
+          "released": 40,
+          "unknown": 23
+        },
+        "new": {
+          "approaching": 178,
+          "at_pickup": 17,
+          "grasp_contact": 12,
+          "lifting": 40,
+          "hover": 32,
+          "returning": 30,
+          "at_table_height": 35,
+          "released": 68,
+          "unknown": 23
+        }
+      },
+      "changed_phase_frames": [
+        367,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373,
+        374,
+        375,
+        376,
+        377,
+        378,
+        379,
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391,
+        392,
+        393,
+        394
+      ],
+      "changed_phase_frame_ranges": [
+        [
+          367,
+          394
+        ]
+      ],
+      "baseline_difference_counts": {},
+      "output_difference_counts": {
+        "state.phase": 28
+      },
+      "internal_difference_counts": {},
+      "invalid_feedback_frames": 23,
+      "invalid_feedback_changed_or_not_unknown": 0,
+      "before_first_contact_changed_frames": 0,
+      "confirmed_release_events": [
+        {
+          "frame": 367,
+          "position_percent": 99,
+          "feedback_valid": true,
+          "native_contact": 0,
+          "prior_contact_monotonic": 47907.35699297,
+          "prior_contact_flange_mm": [
+            -118.61801147460938,
+            -686.2264404296875,
+            92.31780242919922
+          ],
+          "old_phase": "at_pickup",
+          "new_phase": "released"
+        }
+      ],
+      "cycles": [
+        {
+          "source": "source-4",
+          "repetition": 1,
+          "feedback_contact_frame": 207,
+          "feedback_release_frame": 367,
+          "contact_event": {
+            "old": {
+              "frame": 207,
+              "camera_monotonic": 47907.35699297
+            },
+            "new": {
+              "frame": 207,
+              "camera_monotonic": 47907.35699297
+            }
+          },
+          "hover_event": {
+            "old": {
+              "frame": 259,
+              "camera_monotonic": 47915.963005995
+            },
+            "new": {
+              "frame": 259,
+              "camera_monotonic": 47915.963005995
+            }
+          },
+          "released_event": {
+            "old": {
+              "frame": 395,
+              "camera_monotonic": 47938.67863796
+            },
+            "new": {
+              "frame": 367,
+              "camera_monotonic": 47933.97551813
+            }
+          },
+          "close_to_before_release_frames": 161,
+          "close_to_before_release_changed_frames": [],
+          "close_command_window": {
+            "frames": [
+              192,
+              193,
+              194,
+              195,
+              196,
+              197,
+              198
+            ],
+            "changed_frames": []
+          },
+          "hover_start_window": {
+            "frames": [
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262
+            ],
+            "changed_frames": []
+          },
+          "before_release_command_window": {
+            "frames": [
+              353,
+              354,
+              355
+            ],
+            "changed_frames": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "source-5",
+      "split": "train",
+      "frames": 376,
+      "phase_counts": {
+        "old": {
+          "approaching": 171,
+          "at_pickup": 35,
+          "grasp_contact": 9,
+          "lifting": 33,
+          "hover": 32,
+          "returning": 29,
+          "at_table_height": 4,
+          "released": 40,
+          "unknown": 23
+        },
+        "new": {
+          "approaching": 171,
+          "at_pickup": 14,
+          "grasp_contact": 9,
+          "lifting": 33,
+          "hover": 32,
+          "returning": 29,
+          "at_table_height": 4,
+          "released": 61,
+          "unknown": 23
+        }
+      },
+      "changed_phase_frames": [
+        315,
+        316,
+        317,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327,
+        328,
+        329,
+        330,
+        331,
+        332,
+        333,
+        334,
+        335
+      ],
+      "changed_phase_frame_ranges": [
+        [
+          315,
+          335
+        ]
+      ],
+      "baseline_difference_counts": {},
+      "output_difference_counts": {
+        "state.phase": 21
+      },
+      "internal_difference_counts": {},
+      "invalid_feedback_frames": 23,
+      "invalid_feedback_changed_or_not_unknown": 0,
+      "before_first_contact_changed_frames": 0,
+      "confirmed_release_events": [
+        {
+          "frame": 315,
+          "position_percent": 99,
+          "feedback_valid": true,
+          "native_contact": 0,
+          "prior_contact_monotonic": 39145.977549753,
+          "prior_contact_flange_mm": [
+            -109.68616485595703,
+            -687.3355712890625,
+            91.85684204101562
+          ],
+          "old_phase": "at_pickup",
+          "new_phase": "released"
+        }
+      ],
+      "cycles": [
+        {
+          "source": "source-5",
+          "repetition": 1,
+          "feedback_contact_frame": 197,
+          "feedback_release_frame": 315,
+          "contact_event": {
+            "old": {
+              "frame": 197,
+              "camera_monotonic": 39145.977549753
+            },
+            "new": {
+              "frame": 197,
+              "camera_monotonic": 39145.977549753
+            }
+          },
+          "hover_event": {
+            "old": {
+              "frame": 239,
+              "camera_monotonic": 39152.982373781
+            },
+            "new": {
+              "frame": 239,
+              "camera_monotonic": 39152.982373781
+            }
+          },
+          "released_event": {
+            "old": {
+              "frame": 336,
+              "camera_monotonic": 39169.193778623
+            },
+            "new": {
+              "frame": 315,
+              "camera_monotonic": 39165.691366221
+            }
+          },
+          "close_to_before_release_frames": 119,
+          "close_to_before_release_changed_frames": [],
+          "close_command_window": {
+            "frames": [
+              182,
+              183,
+              184,
+              185,
+              186,
+              187,
+              188
+            ],
+            "changed_frames": []
+          },
+          "hover_start_window": {
+            "frames": [
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242
+            ],
+            "changed_frames": []
+          },
+          "before_release_command_window": {
+            "frames": [
+              301,
+              302,
+              303
+            ],
+            "changed_frames": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "source-6",
+      "split": "train",
+      "frames": 471,
+      "phase_counts": {
+        "old": {
+          "approaching": 272,
+          "at_pickup": 35,
+          "grasp_contact": 10,
+          "lifting": 33,
+          "hover": 26,
+          "returning": 29,
+          "at_table_height": 4,
+          "released": 40,
+          "unknown": 22
+        },
+        "new": {
+          "approaching": 272,
+          "at_pickup": 14,
+          "grasp_contact": 10,
+          "lifting": 33,
+          "hover": 26,
+          "returning": 29,
+          "at_table_height": 4,
+          "released": 61,
+          "unknown": 22
+        }
+      },
+      "changed_phase_frames": [
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430
+      ],
+      "changed_phase_frame_ranges": [
+        [
+          410,
+          430
+        ]
+      ],
+      "baseline_difference_counts": {},
+      "output_difference_counts": {
+        "state.phase": 21
+      },
+      "internal_difference_counts": {},
+      "invalid_feedback_frames": 22,
+      "invalid_feedback_changed_or_not_unknown": 0,
+      "before_first_contact_changed_frames": 0,
+      "confirmed_release_events": [
+        {
+          "frame": 410,
+          "position_percent": 99,
+          "feedback_valid": true,
+          "native_contact": 0,
+          "prior_contact_monotonic": 40428.399877052,
+          "prior_contact_flange_mm": [
+            -102.99407196044922,
+            -720.1116333007812,
+            92.75394439697266
+          ],
+          "old_phase": "at_pickup",
+          "new_phase": "released"
+        }
+      ],
+      "cycles": [
+        {
+          "source": "source-6",
+          "repetition": 1,
+          "feedback_contact_frame": 297,
+          "feedback_release_frame": 410,
+          "contact_event": {
+            "old": {
+              "frame": 297,
+              "camera_monotonic": 40428.399877052
+            },
+            "new": {
+              "frame": 297,
+              "camera_monotonic": 40428.399877052
+            }
+          },
+          "hover_event": {
+            "old": {
+              "frame": 340,
+              "camera_monotonic": 40435.503814467
+            },
+            "new": {
+              "frame": 340,
+              "camera_monotonic": 40435.503814467
+            }
+          },
+          "released_event": {
+            "old": {
+              "frame": 431,
+              "camera_monotonic": 40450.712300001
+            },
+            "new": {
+              "frame": 410,
+              "camera_monotonic": 40447.210426781
+            }
+          },
+          "close_to_before_release_frames": 113,
+          "close_to_before_release_changed_frames": [],
+          "close_command_window": {
+            "frames": [
+              283,
+              284,
+              285,
+              286,
+              287,
+              288,
+              289
+            ],
+            "changed_frames": []
+          },
+          "hover_start_window": {
+            "frames": [
+              337,
+              338,
+              339,
+              340,
+              341,
+              342,
+              343
+            ],
+            "changed_frames": []
+          },
+          "before_release_command_window": {
+            "frames": [
+              396,
+              397,
+              398
+            ],
+            "changed_frames": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "source-7",
+      "split": "validation",
+      "frames": 752,
+      "phase_counts": {
+        "old": {
+          "approaching": 279,
+          "at_pickup": 67,
+          "grasp_contact": 20,
+          "lifting": 65,
+          "hover": 53,
+          "returning": 59,
+          "at_table_height": 8,
+          "released": 155,
+          "unknown": 46
+        },
+        "new": {
+          "approaching": 279,
+          "at_pickup": 28,
+          "grasp_contact": 20,
+          "lifting": 65,
+          "hover": 53,
+          "returning": 59,
+          "at_table_height": 8,
+          "released": 194,
+          "unknown": 46
+        }
+      },
+      "changed_phase_frames": [
+        309,
+        310,
+        311,
+        312,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327,
+        328,
+        692,
+        693,
+        694,
+        695,
+        696,
+        697,
+        698,
+        699,
+        700,
+        701,
+        702,
+        703,
+        704,
+        705,
+        706,
+        707,
+        708,
+        709,
+        710,
+        711
+      ],
+      "changed_phase_frame_ranges": [
+        [
+          309,
+          312
+        ],
+        [
+          314,
+          328
+        ],
+        [
+          692,
+          711
+        ]
+      ],
+      "baseline_difference_counts": {},
+      "output_difference_counts": {
+        "state.phase": 39
+      },
+      "internal_difference_counts": {},
+      "invalid_feedback_frames": 46,
+      "invalid_feedback_changed_or_not_unknown": 0,
+      "before_first_contact_changed_frames": 0,
+      "confirmed_release_events": [
+        {
+          "frame": 309,
+          "position_percent": 99,
+          "feedback_valid": true,
+          "native_contact": 0,
+          "prior_contact_monotonic": 40788.123929001,
+          "prior_contact_flange_mm": [
+            -103.11136627197266,
+            -719.947998046875,
+            92.81503295898438
+          ],
+          "old_phase": "at_pickup",
+          "new_phase": "released"
+        },
+        {
+          "frame": 692,
+          "position_percent": 99,
+          "feedback_valid": true,
+          "native_contact": 0,
+          "prior_contact_monotonic": 40851.966621716,
+          "prior_contact_flange_mm": [
+            -103.113037109375,
+            -719.953857421875,
+            92.8216781616211
+          ],
+          "old_phase": "at_pickup",
+          "new_phase": "released"
+        }
+      ],
+      "cycles": [
+        {
+          "source": "source-7",
+          "repetition": 1,
+          "feedback_contact_frame": 195,
+          "feedback_release_frame": 309,
+          "contact_event": {
+            "old": {
+              "frame": 195,
+              "camera_monotonic": 40788.123929001
+            },
+            "new": {
+              "frame": 195,
+              "camera_monotonic": 40788.123929001
+            }
+          },
+          "hover_event": {
+            "old": {
+              "frame": 237,
+              "camera_monotonic": 40795.12848347
+            },
+            "new": {
+              "frame": 237,
+              "camera_monotonic": 40795.12848347
+            }
+          },
+          "released_event": {
+            "old": {
+              "frame": 313,
+              "camera_monotonic": 40807.736881631
+            },
+            "new": {
+              "frame": 309,
+              "camera_monotonic": 40807.136609855
+            }
+          },
+          "close_to_before_release_frames": 114,
+          "close_to_before_release_changed_frames": [],
+          "close_command_window": {
+            "frames": [
+              180,
+              181,
+              182,
+              183,
+              184,
+              185,
+              186
+            ],
+            "changed_frames": []
+          },
+          "hover_start_window": {
+            "frames": [
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240
+            ],
+            "changed_frames": []
+          },
+          "before_release_command_window": {
+            "frames": [
+              294,
+              295,
+              296
+            ],
+            "changed_frames": []
+          }
+        },
+        {
+          "source": "source-7",
+          "repetition": 2,
+          "feedback_contact_frame": 578,
+          "feedback_release_frame": 692,
+          "contact_event": {
+            "old": {
+              "frame": 578,
+              "camera_monotonic": 40851.966621716
+            },
+            "new": {
+              "frame": 578,
+              "camera_monotonic": 40851.966621716
+            }
+          },
+          "hover_event": {
+            "old": {
+              "frame": 621,
+              "camera_monotonic": 40859.171438686
+            },
+            "new": {
+              "frame": 621,
+              "camera_monotonic": 40859.171438686
+            }
+          },
+          "released_event": {
+            "old": {
+              "frame": 712,
+              "camera_monotonic": 40874.281606385
+            },
+            "new": {
+              "frame": 692,
+              "camera_monotonic": 40870.979449687
+            }
+          },
+          "close_to_before_release_frames": 114,
+          "close_to_before_release_changed_frames": [],
+          "close_command_window": {
+            "frames": [
+              564,
+              565,
+              566,
+              567,
+              568,
+              569,
+              570
+            ],
+            "changed_frames": []
+          },
+          "hover_start_window": {
+            "frames": [
+              618,
+              619,
+              620,
+              621,
+              622,
+              623,
+              624
+            ],
+            "changed_frames": []
+          },
+          "before_release_command_window": {
+            "frames": [
+              678,
+              679,
+              680
+            ],
+            "changed_frames": []
+          }
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "released 仅表示先前夹持后由有效反馈确认开爪，不证明杯子放稳或抓杯成功。",
+    "比较使用全部原8来源的保存帧；tracking.new 固定，未重新处理 RGB-D。",
+    "未运行策略推理、控制器回放或实机验证；不判断 v7 早闭是否已消除。",
+    "回放配置为 aligned=True、setdown=True；默认和 aligned 模式另由单元测试覆盖。"
+  ]
+}

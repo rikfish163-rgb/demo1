@@ -1,0 +1,539 @@
+{
+  "schema": "fr5-pi05-rtc-inference-benchmark-v1",
+  "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-jev-history-balanced-base-20261121-v2/step-005000",
+  "source": "/home/data4/hts/demo1/fr5-learning/src/fr5-jev-pi05-tools-20261121-v7",
+  "real_input_archive": "/home/data4/hts/demo1/fr5-learning/diagnostics/jev-pi05-history-balanced-step5000-live-20261121-v1.jsonl",
+  "gpu": 9,
+  "load_seconds": 127.40293117100373,
+  "denoising_steps": 10,
+  "action_shape": [
+    50,
+    7
+  ],
+  "internal_noise_shape": [
+    1,
+    50,
+    32
+  ],
+  "timings": {
+    "eager": {
+      "sampling_s": {
+        "count": 4,
+        "min": 0.3119237719802186,
+        "median": 0.31613505055429414,
+        "max": 0.5843294480582699
+      },
+      "postprocess_s": {
+        "count": 4,
+        "min": 0.0002877869410440326,
+        "median": 0.0003127044765278697,
+        "max": 0.00766941299661994
+      },
+      "local_total_s": {
+        "count": 4,
+        "min": 0.31222316494677216,
+        "median": 0.31644195201806724,
+        "max": 0.5919988610548899
+      },
+      "peak_allocated_mib": {
+        "count": 4,
+        "min": 9752.994140625,
+        "median": 9759.830078125,
+        "max": 9760.455078125
+      }
+    },
+    "rtc_without_prefix": {
+      "sampling_s": {
+        "count": 4,
+        "min": 0.3393343599746004,
+        "median": 0.34056611446430907,
+        "max": 0.34598029404878616
+      },
+      "postprocess_s": {
+        "count": 4,
+        "min": 0.0003151949495077133,
+        "median": 0.0003318245289847255,
+        "max": 0.00035764393396675587
+      },
+      "local_total_s": {
+        "count": 4,
+        "min": 0.33968114701565355,
+        "median": 0.34088214294752106,
+        "max": 0.3463379379827529
+      },
+      "peak_allocated_mib": {
+        "count": 4,
+        "min": 9752.330078125,
+        "median": 9759.830078125,
+        "max": 9760.455078125
+      }
+    },
+    "rtc_with_prefix": {
+      "sampling_s": {
+        "count": 4,
+        "min": 0.7720628079259768,
+        "median": 0.7752280110726133,
+        "max": 0.7888974020024762
+      },
+      "postprocess_s": {
+        "count": 4,
+        "min": 0.00042014196515083313,
+        "median": 0.0004292870289646089,
+        "max": 0.0004619529936462641
+      },
+      "local_total_s": {
+        "count": 4,
+        "min": 0.7724852500250563,
+        "median": 0.7756690585520118,
+        "max": 0.7893335339613259
+      },
+      "peak_allocated_mib": {
+        "count": 4,
+        "min": 10325.8115234375,
+        "median": 10325.859130859375,
+        "max": 10326.76611328125
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "index": 1,
+      "prefix": {
+        "previous_request_id": "aab3497a02d248cb9809b8aa132c3cba",
+        "current_request_id": "80955c69394d41108830001c3ff47378",
+        "source_interval_s": 1.0002069149995805,
+        "nominal_past_steps": 6,
+        "retained_steps": 4,
+        "first_retained_time_minus_current_source_s": 0.16645975166708626,
+        "absolute_actions": [
+          [
+            1.1460951566696167,
+            -0.5292143225669861,
+            0.91261887550354,
+            -0.31843316555023193,
+            2.317539930343628,
+            0.06799807399511337,
+            0.76
+          ],
+          [
+            1.1472234725952148,
+            -0.5288963913917542,
+            0.9074720144271851,
+            -0.3156197667121887,
+            2.3176043033599854,
+            0.06775270402431488,
+            0.76
+          ],
+          [
+            1.1473474502563477,
+            -0.528963565826416,
+            0.9096139669418335,
+            -0.31639084219932556,
+            2.3179268836975098,
+            0.06807582825422287,
+            0.76
+          ],
+          [
+            1.1464811563491821,
+            -0.5317542552947998,
+            0.9089555740356445,
+            -0.31627511978149414,
+            2.3176116943359375,
+            0.068075031042099,
+            0.76
+          ]
+        ],
+        "commitment": "hypothetical_prior_prediction_not_executed",
+        "gripper_projection": "native_clamp_round_without_controller_deadband"
+      },
+      "eager_vs_saved_live": {
+        "all_actions_max_absolute_difference": 0.0,
+        "prefix10_grasp_mean_mm": 0.0,
+        "prefix10_grasp_max_mm": 0.0,
+        "full50_grasp_mean_mm": 0.0,
+        "full50_grasp_max_mm": 0.0,
+        "prefix10_gripper_mean_fraction": 0.0,
+        "prefix10_gripper_max_fraction": 0.0,
+        "full50_gripper_max_fraction": 0.0
+      },
+      "rtc_without_prefix_vs_eager": {
+        "all_actions_max_absolute_difference": 0.0,
+        "prefix10_grasp_mean_mm": 0.0,
+        "prefix10_grasp_max_mm": 0.0,
+        "full50_grasp_mean_mm": 0.0,
+        "full50_grasp_max_mm": 0.0,
+        "prefix10_gripper_mean_fraction": 0.0,
+        "prefix10_gripper_max_fraction": 0.0,
+        "full50_gripper_max_fraction": 0.0
+      },
+      "rtc_with_prefix_vs_eager": {
+        "all_actions_max_absolute_difference": 0.24160337448120117,
+        "prefix10_grasp_mean_mm": 2.332750830730203,
+        "prefix10_grasp_max_mm": 6.226076707419854,
+        "full50_grasp_mean_mm": 30.90553154877828,
+        "full50_grasp_max_mm": 69.94671233328624,
+        "prefix10_gripper_mean_fraction": 0.24053059816360473,
+        "prefix10_gripper_max_fraction": 0.24160337448120117,
+        "full50_gripper_max_fraction": 0.24160337448120117
+      },
+      "reference_inference_delay_steps": 4,
+      "rtc_local_delay_steps_lower_bound": 5,
+      "conditioned_prefix_fit": {
+        "prefix_length": 4,
+        "hard_weight_steps": 4,
+        "joint_max_difference_deg": 0.21341609080621843,
+        "gripper_max_difference_pp": 0.1428077220916757,
+        "hard_weight_joint_max_difference_deg": 0.21341609080621843,
+        "hard_weight_gripper_max_difference_pp": 0.1428077220916757
+      }
+    },
+    {
+      "index": 2,
+      "prefix": {
+        "previous_request_id": "80955c69394d41108830001c3ff47378",
+        "current_request_id": "df3ca7bf3a19464d807ed8d67fc74065",
+        "source_interval_s": 0.6907439460046589,
+        "nominal_past_steps": 4,
+        "retained_steps": 6,
+        "first_retained_time_minus_current_source_s": 0.14258938732867443,
+        "absolute_actions": [
+          [
+            1.1475533246994019,
+            -0.5292845964431763,
+            0.9120650291442871,
+            -0.318526953458786,
+            2.3183200359344482,
+            0.06793490052223206,
+            1.0
+          ],
+          [
+            1.1468712091445923,
+            -0.5301612615585327,
+            0.9121057391166687,
+            -0.31851911544799805,
+            2.3183774948120117,
+            0.06783808022737503,
+            1.0
+          ],
+          [
+            1.1474031209945679,
+            -0.5300793647766113,
+            0.9123206734657288,
+            -0.3185415267944336,
+            2.31900691986084,
+            0.0678163468837738,
+            1.0
+          ],
+          [
+            1.1486269235610962,
+            -0.5314487218856812,
+            0.9118745923042297,
+            -0.318634033203125,
+            2.319096326828003,
+            0.06793935596942902,
+            1.0
+          ],
+          [
+            1.1481192111968994,
+            -0.5310133695602417,
+            0.913579523563385,
+            -0.319272518157959,
+            2.3190276622772217,
+            0.06798619031906128,
+            1.0
+          ],
+          [
+            1.1492911577224731,
+            -0.5311748385429382,
+            0.9155442714691162,
+            -0.3196452856063843,
+            2.3199241161346436,
+            0.0680166706442833,
+            1.0
+          ]
+        ],
+        "commitment": "hypothetical_prior_prediction_not_executed",
+        "gripper_projection": "native_clamp_round_without_controller_deadband"
+      },
+      "eager_vs_saved_live": {
+        "all_actions_max_absolute_difference": 0.0,
+        "prefix10_grasp_mean_mm": 0.0,
+        "prefix10_grasp_max_mm": 0.0,
+        "full50_grasp_mean_mm": 0.0,
+        "full50_grasp_max_mm": 0.0,
+        "prefix10_gripper_mean_fraction": 0.0,
+        "prefix10_gripper_max_fraction": 0.0,
+        "full50_gripper_max_fraction": 0.0
+      },
+      "rtc_without_prefix_vs_eager": {
+        "all_actions_max_absolute_difference": 0.0,
+        "prefix10_grasp_mean_mm": 0.0,
+        "prefix10_grasp_max_mm": 0.0,
+        "full50_grasp_mean_mm": 0.0,
+        "full50_grasp_max_mm": 0.0,
+        "prefix10_gripper_mean_fraction": 0.0,
+        "prefix10_gripper_max_fraction": 0.0,
+        "full50_gripper_max_fraction": 0.0
+      },
+      "rtc_with_prefix_vs_eager": {
+        "all_actions_max_absolute_difference": 0.0072776079177856445,
+        "prefix10_grasp_mean_mm": 0.200452955915233,
+        "prefix10_grasp_max_mm": 0.44076549774487506,
+        "full50_grasp_mean_mm": 1.6008644543008546,
+        "full50_grasp_max_mm": 4.425325021444204,
+        "prefix10_gripper_mean_fraction": 0.0033700883388519285,
+        "prefix10_gripper_max_fraction": 0.006554007530212402,
+        "full50_gripper_max_fraction": 0.0072776079177856445
+      },
+      "reference_inference_delay_steps": 4,
+      "rtc_local_delay_steps_lower_bound": 5,
+      "conditioned_prefix_fit": {
+        "prefix_length": 6,
+        "hard_weight_steps": 4,
+        "joint_max_difference_deg": 0.2461941686331096,
+        "gripper_max_difference_pp": 0.17184019088745117,
+        "hard_weight_joint_max_difference_deg": 0.18910061736097303,
+        "hard_weight_gripper_max_difference_pp": 0.17184019088745117
+      }
+    },
+    {
+      "index": 3,
+      "prefix": {
+        "previous_request_id": "df3ca7bf3a19464d807ed8d67fc74065",
+        "current_request_id": "744ffe9d9f6c4a929a699e4dbff85d68",
+        "source_interval_s": 0.5994077619980089,
+        "nominal_past_steps": 3,
+        "retained_steps": 7,
+        "first_retained_time_minus_current_source_s": 0.06725890466865769,
+        "absolute_actions": [
+          [
+            1.1468839645385742,
+            -0.529676079750061,
+            0.9112083911895752,
+            -0.3170264959335327,
+            2.318181276321411,
+            0.06782307475805283,
+            1.0
+          ],
+          [
+            1.1464275121688843,
+            -0.5289139151573181,
+            0.9133667945861816,
+            -0.316305011510849,
+            2.317030906677246,
+            0.06786800920963287,
+            1.0
+          ],
+          [
+            1.146430253982544,
+            -0.5289369225502014,
+            0.9112351536750793,
+            -0.31706395745277405,
+            2.3179075717926025,
+            0.06790582835674286,
+            1.0
+          ],
+          [
+            1.1461280584335327,
+            -0.5287014245986938,
+            0.9118319749832153,
+            -0.31570202112197876,
+            2.317966938018799,
+            0.06793449074029922,
+            0.99
+          ],
+          [
+            1.14629328250885,
+            -0.5292425751686096,
+            0.9109942317008972,
+            -0.3159174621105194,
+            2.3178439140319824,
+            0.06788612902164459,
+            1.0
+          ],
+          [
+            1.1463640928268433,
+            -0.5294701457023621,
+            0.9106460809707642,
+            -0.31619134545326233,
+            2.3179190158843994,
+            0.06784355640411377,
+            1.0
+          ],
+          [
+            1.146044373512268,
+            -0.5286714434623718,
+            0.9109178781509399,
+            -0.31540966033935547,
+            2.317704916000366,
+            0.06776563823223114,
+            0.99
+          ]
+        ],
+        "commitment": "hypothetical_prior_prediction_not_executed",
+        "gripper_projection": "native_clamp_round_without_controller_deadband"
+      },
+      "eager_vs_saved_live": {
+        "all_actions_max_absolute_difference": 0.0,
+        "prefix10_grasp_mean_mm": 0.0,
+        "prefix10_grasp_max_mm": 0.0,
+        "full50_grasp_mean_mm": 0.0,
+        "full50_grasp_max_mm": 0.0,
+        "prefix10_gripper_mean_fraction": 0.0,
+        "prefix10_gripper_max_fraction": 0.0,
+        "full50_gripper_max_fraction": 0.0
+      },
+      "rtc_without_prefix_vs_eager": {
+        "all_actions_max_absolute_difference": 0.0,
+        "prefix10_grasp_mean_mm": 0.0,
+        "prefix10_grasp_max_mm": 0.0,
+        "full50_grasp_mean_mm": 0.0,
+        "full50_grasp_max_mm": 0.0,
+        "prefix10_gripper_mean_fraction": 0.0,
+        "prefix10_gripper_max_fraction": 0.0,
+        "full50_gripper_max_fraction": 0.0
+      },
+      "rtc_with_prefix_vs_eager": {
+        "all_actions_max_absolute_difference": 0.006220459938049316,
+        "prefix10_grasp_mean_mm": 0.2643411548257312,
+        "prefix10_grasp_max_mm": 0.4290468188336373,
+        "full50_grasp_mean_mm": 1.355057094864205,
+        "full50_grasp_max_mm": 3.599214732419999,
+        "prefix10_gripper_mean_fraction": 0.002779752016067505,
+        "prefix10_gripper_max_fraction": 0.0036656856536865234,
+        "full50_gripper_max_fraction": 0.005549132823944092
+      },
+      "reference_inference_delay_steps": 4,
+      "rtc_local_delay_steps_lower_bound": 5,
+      "conditioned_prefix_fit": {
+        "prefix_length": 7,
+        "hard_weight_steps": 4,
+        "joint_max_difference_deg": 0.12547057505313425,
+        "gripper_max_difference_pp": 0.9176621437072763,
+        "hard_weight_joint_max_difference_deg": 0.12547057505313425,
+        "hard_weight_gripper_max_difference_pp": 0.9176621437072763
+      }
+    },
+    {
+      "index": 4,
+      "prefix": {
+        "previous_request_id": "744ffe9d9f6c4a929a699e4dbff85d68",
+        "current_request_id": "17142dd4acae4e869cf66facfa6f68fb",
+        "source_interval_s": 0.7100712449973798,
+        "nominal_past_steps": 4,
+        "retained_steps": 6,
+        "first_retained_time_minus_current_source_s": 0.12326208833595353,
+        "absolute_actions": [
+          [
+            1.146449089050293,
+            -0.5278851389884949,
+            0.9093797206878662,
+            -0.3169449269771576,
+            2.3181514739990234,
+            0.0679331049323082,
+            1.0
+          ],
+          [
+            1.1467108726501465,
+            -0.5286262035369873,
+            0.910419225692749,
+            -0.3166898488998413,
+            2.3180665969848633,
+            0.06793580204248428,
+            1.0
+          ],
+          [
+            1.1470537185668945,
+            -0.5285388231277466,
+            0.9110272526741028,
+            -0.3169625401496887,
+            2.318439245223999,
+            0.06799474358558655,
+            1.0
+          ],
+          [
+            1.14687180519104,
+            -0.5280937552452087,
+            0.9111911058425903,
+            -0.3172202408313751,
+            2.3185300827026367,
+            0.06793609261512756,
+            1.0
+          ],
+          [
+            1.1475032567977905,
+            -0.5283716917037964,
+            0.9119771718978882,
+            -0.3166985511779785,
+            2.3184890747070312,
+            0.06783685833215714,
+            1.0
+          ],
+          [
+            1.147964358329773,
+            -0.5289280414581299,
+            0.9116555452346802,
+            -0.31786707043647766,
+            2.3190011978149414,
+            0.06808951497077942,
+            1.0
+          ]
+        ],
+        "commitment": "hypothetical_prior_prediction_not_executed",
+        "gripper_projection": "native_clamp_round_without_controller_deadband"
+      },
+      "eager_vs_saved_live": {
+        "all_actions_max_absolute_difference": 0.0,
+        "prefix10_grasp_mean_mm": 0.0,
+        "prefix10_grasp_max_mm": 0.0,
+        "full50_grasp_mean_mm": 0.0,
+        "full50_grasp_max_mm": 0.0,
+        "prefix10_gripper_mean_fraction": 0.0,
+        "prefix10_gripper_max_fraction": 0.0,
+        "full50_gripper_max_fraction": 0.0
+      },
+      "rtc_without_prefix_vs_eager": {
+        "all_actions_max_absolute_difference": 0.0,
+        "prefix10_grasp_mean_mm": 0.0,
+        "prefix10_grasp_max_mm": 0.0,
+        "full50_grasp_mean_mm": 0.0,
+        "full50_grasp_max_mm": 0.0,
+        "prefix10_gripper_mean_fraction": 0.0,
+        "prefix10_gripper_max_fraction": 0.0,
+        "full50_gripper_max_fraction": 0.0
+      },
+      "rtc_with_prefix_vs_eager": {
+        "all_actions_max_absolute_difference": 0.007471323013305664,
+        "prefix10_grasp_mean_mm": 0.2461150503742877,
+        "prefix10_grasp_max_mm": 0.3831012562298318,
+        "full50_grasp_mean_mm": 1.2055568669545573,
+        "full50_grasp_max_mm": 2.8775556751646363,
+        "prefix10_gripper_mean_fraction": 0.004535406827926636,
+        "prefix10_gripper_max_fraction": 0.007471323013305664,
+        "full50_gripper_max_fraction": 0.007471323013305664
+      },
+      "reference_inference_delay_steps": 4,
+      "rtc_local_delay_steps_lower_bound": 5,
+      "conditioned_prefix_fit": {
+        "prefix_length": 6,
+        "hard_weight_steps": 4,
+        "joint_max_difference_deg": 0.12134172569986153,
+        "gripper_max_difference_pp": 0.21272897720336914,
+        "hard_weight_joint_max_difference_deg": 0.12134172569986153,
+        "hard_weight_gripper_max_difference_pp": 0.21272897720336914
+      }
+    }
+  ],
+  "runs": "/home/data4/hts/demo1/fr5-learning/diagnostics/jev-pi05-history5000-rtc-benchmark-20261121-v1/runs.jsonl",
+  "robot_commands_sent": 0,
+  "physical_task_successes_confirmed": 0,
+  "limitations": [
+    "Prior prefixes are projected model predictions; no controller committed or executed them.",
+    "The nominal source-time grid is used here; execution requires actual controller consumption times.",
+    "Local timing excludes JPEG preprocessing, SSH and controller preflight.",
+    "The reference delay comes from eager live replies; RTC delay must be measured on the complete execution chain.",
+    "Gripper deadband and physical contact are not simulated.",
+    "Recorded input replay does not establish task success or resolve the current gripper fault."
+  ],
+  "source_report": "/home/data4/hts/demo1/fr5-learning/diagnostics/jev-pi05-history5000-rtc-benchmark-20261121-v1/summary.json"
+}

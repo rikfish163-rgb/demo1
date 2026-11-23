@@ -1,0 +1,439 @@
+{
+  "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-jev-history-balanced-base-20261121-v2/step-005000",
+  "source_index": 7,
+  "source_frame_range": [
+    279,
+    299
+  ],
+  "prediction_draws": 63,
+  "physical_attempts": 0,
+  "full_native_outputs": "/home/data4/hts/demo1/fr5-learning/diagnostics/jev-pi05-history5000-source7-cycle1-temporal-replay-20261122-v1/predictions.jsonl",
+  "prefixes": {
+    "3": {
+      "draws_with_opening_before_recorded_release": 6,
+      "points_with_opening_before_recorded_release": 18,
+      "raw_thresholds": {
+        "90": {
+          "draws_with_first_opening": 16,
+          "distinct_source_anchors": 6,
+          "draws_before_recorded_release": 6,
+          "predicted_height_minus_reference_mm": {
+            "count": 16,
+            "min": -0.8344856585759932,
+            "mean": -0.3978273594089187,
+            "median": -0.398539313906763,
+            "p95": 0.023712467476388173,
+            "max": 0.13250423570382985
+          },
+          "preceding_valid_source_height_minus_reference_mm": {
+            "count": 6,
+            "min": 0.045902448862041194,
+            "mean": 0.08560800999755458,
+            "median": 0.08560800999755458,
+            "p95": 0.12531357113306796,
+            "max": 0.12531357113306796
+          }
+        },
+        "98": {
+          "draws_with_first_opening": 16,
+          "distinct_source_anchors": 6,
+          "draws_before_recorded_release": 6,
+          "predicted_height_minus_reference_mm": {
+            "count": 16,
+            "min": -0.8344856585759932,
+            "mean": -0.3978273594089187,
+            "median": -0.398539313906763,
+            "p95": 0.023712467476388173,
+            "max": 0.13250423570382985
+          },
+          "preceding_valid_source_height_minus_reference_mm": {
+            "count": 6,
+            "min": 0.045902448862041194,
+            "mean": 0.08560800999755458,
+            "median": 0.08560800999755458,
+            "p95": 0.12531357113306796,
+            "max": 0.12531357113306796
+          }
+        }
+      },
+      "maximum_predicted_height_at_opening_mm": 0.24929189632710452,
+      "witness": {
+        "source_frame": 292,
+        "seed": 20261494,
+        "tick": {
+          "tick": 2,
+          "index": 1,
+          "raw_gripper_fraction": 1.001738429069519,
+          "raw_gripper_percent": 100.1738429069519,
+          "nominal_time_monotonic": 40804.705293481,
+          "seconds_from_release_command": -0.36187447200063616,
+          "inside_recorded_hold": false,
+          "recorded_source_phase_at_nominal_time": "return_before_release",
+          "within_execution_prefix": true,
+          "predicted_grasp_point_base_mm": [
+            -251.06492973844234,
+            -787.6504967544789,
+            93.2188778104638
+          ],
+          "reference_status": "stable_jaw_contact_proxy",
+          "predicted_grasp_vs_release_reference": {
+            "delta_xyz_mm": [
+              -0.3726952155513459,
+              -0.24903863033910056,
+              0.24572195992823254
+            ],
+            "distance_mm": 0.5111763342399678,
+            "height_along_table_normal_mm": 0.24929189632710452,
+            "base_z_difference_mm": 0.24572195992823254,
+            "lateral_to_table_normal_mm": 0.4462676272290513
+          },
+          "nearest_source_feedback": {
+            "available": true,
+            "frame_index": 295,
+            "robot_time_monotonic": 40804.735670234,
+            "robot_time_minus_nominal_s": 0.03037675299856346,
+            "camera_time_monotonic": 40804.734908117,
+            "gripper_feedback_valid": true,
+            "raw_gripper_position_percent": 78,
+            "gripper_motiondone": 2,
+            "jaw_contact_reported": true,
+            "robot_motion_done": 1,
+            "tcp_speed_mm_s": 0.9101356050703951,
+            "before_recorded_release_command": true,
+            "measured_grasp_vs_release_reference": {
+              "delta_xyz_mm": [
+                0.0048994982446970425,
+                -0.012004209609699501,
+                0.020246843423677774
+              ],
+              "distance_mm": 0.024042479074053807,
+              "height_along_table_normal_mm": 0.02014583636379198,
+              "base_z_difference_mm": 0.020246843423677774,
+              "lateral_to_table_normal_mm": 0.013121969258828189
+            }
+          },
+          "latest_preceding_source_feedback": {
+            "available": true,
+            "frame_index": 294,
+            "robot_time_monotonic": 40804.635653756,
+            "robot_time_minus_nominal_s": -0.06963972499943338,
+            "camera_time_monotonic": 40804.63489323,
+            "gripper_feedback_valid": true,
+            "raw_gripper_position_percent": 78,
+            "gripper_motiondone": 2,
+            "jaw_contact_reported": true,
+            "robot_motion_done": 1,
+            "tcp_speed_mm_s": 0.098345233424817,
+            "before_recorded_release_command": true,
+            "measured_grasp_vs_release_reference": {
+              "delta_xyz_mm": [
+                -0.005304694627483286,
+                -0.02162670933114441,
+                0.045916762018777035
+              ],
+              "distance_mm": 0.05103139598201938,
+              "height_along_table_normal_mm": 0.045902448862041194,
+              "base_z_difference_mm": 0.045916762018777035,
+              "lateral_to_table_normal_mm": 0.02229727706114264
+            }
+          },
+          "projected_integer_percent": 100,
+          "increase_over_anchor_measured_pp": 22.0,
+          "increase_over_anchor_last_command_pp": 24.0,
+          "last_move_gripper_at_nominal_time": {
+            "sequence": 6,
+            "issued_monotonic": 40786.087892669,
+            "command_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/command-0006.json",
+            "available": true,
+            "target_percent": 76.0,
+            "recorded_command_status": "completed"
+          }
+        }
+      }
+    },
+    "6": {
+      "draws_with_opening_before_recorded_release": 29,
+      "points_with_opening_before_recorded_release": 69,
+      "raw_thresholds": {
+        "90": {
+          "draws_with_first_opening": 45,
+          "distinct_source_anchors": 19,
+          "draws_before_recorded_release": 29,
+          "predicted_height_minus_reference_mm": {
+            "count": 45,
+            "min": -1.9571415919293156,
+            "mean": 2.9754511269444093,
+            "median": -0.012551455266092386,
+            "p95": 13.141190484708652,
+            "max": 14.385250581936647
+          },
+          "preceding_valid_source_height_minus_reference_mm": {
+            "count": 29,
+            "min": 0.02014583636379198,
+            "mean": 1.3406958798994315,
+            "median": 0.19923015130390398,
+            "p95": 6.238948575480572,
+            "max": 6.991862636715816
+          }
+        },
+        "98": {
+          "draws_with_first_opening": 43,
+          "distinct_source_anchors": 18,
+          "draws_before_recorded_release": 27,
+          "predicted_height_minus_reference_mm": {
+            "count": 43,
+            "min": -2.3061189167738987,
+            "mean": 2.547925968636342,
+            "median": -0.06630077463543264,
+            "p95": 12.939632741646488,
+            "max": 14.385250581936647
+          },
+          "preceding_valid_source_height_minus_reference_mm": {
+            "count": 27,
+            "min": 0.0,
+            "mean": 1.1729237738037033,
+            "median": 0.12531357113306796,
+            "p95": 5.1095774836277155,
+            "max": 6.991862636715816
+          }
+        }
+      },
+      "maximum_predicted_height_at_opening_mm": 14.385250581936647,
+      "witness": {
+        "source_frame": 282,
+        "seed": 20261493,
+        "tick": {
+          "tick": 6,
+          "index": 5,
+          "raw_gripper_fraction": 1.0006728172302246,
+          "raw_gripper_percent": 100.06728172302246,
+          "nominal_time_monotonic": 40803.705293481,
+          "seconds_from_release_command": -1.3618744720006362,
+          "inside_recorded_hold": false,
+          "recorded_source_phase_at_nominal_time": "return_before_release",
+          "within_execution_prefix": true,
+          "predicted_grasp_point_base_mm": [
+            -250.36922499118455,
+            -787.639530205277,
+            107.36417570133459
+          ],
+          "reference_status": "stable_jaw_contact_proxy",
+          "predicted_grasp_vs_release_reference": {
+            "delta_xyz_mm": [
+              0.32300953170644675,
+              -0.2380720811371475,
+              14.391019850799026
+            ],
+            "distance_mm": 14.396612998184045,
+            "height_along_table_normal_mm": 14.385250581936647,
+            "base_z_difference_mm": 14.391019850799026,
+            "lateral_to_table_normal_mm": 0.5718666928342576
+          },
+          "nearest_source_feedback": {
+            "available": true,
+            "frame_index": 289,
+            "robot_time_monotonic": 40803.735733431,
+            "robot_time_minus_nominal_s": 0.030439950001891702,
+            "camera_time_monotonic": 40803.734286381,
+            "gripper_feedback_valid": true,
+            "raw_gripper_position_percent": 78,
+            "gripper_motiondone": 2,
+            "jaw_contact_reported": true,
+            "robot_motion_done": 0,
+            "tcp_speed_mm_s": 10.69881540070368,
+            "before_recorded_release_command": true,
+            "measured_grasp_vs_release_reference": {
+              "delta_xyz_mm": [
+                0.003121798729779357,
+                0.005303173742845502,
+                4.078201396600875
+              ],
+              "distance_mm": 4.078206039487998,
+              "height_along_table_normal_mm": 4.077868948572445,
+              "base_z_difference_mm": 4.078201396600875,
+              "lateral_to_table_normal_mm": 0.05243413759226273
+            }
+          },
+          "latest_preceding_source_feedback": {
+            "available": true,
+            "frame_index": 288,
+            "robot_time_monotonic": 40803.635636476,
+            "robot_time_minus_nominal_s": -0.0696570049985894,
+            "camera_time_monotonic": 40803.634293967,
+            "gripper_feedback_valid": true,
+            "raw_gripper_position_percent": 78,
+            "gripper_motiondone": 2,
+            "jaw_contact_reported": true,
+            "robot_motion_done": 0,
+            "tcp_speed_mm_s": 8.544039680717601,
+            "before_recorded_release_command": true,
+            "measured_grasp_vs_release_reference": {
+              "delta_xyz_mm": [
+                -0.0001823146174615431,
+                -0.010341144058770624,
+                5.110003376376596
+              ],
+              "distance_mm": 5.110013843335386,
+              "height_along_table_normal_mm": 5.1095774836277155,
+              "base_z_difference_mm": 5.110003376376596,
+              "lateral_to_table_normal_mm": 0.06677887303591276
+            }
+          },
+          "projected_integer_percent": 100,
+          "increase_over_anchor_measured_pp": 22.0,
+          "increase_over_anchor_last_command_pp": 24.0,
+          "last_move_gripper_at_nominal_time": {
+            "sequence": 6,
+            "issued_monotonic": 40786.087892669,
+            "command_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/command-0006.json",
+            "available": true,
+            "target_percent": 76.0,
+            "recorded_command_status": "completed"
+          }
+        }
+      }
+    },
+    "10": {
+      "draws_with_opening_before_recorded_release": 39,
+      "points_with_opening_before_recorded_release": 158,
+      "raw_thresholds": {
+        "90": {
+          "draws_with_first_opening": 59,
+          "distinct_source_anchors": 21,
+          "draws_before_recorded_release": 39,
+          "predicted_height_minus_reference_mm": {
+            "count": 59,
+            "min": -2.1006822186422776,
+            "mean": 4.37467711552677,
+            "median": 1.4351717163670605,
+            "p95": 15.321633577518448,
+            "max": 16.37978667711204
+          },
+          "preceding_valid_source_height_minus_reference_mm": {
+            "count": 39,
+            "min": 0.02014583636379198,
+            "mean": 1.6572089893399864,
+            "median": 0.19923015130390398,
+            "p95": 6.991862636715816,
+            "max": 6.991862636715816
+          }
+        },
+        "98": {
+          "draws_with_first_opening": 58,
+          "distinct_source_anchors": 21,
+          "draws_before_recorded_release": 38,
+          "predicted_height_minus_reference_mm": {
+            "count": 58,
+            "min": -2.3061189167738987,
+            "mean": 4.164934621089051,
+            "median": 1.3086070142699429,
+            "p95": 15.248149596759278,
+            "max": 16.37978667711204
+          },
+          "preceding_valid_source_height_minus_reference_mm": {
+            "count": 38,
+            "min": 0.0,
+            "mean": 1.4648142204716041,
+            "median": 0.19923015130390398,
+            "p95": 5.391920256590928,
+            "max": 6.991862636715816
+          }
+        }
+      },
+      "maximum_predicted_height_at_opening_mm": 16.481371782499885,
+      "witness": {
+        "source_frame": 280,
+        "seed": 20261494,
+        "tick": {
+          "tick": 8,
+          "index": 7,
+          "raw_gripper_fraction": 0.953545331954956,
+          "raw_gripper_percent": 95.3545331954956,
+          "nominal_time_monotonic": 40803.705293481,
+          "seconds_from_release_command": -1.3618744720006362,
+          "inside_recorded_hold": false,
+          "recorded_source_phase_at_nominal_time": "return_before_release",
+          "within_execution_prefix": true,
+          "predicted_grasp_point_base_mm": [
+            -250.7511383440729,
+            -787.6342770581772,
+            109.45588895638487
+          ],
+          "reference_status": "stable_jaw_contact_proxy",
+          "predicted_grasp_vs_release_reference": {
+            "delta_xyz_mm": [
+              -0.058903821181900184,
+              -0.2328189340373683,
+              16.482733105849306
+            ],
+            "distance_mm": 16.48448255041258,
+            "height_along_table_normal_mm": 16.481371782499885,
+            "base_z_difference_mm": 16.482733105849306,
+            "lateral_to_table_normal_mm": 0.32023291816036953
+          },
+          "nearest_source_feedback": {
+            "available": true,
+            "frame_index": 289,
+            "robot_time_monotonic": 40803.735733431,
+            "robot_time_minus_nominal_s": 0.030439950001891702,
+            "camera_time_monotonic": 40803.734286381,
+            "gripper_feedback_valid": true,
+            "raw_gripper_position_percent": 78,
+            "gripper_motiondone": 2,
+            "jaw_contact_reported": true,
+            "robot_motion_done": 0,
+            "tcp_speed_mm_s": 10.69881540070368,
+            "before_recorded_release_command": true,
+            "measured_grasp_vs_release_reference": {
+              "delta_xyz_mm": [
+                0.003121798729779357,
+                0.005303173742845502,
+                4.078201396600875
+              ],
+              "distance_mm": 4.078206039487998,
+              "height_along_table_normal_mm": 4.077868948572445,
+              "base_z_difference_mm": 4.078201396600875,
+              "lateral_to_table_normal_mm": 0.05243413759226273
+            }
+          },
+          "latest_preceding_source_feedback": {
+            "available": true,
+            "frame_index": 288,
+            "robot_time_monotonic": 40803.635636476,
+            "robot_time_minus_nominal_s": -0.0696570049985894,
+            "camera_time_monotonic": 40803.634293967,
+            "gripper_feedback_valid": true,
+            "raw_gripper_position_percent": 78,
+            "gripper_motiondone": 2,
+            "jaw_contact_reported": true,
+            "robot_motion_done": 0,
+            "tcp_speed_mm_s": 8.544039680717601,
+            "before_recorded_release_command": true,
+            "measured_grasp_vs_release_reference": {
+              "delta_xyz_mm": [
+                -0.0001823146174615431,
+                -0.010341144058770624,
+                5.110003376376596
+              ],
+              "distance_mm": 5.110013843335386,
+              "height_along_table_normal_mm": 5.1095774836277155,
+              "base_z_difference_mm": 5.110003376376596,
+              "lateral_to_table_normal_mm": 0.06677887303591276
+            }
+          },
+          "projected_integer_percent": 95,
+          "increase_over_anchor_measured_pp": 17.0,
+          "increase_over_anchor_last_command_pp": 19.0,
+          "last_move_gripper_at_nominal_time": {
+            "sequence": 6,
+            "issued_monotonic": 40786.087892669,
+            "command_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/command-0006.json",
+            "available": true,
+            "target_percent": 76.0,
+            "recorded_command_status": "completed"
+          }
+        }
+      }
+    }
+  }
+}

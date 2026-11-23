@@ -1,0 +1,355 @@
+{
+  "state": {
+    "schema": "fr5-cup-shadow-v1",
+    "source": "live_readonly",
+    "robot_id": "J1",
+    "robot_ip": "192.168.58.2",
+    "captured_at_unix": 1792659213.7029848,
+    "robot": {
+      "stationary": true,
+      "fault_free": true,
+      "tcp_mm_deg": [
+        36.19104766845703,
+        -620.808837890625,
+        198.81472778320312,
+        97.2708969116211,
+        -16.45166015625,
+        -79.74516296386719
+      ],
+      "gripper_position_percent": 100
+    },
+    "camera": {
+      "available": true,
+      "serial": "CP1E54200015",
+      "capture_time_unix": 1792659213.5740836,
+      "age_s": 0.15195870399475098,
+      "source_image_size": {
+        "width": 1920,
+        "height": 1080
+      },
+      "expected_device_and_fresh": true
+    },
+    "facts": {
+      "task": "Grasp the upright gray cup with J1 using reusable skills selected mainly by Jev",
+      "grasp_completed": false,
+      "lift_completed": false,
+      "random_cup_localizer_validated": false,
+      "grasp_tcp_validated": false,
+      "previous_extrinsic_preserved": true,
+      "extrinsic_status_in_source_file": "provisional_from_pre_slip_samples_not_validated",
+      "extrinsic_independently_validated": false,
+      "pregrasp_scope": {
+        "status": "completed_and_stopped",
+        "completed_segments": 4,
+        "nominal_translation_mm": [
+          20,
+          0,
+          -60
+        ],
+        "selected_by": "Jev via Emrank",
+        "scope_consumed": true,
+        "evidence": "/home/dianrobot/demo1/fairino-review/cup-reuse-20261022-102342/approved-pregrasp-80mm-summary.json"
+      },
+      "current_subtask": "Determine whether the next task requires LLM strategy or geometry review"
+    },
+    "recent_outcomes": [
+      "SDK controlled entry, gripper opening and horizontal alignment completed; Jev was not used",
+      {
+        "status": "completed_and_stopped",
+        "completed_segments": 4,
+        "nominal_translation_mm": [
+          20,
+          0,
+          -60
+        ],
+        "selected_by": "Jev via Emrank",
+        "scope_consumed": true,
+        "evidence": "/home/dianrobot/demo1/fairino-review/cup-reuse-20261022-102342/approved-pregrasp-80mm-summary.json"
+      },
+      "No successful cup closure or lift has been recorded in this experiment"
+    ],
+    "retrieved_examples": [
+      {
+        "case_id": "j1-jev-bounded-pregrasp-20261022",
+        "matched_tags": [
+          "fr5",
+          "noncontact",
+          "pregrasp"
+        ],
+        "observed_outcome": {
+          "readonly_observation_completed": true,
+          "motion_segments_completed": 4,
+          "nominal_translation_mm": [
+            20,
+            0,
+            -60
+          ],
+          "actual_delta_tcp": [
+            20.004074096679688,
+            0.00213623046875,
+            -59.99845886230469,
+            5.340576171875e-05,
+            0.000263214111328125,
+            0.0003509521484375
+          ],
+          "all_start_and_stop_returns_zero": true,
+          "gripper_commands": 0,
+          "grasp_completed": false
+        },
+        "applicability": "Example of Jev selecting a single preapproved bounded noncontact segment after LLM scene review and deterministic checks, on this J1 setup. Similarity is context only.",
+        "limitations": [
+          "One supervised trajectory; four segments are not four independent grasp trials",
+          "A motion instance was offered alongside observe/review/hold options; this is not evidence of open-ended trajectory planning",
+          "LLM still reviewed every segment image",
+          "Grasp TCP and contact pose remain unverified",
+          "Consumed authorization and robot poses must never be reused as permission"
+        ],
+        "evidence": "/home/dianrobot/demo1/fairino-review/jev-collaboration-experiment",
+        "grants_execution_permission": false
+      }
+    ],
+    "candidates": {},
+    "llm_annotations": {
+      "annotator": "current_codex_chat",
+      "source_image": "/home/dianrobot/demo1/fairino-review/jev-collaboration-experiment/after-segment-04/color.jpg",
+      "previous_noncontact_scope_complete_and_consumed": true,
+      "next_subtask": "Establish a defensible cup contact pose before any closing or lifting",
+      "pending_sensing_refresh": false,
+      "fresh_rgbd_has_already_been_saved": true,
+      "strategy_or_geometry_review_needed": true,
+      "contact_geometry_evidence": {
+        "previous_candidate_cup_surface_z_mm": 123.13,
+        "current_visible_surface_upper_percentile_candidate_mm": 136.55,
+        "difference_is_not_a_calibrated_error_bound": true,
+        "visible_tool_sweep_predicts_overlap_if_descended_blindly": true,
+        "hidden_tool_geometry_and_handle_not_fully_modeled": true
+      },
+      "available_resolution": "LLM review and additional contact geometry evidence, not just a repeat metadata capture",
+      "physical_authorization": "No extra descent/closure/lift has been authorized under a reviewed plan"
+    }
+  },
+  "request": {
+    "model": "typesafe/jev-latest",
+    "state": {
+      "schema": "fr5-cup-shadow-v1",
+      "source": "live_readonly",
+      "robot_id": "J1",
+      "robot_ip": "192.168.58.2",
+      "captured_at_unix": 1792659213.7029848,
+      "robot": {
+        "stationary": true,
+        "fault_free": true,
+        "tcp_mm_deg": [
+          36.19104766845703,
+          -620.808837890625,
+          198.81472778320312,
+          97.2708969116211,
+          -16.45166015625,
+          -79.74516296386719
+        ],
+        "gripper_position_percent": 100
+      },
+      "camera": {
+        "available": true,
+        "serial": "CP1E54200015",
+        "capture_time_unix": 1792659213.5740836,
+        "age_s": 0.15195870399475098,
+        "source_image_size": {
+          "width": 1920,
+          "height": 1080
+        },
+        "expected_device_and_fresh": true
+      },
+      "facts": {
+        "task": "Grasp the upright gray cup with J1 using reusable skills selected mainly by Jev",
+        "grasp_completed": false,
+        "lift_completed": false,
+        "random_cup_localizer_validated": false,
+        "grasp_tcp_validated": false,
+        "previous_extrinsic_preserved": true,
+        "extrinsic_status_in_source_file": "provisional_from_pre_slip_samples_not_validated",
+        "extrinsic_independently_validated": false,
+        "pregrasp_scope": {
+          "status": "completed_and_stopped",
+          "completed_segments": 4,
+          "nominal_translation_mm": [
+            20,
+            0,
+            -60
+          ],
+          "selected_by": "Jev via Emrank",
+          "scope_consumed": true,
+          "evidence": "/home/dianrobot/demo1/fairino-review/cup-reuse-20261022-102342/approved-pregrasp-80mm-summary.json"
+        },
+        "current_subtask": "Determine whether the next task requires LLM strategy or geometry review"
+      },
+      "recent_outcomes": [
+        "SDK controlled entry, gripper opening and horizontal alignment completed; Jev was not used",
+        {
+          "status": "completed_and_stopped",
+          "completed_segments": 4,
+          "nominal_translation_mm": [
+            20,
+            0,
+            -60
+          ],
+          "selected_by": "Jev via Emrank",
+          "scope_consumed": true,
+          "evidence": "/home/dianrobot/demo1/fairino-review/cup-reuse-20261022-102342/approved-pregrasp-80mm-summary.json"
+        },
+        "No successful cup closure or lift has been recorded in this experiment"
+      ],
+      "retrieved_examples": [
+        {
+          "case_id": "j1-jev-bounded-pregrasp-20261022",
+          "matched_tags": [
+            "fr5",
+            "noncontact",
+            "pregrasp"
+          ],
+          "observed_outcome": {
+            "readonly_observation_completed": true,
+            "motion_segments_completed": 4,
+            "nominal_translation_mm": [
+              20,
+              0,
+              -60
+            ],
+            "actual_delta_tcp": [
+              20.004074096679688,
+              0.00213623046875,
+              -59.99845886230469,
+              5.340576171875e-05,
+              0.000263214111328125,
+              0.0003509521484375
+            ],
+            "all_start_and_stop_returns_zero": true,
+            "gripper_commands": 0,
+            "grasp_completed": false
+          },
+          "applicability": "Example of Jev selecting a single preapproved bounded noncontact segment after LLM scene review and deterministic checks, on this J1 setup. Similarity is context only.",
+          "limitations": [
+            "One supervised trajectory; four segments are not four independent grasp trials",
+            "A motion instance was offered alongside observe/review/hold options; this is not evidence of open-ended trajectory planning",
+            "LLM still reviewed every segment image",
+            "Grasp TCP and contact pose remain unverified",
+            "Consumed authorization and robot poses must never be reused as permission"
+          ],
+          "evidence": "/home/dianrobot/demo1/fairino-review/jev-collaboration-experiment",
+          "grants_execution_permission": false
+        }
+      ],
+      "candidates": {},
+      "llm_annotations": {
+        "annotator": "current_codex_chat",
+        "source_image": "/home/dianrobot/demo1/fairino-review/jev-collaboration-experiment/after-segment-04/color.jpg",
+        "previous_noncontact_scope_complete_and_consumed": true,
+        "next_subtask": "Establish a defensible cup contact pose before any closing or lifting",
+        "pending_sensing_refresh": false,
+        "fresh_rgbd_has_already_been_saved": true,
+        "strategy_or_geometry_review_needed": true,
+        "contact_geometry_evidence": {
+          "previous_candidate_cup_surface_z_mm": 123.13,
+          "current_visible_surface_upper_percentile_candidate_mm": 136.55,
+          "difference_is_not_a_calibrated_error_bound": true,
+          "visible_tool_sweep_predicts_overlap_if_descended_blindly": true,
+          "hidden_tool_geometry_and_handle_not_fully_modeled": true
+        },
+        "available_resolution": "LLM review and additional contact geometry evidence, not just a repeat metadata capture",
+        "physical_authorization": "No extra descent/closure/lift has been authorized under a reviewed plan"
+      }
+    },
+    "questions": {
+      "next_skill": {
+        "type": "choice",
+        "instructions": "Choose the next task-level skill for grasping the upright cup. Use only the recorded facts, recent outcomes and retrieved examples. Missing evidence is unknown. Choose observe_scene when sensing can resolve it; request_astra when the skill library or known strategy cannot resolve it. Do not calculate coordinates, issue joint commands, or assume task success. The listed motion candidates have been filtered by deterministic code.",
+        "criteria": {
+          "observe_scene": "Refresh cup/tool localization and evidence before any physical action.",
+          "request_astra": "Escalate an unsupported, novel, ambiguous or repeatedly failing situation to Astra.",
+          "hold": "Wait with no new action while a prerequisite or observation is unavailable."
+        }
+      }
+    }
+  },
+  "request_sha256": "087bd10be299f55735fffae2685375b427f87dc05dffc88e093f686c247c7ce3",
+  "gate_table_before_inference": {
+    "observe_scene": {
+      "policy_version": "risk-evidence-v1",
+      "risk": "readonly",
+      "min_confidence": 0.5,
+      "min_probability": 0.65,
+      "min_margin": 0.15,
+      "evidence_complete": true,
+      "matched_successes": 0,
+      "recent_failures": 0,
+      "empirically_calibrated": false
+    },
+    "request_astra": {
+      "policy_version": "risk-evidence-v1",
+      "risk": "readonly",
+      "min_confidence": 0.5,
+      "min_probability": 0.65,
+      "min_margin": 0.15,
+      "evidence_complete": true,
+      "matched_successes": 0,
+      "recent_failures": 0,
+      "empirically_calibrated": false
+    },
+    "hold": {
+      "policy_version": "risk-evidence-v1",
+      "risk": "readonly",
+      "min_confidence": 0.5,
+      "min_probability": 0.65,
+      "min_margin": 0.15,
+      "evidence_complete": true,
+      "matched_successes": 0,
+      "recent_failures": 0,
+      "empirically_calibrated": false
+    }
+  },
+  "hard_checks": {},
+  "physical_commands_sent_by_decision": 0,
+  "started_at_unix": 1792659213.7263818,
+  "status": "decision_received",
+  "response": {
+    "model": "typesafe/jev-latest",
+    "answers": {
+      "next_skill": {
+        "type": "choice",
+        "choice": "observe_scene",
+        "confidence": 0.46,
+        "probabilities": {
+          "hold": 0.09,
+          "observe_scene": 0.64,
+          "request_astra": 0.27
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 1909,
+      "output_tokens": 43
+    }
+  },
+  "latency_ms": 1884.1269419935998,
+  "gate": {
+    "choice": "observe_scene",
+    "probability": 0.64,
+    "confidence": 0.46,
+    "margin": 0.37,
+    "policy": {
+      "policy_version": "risk-evidence-v1",
+      "risk": "readonly",
+      "min_confidence": 0.5,
+      "min_probability": 0.65,
+      "min_margin": 0.15,
+      "evidence_complete": true,
+      "matched_successes": 0,
+      "recent_failures": 0,
+      "empirically_calibrated": false
+    },
+    "physical_authorization_granted_by_policy": false,
+    "route": "needs_llm",
+    "reason": "Decision below the predeclared risk gate"
+  },
+  "finished_at_unix": 1792659215.6110935
+}

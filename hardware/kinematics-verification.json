@@ -1,0 +1,114 @@
+{
+  "source_url": "https://github.com/FAIR-INNOVATION/frcobot_ros/blob/master/frcobot_description/urdf/fr5_robot.urdf",
+  "source_git_blob_sha": "45914caa100ede428d94fac5eb2acd180a7a69e3",
+  "comparison": "Read-only controller forward kinematics vs vendor model, including varied attitudes",
+  "assumed_wrist_frame_to_flange_translation_mm": [
+    0,
+    0,
+    102
+  ],
+  "assumed_wrist_frame_to_flange_rpy_deg": [
+    0,
+    0,
+    -130
+  ],
+  "checks": [
+    {
+      "joints": [
+        35.646392822265625,
+        -93.52998352050781,
+        124.64674377441406,
+        -23.531410217285156,
+        113.13981628417969,
+        19.574155807495117
+      ],
+      "world_position_residual_mm": [
+        1.9394390408702975,
+        0.4236186492231582,
+        -2.757218894465666
+      ],
+      "rotation_residual_deg": 0.0
+    },
+    {
+      "joints": [
+        35.646392822265625,
+        -88.52998352050781,
+        124.64674377441406,
+        -23.531410217285156,
+        113.13981628417969,
+        19.574155807495117
+      ],
+      "world_position_residual_mm": [
+        1.9165855478025833,
+        0.40724899865944053,
+        -2.5992772865632503
+      ],
+      "rotation_residual_deg": 0.0
+    },
+    {
+      "joints": [
+        35.646392822265625,
+        -93.52998352050781,
+        124.64674377441406,
+        -3.5314102172851562,
+        113.13981628417969,
+        19.574155807495117
+      ],
+      "world_position_residual_mm": [
+        1.7826031771015778,
+        0.311148377314737,
+        -2.1483646102389855
+      ],
+      "rotation_residual_deg": 0.0
+    },
+    {
+      "joints": [
+        35.646392822265625,
+        -93.52998352050781,
+        124.64674377441406,
+        -23.531410217285156,
+        93.13981628417969,
+        19.574155807495117
+      ],
+      "world_position_residual_mm": [
+        1.6724218134663715,
+        1.064496121594516,
+        -2.7363970728356435
+      ],
+      "rotation_residual_deg": 0.0
+    },
+    {
+      "joints": [
+        35.646392822265625,
+        -93.52998352050781,
+        124.64674377441406,
+        -23.531410217285156,
+        113.13981628417969,
+        39.57415580749512
+      ],
+      "world_position_residual_mm": [
+        1.9394390408702975,
+        0.4236186492231582,
+        -2.757218894465666
+      ],
+      "rotation_residual_deg": 0.0
+    },
+    {
+      "joints": [
+        0.0,
+        -90.0,
+        90.0,
+        0.0,
+        90.0,
+        0.0
+      ],
+      "world_position_residual_mm": [
+        1.9999035954928104,
+        -0.00010354936628687028,
+        -3.0000214260946905
+      ],
+      "rotation_residual_deg": 0.0
+    }
+  ],
+  "robot_motion_commands_sent": 0
+}

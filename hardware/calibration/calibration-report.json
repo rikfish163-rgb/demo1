@@ -1,0 +1,399 @@
+{
+  "status": "current_session_recalculation_complete",
+  "created_unix": 1792944115.843145,
+  "elapsed_seconds": 263.6722071170807,
+  "primary_model": "Current single-mount session only, factory RGB intrinsics, linear reprojection refinement. Archived data is comparison only.",
+  "square_mm": 24.25,
+  "current_pose_count": 10,
+  "fit_pose_count": 7,
+  "heldout_ids": [
+    4,
+    8,
+    10
+  ],
+  "new_untouched_holdout_ids": [
+    8,
+    10
+  ],
+  "rotation_singular_values_deg": [
+    52.65867181636727,
+    40.34915540764881,
+    5.785971946956908
+  ],
+  "manifest": [
+    {
+      "path": "/home/dianrobot/demo1/fairino-review/handeye-quick-1792943357/samples/sample-001/sample.json",
+      "sha256": "c9c8e3b4d818d1efa01d7bd88ae966e9276d2245957812d8b75df0826872f4dd",
+      "image_sha256": "c5666addb48d5b85f0de28d0a6c008987ba3915787a9cab76aa6e0fa9ef99625",
+      "split": "fit",
+      "recorded_square_mm": 24.25
+    },
+    {
+      "path": "/home/dianrobot/demo1/fairino-review/handeye-quick-1792943357/samples/sample-002/sample.json",
+      "sha256": "b79d172cb6b4dcc2ef40027cfc05411e880ebf495ab9ef2b8aa0efdf8d3a5d0e",
+      "image_sha256": "7ab77bc982774567ef87846c5856705cdaf4a866d7fbeff3318b001d8a9ba11a",
+      "split": "fit",
+      "recorded_square_mm": 24.25
+    },
+    {
+      "path": "/home/dianrobot/demo1/fairino-review/handeye-quick-1792943357/samples/sample-003/sample.json",
+      "sha256": "d0d66d7ff787be8f39aee018b5ec95e5be3699d1b925bf46d5d7c4abb3976b62",
+      "image_sha256": "c0e16b4f340130f9b831d2d185577452f003832d55da070289d554fe5afb0de2",
+      "split": "fit",
+      "recorded_square_mm": 24.25
+    },
+    {
+      "path": "/home/dianrobot/demo1/fairino-review/handeye-quick-1792943357/samples/sample-004/sample.json",
+      "sha256": "bbf92a3444015de389caada3893e52357696fc649f26d66cbe9f98bc67168e1b",
+      "image_sha256": "4fe113f80407388842ba0bdfd5ddb503d6d489514028b69e9a9e6c718b91f1e3",
+      "split": "held_out",
+      "recorded_square_mm": 24.25
+    },
+    {
+      "path": "/home/dianrobot/demo1/fairino-review/handeye-quick-1792943357/samples/sample-005/sample.json",
+      "sha256": "9984ed2882c93314bc567ad332fffd31ccf5edb0b79c1d69047610cff7552e52",
+      "image_sha256": "ad52a8ba7ece8ec14f83c4d5c2a2de5afbdd819ee26a7e2abbe3c5bce3940110",
+      "split": "fit",
+      "recorded_square_mm": 24.25
+    },
+    {
+      "path": "/home/dianrobot/demo1/fairino-review/handeye-quick-1792943357/samples/sample-006/sample.json",
+      "sha256": "db525b806bf70085a5cd0d0c4f9fff99b0976beaf59a82dad2f4c5dd6559a84f",
+      "image_sha256": "1f4ae24a3fdcc22d66d544deaafa1781b6ae4c178fe3db6f9848b05c45705351",
+      "split": "fit",
+      "recorded_square_mm": 24.25
+    },
+    {
+      "path": "/home/dianrobot/demo1/fairino-review/handeye-quick-1792943357/samples/sample-007/sample.json",
+      "sha256": "b80efe90f804c9822d3981f91d293904794ff70e6f856422c309267fd895af2a",
+      "image_sha256": "840e708d61e55dad2489cad3fee132415b372458e5e2c300e6fdab2ade8360ab",
+      "split": "fit",
+      "recorded_square_mm": 24.25
+    },
+    {
+      "path": "/home/dianrobot/demo1/fairino-review/handeye-quick-1792943357/samples/sample-008/sample.json",
+      "sha256": "e172b9979a3fa537e0c8756ef7acd365253549f260cd1dad227e40dc4926c784",
+      "image_sha256": "2275c67cd7bca05f0ca5bfe464521a22268d9756af9265bb9dddbad798168b52",
+      "split": "held_out",
+      "recorded_square_mm": 24.25
+    },
+    {
+      "path": "/home/dianrobot/demo1/fairino-review/handeye-quick-1792943357/samples/sample-009/sample.json",
+      "sha256": "5a71858d6a580229a5e131946e5b6784901ee6dfadcfb4283a5f7b734c62bbbd",
+      "image_sha256": "a35125cdbd07eeeee96619d339ea64c292d7c84d8f9f2085d027b713cc6fe990",
+      "split": "fit",
+      "recorded_square_mm": 24.25
+    },
+    {
+      "path": "/home/dianrobot/demo1/fairino-review/handeye-quick-1792943357/samples/sample-010/sample.json",
+      "sha256": "f0b778fce3ee779810468765ac8c2a30d7a0ea6c8cfea9000f437138a44dbf6b",
+      "image_sha256": "18a39ede2b4c638cd477455db4a11edd4ff7362d13804c16e75368180fa4e707",
+      "split": "held_out",
+      "recorded_square_mm": 24.25
+    }
+  ],
+  "result": {
+    "K": [
+      [
+        1034.244140625,
+        0.0,
+        968.01708984375
+      ],
+      [
+        0.0,
+        1034.731689453125,
+        533.7714233398438
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "D": [
+      0.005178163293749094,
+      -0.04317966476082802,
+      -0.0006754357018508017,
+      0.0009328450541943312,
+      0.029671844094991684,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "base_from_color_camera_mm": [
+      [
+        -0.9998776492192564,
+        0.01424961412396987,
+        0.006452525791632864,
+        2.542558942109179
+      ],
+      [
+        0.01405765362073402,
+        0.9994841185863763,
+        -0.028876964319231372,
+        -902.9708377628368
+      ],
+      [
+        -0.006860682652126726,
+        -0.028782723827543783,
+        -0.9995621470637102,
+        850.0103056886765
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "color_camera_from_base_mm": [
+      [
+        -0.9998776492192561,
+        0.014057653620734018,
+        -0.006860682652126725,
+        21.067550083298734
+      ],
+      [
+        0.014249614123969865,
+        0.9994841185863761,
+        -0.028782723827543776,
+        926.9343932859812
+      ],
+      [
+        0.006452525791632864,
+        -0.02887696431923137,
+        -0.9995621470637102,
+        823.5466635899195
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "groups": [
+      {
+        "flange_from_board_mm": [
+          [
+            0.9991962474744367,
+            -0.038599810459787894,
+            0.010812662274972625,
+            -78.7997703204607
+          ],
+          [
+            -0.035572110900892885,
+            -0.9781712991825511,
+            -0.20473283659827177,
+            73.74874365513551
+          ],
+          [
+            0.01847928459272015,
+            0.20418365284221093,
+            -0.9787581682688287,
+            162.16757976741408
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "fit_rotation_pair_mismatch_max_deg": 0.1884952604322052,
+        "samples": [
+          {
+            "sample_id": 1,
+            "split": "fit",
+            "point_rms_mm": 1.728827827730765,
+            "point_max_mm": 2.375625041310745,
+            "rotation_error_deg": 0.4279153794732714,
+            "predicted_pixel_rms": 1.5759449849329386
+          },
+          {
+            "sample_id": 2,
+            "split": "fit",
+            "point_rms_mm": 0.5429028501831661,
+            "point_max_mm": 0.7681183067168896,
+            "rotation_error_deg": 0.3826767718588383,
+            "predicted_pixel_rms": 1.182072839109145
+          },
+          {
+            "sample_id": 3,
+            "split": "fit",
+            "point_rms_mm": 0.6267233673096315,
+            "point_max_mm": 0.8017482949543726,
+            "rotation_error_deg": 0.14819664194660792,
+            "predicted_pixel_rms": 0.8157363183319083
+          },
+          {
+            "sample_id": 4,
+            "split": "held_out",
+            "point_rms_mm": 1.2594155463373602,
+            "point_max_mm": 1.4948741810066681,
+            "rotation_error_deg": 0.13121043079216343,
+            "predicted_pixel_rms": 1.2317327477256226
+          },
+          {
+            "sample_id": 5,
+            "split": "fit",
+            "point_rms_mm": 1.4934079598998833,
+            "point_max_mm": 1.5952010530847038,
+            "rotation_error_deg": 0.08003016812643224,
+            "predicted_pixel_rms": 0.9822625854225291
+          },
+          {
+            "sample_id": 6,
+            "split": "fit",
+            "point_rms_mm": 1.8016705692696326,
+            "point_max_mm": 2.3749754229186077,
+            "rotation_error_deg": 0.34015601626477865,
+            "predicted_pixel_rms": 1.1013096592902625
+          },
+          {
+            "sample_id": 7,
+            "split": "fit",
+            "point_rms_mm": 1.3558958299231396,
+            "point_max_mm": 1.6271709236295233,
+            "rotation_error_deg": 0.15140699926606307,
+            "predicted_pixel_rms": 0.8633474003554168
+          },
+          {
+            "sample_id": 8,
+            "split": "held_out",
+            "point_rms_mm": 0.9919338467810804,
+            "point_max_mm": 1.1753092903162379,
+            "rotation_error_deg": 0.15736474114217305,
+            "predicted_pixel_rms": 1.1674230626649562
+          },
+          {
+            "sample_id": 9,
+            "split": "fit",
+            "point_rms_mm": 1.776836057830652,
+            "point_max_mm": 1.8989044560111925,
+            "rotation_error_deg": 0.09848344068542841,
+            "predicted_pixel_rms": 0.8178427406582552
+          },
+          {
+            "sample_id": 10,
+            "split": "held_out",
+            "point_rms_mm": 2.230045471244075,
+            "point_max_mm": 2.3466028465208617,
+            "rotation_error_deg": 0.07276757915970367,
+            "predicted_pixel_rms": 0.9785263433001661
+          }
+        ]
+      }
+    ],
+    "heldout": [
+      {
+        "group_index": 0,
+        "sample_id": 4,
+        "split": "held_out",
+        "point_rms_mm": 1.2594155463373602,
+        "point_max_mm": 1.4948741810066681,
+        "rotation_error_deg": 0.13121043079216343,
+        "predicted_pixel_rms": 1.2317327477256226
+      },
+      {
+        "group_index": 0,
+        "sample_id": 8,
+        "split": "held_out",
+        "point_rms_mm": 0.9919338467810804,
+        "point_max_mm": 1.1753092903162379,
+        "rotation_error_deg": 0.15736474114217305,
+        "predicted_pixel_rms": 1.1674230626649562
+      },
+      {
+        "group_index": 0,
+        "sample_id": 10,
+        "split": "held_out",
+        "point_rms_mm": 2.230045471244075,
+        "point_max_mm": 2.3466028465208617,
+        "rotation_error_deg": 0.07276757915970367,
+        "predicted_pixel_rms": 0.9785263433001661
+      }
+    ],
+    "optimizer_success": true,
+    "optimizer_message": "Both `ftol` and `xtol` termination conditions are satisfied.",
+    "training_pixel_rms": 1.0782447885373299,
+    "heldout_rms_mm": 1.5856820907275573,
+    "heldout_max_point_mm": 2.3466028465208617,
+    "heldout_max_pose_rms_mm": 2.230045471244075,
+    "heldout_geometry_pass": true,
+    "jacobian_rank": 12,
+    "parameter_count": 12,
+    "jacobian_singular_values": [
+      24851.66435142319,
+      14772.166079505998,
+      2739.372582591717,
+      1393.8121314756754,
+      1052.583141200152,
+      444.5780568411904,
+      7.115824490020698,
+      6.510298494824835,
+      6.000232462576955,
+      2.698902231678546,
+      0.8643328627912257,
+      0.734357998242432
+    ]
+  },
+  "same_new_holdout_comparison": {
+    "frozen_previous_on_new_holdouts": {
+      "rms_mm": 4.214804028001369,
+      "max_point_mm": 5.293614020141089,
+      "poses": [
+        {
+          "sample_id": 8,
+          "point_rms_mm": 3.032053500464574,
+          "point_max_mm": 3.354302393966314,
+          "rotation_error_deg": 0.218813562999118
+        },
+        {
+          "sample_id": 10,
+          "point_rms_mm": 5.131841536839739,
+          "point_max_mm": 5.293614020141089,
+          "rotation_error_deg": 0.14021302256460924
+        }
+      ]
+    },
+    "new_on_new_holdouts": {
+      "rms_mm": 1.7258382832997592,
+      "max_point_mm": 2.3466028465208617,
+      "poses": [
+        {
+          "group_index": 0,
+          "sample_id": 8,
+          "split": "held_out",
+          "point_rms_mm": 0.9919338467810804,
+          "point_max_mm": 1.1753092903162379,
+          "rotation_error_deg": 0.15736474114217305,
+          "predicted_pixel_rms": 1.1674230626649562
+        },
+        {
+          "group_index": 0,
+          "sample_id": 10,
+          "split": "held_out",
+          "point_rms_mm": 2.230045471244075,
+          "point_max_mm": 2.3466028465208617,
+          "rotation_error_deg": 0.07276757915970367,
+          "predicted_pixel_rms": 0.9785263433001661
+        }
+      ]
+    }
+  },
+  "validation_limits": {
+    "max_per_pose_rms_mm": 3.0,
+    "max_point_mm": 5.0
+  },
+  "parameters_applied": false,
+  "depth_accuracy_validated": false,
+  "grasp_tcp_validated": false,
+  "limitations": [
+    "Validation compares held-out RGB board poses with robot poses; it is not an independent grasp TCP measurement.",
+    "The current session covers a limited workspace and limited angular range.",
+    "Sample 4 was inspected in prior experiments; samples 8 and 10 were newly reserved before capture.",
+    "Historical mounting sessions are excluded from the primary fit by the predeclared protocol, not by residual-based outlier deletion."
+  ],
+  "final_robot_state_file": "/home/dianrobot/demo1/fairino-review/handeye-supplement-1792943852/final-robot-state.json"
+}

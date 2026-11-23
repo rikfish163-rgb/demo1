@@ -1,0 +1,74 @@
+{
+  "schema": "fr5-pi05-public-adaptation-references-v1",
+  "retrieved_at_utc": "2026-11-17T07:42:40Z",
+  "purpose": "Compare documented pi0.5 adaptation conditions with the existing FR5 experiment.",
+  "references": [
+    {
+      "url": "https://github.com/Physical-Intelligence/openpi/blob/main/README.md",
+      "quotes": [
+        "For all models, we provide _base model_ checkpoints, pre-trained on 10k+ hours of robot data, and examples for using them out of the box or fine-tuning them to your own datasets.",
+        "This is an experiment: $\\pi_0$ was developed for our own robots, which differ from the widely used platforms such as [ALOHA](https://tonyzhaozh.github.io/aloha/) and [DROID](https://droid-dataset.github.io/), and though we are optimistic that researchers and practitioners will be able to run creative new experiments adapting $\\pi_0$ to their own platforms, we do not expect every such attempt to be successful. All this is to say: $\\pi_0$ may or may not work for you, but you are welcome to try it and see!",
+        "We provide multiple base VLA model checkpoints. These checkpoints have been pre-trained on 10k+ hours of robot data, and can be used for fine-tuning.",
+        "We also provide \"expert\" checkpoints for various robot platforms and tasks. These models are fine-tuned from the base models above and intended to run directly on the target robot. These may or may not work on your particular robot. Since these checkpoints were fine-tuned on relatively small datasets collected with more widely available robots, such as ALOHA and the DROID Franka setup, they might not generalize to your particular setup, though we found some of these, especially the DROID checkpoint, to generalize quite broadly in practice.",
+        "The PyTorch implementation uses the same API as the JAX version - you only need to change the checkpoint path to point to the converted PyTorch model:",
+        "# Run inference (same API as JAX)"
+      ]
+    },
+    {
+      "url": "https://github.com/Physical-Intelligence/openpi/blob/main/examples/droid/README.md",
+      "quotes": [
+        "- [Fine-tuning expert $\\pi_{0.5}$ on your custom DROID dataset](./README_train.md#fine-tuning-on-custom-droid-datasets)"
+      ]
+    },
+    {
+      "url": "https://github.com/Physical-Intelligence/openpi/blob/main/examples/libero/README.md",
+      "quotes": [
+        "| π0.5 @ 30k (finetuned) | 98.8 | 98.2 | 98.0 | 92.4 | 96.85"
+      ]
+    },
+    {
+      "url": "https://github.com/Physical-Intelligence/openpi/blob/main/examples/droid/README_train.md",
+      "quotes": [
+        "Here we describe how to fine-tune the pi0.5 model on the *full* DROID dataset. This is an approximate open-source reproduction of the pi05-DROID training pipeline.",
+        "Here we describe how to fine-tune a model on a custom (smaller) dataset collected on the DROID platform. Like for other datasets, we will first convert the custom DROID dataset to LeRobot and then fine-tune a model (pi05-droid) on it.",
+        "We will use a small subset of the real DROID dataset for this example. This is a subset of just 30 demonstrations -- we assume that you will use your own dataset instead, but here is the command to download our subset (1.6GB):"
+      ]
+    },
+    {
+      "url": "https://github.com/Physical-Intelligence/openpi/blob/main/docs/norm_stats.md",
+      "quotes": [
+        "**Note:** To successfully reload normalization statistics, it's important that your robot + dataset are following the action space definitions used in pre-training. We provide a detailed description of our action space definitions below.",
+        "For DROID, we use the original DROID action configuration, with joint velocity actions in the first 7 dimensions and gripper actions in the 8th dimension + a control frequency of 15 Hz."
+      ]
+    },
+    {
+      "url": "https://api.github.com/repos/Physical-Intelligence/openpi/issues/766/comments",
+      "comments": [
+        {
+          "url": "https://github.com/Physical-Intelligence/openpi/issues/766#issuecomment-3515388699",
+          "body": "We experienced a similar problem in our tests, but we haven't been able to find a definitive explanation. In many cases, it appears to be correlated with the length of the action horizon. In other words, the model will generate an \"optimistic\" long trajectory where it approaches, grasps, and moves the objects, assuming that it will be able to execute all these actions correctly (we don't use the RTC protocol). This often leads to errors, as the estimated grasping point is initially wrong and will subsequently lead to a failure. In our case, the robot attempts a retry and then succeeds; I'm not sure what happens in yours.",
+          "role": "NONE"
+        },
+        {
+          "url": "https://github.com/Physical-Intelligence/openpi/issues/766#issuecomment-3516150655",
+          "body": "In my case, the robot just continue with the action, for example: approach the cube -> fails to grasp -> continue to move to the tray and open gripper as if it correctly grasp the cube. I'm not sure what the issue is here. I tried to change the action horizon from the default 50 to 10 or even 5, but the task success rate is still low",
+          "role": "NONE"
+        }
+      ]
+    },
+    {
+      "url": "https://api.github.com/repos/Physical-Intelligence/openpi/issues/912/comments",
+      "comments": [
+        {
+          "url": "https://github.com/Physical-Intelligence/openpi/issues/912#issuecomment-4175721193",
+          "body": "@BoxiangWang1215  Yes, we fine-tuned it on our own robot with around 200 teleoperation episodes collected on our platform.\n\nThe reaching behavior looks good, but at the grasp stage it keeps producing very small actions and pushes the object instead of grasping it. We are still checking whether this comes from the gripper representation, action scaling, or insufficient grasp data coverage.\n",
+          "role": "NONE"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Community issue reports are self-reported observations; their suggested causes are not verified FR5 diagnoses.",
+    "DROID and LIBERO results do not measure performance on FR5 with PGI-140 and Gemini."
+  ]
+}

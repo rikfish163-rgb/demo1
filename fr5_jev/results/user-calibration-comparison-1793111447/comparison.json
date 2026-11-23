@@ -1,0 +1,231 @@
+{
+  "status": "read_only_comparison_complete_user_matrix_not_applied",
+  "user_zip_sha256": "1efd57b2355609ccc3c4f4275de6647e3279ea4dabc0e1d19136d5a56844edeb",
+  "user_matrix_frame": "camera_color_optical_frame -> base_link (robot identity absent)",
+  "current_matrix_frame": "color camera CP1E54200015 -> J1 controller base",
+  "user_historical_fit_rms_mm": 0.8354136835977218,
+  "current_historical_holdout_rms_mm": 1.5856820907275573,
+  "historical_statistics_are_not_directly_comparable": true,
+  "rigid_transform_checks": {
+    "determinant": 0.9999999999999999,
+    "orthogonality_max_error": 4.440892098500626e-16,
+    "inverse_product_max_error": 4.440892098500626e-16
+  },
+  "relative_J1_from_user_base_algebra_only": [
+    [
+      -0.9991291835580735,
+      -0.030808602716091912,
+      -0.028137245090093067,
+      -12.509511955796555
+    ],
+    [
+      0.031015262386328454,
+      -0.9994948316257372,
+      -0.006937942962154945,
+      -1301.0565965407286
+    ],
+    [
+      -0.027909282715346737,
+      -0.007804585326648013,
+      0.9995799919897326,
+      16.693675737201374
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "rotation_difference_deg": 178.22840840722407,
+  "camera_origin_translation_difference_mm": 499.34287621519115,
+  "fixed_extrinsic_archived_J1_test": {
+    "current": {
+      "extrinsic_refitted": false,
+      "board_mount_fitted_on_ids": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        9
+      ],
+      "fit_success": true,
+      "heldout": [
+        {
+          "sample_id": 4,
+          "point_rms_mm": 0.6432521362608377,
+          "point_max_mm": 0.9768199154428017
+        },
+        {
+          "sample_id": 8,
+          "point_rms_mm": 0.4448652143982112,
+          "point_max_mm": 0.49745284421630814
+        },
+        {
+          "sample_id": 10,
+          "point_rms_mm": 1.5160540346698255,
+          "point_max_mm": 1.7087896144527852
+        }
+      ],
+      "heldout_rms_mm": 0.9849023988572597,
+      "heldout_max_mm": 1.7087896144527852
+    },
+    "user_used_directly_as_J1": {
+      "extrinsic_refitted": false,
+      "board_mount_fitted_on_ids": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        9
+      ],
+      "fit_success": true,
+      "heldout": [
+        {
+          "sample_id": 4,
+          "point_rms_mm": 59.8119979762137,
+          "point_max_mm": 72.47428285237076
+        },
+        {
+          "sample_id": 8,
+          "point_rms_mm": 27.54525987983727,
+          "point_max_mm": 37.874161825262355
+        },
+        {
+          "sample_id": 10,
+          "point_rms_mm": 93.77301406115525,
+          "point_max_mm": 103.1940557784475
+        }
+      ],
+      "heldout_rms_mm": 66.15535909223577,
+      "heldout_max_mm": 103.1940557784475
+    }
+  },
+  "archived_translation_direction_checks": [
+    {
+      "sample_pair": [
+        1,
+        2
+      ],
+      "rotation_change_deg": 0.0,
+      "encoder_translation_mm": [
+        40.00030517578125,
+        0.02142333984375,
+        0.002044677734375
+      ],
+      "current_matrix_observed_translation_mm": [
+        40.06254585926608,
+        -0.4781526526944649,
+        1.6133251524088146
+      ],
+      "user_matrix_as_J1_observed_translation_mm": [
+        -40.08751551340078,
+        -0.76895128788869,
+        0.48871526697797163
+      ]
+    },
+    {
+      "sample_pair": [
+        8,
+        9
+      ],
+      "rotation_change_deg": 0.0019614118650639386,
+      "encoder_translation_mm": [
+        30.0184326171875,
+        0.01007080078125,
+        0.011199951171875
+      ],
+      "current_matrix_observed_translation_mm": [
+        29.989945028026842,
+        -0.36252023576123404,
+        0.9617627067034175
+      ],
+      "user_matrix_as_J1_observed_translation_mm": [
+        -30.0019150583229,
+        -0.5691173589512724,
+        0.12003946988895499
+      ]
+    }
+  ],
+  "current_flange_projection_px": {
+    "current": [
+      1236.0717242092112,
+      896.1782778610915
+    ],
+    "user_used_directly_as_J1": [
+      715.8575138686647,
+      921.8110122979095
+    ]
+  },
+  "static_board_check": {
+    "corners": 54,
+    "square_mm_assumed": 24.25,
+    "camera_serial": "CP1E54200015",
+    "reprojection_rms_px": 0.2433971908696412,
+    "depth_support_cells": 40,
+    "plane_residual_rms_mm": 2.4746791695049724,
+    "depth_minus_rgb_pnp_median_mm": 8.80074540193317,
+    "depth_eight_square_width_median_mm": 196.1025954616621,
+    "expected_width_mm": 194.0,
+    "depth_five_square_height_median_mm": 122.65934238758746,
+    "expected_height_mm": 121.25,
+    "depth_grid_spacing_result_identical_under_both_rigid_transforms": true,
+    "absolute_handeye_validated_by_this_static_board": false
+  },
+  "current_aperture_user_confirmed_mm": 80,
+  "aperture_quote": "8 厘米，也就是 80 mm",
+  "motion_commands_sent": 0,
+  "gripper_commands_sent": 0,
+  "live_parameters_modified": false,
+  "limitations": [
+    "Candidate may use a different robot base, another base convention or another camera setup; this test does not distinguish these causes.",
+    "The algebraic relative transform is not independently calibrated and cannot be used to claim an improved result.",
+    "A static board with unknown robot-base pose cannot validate camera-to-base translation.",
+    "Rigid hand-eye transforms preserve distances; changing them cannot fix a 72-74 versus 80 mm camera-space jaw-width discrepancy.",
+    "Archived validation uses fixed board mounting and recorded J1 poses; it is not an end-to-end grasp-accuracy test."
+  ],
+  "user_confirmation": {
+    "candidate_robot": "J1",
+    "candidate_robot_ip": "192.168.58.2",
+    "candidate_robot_coordinates": "controller_base",
+    "quote": "J1 的控制器基坐标",
+    "minimum_inner_gap_full_open_mm": 80,
+    "gap_quote": "8 厘米，也就是 80 mm"
+  },
+  "recent_motion_check": {
+    "type": "2026-10-27_gripper_translation_archived_pair_no_new_motion",
+    "feature_count": 57,
+    "valid_depth_feature_pairs": 54,
+    "observed_median_pixel_motion": [
+      -56.623291015625,
+      -0.2044677734375
+    ],
+    "encoder_motion_mm": [
+      40.00908660888672,
+      -0.000732421875,
+      0.02239227294921875
+    ],
+    "median_camera_motion_mm": [
+      -40.112069204219694,
+      0.0005693657783183426,
+      0.5
+    ],
+    "current_transform_median_motion_mm": [
+      40.10937721010457,
+      -0.5911782730076216,
+      -0.22339241353118305
+    ],
+    "user_transform_median_motion_mm": [
+      -40.08837333486423,
+      -0.6373813674556746,
+      -1.3536243706546747
+    ],
+    "motion_commands_sent": 0,
+    "note": "Features tracked on visible gripper housing with forward-backward pixel error <0.5 px and both depth patches valid; geometry/edges not used for aperture measurement."
+  },
+  "decision": "Do not install candidate: observed J1 direction contradiction persists with inverse and units checked; original sampling data requested."
+}

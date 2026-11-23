@@ -1,0 +1,249 @@
+{
+  "created_unix": 1792943908.5969007,
+  "robot": "J1",
+  "camera_serial": "CP1E54200015",
+  "source": "/home/dianrobot/demo1/fairino-review/handeye-quick-1792943357",
+  "segments": [
+    {
+      "kind": "translation",
+      "axis": 3,
+      "amount": -30.0,
+      "velocity": 0.5,
+      "split": "fit",
+      "target": [
+        -172.25955200195312,
+        -715.4229736328125,
+        244.04559326171875,
+        -7.431199073791504,
+        45.46910858154297,
+        -120.38624572753906
+      ],
+      "paper_pixel_bounds": [
+        [
+          1169.8172411742728,
+          470.1385126957217
+        ],
+        [
+          1663.449711317041,
+          989.0213355392998
+        ]
+      ],
+      "minimum_paper_base_z_mm": 239.46265273892115
+    },
+    {
+      "kind": "pitch",
+      "axis": 4,
+      "amount": 8.0,
+      "velocity": 0.5,
+      "split": "fit",
+      "target": [
+        -172.25955200195312,
+        -715.4229736328125,
+        244.04559326171875,
+        0.5688009262084961,
+        45.46910858154297,
+        -120.38624572753906
+      ],
+      "paper_pixel_bounds": [
+        [
+          1235.1311342030633,
+          470.0324413018561
+        ],
+        [
+          1710.2391900978278,
+          1033.5658576998885
+        ]
+      ],
+      "minimum_paper_base_z_mm": 250.3180919826267
+    },
+    {
+      "kind": "joint",
+      "axis": 6,
+      "amount": 12.0,
+      "velocity": 1.0,
+      "split": "fit",
+      "target": [
+        -172.259536743164,
+        -715.4229736328125,
+        244.0455474853515,
+        12.46565055847168,
+        44.09475326538086,
+        -103.5594329833984
+      ],
+      "paper_pixel_bounds": [
+        [
+          1276.7499886245455,
+          469.1373232665956
+        ],
+        [
+          1755.2196069252786,
+          1019.8273177101619
+        ]
+      ],
+      "minimum_paper_base_z_mm": 267.8729596616
+    },
+    {
+      "kind": "pitch",
+      "axis": 4,
+      "amount": -8.0,
+      "velocity": 0.5,
+      "split": "held_out",
+      "target": [
+        -172.259536743164,
+        -715.4229736328125,
+        244.0455474853515,
+        4.46565055847168,
+        44.09475326538086,
+        -103.5594329833984
+      ],
+      "paper_pixel_bounds": [
+        [
+          1213.3805418336672,
+          473.89504393532053
+        ],
+        [
+          1714.0105423580594,
+          991.1607625702262
+        ]
+      ],
+      "minimum_paper_base_z_mm": 260.09263799410064
+    },
+    {
+      "kind": "translation",
+      "axis": 1,
+      "amount": 30.0,
+      "velocity": 0.5,
+      "split": "fit",
+      "target": [
+        -142.259536743164,
+        -715.4229736328125,
+        244.0455474853515,
+        4.46565055847168,
+        44.09475326538086,
+        -103.5594329833984
+      ],
+      "paper_pixel_bounds": [
+        [
+          1136.8974912788028,
+          474.6254288503862
+        ],
+        [
+          1633.0237100721083,
+          991.9274164015792
+        ]
+      ],
+      "minimum_paper_base_z_mm": 260.09263799410064
+    },
+    {
+      "kind": "joint",
+      "axis": 6,
+      "amount": -10.0,
+      "velocity": 1.0,
+      "split": "held_out",
+      "target": [
+        -142.2595062255859,
+        -715.4229736328125,
+        244.0455474853515,
+        -5.247679233551025,
+        44.0260887145996,
+        -117.4915618896484
+      ],
+      "paper_pixel_bounds": [
+        [
+          1098.317884088429,
+          470.09047168172384
+        ],
+        [
+          1586.4667740137002,
+          1006.7779243969234
+        ]
+      ],
+      "minimum_paper_base_z_mm": 247.8340003711814
+    }
+  ],
+  "fixture": {
+    "independently_secured_confirmed": true,
+    "user_reply": "现在棋盘固定在了夹爪末端的",
+    "confirmation_context": "User answered current independent-fixture clarification; no gripper actuation requested or performed.",
+    "gripper_active": 0,
+    "gripper_position": 0,
+    "confirmed_unix": 1792943503.8307443
+  },
+  "user_authorization": "你再补充一下 快点",
+  "square_mm": 24.25,
+  "new_sample_ids": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "new_untouched_holdout_ids": [
+    8,
+    10
+  ],
+  "primary_model": "Current single-mount session only, factory RGB intrinsics, linear reprojection refinement. Archived data is comparison only.",
+  "initial_state": {
+    "program_state": 1,
+    "robot_state": 1,
+    "main_code": 0,
+    "sub_code": 0,
+    "robot_mode": 1,
+    "tool": 0,
+    "user": 0,
+    "EmergencyStop": 0,
+    "motion_done": 1,
+    "mc_queue_len": 0,
+    "collisionState": 0,
+    "safety_stop0_state": 0,
+    "safety_stop1_state": 0,
+    "gripper_fault": 0,
+    "gripper_position": 0,
+    "rbtEnableState": 1,
+    "gripper_motiondone": 0,
+    "gripper_active": 0,
+    "gripper_speed": 0,
+    "gripper_current": 0,
+    "gripper_fault_id": 0,
+    "joints": [
+      65.87967681884766,
+      -53.82822036743164,
+      87.21578216552734,
+      -77.52040100097656,
+      87.05305480957031,
+      -94.39562225341797
+    ],
+    "tcp": [
+      -172.25955200195312,
+      -715.4229736328125,
+      274.04559326171875,
+      -7.431199073791504,
+      45.46910858154297,
+      -120.38624572753906
+    ],
+    "flange": [
+      -172.25595092773438,
+      -715.4225463867188,
+      274.0465393066406,
+      -7.4314141273498535,
+      45.469093322753906,
+      -120.38602447509766
+    ],
+    "tcp_speed": [
+      0.6434506692599341,
+      0.07778575318585661
+    ],
+    "joint_speeds_deg_s": [
+      -0.04351021039639136,
+      -0.02175510519819568,
+      0.02175510519890622,
+      -0.02175510519890622,
+      0.04351021039639136,
+      0.021755105197485136
+    ],
+    "timestamp": 1792943908.5766938
+  },
+  "acceleration_percent": 1.0,
+  "calibration_parameters_applied": false
+}

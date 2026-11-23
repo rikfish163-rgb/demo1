@@ -1,0 +1,38 @@
+{
+  "production_change": {
+    "path": "/home/dianrobot/demo1/fr5_jev/cup_timing.py",
+    "line": 110,
+    "changed_expressions": 1,
+    "condition": "contact == 0",
+    "phase_priority": [
+      "was_released",
+      "at_pickup",
+      "approaching"
+    ]
+  },
+  "tests": {
+    "command": "/home/dianrobot/anaconda3/envs/lerobot/bin/python -B -m unittest -q fr5_lerobot.tests.test_cup_timing",
+    "tests_run": 13,
+    "exit_code": 0,
+    "result": "passed",
+    "new_cases": [
+      {
+        "line": 51,
+        "name": "test_invalid_feedback_preserves_contact_through_close_and_open_gaps"
+      },
+      {
+        "line": 74,
+        "name": "test_first_valid_99_percent_open_is_released_at_pickup"
+      },
+      {
+        "line": 93,
+        "name": "test_close_without_previous_contact_does_not_report_release"
+      },
+      {
+        "line": 104,
+        "name": "test_retreat_peak_drop_clears_release_for_second_approach"
+      }
+    ],
+    "test_path": "/home/dianrobot/demo1/fr5_lerobot/tests/test_cup_timing.py"
+  }
+}

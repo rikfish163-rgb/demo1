@@ -1,0 +1,57 @@
+{
+  "schema": "fr5-cup-rim-refit-fallback-close-readiness-v1",
+  "device": "cpu",
+  "cases": [
+    {
+      "case_id": "source3-cycle1-close_at-1468",
+      "source_frame_index": 170,
+      "before_tracking": {
+        "rim_minus_jaw_mm": null,
+        "native_contact": 0,
+        "reason": "rim_not_observed"
+      },
+      "after_tracking": {
+        "rim_minus_jaw_mm": null,
+        "native_contact": 0,
+        "reason": "rim_not_observed",
+        "rim_uv": null,
+        "rim_edge_samples": 0,
+        "raised_depth_samples": 0
+      },
+      "close_branch_ready_before": false,
+      "close_branch_ready_after": false
+    },
+    {
+      "case_id": "source5-cycle1-close_at-2524",
+      "source_frame_index": 183,
+      "before_tracking": {
+        "rim_minus_jaw_mm": null,
+        "native_contact": 0,
+        "reason": "rim_not_observed"
+      },
+      "after_tracking": {
+        "rim_minus_jaw_mm": [
+          -13.717555834244706,
+          -3.136551332148656,
+          13.863822594734756
+        ],
+        "native_contact": 0,
+        "reason": "observed",
+        "rim_uv": [
+          453.85280990600586,
+          253.83135223388672
+        ],
+        "rim_edge_samples": 48,
+        "raised_depth_samples": 30
+      },
+      "close_branch_ready_before": false,
+      "close_branch_ready_after": true
+    }
+  ],
+  "model_inference_calls": 0,
+  "robot_commands": 0,
+  "task_success_verified": false,
+  "limitations": [
+    "Readiness is recalculated from the original pose/history and updated RGB-D observation; model replies under the updated observations remain untested."
+  ]
+}

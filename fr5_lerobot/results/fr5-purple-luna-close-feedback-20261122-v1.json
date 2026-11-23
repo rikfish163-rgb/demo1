@@ -1,0 +1,245 @@
+{
+  "episode": "fr5-purple-luna-teacher-20261122T231935-v1",
+  "timezone": "Asia/Shanghai",
+  "conclusion": {
+    "most_supported_explanation": "夹爪达到0%全闭目标，闭合终点未确认物体接触；反馈形态与空闭相符。",
+    "early_action_completion": "没有仅凭RPC返回或0.8秒门槛提前结束的证据。发送至动作完成为5.560198秒，最终反馈仅早于完成记录10.358毫秒。",
+    "later_done2": "恢复初态比close最终反馈晚537.920672秒。两个记录不是同一时刻的冲突，不能把后来的done=2追认为本轮已夹住物体。",
+    "episode_result": "interrupted；close未列入completed_stages，未执行提升，完整成功未确认。"
+  },
+  "wire_command": {
+    "source": "/home/dianrobot/.local/state/fr5-recording-spool/fr5-purple-luna-teacher-20261122T231935-v1/command-0009.json",
+    "method": "MoveGripper",
+    "args": [1, 0, 20, 10, 10000, 1, 0, 0.0, 0, 0],
+    "index": 1,
+    "position_percent": 0,
+    "speed_percent": 20,
+    "force_percent": 10,
+    "native_maxtime_ms": 10000,
+    "block": 1,
+    "block_meaning_in_local_sdk": "非阻塞；返回0不是动作完成或夹取成功。",
+    "return_code": 0,
+    "sequence": 9,
+    "command_status": "completed",
+    "decision_provider": "openai",
+    "decision_model": "gpt-6-luna",
+    "decision_choice": "close_gripper",
+    "target_source": "scope.actions中的c01-close指定0%；实际发送参数和command.target一致。"
+  },
+  "timeline": [
+    {
+      "event": "前一条approach_contact动作完成",
+      "unix": 1795360827.0517135,
+      "monotonic": 12570.474648489,
+      "local_time": "2026-11-22T23:20:27.051713+08:00",
+      "source_file": "command-0008.json"
+    },
+    {
+      "event": "close发送前已记录相机观测",
+      "unix": 1795360828.27983,
+      "monotonic": 12571.70276657,
+      "paired_robot_monotonic": 12571.702305948,
+      "recorded_frame_index": 203,
+      "local_time": "2026-11-22T23:20:28.279830+08:00"
+    },
+    {
+      "event": "close初态反馈",
+      "unix": 1795360828.5794373,
+      "monotonic": 12572.002371705,
+      "local_time": "2026-11-22T23:20:28.579437+08:00",
+      "gripper_position": 100,
+      "gripper_motiondone": 1,
+      "gripper_speed": 0,
+      "gripper_fault": 0,
+      "gripper_fault_id": 0
+    },
+    {
+      "event": "实际发送门记录MoveGripper",
+      "unix": 1795360828.5827563,
+      "monotonic": 12572.005692397,
+      "local_time": "2026-11-22T23:20:28.582756+08:00"
+    },
+    {
+      "event": "close最终反馈",
+      "unix": 1795360834.1325982,
+      "monotonic": 12577.555532891,
+      "local_time": "2026-11-22T23:20:34.132598+08:00",
+      "gripper_position": 0,
+      "gripper_motiondone": 1,
+      "gripper_active": 1,
+      "gripper_speed": 0,
+      "gripper_current": 0,
+      "gripper_fault": 0,
+      "gripper_fault_id": 0,
+      "frame_counter": 58,
+      "packet_size": 960
+    },
+    {
+      "event": "动作完成记录",
+      "unix": 1795360834.1429553,
+      "monotonic": 12577.565890407,
+      "local_time": "2026-11-22T23:20:34.142955+08:00"
+    },
+    {
+      "event": "恢复初态反馈",
+      "unix": 1795361372.05327,
+      "local_time": "2026-11-22T23:29:32.053270+08:00",
+      "gripper_position": 0,
+      "gripper_motiondone": 2,
+      "gripper_active": 1,
+      "gripper_speed": 0,
+      "gripper_current": 0,
+      "gripper_fault": 0,
+      "gripper_fault_id": 0,
+      "source": "/home/dianrobot/.local/state/fr5-system/fr5-purple-supported-recovery-20261122T232931.json"
+    },
+    {
+      "event": "恢复日志下发100%开爪",
+      "unix": 1795361374.4464998,
+      "monotonic": 13117.86943554,
+      "local_time": "2026-11-22T23:29:34.446500+08:00",
+      "source_field": "journal[1]"
+    },
+    {
+      "event": "恢复开爪最终反馈",
+      "unix": 1795361379.9785035,
+      "monotonic": 13123.401437873,
+      "local_time": "2026-11-22T23:29:39.978504+08:00",
+      "gripper_position": 100,
+      "gripper_motiondone": 1,
+      "gripper_speed": 0
+    }
+  ],
+  "controller_feedback_rules": {
+    "actuator_completion": {
+      "controller_class": "TeachingController继承PolicyController",
+      "source": "/home/dianrobot/demo1/fr5_lerobot/src/lerobot_robot_fairino/pi05_rollout.py",
+      "line": 87,
+      "predicate": "反馈有效；done属于1或2；距发送至少0.8秒；位置与目标之差不大于1%，或done=2。",
+      "qualification_count_source": "/home/dianrobot/demo1/fr5_lerobot/src/lerobot_robot_fairino/action_control.py",
+      "qualification_count_line": 295,
+      "qualification_count": "每次帧计数变化时累计符合判据的反馈；达到3次才返回completed。done=3导致停止。",
+      "close_final_state_satisfies_completion": true
+    },
+    "feedback_validity": {
+      "source": "/home/dianrobot/demo1/fr5_lerobot/src/lerobot_robot_fairino/feedback.py",
+      "line": 6,
+      "predicate": "有限位置0–100%；active=1；fault=0；fault_id=0；done属于1、2、3；speed=0。",
+      "meaning": "反馈有效性，不是抓取成功。"
+    },
+    "close_contact": {
+      "source": "/home/dianrobot/demo1/fr5_jev/whole_task_collection.py",
+      "line": 857,
+      "predicate": "反馈有效且done=2；否则抛出No actual gripper contact after closure。",
+      "close_final_state_passes": false,
+      "recovery_initial_state_would_pass": true,
+      "gap": "未判断闭合是否在目标之前因物体阻挡而停止。0%全闭位置配done=2也会通过，不能独立证明物体接触。"
+    },
+    "done_field_semantics": {
+      "raw_packet_source": "/home/dianrobot/demo1/fr5_lerobot/src/lerobot_robot_fairino/state_stream.py",
+      "raw_packet_line": 48,
+      "raw_packet_meaning": "日志中的gripper_motiondone直接来自状态包字段，未由项目转换成布尔值。",
+      "project_interpretation": {
+        "0": "未完成或运动中的反馈，不满足gripper_feedback_valid。",
+        "1": "项目作为到位完成使用，开爪和未确认接触的闭爪均可出现。",
+        "2": "项目作为接触状态使用；历史杯反馈与该约定一致，单字段不能证明夹到本轮物体。",
+        "3": "项目按物体丢失或接触不稳定停止。"
+      },
+      "sdk_source": "/home/dianrobot/demo1/hardware/sdk/Robot.py",
+      "move_gripper_parameters_line": 4819,
+      "motion_done_documentation_line": 4861,
+      "sdk_rpc_meaning": "GetGripperMotionDone的注释描述[fault,status]，status只列0未完成、1完成；包装实现原样返回控制器两个数据值。这不是本轮close所用的状态包反馈判据。",
+      "local_field_note": "/home/dianrobot/.codex/skills/fr5-jev-collaboration/references/field-notes.md",
+      "local_field_note_line": 32,
+      "field_note_meaning": "现场成功开爪也出现GetGripperMotionDone原始[0,1,1]，中间值不能直接当故障位；应结合状态包故障、位置、速度与完成反馈。"
+    }
+  },
+  "camera_and_recording": {
+    "camera_serial": "CP1E54200015",
+    "precommand_camera_age_ms": 302.925827,
+    "precommand_paired_robot_age_ms": 303.386449,
+    "precommand_abs_pair_skew_ms": 0.460622,
+    "command_report_samples": 2,
+    "command_report_samples_meaning": "仅保存initial_state和final_state，没有保存完成判据使用的中间三次合格反馈。",
+    "continuous_report_source": "/home/dianrobot/.local/state/fr5-recording-spool/fr5-purple-luna-teacher-20261122T231935-v1/continuous/report.json",
+    "reported_capture_complete": true,
+    "reported_frames": 238,
+    "reported_unique_camera_fps": 6.008753384293587,
+    "reported_max_frame_gap_s": 0.29563530500126944,
+    "reported_max_sync_skew_ms": 4.972441000063554,
+    "reported_frames_with_invalid_gripper_feedback": 45,
+    "reported_accepted_frames": 238,
+    "reported_last_durable_sequence": 237,
+    "reported_unacknowledged_frames": 0,
+    "reported_capture_error": null,
+    "local_continuous_capture_jsonl_bytes": 0,
+    "local_teacher_capture_jsonl_bytes": 0,
+    "local_continuous_media_files": 0,
+    "local_outbox_contents": ["stream-session.json"],
+    "storage_design_source": "/home/dianrobot/demo1/fr5_lerobot/src/lerobot_robot_fairino/demo_writer.py",
+    "storage_design_line": 414,
+    "storage_design_meaning": "流式模式将RGB-D和逐帧元数据持久化到服务器，本地capture.jsonl保留为空占位。",
+    "command_count_meaning": "summary.commands=8对应sequence 2–9的8条实际命令；sequence 1是executed=false的初始hold，无命令计数冲突。"
+  },
+  "historical_cup_comparison": {
+    "percent76_meaning": "76%是发送目标；找到的接触正例最终实测为78–79%、done=2，不能把目标76%写成实测接触位置。",
+    "contact_reference": {
+      "source": "/home/dianrobot/.local/state/fr5-recording-spool/cup-ui-20261031-192509-307a80/command-0006.json",
+      "args": [1, 76, 20, 10, 10000, 1, 0, 0.0, 0, 0],
+      "final_position": 78,
+      "final_done": 2,
+      "speed": 0,
+      "current": 0,
+      "fault": 0,
+      "duration_s": 1.9766990070056636,
+      "local_raw_summary_outcome": "pending_review"
+    },
+    "additional_contact_reference": {
+      "source": "/home/dianrobot/.local/state/fr5-recording-spool/cup-system-20261031-06/command-0006.json",
+      "target_percent": 76,
+      "final_position": 79,
+      "final_done": 2,
+      "force_percent": 10,
+      "current": 0
+    },
+    "no_contact_reference": {
+      "source": "/home/dianrobot/.local/state/fr5-recording-spool/cup-ui-20261101-170422-646d26/command-0006.json",
+      "args": [1, 76, 20, 10, 10000, 1, 0, 0.0, 0, 0],
+      "final_position": 76,
+      "final_done": 1,
+      "speed": 0,
+      "current": 0,
+      "fault": 0,
+      "duration_s": 2.292881180997938,
+      "local_raw_summary_outcome": "interrupted",
+      "error": "No actual gripper contact after closure"
+    },
+    "interpretation": "同速度20%、力10%的接触正例在目标前停住，未确认接触的闭合达到目标。本轮0%/done=1更接近后者。正反例电流均为0，电流字段不能用于证明空闭或接触。"
+  },
+  "recommendations": [
+    {
+      "priority": "necessary",
+      "target": "/home/dianrobot/demo1/fr5_jev/whole_task_collection.py:857",
+      "change": "close阶段把有效done=2与实际阻挡开度联合判断。本轮0%目标到达0–1%时保持接触未确认；一般闭合目标可要求实测开度高于发送目标至少超出已有1%到位容差。随后以新鲜观测和用户确认验证物体真实跟随。",
+      "basis": "真实恢复日志pos=0/done=2会通过现有判据；历史杯接触正例实测78–79%、目标76%。"
+    },
+    {
+      "priority": "diagnostic",
+      "target": "/home/dianrobot/demo1/fr5_jev/whole_task_collection.py:788",
+      "change": "同一command报告保留RPC返回单调时刻、用于判定完成的少量终态反馈及各自接收时刻/帧计数，并区分到位完成与接触完成。",
+      "basis": "当前只保存初态和最终态，不能回溯实际三次合格反馈，也不能分离RPC返回与反馈等待耗时。"
+    },
+    {
+      "priority": "conditional",
+      "change": "若既有服务器末段元数据证实完成附近存在短时间done=1转done=2，再对close增加不重发命令的短反馈收敛窗口；接触仍需开度与物体观测支持。",
+      "basis": "537.920672秒后的单次done=2不足以支持延长本轮完成等待。"
+    }
+  ],
+  "limitations": [
+    "本地没有服务器逐帧元数据，不能确认close中间及完成后是否存在短时间done变化，也不能独立核验闭合后相机/反馈尾部；capture_complete与持久化回执属于报告级证据。",
+    "45帧反馈无效未按阶段定位。运动中done=0或speed非零会使反馈有效性为false，不能把这个总数直接判为采集损坏。",
+    "close结束至恢复初态之间缺连续状态及命令序列，不能确定done=1转2的发生时刻、原因或期间是否有外部干预。",
+    "本地SDK注释未定义状态包done=2/3的厂家完整语义；本报告区分项目约定、现场对照和SDK接口说明。",
+    "历史杯对照的本地原始摘要为pending_review，未读取服务器用户验收文件；本次仅比较真实命令与反馈，不新增成功标签。"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "source_snapshot": "/home/data4/hts/demo1/fr5-learning/src/fr5-jev-pi05-tools-20261122-v11",
+  "tests_run": 9,
+  "tests_passed": 9,
+  "tests_skipped": 0,
+  "real_parent": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-jev-history-balanced-base-20261121-v2/step-005000",
+  "real_original_dataset_sources": 8,
+  "actual_source_fields": [
+    "source_index",
+    "trial",
+    "split",
+    "source_scope_sha256",
+    "source_summary_sha256",
+    "source_stream_sha256",
+    "capture_journal_sha256",
+    "session",
+    "user_review_sha256",
+    "user_review_file",
+    "task_instruction",
+    "task_spec",
+    "hold_records",
+    "data_provenance",
+    "coverage"
+  ],
+  "same_source_initialize_added_sources": false,
+  "same_source_resume_added_sources": false,
+  "new_sources_used_for_training": 0,
+  "gpu_training_started": false,
+  "robot_commands_sent": 0,
+  "status": "passed"
+}

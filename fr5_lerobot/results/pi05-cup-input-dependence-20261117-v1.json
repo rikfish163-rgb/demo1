@@ -1,0 +1,308 @@
+{
+  "schema": "fr5-cup-input-dependence-audit-v1",
+  "device": "cpu",
+  "model_inference_calls": 0,
+  "model_weights_loaded": false,
+  "robot_commands": 0,
+  "task_success_verified": false,
+  "new_demonstrations": 0,
+  "failed_trials_training": 0,
+  "checkpoint_of_saved_predictions": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-cup-terminal-xyz-clean-n3-20261116-v9/step-000256",
+  "production_input_sources": {
+    "image_profile": "/home/data4/hts/demo1/fr5-learning/src/fr5-pi05-cup-rim-refit-fallback-20261117-v16/fr5_lerobot/training/stream_image_profile.py",
+    "observation_history": "/home/data4/hts/demo1/fr5-learning/src/fr5-pi05-cup-rim-refit-fallback-20261117-v16/fr5_lerobot/training/stream_observation_history.py",
+    "action_condition_hook": "/home/data4/hts/demo1/fr5-learning/src/fr5-pi05-cup-rim-refit-fallback-20261117-v16/fr5_lerobot/training/train_stream_pi05.py",
+    "timing_observer": "/home/data4/hts/demo1/fr5-learning/src/fr5-pi05-cup-rim-refit-fallback-20261117-v16/fr5_jev/cup_timing.py",
+    "candidate_selector": "/home/data4/hts/demo1/fr5-learning/src/fr5-pi05-cup-rim-refit-fallback-20261117-v16/fr5_lerobot/src/lerobot_robot_fairino/cup_action_selection.py"
+  },
+  "limitations": [
+    "The CPU trace captures production inputs before the saved image/text processor and the action projection. It does not measure the network response to changed conditions.",
+    "The updated-observation selector comparison holds original predicted actions fixed. Requests for later draws remain unassessed.",
+    "Observed cup rims and gripper contact do not establish physical cup support or task success."
+  ],
+  "inputs": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/fit-inputs.json",
+  "predictions": "/home/data4/hts/demo1/fr5-learning/evaluations/pi05-cup-terminal-xyz-clean256-suite-20261116-v9/fit-predictions.json",
+  "tracker_replay": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-rim-refit-fallback-original-eight-replay-20261117-v2/frames.jsonl",
+  "cases": [
+    {
+      "case_id": "source3-cycle1-close_at-1468",
+      "source_frame_index": 170,
+      "rgb_crop_equal": true,
+      "model_state_equal": true,
+      "cup_coordinate_origin_equal": true,
+      "prompt_equal": true,
+      "changed_conditions": [],
+      "action_input_condition_elements_changed": 0,
+      "seven_motion_channels_preserved_by_hook": true,
+      "fixed_conditions_equal_across_denoising_steps": true,
+      "close_branch_ready_before": false,
+      "close_branch_ready_after": false,
+      "saved_first_draw_selection": [
+        {
+          "seed": 20261105,
+          "saved_first3_gripper_percent": [
+            100,
+            75,
+            75
+          ],
+          "original_observation": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "updated_observation_same_saved_actions": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "model_prediction_recomputed": false
+        },
+        {
+          "seed": 20261113,
+          "saved_first3_gripper_percent": [
+            76,
+            76,
+            76
+          ],
+          "original_observation": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "updated_observation_same_saved_actions": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "model_prediction_recomputed": false
+        },
+        {
+          "seed": 20261114,
+          "saved_first3_gripper_percent": [
+            100,
+            100,
+            100
+          ],
+          "original_observation": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "updated_observation_same_saved_actions": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "model_prediction_recomputed": false
+        },
+        {
+          "seed": 20261115,
+          "saved_first3_gripper_percent": [
+            76,
+            76,
+            76
+          ],
+          "original_observation": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "updated_observation_same_saved_actions": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "model_prediction_recomputed": false
+        },
+        {
+          "seed": 20261116,
+          "saved_first3_gripper_percent": [
+            100,
+            76,
+            76
+          ],
+          "original_observation": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "updated_observation_same_saved_actions": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "model_prediction_recomputed": false
+        },
+        {
+          "seed": 20261117,
+          "saved_first3_gripper_percent": [
+            76,
+            76,
+            76
+          ],
+          "original_observation": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "updated_observation_same_saved_actions": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "model_prediction_recomputed": false
+        }
+      ]
+    },
+    {
+      "case_id": "source5-cycle1-close_at-2524",
+      "source_frame_index": 183,
+      "rgb_crop_equal": true,
+      "model_state_equal": true,
+      "cup_coordinate_origin_equal": true,
+      "prompt_equal": false,
+      "changed_conditions": [
+        {
+          "condition_index": 11,
+          "field": "visual_table_height",
+          "action_input_index": 18,
+          "before": 0.0,
+          "after": 1.0
+        },
+        {
+          "condition_index": 14,
+          "field": "visual_missing",
+          "action_input_index": 21,
+          "before": 1.0,
+          "after": 0.0
+        },
+        {
+          "condition_index": 16,
+          "field": "rim_from_jaw_x_over_60mm",
+          "action_input_index": 23,
+          "before": 0.0,
+          "after": -0.22862592339515686
+        },
+        {
+          "condition_index": 17,
+          "field": "rim_from_jaw_y_over_60mm",
+          "action_input_index": 24,
+          "before": 0.0,
+          "after": -0.05227585509419441
+        },
+        {
+          "condition_index": 18,
+          "field": "rim_from_jaw_z_over_60mm",
+          "action_input_index": 25,
+          "before": 0.0,
+          "after": 0.23106370866298676
+        },
+        {
+          "condition_index": 19,
+          "field": "rim_measurement_known",
+          "action_input_index": 26,
+          "before": 0.0,
+          "after": 1.0
+        }
+      ],
+      "action_input_condition_elements_changed": 300,
+      "seven_motion_channels_preserved_by_hook": true,
+      "fixed_conditions_equal_across_denoising_steps": true,
+      "close_branch_ready_before": false,
+      "close_branch_ready_after": true,
+      "saved_first_draw_selection": [
+        {
+          "seed": 20261105,
+          "saved_first3_gripper_percent": [
+            100,
+            75,
+            75
+          ],
+          "original_observation": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "updated_observation_same_saved_actions": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "model_prediction_recomputed": false
+        },
+        {
+          "seed": 20261113,
+          "saved_first3_gripper_percent": [
+            100,
+            100,
+            100
+          ],
+          "original_observation": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "updated_observation_same_saved_actions": {
+            "status": "additional_draws_required",
+            "selected_actions_unchanged": null
+          },
+          "model_prediction_recomputed": false
+        },
+        {
+          "seed": 20261114,
+          "saved_first3_gripper_percent": [
+            100,
+            100,
+            100
+          ],
+          "original_observation": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "updated_observation_same_saved_actions": {
+            "status": "additional_draws_required",
+            "selected_actions_unchanged": null
+          },
+          "model_prediction_recomputed": false
+        },
+        {
+          "seed": 20261115,
+          "saved_first3_gripper_percent": [
+            100,
+            100,
+            100
+          ],
+          "original_observation": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "updated_observation_same_saved_actions": {
+            "status": "additional_draws_required",
+            "selected_actions_unchanged": null
+          },
+          "model_prediction_recomputed": false
+        },
+        {
+          "seed": 20261116,
+          "saved_first3_gripper_percent": [
+            100,
+            100,
+            76
+          ],
+          "original_observation": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "updated_observation_same_saved_actions": {
+            "status": "additional_draws_required",
+            "selected_actions_unchanged": null
+          },
+          "model_prediction_recomputed": false
+        },
+        {
+          "seed": 20261117,
+          "saved_first3_gripper_percent": [
+            76,
+            76,
+            76
+          ],
+          "original_observation": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "updated_observation_same_saved_actions": {
+            "status": "first_draw_selected",
+            "selected_actions_unchanged": true
+          },
+          "model_prediction_recomputed": false
+        }
+      ]
+    }
+  ],
+  "details": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-input-dependence-20261117-v1/details.json"
+}

@@ -1,0 +1,24 @@
+{
+  "case_id": "cup-success-000002",
+  "robot_id": "J1",
+  "tags": [
+    "cup",
+    "grasp",
+    "lift",
+    "gripper_feedback",
+    "fixed_attitude",
+    "continuous_workflow",
+    "varied_start"
+  ],
+  "observed_outcome": "User accepted full second pickup/replacement episode. Historical verified20commands, actual49.98mm lift, release100 and retreat. Curated export retains719frames spanningall11phases; userreview is preserved.",
+  "applicability": "Same J1/Gemini335/graycup setup, fresh scene localization and current fixed attitude. Independent start differs from first trial; this is context for proposal selection only.",
+  "limitations": "Original rawRGB/depth/fulltelemetry/sourcecommands were lost afterPCreboot beforefullarchive. Current audit verifies retainedexport/historyreferences only; cannotrepeat fullrawprovenance audit. Two totalaccepted tasks do notprove generalization, newtoolTCP or clearances.",
+  "evidence": [
+    "4090:/home/data4/hts/demo1/fr5-learning/datasets/fr5-pi05-multitrial-20261029/meta/user_reviews/trial-0001.json",
+    "4090:/home/data4/hts/demo1/fr5-learning/datasets/fr5-pi05-multitrial-20261029/meta/fr5_source_frames.jsonl",
+    "/home/dianrobot/demo1/fr5_jev/results/pi05-reboot-audit-20261029/REPORT.txt"
+  ],
+  "user_statement": "成功，计入示范",
+  "recorded_unix": 1793275337.9143717,
+  "grants_execution_permission": false
+}

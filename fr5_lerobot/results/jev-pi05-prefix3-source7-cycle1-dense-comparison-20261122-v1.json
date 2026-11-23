@@ -1,0 +1,2274 @@
+{
+  "schema": "fr5-jev-pi05-prefix3-dense-comparison-v1",
+  "source_index": 7,
+  "source_frame_range": [
+    279,
+    299
+  ],
+  "unique_anchors": 21,
+  "draws_per_model": 63,
+  "fixed_seeds": [
+    20261493,
+    20261494,
+    20261495
+  ],
+  "native_action_shape": [
+    50,
+    7
+  ],
+  "physical_attempts": 0,
+  "robot_commands_sent": 0,
+  "models": [
+    {
+      "label": "parent5000",
+      "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-jev-history-balanced-base-20261121-v2/step-005000",
+      "configured_execution_steps": 10,
+      "seeds_per_anchor": [
+        20261493,
+        20261494,
+        20261495
+      ],
+      "prediction_draws": 63,
+      "full_native_predictions": "/home/data4/hts/demo1/fr5-learning/diagnostics/jev-pi05-history5000-source7-cycle1-temporal-replay-20261122-v1/predictions.jsonl",
+      "prefixes": {
+        "3": {
+          "draws_opening_before_source_release": 6,
+          "points_opening_before_source_release": 18,
+          "anchors_opening_before_source_release": 2,
+          "maximum_predicted_height_at_opening_mm": 0.24929189632710452,
+          "maximum_height_witness": {
+            "source_frame": 292,
+            "draw": 1,
+            "seed": 20261494,
+            "tick": 2,
+            "projected_integer_percent": 100,
+            "increase_over_anchor_feedback_pp": 22.0,
+            "increase_over_anchor_wire_pp": 24.0,
+            "seconds_from_source_release": -0.36187447200063616,
+            "predicted_height_vs_source_reference_mm": 0.24929189632710452,
+            "source_preceding_height_vs_reference_mm": 0.045902448862041194
+          },
+          "all_valid_anchor_feedback_comparison": {
+            "eligible_draws": 54,
+            "eligible_points": 162,
+            "missing_points": 27,
+            "draws_at_least_2pp": 7,
+            "points_at_least_2pp": 19,
+            "anchors_at_least_2pp": 3,
+            "maximum_increase_pp": 22.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "source_capture_frame": 292,
+              "row_index": 3735,
+              "draw": 0,
+              "seed": 20261493,
+              "tick": 1,
+              "raw_gripper_fraction": 1.0027083158493042,
+              "raw_gripper_percent": 100.27083158493042,
+              "projected_integer_percent": 100,
+              "increase_pp": 22.0,
+              "seconds_from_release_command": -0.5285411386721535,
+              "predicted_grasp_vs_release_reference": {
+                "delta_xyz_mm": [
+                  0.1280052150282529,
+                  0.46700836545096536,
+                  0.13244185747066695
+                ],
+                "distance_mm": 0.5020189180557761,
+                "height_along_table_normal_mm": 0.13250423570382985,
+                "base_z_difference_mm": 0.13244185747066695,
+                "lateral_to_table_normal_mm": 0.48421650282330947
+              },
+              "nearest_source_feedback": {
+                "available": true,
+                "frame_index": 294,
+                "robot_time_monotonic": 40804.635653756,
+                "robot_time_minus_nominal_s": 0.09702694167208392,
+                "camera_time_monotonic": 40804.63489323,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 1,
+                "tcp_speed_mm_s": 0.098345233424817,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.005304694627483286,
+                    -0.02162670933114441,
+                    0.045916762018777035
+                  ],
+                  "distance_mm": 0.05103139598201938,
+                  "height_along_table_normal_mm": 0.045902448862041194,
+                  "base_z_difference_mm": 0.045916762018777035,
+                  "lateral_to_table_normal_mm": 0.02229727706114264
+                }
+              },
+              "latest_preceding_source_feedback": {
+                "available": true,
+                "frame_index": 293,
+                "robot_time_monotonic": 40804.435744799,
+                "robot_time_minus_nominal_s": -0.10288201532966923,
+                "camera_time_monotonic": 40804.43474633,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 1,
+                "tcp_speed_mm_s": 0.4492994422587194,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.010170754100158774,
+                    -0.03635302971724741,
+                    0.1253263890211258
+                  ],
+                  "distance_mm": 0.13088808499501983,
+                  "height_along_table_normal_mm": 0.12531357113306796,
+                  "base_z_difference_mm": 0.1253263890211258,
+                  "lateral_to_table_normal_mm": 0.037791529256449144
+                }
+              }
+            }
+          },
+          "raw_thresholds": {
+            "90": {
+              "draws_with_first_opening": 16,
+              "distinct_source_anchors": 6,
+              "draws_before_recorded_release": 6,
+              "predicted_height_minus_reference_mm": {
+                "count": 16,
+                "min": -0.8344856585759932,
+                "mean": -0.3978273594089187,
+                "median": -0.398539313906763,
+                "p95": 0.023712467476388173,
+                "max": 0.13250423570382985
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 6,
+                "min": 0.045902448862041194,
+                "mean": 0.08560800999755458,
+                "median": 0.08560800999755458,
+                "p95": 0.12531357113306796,
+                "max": 0.12531357113306796
+              }
+            },
+            "98": {
+              "draws_with_first_opening": 16,
+              "distinct_source_anchors": 6,
+              "draws_before_recorded_release": 6,
+              "predicted_height_minus_reference_mm": {
+                "count": 16,
+                "min": -0.8344856585759932,
+                "mean": -0.3978273594089187,
+                "median": -0.398539313906763,
+                "p95": 0.023712467476388173,
+                "max": 0.13250423570382985
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 6,
+                "min": 0.045902448862041194,
+                "mean": 0.08560800999755458,
+                "median": 0.08560800999755458,
+                "p95": 0.12531357113306796,
+                "max": 0.12531357113306796
+              }
+            }
+          }
+        },
+        "6": {
+          "draws_opening_before_source_release": 29,
+          "points_opening_before_source_release": 69,
+          "anchors_opening_before_source_release": 13,
+          "maximum_predicted_height_at_opening_mm": 14.385250581936647,
+          "maximum_height_witness": {
+            "source_frame": 282,
+            "draw": 0,
+            "seed": 20261493,
+            "tick": 6,
+            "projected_integer_percent": 100,
+            "increase_over_anchor_feedback_pp": 22.0,
+            "increase_over_anchor_wire_pp": 24.0,
+            "seconds_from_source_release": -1.3618744720006362,
+            "predicted_height_vs_source_reference_mm": 14.385250581936647,
+            "source_preceding_height_vs_reference_mm": 5.1095774836277155
+          },
+          "all_valid_anchor_feedback_comparison": {
+            "eligible_draws": 54,
+            "eligible_points": 324,
+            "missing_points": 54,
+            "draws_at_least_2pp": 36,
+            "points_at_least_2pp": 108,
+            "anchors_at_least_2pp": 16,
+            "maximum_increase_pp": 22.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "source_capture_frame": 282,
+              "row_index": 3725,
+              "draw": 0,
+              "seed": 20261493,
+              "tick": 6,
+              "raw_gripper_fraction": 1.0006728172302246,
+              "raw_gripper_percent": 100.06728172302246,
+              "projected_integer_percent": 100,
+              "increase_pp": 22.0,
+              "seconds_from_release_command": -1.3618744720006362,
+              "predicted_grasp_vs_release_reference": {
+                "delta_xyz_mm": [
+                  0.32300953170644675,
+                  -0.2380720811371475,
+                  14.391019850799026
+                ],
+                "distance_mm": 14.396612998184045,
+                "height_along_table_normal_mm": 14.385250581936647,
+                "base_z_difference_mm": 14.391019850799026,
+                "lateral_to_table_normal_mm": 0.5718666928342576
+              },
+              "nearest_source_feedback": {
+                "available": true,
+                "frame_index": 289,
+                "robot_time_monotonic": 40803.735733431,
+                "robot_time_minus_nominal_s": 0.030439950001891702,
+                "camera_time_monotonic": 40803.734286381,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 10.69881540070368,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    0.003121798729779357,
+                    0.005303173742845502,
+                    4.078201396600875
+                  ],
+                  "distance_mm": 4.078206039487998,
+                  "height_along_table_normal_mm": 4.077868948572445,
+                  "base_z_difference_mm": 4.078201396600875,
+                  "lateral_to_table_normal_mm": 0.05243413759226273
+                }
+              },
+              "latest_preceding_source_feedback": {
+                "available": true,
+                "frame_index": 288,
+                "robot_time_monotonic": 40803.635636476,
+                "robot_time_minus_nominal_s": -0.0696570049985894,
+                "camera_time_monotonic": 40803.634293967,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 8.544039680717601,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.0001823146174615431,
+                    -0.010341144058770624,
+                    5.110003376376596
+                  ],
+                  "distance_mm": 5.110013843335386,
+                  "height_along_table_normal_mm": 5.1095774836277155,
+                  "base_z_difference_mm": 5.110003376376596,
+                  "lateral_to_table_normal_mm": 0.06677887303591276
+                }
+              }
+            }
+          },
+          "raw_thresholds": {
+            "90": {
+              "draws_with_first_opening": 45,
+              "distinct_source_anchors": 19,
+              "draws_before_recorded_release": 29,
+              "predicted_height_minus_reference_mm": {
+                "count": 45,
+                "min": -1.9571415919293156,
+                "mean": 2.9754511269444093,
+                "median": -0.012551455266092386,
+                "p95": 13.141190484708652,
+                "max": 14.385250581936647
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 29,
+                "min": 0.02014583636379198,
+                "mean": 1.3406958798994315,
+                "median": 0.19923015130390398,
+                "p95": 6.238948575480572,
+                "max": 6.991862636715816
+              }
+            },
+            "98": {
+              "draws_with_first_opening": 43,
+              "distinct_source_anchors": 18,
+              "draws_before_recorded_release": 27,
+              "predicted_height_minus_reference_mm": {
+                "count": 43,
+                "min": -2.3061189167738987,
+                "mean": 2.547925968636342,
+                "median": -0.06630077463543264,
+                "p95": 12.939632741646488,
+                "max": 14.385250581936647
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 27,
+                "min": 0.0,
+                "mean": 1.1729237738037033,
+                "median": 0.12531357113306796,
+                "p95": 5.1095774836277155,
+                "max": 6.991862636715816
+              }
+            }
+          }
+        },
+        "10": {
+          "draws_opening_before_source_release": 39,
+          "points_opening_before_source_release": 158,
+          "anchors_opening_before_source_release": 15,
+          "maximum_predicted_height_at_opening_mm": 16.481371782499885,
+          "maximum_height_witness": {
+            "source_frame": 280,
+            "draw": 1,
+            "seed": 20261494,
+            "tick": 8,
+            "projected_integer_percent": 95,
+            "increase_over_anchor_feedback_pp": 17.0,
+            "increase_over_anchor_wire_pp": 19.0,
+            "seconds_from_source_release": -1.3618744720006362,
+            "predicted_height_vs_source_reference_mm": 16.481371782499885,
+            "source_preceding_height_vs_reference_mm": 5.1095774836277155
+          },
+          "all_valid_anchor_feedback_comparison": {
+            "eligible_draws": 54,
+            "eligible_points": 540,
+            "missing_points": 90,
+            "draws_at_least_2pp": 50,
+            "points_at_least_2pp": 297,
+            "anchors_at_least_2pp": 18,
+            "maximum_increase_pp": 22.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "source_capture_frame": 279,
+              "row_index": 3722,
+              "draw": 2,
+              "seed": 20261495,
+              "tick": 8,
+              "raw_gripper_fraction": 0.997226893901825,
+              "raw_gripper_percent": 99.7226893901825,
+              "projected_integer_percent": 100,
+              "increase_pp": 22.0,
+              "seconds_from_release_command": -1.5285411386648775,
+              "predicted_grasp_vs_release_reference": {
+                "delta_xyz_mm": [
+                  0.1969872350985895,
+                  -0.13284169066014329,
+                  16.296709494301993
+                ],
+                "distance_mm": 16.298441374169553,
+                "height_along_table_normal_mm": 16.292655439605767,
+                "base_z_difference_mm": 16.296709494301993,
+                "lateral_to_table_normal_mm": 0.43424642028067884
+              },
+              "nearest_source_feedback": {
+                "available": true,
+                "frame_index": 288,
+                "robot_time_monotonic": 40803.635636476,
+                "robot_time_minus_nominal_s": 0.09700966166565195,
+                "camera_time_monotonic": 40803.634293967,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 8.544039680717601,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.0001823146174615431,
+                    -0.010341144058770624,
+                    5.110003376376596
+                  ],
+                  "distance_mm": 5.110013843335386,
+                  "height_along_table_normal_mm": 5.1095774836277155,
+                  "base_z_difference_mm": 5.110003376376596,
+                  "lateral_to_table_normal_mm": 0.06677887303591276
+                }
+              },
+              "latest_preceding_source_feedback": {
+                "available": true,
+                "frame_index": 287,
+                "robot_time_monotonic": 40803.435745691,
+                "robot_time_minus_nominal_s": -0.10288112333364552,
+                "camera_time_monotonic": 40803.434139875,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 10.660735589919527,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.008610346095167642,
+                    -0.03764533629237121,
+                    6.992426179558336
+                  ],
+                  "distance_mm": 6.99253281622455,
+                  "height_along_table_normal_mm": 6.991862636715816,
+                  "base_z_difference_mm": 6.992426179558336,
+                  "lateral_to_table_normal_mm": 0.09680937596430562
+                }
+              }
+            }
+          },
+          "raw_thresholds": {
+            "90": {
+              "draws_with_first_opening": 59,
+              "distinct_source_anchors": 21,
+              "draws_before_recorded_release": 39,
+              "predicted_height_minus_reference_mm": {
+                "count": 59,
+                "min": -2.1006822186422776,
+                "mean": 4.37467711552677,
+                "median": 1.4351717163670605,
+                "p95": 15.321633577518448,
+                "max": 16.37978667711204
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 39,
+                "min": 0.02014583636379198,
+                "mean": 1.6572089893399864,
+                "median": 0.19923015130390398,
+                "p95": 6.991862636715816,
+                "max": 6.991862636715816
+              }
+            },
+            "98": {
+              "draws_with_first_opening": 58,
+              "distinct_source_anchors": 21,
+              "draws_before_recorded_release": 38,
+              "predicted_height_minus_reference_mm": {
+                "count": 58,
+                "min": -2.3061189167738987,
+                "mean": 4.164934621089051,
+                "median": 1.3086070142699429,
+                "p95": 15.248149596759278,
+                "max": 16.37978667711204
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 38,
+                "min": 0.0,
+                "mean": 1.4648142204716041,
+                "median": 0.19923015130390398,
+                "p95": 5.391920256590928,
+                "max": 6.991862636715816
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "label": "control500",
+      "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-jev-history-prefix3-control-20261122-v1/step-000500",
+      "configured_execution_steps": 3,
+      "seeds_per_anchor": [
+        20261493,
+        20261494,
+        20261495
+      ],
+      "prediction_draws": 63,
+      "full_native_predictions": "/home/data4/hts/demo1/fr5-learning/diagnostics/jev-pi05-prefix3-control500-source7-cycle1-temporal-replay-20261122-v1/predictions.jsonl",
+      "prefixes": {
+        "3": {
+          "draws_opening_before_source_release": 6,
+          "points_opening_before_source_release": 18,
+          "anchors_opening_before_source_release": 2,
+          "maximum_predicted_height_at_opening_mm": 0.7759578699993885,
+          "maximum_height_witness": {
+            "source_frame": 292,
+            "draw": 1,
+            "seed": 20261494,
+            "tick": 2,
+            "projected_integer_percent": 100,
+            "increase_over_anchor_feedback_pp": 22.0,
+            "increase_over_anchor_wire_pp": 24.0,
+            "seconds_from_source_release": -0.36187447200063616,
+            "predicted_height_vs_source_reference_mm": 0.7759578699993885,
+            "source_preceding_height_vs_reference_mm": 0.045902448862041194
+          },
+          "all_valid_anchor_feedback_comparison": {
+            "eligible_draws": 54,
+            "eligible_points": 162,
+            "missing_points": 27,
+            "draws_at_least_2pp": 7,
+            "points_at_least_2pp": 19,
+            "anchors_at_least_2pp": 3,
+            "maximum_increase_pp": 22.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "source_capture_frame": 292,
+              "row_index": 3735,
+              "draw": 0,
+              "seed": 20261493,
+              "tick": 1,
+              "raw_gripper_fraction": 1.0028072595596313,
+              "raw_gripper_percent": 100.28072595596313,
+              "projected_integer_percent": 100,
+              "increase_pp": 22.0,
+              "seconds_from_release_command": -0.5285411386721535,
+              "predicted_grasp_vs_release_reference": {
+                "delta_xyz_mm": [
+                  0.11856146936804635,
+                  0.4033966724008451,
+                  0.3260621252139373
+                ],
+                "distance_mm": 0.5320734975751135,
+                "height_along_table_normal_mm": 0.3260045126483394,
+                "base_z_difference_mm": 0.3260621252139373,
+                "lateral_to_table_normal_mm": 0.42050358447310887
+              },
+              "nearest_source_feedback": {
+                "available": true,
+                "frame_index": 294,
+                "robot_time_monotonic": 40804.635653756,
+                "robot_time_minus_nominal_s": 0.09702694167208392,
+                "camera_time_monotonic": 40804.63489323,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 1,
+                "tcp_speed_mm_s": 0.098345233424817,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.005304694627483286,
+                    -0.02162670933114441,
+                    0.045916762018777035
+                  ],
+                  "distance_mm": 0.05103139598201938,
+                  "height_along_table_normal_mm": 0.045902448862041194,
+                  "base_z_difference_mm": 0.045916762018777035,
+                  "lateral_to_table_normal_mm": 0.02229727706114264
+                }
+              },
+              "latest_preceding_source_feedback": {
+                "available": true,
+                "frame_index": 293,
+                "robot_time_monotonic": 40804.435744799,
+                "robot_time_minus_nominal_s": -0.10288201532966923,
+                "camera_time_monotonic": 40804.43474633,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 1,
+                "tcp_speed_mm_s": 0.4492994422587194,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.010170754100158774,
+                    -0.03635302971724741,
+                    0.1253263890211258
+                  ],
+                  "distance_mm": 0.13088808499501983,
+                  "height_along_table_normal_mm": 0.12531357113306796,
+                  "base_z_difference_mm": 0.1253263890211258,
+                  "lateral_to_table_normal_mm": 0.037791529256449144
+                }
+              }
+            }
+          },
+          "raw_thresholds": {
+            "90": {
+              "draws_with_first_opening": 16,
+              "distinct_source_anchors": 6,
+              "draws_before_recorded_release": 6,
+              "predicted_height_minus_reference_mm": {
+                "count": 16,
+                "min": -0.466503508917541,
+                "mean": 0.01789166542422169,
+                "median": 0.008110818512369538,
+                "p95": 0.4989345559061955,
+                "max": 0.6069471614040687
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 6,
+                "min": 0.045902448862041194,
+                "mean": 0.08560800999755458,
+                "median": 0.08560800999755458,
+                "p95": 0.12531357113306796,
+                "max": 0.12531357113306796
+              }
+            },
+            "98": {
+              "draws_with_first_opening": 16,
+              "distinct_source_anchors": 6,
+              "draws_before_recorded_release": 6,
+              "predicted_height_minus_reference_mm": {
+                "count": 16,
+                "min": -0.466503508917541,
+                "mean": 0.01789166542422169,
+                "median": 0.008110818512369538,
+                "p95": 0.4989345559061955,
+                "max": 0.6069471614040687
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 6,
+                "min": 0.045902448862041194,
+                "mean": 0.08560800999755458,
+                "median": 0.08560800999755458,
+                "p95": 0.12531357113306796,
+                "max": 0.12531357113306796
+              }
+            }
+          }
+        },
+        "6": {
+          "draws_opening_before_source_release": 30,
+          "points_opening_before_source_release": 68,
+          "anchors_opening_before_source_release": 14,
+          "maximum_predicted_height_at_opening_mm": 15.152073708829324,
+          "maximum_height_witness": {
+            "source_frame": 280,
+            "draw": 1,
+            "seed": 20261494,
+            "tick": 6,
+            "projected_integer_percent": 99,
+            "increase_over_anchor_feedback_pp": 21.0,
+            "increase_over_anchor_wire_pp": 23.0,
+            "seconds_from_source_release": -1.6952078053363948,
+            "predicted_height_vs_source_reference_mm": 15.152073708829324,
+            "source_preceding_height_vs_reference_mm": 8.930079741654872
+          },
+          "all_valid_anchor_feedback_comparison": {
+            "eligible_draws": 54,
+            "eligible_points": 324,
+            "missing_points": 54,
+            "draws_at_least_2pp": 37,
+            "points_at_least_2pp": 107,
+            "anchors_at_least_2pp": 17,
+            "maximum_increase_pp": 22.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "source_capture_frame": 281,
+              "row_index": 3724,
+              "draw": 1,
+              "seed": 20261494,
+              "tick": 6,
+              "raw_gripper_fraction": 1.0018362998962402,
+              "raw_gripper_percent": 100.18362998962402,
+              "projected_integer_percent": 100,
+              "increase_pp": 22.0,
+              "seconds_from_release_command": -1.5285411386648775,
+              "predicted_grasp_vs_release_reference": {
+                "delta_xyz_mm": [
+                  0.2896724218455802,
+                  0.294738529039023,
+                  14.14910604332401
+                ],
+                "distance_mm": 14.155139799299263,
+                "height_along_table_normal_mm": 14.145575539231892,
+                "base_z_difference_mm": 14.14910604332401,
+                "lateral_to_table_normal_mm": 0.5202647418290124
+              },
+              "nearest_source_feedback": {
+                "available": true,
+                "frame_index": 288,
+                "robot_time_monotonic": 40803.635636476,
+                "robot_time_minus_nominal_s": 0.09700966166565195,
+                "camera_time_monotonic": 40803.634293967,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 8.544039680717601,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.0001823146174615431,
+                    -0.010341144058770624,
+                    5.110003376376596
+                  ],
+                  "distance_mm": 5.110013843335386,
+                  "height_along_table_normal_mm": 5.1095774836277155,
+                  "base_z_difference_mm": 5.110003376376596,
+                  "lateral_to_table_normal_mm": 0.06677887303591276
+                }
+              },
+              "latest_preceding_source_feedback": {
+                "available": true,
+                "frame_index": 287,
+                "robot_time_monotonic": 40803.435745691,
+                "robot_time_minus_nominal_s": -0.10288112333364552,
+                "camera_time_monotonic": 40803.434139875,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 10.660735589919527,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.008610346095167642,
+                    -0.03764533629237121,
+                    6.992426179558336
+                  ],
+                  "distance_mm": 6.99253281622455,
+                  "height_along_table_normal_mm": 6.991862636715816,
+                  "base_z_difference_mm": 6.992426179558336,
+                  "lateral_to_table_normal_mm": 0.09680937596430562
+                }
+              }
+            }
+          },
+          "raw_thresholds": {
+            "90": {
+              "draws_with_first_opening": 45,
+              "distinct_source_anchors": 20,
+              "draws_before_recorded_release": 29,
+              "predicted_height_minus_reference_mm": {
+                "count": 45,
+                "min": -2.8154195833163342,
+                "mean": 3.5099019001435963,
+                "median": 0.4629303540735711,
+                "p95": 14.000787213938763,
+                "max": 15.152073708829324
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 29,
+                "min": 0.02014583636379198,
+                "mean": 1.641759658877051,
+                "median": 0.19923015130390398,
+                "p95": 6.991862636715816,
+                "max": 8.930079741654872
+              }
+            },
+            "98": {
+              "draws_with_first_opening": 44,
+              "distinct_source_anchors": 20,
+              "draws_before_recorded_release": 28,
+              "predicted_height_minus_reference_mm": {
+                "count": 44,
+                "min": -2.8154195833163342,
+                "mean": 3.38692290897739,
+                "median": 0.42611217553598474,
+                "p95": 14.036984295262048,
+                "max": 15.152073708829324
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 28,
+                "min": 0.0,
+                "mean": 1.6925590757059565,
+                "median": 0.16227186121848597,
+                "p95": 6.991862636715816,
+                "max": 8.930079741654872
+              }
+            }
+          }
+        },
+        "10": {
+          "draws_opening_before_source_release": 39,
+          "points_opening_before_source_release": 157,
+          "anchors_opening_before_source_release": 15,
+          "maximum_predicted_height_at_opening_mm": 16.820261714926104,
+          "maximum_height_witness": {
+            "source_frame": 280,
+            "draw": 1,
+            "seed": 20261494,
+            "tick": 8,
+            "projected_integer_percent": 100,
+            "increase_over_anchor_feedback_pp": 22.0,
+            "increase_over_anchor_wire_pp": 24.0,
+            "seconds_from_source_release": -1.3618744720006362,
+            "predicted_height_vs_source_reference_mm": 16.820261714926104,
+            "source_preceding_height_vs_reference_mm": 5.1095774836277155
+          },
+          "all_valid_anchor_feedback_comparison": {
+            "eligible_draws": 54,
+            "eligible_points": 540,
+            "missing_points": 90,
+            "draws_at_least_2pp": 50,
+            "points_at_least_2pp": 296,
+            "anchors_at_least_2pp": 18,
+            "maximum_increase_pp": 22.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "source_capture_frame": 279,
+              "row_index": 3722,
+              "draw": 2,
+              "seed": 20261495,
+              "tick": 8,
+              "raw_gripper_fraction": 1.0019656419754028,
+              "raw_gripper_percent": 100.19656419754028,
+              "projected_integer_percent": 100,
+              "increase_pp": 22.0,
+              "seconds_from_release_command": -1.5285411386648775,
+              "predicted_grasp_vs_release_reference": {
+                "delta_xyz_mm": [
+                  0.2234656761143583,
+                  -0.19443527241514857,
+                  16.67762705860504
+                ],
+                "distance_mm": 16.680257380792284,
+                "height_along_table_normal_mm": 16.673017491656168,
+                "base_z_difference_mm": 16.67762705860504,
+                "lateral_to_table_normal_mm": 0.4914000533199794
+              },
+              "nearest_source_feedback": {
+                "available": true,
+                "frame_index": 288,
+                "robot_time_monotonic": 40803.635636476,
+                "robot_time_minus_nominal_s": 0.09700966166565195,
+                "camera_time_monotonic": 40803.634293967,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 8.544039680717601,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.0001823146174615431,
+                    -0.010341144058770624,
+                    5.110003376376596
+                  ],
+                  "distance_mm": 5.110013843335386,
+                  "height_along_table_normal_mm": 5.1095774836277155,
+                  "base_z_difference_mm": 5.110003376376596,
+                  "lateral_to_table_normal_mm": 0.06677887303591276
+                }
+              },
+              "latest_preceding_source_feedback": {
+                "available": true,
+                "frame_index": 287,
+                "robot_time_monotonic": 40803.435745691,
+                "robot_time_minus_nominal_s": -0.10288112333364552,
+                "camera_time_monotonic": 40803.434139875,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 10.660735589919527,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.008610346095167642,
+                    -0.03764533629237121,
+                    6.992426179558336
+                  ],
+                  "distance_mm": 6.99253281622455,
+                  "height_along_table_normal_mm": 6.991862636715816,
+                  "base_z_difference_mm": 6.992426179558336,
+                  "lateral_to_table_normal_mm": 0.09680937596430562
+                }
+              }
+            }
+          },
+          "raw_thresholds": {
+            "90": {
+              "draws_with_first_opening": 59,
+              "distinct_source_anchors": 21,
+              "draws_before_recorded_release": 39,
+              "predicted_height_minus_reference_mm": {
+                "count": 59,
+                "min": -2.8154195833163342,
+                "mean": 4.569622256872672,
+                "median": 1.6707757822746574,
+                "p95": 15.172331749302433,
+                "max": 16.673017491656168
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 39,
+                "min": 0.02014583636379198,
+                "mean": 1.702314958314318,
+                "median": 0.19923015130390398,
+                "p95": 6.991862636715816,
+                "max": 8.930079741654872
+              }
+            },
+            "98": {
+              "draws_with_first_opening": 59,
+              "distinct_source_anchors": 21,
+              "draws_before_recorded_release": 39,
+              "predicted_height_minus_reference_mm": {
+                "count": 59,
+                "min": -2.8154195833163342,
+                "mean": 4.605379433431372,
+                "median": 1.703495875061536,
+                "p95": 15.172331749302433,
+                "max": 16.673017491656168
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 39,
+                "min": 0.0,
+                "mean": 1.6999031014800965,
+                "median": 0.19923015130390398,
+                "p95": 6.991862636715816,
+                "max": 8.930079741654872
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "label": "weight8500",
+      "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-jev-history-prefix3-weight8-20261122-v1/step-000500",
+      "configured_execution_steps": 3,
+      "seeds_per_anchor": [
+        20261493,
+        20261494,
+        20261495
+      ],
+      "prediction_draws": 63,
+      "full_native_predictions": "/home/data4/hts/demo1/fr5-learning/diagnostics/jev-pi05-prefix3-weight8500-source7-cycle1-temporal-replay-20261122-v1/predictions.jsonl",
+      "prefixes": {
+        "3": {
+          "draws_opening_before_source_release": 6,
+          "points_opening_before_source_release": 18,
+          "anchors_opening_before_source_release": 2,
+          "maximum_predicted_height_at_opening_mm": 0.7885765148532807,
+          "maximum_height_witness": {
+            "source_frame": 292,
+            "draw": 1,
+            "seed": 20261494,
+            "tick": 2,
+            "projected_integer_percent": 100,
+            "increase_over_anchor_feedback_pp": 22.0,
+            "increase_over_anchor_wire_pp": 24.0,
+            "seconds_from_source_release": -0.36187447200063616,
+            "predicted_height_vs_source_reference_mm": 0.7885765148532807,
+            "source_preceding_height_vs_reference_mm": 0.045902448862041194
+          },
+          "all_valid_anchor_feedback_comparison": {
+            "eligible_draws": 54,
+            "eligible_points": 162,
+            "missing_points": 27,
+            "draws_at_least_2pp": 7,
+            "points_at_least_2pp": 19,
+            "anchors_at_least_2pp": 3,
+            "maximum_increase_pp": 22.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "source_capture_frame": 292,
+              "row_index": 3735,
+              "draw": 0,
+              "seed": 20261493,
+              "tick": 1,
+              "raw_gripper_fraction": 1.0036824941635132,
+              "raw_gripper_percent": 100.36824941635132,
+              "projected_integer_percent": 100,
+              "increase_pp": 22.0,
+              "seconds_from_release_command": -0.5285411386721535,
+              "predicted_grasp_vs_release_reference": {
+                "delta_xyz_mm": [
+                  0.015660170502087567,
+                  0.49985640143404453,
+                  0.6955919718849799
+                ],
+                "distance_mm": 0.8567087336694904,
+                "height_along_table_normal_mm": 0.6970621140697991,
+                "base_z_difference_mm": 0.6955919718849799,
+                "lateral_to_table_normal_mm": 0.49805046277874715
+              },
+              "nearest_source_feedback": {
+                "available": true,
+                "frame_index": 294,
+                "robot_time_monotonic": 40804.635653756,
+                "robot_time_minus_nominal_s": 0.09702694167208392,
+                "camera_time_monotonic": 40804.63489323,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 1,
+                "tcp_speed_mm_s": 0.098345233424817,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.005304694627483286,
+                    -0.02162670933114441,
+                    0.045916762018777035
+                  ],
+                  "distance_mm": 0.05103139598201938,
+                  "height_along_table_normal_mm": 0.045902448862041194,
+                  "base_z_difference_mm": 0.045916762018777035,
+                  "lateral_to_table_normal_mm": 0.02229727706114264
+                }
+              },
+              "latest_preceding_source_feedback": {
+                "available": true,
+                "frame_index": 293,
+                "robot_time_monotonic": 40804.435744799,
+                "robot_time_minus_nominal_s": -0.10288201532966923,
+                "camera_time_monotonic": 40804.43474633,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 1,
+                "tcp_speed_mm_s": 0.4492994422587194,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.010170754100158774,
+                    -0.03635302971724741,
+                    0.1253263890211258
+                  ],
+                  "distance_mm": 0.13088808499501983,
+                  "height_along_table_normal_mm": 0.12531357113306796,
+                  "base_z_difference_mm": 0.1253263890211258,
+                  "lateral_to_table_normal_mm": 0.037791529256449144
+                }
+              }
+            }
+          },
+          "raw_thresholds": {
+            "90": {
+              "draws_with_first_opening": 16,
+              "distinct_source_anchors": 6,
+              "draws_before_recorded_release": 6,
+              "predicted_height_minus_reference_mm": {
+                "count": 16,
+                "min": -0.5209991366565211,
+                "mean": 0.09103011738731162,
+                "median": 0.05000605616545615,
+                "p95": 0.6510235102058834,
+                "max": 0.6970621140697991
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 6,
+                "min": 0.045902448862041194,
+                "mean": 0.08560800999755458,
+                "median": 0.08560800999755458,
+                "p95": 0.12531357113306796,
+                "max": 0.12531357113306796
+              }
+            },
+            "98": {
+              "draws_with_first_opening": 16,
+              "distinct_source_anchors": 6,
+              "draws_before_recorded_release": 6,
+              "predicted_height_minus_reference_mm": {
+                "count": 16,
+                "min": -0.5209991366565211,
+                "mean": 0.09103011738731162,
+                "median": 0.05000605616545615,
+                "p95": 0.6510235102058834,
+                "max": 0.6970621140697991
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 6,
+                "min": 0.045902448862041194,
+                "mean": 0.08560800999755458,
+                "median": 0.08560800999755458,
+                "p95": 0.12531357113306796,
+                "max": 0.12531357113306796
+              }
+            }
+          }
+        },
+        "6": {
+          "draws_opening_before_source_release": 28,
+          "points_opening_before_source_release": 65,
+          "anchors_opening_before_source_release": 14,
+          "maximum_predicted_height_at_opening_mm": 14.848055962126997,
+          "maximum_height_witness": {
+            "source_frame": 280,
+            "draw": 1,
+            "seed": 20261494,
+            "tick": 6,
+            "projected_integer_percent": 95,
+            "increase_over_anchor_feedback_pp": 17.0,
+            "increase_over_anchor_wire_pp": 19.0,
+            "seconds_from_source_release": -1.6952078053363948,
+            "predicted_height_vs_source_reference_mm": 14.848055962126997,
+            "source_preceding_height_vs_reference_mm": 8.930079741654872
+          },
+          "all_valid_anchor_feedback_comparison": {
+            "eligible_draws": 54,
+            "eligible_points": 324,
+            "missing_points": 54,
+            "draws_at_least_2pp": 35,
+            "points_at_least_2pp": 103,
+            "anchors_at_least_2pp": 17,
+            "maximum_increase_pp": 22.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "source_capture_frame": 282,
+              "row_index": 3725,
+              "draw": 0,
+              "seed": 20261493,
+              "tick": 6,
+              "raw_gripper_fraction": 1.001575231552124,
+              "raw_gripper_percent": 100.1575231552124,
+              "projected_integer_percent": 100,
+              "increase_pp": 22.0,
+              "seconds_from_release_command": -1.3618744720006362,
+              "predicted_grasp_vs_release_reference": {
+                "delta_xyz_mm": [
+                  0.24635478126964472,
+                  -0.23859949562199745,
+                  14.578440231138046
+                ],
+                "distance_mm": 14.582473726032557,
+                "height_along_table_normal_mm": 14.573568139778358,
+                "base_z_difference_mm": 14.578440231138046,
+                "lateral_to_table_normal_mm": 0.5095602473378639
+              },
+              "nearest_source_feedback": {
+                "available": true,
+                "frame_index": 289,
+                "robot_time_monotonic": 40803.735733431,
+                "robot_time_minus_nominal_s": 0.030439950001891702,
+                "camera_time_monotonic": 40803.734286381,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 10.69881540070368,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    0.003121798729779357,
+                    0.005303173742845502,
+                    4.078201396600875
+                  ],
+                  "distance_mm": 4.078206039487998,
+                  "height_along_table_normal_mm": 4.077868948572445,
+                  "base_z_difference_mm": 4.078201396600875,
+                  "lateral_to_table_normal_mm": 0.05243413759226273
+                }
+              },
+              "latest_preceding_source_feedback": {
+                "available": true,
+                "frame_index": 288,
+                "robot_time_monotonic": 40803.635636476,
+                "robot_time_minus_nominal_s": -0.0696570049985894,
+                "camera_time_monotonic": 40803.634293967,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 8.544039680717601,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.0001823146174615431,
+                    -0.010341144058770624,
+                    5.110003376376596
+                  ],
+                  "distance_mm": 5.110013843335386,
+                  "height_along_table_normal_mm": 5.1095774836277155,
+                  "base_z_difference_mm": 5.110003376376596,
+                  "lateral_to_table_normal_mm": 0.06677887303591276
+                }
+              }
+            }
+          },
+          "raw_thresholds": {
+            "90": {
+              "draws_with_first_opening": 44,
+              "distinct_source_anchors": 20,
+              "draws_before_recorded_release": 28,
+              "predicted_height_minus_reference_mm": {
+                "count": 44,
+                "min": -3.324013461640069,
+                "mean": 3.3330474333560676,
+                "median": 0.5656000169845405,
+                "p95": 13.81097007317444,
+                "max": 14.848055962126997
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 28,
+                "min": 0.0,
+                "mean": 1.6925590757059565,
+                "median": 0.16227186121848597,
+                "p95": 6.991862636715816,
+                "max": 8.930079741654872
+              }
+            },
+            "98": {
+              "draws_with_first_opening": 42,
+              "distinct_source_anchors": 18,
+              "draws_before_recorded_release": 26,
+              "predicted_height_minus_reference_mm": {
+                "count": 42,
+                "min": -3.324013461640069,
+                "mean": 2.8357719124242475,
+                "median": 0.5315617606763168,
+                "p95": 13.240585892787994,
+                "max": 14.573568139778358
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 26,
+                "min": 0.0,
+                "mean": 1.209213331855064,
+                "median": 0.12531357113306796,
+                "p95": 5.1095774836277155,
+                "max": 6.991862636715816
+              }
+            }
+          }
+        },
+        "10": {
+          "draws_opening_before_source_release": 39,
+          "points_opening_before_source_release": 154,
+          "anchors_opening_before_source_release": 15,
+          "maximum_predicted_height_at_opening_mm": 16.650467750865815,
+          "maximum_height_witness": {
+            "source_frame": 280,
+            "draw": 1,
+            "seed": 20261494,
+            "tick": 8,
+            "projected_integer_percent": 100,
+            "increase_over_anchor_feedback_pp": 22.0,
+            "increase_over_anchor_wire_pp": 24.0,
+            "seconds_from_source_release": -1.3618744720006362,
+            "predicted_height_vs_source_reference_mm": 16.650467750865815,
+            "source_preceding_height_vs_reference_mm": 5.1095774836277155
+          },
+          "all_valid_anchor_feedback_comparison": {
+            "eligible_draws": 54,
+            "eligible_points": 540,
+            "missing_points": 90,
+            "draws_at_least_2pp": 50,
+            "points_at_least_2pp": 292,
+            "anchors_at_least_2pp": 18,
+            "maximum_increase_pp": 22.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "source_capture_frame": 279,
+              "row_index": 3722,
+              "draw": 2,
+              "seed": 20261495,
+              "tick": 8,
+              "raw_gripper_fraction": 1.0016818046569824,
+              "raw_gripper_percent": 100.16818046569824,
+              "projected_integer_percent": 100,
+              "increase_pp": 22.0,
+              "seconds_from_release_command": -1.5285411386648775,
+              "predicted_grasp_vs_release_reference": {
+                "delta_xyz_mm": [
+                  0.14335920370515964,
+                  -0.20772794891354351,
+                  16.030303240241224
+                ],
+                "distance_mm": 16.032290065244425,
+                "height_along_table_normal_mm": 16.02665245217392,
+                "base_z_difference_mm": 16.030303240241224,
+                "lateral_to_table_normal_mm": 0.42513046628396645
+              },
+              "nearest_source_feedback": {
+                "available": true,
+                "frame_index": 288,
+                "robot_time_monotonic": 40803.635636476,
+                "robot_time_minus_nominal_s": 0.09700966166565195,
+                "camera_time_monotonic": 40803.634293967,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 8.544039680717601,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.0001823146174615431,
+                    -0.010341144058770624,
+                    5.110003376376596
+                  ],
+                  "distance_mm": 5.110013843335386,
+                  "height_along_table_normal_mm": 5.1095774836277155,
+                  "base_z_difference_mm": 5.110003376376596,
+                  "lateral_to_table_normal_mm": 0.06677887303591276
+                }
+              },
+              "latest_preceding_source_feedback": {
+                "available": true,
+                "frame_index": 287,
+                "robot_time_monotonic": 40803.435745691,
+                "robot_time_minus_nominal_s": -0.10288112333364552,
+                "camera_time_monotonic": 40803.434139875,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 10.660735589919527,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.008610346095167642,
+                    -0.03764533629237121,
+                    6.992426179558336
+                  ],
+                  "distance_mm": 6.99253281622455,
+                  "height_along_table_normal_mm": 6.991862636715816,
+                  "base_z_difference_mm": 6.992426179558336,
+                  "lateral_to_table_normal_mm": 0.09680937596430562
+                }
+              }
+            }
+          },
+          "raw_thresholds": {
+            "90": {
+              "draws_with_first_opening": 59,
+              "distinct_source_anchors": 21,
+              "draws_before_recorded_release": 39,
+              "predicted_height_minus_reference_mm": {
+                "count": 59,
+                "min": -3.324013461640069,
+                "mean": 4.52728037809202,
+                "median": 1.7595209855973237,
+                "p95": 14.882987584971987,
+                "max": 16.607651501409066
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 39,
+                "min": 0.0,
+                "mean": 1.6999031014800965,
+                "median": 0.19923015130390398,
+                "p95": 6.991862636715816,
+                "max": 8.930079741654872
+              }
+            },
+            "98": {
+              "draws_with_first_opening": 59,
+              "distinct_source_anchors": 21,
+              "draws_before_recorded_release": 39,
+              "predicted_height_minus_reference_mm": {
+                "count": 59,
+                "min": -3.324013461640069,
+                "mean": 4.6203291929562065,
+                "median": 1.7595209855973237,
+                "p95": 15.28030021673662,
+                "max": 16.607651501409066
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 39,
+                "min": 0.0,
+                "mean": 1.60065148077355,
+                "median": 0.19923015130390398,
+                "p95": 6.991862636715816,
+                "max": 6.991862636715816
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "label": "control1000",
+      "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-jev-history-prefix3-control-20261122-v1/step-001000",
+      "configured_execution_steps": 3,
+      "seeds_per_anchor": [
+        20261493,
+        20261494,
+        20261495
+      ],
+      "prediction_draws": 63,
+      "full_native_predictions": "/home/data4/hts/demo1/fr5-learning/diagnostics/jev-pi05-prefix3-control1000-source7-cycle1-temporal-replay-20261122-v1/predictions.jsonl",
+      "prefixes": {
+        "3": {
+          "draws_opening_before_source_release": 6,
+          "points_opening_before_source_release": 18,
+          "anchors_opening_before_source_release": 2,
+          "maximum_predicted_height_at_opening_mm": 0.473152299110008,
+          "maximum_height_witness": {
+            "source_frame": 292,
+            "draw": 1,
+            "seed": 20261494,
+            "tick": 2,
+            "projected_integer_percent": 100,
+            "increase_over_anchor_feedback_pp": 22.0,
+            "increase_over_anchor_wire_pp": 24.0,
+            "seconds_from_source_release": -0.36187447200063616,
+            "predicted_height_vs_source_reference_mm": 0.473152299110008,
+            "source_preceding_height_vs_reference_mm": 0.045902448862041194
+          },
+          "all_valid_anchor_feedback_comparison": {
+            "eligible_draws": 54,
+            "eligible_points": 162,
+            "missing_points": 27,
+            "draws_at_least_2pp": 8,
+            "points_at_least_2pp": 20,
+            "anchors_at_least_2pp": 3,
+            "maximum_increase_pp": 22.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "source_capture_frame": 292,
+              "row_index": 3735,
+              "draw": 0,
+              "seed": 20261493,
+              "tick": 1,
+              "raw_gripper_fraction": 1.0024007558822632,
+              "raw_gripper_percent": 100.24007558822632,
+              "projected_integer_percent": 100,
+              "increase_pp": 22.0,
+              "seconds_from_release_command": -0.5285411386721535,
+              "predicted_grasp_vs_release_reference": {
+                "delta_xyz_mm": [
+                  0.432720076907259,
+                  0.3777762046671569,
+                  0.13770678859302166
+                ],
+                "distance_mm": 0.5906984724848617,
+                "height_along_table_normal_mm": 0.13383261647602665,
+                "base_z_difference_mm": 0.13770678859302166,
+                "lateral_to_table_normal_mm": 0.5753377409514603
+              },
+              "nearest_source_feedback": {
+                "available": true,
+                "frame_index": 294,
+                "robot_time_monotonic": 40804.635653756,
+                "robot_time_minus_nominal_s": 0.09702694167208392,
+                "camera_time_monotonic": 40804.63489323,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 1,
+                "tcp_speed_mm_s": 0.098345233424817,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.005304694627483286,
+                    -0.02162670933114441,
+                    0.045916762018777035
+                  ],
+                  "distance_mm": 0.05103139598201938,
+                  "height_along_table_normal_mm": 0.045902448862041194,
+                  "base_z_difference_mm": 0.045916762018777035,
+                  "lateral_to_table_normal_mm": 0.02229727706114264
+                }
+              },
+              "latest_preceding_source_feedback": {
+                "available": true,
+                "frame_index": 293,
+                "robot_time_monotonic": 40804.435744799,
+                "robot_time_minus_nominal_s": -0.10288201532966923,
+                "camera_time_monotonic": 40804.43474633,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 1,
+                "tcp_speed_mm_s": 0.4492994422587194,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.010170754100158774,
+                    -0.03635302971724741,
+                    0.1253263890211258
+                  ],
+                  "distance_mm": 0.13088808499501983,
+                  "height_along_table_normal_mm": 0.12531357113306796,
+                  "base_z_difference_mm": 0.1253263890211258,
+                  "lateral_to_table_normal_mm": 0.037791529256449144
+                }
+              }
+            }
+          },
+          "raw_thresholds": {
+            "90": {
+              "draws_with_first_opening": 17,
+              "distinct_source_anchors": 6,
+              "draws_before_recorded_release": 6,
+              "predicted_height_minus_reference_mm": {
+                "count": 17,
+                "min": -1.5209907260510884,
+                "mean": -0.25839105756433584,
+                "median": -0.30918098808197764,
+                "p95": 0.43647696393573954,
+                "max": 0.45427110764804096
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 6,
+                "min": 0.045902448862041194,
+                "mean": 0.08560800999755458,
+                "median": 0.08560800999755458,
+                "p95": 0.12531357113306796,
+                "max": 0.12531357113306796
+              }
+            },
+            "98": {
+              "draws_with_first_opening": 16,
+              "distinct_source_anchors": 6,
+              "draws_before_recorded_release": 6,
+              "predicted_height_minus_reference_mm": {
+                "count": 16,
+                "min": -0.786908353050228,
+                "mean": -0.17947857828391384,
+                "median": -0.2677371748578667,
+                "p95": 0.4375890979177584,
+                "max": 0.45427110764804096
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 6,
+                "min": 0.045902448862041194,
+                "mean": 0.08560800999755458,
+                "median": 0.08560800999755458,
+                "p95": 0.12531357113306796,
+                "max": 0.12531357113306796
+              }
+            }
+          }
+        },
+        "6": {
+          "draws_opening_before_source_release": 29,
+          "points_opening_before_source_release": 70,
+          "anchors_opening_before_source_release": 13,
+          "maximum_predicted_height_at_opening_mm": 14.436093498248532,
+          "maximum_height_witness": {
+            "source_frame": 282,
+            "draw": 0,
+            "seed": 20261493,
+            "tick": 6,
+            "projected_integer_percent": 100,
+            "increase_over_anchor_feedback_pp": 22.0,
+            "increase_over_anchor_wire_pp": 24.0,
+            "seconds_from_source_release": -1.3618744720006362,
+            "predicted_height_vs_source_reference_mm": 14.436093498248532,
+            "source_preceding_height_vs_reference_mm": 5.1095774836277155
+          },
+          "all_valid_anchor_feedback_comparison": {
+            "eligible_draws": 54,
+            "eligible_points": 324,
+            "missing_points": 54,
+            "draws_at_least_2pp": 37,
+            "points_at_least_2pp": 113,
+            "anchors_at_least_2pp": 16,
+            "maximum_increase_pp": 22.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "source_capture_frame": 282,
+              "row_index": 3725,
+              "draw": 0,
+              "seed": 20261493,
+              "tick": 6,
+              "raw_gripper_fraction": 1.0006890296936035,
+              "raw_gripper_percent": 100.06890296936035,
+              "projected_integer_percent": 100,
+              "increase_pp": 22.0,
+              "seconds_from_release_command": -1.3618744720006362,
+              "predicted_grasp_vs_release_reference": {
+                "delta_xyz_mm": [
+                  0.5519329058844846,
+                  -0.2649139210999465,
+                  14.444686478084549
+                ],
+                "distance_mm": 14.457654608142679,
+                "height_along_table_normal_mm": 14.436093498248532,
+                "base_z_difference_mm": 14.444686478084549,
+                "lateral_to_table_normal_mm": 0.7892916306256781
+              },
+              "nearest_source_feedback": {
+                "available": true,
+                "frame_index": 289,
+                "robot_time_monotonic": 40803.735733431,
+                "robot_time_minus_nominal_s": 0.030439950001891702,
+                "camera_time_monotonic": 40803.734286381,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 10.69881540070368,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    0.003121798729779357,
+                    0.005303173742845502,
+                    4.078201396600875
+                  ],
+                  "distance_mm": 4.078206039487998,
+                  "height_along_table_normal_mm": 4.077868948572445,
+                  "base_z_difference_mm": 4.078201396600875,
+                  "lateral_to_table_normal_mm": 0.05243413759226273
+                }
+              },
+              "latest_preceding_source_feedback": {
+                "available": true,
+                "frame_index": 288,
+                "robot_time_monotonic": 40803.635636476,
+                "robot_time_minus_nominal_s": -0.0696570049985894,
+                "camera_time_monotonic": 40803.634293967,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 8.544039680717601,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.0001823146174615431,
+                    -0.010341144058770624,
+                    5.110003376376596
+                  ],
+                  "distance_mm": 5.110013843335386,
+                  "height_along_table_normal_mm": 5.1095774836277155,
+                  "base_z_difference_mm": 5.110003376376596,
+                  "lateral_to_table_normal_mm": 0.06677887303591276
+                }
+              }
+            }
+          },
+          "raw_thresholds": {
+            "90": {
+              "draws_with_first_opening": 46,
+              "distinct_source_anchors": 19,
+              "draws_before_recorded_release": 29,
+              "predicted_height_minus_reference_mm": {
+                "count": 46,
+                "min": -2.970137134387208,
+                "mean": 2.8807516335735848,
+                "median": 0.36159842866621383,
+                "p95": 13.348227169167332,
+                "max": 14.436093498248532
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 29,
+                "min": 0.02014583636379198,
+                "mean": 1.335408717746264,
+                "median": 0.12531357113306796,
+                "p95": 6.238948575480572,
+                "max": 6.991862636715816
+              }
+            },
+            "98": {
+              "draws_with_first_opening": 45,
+              "distinct_source_anchors": 18,
+              "draws_before_recorded_release": 28,
+              "predicted_height_minus_reference_mm": {
+                "count": 45,
+                "min": -2.970137134387208,
+                "mean": 2.630844291511034,
+                "median": 0.35630511714610547,
+                "p95": 13.032889503885407,
+                "max": 14.436093498248532
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 28,
+                "min": 0.02014583636379198,
+                "mean": 1.1333925063544936,
+                "median": 0.12531357113306796,
+                "p95": 5.1095774836277155,
+                "max": 6.991862636715816
+              }
+            }
+          }
+        },
+        "10": {
+          "draws_opening_before_source_release": 40,
+          "points_opening_before_source_release": 159,
+          "anchors_opening_before_source_release": 15,
+          "maximum_predicted_height_at_opening_mm": 16.722535994640587,
+          "maximum_height_witness": {
+            "source_frame": 280,
+            "draw": 2,
+            "seed": 20261495,
+            "tick": 8,
+            "projected_integer_percent": 100,
+            "increase_over_anchor_feedback_pp": 22.0,
+            "increase_over_anchor_wire_pp": 24.0,
+            "seconds_from_source_release": -1.3618744720006362,
+            "predicted_height_vs_source_reference_mm": 16.722535994640587,
+            "source_preceding_height_vs_reference_mm": 5.1095774836277155
+          },
+          "all_valid_anchor_feedback_comparison": {
+            "eligible_draws": 54,
+            "eligible_points": 540,
+            "missing_points": 90,
+            "draws_at_least_2pp": 50,
+            "points_at_least_2pp": 303,
+            "anchors_at_least_2pp": 18,
+            "maximum_increase_pp": 22.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "source_capture_frame": 279,
+              "row_index": 3722,
+              "draw": 2,
+              "seed": 20261495,
+              "tick": 8,
+              "raw_gripper_fraction": 1.001914381980896,
+              "raw_gripper_percent": 100.1914381980896,
+              "projected_integer_percent": 100,
+              "increase_pp": 22.0,
+              "seconds_from_release_command": -1.5285411386648775,
+              "predicted_grasp_vs_release_reference": {
+                "delta_xyz_mm": [
+                  0.42505264881853577,
+                  -0.2573285092553306,
+                  16.413631970763973
+                ],
+                "distance_mm": 16.421151061592134,
+                "height_along_table_normal_mm": 16.406425487249606,
+                "base_z_difference_mm": 16.413631970763973,
+                "lateral_to_table_normal_mm": 0.6952732692653962
+              },
+              "nearest_source_feedback": {
+                "available": true,
+                "frame_index": 288,
+                "robot_time_monotonic": 40803.635636476,
+                "robot_time_minus_nominal_s": 0.09700966166565195,
+                "camera_time_monotonic": 40803.634293967,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 8.544039680717601,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.0001823146174615431,
+                    -0.010341144058770624,
+                    5.110003376376596
+                  ],
+                  "distance_mm": 5.110013843335386,
+                  "height_along_table_normal_mm": 5.1095774836277155,
+                  "base_z_difference_mm": 5.110003376376596,
+                  "lateral_to_table_normal_mm": 0.06677887303591276
+                }
+              },
+              "latest_preceding_source_feedback": {
+                "available": true,
+                "frame_index": 287,
+                "robot_time_monotonic": 40803.435745691,
+                "robot_time_minus_nominal_s": -0.10288112333364552,
+                "camera_time_monotonic": 40803.434139875,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 10.660735589919527,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.008610346095167642,
+                    -0.03764533629237121,
+                    6.992426179558336
+                  ],
+                  "distance_mm": 6.99253281622455,
+                  "height_along_table_normal_mm": 6.991862636715816,
+                  "base_z_difference_mm": 6.992426179558336,
+                  "lateral_to_table_normal_mm": 0.09680937596430562
+                }
+              }
+            }
+          },
+          "raw_thresholds": {
+            "90": {
+              "draws_with_first_opening": 59,
+              "distinct_source_anchors": 21,
+              "draws_before_recorded_release": 40,
+              "predicted_height_minus_reference_mm": {
+                "count": 59,
+                "min": -2.970137134387208,
+                "mean": 4.449810512466613,
+                "median": 1.3786273237587723,
+                "p95": 15.13296713073767,
+                "max": 16.722535994640587
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 40,
+                "min": 0.02014583636379198,
+                "mean": 1.6150784113237673,
+                "median": 0.19923015130390398,
+                "p95": 6.991862636715816,
+                "max": 6.991862636715816
+              }
+            },
+            "98": {
+              "draws_with_first_opening": 59,
+              "distinct_source_anchors": 21,
+              "draws_before_recorded_release": 40,
+              "predicted_height_minus_reference_mm": {
+                "count": 59,
+                "min": -2.970137134387208,
+                "mean": 4.497109036665385,
+                "median": 1.3786273237587723,
+                "p95": 15.139812608669102,
+                "max": 16.722535994640587
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 40,
+                "min": 0.02014583636379198,
+                "mean": 1.5680212824965647,
+                "median": 0.19923015130390398,
+                "p95": 6.991862636715816,
+                "max": 6.991862636715816
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "label": "weight81000",
+      "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-jev-history-prefix3-weight8-20261122-v1/step-001000",
+      "configured_execution_steps": 3,
+      "seeds_per_anchor": [
+        20261493,
+        20261494,
+        20261495
+      ],
+      "prediction_draws": 63,
+      "full_native_predictions": "/home/data4/hts/demo1/fr5-learning/diagnostics/jev-pi05-prefix3-weight81000-source7-cycle1-temporal-replay-20261122-v1/predictions.jsonl",
+      "prefixes": {
+        "3": {
+          "draws_opening_before_source_release": 6,
+          "points_opening_before_source_release": 18,
+          "anchors_opening_before_source_release": 2,
+          "maximum_predicted_height_at_opening_mm": 0.3818964597031971,
+          "maximum_height_witness": {
+            "source_frame": 292,
+            "draw": 0,
+            "seed": 20261493,
+            "tick": 1,
+            "projected_integer_percent": 100,
+            "increase_over_anchor_feedback_pp": 22.0,
+            "increase_over_anchor_wire_pp": 24.0,
+            "seconds_from_source_release": -0.5285411386721535,
+            "predicted_height_vs_source_reference_mm": 0.3818964597031971,
+            "source_preceding_height_vs_reference_mm": 0.12531357113306796
+          },
+          "all_valid_anchor_feedback_comparison": {
+            "eligible_draws": 54,
+            "eligible_points": 162,
+            "missing_points": 27,
+            "draws_at_least_2pp": 7,
+            "points_at_least_2pp": 19,
+            "anchors_at_least_2pp": 3,
+            "maximum_increase_pp": 22.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "source_capture_frame": 292,
+              "row_index": 3735,
+              "draw": 0,
+              "seed": 20261493,
+              "tick": 1,
+              "raw_gripper_fraction": 1.0023714303970337,
+              "raw_gripper_percent": 100.23714303970337,
+              "projected_integer_percent": 100,
+              "increase_pp": 22.0,
+              "seconds_from_release_command": -0.5285411386721535,
+              "predicted_grasp_vs_release_reference": {
+                "delta_xyz_mm": [
+                  0.321579575885238,
+                  0.2345567667002797,
+                  0.3849553374711263
+                ],
+                "distance_mm": 0.5537336112960164,
+                "height_along_table_normal_mm": 0.3818964597031971,
+                "base_z_difference_mm": 0.3849553374711263,
+                "lateral_to_table_normal_mm": 0.4009688346306881
+              },
+              "nearest_source_feedback": {
+                "available": true,
+                "frame_index": 294,
+                "robot_time_monotonic": 40804.635653756,
+                "robot_time_minus_nominal_s": 0.09702694167208392,
+                "camera_time_monotonic": 40804.63489323,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 1,
+                "tcp_speed_mm_s": 0.098345233424817,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.005304694627483286,
+                    -0.02162670933114441,
+                    0.045916762018777035
+                  ],
+                  "distance_mm": 0.05103139598201938,
+                  "height_along_table_normal_mm": 0.045902448862041194,
+                  "base_z_difference_mm": 0.045916762018777035,
+                  "lateral_to_table_normal_mm": 0.02229727706114264
+                }
+              },
+              "latest_preceding_source_feedback": {
+                "available": true,
+                "frame_index": 293,
+                "robot_time_monotonic": 40804.435744799,
+                "robot_time_minus_nominal_s": -0.10288201532966923,
+                "camera_time_monotonic": 40804.43474633,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 1,
+                "tcp_speed_mm_s": 0.4492994422587194,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.010170754100158774,
+                    -0.03635302971724741,
+                    0.1253263890211258
+                  ],
+                  "distance_mm": 0.13088808499501983,
+                  "height_along_table_normal_mm": 0.12531357113306796,
+                  "base_z_difference_mm": 0.1253263890211258,
+                  "lateral_to_table_normal_mm": 0.037791529256449144
+                }
+              }
+            }
+          },
+          "raw_thresholds": {
+            "90": {
+              "draws_with_first_opening": 16,
+              "distinct_source_anchors": 6,
+              "draws_before_recorded_release": 6,
+              "predicted_height_minus_reference_mm": {
+                "count": 16,
+                "min": -0.6936525598089022,
+                "mean": -0.16657116702317237,
+                "median": -0.31724756553324995,
+                "p95": 0.4063559816151849,
+                "max": 0.47973454735114834
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 6,
+                "min": 0.045902448862041194,
+                "mean": 0.08560800999755458,
+                "median": 0.08560800999755458,
+                "p95": 0.12531357113306796,
+                "max": 0.12531357113306796
+              }
+            },
+            "98": {
+              "draws_with_first_opening": 16,
+              "distinct_source_anchors": 6,
+              "draws_before_recorded_release": 6,
+              "predicted_height_minus_reference_mm": {
+                "count": 16,
+                "min": -0.6936525598089022,
+                "mean": -0.16657116702317237,
+                "median": -0.31724756553324995,
+                "p95": 0.4063559816151849,
+                "max": 0.47973454735114834
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 6,
+                "min": 0.045902448862041194,
+                "mean": 0.08560800999755458,
+                "median": 0.08560800999755458,
+                "p95": 0.12531357113306796,
+                "max": 0.12531357113306796
+              }
+            }
+          }
+        },
+        "6": {
+          "draws_opening_before_source_release": 27,
+          "points_opening_before_source_release": 64,
+          "anchors_opening_before_source_release": 13,
+          "maximum_predicted_height_at_opening_mm": 14.490058884689038,
+          "maximum_height_witness": {
+            "source_frame": 282,
+            "draw": 0,
+            "seed": 20261493,
+            "tick": 6,
+            "projected_integer_percent": 100,
+            "increase_over_anchor_feedback_pp": 22.0,
+            "increase_over_anchor_wire_pp": 24.0,
+            "seconds_from_source_release": -1.3618744720006362,
+            "predicted_height_vs_source_reference_mm": 14.490058884689038,
+            "source_preceding_height_vs_reference_mm": 5.1095774836277155
+          },
+          "all_valid_anchor_feedback_comparison": {
+            "eligible_draws": 54,
+            "eligible_points": 324,
+            "missing_points": 54,
+            "draws_at_least_2pp": 34,
+            "points_at_least_2pp": 102,
+            "anchors_at_least_2pp": 16,
+            "maximum_increase_pp": 22.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "source_capture_frame": 282,
+              "row_index": 3725,
+              "draw": 0,
+              "seed": 20261493,
+              "tick": 6,
+              "raw_gripper_fraction": 1.0005791187286377,
+              "raw_gripper_percent": 100.05791187286377,
+              "projected_integer_percent": 100,
+              "increase_pp": 22.0,
+              "seconds_from_release_command": -1.3618744720006362,
+              "predicted_grasp_vs_release_reference": {
+                "delta_xyz_mm": [
+                  0.3972712762232504,
+                  -0.16005596917182174,
+                  14.496454204019443
+                ],
+                "distance_mm": 14.50277997038542,
+                "height_along_table_normal_mm": 14.490058884689038,
+                "base_z_difference_mm": 14.496454204019443,
+                "lateral_to_table_normal_mm": 0.6073058435886067
+              },
+              "nearest_source_feedback": {
+                "available": true,
+                "frame_index": 289,
+                "robot_time_monotonic": 40803.735733431,
+                "robot_time_minus_nominal_s": 0.030439950001891702,
+                "camera_time_monotonic": 40803.734286381,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 10.69881540070368,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    0.003121798729779357,
+                    0.005303173742845502,
+                    4.078201396600875
+                  ],
+                  "distance_mm": 4.078206039487998,
+                  "height_along_table_normal_mm": 4.077868948572445,
+                  "base_z_difference_mm": 4.078201396600875,
+                  "lateral_to_table_normal_mm": 0.05243413759226273
+                }
+              },
+              "latest_preceding_source_feedback": {
+                "available": true,
+                "frame_index": 288,
+                "robot_time_monotonic": 40803.635636476,
+                "robot_time_minus_nominal_s": -0.0696570049985894,
+                "camera_time_monotonic": 40803.634293967,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 8.544039680717601,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.0001823146174615431,
+                    -0.010341144058770624,
+                    5.110003376376596
+                  ],
+                  "distance_mm": 5.110013843335386,
+                  "height_along_table_normal_mm": 5.1095774836277155,
+                  "base_z_difference_mm": 5.110003376376596,
+                  "lateral_to_table_normal_mm": 0.06677887303591276
+                }
+              }
+            }
+          },
+          "raw_thresholds": {
+            "90": {
+              "draws_with_first_opening": 43,
+              "distinct_source_anchors": 19,
+              "draws_before_recorded_release": 27,
+              "predicted_height_minus_reference_mm": {
+                "count": 43,
+                "min": -3.0003894410958107,
+                "mean": 3.051537765598299,
+                "median": 0.3100334984758656,
+                "p95": 13.451696619395902,
+                "max": 14.490058884689038
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 27,
+                "min": 0.02014583636379198,
+                "mean": 1.4252488968324337,
+                "median": 0.12531357113306796,
+                "p95": 6.427177090789384,
+                "max": 6.991862636715816
+              }
+            },
+            "98": {
+              "draws_with_first_opening": 42,
+              "distinct_source_anchors": 18,
+              "draws_before_recorded_release": 26,
+              "predicted_height_minus_reference_mm": {
+                "count": 42,
+                "min": -3.0003894410958107,
+                "mean": 2.7706796981557726,
+                "median": 0.3013576761808235,
+                "p95": 13.337969405191295,
+                "max": 14.490058884689038
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 26,
+                "min": 0.0,
+                "mean": 1.210373528515234,
+                "median": 0.12531357113306796,
+                "p95": 5.1095774836277155,
+                "max": 6.991862636715816
+              }
+            }
+          }
+        },
+        "10": {
+          "draws_opening_before_source_release": 39,
+          "points_opening_before_source_release": 153,
+          "anchors_opening_before_source_release": 15,
+          "maximum_predicted_height_at_opening_mm": 16.832342910934425,
+          "maximum_height_witness": {
+            "source_frame": 280,
+            "draw": 2,
+            "seed": 20261495,
+            "tick": 8,
+            "projected_integer_percent": 100,
+            "increase_over_anchor_feedback_pp": 22.0,
+            "increase_over_anchor_wire_pp": 24.0,
+            "seconds_from_source_release": -1.3618744720006362,
+            "predicted_height_vs_source_reference_mm": 16.832342910934425,
+            "source_preceding_height_vs_reference_mm": 5.1095774836277155
+          },
+          "all_valid_anchor_feedback_comparison": {
+            "eligible_draws": 54,
+            "eligible_points": 540,
+            "missing_points": 90,
+            "draws_at_least_2pp": 50,
+            "points_at_least_2pp": 291,
+            "anchors_at_least_2pp": 18,
+            "maximum_increase_pp": 22.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "source_capture_frame": 279,
+              "row_index": 3722,
+              "draw": 2,
+              "seed": 20261495,
+              "tick": 8,
+              "raw_gripper_fraction": 1.0017327070236206,
+              "raw_gripper_percent": 100.17327070236206,
+              "projected_integer_percent": 100,
+              "increase_pp": 22.0,
+              "seconds_from_release_command": -1.5285411386648775,
+              "predicted_grasp_vs_release_reference": {
+                "delta_xyz_mm": [
+                  0.2934371948481953,
+                  -0.24173527121627103,
+                  16.538289717846737
+                ],
+                "distance_mm": 16.542659040193797,
+                "height_along_table_normal_mm": 16.532695277415943,
+                "base_z_difference_mm": 16.538289717846737,
+                "lateral_to_table_normal_mm": 0.5740687974573477
+              },
+              "nearest_source_feedback": {
+                "available": true,
+                "frame_index": 288,
+                "robot_time_monotonic": 40803.635636476,
+                "robot_time_minus_nominal_s": 0.09700966166565195,
+                "camera_time_monotonic": 40803.634293967,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 8.544039680717601,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.0001823146174615431,
+                    -0.010341144058770624,
+                    5.110003376376596
+                  ],
+                  "distance_mm": 5.110013843335386,
+                  "height_along_table_normal_mm": 5.1095774836277155,
+                  "base_z_difference_mm": 5.110003376376596,
+                  "lateral_to_table_normal_mm": 0.06677887303591276
+                }
+              },
+              "latest_preceding_source_feedback": {
+                "available": true,
+                "frame_index": 287,
+                "robot_time_monotonic": 40803.435745691,
+                "robot_time_minus_nominal_s": -0.10288112333364552,
+                "camera_time_monotonic": 40803.434139875,
+                "gripper_feedback_valid": true,
+                "raw_gripper_position_percent": 78,
+                "gripper_motiondone": 2,
+                "jaw_contact_reported": true,
+                "robot_motion_done": 0,
+                "tcp_speed_mm_s": 10.660735589919527,
+                "before_recorded_release_command": true,
+                "measured_grasp_vs_release_reference": {
+                  "delta_xyz_mm": [
+                    -0.008610346095167642,
+                    -0.03764533629237121,
+                    6.992426179558336
+                  ],
+                  "distance_mm": 6.99253281622455,
+                  "height_along_table_normal_mm": 6.991862636715816,
+                  "base_z_difference_mm": 6.992426179558336,
+                  "lateral_to_table_normal_mm": 0.09680937596430562
+                }
+              }
+            }
+          },
+          "raw_thresholds": {
+            "90": {
+              "draws_with_first_opening": 59,
+              "distinct_source_anchors": 21,
+              "draws_before_recorded_release": 39,
+              "predicted_height_minus_reference_mm": {
+                "count": 59,
+                "min": -3.0003894410958107,
+                "mean": 4.53030347922777,
+                "median": 1.6519276119029354,
+                "p95": 15.415834505914395,
+                "max": 16.832342910934425
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 39,
+                "min": 0.02014583636379198,
+                "mean": 1.6507217869012443,
+                "median": 0.19923015130390398,
+                "p95": 6.991862636715816,
+                "max": 6.991862636715816
+              }
+            },
+            "98": {
+              "draws_with_first_opening": 59,
+              "distinct_source_anchors": 21,
+              "draws_before_recorded_release": 39,
+              "predicted_height_minus_reference_mm": {
+                "count": 59,
+                "min": -3.0003894410958107,
+                "mean": 4.59910309235243,
+                "median": 1.6519276119029354,
+                "p95": 15.415834505914395,
+                "max": 16.832342910934425
+              },
+              "preceding_valid_source_height_minus_reference_mm": {
+                "count": 39,
+                "min": 0.0,
+                "mean": 1.6014249452136633,
+                "median": 0.19923015130390398,
+                "p95": 6.991862636715816,
+                "max": 6.991862636715816
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "comparison": "native clamp/round gripper target at least two percentage points above valid recorded anchor feedback; nominal target time before recorded release",
+  "limitations": [
+    "Independent source-recorded inputs do not simulate previous model targets, contact, motion or true closed-loop history.",
+    "Source7 is a reused same-cup diagnostic source; these counts are noise draws, not physical task successes.",
+    "Release-reference height is a stable recorded jaw-contact proxy and does not independently prove object support."
+  ]
+}

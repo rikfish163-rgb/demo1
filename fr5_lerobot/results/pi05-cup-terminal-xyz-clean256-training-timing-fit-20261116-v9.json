@@ -1,0 +1,6356 @@
+{
+  "schema": "fr5-five-second-training-timing-fit-score-v1",
+  "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-cup-terminal-xyz-clean-n3-20261116-v9/step-000256",
+  "seeds": [
+    20261105,
+    20261113,
+    20261114,
+    20261115,
+    20261116,
+    20261117
+  ],
+  "observation_context_profile": "state-history-physical-cup-setdown-fixed-v1",
+  "group": "train_fit",
+  "split": "train",
+  "case_count": 100,
+  "robot_commands": 0,
+  "task_success_verified": false,
+  "support_references": [
+    {
+      "source_index": 0,
+      "cycle": 1,
+      "status": "assessed",
+      "height_projection_mm": 90.13503764572513,
+      "confirmed_contact_frame": 268,
+      "pre_release_frame_indices": [
+        373,
+        374,
+        375
+      ],
+      "pre_release_height_spread_mm": 0.05815496938740239,
+      "ready_pair_frame_indices": [
+        372,
+        373
+      ],
+      "recorded_first_ready_proxy_monotonic": 39972.777671112,
+      "recorded_release_command_monotonic": 39973.261617668,
+      "seconds_ready_proxy_before_command": 0.48394655599986436
+    },
+    {
+      "source_index": 3,
+      "cycle": 1,
+      "status": "assessed",
+      "height_projection_mm": 90.98802605275694,
+      "confirmed_contact_frame": 183,
+      "pre_release_frame_indices": [
+        303,
+        304,
+        305
+      ],
+      "pre_release_height_spread_mm": 0.017711336673045253,
+      "ready_pair_frame_indices": [
+        299,
+        300
+      ],
+      "recorded_first_ready_proxy_monotonic": 47321.552259863,
+      "recorded_release_command_monotonic": 47322.476919183,
+      "seconds_ready_proxy_before_command": 0.9246593200005009
+    },
+    {
+      "source_index": 3,
+      "cycle": 2,
+      "status": "assessed",
+      "height_projection_mm": 91.00154848061919,
+      "confirmed_contact_frame": 567,
+      "pre_release_frame_indices": [
+        679,
+        680,
+        681
+      ],
+      "pre_release_height_spread_mm": 0.03077560967527404,
+      "ready_pair_frame_indices": [
+        677,
+        678
+      ],
+      "recorded_first_ready_proxy_monotonic": 47384.595831112,
+      "recorded_release_command_monotonic": 47385.115825457,
+      "seconds_ready_proxy_before_command": 0.5199943449988496
+    },
+    {
+      "source_index": 4,
+      "cycle": 1,
+      "status": "assessed",
+      "height_projection_mm": 92.45875648466769,
+      "confirmed_contact_frame": 207,
+      "pre_release_frame_indices": [
+        353,
+        354,
+        355
+      ],
+      "pre_release_height_spread_mm": 0.006455061779462312,
+      "ready_pair_frame_indices": [
+        320,
+        321
+      ],
+      "recorded_first_ready_proxy_monotonic": 47926.370206566,
+      "recorded_release_command_monotonic": 47932.111731755,
+      "seconds_ready_proxy_before_command": 5.741525188997912
+    },
+    {
+      "source_index": 5,
+      "cycle": 1,
+      "status": "assessed",
+      "height_projection_mm": 89.46769268293976,
+      "confirmed_contact_frame": 197,
+      "pre_release_frame_indices": [
+        301,
+        302,
+        303
+      ],
+      "pre_release_height_spread_mm": 0.058314408079795044,
+      "ready_pair_frame_indices": [
+        299,
+        300
+      ],
+      "recorded_first_ready_proxy_monotonic": 39163.189620165,
+      "recorded_release_command_monotonic": 39163.735912359,
+      "seconds_ready_proxy_before_command": 0.5462921939979424
+    }
+  ],
+  "original_label_vs_nominal_command_mismatch_points_first_10": 11,
+  "contact_excluded_by_release_clock_cases": 0,
+  "limitations": [
+    "Original training observations; these scores do not measure held-out generalization or task success.",
+    "Support uses valid PGI contact, recorded table-normal TCP height, a stable raw feedback pair and Gemini table-height or occluded support-age state. It does not prove cup-bottom support.",
+    "Predictions are complete 50 x 7 blocks; only prefixes of three and ten points are scored at nominal 6 Hz, without robot execution or measured controller timing.",
+    "Saved fit rows retain task, camera time, tracking and timing; full RGB/state requests are checked only when embedded in the saved row."
+  ],
+  "inputs": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-evaluation-inputs-20261116-v9/fit-inputs.json",
+  "predictions": "/home/data4/hts/demo1/fr5-learning/evaluations/pi05-cup-terminal-xyz-clean256-suite-20261116-v9/fit-predictions.json",
+  "prefix_3": {
+    "horizon": 3,
+    "gate": "fail",
+    "summary": {
+      "draws": 600,
+      "assessed": 498,
+      "unassessed": 102,
+      "passed": 486,
+      "failure_draws": 12,
+      "failure_counts": {
+        "late_normal_close": 4,
+        "late_supported_open": 8
+      },
+      "late_open_assessable": 48,
+      "checks": {
+        "geometry": {
+          "unassessed": 60,
+          "assessed": 540
+        },
+        "early_open": {
+          "unassessed": 60,
+          "not_applicable": 180,
+          "assessed": 360
+        },
+        "normal_close": {
+          "unassessed": 60,
+          "assessed": 30,
+          "not_applicable": 510
+        },
+        "late_open": {
+          "not_applicable": 510,
+          "unassessed": 42,
+          "assessed": 48
+        },
+        "hover": {
+          "not_applicable": 474,
+          "assessed": 126
+        }
+      },
+      "unassessed_reasons": {
+        "close_deadline_outside_prefix": 30,
+        "invalid_gripper_feedback": 180,
+        "release_deadline_outside_prefix": 12
+      }
+    },
+    "by_source_cycle_kind": [
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "close_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "unassessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "close_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "assessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "close_before",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "unassessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "close_deadline_outside_prefix": 6
+        }
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "contact_approach",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "contact_on_table",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "deadline_after",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "deadline_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "deadline_minus_1s",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "hover_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "hover_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "hover_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "near_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "near_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "release_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "unassessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "release_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "late_supported_open": 1
+        },
+        "late_open_assessable": 6,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "assessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "release_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "late_supported_open": 1
+        },
+        "late_open_assessable": 6,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "assessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "retreat",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "return_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "return_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "return_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "close_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "unassessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "close_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "late_normal_close": 1
+        },
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "assessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "close_before",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "unassessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "close_deadline_outside_prefix": 6
+        }
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "contact_approach",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "contact_on_table",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "deadline_after",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "deadline_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "deadline_minus_1s",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "hover_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "hover_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "hover_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "near_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "near_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "release_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "unassessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "release_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "late_supported_open": 1
+        },
+        "late_open_assessable": 6,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "assessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "release_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "late_supported_open": 1
+        },
+        "late_open_assessable": 6,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "assessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "retreat",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "return_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "return_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "return_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "close_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "unassessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "close_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "assessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "close_before",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "unassessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "close_deadline_outside_prefix": 6
+        }
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "contact_approach",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "contact_on_table",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "deadline_after",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "deadline_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "deadline_minus_1s",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "hover_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "hover_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "hover_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "near_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "near_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "release_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "unassessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "release_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "late_supported_open": 1
+        },
+        "late_open_assessable": 6,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "assessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "release_before",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "unassessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "release_deadline_outside_prefix": 6
+        }
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "retreat",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "return_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "return_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "return_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "close_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "unassessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "close_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "assessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "close_before",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "unassessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "close_deadline_outside_prefix": 6
+        }
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "contact_approach",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "contact_on_table",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "deadline_after",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "deadline_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "deadline_minus_1s",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "hover_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "hover_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "hover_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "near_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "near_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "release_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "unassessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "release_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "late_supported_open": 1
+        },
+        "late_open_assessable": 6,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "assessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "release_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "late_supported_open": 1
+        },
+        "late_open_assessable": 6,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "assessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "retreat",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "return_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "return_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "return_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "close_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "unassessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "close_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 3,
+        "failure_draws": 3,
+        "failure_counts": {
+          "late_normal_close": 3
+        },
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "assessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "close_before",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "unassessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "close_deadline_outside_prefix": 6
+        }
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "contact_approach",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "contact_on_table",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "deadline_after",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "deadline_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "deadline_minus_1s",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "hover_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "hover_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "hover_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "near_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "near_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "release_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "unassessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "release_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "late_supported_open": 1
+        },
+        "late_open_assessable": 6,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "assessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "release_before",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "unassessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "release_deadline_outside_prefix": 6
+        }
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "retreat",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "return_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "return_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "return_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      }
+    ]
+  },
+  "prefix_10": {
+    "horizon": 10,
+    "gate": "fail",
+    "summary": {
+      "draws": 600,
+      "assessed": 528,
+      "unassessed": 72,
+      "passed": 481,
+      "failure_draws": 49,
+      "failure_counts": {
+        "late_normal_close": 11,
+        "late_supported_open": 8,
+        "open_above_support_proxy": 20,
+        "open_before_stable_support_proxy": 4,
+        "open_below_support_proxy": 4,
+        "open_while_target_moving": 2
+      },
+      "late_open_assessable": 48,
+      "checks": {
+        "geometry": {
+          "unassessed": 60,
+          "assessed": 540
+        },
+        "early_open": {
+          "unassessed": 60,
+          "not_applicable": 180,
+          "assessed": 360
+        },
+        "normal_close": {
+          "unassessed": 30,
+          "assessed": 60,
+          "not_applicable": 510
+        },
+        "late_open": {
+          "not_applicable": 510,
+          "unassessed": 42,
+          "assessed": 48
+        },
+        "hover": {
+          "not_applicable": 474,
+          "assessed": 126
+        }
+      },
+      "unassessed_reasons": {
+        "invalid_gripper_feedback": 180,
+        "observation_lacks_stable_contact_ready_proxy": 12
+      }
+    },
+    "by_source_cycle_kind": [
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "close_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "unassessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "close_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "assessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "close_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "assessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "contact_approach",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "contact_on_table",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "deadline_after",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "deadline_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "deadline_minus_1s",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "hover_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "hover_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "hover_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "near_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "near_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "release_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "unassessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "release_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "late_supported_open": 1
+        },
+        "late_open_assessable": 6,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "assessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "release_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "late_supported_open": 1
+        },
+        "late_open_assessable": 6,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "assessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "retreat",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "return_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "return_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 1,
+        "failure_draws": 5,
+        "failure_counts": {
+          "open_above_support_proxy": 4,
+          "open_while_target_moving": 1
+        },
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 0,
+        "cycle": 1,
+        "kind": "return_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "close_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "unassessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "close_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "late_normal_close": 1
+        },
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "assessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "close_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 1,
+        "failure_draws": 5,
+        "failure_counts": {
+          "late_normal_close": 5
+        },
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "assessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "contact_approach",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "contact_on_table",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "deadline_after",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "deadline_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "deadline_minus_1s",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "hover_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "hover_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "hover_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "near_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "near_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "release_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "unassessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "release_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "late_supported_open": 1
+        },
+        "late_open_assessable": 6,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "assessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "release_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "late_supported_open": 1
+        },
+        "late_open_assessable": 6,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "assessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "retreat",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "return_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "return_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 0,
+        "failure_draws": 6,
+        "failure_counts": {
+          "open_above_support_proxy": 3,
+          "open_before_stable_support_proxy": 3
+        },
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 1,
+        "kind": "return_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 4,
+        "failure_draws": 2,
+        "failure_counts": {
+          "open_above_support_proxy": 2
+        },
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "close_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "unassessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "close_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "assessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "close_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "assessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "contact_approach",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "contact_on_table",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "deadline_after",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "deadline_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "deadline_minus_1s",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "hover_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "hover_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "hover_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "near_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "near_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "release_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "unassessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "release_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "late_supported_open": 1
+        },
+        "late_open_assessable": 6,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "assessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "release_before",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 1,
+        "failure_counts": {
+          "open_below_support_proxy": 1
+        },
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "unassessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "observation_lacks_stable_contact_ready_proxy": 6
+        }
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "retreat",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "return_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "return_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 1,
+        "failure_draws": 5,
+        "failure_counts": {
+          "open_above_support_proxy": 3,
+          "open_before_stable_support_proxy": 1,
+          "open_below_support_proxy": 1
+        },
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 3,
+        "cycle": 2,
+        "kind": "return_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 4,
+        "failure_draws": 2,
+        "failure_counts": {
+          "open_above_support_proxy": 2
+        },
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "close_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "unassessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "close_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "assessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "close_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "assessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "contact_approach",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "contact_on_table",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "deadline_after",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "deadline_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "deadline_minus_1s",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "hover_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "hover_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "hover_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "near_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "near_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "release_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "unassessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "release_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "late_supported_open": 1
+        },
+        "late_open_assessable": 6,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "assessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "release_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "late_supported_open": 1
+        },
+        "late_open_assessable": 6,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "assessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "retreat",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "return_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "return_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 4,
+        "cycle": 1,
+        "kind": "return_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "open_below_support_proxy": 1
+        },
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "close_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "unassessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "close_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 3,
+        "failure_draws": 3,
+        "failure_counts": {
+          "late_normal_close": 3
+        },
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "assessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "close_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 4,
+        "failure_draws": 2,
+        "failure_counts": {
+          "late_normal_close": 2
+        },
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "assessed": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "contact_approach",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "contact_on_table",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "deadline_after",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "deadline_before",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "deadline_minus_1s",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "hover_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "hover_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "hover_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "assessed": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "near_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "near_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "release_after",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "unassessed": 6
+          },
+          "early_open": {
+            "unassessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "unassessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 18
+        }
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "release_at",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 5,
+        "failure_draws": 1,
+        "failure_counts": {
+          "late_supported_open": 1
+        },
+        "late_open_assessable": 6,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "assessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "release_before",
+        "draws": 6,
+        "assessed": 0,
+        "unassessed": 6,
+        "passed": 0,
+        "failure_draws": 1,
+        "failure_counts": {
+          "open_below_support_proxy": 1
+        },
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "unassessed": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {
+          "observation_lacks_stable_contact_ready_proxy": 6
+        }
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "retreat",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "not_applicable": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "return_early",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 6,
+        "failure_draws": 0,
+        "failure_counts": {},
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "return_late",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 1,
+        "failure_draws": 5,
+        "failure_counts": {
+          "open_above_support_proxy": 4,
+          "open_while_target_moving": 1
+        },
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      },
+      {
+        "source_index": 5,
+        "cycle": 1,
+        "kind": "return_middle",
+        "draws": 6,
+        "assessed": 6,
+        "unassessed": 0,
+        "passed": 4,
+        "failure_draws": 2,
+        "failure_counts": {
+          "open_above_support_proxy": 2
+        },
+        "late_open_assessable": 0,
+        "checks": {
+          "geometry": {
+            "assessed": 6
+          },
+          "early_open": {
+            "assessed": 6
+          },
+          "normal_close": {
+            "not_applicable": 6
+          },
+          "late_open": {
+            "not_applicable": 6
+          },
+          "hover": {
+            "not_applicable": 6
+          }
+        },
+        "unassessed_reasons": {}
+      }
+    ]
+  }
+}

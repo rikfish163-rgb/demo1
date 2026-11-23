@@ -1,0 +1,4065 @@
+{
+  "schema": "independent-success8-action-alignment-audit-v1",
+  "scope": {
+    "source_count": 8,
+    "v2_dataset": "/home/data4/hts/demo1/fr5-learning/datasets/fr5-joint-stream-20261102-v2-compacted",
+    "parent_dataset": "/home/data4/hts/demo1/fr5-learning/datasets/fr5-joint-stream-20261102-v1",
+    "trial08": "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-workspace-only-trial-20261102-08/materialized",
+    "only_existing_sources": true,
+    "hardware_connections": false,
+    "model_execution": false,
+    "gpu_use": false
+  },
+  "counts": {
+    "rows": 3855,
+    "invalid_gripper_state": 229,
+    "initial_hold_target": 1567,
+    "executed_target": 2288,
+    "label_before_issue_observation_grid": 20,
+    "label_before_issue_camera_or_robot": 29,
+    "cut_rows": 84
+  },
+  "parent_rows": 4193,
+  "removed_parent_rows": 338,
+  "cuts": 84,
+  "episodes": {
+    "0": {
+      "frames": 594,
+      "source": 0,
+      "split": "train",
+      "tail_anchors_with_padding": 49,
+      "padding_positions_masked": 1225
+    },
+    "1": {
+      "frames": 344,
+      "source": 1,
+      "split": "train",
+      "tail_anchors_with_padding": 49,
+      "padding_positions_masked": 1225
+    },
+    "2": {
+      "frames": 368,
+      "source": 2,
+      "split": "train",
+      "tail_anchors_with_padding": 49,
+      "padding_positions_masked": 1225
+    },
+    "3": {
+      "frames": 684,
+      "source": 3,
+      "split": "train",
+      "tail_anchors_with_padding": 49,
+      "padding_positions_masked": 1225
+    },
+    "4": {
+      "frames": 359,
+      "source": 4,
+      "split": "train",
+      "tail_anchors_with_padding": 49,
+      "padding_positions_masked": 1225
+    },
+    "5": {
+      "frames": 354,
+      "source": 5,
+      "split": "train",
+      "tail_anchors_with_padding": 49,
+      "padding_positions_masked": 1225
+    },
+    "6": {
+      "frames": 447,
+      "source": 6,
+      "split": "train",
+      "tail_anchors_with_padding": 49,
+      "padding_positions_masked": 1225
+    },
+    "7": {
+      "frames": 705,
+      "source": 7,
+      "split": "validation",
+      "tail_anchors_with_padding": 49,
+      "padding_positions_masked": 1225
+    }
+  },
+  "gripper_target_percent_counts": {
+    "100.0": 2751,
+    "76.0": 1104
+  },
+  "valid_actual_position_percent_counts": {
+    "100": 2627,
+    "79": 81,
+    "78": 801,
+    "99": 9,
+    "76": 108
+  },
+  "all_observation_motiondone_counts": {
+    "1": 2636,
+    "0": 229,
+    "2": 990
+  },
+  "native_gripper_event_counts": {
+    "close": 10,
+    "open": 10
+  },
+  "close_first_labels_before_issue_grid_count": 10,
+  "close_first_label_tcp_distance_mm": {
+    "min": 0.0031809543422111064,
+    "max": 0.011206874214905715
+  },
+  "close_window_max_tcp_distance_mm": 73.97561782387565,
+  "opposite_pairs": {
+    "count": 16,
+    "train": 12,
+    "validation": 4,
+    "same_capture": 0,
+    "same_jpeg_bytes": 0,
+    "identical_state_float32": 0,
+    "max_rgb_mean_abs_difference_8bit": 3.269798900462963,
+    "max_joint_difference_deg": 0.012827095261283946
+  },
+  "native_events": [
+    {
+      "source": 0,
+      "split": "train",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized",
+      "direction": "close",
+      "sequence": 6,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized/command-0006.json",
+      "issued_monotonic": 39953.375134546,
+      "completed_monotonic": 39955.263771179,
+      "target_percent": 76.0,
+      "native_args": [
+        1,
+        76,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 39953.368373622,
+        "joints": [
+          85.03091430664062,
+          -33.25703048706055,
+          61.283912658691406,
+          -22.04096794128418,
+          152.13323974609375,
+          6.583094596862793
+        ],
+        "tcp": [
+          -22.650569915771484,
+          -740.7422485351562,
+          93.14506530761719,
+          92.79464721679688,
+          -1.2855898141860962,
+          -67.2943115234375
+        ],
+        "gripper_position": 100,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 39955.25852818,
+        "joints": [
+          85.03178405761719,
+          -33.2605094909668,
+          61.283912658691406,
+          -22.042055130004883,
+          152.1330108642578,
+          6.583964824676514
+        ],
+        "tcp": [
+          -22.63965606689453,
+          -740.7484741210938,
+          93.19066619873047,
+          92.79254150390625,
+          -1.290515422821045,
+          -67.29322052001953
+        ],
+        "gripper_position": 79,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 256,
+        "camera_monotonic": 39953.263955132,
+        "robot_monotonic": 39953.268459913,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized/continuous/frames/000256.jpg",
+        "robot": {
+          "received_monotonic": 39953.268459913,
+          "joints": [
+            85.03091430664062,
+            -33.256595611572266,
+            61.283912658691406,
+            -22.040096282958984,
+            152.13279724121094,
+            6.583312511444092
+          ],
+          "tcp": [
+            -22.650096893310547,
+            -740.7408447265625,
+            93.13883209228516,
+            92.7952880859375,
+            -1.2846721410751343,
+            -67.29389953613281
+          ],
+          "gripper_position": 100,
+          "gripper_active": 1,
+          "gripper_motiondone": 1,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 257,
+        "camera_monotonic": 39953.464067177,
+        "robot_monotonic": 39953.468428998,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized/continuous/frames/000257.jpg",
+        "robot": {
+          "received_monotonic": 39953.468428998,
+          "joints": [
+            85.03091430664062,
+            -33.256813049316406,
+            61.28413009643555,
+            -22.04140281677246,
+            152.1330108642578,
+            6.583747386932373
+          ],
+          "tcp": [
+            -22.65037727355957,
+            -740.7420654296875,
+            93.14103698730469,
+            92.79466247558594,
+            -1.2862521409988403,
+            -67.29412841796875
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 241,
+      "first_labeled_step": 241,
+      "first_labeled_capture_frame": 255,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized/continuous/frames/000255.jpg",
+      "first_labeled_obs_joints_deg": [
+        85.0313491821289,
+        -33.256813049316406,
+        61.283695220947266,
+        -22.040313720703125,
+        152.13279724121094,
+        6.582877159118652
+      ],
+      "first_labeled_obs_tcp": [
+        -22.644620895385742,
+        -740.7427978515625,
+        93.14324188232422,
+        92.79499053955078,
+        -1.2848155498504639,
+        -67.29344177246094
+      ],
+      "first_labeled_obs_actual_percent": 100,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 1,
+      "first_labeled_grid_minus_issue_s": -0.14109147199633298,
+      "first_labeled_camera_minus_issue_s": -0.21134806699410547,
+      "first_labeled_target_minus_issue_s": 0.025575194667908363,
+      "first_labeled_tcp_to_native_initial_mm": 0.006246396710359478,
+      "label_before_issue_frames": [
+        241
+      ],
+      "labeled_rows": 114,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 73.46200292967988,
+      "eligible_anchor_farthest": {
+        "frame": 192,
+        "step": 192,
+        "action_chunk_offset": 49,
+        "observation_tcp": [
+          45.02533721923828,
+          -712.4060668945312,
+          96.84618377685547,
+          92.7884521484375,
+          -1.2922749519348145,
+          -67.29544830322266
+        ],
+        "distance_to_native_initial_tcp_mm": 73.46200292967988,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized/continuous/frames/000195.jpg"
+      }
+    },
+    {
+      "source": 0,
+      "split": "train",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized",
+      "direction": "open",
+      "sequence": 10,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized/command-0010.json",
+      "issued_monotonic": 39973.261617668,
+      "completed_monotonic": 39975.174539791,
+      "target_percent": 100.0,
+      "native_args": [
+        1,
+        100,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 39973.250393884,
+        "joints": [
+          85.0339584350586,
+          -33.25833511352539,
+          61.2856559753418,
+          -22.047929763793945,
+          152.1336669921875,
+          6.583529949188232
+        ],
+        "tcp": [
+          -22.611957550048828,
+          -740.7481079101562,
+          93.15467071533203,
+          92.79157257080078,
+          -1.2917832136154175,
+          -67.2916488647461
+        ],
+        "gripper_position": 78,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 39975.170528311,
+        "joints": [
+          85.03091430664062,
+          -33.25202560424805,
+          61.288265228271484,
+          -22.042707443237305,
+          152.13388061523438,
+          6.583094596862793
+        ],
+        "tcp": [
+          -22.648927688598633,
+          -740.7171630859375,
+          93.05244445800781,
+          92.7981185913086,
+          -1.2788149118423462,
+          -67.29503631591797
+        ],
+        "gripper_position": 99,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 375,
+        "camera_monotonic": 39973.177954535,
+        "robot_monotonic": 39973.18039504,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized/continuous/frames/000375.jpg",
+        "robot": {
+          "received_monotonic": 39973.18039504,
+          "joints": [
+            85.0339584350586,
+            -33.25855255126953,
+            61.285438537597656,
+            -22.04988670349121,
+            152.1341094970703,
+            6.583529949188232
+          ],
+          "tcp": [
+            -22.612682342529297,
+            -740.7523803710938,
+            93.16023254394531,
+            92.79042053222656,
+            -1.2938814163208008,
+            -67.29205322265625
+          ],
+          "gripper_position": 78,
+          "gripper_active": 1,
+          "gripper_motiondone": 2,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 376,
+        "camera_monotonic": 39973.277927489,
+        "robot_monotonic": 39973.28045493,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized/continuous/frames/000376.jpg",
+        "robot": {
+          "received_monotonic": 39973.28045493,
+          "joints": [
+            85.0339584350586,
+            -33.25811767578125,
+            61.2856559753418,
+            -22.04705810546875,
+            152.13345336914062,
+            6.583747386932373
+          ],
+          "tcp": [
+            -22.611650466918945,
+            -740.7466430664062,
+            93.15128326416016,
+            92.79209899902344,
+            -1.2910476922988892,
+            -67.29145812988281
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 355,
+      "first_labeled_step": 355,
+      "first_labeled_capture_frame": 375,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized/continuous/frames/000375.jpg",
+      "first_labeled_obs_joints_deg": [
+        85.0339584350586,
+        -33.25855255126953,
+        61.285438537597656,
+        -22.04988670349121,
+        152.1341094970703,
+        6.583529949188232
+      ],
+      "first_labeled_obs_tcp": [
+        -22.612682342529297,
+        -740.7523803710938,
+        93.16023254394531,
+        92.79042053222656,
+        -1.2938814163208008,
+        -67.29205322265625
+      ],
+      "first_labeled_obs_actual_percent": 78,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 2,
+      "first_labeled_grid_minus_issue_s": -0.027574594001634978,
+      "first_labeled_camera_minus_issue_s": -0.08366313300211914,
+      "first_labeled_target_minus_issue_s": 0.13909207266260637,
+      "first_labeled_tcp_to_native_initial_mm": 0.007050757698696038,
+      "label_before_issue_frames": [
+        355
+      ],
+      "labeled_rows": 239,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 50.00752325787099,
+      "eligible_anchor_farthest": {
+        "frame": 308,
+        "step": 308,
+        "action_chunk_offset": 47,
+        "observation_tcp": [
+          -22.638914108276367,
+          -740.7379150390625,
+          143.1621856689453,
+          92.79403686523438,
+          -1.2871803045272827,
+          -67.29344940185547
+        ],
+        "distance_to_native_initial_tcp_mm": 50.00752325787099,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized/continuous/frames/000327.jpg"
+      }
+    },
+    {
+      "source": 1,
+      "split": "train",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-183700-cc83dc/materialized",
+      "direction": "close",
+      "sequence": 6,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-183700-cc83dc/materialized/command-0006.json",
+      "issued_monotonic": 45022.235539323,
+      "completed_monotonic": 45024.107558173,
+      "target_percent": 76.0,
+      "native_args": [
+        1,
+        76,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 45022.224511902,
+        "joints": [
+          76.79747772216797,
+          -35.13514709472656,
+          65.19178009033203,
+          -25.306407928466797,
+          143.9365692138672,
+          5.130941390991211
+        ],
+        "tcp": [
+          -121.07137298583984,
+          -731.345703125,
+          92.2278060913086,
+          92.79497528076172,
+          -1.286440134048462,
+          -67.29564666748047
+        ],
+        "gripper_position": 100,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 45024.104505442,
+        "joints": [
+          76.79965209960938,
+          -35.13753890991211,
+          65.18960571289062,
+          -25.306842803955078,
+          143.93634033203125,
+          5.13115930557251
+        ],
+        "tcp": [
+          -121.0468521118164,
+          -731.3651123046875,
+          92.27394104003906,
+          92.79205322265625,
+          -1.290720820426941,
+          -67.29319763183594
+        ],
+        "gripper_position": 78,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 187,
+        "camera_monotonic": 45022.065972618,
+        "robot_monotonic": 45022.064605945,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-183700-cc83dc/materialized/continuous/frames/000187.jpg",
+        "robot": {
+          "received_monotonic": 45022.064605945,
+          "joints": [
+            76.79704284667969,
+            -35.13492965698242,
+            65.19200134277344,
+            -25.306407928466797,
+            143.93634033203125,
+            5.13050651550293
+          ],
+          "tcp": [
+            -121.07646179199219,
+            -731.34375,
+            92.22348022460938,
+            92.79524993896484,
+            -1.2856636047363281,
+            -67.29584503173828
+          ],
+          "gripper_position": 100,
+          "gripper_active": 1,
+          "gripper_motiondone": 1,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 188,
+        "camera_monotonic": 45022.266107205,
+        "robot_monotonic": 45022.26443434,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-183700-cc83dc/materialized/continuous/frames/000188.jpg",
+        "robot": {
+          "received_monotonic": 45022.26443434,
+          "joints": [
+            76.79747772216797,
+            -35.1353645324707,
+            65.19200134277344,
+            -25.306190490722656,
+            143.93678283691406,
+            5.130941390991211
+          ],
+          "tcp": [
+            -121.07121276855469,
+            -731.3440551757812,
+            92.22895812988281,
+            92.79508972167969,
+            -1.2862533330917358,
+            -67.29586791992188
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 773,
+      "first_labeled_step": 179,
+      "first_labeled_capture_frame": 187,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-183700-cc83dc/materialized/continuous/frames/000187.jpg",
+      "first_labeled_obs_joints_deg": [
+        76.79704284667969,
+        -35.13492965698242,
+        65.19200134277344,
+        -25.306407928466797,
+        143.93634033203125,
+        5.13050651550293
+      ],
+      "first_labeled_obs_tcp": [
+        -121.07646179199219,
+        -731.34375,
+        92.22348022460938,
+        92.79524993896484,
+        -1.2856636047363281,
+        -67.29584503173828
+      ],
+      "first_labeled_obs_actual_percent": 100,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 1,
+      "first_labeled_grid_minus_issue_s": -0.01994528534123674,
+      "first_labeled_camera_minus_issue_s": -0.16956670500076143,
+      "first_labeled_target_minus_issue_s": 0.14672138133028056,
+      "first_labeled_tcp_to_native_initial_mm": 0.006958718849124911,
+      "label_before_issue_frames": [
+        773
+      ],
+      "labeled_rows": 100,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 73.031800393312,
+      "eligible_anchor_farthest": {
+        "frame": 724,
+        "step": 130,
+        "action_chunk_offset": 49,
+        "observation_tcp": [
+          -53.76076126098633,
+          -703.2384033203125,
+          95.82017517089844,
+          92.78860473632812,
+          -1.2912236452102661,
+          -67.29082489013672
+        ],
+        "distance_to_native_initial_tcp_mm": 73.031800393312,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-183700-cc83dc/materialized/continuous/frames/000133.jpg"
+      }
+    },
+    {
+      "source": 1,
+      "split": "train",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-183700-cc83dc/materialized",
+      "direction": "open",
+      "sequence": 10,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-183700-cc83dc/materialized/command-0010.json",
+      "issued_monotonic": 45040.364467932,
+      "completed_monotonic": 45042.312284238,
+      "target_percent": 100.0,
+      "native_args": [
+        1,
+        100,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 45040.357243233,
+        "joints": [
+          76.8013916015625,
+          -35.135799407958984,
+          65.19243621826172,
+          -25.308584213256836,
+          143.9365692138672,
+          5.130941390991211
+        ],
+        "tcp": [
+          -121.02167510986328,
+          -731.3551635742188,
+          92.23367309570312,
+          92.793701171875,
+          -1.288202166557312,
+          -67.29170227050781
+        ],
+        "gripper_position": 78,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 45042.31033954,
+        "joints": [
+          76.79617309570312,
+          -35.13079833984375,
+          65.1950454711914,
+          -25.30706214904785,
+          143.93678283691406,
+          5.131811618804932
+        ],
+        "tcp": [
+          -121.08346557617188,
+          -731.3224487304688,
+          92.14990234375,
+          92.7990493774414,
+          -1.2816599607467651,
+          -67.29730224609375
+        ],
+        "gripper_position": 99,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 296,
+        "camera_monotonic": 45040.278628782,
+        "robot_monotonic": 45040.277263577,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-183700-cc83dc/materialized/continuous/frames/000296.jpg",
+        "robot": {
+          "received_monotonic": 45040.277263577,
+          "joints": [
+            76.80117797851562,
+            -35.135799407958984,
+            65.19243621826172,
+            -25.308366775512695,
+            143.9365692138672,
+            5.130941390991211
+          ],
+          "tcp": [
+            -121.02436065673828,
+            -731.3543090820312,
+            92.23348236083984,
+            92.79383087158203,
+            -1.288025975227356,
+            -67.29192352294922
+          ],
+          "gripper_position": 78,
+          "gripper_active": 1,
+          "gripper_motiondone": 2,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 297,
+        "camera_monotonic": 45040.37887766,
+        "robot_monotonic": 45040.377294126,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-183700-cc83dc/materialized/continuous/frames/000297.jpg",
+        "robot": {
+          "received_monotonic": 45040.377294126,
+          "joints": [
+            76.8013916015625,
+            -35.1353645324707,
+            65.1926498413086,
+            -25.308366775512695,
+            143.9365692138672,
+            5.130941390991211
+          ],
+          "tcp": [
+            -121.0212173461914,
+            -731.3532104492188,
+            92.22637176513672,
+            92.7942123413086,
+            -1.2874974012374878,
+            -67.29170989990234
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 873,
+      "first_labeled_step": 279,
+      "first_labeled_capture_frame": 295,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-183700-cc83dc/materialized/continuous/frames/000295.jpg",
+      "first_labeled_obs_joints_deg": [
+        76.80095672607422,
+        -35.13688659667969,
+        65.19221496582031,
+        -25.309236526489258,
+        143.9359130859375,
+        5.130941390991211
+      ],
+      "first_labeled_obs_tcp": [
+        -121.027587890625,
+        -731.3587036132812,
+        92.24970245361328,
+        92.79259490966797,
+        -1.2898197174072266,
+        -67.29145812988281
+      ],
+      "first_labeled_obs_actual_percent": 78,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 2,
+      "first_labeled_grid_minus_issue_s": -0.14887389433715725,
+      "first_labeled_camera_minus_issue_s": -0.28585248699528165,
+      "first_labeled_target_minus_issue_s": 0.017792772334360052,
+      "first_labeled_tcp_to_native_initial_mm": 0.01744801329412796,
+      "label_before_issue_frames": [
+        873
+      ],
+      "labeled_rows": 65,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 50.01649135263336,
+      "eligible_anchor_farthest": {
+        "frame": 830,
+        "step": 236,
+        "action_chunk_offset": 43,
+        "observation_tcp": [
+          -121.05459594726562,
+          -731.3450317382812,
+          142.25015258789062,
+          92.79442596435547,
+          -1.2873305082321167,
+          -67.29499053955078
+        ],
+        "distance_to_native_initial_tcp_mm": 50.01649135263336,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-183700-cc83dc/materialized/continuous/frames/000250.jpg"
+      }
+    },
+    {
+      "source": 2,
+      "split": "train",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-190231-0c1c42/materialized",
+      "direction": "close",
+      "sequence": 6,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-190231-0c1c42/materialized/command-0006.json",
+      "issued_monotonic": 46543.494754168,
+      "completed_monotonic": 46545.394106187,
+      "target_percent": 76.0,
+      "native_args": [
+        1,
+        76,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 46543.493422792,
+        "joints": [
+          60.94431686401367,
+          -43.763004302978516,
+          82.80602264404297,
+          -35.4819221496582,
+          128.1221160888672,
+          3.477771043777466
+        ],
+        "tcp": [
+          -273.4421691894531,
+          -632.7376098632812,
+          90.46131896972656,
+          92.80150604248047,
+          -1.2760874032974243,
+          -67.29403686523438
+        ],
+        "gripper_position": 100,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 46545.383552159,
+        "joints": [
+          60.945404052734375,
+          -43.7656135559082,
+          82.80602264404297,
+          -35.48126983642578,
+          128.12147521972656,
+          3.478206157684326
+        ],
+        "tcp": [
+          -273.43048095703125,
+          -632.7452392578125,
+          90.49170684814453,
+          92.79999542236328,
+          -1.2777656316757202,
+          -67.29228973388672
+        ],
+        "gripper_position": 78,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 198,
+        "camera_monotonic": 46543.318285702,
+        "robot_monotonic": 46543.313482898,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-190231-0c1c42/materialized/continuous/frames/000198.jpg",
+        "robot": {
+          "received_monotonic": 46543.313482898,
+          "joints": [
+            60.94409942626953,
+            -43.762569427490234,
+            82.80580139160156,
+            -35.4819221496582,
+            128.1221160888672,
+            3.4779887199401855
+          ],
+          "tcp": [
+            -273.4449768066406,
+            -632.7373657226562,
+            90.45755004882812,
+            92.80168151855469,
+            -1.276170015335083,
+            -67.29427337646484
+          ],
+          "gripper_position": 100,
+          "gripper_active": 1,
+          "gripper_motiondone": 1,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 199,
+        "camera_monotonic": 46543.518459407,
+        "robot_monotonic": 46543.513481304,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-190231-0c1c42/materialized/continuous/frames/000199.jpg",
+        "robot": {
+          "received_monotonic": 46543.513481304,
+          "joints": [
+            60.94475173950195,
+            -43.762786865234375,
+            82.80602264404297,
+            -35.482139587402344,
+            128.1219024658203,
+            3.477771043777466
+          ],
+          "tcp": [
+            -273.4372863769531,
+            -632.740234375,
+            90.45897674560547,
+            92.801513671875,
+            -1.2760980129241943,
+            -67.29338836669922
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 1117,
+      "first_labeled_step": 179,
+      "first_labeled_capture_frame": 198,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-190231-0c1c42/materialized/continuous/frames/000198.jpg",
+      "first_labeled_obs_joints_deg": [
+        60.94409942626953,
+        -43.762569427490234,
+        82.80580139160156,
+        -35.4819221496582,
+        128.1221160888672,
+        3.4779887199401855
+      ],
+      "first_labeled_obs_tcp": [
+        -273.4449768066406,
+        -632.7373657226562,
+        90.45755004882812,
+        92.80168151855469,
+        -1.276170015335083,
+        -67.29427337646484
+      ],
+      "first_labeled_obs_actual_percent": 100,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 1,
+      "first_labeled_grid_minus_issue_s": -0.09714806199917803,
+      "first_labeled_camera_minus_issue_s": -0.1764684660010971,
+      "first_labeled_target_minus_issue_s": 0.06951860466506332,
+      "first_labeled_tcp_to_native_initial_mm": 0.004706068811120353,
+      "label_before_issue_frames": [
+        1117
+      ],
+      "labeled_rows": 120,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 71.238963618722,
+      "eligible_anchor_farthest": {
+        "frame": 1068,
+        "step": 130,
+        "action_chunk_offset": 49,
+        "observation_tcp": [
+          -207.83729553222656,
+          -605.2116088867188,
+          94.10957336425781,
+          92.79293823242188,
+          -1.2818232774734497,
+          -67.31005859375
+        ],
+        "distance_to_native_initial_tcp_mm": 71.238963618722,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-190231-0c1c42/materialized/continuous/frames/000137.jpg"
+      }
+    },
+    {
+      "source": 2,
+      "split": "train",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-190231-0c1c42/materialized",
+      "direction": "open",
+      "sequence": 10,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-190231-0c1c42/materialized/command-0010.json",
+      "issued_monotonic": 46564.689033096,
+      "completed_monotonic": 46567.02453387,
+      "target_percent": 100.0,
+      "native_args": [
+        1,
+        100,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 46564.679080487,
+        "joints": [
+          60.94388198852539,
+          -43.76409149169922,
+          82.8077621459961,
+          -35.482139587402344,
+          128.12060546875,
+          3.4786412715911865
+        ],
+        "tcp": [
+          -273.4414367675781,
+          -632.7299194335938,
+          90.46300506591797,
+          92.80191040039062,
+          -1.2767616510391235,
+          -67.29300689697266
+        ],
+        "gripper_position": 76,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 46567.019206528,
+        "joints": [
+          60.94475173950195,
+          -43.763221740722656,
+          82.8077621459961,
+          -35.48170471191406,
+          128.12147521972656,
+          3.4788589477539062
+        ],
+        "tcp": [
+          -273.43157958984375,
+          -632.7311401367188,
+          90.45209503173828,
+          92.80290222167969,
+          -1.2761285305023193,
+          -67.29303741455078
+        ],
+        "gripper_position": 100,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 326,
+        "camera_monotonic": 46564.632762653,
+        "robot_monotonic": 46564.629041446,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-190231-0c1c42/materialized/continuous/frames/000326.jpg",
+        "robot": {
+          "received_monotonic": 46564.629041446,
+          "joints": [
+            60.94431686401367,
+            -43.76409149169922,
+            82.8077621459961,
+            -35.482139587402344,
+            128.12060546875,
+            3.4786412715911865
+          ],
+          "tcp": [
+            -273.4366455078125,
+            -632.7319946289062,
+            90.46300506591797,
+            92.80191040039062,
+            -1.2767616510391235,
+            -67.29257202148438
+          ],
+          "gripper_position": 76,
+          "gripper_active": 1,
+          "gripper_motiondone": 2,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 327,
+        "camera_monotonic": 46564.832908503,
+        "robot_monotonic": 46564.829051786,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-190231-0c1c42/materialized/continuous/frames/000327.jpg",
+        "robot": {
+          "received_monotonic": 46564.829051786,
+          "joints": [
+            60.94409942626953,
+            -43.76430892944336,
+            82.8079833984375,
+            -35.48170471191406,
+            128.12103271484375,
+            3.4786412715911865
+          ],
+          "tcp": [
+            -273.43841552734375,
+            -632.7285766601562,
+            90.46365356445312,
+            92.80223083496094,
+            -1.2764710187911987,
+            -67.29322814941406
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 1237,
+      "first_labeled_step": 299,
+      "first_labeled_capture_frame": 325,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-190231-0c1c42/materialized/continuous/frames/000325.jpg",
+      "first_labeled_obs_joints_deg": [
+        60.94409942626953,
+        -43.76430892944336,
+        82.8077621459961,
+        -35.48257827758789,
+        128.12060546875,
+        3.478423833847046
+      ],
+      "first_labeled_obs_tcp": [
+        -273.4395446777344,
+        -632.7318725585938,
+        90.46615600585938,
+        92.80139923095703,
+        -1.2769482135772705,
+        -67.29276275634766
+      ],
+      "first_labeled_obs_actual_percent": 76,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 2,
+      "first_labeled_grid_minus_issue_s": -0.12476032333506737,
+      "first_labeled_camera_minus_issue_s": -0.15628677000495372,
+      "first_labeled_target_minus_issue_s": 0.041906343336449936,
+      "first_labeled_tcp_to_native_initial_mm": 0.004162105687845531,
+      "label_before_issue_frames": [
+        1237
+      ],
+      "labeled_rows": 69,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 50.03112100207339,
+      "eligible_anchor_farthest": {
+        "frame": 1194,
+        "step": 256,
+        "action_chunk_offset": 43,
+        "observation_tcp": [
+          -273.4385681152344,
+          -632.73779296875,
+          140.49412536621094,
+          92.79981994628906,
+          -1.2785415649414062,
+          -67.29340362548828
+        ],
+        "distance_to_native_initial_tcp_mm": 50.03112100207339,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-190231-0c1c42/materialized/continuous/frames/000280.jpg"
+      }
+    },
+    {
+      "source": 3,
+      "split": "train",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized",
+      "direction": "close",
+      "sequence": 6,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/command-0006.json",
+      "issued_monotonic": 47300.090765161,
+      "completed_monotonic": 47302.02079136,
+      "target_percent": 76.0,
+      "native_args": [
+        1,
+        76,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 47300.085056816,
+        "joints": [
+          78.75914001464844,
+          -35.27981948852539,
+          65.44696807861328,
+          -25.165218353271484,
+          145.89234924316406,
+          5.419849395751953
+        ],
+        "tcp": [
+          -97.06144714355469,
+          -730.5086669921875,
+          92.469482421875,
+          92.8030776977539,
+          -1.27348792552948,
+          -67.29698181152344
+        ],
+        "gripper_position": 100,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 47302.015092605,
+        "joints": [
+          78.760009765625,
+          -35.28765106201172,
+          65.44805908203125,
+          -25.165653228759766,
+          145.89169311523438,
+          5.419849395751953
+        ],
+        "tcp": [
+          -97.05052185058594,
+          -730.5142822265625,
+          92.56290435791016,
+          92.79911804199219,
+          -1.279475450515747,
+          -67.29537963867188
+        ],
+        "gripper_position": 78,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 171,
+        "camera_monotonic": 47300.037427855,
+        "robot_monotonic": 47300.034936487,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/continuous/frames/000171.jpg",
+        "robot": {
+          "received_monotonic": 47300.034936487,
+          "joints": [
+            78.75935363769531,
+            -35.27938461303711,
+            65.4467544555664,
+            -25.165218353271484,
+            145.8921356201172,
+            5.419414043426514
+          ],
+          "tcp": [
+            -97.05866241455078,
+            -730.5101318359375,
+            92.46533966064453,
+            92.80321502685547,
+            -1.2728835344314575,
+            -67.2965316772461
+          ],
+          "gripper_position": 100,
+          "gripper_active": 1,
+          "gripper_motiondone": 1,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 172,
+        "camera_monotonic": 47300.137552146,
+        "robot_monotonic": 47300.134952632,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/continuous/frames/000172.jpg",
+        "robot": {
+          "received_monotonic": 47300.134952632,
+          "joints": [
+            78.75914001464844,
+            -35.27960205078125,
+            65.44740295410156,
+            -25.165218353271484,
+            145.8927764892578,
+            5.420284271240234
+          ],
+          "tcp": [
+            -97.06124877929688,
+            -730.5054931640625,
+            92.46379089355469,
+            92.80341339111328,
+            -1.2733598947525024,
+            -67.29744720458984
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 1468,
+      "first_labeled_step": 162,
+      "first_labeled_capture_frame": 170,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/continuous/frames/000170.jpg",
+      "first_labeled_obs_joints_deg": [
+        78.75891876220703,
+        -35.27894973754883,
+        65.446533203125,
+        -25.165218353271484,
+        145.8914794921875,
+        5.418543815612793
+      ],
+      "first_labeled_obs_tcp": [
+        -97.06390380859375,
+        -730.5111083984375,
+        92.46115112304688,
+        92.80338287353516,
+        -1.2718656063079834,
+        -67.29627990722656
+      ],
+      "first_labeled_obs_actual_percent": 100,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 1,
+      "first_labeled_grid_minus_issue_s": -0.13855128366412828,
+      "first_labeled_camera_minus_issue_s": -0.253533706003509,
+      "first_labeled_target_minus_issue_s": 0.02811538300011307,
+      "first_labeled_tcp_to_native_initial_mm": 0.009022538875239497,
+      "label_before_issue_frames": [
+        1468
+      ],
+      "labeled_rows": 113,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 73.97561782387565,
+      "eligible_anchor_farthest": {
+        "frame": 1419,
+        "step": 113,
+        "action_chunk_offset": 49,
+        "observation_tcp": [
+          -28.93769645690918,
+          -701.8994750976562,
+          96.08345031738281,
+          92.80665588378906,
+          -1.2677119970321655,
+          -67.29181671142578
+        ],
+        "distance_to_native_initial_tcp_mm": 73.97561782387565,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/continuous/frames/000117.jpg"
+      }
+    },
+    {
+      "source": 3,
+      "split": "train",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized",
+      "direction": "open",
+      "sequence": 10,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/command-0010.json",
+      "issued_monotonic": 47322.476919183,
+      "completed_monotonic": 47324.37075271,
+      "target_percent": 100.0,
+      "native_args": [
+        1,
+        100,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 47322.467779613,
+        "joints": [
+          78.76065826416016,
+          -35.2841682434082,
+          65.45045471191406,
+          -25.165435791015625,
+          145.89190673828125,
+          5.4209370613098145
+        ],
+        "tcp": [
+          -97.0390853881836,
+          -730.4985961914062,
+          92.50184631347656,
+          92.80250549316406,
+          -1.2754980325698853,
+          -67.2950668334961
+        ],
+        "gripper_position": 78,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 47324.360820962,
+        "joints": [
+          78.76044464111328,
+          -35.27851486206055,
+          65.45132446289062,
+          -25.165435791015625,
+          145.89190673828125,
+          5.419849395751953
+        ],
+        "tcp": [
+          -97.03981018066406,
+          -730.4879760742188,
+          92.42334747314453,
+          92.80615234375,
+          -1.2689971923828125,
+          -67.2953109741211
+        ],
+        "gripper_position": 99,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 305,
+        "camera_monotonic": 47322.353029194,
+        "robot_monotonic": 47322.357746932,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/continuous/frames/000305.jpg",
+        "robot": {
+          "received_monotonic": 47322.357746932,
+          "joints": [
+            78.76087951660156,
+            -35.2841682434082,
+            65.45001983642578,
+            -25.164783477783203,
+            145.89190673828125,
+            5.420502185821533
+          ],
+          "tcp": [
+            -97.03652954101562,
+            -730.5000610351562,
+            92.50426483154297,
+            92.80262756347656,
+            -1.2748829126358032,
+            -67.29483032226562
+          ],
+          "gripper_position": 78,
+          "gripper_active": 1,
+          "gripper_motiondone": 2,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 306,
+        "camera_monotonic": 47322.553036393,
+        "robot_monotonic": 47322.557848264,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/continuous/frames/000306.jpg",
+        "robot": {
+          "received_monotonic": 47322.557848264,
+          "joints": [
+            78.76044464111328,
+            -35.2841682434082,
+            65.45001983642578,
+            -25.165218353271484,
+            145.89256286621094,
+            5.4209370613098145
+          ],
+          "tcp": [
+            -97.04267883300781,
+            -730.4990844726562,
+            92.50469970703125,
+            92.80233764648438,
+            -1.275646686553955,
+            -67.29592895507812
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 1581,
+      "first_labeled_step": 275,
+      "first_labeled_capture_frame": 305,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/continuous/frames/000305.jpg",
+      "first_labeled_obs_joints_deg": [
+        78.76087951660156,
+        -35.2841682434082,
+        65.45001983642578,
+        -25.164783477783203,
+        145.89190673828125,
+        5.420502185821533
+      ],
+      "first_labeled_obs_tcp": [
+        -97.03652954101562,
+        -730.5000610351562,
+        92.50426483154297,
+        92.80262756347656,
+        -1.2748829126358032,
+        -67.29483032226562
+      ],
+      "first_labeled_obs_actual_percent": 78,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 2,
+      "first_labeled_grid_minus_issue_s": -0.024705305659153964,
+      "first_labeled_camera_minus_issue_s": -0.1238899890013272,
+      "first_labeled_target_minus_issue_s": 0.14196136100508738,
+      "first_labeled_tcp_to_native_initial_mm": 0.0038114763013117857,
+      "label_before_issue_frames": [
+        1581
+      ],
+      "labeled_rows": 229,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 50.01445036350975,
+      "eligible_anchor_farthest": {
+        "frame": 1532,
+        "step": 226,
+        "action_chunk_offset": 49,
+        "observation_tcp": [
+          -97.03385162353516,
+          -730.4998779296875,
+          142.51629638671875,
+          92.802001953125,
+          -1.275122880935669,
+          -67.29478454589844
+        ],
+        "distance_to_native_initial_tcp_mm": 50.01445036350975,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/continuous/frames/000252.jpg"
+      }
+    },
+    {
+      "source": 3,
+      "split": "train",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized",
+      "direction": "close",
+      "sequence": 17,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/command-0017.json",
+      "issued_monotonic": 47364.048296376,
+      "completed_monotonic": 47366.020337917,
+      "target_percent": 76.0,
+      "native_args": [
+        1,
+        76,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 47364.046450428,
+        "joints": [
+          78.76022338867188,
+          -35.280906677246094,
+          65.45045471191406,
+          -25.165435791015625,
+          145.89256286621094,
+          5.420502185821533
+        ],
+        "tcp": [
+          -97.04441833496094,
+          -730.4935302734375,
+          92.46004486083984,
+          92.80428314208984,
+          -1.2723244428634644,
+          -67.29617309570312
+        ],
+        "gripper_position": 100,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 47366.016432957,
+        "joints": [
+          78.76044464111328,
+          -35.28895568847656,
+          65.44762420654297,
+          -25.165435791015625,
+          145.8914794921875,
+          5.420284271240234
+        ],
+        "tcp": [
+          -97.04546356201172,
+          -730.5186157226562,
+          92.58240509033203,
+          92.79828643798828,
+          -1.2811839580535889,
+          -67.29472351074219
+        ],
+        "gripper_position": 78,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 554,
+        "camera_monotonic": 47363.881698417,
+        "robot_monotonic": 47363.886353445,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/continuous/frames/000554.jpg",
+        "robot": {
+          "received_monotonic": 47363.886353445,
+          "joints": [
+            78.760009765625,
+            -35.280906677246094,
+            65.45023345947266,
+            -25.165000915527344,
+            145.8927764892578,
+            5.420502185821533
+          ],
+          "tcp": [
+            -97.04740905761719,
+            -730.4931640625,
+            92.46118927001953,
+            92.80438995361328,
+            -1.2721333503723145,
+            -67.2966079711914
+          ],
+          "gripper_position": 100,
+          "gripper_active": 1,
+          "gripper_motiondone": 1,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 555,
+        "camera_monotonic": 47364.081610718,
+        "robot_monotonic": 47364.086342601,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/continuous/frames/000555.jpg",
+        "robot": {
+          "received_monotonic": 47364.086342601,
+          "joints": [
+            78.76044464111328,
+            -35.281124114990234,
+            65.45023345947266,
+            -25.165435791015625,
+            145.8927764892578,
+            5.420066833496094
+          ],
+          "tcp": [
+            -97.04206085205078,
+            -730.494873046875,
+            92.46434020996094,
+            92.80402374267578,
+            -1.2722402811050415,
+            -67.296142578125
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 1810,
+      "first_labeled_step": 504,
+      "first_labeled_capture_frame": 554,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/continuous/frames/000554.jpg",
+      "first_labeled_obs_joints_deg": [
+        78.760009765625,
+        -35.280906677246094,
+        65.45023345947266,
+        -25.165000915527344,
+        145.8927764892578,
+        5.420502185821533
+      ],
+      "first_labeled_obs_tcp": [
+        -97.04740905761719,
+        -730.4931640625,
+        92.46118927001953,
+        92.80438995361328,
+        -1.2721333503723145,
+        -67.2966079711914
+      ],
+      "first_labeled_obs_actual_percent": 100,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 1,
+      "first_labeled_grid_minus_issue_s": -0.09608249866141705,
+      "first_labeled_camera_minus_issue_s": -0.16659795900341123,
+      "first_labeled_target_minus_issue_s": 0.0705841680028243,
+      "first_labeled_tcp_to_native_initial_mm": 0.0032230738167011784,
+      "label_before_issue_frames": [
+        1810
+      ],
+      "labeled_rows": 113,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 73.24097713698086,
+      "eligible_anchor_farthest": {
+        "frame": 1761,
+        "step": 455,
+        "action_chunk_offset": 49,
+        "observation_tcp": [
+          -29.593835830688477,
+          -702.1810913085938,
+          96.07466125488281,
+          92.80513763427734,
+          -1.2708853483200073,
+          -67.29326629638672
+        ],
+        "distance_to_native_initial_tcp_mm": 73.24097713698086,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/continuous/frames/000497.jpg"
+      }
+    },
+    {
+      "source": 3,
+      "split": "train",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized",
+      "direction": "open",
+      "sequence": 21,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/command-0021.json",
+      "issued_monotonic": 47385.115825457,
+      "completed_monotonic": 47387.05136226,
+      "target_percent": 100.0,
+      "native_args": [
+        1,
+        100,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 47385.108229894,
+        "joints": [
+          78.76174926757812,
+          -35.28482437133789,
+          65.45023345947266,
+          -25.165218353271484,
+          145.89060974121094,
+          5.421154499053955
+        ],
+        "tcp": [
+          -97.02461242675781,
+          -730.5039672851562,
+          92.51136016845703,
+          92.80223846435547,
+          -1.276320219039917,
+          -67.29268646240234
+        ],
+        "gripper_position": 78,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 47387.049218324,
+        "joints": [
+          78.76087951660156,
+          -35.278079986572266,
+          65.45088958740234,
+          -25.165218353271484,
+          145.8914794921875,
+          5.419849395751953
+        ],
+        "tcp": [
+          -97.03425598144531,
+          -730.4907836914062,
+          92.42047882080078,
+          92.80630493164062,
+          -1.2688379287719727,
+          -67.29444885253906
+        ],
+        "gripper_position": 99,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 681,
+        "camera_monotonic": 47385.096153079,
+        "robot_monotonic": 47385.098272067,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/continuous/frames/000681.jpg",
+        "robot": {
+          "received_monotonic": 47385.098272067,
+          "joints": [
+            78.76174926757812,
+            -35.28504180908203,
+            65.44979858398438,
+            -25.165218353271484,
+            145.8910369873047,
+            5.4209370613098145
+          ],
+          "tcp": [
+            -97.02539825439453,
+            -730.5057373046875,
+            92.51715850830078,
+            92.80184173583984,
+            -1.276623249053955,
+            -67.29309844970703
+          ],
+          "gripper_position": 78,
+          "gripper_active": 1,
+          "gripper_motiondone": 2,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 682,
+        "camera_monotonic": 47385.196298837,
+        "robot_monotonic": 47385.198157442,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/continuous/frames/000682.jpg",
+        "robot": {
+          "received_monotonic": 47385.198157442,
+          "joints": [
+            78.761962890625,
+            -35.284385681152344,
+            65.45001983642578,
+            -25.165653228759766,
+            145.8914794921875,
+            5.421154499053955
+          ],
+          "tcp": [
+            -97.02272033691406,
+            -730.50439453125,
+            92.5077133178711,
+            92.80205535888672,
+            -1.2764583826065063,
+            -67.29332733154297
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 1923,
+      "first_labeled_step": 617,
+      "first_labeled_capture_frame": 680,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/continuous/frames/000680.jpg",
+      "first_labeled_obs_joints_deg": [
+        78.76152801513672,
+        -35.285911560058594,
+        65.4495849609375,
+        -25.16412925720215,
+        145.890380859375,
+        5.420719623565674
+      ],
+      "first_labeled_obs_tcp": [
+        -97.02774047851562,
+        -730.5064697265625,
+        92.52882385253906,
+        92.80188751220703,
+        -1.2764376401901245,
+        -67.29265594482422
+      ],
+      "first_labeled_obs_actual_percent": 78,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 2,
+      "first_labeled_grid_minus_issue_s": -0.16361157965729944,
+      "first_labeled_camera_minus_issue_s": -0.21977126599813346,
+      "first_labeled_target_minus_issue_s": 0.0030550870069419034,
+      "first_labeled_tcp_to_native_initial_mm": 0.017917231440941428,
+      "label_before_issue_frames": [
+        1923
+      ],
+      "labeled_rows": 67,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 50.00400868608674,
+      "eligible_anchor_farthest": {
+        "frame": 1877,
+        "step": 571,
+        "action_chunk_offset": 46,
+        "observation_tcp": [
+          -97.0423812866211,
+          -730.5008544921875,
+          142.51536560058594,
+          92.80177307128906,
+          -1.2757116556167603,
+          -67.29522705078125
+        ],
+        "distance_to_native_initial_tcp_mm": 50.00400868608674,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/continuous/frames/000632.jpg"
+      }
+    },
+    {
+      "source": 4,
+      "split": "train",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-192509-307a80/materialized",
+      "direction": "close",
+      "sequence": 6,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-192509-307a80/materialized/command-0006.json",
+      "issued_monotonic": 47905.343659422,
+      "completed_monotonic": 47907.320358429,
+      "target_percent": 76.0,
+      "native_args": [
+        1,
+        76,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 47905.341343147,
+        "joints": [
+          76.081298828125,
+          -40.683135986328125,
+          76.33409881591797,
+          -30.96230125427246,
+          143.22103881835938,
+          5.028039932250977
+        ],
+        "tcp": [
+          -118.6413803100586,
+          -686.2034912109375,
+          92.27005767822266,
+          92.80591583251953,
+          -1.2681245803833008,
+          -67.29393768310547
+        ],
+        "gripper_position": 100,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 47907.312299627,
+        "joints": [
+          76.0834732055664,
+          -40.68596267700195,
+          76.3327865600586,
+          -30.96491050720215,
+          143.21929931640625,
+          5.028910160064697
+        ],
+        "tcp": [
+          -118.61785888671875,
+          -686.225830078125,
+          92.31497192382812,
+          92.80200958251953,
+          -1.2744909524917603,
+          -67.28998565673828
+        ],
+        "gripper_position": 78,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 194,
+        "camera_monotonic": 47905.155412512,
+        "robot_monotonic": 47905.151176426,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-192509-307a80/materialized/continuous/frames/000194.jpg",
+        "robot": {
+          "received_monotonic": 47905.151176426,
+          "joints": [
+            76.08086395263672,
+            -40.682918548583984,
+            76.33431243896484,
+            -30.96230125427246,
+            143.2208251953125,
+            5.028039932250977
+          ],
+          "tcp": [
+            -118.64608001708984,
+            -686.2014770507812,
+            92.26598358154297,
+            92.80619049072266,
+            -1.2677860260009766,
+            -67.2941665649414
+          ],
+          "gripper_position": 100,
+          "gripper_active": 1,
+          "gripper_motiondone": 1,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 195,
+        "camera_monotonic": 47905.355571649,
+        "robot_monotonic": 47905.351265021,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-192509-307a80/materialized/continuous/frames/000195.jpg",
+        "robot": {
+          "received_monotonic": 47905.351265021,
+          "joints": [
+            76.081298828125,
+            -40.682701110839844,
+            76.33409881591797,
+            -30.96208381652832,
+            143.22103881835938,
+            5.028257369995117
+          ],
+          "tcp": [
+            -118.64117431640625,
+            -686.2026977539062,
+            92.26459503173828,
+            92.80630493164062,
+            -1.2678180932998657,
+            -67.29396057128906
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 2170,
+      "first_labeled_step": 180,
+      "first_labeled_capture_frame": 194,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-192509-307a80/materialized/continuous/frames/000194.jpg",
+      "first_labeled_obs_joints_deg": [
+        76.08086395263672,
+        -40.682918548583984,
+        76.33431243896484,
+        -30.96230125427246,
+        143.2208251953125,
+        5.028039932250977
+      ],
+      "first_labeled_obs_tcp": [
+        -118.64608001708984,
+        -686.2014770507812,
+        92.26598358154297,
+        92.80619049072266,
+        -1.2677860260009766,
+        -67.2941665649414
+      ],
+      "first_labeled_obs_actual_percent": 100,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 1,
+      "first_labeled_grid_minus_issue_s": -0.07344551666028565,
+      "first_labeled_camera_minus_issue_s": -0.188246909994632,
+      "first_labeled_target_minus_issue_s": 0.0932211500039557,
+      "first_labeled_tcp_to_native_initial_mm": 0.006537763460851611,
+      "label_before_issue_frames": [
+        2170
+      ],
+      "labeled_rows": 114,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 71.56561900812183,
+      "eligible_anchor_farthest": {
+        "frame": 2121,
+        "step": 131,
+        "action_chunk_offset": 49,
+        "observation_tcp": [
+          -52.75858688354492,
+          -658.458984375,
+          95.63720703125,
+          92.81672668457031,
+          -1.249131441116333,
+          -67.288818359375
+        ],
+        "distance_to_native_initial_tcp_mm": 71.56561900812183,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-192509-307a80/materialized/continuous/frames/000136.jpg"
+      }
+    },
+    {
+      "source": 4,
+      "split": "train",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-192509-307a80/materialized",
+      "direction": "open",
+      "sequence": 10,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-192509-307a80/materialized/command-0010.json",
+      "issued_monotonic": 47932.111731755,
+      "completed_monotonic": 47934.012143477,
+      "target_percent": 100.0,
+      "native_args": [
+        1,
+        100,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 47932.10732588,
+        "joints": [
+          76.08108520507812,
+          -40.683353424072266,
+          76.3351821899414,
+          -30.96230125427246,
+          143.2208251953125,
+          5.028257369995117
+        ],
+        "tcp": [
+          -118.64234924316406,
+          -686.1974487304688,
+          92.2656021118164,
+          92.80644989013672,
+          -1.2676540613174438,
+          -67.29396057128906
+        ],
+        "gripper_position": 78,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 47934.00739951,
+        "joints": [
+          76.07847595214844,
+          -40.68052291870117,
+          76.33540344238281,
+          -30.963171005249023,
+          143.2201690673828,
+          5.028257369995117
+        ],
+        "tcp": [
+          -118.67254638671875,
+          -686.1905517578125,
+          92.2306137084961,
+          92.80779266357422,
+          -1.2659399509429932,
+          -67.29595184326172
+        ],
+        "gripper_position": 99,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 355,
+        "camera_monotonic": 47931.974058761,
+        "robot_monotonic": 47931.97725311,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-192509-307a80/materialized/continuous/frames/000355.jpg",
+        "robot": {
+          "received_monotonic": 47931.97725311,
+          "joints": [
+            76.08086395263672,
+            -40.682918548583984,
+            76.33496856689453,
+            -30.96208381652832,
+            143.2208251953125,
+            5.028257369995117
+          ],
+          "tcp": [
+            -118.64505767822266,
+            -686.1973876953125,
+            92.26155090332031,
+            92.80670928955078,
+            -1.2673048973083496,
+            -67.294189453125
+          ],
+          "gripper_position": 78,
+          "gripper_active": 1,
+          "gripper_motiondone": 2,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 356,
+        "camera_monotonic": 47932.174207769,
+        "robot_monotonic": 47932.177259206,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-192509-307a80/materialized/continuous/frames/000356.jpg",
+        "robot": {
+          "received_monotonic": 47932.177259206,
+          "joints": [
+            76.08086395263672,
+            -40.683135986328125,
+            76.33561706542969,
+            -30.96230125427246,
+            143.22059631347656,
+            5.028257369995117
+          ],
+          "tcp": [
+            -118.6441421508789,
+            -686.1946411132812,
+            92.26011657714844,
+            92.80685424804688,
+            -1.2671408653259277,
+            -67.29397583007812
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 2284,
+      "first_labeled_step": 294,
+      "first_labeled_capture_frame": 355,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-192509-307a80/materialized/continuous/frames/000355.jpg",
+      "first_labeled_obs_joints_deg": [
+        76.08086395263672,
+        -40.682918548583984,
+        76.33496856689453,
+        -30.96208381652832,
+        143.2208251953125,
+        5.028257369995117
+      ],
+      "first_labeled_obs_tcp": [
+        -118.64505767822266,
+        -686.1973876953125,
+        92.26155090332031,
+        92.80670928955078,
+        -1.2673048973083496,
+        -67.294189453125
+      ],
+      "first_labeled_obs_actual_percent": 78,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 2,
+      "first_labeled_grid_minus_issue_s": -0.008184516336768866,
+      "first_labeled_camera_minus_issue_s": -0.13767299400205957,
+      "first_labeled_target_minus_issue_s": 0.15848215033474844,
+      "first_labeled_tcp_to_native_initial_mm": 0.0048735650232391865,
+      "label_before_issue_frames": [
+        2284
+      ],
+      "labeled_rows": 65,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 50.03026617985068,
+      "eligible_anchor_farthest": {
+        "frame": 2235,
+        "step": 245,
+        "action_chunk_offset": 49,
+        "observation_tcp": [
+          -118.64381408691406,
+          -686.203369140625,
+          142.29586791992188,
+          92.80476379394531,
+          -1.2699238061904907,
+          -67.29393005371094
+        ],
+        "distance_to_native_initial_tcp_mm": 50.03026617985068,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-192509-307a80/materialized/continuous/frames/000273.jpg"
+      }
+    },
+    {
+      "source": 5,
+      "split": "train",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-165538-d95608/materialized",
+      "direction": "close",
+      "sequence": 6,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-165538-d95608/materialized/command-0006.json",
+      "issued_monotonic": 39143.884413765,
+      "completed_monotonic": 39145.838595408,
+      "target_percent": 76.0,
+      "native_args": [
+        1,
+        76,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 39143.881826274,
+        "joints": [
+          76.89124298095703,
+          -40.53432846069336,
+          76.1161117553711,
+          -30.784996032714844,
+          144.0044403076172,
+          5.15269660949707
+        ],
+        "tcp": [
+          -109.6511001586914,
+          -687.3341064453125,
+          91.81517791748047,
+          92.81771087646484,
+          -1.2671338319778442,
+          -67.2710952758789
+        ],
+        "gripper_position": 100,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 39145.831258715,
+        "joints": [
+          76.88863372802734,
+          -40.537376403808594,
+          76.11502075195312,
+          -30.78586769104004,
+          144.00465393066406,
+          5.154871940612793
+        ],
+        "tcp": [
+          -109.68510437011719,
+          -687.3396606445312,
+          91.85991668701172,
+          92.81476593017578,
+          -1.2733523845672607,
+          -67.27396392822266
+        ],
+        "gripper_position": 78,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 184,
+        "camera_monotonic": 39143.775946293,
+        "robot_monotonic": 39143.771235147,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-165538-d95608/materialized/continuous/frames/000184.jpg",
+        "robot": {
+          "received_monotonic": 39143.771235147,
+          "joints": [
+            76.89102935791016,
+            -40.53432846069336,
+            76.11567687988281,
+            -30.784778594970703,
+            144.00486755371094,
+            5.15182638168335
+          ],
+          "tcp": [
+            -109.65448760986328,
+            -687.3350830078125,
+            91.81785583496094,
+            92.81755065917969,
+            -1.2664196491241455,
+            -67.27169799804688
+          ],
+          "gripper_position": 100,
+          "gripper_active": 1,
+          "gripper_motiondone": 1,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 185,
+        "camera_monotonic": 39143.976146335,
+        "robot_monotonic": 39143.97120764,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-165538-d95608/materialized/continuous/frames/000185.jpg",
+        "robot": {
+          "received_monotonic": 39143.97120764,
+          "joints": [
+            76.89124298095703,
+            -40.53389358520508,
+            76.11589050292969,
+            -30.784778594970703,
+            144.00465393066406,
+            5.15313196182251
+          ],
+          "tcp": [
+            -109.65133666992188,
+            -687.3341674804688,
+            91.81114959716797,
+            92.81794738769531,
+            -1.267204999923706,
+            -67.2713394165039
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 2524,
+      "first_labeled_step": 175,
+      "first_labeled_capture_frame": 183,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-165538-d95608/materialized/continuous/frames/000183.jpg",
+      "first_labeled_obs_joints_deg": [
+        76.89124298095703,
+        -40.53476333618164,
+        76.11567687988281,
+        -30.784343719482422,
+        144.00465393066406,
+        5.151391506195068
+      ],
+      "first_labeled_obs_tcp": [
+        -109.65165710449219,
+        -687.3355102539062,
+        91.82272338867188,
+        92.81756591796875,
+        -1.265995740890503,
+        -67.271240234375
+      ],
+      "first_labeled_obs_actual_percent": 100,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 1,
+      "first_labeled_grid_minus_issue_s": -0.1295775100006722,
+      "first_labeled_camera_minus_issue_s": -0.20847243499883916,
+      "first_labeled_target_minus_issue_s": 0.037089156663569156,
+      "first_labeled_tcp_to_native_initial_mm": 0.007695128504010565,
+      "label_before_issue_frames": [
+        2524
+      ],
+      "labeled_rows": 113,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 73.41923810099239,
+      "eligible_anchor_farthest": {
+        "frame": 2475,
+        "step": 126,
+        "action_chunk_offset": 49,
+        "observation_tcp": [
+          -42.033992767333984,
+          -658.9637451171875,
+          95.48040771484375,
+          92.8117446899414,
+          -1.2768795490264893,
+          -67.27987670898438
+        ],
+        "distance_to_native_initial_tcp_mm": 73.41923810099239,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-165538-d95608/materialized/continuous/frames/000129.jpg"
+      }
+    },
+    {
+      "source": 5,
+      "split": "train",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-165538-d95608/materialized",
+      "direction": "open",
+      "sequence": 10,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-165538-d95608/materialized/command-0010.json",
+      "issued_monotonic": 39163.735912359,
+      "completed_monotonic": 39165.673313485,
+      "target_percent": 100.0,
+      "native_args": [
+        1,
+        100,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 39163.733236119,
+        "joints": [
+          76.88972473144531,
+          -40.5356330871582,
+          76.11632537841797,
+          -30.784996032714844,
+          144.0042266845703,
+          5.155089855194092
+        ],
+        "tcp": [
+          -109.66924285888672,
+          -687.3316650390625,
+          91.82955932617188,
+          92.81709289550781,
+          -1.2704163789749146,
+          -67.27249908447266
+        ],
+        "gripper_position": 78,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 39165.663288561,
+        "joints": [
+          76.89298248291016,
+          -40.529109954833984,
+          76.11785125732422,
+          -30.784778594970703,
+          144.00509643554688,
+          5.156177520751953
+        ],
+        "tcp": [
+          -109.62700653076172,
+          -687.3207397460938,
+          91.74051666259766,
+          92.8218765258789,
+          -1.2647583484649658,
+          -67.270263671875
+        ],
+        "gripper_position": 99,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 303,
+        "camera_monotonic": 39163.68994967,
+        "robot_monotonic": 39163.693216468,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-165538-d95608/materialized/continuous/frames/000303.jpg",
+        "robot": {
+          "received_monotonic": 39163.693216468,
+          "joints": [
+            76.88972473144531,
+            -40.5356330871582,
+            76.11632537841797,
+            -30.784778594970703,
+            144.00399780273438,
+            5.155307292938232
+          ],
+          "tcp": [
+            -109.66899871826172,
+            -687.3316040039062,
+            91.829345703125,
+            92.81723022460938,
+            -1.27046799659729,
+            -67.27230072021484
+          ],
+          "gripper_position": 78,
+          "gripper_active": 1,
+          "gripper_motiondone": 2,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 304,
+        "camera_monotonic": 39163.790085123,
+        "robot_monotonic": 39163.793212162,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-165538-d95608/materialized/continuous/frames/000304.jpg",
+        "robot": {
+          "received_monotonic": 39163.793212162,
+          "joints": [
+            76.88993835449219,
+            -40.53541564941406,
+            76.11676025390625,
+            -30.784778594970703,
+            144.0044403076172,
+            5.155089855194092
+          ],
+          "tcp": [
+            -109.66605377197266,
+            -687.32861328125,
+            91.82393646240234,
+            92.81758880615234,
+            -1.269700288772583,
+            -67.27251434326172
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 2637,
+      "first_labeled_step": 288,
+      "first_labeled_capture_frame": 302,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-165538-d95608/materialized/continuous/frames/000302.jpg",
+      "first_labeled_obs_joints_deg": [
+        76.88906860351562,
+        -40.53672409057617,
+        76.1154556274414,
+        -30.78630256652832,
+        144.0042266845703,
+        5.154871940612793
+      ],
+      "first_labeled_obs_tcp": [
+        -109.67903900146484,
+        -687.3388671875,
+        91.84951782226562,
+        92.81517791748047,
+        -1.2728445529937744,
+        -67.27310180664062
+      ],
+      "first_labeled_obs_actual_percent": 78,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 2,
+      "first_labeled_grid_minus_issue_s": -0.14774277066317154,
+      "first_labeled_camera_minus_issue_s": -0.24617314100032672,
+      "first_labeled_target_minus_issue_s": 0.018923896001069807,
+      "first_labeled_tcp_to_native_initial_mm": 0.023370428277012197,
+      "label_before_issue_frames": [
+        2637
+      ],
+      "labeled_rows": 66,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 50.00538960791096,
+      "eligible_anchor_farthest": {
+        "frame": 2595,
+        "step": 246,
+        "action_chunk_offset": 42,
+        "observation_tcp": [
+          -109.65119934082031,
+          -687.3316040039062,
+          141.83494567871094,
+          92.81690216064453,
+          -1.2707674503326416,
+          -67.2718505859375
+        ],
+        "distance_to_native_initial_tcp_mm": 50.00538960791096,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-165538-d95608/materialized/continuous/frames/000258.jpg"
+      }
+    },
+    {
+      "source": 6,
+      "split": "train",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-chat-20261101-171627-cbdf83/materialized",
+      "direction": "close",
+      "sequence": 6,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-chat-20261101-171627-cbdf83/materialized/command-0006.json",
+      "issued_monotonic": 40426.415929736,
+      "completed_monotonic": 40428.356091755,
+      "target_percent": 76.0,
+      "native_args": [
+        1,
+        76,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 40426.408236967,
+        "joints": [
+          78.08560180664062,
+          -36.64473342895508,
+          68.15003967285156,
+          -26.568422317504883,
+          145.19639587402344,
+          5.327390193939209
+        ],
+        "tcp": [
+          -102.99688720703125,
+          -720.1095581054688,
+          92.71025085449219,
+          92.8161392211914,
+          -1.2688453197479248,
+          -67.27294921875
+        ],
+        "gripper_position": 100,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 40428.349046484,
+        "joints": [
+          78.0858154296875,
+          -36.648216247558594,
+          68.15003967285156,
+          -26.568857192993164,
+          145.19618225097656,
+          5.326085090637207
+        ],
+        "tcp": [
+          -102.99491882324219,
+          -720.1146240234375,
+          92.75469207763672,
+          92.81392669677734,
+          -1.270774006843567,
+          -67.27240753173828
+        ],
+        "gripper_position": 78,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 285,
+        "camera_monotonic": 40426.398757231,
+        "robot_monotonic": 40426.39819591,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-chat-20261101-171627-cbdf83/materialized/continuous/frames/000285.jpg",
+        "robot": {
+          "received_monotonic": 40426.39819591,
+          "joints": [
+            78.08516693115234,
+            -36.6453857421875,
+            68.14982604980469,
+            -26.568857192993164,
+            145.19662475585938,
+            5.327390193939209
+          ],
+          "tcp": [
+            -103.00305938720703,
+            -720.1110229492188,
+            92.72037506103516,
+            92.81538391113281,
+            -1.2699086666107178,
+            -67.27359008789062
+          ],
+          "gripper_position": 100,
+          "gripper_active": 1,
+          "gripper_motiondone": 1,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 286,
+        "camera_monotonic": 40426.498748008,
+        "robot_monotonic": 40426.49825835,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-chat-20261101-171627-cbdf83/materialized/continuous/frames/000286.jpg",
+        "robot": {
+          "received_monotonic": 40426.49825835,
+          "joints": [
+            78.08516693115234,
+            -36.64516830444336,
+            68.15026092529297,
+            -26.568857192993164,
+            145.19639587402344,
+            5.32760763168335
+          ],
+          "tcp": [
+            -103.00237274169922,
+            -720.1088256835938,
+            92.71466827392578,
+            92.8157730102539,
+            -1.2695995569229126,
+            -67.27339172363281
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 2979,
+      "first_labeled_step": 276,
+      "first_labeled_capture_frame": 284,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-chat-20261101-171627-cbdf83/materialized/continuous/frames/000284.jpg",
+      "first_labeled_obs_joints_deg": [
+        78.08538055419922,
+        -36.64560317993164,
+        68.15003967285156,
+        -26.568204879760742,
+        145.19639587402344,
+        5.327390193939209
+      ],
+      "first_labeled_obs_tcp": [
+        -102.99972534179688,
+        -720.109619140625,
+        92.7210922241211,
+        92.8157730102539,
+        -1.269382357597351,
+        -67.27316284179688
+      ],
+      "first_labeled_obs_actual_percent": 100,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 1,
+      "first_labeled_grid_minus_issue_s": -0.10500774866522988,
+      "first_labeled_camera_minus_issue_s": -0.21728374100348447,
+      "first_labeled_target_minus_issue_s": 0.061658917999011464,
+      "first_labeled_tcp_to_native_initial_mm": 0.011206874214905715,
+      "label_before_issue_frames": [
+        2979
+      ],
+      "labeled_rows": 105,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 73.88716214737352,
+      "eligible_anchor_farthest": {
+        "frame": 2930,
+        "step": 227,
+        "action_chunk_offset": 49,
+        "observation_tcp": [
+          -34.960723876953125,
+          -691.5277709960938,
+          96.38103485107422,
+          92.81649780273438,
+          -1.2707953453063965,
+          -67.26817321777344
+        ],
+        "distance_to_native_initial_tcp_mm": 73.88716214737352,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-chat-20261101-171627-cbdf83/materialized/continuous/frames/000230.jpg"
+      }
+    },
+    {
+      "source": 6,
+      "split": "train",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-chat-20261101-171627-cbdf83/materialized",
+      "direction": "open",
+      "sequence": 10,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-chat-20261101-171627-cbdf83/materialized/command-0010.json",
+      "issued_monotonic": 40445.267069046,
+      "completed_monotonic": 40447.250968142,
+      "target_percent": 100.0,
+      "native_args": [
+        1,
+        100,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 40445.258436802,
+        "joints": [
+          78.0858154296875,
+          -36.64473342895508,
+          68.1513442993164,
+          -26.568857192993164,
+          145.1959686279297,
+          5.32760763168335
+        ],
+        "tcp": [
+          -102.9925537109375,
+          -720.1044311523438,
+          92.70179748535156,
+          92.81666564941406,
+          -1.2683680057525635,
+          -67.27232360839844
+        ],
+        "gripper_position": 78,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 40447.248339428,
+        "joints": [
+          78.08755493164062,
+          -36.6392936706543,
+          68.1541748046875,
+          -26.569509506225586,
+          145.1959686279297,
+          5.326737403869629
+        ],
+        "tcp": [
+          -102.9665756225586,
+          -720.088134765625,
+          92.61444854736328,
+          92.82099151611328,
+          -1.2612344026565552,
+          -67.27063751220703
+        ],
+        "gripper_position": 99,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 398,
+        "camera_monotonic": 40445.20921836,
+        "robot_monotonic": 40445.208551038,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-chat-20261101-171627-cbdf83/materialized/continuous/frames/000398.jpg",
+        "robot": {
+          "received_monotonic": 40445.208551038,
+          "joints": [
+            78.08560180664062,
+            -36.64473342895508,
+            68.15156555175781,
+            -26.569074630737305,
+            145.1959686279297,
+            5.32760763168335
+          ],
+          "tcp": [
+            -102.99512481689453,
+            -720.103271484375,
+            92.70051574707031,
+            92.81666564941406,
+            -1.2683680057525635,
+            -67.27253723144531
+          ],
+          "gripper_position": 78,
+          "gripper_active": 1,
+          "gripper_motiondone": 2,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 399,
+        "camera_monotonic": 40445.409355819,
+        "robot_monotonic": 40445.408440893,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-chat-20261101-171627-cbdf83/materialized/continuous/frames/000399.jpg",
+        "robot": {
+          "received_monotonic": 40445.408440893,
+          "joints": [
+            78.0858154296875,
+            -36.64473342895508,
+            68.1520004272461,
+            -26.569074630737305,
+            145.19618225097656,
+            5.32760763168335
+          ],
+          "tcp": [
+            -102.99205017089844,
+            -720.1010131835938,
+            92.69762420654297,
+            92.81690216064453,
+            -1.2679994106292725,
+            -67.27254486083984
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 3084,
+      "first_labeled_step": 381,
+      "first_labeled_capture_frame": 397,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-chat-20261101-171627-cbdf83/materialized/continuous/frames/000397.jpg",
+      "first_labeled_obs_joints_deg": [
+        78.08560180664062,
+        -36.646690368652344,
+        68.15113067626953,
+        -26.568422317504883,
+        145.19552612304688,
+        5.327390193939209
+      ],
+      "first_labeled_obs_tcp": [
+        -102.99549102783203,
+        -720.1071166992188,
+        92.72764587402344,
+        92.81570434570312,
+        -1.2696038484573364,
+        -67.2720718383789
+      ],
+      "first_labeled_obs_actual_percent": 78,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 2,
+      "first_labeled_grid_minus_issue_s": -0.12281372533470858,
+      "first_labeled_camera_minus_issue_s": -0.25786715999856824,
+      "first_labeled_target_minus_issue_s": 0.043852941336808726,
+      "first_labeled_tcp_to_native_initial_mm": 0.02615299580333077,
+      "label_before_issue_frames": [
+        3084
+      ],
+      "labeled_rows": 66,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 50.00958339979358,
+      "eligible_anchor_farthest": {
+        "frame": 3036,
+        "step": 333,
+        "action_chunk_offset": 48,
+        "observation_tcp": [
+          -102.98368072509766,
+          -720.1013793945312,
+          142.7113800048828,
+          92.816650390625,
+          -1.2674882411956787,
+          -67.27184295654297
+        ],
+        "distance_to_native_initial_tcp_mm": 50.00958339979358,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-chat-20261101-171627-cbdf83/materialized/continuous/frames/000346.jpg"
+      }
+    },
+    {
+      "source": 7,
+      "split": "validation",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized",
+      "direction": "close",
+      "sequence": 6,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/command-0006.json",
+      "issued_monotonic": 40786.087892669,
+      "completed_monotonic": 40788.044348101,
+      "target_percent": 76.0,
+      "native_args": [
+        1,
+        76,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 40786.081418286,
+        "joints": [
+          78.07319641113281,
+          -36.670841217041016,
+          68.18985748291016,
+          -26.582998275756836,
+          145.18487548828125,
+          5.3230390548706055
+        ],
+        "tcp": [
+          -103.11113739013672,
+          -719.9458618164062,
+          92.78435516357422,
+          92.81645965576172,
+          -1.2657794952392578,
+          -67.2736587524414
+        ],
+        "gripper_position": 100,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 40788.041457899,
+        "joints": [
+          78.07276153564453,
+          -36.673667907714844,
+          68.1909408569336,
+          -26.58734893798828,
+          145.1846466064453,
+          5.3217339515686035
+        ],
+        "tcp": [
+          -103.11750030517578,
+          -719.9503784179688,
+          92.81649780273438,
+          92.8130111694336,
+          -1.269497275352478,
+          -67.27373504638672
+        ],
+        "gripper_position": 78,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 182,
+        "camera_monotonic": 40785.922411413,
+        "robot_monotonic": 40785.921446317,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/continuous/frames/000182.jpg",
+        "robot": {
+          "received_monotonic": 40785.921446317,
+          "joints": [
+            78.07298278808594,
+            -36.670841217041016,
+            68.18963623046875,
+            -26.582780838012695,
+            145.18487548828125,
+            5.3230390548706055
+          ],
+          "tcp": [
+            -103.11402893066406,
+            -719.9462280273438,
+            92.78562927246094,
+            92.81645965576172,
+            -1.2657794952392578,
+            -67.27387237548828
+          ],
+          "gripper_position": 100,
+          "gripper_active": 1,
+          "gripper_motiondone": 1,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 183,
+        "camera_monotonic": 40786.122563699,
+        "robot_monotonic": 40786.121450301,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/continuous/frames/000183.jpg",
+        "robot": {
+          "received_monotonic": 40786.121450301,
+          "joints": [
+            78.07319641113281,
+            -36.670406341552734,
+            68.19007110595703,
+            -26.582998275756836,
+            145.18508911132812,
+            5.323256492614746
+          ],
+          "tcp": [
+            -103.11094665527344,
+            -719.9439086914062,
+            92.77741241455078,
+            92.81681060791016,
+            -1.2654492855072021,
+            -67.27389526367188
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 3325,
+      "first_labeled_step": 175,
+      "first_labeled_capture_frame": 182,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/continuous/frames/000182.jpg",
+      "first_labeled_obs_joints_deg": [
+        78.07298278808594,
+        -36.670841217041016,
+        68.18963623046875,
+        -26.582780838012695,
+        145.18487548828125,
+        5.3230390548706055
+      ],
+      "first_labeled_obs_tcp": [
+        -103.11402893066406,
+        -719.9462280273438,
+        92.78562927246094,
+        92.81645965576172,
+        -1.2657794952392578,
+        -67.27387237548828
+      ],
+      "first_labeled_obs_actual_percent": 100,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 1,
+      "first_labeled_grid_minus_issue_s": -0.049265854664554354,
+      "first_labeled_camera_minus_issue_s": -0.16548125600093044,
+      "first_labeled_target_minus_issue_s": 0.117400811999687,
+      "first_labeled_tcp_to_native_initial_mm": 0.0031809543422111064,
+      "label_before_issue_frames": [
+        3325
+      ],
+      "labeled_rows": 107,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 71.62037918493219,
+      "eligible_anchor_farthest": {
+        "frame": 3276,
+        "step": 126,
+        "action_chunk_offset": 49,
+        "observation_tcp": [
+          -37.15474319458008,
+          -692.2674560546875,
+          96.4090805053711,
+          92.81082153320312,
+          -1.2757881879806519,
+          -67.28173065185547
+        ],
+        "distance_to_native_initial_tcp_mm": 71.62037918493219,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/continuous/frames/000129.jpg"
+      }
+    },
+    {
+      "source": 7,
+      "split": "validation",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized",
+      "direction": "open",
+      "sequence": 10,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/command-0010.json",
+      "issued_monotonic": 40805.067167953,
+      "completed_monotonic": 40807.04341746,
+      "target_percent": 100.0,
+      "native_args": [
+        1,
+        100,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 40805.055721838,
+        "joints": [
+          78.07406616210938,
+          -36.670188903808594,
+          68.19290161132812,
+          -26.583215713500977,
+          145.18443298339844,
+          5.322386264801025
+        ],
+        "tcp": [
+          -103.0964126586914,
+          -719.9315795898438,
+          92.7557601928711,
+          92.81846618652344,
+          -1.262285590171814,
+          -67.27236938476562
+        ],
+        "gripper_position": 78,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 40807.03593023,
+        "joints": [
+          78.07515716552734,
+          -36.66496658325195,
+          68.19572448730469,
+          -26.5838680267334,
+          145.1846466064453,
+          5.322386264801025
+        ],
+        "tcp": [
+          -103.0788345336914,
+          -719.9140014648438,
+          92.67121124267578,
+          92.82266235351562,
+          -1.2561904191970825,
+          -67.2715835571289
+        ],
+        "gripper_position": 99,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 296,
+        "camera_monotonic": 40804.935059762,
+        "robot_monotonic": 40804.935734788,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/continuous/frames/000296.jpg",
+        "robot": {
+          "received_monotonic": 40804.935734788,
+          "joints": [
+            78.07406616210938,
+            -36.670406341552734,
+            68.19246673583984,
+            -26.582998275756836,
+            145.18421936035156,
+            5.322604179382324
+          ],
+          "tcp": [
+            -103.09671783447266,
+            -719.93408203125,
+            92.76123046875,
+            92.8182373046875,
+            -1.262871503829956,
+            -67.27215576171875
+          ],
+          "gripper_position": 78,
+          "gripper_active": 1,
+          "gripper_motiondone": 2,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 297,
+        "camera_monotonic": 40805.135203344,
+        "robot_monotonic": 40805.135671641,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/continuous/frames/000297.jpg",
+        "robot": {
+          "received_monotonic": 40805.135671641,
+          "joints": [
+            78.07406616210938,
+            -36.670406341552734,
+            68.193115234375,
+            -26.583215713500977,
+            145.1846466064453,
+            5.322386264801025
+          ],
+          "tcp": [
+            -103.09635925292969,
+            -719.9302978515625,
+            92.757080078125,
+            92.81845092773438,
+            -1.262274980545044,
+            -67.2725830078125
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 3432,
+      "first_labeled_step": 282,
+      "first_labeled_capture_frame": 296,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/continuous/frames/000296.jpg",
+      "first_labeled_obs_joints_deg": [
+        78.07406616210938,
+        -36.670406341552734,
+        68.19246673583984,
+        -26.582998275756836,
+        145.18421936035156,
+        5.322604179382324
+      ],
+      "first_labeled_obs_tcp": [
+        -103.09671783447266,
+        -719.93408203125,
+        92.76123046875,
+        92.8182373046875,
+        -1.262871503829956,
+        -67.27215576171875
+      ],
+      "first_labeled_obs_actual_percent": 78,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 2,
+      "first_labeled_grid_minus_issue_s": -0.028541138664877508,
+      "first_labeled_camera_minus_issue_s": -0.1321081909991335,
+      "first_labeled_target_minus_issue_s": 0.13812552799936384,
+      "first_labeled_tcp_to_native_initial_mm": 0.006023226995599582,
+      "label_before_issue_frames": [
+        3432
+      ],
+      "labeled_rows": 253,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 50.01592261503127,
+      "eligible_anchor_farthest": {
+        "frame": 3383,
+        "step": 233,
+        "action_chunk_offset": 49,
+        "observation_tcp": [
+          -103.09406280517578,
+          -719.9327392578125,
+          142.7716827392578,
+          92.81771087646484,
+          -1.2633486986160278,
+          -67.27234649658203
+        ],
+        "distance_to_native_initial_tcp_mm": 50.01592261503127,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/continuous/frames/000245.jpg"
+      }
+    },
+    {
+      "source": 7,
+      "split": "validation",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized",
+      "direction": "close",
+      "sequence": 17,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/command-0017.json",
+      "issued_monotonic": 40850.097756235,
+      "completed_monotonic": 40852.023420519,
+      "target_percent": 76.0,
+      "native_args": [
+        1,
+        76,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 40850.091544348,
+        "joints": [
+          78.07319641113281,
+          -36.670623779296875,
+          68.19029235839844,
+          -26.582345962524414,
+          145.1846466064453,
+          5.3230390548706055
+        ],
+        "tcp": [
+          -103.11019897460938,
+          -719.9425048828125,
+          92.7780990600586,
+          92.81721496582031,
+          -1.264716386795044,
+          -67.2734603881836
+        ],
+        "gripper_position": 100,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 40852.021505202,
+        "joints": [
+          78.07341766357422,
+          -36.673667907714844,
+          68.19072723388672,
+          -26.585391998291016,
+          145.18487548828125,
+          5.321951389312744
+        ],
+        "tcp": [
+          -103.10894012451172,
+          -719.9487915039062,
+          92.81633758544922,
+          92.81398010253906,
+          -1.2682722806930542,
+          -67.27333068847656
+        ],
+        "gripper_position": 78,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 566,
+        "camera_monotonic": 40849.965280658,
+        "robot_monotonic": 40849.961425674,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/continuous/frames/000566.jpg",
+        "robot": {
+          "received_monotonic": 40849.961425674,
+          "joints": [
+            78.07319641113281,
+            -36.670841217041016,
+            68.18963623046875,
+            -26.582128524780273,
+            145.18508911132812,
+            5.322821617126465
+          ],
+          "tcp": [
+            -103.11119079589844,
+            -719.945068359375,
+            92.78511047363281,
+            92.81681060791016,
+            -1.2650147676467896,
+            -67.27387237548828
+          ],
+          "gripper_position": 100,
+          "gripper_active": 1,
+          "gripper_motiondone": 1,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 567,
+        "camera_monotonic": 40850.165479671,
+        "robot_monotonic": 40850.161608213,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/continuous/frames/000567.jpg",
+        "robot": {
+          "received_monotonic": 40850.161608213,
+          "joints": [
+            78.07298278808594,
+            -36.670623779296875,
+            68.19050598144531,
+            -26.582563400268555,
+            145.1846466064453,
+            5.3230390548706055
+          ],
+          "tcp": [
+            -103.1127700805664,
+            -719.9413452148438,
+            92.77682495117188,
+            92.81721496582031,
+            -1.264716386795044,
+            -67.27367401123047
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 3685,
+      "first_labeled_step": 535,
+      "first_labeled_capture_frame": 566,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/continuous/frames/000566.jpg",
+      "first_labeled_obs_joints_deg": [
+        78.07319641113281,
+        -36.670841217041016,
+        68.18963623046875,
+        -26.582128524780273,
+        145.18508911132812,
+        5.322821617126465
+      ],
+      "first_labeled_obs_tcp": [
+        -103.11119079589844,
+        -719.945068359375,
+        92.78511047363281,
+        92.81681060791016,
+        -1.2650147676467896,
+        -67.27387237548828
+      ],
+      "first_labeled_obs_actual_percent": 100,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 1,
+      "first_labeled_grid_minus_issue_s": -0.059129420667886734,
+      "first_labeled_camera_minus_issue_s": -0.1324755770037882,
+      "first_labeled_target_minus_issue_s": 0.10753724599635461,
+      "first_labeled_tcp_to_native_initial_mm": 0.007530938976293949,
+      "label_before_issue_frames": [
+        3685
+      ],
+      "labeled_rows": 105,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 71.94340071400077,
+      "eligible_anchor_farthest": {
+        "frame": 3636,
+        "step": 486,
+        "action_chunk_offset": 49,
+        "observation_tcp": [
+          -36.85325241088867,
+          -692.1473388671875,
+          96.42483520507812,
+          92.81140899658203,
+          -1.275435209274292,
+          -67.2760009765625
+        ],
+        "distance_to_native_initial_tcp_mm": 71.94340071400077,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/continuous/frames/000512.jpg"
+      }
+    },
+    {
+      "source": 7,
+      "split": "validation",
+      "source_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized",
+      "direction": "open",
+      "sequence": 21,
+      "native_file": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/command-0021.json",
+      "issued_monotonic": 40869.027639722,
+      "completed_monotonic": 40870.937165389,
+      "target_percent": 100.0,
+      "native_args": [
+        1,
+        100,
+        20,
+        10,
+        10000,
+        1,
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "command_initial_robot": {
+        "received_monotonic": 40869.015928724,
+        "joints": [
+          78.07406616210938,
+          -36.670841217041016,
+          68.19246673583984,
+          -26.583433151245117,
+          145.18421936035156,
+          5.322168827056885
+        ],
+        "tcp": [
+          -103.09697723388672,
+          -719.935302734375,
+          92.76710510253906,
+          92.81774139404297,
+          -1.2631527185440063,
+          -67.27212524414062
+        ],
+        "gripper_position": 78,
+        "gripper_active": 1,
+        "gripper_motiondone": 2,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "command_final_robot": {
+        "received_monotonic": 40870.935998074,
+        "joints": [
+          78.07515716552734,
+          -36.66453170776367,
+          68.19572448730469,
+          -26.58430290222168,
+          145.1846466064453,
+          5.322604179382324
+        ],
+        "tcp": [
+          -103.07890319824219,
+          -719.914306640625,
+          92.66606903076172,
+          92.82266235351562,
+          -1.256407618522644,
+          -67.27159881591797
+        ],
+        "gripper_position": 99,
+        "gripper_active": 1,
+        "gripper_motiondone": 1,
+        "gripper_speed": 0,
+        "gripper_current": 0,
+        "gripper_fault": 0,
+        "gripper_fault_id": 0,
+        "gripper_feedback_valid": true
+      },
+      "capture_before_issue": {
+        "source_capture_frame": 680,
+        "camera_monotonic": 40868.978142147,
+        "robot_monotonic": 40868.975881463,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/continuous/frames/000680.jpg",
+        "robot": {
+          "received_monotonic": 40868.975881463,
+          "joints": [
+            78.07406616210938,
+            -36.671058654785156,
+            68.19246673583984,
+            -26.583433151245117,
+            145.18443298339844,
+            5.321951389312744
+          ],
+          "tcp": [
+            -103.09716796875,
+            -719.9351806640625,
+            92.76988983154297,
+            92.8176040649414,
+            -1.263103723526001,
+            -67.27232360839844
+          ],
+          "gripper_position": 78,
+          "gripper_active": 1,
+          "gripper_motiondone": 2,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": true
+        }
+      },
+      "capture_after_issue": {
+        "source_capture_frame": 681,
+        "camera_monotonic": 40869.078290551,
+        "robot_monotonic": 40869.075908535,
+        "rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/continuous/frames/000681.jpg",
+        "robot": {
+          "received_monotonic": 40869.075908535,
+          "joints": [
+            78.07450103759766,
+            -36.670623779296875,
+            68.19290161132812,
+            -26.583433151245117,
+            145.18421936035156,
+            5.322168827056885
+          ],
+          "tcp": [
+            -103.09097290039062,
+            -719.9335327148438,
+            92.76142883300781,
+            92.818115234375,
+            -1.2626159191131592,
+            -67.27169799804688
+          ],
+          "gripper_position": 0,
+          "gripper_active": 1,
+          "gripper_motiondone": 0,
+          "gripper_speed": 0,
+          "gripper_current": 0,
+          "gripper_fault": 0,
+          "gripper_fault_id": 0,
+          "gripper_feedback_valid": false
+        }
+      },
+      "first_labeled_frame": 3790,
+      "first_labeled_step": 640,
+      "first_labeled_capture_frame": 679,
+      "first_labeled_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/continuous/frames/000679.jpg",
+      "first_labeled_obs_joints_deg": [
+        78.07406616210938,
+        -36.6712760925293,
+        68.19224548339844,
+        -26.582998275756836,
+        145.18356323242188,
+        5.322168827056885
+      ],
+      "first_labeled_obs_tcp": [
+        -103.0967025756836,
+        -719.9371948242188,
+        92.77362823486328,
+        92.81766510009766,
+        -1.2633635997772217,
+        -67.27146911621094
+      ],
+      "first_labeled_obs_actual_percent": 78,
+      "first_labeled_obs_valid": true,
+      "first_labeled_obs_motiondone": 2,
+      "first_labeled_grid_minus_issue_s": -0.15567957433813717,
+      "first_labeled_camera_minus_issue_s": -0.24972691699804273,
+      "first_labeled_target_minus_issue_s": 0.010987092333380133,
+      "first_labeled_tcp_to_native_initial_mm": 0.00679755076660949,
+      "label_before_issue_frames": [
+        3790
+      ],
+      "labeled_rows": 65,
+      "eligible_preceding_50_step_anchors_count": 50,
+      "eligible_anchor_max_tcp_distance_mm": 50.0017094927346,
+      "eligible_anchor_farthest": {
+        "frame": 3755,
+        "step": 605,
+        "action_chunk_offset": 35,
+        "observation_tcp": [
+          -103.09097290039062,
+          -719.9314575195312,
+          142.76881408691406,
+          92.81783294677734,
+          -1.263169765472412,
+          -67.27213287353516
+        ],
+        "distance_to_native_initial_tcp_mm": 50.0017094927346,
+        "observation_rgb_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/continuous/frames/000642.jpg"
+      }
+    }
+  ],
+  "trial08": {
+    "prediction_records": 21,
+    "submitted_targets": 201,
+    "acknowledged_targets": 200,
+    "prediction_submission_exact_matches": 201,
+    "wire_records": 5811,
+    "wire_method_counts": {
+      "ServoMoveStart": 1,
+      "ServoJ": 5800,
+      "MoveGripper": 8,
+      "StopMotion": 1,
+      "ServoMoveEnd": 1
+    },
+    "wire_gripper_matches_latest_submitted": 8,
+    "capture_frames": 392,
+    "operator_stop_recorded": true,
+    "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-stream-workspace-only-vision-n10-gpu9-20261102-v1/step-000250",
+    "checkpoint_manifest_sha256": "f507a414d77fa5d957742d05a11aef048514306aa71e56b8944d3718fca8a516",
+    "training_dataset_path": "/home/data4/hts/demo1/fr5-learning/datasets/fr5-joint-stream-20261102-v2-compacted",
+    "dataset_fingerprint": "975ff43702e29ae5b1dcf2467a363452493d86b4839dade4e12dbd1500cfcc24",
+    "chunk_size": 50,
+    "n_action_steps": 10,
+    "action_representation": "joint-delta-from-anchor-v1",
+    "first_action_weight": 8.0,
+    "gripper_weight": 3.0,
+    "sampling": "source-transition-motion-hold-balanced-batch-v2",
+    "training_report_initialized_from": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-stream-vision-workspace-n10-gpu9-20261102-v1/step-000500",
+    "physical_success_verified": false
+  },
+  "tails": [
+    {
+      "source": 0,
+      "last_training_frame": 593,
+      "last_action_target_time": 40018.567376407336,
+      "last_available_source_feedback_time": 40018.711607381,
+      "terminal_source_capture_frame": 648,
+      "tail_observations": 2
+    },
+    {
+      "source": 1,
+      "last_training_frame": 937,
+      "last_action_target_time": 45052.38226070433,
+      "last_available_source_feedback_time": 45052.390878648,
+      "terminal_source_capture_frame": 369,
+      "tail_observations": 2
+    },
+    {
+      "source": 2,
+      "last_training_frame": 1305,
+      "last_action_target_time": 46577.064272772666,
+      "last_available_source_feedback_time": 46577.139550032,
+      "terminal_source_capture_frame": 401,
+      "tail_observations": 2
+    },
+    {
+      "source": 3,
+      "last_training_frame": 1989,
+      "last_action_target_time": 47396.95221387734,
+      "last_available_source_feedback_time": 47397.002785787,
+      "terminal_source_capture_frame": 753,
+      "tail_observations": 2
+    },
+    {
+      "source": 4,
+      "last_training_frame": 2348,
+      "last_action_target_time": 47945.103547238665,
+      "last_available_source_feedback_time": 47945.178809425,
+      "terminal_source_capture_frame": 434,
+      "tail_observations": 2
+    },
+    {
+      "source": 5,
+      "last_training_frame": 2702,
+      "last_action_target_time": 39175.588169588336,
+      "last_available_source_feedback_time": 39175.697908026,
+      "terminal_source_capture_frame": 375,
+      "tail_observations": 2
+    },
+    {
+      "source": 6,
+      "last_training_frame": 3149,
+      "last_action_target_time": 40457.144255320665,
+      "last_available_source_feedback_time": 40457.217499406,
+      "terminal_source_capture_frame": 470,
+      "tail_observations": 2
+    },
+    {
+      "source": 7,
+      "last_training_frame": 3854,
+      "last_action_target_time": 40880.705293481,
+      "last_available_source_feedback_time": 40880.78610962,
+      "terminal_source_capture_frame": 751,
+      "tail_observations": 2
+    }
+  ],
+  "issues": [],
+  "input_sha256": {
+    "/home/data4/hts/demo1/fr5-learning/datasets/fr5-joint-stream-20261102-v2-compacted/meta/stream_provenance.json": "46e677f00d4761f27543c03ce63d4e3057a41af8d3e32d7ca152c5065fd3135e",
+    "/home/data4/hts/demo1/fr5-learning/datasets/fr5-joint-stream-20261102-v2-compacted/meta/stream_source_frames.jsonl": "5f9f26c466ecbfbd7f2c18b579cfd6a5d8517f210295dd1d535ad1da22ccfeef",
+    "/home/data4/hts/demo1/fr5-learning/datasets/fr5-joint-stream-20261102-v2-compacted/meta/stream_cuts.jsonl": "12fc9dc4106cdace8b1c292c1b5482e3f6e930203f975d6f5d59a979eed47b2e",
+    "/home/data4/hts/demo1/fr5-learning/datasets/fr5-joint-stream-20261102-v2-compacted/data/chunk-000/file-000.parquet": "93248f07687265df3e6ca80b7818acb97153a61ed98436a8121a3c47b3a7905e",
+    "/home/data4/hts/demo1/fr5-learning/datasets/fr5-joint-stream-20261102-v1/meta/stream_source_frames.jsonl": "4d9c9775133859f82699530ff2bbefe33686b82b693474a1506fef7cb4772af8",
+    "/home/data4/hts/demo1/fr5-learning/datasets/fr5-joint-stream-20261102-v1/data/chunk-000/file-000.parquet": "e6a0916331595bc38cbcf335db171166a52432140676ab1ff6c7ca6ebff6984a",
+    "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-workspace-only-trial-20261102-08/materialized/submitted-targets.jsonl": "839a54b0c73c88d0a7d67f00bda4bdb4d3597bf6b8c2c480db5e8e0bd2f2d24a",
+    "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-workspace-only-trial-20261102-08/materialized/acknowledged-targets.jsonl": "f4904b3071b64b2d922c4a70569c4f36f456621645150fc9d444d38bc1bcfe61",
+    "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-workspace-only-trial-20261102-08/materialized/stream-wire/index.json": "037a041e9b1c929bde91b66faa94b745b4e0ffcce4359ea98486b9ad647dd050",
+    "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-workspace-only-trial-20261102-08/materialized/stream-prediction/index.json": "44b58a2eb6dc65d9df113b804a855453ba92abaabda43f9391c74c01030e8d9e",
+    "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-stream-workspace-only-vision-n10-gpu9-20261102-v1/step-000250/train_stream_pi05.py": "fbf3fd058a0ad539d48dae506f84112994597df571ed9a7dd42d962887cc3e88",
+    "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-stream-workspace-only-vision-n10-gpu9-20261102-v1/step-000250/serve_stream_pi05.py": "a6361157609be84b1eeee7e74374d924d92147a34bfb00831351b254034832a1",
+    "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-stream-workspace-only-vision-n10-gpu9-20261102-v1/step-000250/relative_stream_actions.py": "c465dbb42820b2969e8d54cc6263b3c829c59264603b4a29aa8ba0d591aee60f",
+    "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-workspace-only-trial-20261102-08/materialized/runtime-source/stream_runtime.py": "a1cb2ec0e7a095614e777d7832c8d4b385cf304915e43a2f99c9c8f136623910",
+    "/home/data4/hts/demo1/fr5-learning/recording-spool/pi05-workspace-only-trial-20261102-08/materialized/runtime-source/servo_control.py": "069f9eb884475443f21da965de7b014fa745db7a616d29a9a22502fb0c9f3362",
+    "/home/data4/hts/demo1/fr5-learning/src/fr5-stream-data-20261102-v2-compact/fr5_lerobot/src/lerobot_robot_fairino/export_stream_policy.py": "9a472c0987601c0bd5f4759dd5d2f9ef90e9886d04014b45cada9ce88e972350",
+    "/home/data4/hts/demo1/fr5-learning/src/fr5-stream-data-20261102-v2-compact/fr5_lerobot/src/lerobot_robot_fairino/export_compact_stream.py": "cafaf6c6f74912f10706dfeabd122d0cf14f33bd3be7a02c3b0521282d0c14c0"
+  },
+  "limitations": [
+    "gripper target percent is not measured jaw opening in mm",
+    "motiondone 2/3 is a reported actuator status, not independent proof of cup grasp",
+    "RGB proximity is a numerical proxy, not identical scene or identical physical cause",
+    "TCP distance from command initial state is not distance to the cup",
+    "recorded prediction reply is evidence of served output, not an independent rerun of neural inference",
+    "no live hardware state, physical success or current stop state was verified",
+    "the checkpoint training report records eligible configuration and provenance; sampled anchors are not inferred from eligibility"
+  ]
+}

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd /home/dianrobot/demo1
+exec /home/dianrobot/anaconda3/envs/lerobot/bin/python -m fr5_runtime.console "$@"

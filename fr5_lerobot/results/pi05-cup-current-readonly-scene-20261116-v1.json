@@ -1,0 +1,162 @@
+{
+  "schema": "fr5-gemini-readonly-scene-v1",
+  "temporary_capture": "/tmp/pi05-cup-readonly-scene-20261116-v1",
+  "server_capture": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-readonly-scene-20261116-v1",
+  "image": "/home/dianrobot/demo1/fr5_lerobot/artifacts/pi05-cup-current-readonly-scene-20261116-v1.jpg",
+  "camera": {
+    "name": "Orbbec Gemini 335",
+    "serial": "CP1E54200015"
+  },
+  "capture": {
+    "time_unix": 1794831681.2717474,
+    "received_monotonic": 51188.624025555,
+    "timestamp_origin": "host_frame_receive_unix",
+    "alignment": "depth_to_color",
+    "depth_unit": "mm",
+    "bridge_frame_counter": 2319,
+    "frame_timing": {
+      "color": {
+        "index": 2320,
+        "device_timestamp_us": 292428515,
+        "system_timestamp_us": 1794831681268042
+      },
+      "depth": {
+        "index": 2903,
+        "device_timestamp_us": 292405582,
+        "system_timestamp_us": 1794831681267991
+      }
+    },
+    "raw_depth_unit_mm": 1.0,
+    "aligned_depth_unit_mm": 1.0
+  },
+  "camera_age_at_capture_s": 0.36740919000294525,
+  "depth_valid_fraction": 0.9591169945987654,
+  "robot_before": {
+    "program_state": 1,
+    "robot_state": 1,
+    "main_code": 0,
+    "sub_code": 0,
+    "robot_mode": 0,
+    "tool": 0,
+    "user": 0,
+    "EmergencyStop": 0,
+    "motion_done": 1,
+    "mc_queue_len": 0,
+    "collisionState": 0,
+    "safety_stop0_state": 0,
+    "safety_stop1_state": 0,
+    "gripper_fault": 0,
+    "gripper_position": 0,
+    "rbtEnableState": 1,
+    "gripper_motiondone": 0,
+    "gripper_active": 0,
+    "gripper_speed": 0,
+    "gripper_current": 0,
+    "gripper_fault_id": 0,
+    "joints": [
+      65.68779754638672,
+      -30.4081974029541,
+      52.305580139160156,
+      -18.1474552154541,
+      132.8856201171875,
+      3.8295512199401855
+    ],
+    "tcp": [
+      -272.7012939453125,
+      -754.0852661132812,
+      113.22966003417969,
+      92.74739074707031,
+      -1.2741637229919434,
+      -67.32019805908203
+    ],
+    "flange": [
+      -272.7039794921875,
+      -754.0838623046875,
+      113.22940826416016,
+      92.74755096435547,
+      -1.2740153074264526,
+      -67.32041931152344
+    ],
+    "tcp_speed": [
+      0.35063355953899983,
+      0.040706163531659574
+    ],
+    "joint_speeds_deg_s": [
+      0.021755105197485136,
+      -0.02175510519819568,
+      0.021755105197485136,
+      -0.021755105197840408,
+      0.0,
+      -0.043510210396036086
+    ],
+    "timestamp": 1794831681.3619077
+  },
+  "robot_after": {
+    "program_state": 1,
+    "robot_state": 1,
+    "main_code": 0,
+    "sub_code": 0,
+    "robot_mode": 0,
+    "tool": 0,
+    "user": 0,
+    "EmergencyStop": 0,
+    "motion_done": 1,
+    "mc_queue_len": 0,
+    "collisionState": 0,
+    "safety_stop0_state": 0,
+    "safety_stop1_state": 0,
+    "gripper_fault": 0,
+    "gripper_position": 0,
+    "rbtEnableState": 1,
+    "gripper_motiondone": 0,
+    "gripper_active": 0,
+    "gripper_speed": 0,
+    "gripper_current": 0,
+    "gripper_fault_id": 0,
+    "joints": [
+      65.68758392333984,
+      -30.408634185791016,
+      52.3057975769043,
+      -18.14723777770996,
+      132.8856201171875,
+      3.829333543777466
+    ],
+    "tcp": [
+      -272.7037048339844,
+      -754.083251953125,
+      113.23383331298828,
+      92.74739074707031,
+      -1.2739464044570923,
+      -67.32040405273438
+    ],
+    "flange": [
+      -272.7030334472656,
+      -754.0817260742188,
+      113.2277603149414,
+      92.74771118164062,
+      -1.273866891860962,
+      -67.32042694091797
+    ],
+    "tcp_speed": [
+      0.33531948423844365,
+      0.05540690277036609
+    ],
+    "joint_speeds_deg_s": [
+      -0.02175510519890622,
+      0.0,
+      0.0,
+      0.021755105197840408,
+      0.021755105197485136,
+      0.043510210396036086
+    ],
+    "timestamp": 1794831681.6521413
+  },
+  "robot_position_change_mm": [
+    -0.002410888671875,
+    0.00201416015625,
+    0.00417327880859375
+  ],
+  "motion_commands_sent": 0,
+  "gripper_commands_sent": 0,
+  "training_ready": false
+}

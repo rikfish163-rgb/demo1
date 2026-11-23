@@ -1,0 +1,155 @@
+{
+  "evaluation": "recorded_live_prefix_kinematics_not_task_success",
+  "scene_source": "/home/data4/hts/demo1/fr5-learning/observations/fr5-jev-objects-20261121-v2/side-candidate-v3.json",
+  "prefix_steps": 10,
+  "rpc_calls": 220,
+  "allowed_rpc_methods": [
+    "GetForwardKin",
+    "GetJointSoftLimitDeg"
+  ],
+  "motion_commands_sent": 0,
+  "gripper_commands_sent": 0,
+  "results": [
+    {
+      "group": "current",
+      "index": 0,
+      "task": "抓取桌面上的透明杯子，在空中维持5秒后放下",
+      "passed": true,
+      "gripper_feedback_valid": false,
+      "maximum_joint_step_deg": 0.23507803575891387,
+      "tool_table_clearance_mm": {
+        "-1": 99.0374694903186,
+        "1": 100.24265264317432,
+        "housing": 34.68804835684173
+      },
+      "failures": []
+    },
+    {
+      "group": "current",
+      "index": 1,
+      "task": "抓取桌面上的透明杯子，在空中维持5秒后放下",
+      "passed": true,
+      "gripper_feedback_valid": false,
+      "maximum_joint_step_deg": 0.18063118279015722,
+      "tool_table_clearance_mm": {
+        "-1": 101.40679296251776,
+        "1": 102.65896921283539,
+        "housing": 37.02782829423492
+      },
+      "failures": []
+    },
+    {
+      "group": "current",
+      "index": 2,
+      "task": "抓取桌面上的透明杯子，在空中维持5秒后放下",
+      "passed": true,
+      "gripper_feedback_valid": false,
+      "maximum_joint_step_deg": 0.25677606759926397,
+      "tool_table_clearance_mm": {
+        "-1": 100.10909957759947,
+        "1": 101.10592186535418,
+        "housing": 35.90919286836116
+      },
+      "failures": []
+    },
+    {
+      "group": "current",
+      "index": 3,
+      "task": "抓取桌面上的紫色方块，在空中维持5秒后放下",
+      "passed": true,
+      "gripper_feedback_valid": false,
+      "maximum_joint_step_deg": 0.25061671612069286,
+      "tool_table_clearance_mm": {
+        "-1": 100.55506216326702,
+        "1": 101.75846015010355,
+        "housing": 36.18329180060144
+      },
+      "failures": []
+    },
+    {
+      "group": "current",
+      "index": 4,
+      "task": "抓取桌面上的紫色方块，在空中维持5秒后放下",
+      "passed": true,
+      "gripper_feedback_valid": false,
+      "maximum_joint_step_deg": 0.18124589981545836,
+      "tool_table_clearance_mm": {
+        "-1": 99.71519805994924,
+        "1": 100.82429261019448,
+        "housing": 35.45177075078122
+      },
+      "failures": []
+    },
+    {
+      "group": "history",
+      "index": 0,
+      "task": "抓取桌面上的透明杯子，在空中维持5秒后放下",
+      "passed": true,
+      "gripper_feedback_valid": false,
+      "maximum_joint_step_deg": 0.17306443083011547,
+      "tool_table_clearance_mm": {
+        "-1": 101.02737395558346,
+        "1": 102.42236395403276,
+        "housing": 36.516159675206964
+      },
+      "failures": []
+    },
+    {
+      "group": "history",
+      "index": 1,
+      "task": "抓取桌面上的透明杯子，在空中维持5秒后放下",
+      "passed": true,
+      "gripper_feedback_valid": false,
+      "maximum_joint_step_deg": 0.23216837517248842,
+      "tool_table_clearance_mm": {
+        "-1": 101.29035913230575,
+        "1": 102.549755828197,
+        "housing": 36.89166792510342
+      },
+      "failures": []
+    },
+    {
+      "group": "history",
+      "index": 2,
+      "task": "抓取桌面上的透明杯子，在空中维持5秒后放下",
+      "passed": true,
+      "gripper_feedback_valid": false,
+      "maximum_joint_step_deg": 0.11171457406472855,
+      "tool_table_clearance_mm": {
+        "-1": 100.77955322708068,
+        "1": 102.16401041849068,
+        "housing": 36.279908170948104
+      },
+      "failures": []
+    },
+    {
+      "group": "history",
+      "index": 3,
+      "task": "抓取桌面上的紫色方块，在空中维持5秒后放下",
+      "passed": true,
+      "gripper_feedback_valid": false,
+      "maximum_joint_step_deg": 0.22644126155343272,
+      "tool_table_clearance_mm": {
+        "-1": 101.13561258099801,
+        "1": 102.61250911719044,
+        "housing": 36.501508038463285
+      },
+      "failures": []
+    },
+    {
+      "group": "history",
+      "index": 4,
+      "task": "抓取桌面上的紫色方块，在空中维持5秒后放下",
+      "passed": true,
+      "gripper_feedback_valid": false,
+      "maximum_joint_step_deg": 0.2014700899478661,
+      "tool_table_clearance_mm": {
+        "-1": 101.29323234077958,
+        "1": 102.78642485332544,
+        "housing": 36.707152229890454
+      },
+      "failures": []
+    }
+  ],
+  "full_report": "/home/data4/hts/demo1/fr5-learning/diagnostics/jev-pi05-balanced-step2000-live-preflight-20261121-v1.json"
+}

@@ -1,0 +1,164 @@
+{
+  "status": "supervised_prealigned_cup_grasp_lift_return_release_completed",
+  "robot": "J1",
+  "robot_ip": "192.168.58.2",
+  "camera_serial": "CP1E54200015",
+  "trial_count": 1,
+  "random_placement_policy_verified": false,
+  "autonomous_jev_grasp": false,
+  "independent_astra_api_calls": 0,
+  "llm_source": "current_codex_chat",
+  "explicit_current_chat_llm_review_files": 6,
+  "review_count_note": "Counts named review files only; additional visual and embedded plan reviews occurred.",
+  "jev_calls": 5,
+  "jev_latencies_ms": [
+    789.6490350012755,
+    843.5941589996219,
+    927.060945001358,
+    898.3443039996928,
+    771.9778600003337
+  ],
+  "jev_latency_median_ms": 843.5941589996219,
+  "actual_lift_delta_mm_deg": [
+    -0.0090179443359375,
+    -0.00579833984375,
+    10.03607177734375,
+    -0.00246429443359375,
+    -0.0006605386734008789,
+    -0.00063323974609375
+  ],
+  "cup_follow_evidence": {
+    "rgb_translation_px": [
+      8,
+      1
+    ],
+    "patch_ncc": 0.8312044739723206,
+    "stable_object_status2_through_motion": true,
+    "human_camera_review": "Current chat observed cup following tool and returning to table.",
+    "bottom_gap_directly_measured": false,
+    "depth_limit": "Reflective cup: only20/224 valid paired samples; broad depth changes. Do not claim a precise cup-bottom gap."
+  },
+  "setdown_minus_prelift_tcp_mm_deg": [
+    0.0040435791015625,
+    -0.00048828125,
+    -0.00225830078125,
+    0.00061798095703125,
+    -6.288290023803711e-06,
+    -0.000438690185546875
+  ],
+  "released": true,
+  "post_release_cup_patch_shift_px": [
+    0,
+    0
+  ],
+  "post_release_patch_ncc": 0.9581846594810486,
+  "all_observed_motion_fault_fields_zero": true,
+  "command_counts": {
+    "enable": 1,
+    "gripper_activation": 1,
+    "preparation_open": 1,
+    "closing": 12,
+    "release_open": 1,
+    "arm_start_jog": 7,
+    "normal_jog_stop": 7
+  },
+  "final_robot_state": {
+    "program_state": 1,
+    "robot_state": 1,
+    "main_code": 0,
+    "sub_code": 0,
+    "robot_mode": 1,
+    "tool": 0,
+    "user": 0,
+    "EmergencyStop": 0,
+    "motion_done": 1,
+    "mc_queue_len": 0,
+    "collisionState": 0,
+    "safety_stop0_state": 0,
+    "safety_stop1_state": 0,
+    "gripper_fault": 0,
+    "gripper_position": 100,
+    "rbtEnableState": 1,
+    "gripper_motiondone": 1,
+    "gripper_active": 1,
+    "gripper_speed": 0,
+    "gripper_current": 0,
+    "gripper_fault_id": 0,
+    "joints": [
+      64.62549591064453,
+      -43.748863220214844,
+      85.24346160888672,
+      -42.03782653808594,
+      109.61331176757812,
+      0.30631187558174133
+    ],
+    "tcp": [
+      -212.00074768066406,
+      -672.0161743164062,
+      83.07759094238281,
+      89.48827362060547,
+      -0.4886418282985687,
+      -44.98426818847656
+    ],
+    "flange": [
+      -211.99847412109375,
+      -672.01220703125,
+      83.06784057617188,
+      89.48929595947266,
+      -0.48827484250068665,
+      -44.98405838012695
+    ],
+    "tcp_speed": [
+      0.3251518701627735,
+      0.03069511438450234
+    ],
+    "joint_speeds_deg_s": [
+      0.021755105197485136,
+      -0.02175510519819568,
+      0.021755105197485136,
+      -0.021755105197485136,
+      0.0,
+      0.0
+    ],
+    "timestamp": 1793149986.7553198
+  },
+  "phase_data_quality": [
+    {
+      "phase": "lift-10mm",
+      "frames": 41,
+      "unique_camera_frames": 31,
+      "sampling_fps": 7.998899992581434,
+      "unique_camera_fps": 5.999174994436076,
+      "skew_ms_p50_p95_max": [
+        18.54228973388672,
+        111.42992973327637,
+        509.52887535095215
+      ],
+      "frames_within100ms": 38
+    },
+    {
+      "phase": "return-to-table",
+      "frames": 148,
+      "unique_camera_frames": 112,
+      "sampling_fps": 7.998312547099628,
+      "unique_camera_fps": 6.03954212740176,
+      "skew_ms_p50_p95_max": [
+        27.33445167541504,
+        434.99016761779785,
+        623.7316131591797
+      ],
+      "frames_within100ms": 97
+    }
+  ],
+  "training_ready": false,
+  "training_exclusions": [
+    "Initial state was already aligned by earlier supervised work; no fresh approach demonstration.",
+    "Closure and release have before/after images and feedback, but incomplete continuous RGB-D coverage.",
+    "Frame-state association uses nearest host timestamps; not hardware synchronization.",
+    "No continuous target-action vector has been reconstructed or verified.",
+    "Some frame-state associations exceed100ms; see index, do not silently fill gaps.",
+    "Camera polling was8Hz but duplicate frames reduce unique image rate to about6Hz.",
+    "Single supervised instance does not establish a success rate or generalization."
+  ],
+  "dataset_use": "Mechanism/teacher-policy case, control debugging and observation segments; exclude from gold imitation training until data gaps are resolved."
+}

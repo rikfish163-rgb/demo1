@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "checked_at": "2026-11-23T15:55:29.474101+08:00",
+  "workspace": "/home/dianrobot/demo1",
+  "remote_root": "/home/data4/hts/demo1/fr5-learning",
+  "session": "fr5-purple-tilted-luna-teacher-20261122T235616-v1",
+  "effective_ssh": {
+    "alias": "4090",
+    "hostname": "110os9214fc69.vicp.fun",
+    "user": "hts",
+    "port": 41380,
+    "proxycommand": null,
+    "proxyjump": null,
+    "controlmaster": false,
+    "identitiesonly": true,
+    "configuration_file": "/home/dianrobot/.ssh/config"
+  },
+  "network_observation": {
+    "resolved_addresses": [
+      "119.45.183.209"
+    ],
+    "route": "119.45.183.209 via 192.168.18.1 dev wlp0s20f3 src 192.168.18.188",
+    "proxy_environment_variables_present": []
+  },
+  "gvfs": {
+    "mount_root": "/run/user/1000/gvfs",
+    "desktop_session_bus": "unix:path=/run/user/1000/bus",
+    "existing_mounts": [],
+    "existing_4090_mount": false
+  },
+  "ssh_attempt": {
+    "attempt_count": 1,
+    "command_without_stdin": "ssh -T -o BatchMode=yes -o ConnectionAttempts=1 -o ConnectTimeout=8 -o ServerAliveInterval=5 -o ServerAliveCountMax=1 -o StrictHostKeyChecking=yes -o UpdateHostKeys=no 4090 'exec /home/data4/hts/demo1/fr5-learning/.venv/bin/python -B -'",
+    "timeout_seconds": 45,
+    "returncode": 255,
+    "elapsed_seconds": 0.085,
+    "stderr": "kex_exchange_identification: read: Connection reset by peer\nConnection reset by 119.45.183.209 port 41380\n",
+    "status": "failed"
+  },
+  "remote_verification": null,
+  "unverified_targets": {
+    "full_process_video": {
+      "path": "/home/data4/hts/demo1/fr5-learning/reviews/fr5-purple-tilted-luna-teacher-20261122T235616-v1/full-process.mp4",
+      "exists": null
+    },
+    "materialized": {
+      "path": "/home/data4/hts/demo1/fr5-learning/recording-spool/fr5-purple-tilted-luna-teacher-20261122T235616-v1/materialized/",
+      "exists": null
+    },
+    "gpu": {
+      "idle_indices_descending": null,
+      "preferred_idle_gpu_index": null
+    },
+    "reason": "SSH 在密钥交换前被连接对端重置，远程 Python 未执行；当前桌面会话无已有 4090 GVFS 挂载。"
+  },
+  "continuation": {
+    "next_step": "从服务器现有控制台或管理入口只读核实 41380 端口映射及对应 SSH 入口的连接日志。入口恢复后再单次连接 SSH 别名 4090，以服务器 .venv/bin/python 核实目标文件和空闲高编号 GPU。",
+    "remote_python": "/home/data4/hts/demo1/fr5-learning/.venv/bin/python",
+    "server_state_changed": false,
+    "large_files_downloaded": false
+  },
+  "completed_at": "2026-11-23T15:55:29.558737+08:00"
+}

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>策略实验 · FR5 工作台</title>
+  <style>
+    :root{--surface:#f5f3ee;--paper:#fffefa;--ink:#1d1b16;--muted:#77736a;--line:#e6e2d9;--accent:#da7756;--accent-dark:#b95b3d;--success:#00a645;--failure:#e45d3b;--ui:Figtree,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;--code:"JetBrains Mono",ui-monospace,SFMono-Regular,Consolas,monospace;--content:"Source Serif 4","Noto Serif CJK SC",Georgia,serif;color:var(--ink);font:14px/1.5 var(--ui);font-synthesis:none}
+    *{box-sizing:border-box}body{margin:0;min-width:320px;background:var(--surface)}button,input,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed}button:focus-visible,input:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid #da77566b;outline-offset:3px}[hidden]{display:none!important}
+    .app{min-height:100vh;display:grid;grid-template-columns:200px minmax(0,1fr)}.sidebar{display:flex;flex-direction:column;padding:26px 16px 24px;background:#efede7;border-right:1px solid #e5e1d8}.brand{display:flex;align-items:center;gap:11px;padding:0 8px;color:var(--ink);text-decoration:none}.brand-mark{width:36px;height:36px;display:grid;place-items:center;flex:none;color:#fff;background:var(--accent);border-radius:11px}.brand-name{font-size:13px;line-height:1.15;font-weight:750;letter-spacing:.02em}.brand-sub{display:block;margin-top:4px;color:#8b857b;font:9px var(--code);letter-spacing:.09em}.side-caption{margin:54px 9px 11px;color:#a09a8f;font-size:10px;font-weight:700;letter-spacing:.11em}.side-link{display:flex;align-items:center;gap:11px;min-height:40px;padding:0 11px;border-radius:8px;color:#716c63;text-decoration:none;font-size:13px}.side-link svg{width:17px;height:17px;flex:none}.side-link.active{background:#fffdfa;color:#2f2922;font-weight:700;box-shadow:0 1px 2px #31291d0a}.side-link.active svg{color:var(--accent)}.sidebar-bottom{margin-top:auto;padding:28px 9px 0;color:#999388;font-size:11px;line-height:1.7}.sidebar-bottom strong{display:block;color:#716b61;font-weight:650}
+    .main{min-width:0}.topbar{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 36px;background:#fffefaad;border-bottom:1px solid var(--line)}.crumb{color:#8d887d;font-size:12px}.crumb span{padding:0 7px;color:#c6c0b6}.crumb strong{color:#3f3a32}.top-status{display:flex;align-items:center;flex-wrap:wrap;gap:14px}.device{display:inline-flex;align-items:center;gap:7px;color:#6c675d;white-space:nowrap;font-size:11px}.device b{color:#48443c;font-weight:650}.dot{width:7px;height:7px;display:inline-block;flex:none;border-radius:50%;background:#b4aea2;box-shadow:0 0 0 3px #b4aea21a}.dot.ok{background:var(--success);box-shadow:0 0 0 3px #00c85318}.dot.bad{background:var(--failure);box-shadow:0 0 0 3px #ff5f3819}.dot.live{background:var(--accent);box-shadow:0 0 0 3px #da775621}
+    .page{max-width:1680px;margin:auto;padding:35px 36px 64px}.intro{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:24px}.eyebrow{color:var(--accent-dark);font:650 10px var(--code);letter-spacing:.14em;text-transform:uppercase}h1,h2,h3,p{margin:0}h1{margin-top:9px;font:650 clamp(25px,2.1vw,32px)/1.25 var(--content);letter-spacing:-.03em}.intro p{margin-top:8px;color:var(--muted);font-size:13px}.intro-note{color:#9a9489;font:10px var(--code);letter-spacing:.06em}.alert{margin-bottom:17px;padding:12px 14px;border:1px solid #f1cdc1;border-radius:10px;background:#fff4ef;color:#874632;font-size:12px;overflow-wrap:anywhere}
+    .overview{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:20px;border:1px solid var(--line);border-radius:12px;background:#fffefacc}.metric{position:relative;min-height:76px;padding:16px 20px}.metric+.metric:before{position:absolute;top:17px;bottom:17px;left:0;border-left:1px solid var(--line);content:""}.metric-label{color:#8b857a;font-size:11px}.metric-value{display:flex;align-items:baseline;gap:5px;margin-top:3px;color:#373229;font:600 18px/1.2 var(--code);overflow-wrap:anywhere}.metric-value.small{font-size:13px}.metric-value small{color:#aaa297;font:11px var(--ui)}
+    .workspace{display:grid;grid-template-columns:minmax(0,1fr) 330px;align-items:start;gap:20px}.left{display:grid;gap:20px;min-width:0}.card{min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:13px;box-shadow:0 5px 20px #352b1b06}.card-head{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:20px 21px 16px}.head-title{display:flex;align-items:center;gap:10px}.head-symbol{width:28px;height:28px;display:grid;place-items:center;border-radius:8px;background:#f5f1eb;color:#a47a67}.head-symbol svg{width:15px;height:15px}.card h2{font-size:14px;font-weight:750;letter-spacing:-.01em}.head-kicker{color:#a29b8f;font:9px var(--code);letter-spacing:.09em}.live-label{display:inline-flex;align-items:center;gap:7px;color:#898278;font-size:11px;white-space:nowrap}.camera-content{padding:0 13px}.camera-stage{position:relative;aspect-ratio:16/9;overflow:hidden;background:#e8e5df;border:1px solid #e4e0d9;border-radius:9px}.camera-stage img{width:100%;height:100%;object-fit:contain;display:block}.camera-placeholder{position:absolute;inset:0;display:grid;place-content:center;color:#8d877d;text-align:center;font-size:12px}.camera-corner{position:absolute;top:12px;left:12px;display:inline-flex;align-items:center;gap:6px;padding:5px 8px;border:1px solid #ffffff68;border-radius:6px;color:#fff;background:#2828238c;font:9px var(--code);letter-spacing:.07em}.camera-footer{display:flex;justify-content:space-between;gap:14px;padding:14px 8px 17px;color:#8f887d;font-size:11px}.camera-footer strong{color:#625a50;font-weight:650}.camera-footer code{font:10px var(--code)}
+    .config{padding:21px}.config-head{display:flex;align-items:start;justify-content:space-between;gap:8px;margin-bottom:20px}.config-head p{margin-top:4px;color:#a09a8f;font-size:11px}.config-number{color:#c4bbb0;font:11px var(--code)}.field{margin-top:19px}.field-label{display:flex;justify-content:space-between;gap:10px;margin-bottom:8px;color:#514b42;font-size:12px;font-weight:650}.field-label span{color:#a59e92;font-size:10px;font-weight:400}textarea,input{width:100%;border:1px solid #e5e0d7;border-radius:8px;background:#fffefa;color:#3d382f}textarea{height:85px;padding:10px 12px;resize:vertical;line-height:1.6}input{height:40px;padding:0 12px;font:12px var(--code)}textarea:disabled,input:disabled{background:#f6f4ef;color:#9b948a}.model-box{margin-top:20px;padding:14px;border:1px solid #eee9e0;border-radius:9px;background:#faf8f3}.model-name{display:flex;align-items:center;gap:7px;color:#4d463d;font-size:12px;font-weight:700}.model-name .badge{padding:3px 6px;border-radius:4px;background:#fbeee8;color:#ab5c40;font:9px var(--code)}.model-path{margin-top:7px;color:#9c9488;font:10px/1.6 var(--code);overflow-wrap:anywhere}.model-note{margin-top:5px;color:#a39b8f;font-size:10px}.buttons{display:grid;grid-template-columns:minmax(0,1fr) 84px;gap:8px;margin-top:19px}.button{min-height:43px;border:1px solid var(--accent);border-radius:8px;background:var(--accent);color:#fff;font-size:12px;font-weight:700}.button:not(:disabled):hover{background:#c86849}.button:disabled{border-color:#e4c7bb;background:#e4c7bb;color:#fffaf7}.button.secondary{border-color:#ead5cb;background:#fffaf7;color:#ac5d42}.button.secondary:disabled{border-color:#eee9e2;background:#faf9f5;color:#c2bbb0}.button.small{min-height:32px;padding:6px 11px;font-size:11px}.button.good{border-color:#dceee0;background:#f4fbf4;color:#298451}.button.bad{border-color:#f0dad1;background:#fff7f4;color:#b65a40}.config-note{min-height:18px;margin-top:10px;color:#9b9388;font-size:10px;line-height:1.6}.rule{margin:19px 0;border:0;border-top:1px solid #efebe3}.detail-row{display:flex;justify-content:space-between;gap:12px;margin-top:11px;color:#a19a8e;font-size:11px}.detail-row strong{max-width:65%;color:#6b6358;font:11px var(--code);text-align:right;overflow-wrap:anywhere}
+    .status-card{padding:20px 21px}.status-top{display:flex;justify-content:space-between;gap:16px}.status-top p{margin-top:5px;color:#989186;font-size:11px}.pill{padding:5px 9px;border:1px solid #ebe6dc;border-radius:6px;background:#f8f6f1;color:#8c8579;font-size:10px;white-space:nowrap}.pill.running{border-color:#f0d6cb;background:#fff4ee;color:#b66445}.pill.bad{border-color:#f6ded7;background:#fff2ee;color:#c3573d}.status-meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:17px;color:#999286;font-size:11px}.status-meta strong{color:#655f55;font-weight:600}.status-meta code{font:10px var(--code)}
+    .actions-card{padding-bottom:19px}.legend{display:flex;align-items:center;gap:12px;color:#999285;font-size:10px}.legend-item{display:flex;align-items:center;gap:5px}.legend-dot{width:7px;height:7px;border-radius:50%;background:#a4a298}.legend-dot.target{background:var(--accent)}.axes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 26px;padding:3px 22px 0}.axis{display:grid;grid-template-columns:25px minmax(0,1fr) 105px;align-items:center;gap:9px}.axis-name{color:#938c80;font:10px var(--code)}.axis-track{position:relative;height:19px}.axis-track:before{position:absolute;top:9px;left:0;right:0;height:2px;border-radius:2px;background:#ece8df;content:""}.axis-zero{position:absolute;left:50%;top:5px;height:10px;border-left:1px solid #d6d0c6}.axis-span{position:absolute;top:8px;height:4px;border-radius:3px;background:#e8b4a2}.axis-point{position:absolute;top:5px;width:10px;height:10px;border:2px solid var(--paper);border-radius:50%;background:#a3a199;box-shadow:0 0 0 1px #aaa79d;transform:translateX(-50%)}.axis-point.target{background:var(--accent);box-shadow:0 0 0 1px #ce7050}.axis-values{text-align:right;color:#a39b90;font:10px var(--code);white-space:nowrap}.axis-values b{color:#a95e42;font-weight:600}.action-detail{display:flex;gap:8px 24px;flex-wrap:wrap;margin:19px 22px 0;padding-top:15px;border-top:1px solid #efebe3;color:#9a9286;font-size:11px}.action-detail strong{color:#635c52;font:600 11px var(--code)}.chart-note{margin:12px 22px 0;color:#aaa398;font-size:10px}
+    .records{margin-top:20px}.records-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;padding:22px 21px 18px}.records-head p{margin-top:5px;color:#9a9388;font-size:11px}.records-count{color:#a49d92;font-size:11px}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;text-align:left}th{padding:11px 21px;border-top:1px solid #f0ece5;border-bottom:1px solid #f0ece5;color:#a49d92;background:#fbfaf7;font-size:10px;font-weight:600;white-space:nowrap}td{padding:12px 21px;border-bottom:1px solid #f2efe9;color:#655e54;font-size:11px;vertical-align:middle;white-space:nowrap}tr:last-child td{border-bottom:0}td code{font:10px var(--code)}.event-pill{display:inline-flex;align-items:center;gap:6px;padding:4px 7px;border-radius:6px;background:#f4f2ed;color:#8a8377}.event-pill.executed{background:#eff8f0;color:#288f4d}.event-pill.proposed{background:#fff5e9;color:#b6833c}.event-pill.interrupted,.event-pill.cancelled_before_dispatch{background:#fff0eb;color:#c55c42}.empty{padding:28px 20px 32px;color:#aaa398;text-align:center;font-size:11px}.review-bar{display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:15px 21px;border-top:1px solid #f0ece5}.review-bar p{flex:1;min-width:190px;color:#948c80;font-size:11px}.review-result{color:#70685d;font-size:11px}.replay-link{color:#a45d44;font-size:11px}
+    @media(max-width:1120px){.app{grid-template-columns:64px minmax(0,1fr)}.sidebar{padding:25px 12px}.brand{padding:0;justify-content:center}.brand-copy,.side-caption,.side-link span,.sidebar-bottom{display:none}.side-link{justify-content:center;margin-top:10px;padding:0}.workspace{grid-template-columns:minmax(0,1fr) 290px}.axes{grid-template-columns:1fr}}
+    @media(max-width:760px){.app{display:block}.sidebar{min-height:auto;flex-direction:row;align-items:center;gap:10px;padding:10px 15px;border-right:0;border-bottom:1px solid var(--line)}.brand{margin-right:auto}.brand-copy{display:block}.side-link{width:39px;margin:0}.topbar{padding:12px 17px;flex-wrap:wrap}.page{padding:25px 16px 50px}.intro-note{display:none}.overview{grid-template-columns:1fr 1fr}.metric:nth-child(3):before{display:none}.metric:nth-child(n+3){border-top:1px solid var(--line)}.workspace{grid-template-columns:1fr}.axes{grid-template-columns:1fr}.camera-footer{flex-wrap:wrap}.records-head{align-items:start}}
+    @media(prefers-reduced-motion:no-preference){.page{animation:arrive .32s ease both}@keyframes arrive{from{opacity:.3;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}}
+  </style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" aria-label="工作台导航">
+    <a class="brand" href="http://127.0.0.1:8768/" aria-label="FR5 工作台">
+      <span class="brand-mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 16.5V7.5L12 3.5l7 4v9l-7 4-7-4Z" stroke="currentColor" stroke-width="1.5"/><path d="m8.5 14 3.5-5 3.5 5M9.5 12.7h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="brand-copy"><span class="brand-name">FR5 工作台</span><span class="brand-sub">POLICY STUDIO</span></span>
+    </a>
+    <div class="side-caption">工作空间</div>
+    <a class="side-link" href="http://127.0.0.1:8768/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg><span>采集工作台</span></a>
+    <a class="side-link active" href="#top" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m10 8 6 4-6 4z"/></svg><span>策略实验</span></a>
+    <a class="side-link" href="#events"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 5.5h14v13H5zM8 9h8M8 12h8M8 15h5"/></svg><span>动作记录</span></a>
+    <div class="sidebar-bottom"><strong>观察每一次执行</strong>整轮结果由你确认。</div>
+  </aside>
+  <div class="main" id="top">
+    <header class="topbar"><div class="crumb">工作空间 <span>/</span> <strong>策略实验</strong></div><div class="top-status"><div class="device"><span id="cameraDot" class="dot"></span><span>相机 <b id="cameraState">连接中</b></span></div><div class="device"><span id="robotDot" class="dot"></span><span>机械臂 <b id="robotState">连接中</b></span></div><div class="device"><span id="policyDot" class="dot"></span><span>策略 <b id="policyState">等待运行</b></span></div></div></header>
+    <main class="page">
+      <div class="intro"><div><div class="eyebrow">POLICY WORKSPACE</div><h1>让策略完成一次任务</h1><p>加载微调权重，查看实时观测、策略输出和实机反馈。</p></div><div class="intro-note">FR5 &nbsp; / &nbsp; π0.5</div></div>
+      <div id="alert" class="alert" role="alert" hidden></div>
+      <section class="overview" aria-label="策略概览"><div class="metric"><div class="metric-label">当前状态</div><div id="phaseMetric" class="metric-value small">等待运行</div></div><div class="metric"><div class="metric-label">策略动作</div><div class="metric-value"><span id="eventMetric">—</span><small>条记录</small></div></div><div class="metric"><div class="metric-label">最近推理</div><div class="metric-value"><span id="inferenceMetric">—</span><small>秒</small></div></div><div class="metric"><div class="metric-label">最近观测夹爪</div><div class="metric-value"><span id="gripperMetric">—</span><small>%</small></div></div></section>
+      <div class="workspace">
+        <div class="left">
+          <section class="card"><div class="card-head"><div class="head-title"><span class="head-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="12" cy="12.5" r="3"/><path d="m7 6 1-2h4l1 2"/></svg></span><h2>实时画面</h2><span class="head-kicker">CAMERA VIEW</span></div><span class="live-label"><span id="liveDot" class="dot"></span><span id="liveText">等待画面</span></span></div><div class="camera-content"><div class="camera-stage"><img id="camera" alt="Gemini 相机的实时画面" hidden><div id="cameraPlaceholder" class="camera-placeholder">等待相机画面</div><div id="cameraCorner" class="camera-corner" hidden><span class="dot ok"></span> LIVE</div></div><div class="camera-footer"><span><strong>现场实时画面</strong> · 策略根据图像和机械臂状态决策</span><code>GEMINI 335</code></div></div></section>
+          <section class="card status-card"><div class="status-top"><div><h2 id="experimentTitle">当前实验</h2><p id="jobDescription">设置任务后开始实机运行</p></div><span id="jobPill" class="pill">等待运行</span></div><div class="status-meta"><span>实验 <strong id="episodeName">—</strong></span><span>动作 <strong id="eventCount">—</strong></span><span>运行方式 <strong id="runMode">—</strong></span></div></section>
+          <section class="card actions-card"><div class="card-head"><div class="head-title"><span class="head-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 17h16M5 13l4-4 4 3 5-6"/><circle cx="18" cy="6" r="1.5"/></svg></span><h2>关节状态与目标</h2><span class="head-kicker">POLICY OUTPUT</span></div><div class="legend"><span class="legend-item"><i class="legend-dot"></i> 实际</span><span class="legend-item"><i class="legend-dot target"></i> 预测目标</span></div></div><div id="axes" class="axes"></div><div class="action-detail"><span>动作类型 <strong id="kindValue">—</strong></span><span>类型分数 <strong id="kindScore">—</strong></span><span>夹爪目标 <strong id="gripValue">—</strong></span><span>预测等待 <strong id="dwellValue">—</strong></span><span>事件状态 <strong id="actionStatus">—</strong></span></div><p id="chartNote" class="chart-note">等待策略输出；实际值来自机械臂状态接口。</p></section>
+        </div>
+        <section class="card config"><div class="config-head"><div><h2>执行设置</h2><p>一条自然语言指令控制整轮任务</p></div><span class="config-number">01 / RUN</span></div><div class="field"><label class="field-label" for="task">任务指令 <span>可编辑</span></label><textarea id="task" maxlength="512">抓取桌面上的透明杯子，在空中维持5秒后放下</textarea></div><div class="model-box"><div class="model-name">π0.5 <span class="badge">FINE-TUNED</span></div><div id="modelPath" class="model-path">正在读取权重信息</div><div id="modelNote" class="model-note">服务器权重 · 自动选择空闲 GPU</div></div><div class="buttons"><button id="start" class="button" type="button">▶ &nbsp; 开始策略实验</button><button id="stop" class="button secondary" type="button" disabled>停止</button></div><p id="configNote" class="config-note" aria-live="polite">等待设备状态</p><hr class="rule"><div class="detail-row"><span>权重校验</span><strong id="modelHash">—</strong></div><div class="detail-row"><span>记录位置</span><strong>服务器 data4</strong></div><div class="detail-row"><span>任务结果</span><strong>由你确认</strong></div></section>
+      </div>
+      <section id="events" class="card records"><div class="records-head"><div><h2 id="recordsTitle">最近动作记录</h2><p id="recordsSource">实际观测、模型输出和命令反馈会持续记录。</p><button id="previousRecords" class="button small secondary" type="button" aria-expanded="false" aria-controls="eventRows" hidden>查看上一版权重的历史记录</button></div><span id="recordsCount" class="records-count">等待记录</span></div><div class="table-wrap"><table><thead><tr><th>记录</th><th>动作类型</th><th>夹爪目标</th><th>预测等待</th><th>推理耗时</th><th>执行状态</th></tr></thead><tbody id="eventRows"></tbody></table><div id="emptyEvents" class="empty">策略开始运行后，动作会显示在这里。</div></div><div class="review-bar"><p id="reviewHint">整轮结束后，查看记录并确认结果。</p><button id="replay" class="button small secondary" type="button" disabled>生成回放</button><button id="success" class="button small good" type="button" disabled>整轮成功</button><button id="failure" class="button small bad" type="button" disabled>整轮失败</button><a id="replayLink" class="replay-link" href="#" target="_blank" rel="noopener" hidden>查看回放 ↗</a><span id="reviewResult" class="review-result" aria-live="polite"></span></div></section>
+    </main>
+  </div>
+</div>
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const labels = {idle:'等待运行',loading:'加载权重',running:'策略执行中',stopping:'正在停止',saving:'保存记录中',finished:'已停止',failed:'运行未完成'};
+  const kindLabels = {arm:'机械臂',gripper:'夹爪',stream:'连续关节与夹爪'};
+  const eventLabels = {proposed:'待执行',executed:'已执行',interrupted:'已中断',cancelled_before_dispatch:'已取消',available:'预测就绪',submitted:'目标已提交',cancelled:'已取消'};
+  let data = null, token = '', pending = false, cameraPending = false, cameraOk = false, reviewed = '', initialized = false, operationError = '', showPreviousRecords = false;
+  const fmt = (v, digits=1) => typeof v === 'number' && Number.isFinite(v) ? v.toFixed(digits) : '—';
+  function setDot(id, ok) { $(id).className = 'dot' + (ok === true ? ' ok' : ok === false ? ' bad' : ''); }
+  function message(text) { $('alert').textContent = text || ''; $('alert').hidden = !text; }
+  function axisNodes() {
+    const box = $('axes');
+    for (let i=0;i<6;i++) {
+      const row=document.createElement('div');row.className='axis';
+      const name=document.createElement('span');name.className='axis-name';name.textContent=`J${i+1}`;
+      const track=document.createElement('div');track.className='axis-track';track.innerHTML='<span class="axis-zero"></span><span class="axis-span"></span><span class="axis-point actual"></span><span class="axis-point target"></span>';
+      const val=document.createElement('span');val.className='axis-values';val.append(document.createTextNode('— / '));const target=document.createElement('b');target.textContent='—';val.append(target);
+      row.append(name,track,val);box.append(row);
+    }
+  }
+  function renderAxes(joints, event) {
+    const goals=Array.isArray(event?.joint_degrees)?event.joint_degrees:[];
+    const actual=Array.isArray(joints)?joints:[];
+    const values=[...actual,...goals].filter(x=>typeof x==='number'&&Number.isFinite(x));
+    const range=Math.max(180,Math.ceil(Math.max(0,...values.map(Math.abs))/30)*30);
+    const pos=v=>Math.max(0,Math.min(100,(v+range)/(2*range)*100));
+    [...$('axes').children].forEach((row,i)=>{
+      const a=actual[i],t=goals[i], hasA=typeof a==='number'&&Number.isFinite(a),hasT=typeof t==='number'&&Number.isFinite(t);
+      const ap=row.querySelector('.actual'),tp=row.querySelector('.target'),span=row.querySelector('.axis-span');
+      ap.hidden=!hasA;tp.hidden=!hasT;span.hidden=!(hasA&&hasT);
+      if(hasA)ap.style.left=pos(a)+'%';if(hasT)tp.style.left=pos(t)+'%';
+      if(hasA&&hasT){span.style.left=Math.min(pos(a),pos(t))+'%';span.style.width=Math.abs(pos(t)-pos(a))+'%';}
+      const out=row.querySelector('.axis-values');out.firstChild.nodeValue=(hasA?fmt(a):'—')+'° / ';out.querySelector('b').textContent=(hasT?fmt(t):'—')+'°';
+    });
+    const note=event?.event_kind==='gripper'?' 当前事件契约以类型分数 0.5 选择动作；此夹爪事件的关节预测不会下发。':event?.event_kind==='arm'?' 当前事件契约以类型分数 0.5 选择动作；此机械臂事件的夹爪预测不会下发。':'';
+    $('chartNote').textContent=values.length?`显示比例 ±${range}°；实际值来自机械臂状态接口，目标来自最近的策略输出。${note}`:'等待策略输出；实际值来自机械臂状态接口。';
+  }
+  function cell(row,text,code=false){const td=document.createElement('td');if(code){const el=document.createElement('code');el.textContent=text;td.append(el);}else td.textContent=text;row.append(td);}
+  function renderEvents(events) {
+    const rows=$('eventRows');rows.replaceChildren();$('emptyEvents').hidden=events.length>0;
+    [...events].reverse().forEach(event=>{
+      const row=document.createElement('tr');cell(row,event.file||'—',true);cell(row,kindLabels[event.event_kind]||'—');
+      cell(row,event.gripper_target==null?'—':`${event.gripper_target}%`,true);cell(row,event.dwell_seconds==null?'—':`${fmt(event.dwell_seconds,2)} 秒`,true);cell(row,event.inference_seconds==null?'—':`${fmt(event.inference_seconds,2)} 秒`,true);
+      const td=document.createElement('td'),pill=document.createElement('span');pill.className='event-pill '+(event.status||'');pill.textContent=eventLabels[event.status]||event.status||'—';td.append(pill);row.append(td);rows.append(row);
+    });
+  }
+  function render() {
+    const ep=data?.episode,events=Array.isArray(ep?.events)?ep.events:[],phase=data?.phase||'idle',active=['loading','running','stopping','saving'].includes(phase),owned=data?.owned===true;
+    const recordIsPreviousModel=!!ep?.checkpoint&&ep.checkpoint!==data?.checkpoint;
+    const event=recordIsPreviousModel?null:events.at(-1);
+    $('experimentTitle').textContent=recordIsPreviousModel&&!active?'上一轮实验':'当前实验';
+    $('recordsTitle').textContent=recordIsPreviousModel?'当前权重尚无实机动作记录':'最近动作记录';
+    $('recordsSource').textContent=recordIsPreviousModel?`历史实验使用 ${ep.checkpoint.split('/').pop()}；与右侧当前权重不同。`:'实际观测、模型输出和命令反馈会持续记录。';
+    $('previousRecords').hidden=!recordIsPreviousModel;
+    $('previousRecords').textContent=showPreviousRecords?'收起上一版权重的历史记录':'查看上一版权重的历史记录';
+    $('previousRecords').setAttribute('aria-expanded',String(showPreviousRecords));
+    if(data?.camera?.ok!==true){cameraOk=false;$('camera').hidden=true;$('cameraPlaceholder').hidden=false;$('cameraCorner').hidden=true;$('liveDot').className='dot bad';$('liveText').textContent='画面不可用';}
+    setDot('cameraDot',data?.camera?.ok);setDot('robotDot',data?.robot?.ok);
+    $('cameraState').textContent=data?.camera?.ok?'已连接':'未就绪';$('robotState').textContent=data?.robot?.ok?'已连接':'未就绪';$('policyState').textContent=labels[phase]||phase;
+    $('policyDot').className='dot'+(active?' live':phase==='failed'?' bad':'');$('phaseMetric').textContent=labels[phase]||phase;
+    $('eventMetric').textContent=recordIsPreviousModel?'—':(ep?.events_total??'—');$('eventCount').textContent=ep?.events_total==null?'—':`${ep.events_total} 条`;
+    $('inferenceMetric').textContent=event?.inference_seconds==null?'—':fmt(event.inference_seconds,2);
+    $('gripperMetric').textContent=event?.observed_gripper==null?'—':fmt(event.observed_gripper,0);
+    const verifiedHash=data?.checkpoint_validation?.loading_verified?data.checkpoint_validation.checkpoint_sha256:null;
+    $('modelPath').textContent=data?.checkpoint||'尚未配置训练权重';$('modelHash').textContent=!recordIsPreviousModel&&ep?.checkpoint_sha256?ep.checkpoint_sha256.slice(0,12)+'…':verifiedHash?verifiedHash.slice(0,12)+'…':'待本轮加载';
+    $('modelNote').textContent=data?.checkpoint_validation?.task_success_verified===false?'已完成加载核验 · 尚无整轮成功记录':'服务器权重 · 自动选择空闲 GPU';
+    $('episodeName').textContent=ep?.name||'—';$('runMode').textContent=ep?.runtime_llm===false?'π0.5 独立策略':'—';
+    $('jobPill').textContent=labels[phase]||phase;$('jobPill').className='pill'+(active?' running':phase==='failed'?' bad':'');
+    $('jobDescription').textContent=ep?.summary?.termination_source==='operator_stop'?'已手动停止，记录正在保存或已保存。':ep?.summary?.failed?`记录原因：${ep.summary.failed}`:phase==='failed'?`运行未完成：${data?.worker?.last_message||'请检查服务状态'}`:ep?.task||data?.worker?.task||'设置任务后开始实机运行';
+    $('kindValue').textContent=kindLabels[event?.event_kind]||'—';$('kindScore').textContent=event?.event_kind_score==null?'—':fmt(event.event_kind_score,3);$('gripValue').textContent=event?.gripper_target==null?'—':`${event.gripper_target}%`;
+    $('dwellValue').textContent=event?.dwell_seconds==null?'—':`${fmt(event.dwell_seconds,2)} 秒`;$('actionStatus').textContent=eventLabels[event?.status]||event?.status||'—';
+    renderAxes(data?.robot?.joints_deg,event);
+    if(recordIsPreviousModel){$('chartNote').textContent='实际关节为当前反馈；上一轮使用其他权重，新权重尚无本轮输出。';if(!active)$('jobDescription').textContent=`上一轮权重：${ep.checkpoint.split('/').pop()}。当前已选择新权重，尚未开始新一轮实机实验。`;}
+    const visibleEvents=recordIsPreviousModel&&!showPreviousRecords?[]:events;
+    renderEvents(visibleEvents);
+    $('emptyEvents').textContent=recordIsPreviousModel?'当前权重尚未进行新一轮实机实验。上一版权重的记录已保留，可点击上方按钮查看。':'策略开始运行后，动作会显示在这里。';
+    $('recordsCount').textContent=ep?.events_total==null?'等待记录':recordIsPreviousModel?`历史共 ${ep.events_total} 条${showPreviousRecords?` · 显示最近 ${events.length} 条`:' · 已收起'}`:`共 ${ep.events_total} 条 · 显示最近 ${events.length} 条`;
+    const busy=data?.robot_busy!==false,ready=data?.camera?.ok===true&&data?.robot?.ok===true&&!!data?.checkpoint;
+    $('start').disabled=pending||active||busy||!ready;$('stop').disabled=pending||!owned||!['loading','running','stopping'].includes(phase)||phase==='stopping';
+    $('task').disabled=active||pending;
+    $('kindScore').parentElement.hidden=event?.event_kind==='stream';$('dwellValue').parentElement.hidden=event?.event_kind==='stream';
+    if(event?.event_kind==='stream')$('chartNote').textContent='目标来自连续动作块；关节与夹爪分别执行，实际值来自实时反馈。';
+    $('configNote').textContent=phase==='saving'?'上一轮正在归档并释放机械臂控制。':active&&!owned?'已有其他进程在运行，请在原工作台或主对话结束该任务。':active?'策略连续运行；完成或需要中断时点击停止。':busy?'机械臂控制正在被其他任务占用。':!ready?'等待相机、机械臂和权重就绪。':'摆好杯子、离开工作区域后开始。';
+    reviewed=data?.reviews?.[ep?.name]||reviewed;const canReview=!!ep?.summary&&!active;for(const id of ['replay','success','failure'])$(id).disabled=pending||!canReview||!!reviewed;
+    $('replay').disabled=pending||!canReview;const replay=data?.replays?.[ep?.name];
+    $('replay').textContent=replay?.state==='rendering'?'正在生成回放':'生成回放';if(replay?.state==='rendering')$('replay').disabled=true;
+    $('replayLink').hidden=replay?.state!=='ready';if(replay?.state==='ready')$('replayLink').href=replay.url;
+    if(replay?.state==='error')$('reviewResult').textContent=replay.error;else $('reviewResult').textContent=reviewed?`已记录：${reviewed==='success'?'整轮成功':'整轮失败'}`:'';
+    $('reviewHint').textContent=canReview?'请结合现场或回放判断；评测不计入示范数据。':'整轮结束后，查看记录并确认结果。';
+  }
+  async function refresh() {
+    try{const response=await fetch('/api/status',{cache:'no-store'});if(!response.ok)throw new Error('状态读取失败');const next=await response.json();
+      if(data?.episode?.name!==next.episode?.name)reviewed='';if(data?.episode?.name!==next.episode?.name||data?.checkpoint!==next.checkpoint)showPreviousRecords=false;data=next;token=next.csrf||'';if(!initialized){if(next.default_task)$('task').value=next.default_task;initialized=true;}message(operationError);render();
+    }catch(error){message('工作台连接失败：'+String(error.message||error));}
+  }
+  async function post(path,body) {
+    operationError='';pending=true;render();try{const response=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json','X-FR5-CSRF':token},body:JSON.stringify(body)});const result=await response.json();if(!response.ok||result.ok===false)throw new Error(result.error||'操作失败');return result;}
+    catch(error){operationError=String(error.message||error);message(operationError);return null;}finally{pending=false;await refresh();}
+  }
+  function updateCamera(){if(cameraPending||document.hidden||!data?.camera?.ok)return;cameraPending=true;$('camera').src='/camera.jpg?t='+Date.now();}
+  $('camera').addEventListener('load',()=>{cameraPending=false;cameraOk=true;$('camera').hidden=false;$('cameraPlaceholder').hidden=true;$('cameraCorner').hidden=false;$('liveDot').className='dot ok';$('liveText').textContent='实时画面';});
+  $('camera').addEventListener('error',()=>{cameraPending=false;cameraOk=false;$('camera').hidden=true;$('cameraPlaceholder').hidden=false;$('cameraCorner').hidden=true;$('liveDot').className='dot bad';$('liveText').textContent='画面不可用';});
+  $('start').addEventListener('click',async()=>{reviewed='';await post('/api/start',{task:$('task').value});});
+  $('stop').addEventListener('click',()=>post('/api/stop',{}));
+  $('previousRecords').addEventListener('click',()=>{showPreviousRecords=!showPreviousRecords;render();});
+  $('replay').addEventListener('click',()=>post('/api/replay',{episode:data?.episode?.name}));
+  for(const verdict of ['success','failure'])$(verdict).addEventListener('click',async()=>{const result=await post('/api/review',{episode:data?.episode?.name,verdict});if(result){reviewed=verdict;render();}});
+  axisNodes();refresh().then(updateCamera);setInterval(refresh,1500);setInterval(updateCamera,800);
+})();
+</script>
+</body>
+</html>

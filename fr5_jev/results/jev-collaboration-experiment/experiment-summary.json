@@ -1,0 +1,108 @@
+{
+  "status": "pregrasp_complete_actual_cup_grasp_pending",
+  "decisions": [
+    {
+      "record": "/home/dianrobot/demo1/fairino-review/jev-collaboration-experiment/readonly-observation-01.json",
+      "choice": "observe_scene",
+      "probability": 0.91,
+      "confidence": 0.86,
+      "route": "selected",
+      "latency_ms": 1412.171511001361,
+      "usage": {
+        "input_tokens": 1026,
+        "output_tokens": 43
+      }
+    },
+    {
+      "record": "/home/dianrobot/demo1/fairino-review/jev-collaboration-experiment/motion-segment-01.json",
+      "choice": "align_xy",
+      "probability": 0.96,
+      "confidence": 0.95,
+      "route": "selected",
+      "latency_ms": 1353.5005379962968,
+      "usage": {
+        "input_tokens": 1611,
+        "output_tokens": 51
+      }
+    },
+    {
+      "record": "/home/dianrobot/demo1/fairino-review/jev-collaboration-experiment/motion-segment-02.json",
+      "choice": "descend_pregrasp",
+      "probability": 0.94,
+      "confidence": 0.92,
+      "route": "selected",
+      "latency_ms": 1211.4444079998066,
+      "usage": {
+        "input_tokens": 1789,
+        "output_tokens": 57
+      }
+    },
+    {
+      "record": "/home/dianrobot/demo1/fairino-review/jev-collaboration-experiment/motion-segment-03.json",
+      "choice": "descend_pregrasp",
+      "probability": 0.95,
+      "confidence": 0.93,
+      "route": "selected",
+      "latency_ms": 1300.4656379998778,
+      "usage": {
+        "input_tokens": 1789,
+        "output_tokens": 57
+      }
+    },
+    {
+      "record": "/home/dianrobot/demo1/fairino-review/jev-collaboration-experiment/motion-segment-04.json",
+      "choice": "descend_pregrasp",
+      "probability": 0.93,
+      "confidence": 0.91,
+      "route": "selected",
+      "latency_ms": 1190.7307240035152,
+      "usage": {
+        "input_tokens": 1788,
+        "output_tokens": 57
+      }
+    },
+    {
+      "record": "/home/dianrobot/demo1/fairino-review/jev-collaboration-experiment/contact-review/decision.json",
+      "choice": "observe_scene",
+      "probability": 0.64,
+      "confidence": 0.46,
+      "route": "needs_llm",
+      "latency_ms": 1884.1269419935998,
+      "usage": {
+        "input_tokens": 1909,
+        "output_tokens": 43
+      }
+    }
+  ],
+  "jev_requests": 6,
+  "completed_readonly_tasks": 1,
+  "completed_motion_segments": 4,
+  "llm_scene_reviews_recorded": 4,
+  "llm_handoff_events": 1,
+  "gripper_commands_sent": 0,
+  "grasp_success": false,
+  "latency_ms": {
+    "median": 1326.9830879980873,
+    "min": 1190.7307240035152,
+    "max": 1884.1269419935998
+  },
+  "experimental_policy_version": "risk-evidence-v1",
+  "thresholds_statistically_calibrated": false,
+  "installed_skill": "/home/dianrobot/.codex/skills/fr5-jev-collaboration/SKILL.md",
+  "skill_validation_passed": true,
+  "software_unit_tests_passed": 36,
+  "additional_descent_simulation_checks_passed": 8,
+  "closing_simulation_checks_passed": 5,
+  "pending_information": [
+    "Higher finger tip clearance above cup rim",
+    "Whether open finger inner faces clear both sides of the cup rim"
+  ],
+  "new_descent_plan": "/home/dianrobot/demo1/fairino-review/cup-reuse-20261022-102342/grasp-descent-100mm-preview.json",
+  "new_descent_authorized": false,
+  "closing_contact_pose_confirmed": false,
+  "compiled_code_hashes": {
+    "execute_approved_grasp_descent_segment.py": "2e07c08fcbaf460c2cb893625161a2d592b96e2dc345ea7831b193e64a3b8e56",
+    "execute_approved_cup_close_once.py": "b58f70ba6d159de302832b489223306d31cd80cb96a05a4d149719009db17adc"
+  },
+  "updated_at_unix": 1792660347.5677137
+}

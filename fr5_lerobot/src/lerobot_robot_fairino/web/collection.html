@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>采集工作台 · FR5</title>
+  <style>
+    :root {
+      --surface: #f5f3ee;
+      --paper: #fffefa;
+      --ink: #1d1b16;
+      --muted: #77736a;
+      --line: #e6e2d9;
+      --accent: #da7756;
+      --accent-dark: #b95b3d;
+      --accent-soft: #fbede7;
+      --success: #00c853;
+      --failure: #ff5f38;
+      --ui: Figtree, "Noto Sans CJK SC", "Microsoft YaHei", system-ui, sans-serif;
+      --code: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+      --content: "Source Serif 4", "Noto Serif CJK SC", Georgia, serif;
+      color: var(--ink);
+      font: 14px/1.5 var(--ui);
+      font-synthesis: none;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; min-width: 320px; background: var(--surface); }
+    button, input, select { font: inherit; }
+    button { color: inherit; cursor: pointer; }
+    button:disabled { cursor: not-allowed; }
+    button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, a:focus-visible, .camera-stage:focus-visible {
+      outline: 3px solid rgba(218,119,86,.42); outline-offset: 3px;
+    }
+    [hidden] { display: none !important; }
+    .app { min-height: 100vh; display: grid; grid-template-columns: 200px minmax(0,1fr); }
+    .sidebar { display: flex; flex-direction: column; min-height: 100%; padding: 26px 16px 24px; background: #efede7; border-right: 1px solid #e5e1d8; }
+    .brand { display: flex; align-items: center; gap: 11px; padding: 0 8px; text-decoration: none; color: var(--ink); }
+    .brand-mark { width: 36px; height: 36px; display: grid; place-items: center; flex: none; color: white; background: var(--accent); border-radius: 11px; }
+    .brand-name { font-size: 13px; line-height: 1.15; font-weight: 750; letter-spacing: .02em; }
+    .brand-sub { margin-top: 4px; color: #8b857b; font: 9px var(--code); letter-spacing: .09em; }
+    .side-caption { margin: 54px 9px 11px; color: #a09a8f; font-size: 10px; font-weight: 700; letter-spacing: .11em; }
+    .side-link { display: flex; align-items: center; gap: 11px; min-height: 40px; padding: 0 11px; border-radius: 8px; color: #716c63; text-decoration: none; font-size: 13px; }
+    .side-link svg { width: 17px; height: 17px; flex: none; }
+    .side-link.active { background: #fffdfa; color: #2f2922; font-weight: 700; box-shadow: 0 1px 2px #31291d0a; }
+    .side-link.active svg { color: var(--accent); }
+    .sidebar-bottom { margin-top: auto; padding: 28px 9px 0; color: #999388; font-size: 11px; line-height: 1.7; }
+    .sidebar-bottom strong { display: block; color: #716b61; font-size: 11px; font-weight: 650; }
+    .main { min-width: 0; }
+    .topbar { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 12px 36px; background: rgba(255,254,250,.68); border-bottom: 1px solid var(--line); }
+    .crumb { color: #8d887d; font-size: 12px; white-space: nowrap; }
+    .crumb span { padding: 0 7px; color: #c6c0b6; }
+    .crumb strong { color: #3f3a32; font-weight: 650; }
+    .top-status { display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: 9px; }
+    .device { display: inline-flex; align-items: center; gap: 7px; color: #6c675d; white-space: nowrap; font-size: 11px; }
+    .device b { color: #48443c; font-weight: 650; }
+    .device + .device { padding-left: 11px; border-left: 1px solid var(--line); }
+    .dot { width: 7px; height: 7px; flex: none; border-radius: 50%; background: #b4aea2; box-shadow: 0 0 0 3px #b4aea21a; }
+    .dot.ok { background: var(--success); box-shadow: 0 0 0 3px #00c85318; }
+    .dot.bad { background: var(--failure); box-shadow: 0 0 0 3px #ff5f3819; }
+    .page { max-width: 1680px; margin: 0 auto; padding: 36px 36px 64px; }
+    .intro { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 26px; }
+    .eyebrow { color: var(--accent-dark); font: 10px var(--code); font-weight: 650; letter-spacing: .14em; text-transform: uppercase; }
+    h1, h2, h3, p { margin: 0; }
+    h1 { margin-top: 9px; font-family: var(--content); font-size: clamp(25px, 2.1vw, 32px); font-weight: 650; line-height: 1.25; letter-spacing: -.03em; }
+    .intro p { margin-top: 8px; color: var(--muted); font-size: 13px; }
+    .intro-note { color: #9a9489; font: 10px var(--code); letter-spacing: .06em; white-space: nowrap; }
+    .alert { display: flex; align-items: flex-start; gap: 10px; margin: 0 0 17px; padding: 12px 14px; border: 1px solid #f1cdc1; border-radius: 10px; background: #fff4ef; color: #874632; font-size: 12px; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .alert svg { flex: none; margin-top: 2px; }
+    .alert-text { flex: 1; }
+    .alert button { padding: 0 2px; border: 0; background: transparent; color: #9d634e; font-size: 17px; line-height: 1; }
+    .summary { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); margin-bottom: 20px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,254,250,.8); }
+    .summary-item { position: relative; display: flex; align-items: center; gap: 13px; min-height: 76px; padding: 16px 21px; }
+    .summary-item + .summary-item:before { position: absolute; top: 17px; bottom: 17px; left: 0; border-left: 1px solid var(--line); content: ""; }
+    .summary-icon { display: grid; place-items: center; width: 35px; height: 35px; flex: none; border: 1px solid #eee9e0; border-radius: 10px; background: #f8f6f1; color: #8f877a; }
+    .summary-icon.success { background: #eff9f1; border-color: #e4f3e7; color: #229552; }
+    .summary-icon.pending { background: #fff6ea; border-color: #f7ecdb; color: #c69150; }
+    .summary-label { color: #8b857a; font-size: 11px; }
+    .summary-value { display: flex; align-items: baseline; gap: 5px; color: #373229; font: 600 22px/1.2 var(--code); }
+    .summary-value small { color: #aba499; font: 11px var(--ui); }
+    .workspace { display: grid; grid-template-columns: minmax(0,1fr) 310px; align-items: start; gap: 20px; }
+    .left-column { display: grid; gap: 20px; min-width: 0; }
+    .card { min-width: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 13px; box-shadow: 0 5px 20px rgba(53,43,27,.025); }
+    .card-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 20px 21px 16px; }
+    .head-title { display: flex; align-items: center; gap: 10px; }
+    .head-symbol { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 8px; background: #f5f1eb; color: #a47a67; }
+    .card h2 { font-size: 14px; font-weight: 750; letter-spacing: -.01em; }
+    .head-kicker { color: #a29b8f; font: 9px var(--code); letter-spacing: .09em; }
+    .live-indicator { display: inline-flex; align-items: center; gap: 7px; color: #898278; font-size: 11px; white-space: nowrap; }
+    .camera-content { padding: 0 13px; }
+    .camera-stage { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #e8e5df; border: 1px solid #e4e0d9; border-radius: 9px; cursor: crosshair; touch-action: manipulation; }
+    .camera-stage.is-locked { cursor: default; }
+    .camera-stage img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; }
+    .camera-placeholder { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 10px; padding: 20px; color: #8d877d; text-align: center; }
+    .camera-placeholder svg { color: #aaa399; }
+    .camera-placeholder strong { color: #777168; font-size: 13px; font-weight: 650; }
+    .camera-placeholder span { font-size: 11px; }
+    .camera-corner { position: absolute; top: 12px; left: 12px; display: inline-flex; align-items: center; gap: 6px; padding: 5px 8px; border: 1px solid #ffffff68; border-radius: 6px; color: white; background: #2828238c; font: 9px var(--code); letter-spacing: .07em; pointer-events: none; }
+    .camera-corner .dot { width: 6px; height: 6px; }
+    .marker { position: absolute; z-index: 2; width: 31px; height: 31px; border: 1px solid #ffffffd9; border-radius: 50%; box-shadow: 0 0 0 1px #a34f35a6, 0 2px 7px #29231d50; transform: translate(-50%,-50%); pointer-events: none; }
+    .marker.auto { border-radius: 5px; }
+    .marker:before, .marker:after { position: absolute; top: 50%; left: 50%; background: white; box-shadow: 0 0 2px #8a422c; content: ""; transform: translate(-50%,-50%); }
+    .marker:before { width: 21px; height: 1px; }
+    .marker:after { width: 1px; height: 21px; }
+    .marker-center { position: absolute; z-index: 1; top: 50%; left: 50%; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); transform: translate(-50%,-50%); }
+    .marker-label { position: absolute; top: 31px; left: 22px; padding: 5px 8px; border: 1px solid #ffffff75; border-radius: 6px; color: #fff; background: #332d27db; font: 10px/1.35 var(--ui); white-space: nowrap; }
+    .marker-label span { display: block; margin-top: 2px; color: #f1c6b8; font: 9px var(--code); }
+    .marker.flip-x .marker-label { right: 22px; left: auto; }
+    .marker.flip-y .marker-label { top: auto; bottom: 31px; }
+    .target-controls { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; padding: 13px 8px 0; }
+    .mode-choice { display: inline-flex; gap: 3px; padding: 3px; border: 1px solid #ece7de; border-radius: 8px; background: #f7f5f0; }
+    .mode-choice button { min-height: 32px; padding: 6px 12px; border: 0; border-radius: 6px; background: transparent; color: #777065; font-size: 11px; }
+    .mode-choice button[aria-pressed="true"] { background: #fffefa; color: #a45237; font-weight: 700; box-shadow: 0 1px 4px #31291d14; }
+    .mode-choice button:disabled { opacity: .55; }
+    .locate-button { min-height: 34px; padding: 6px 11px; border: 1px solid #e8d7ce; border-radius: 7px; background: #fffaf7; color: #a45d44; font-size: 11px; }
+    .locate-button:disabled { border-color: #eee9e2; background: #faf9f5; color: #c2bbb0; }
+    .camera-footer { display: flex; justify-content: space-between; align-items: center; gap: 15px; min-height: 63px; padding: 13px 8px 15px; }
+    .camera-hint { display: flex; align-items: flex-start; gap: 9px; color: #746e64; font-size: 11px; }
+    .camera-hint svg { margin-top: 1px; flex: none; color: var(--accent); }
+    .camera-hint strong { color: #514a40; font-weight: 650; }
+    .camera-detail { margin-top: 2px; color: #a19b90; font-size: 10px; }
+    .text-button { padding: 5px 0; border: 0; background: transparent; color: #a45d44; font-size: 11px; white-space: nowrap; }
+    .text-button:disabled { color: #c8c0b6; }
+    .config { padding: 21px; }
+    .config-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 21px; }
+    .config-head p { margin-top: 4px; color: #a09a8f; font-size: 11px; }
+    .config-number { color: #c4bbb0; font: 11px var(--code); }
+    .field { margin-top: 20px; }
+    .field-label { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 8px; color: #514b42; font-size: 12px; font-weight: 650; }
+    .field-label span { color: #a59e92; font-size: 10px; font-weight: 400; }
+    .input-wrap { position: relative; }
+    .input-wrap input, select { width: 100%; height: 40px; padding: 0 12px; border: 1px solid #e5e0d7; border-radius: 8px; color: #3d382f; background: #fffefa; }
+    .input-wrap input { padding-right: 48px; font-family: var(--code); font-size: 12px; }
+    .input-wrap span { position: absolute; top: 50%; right: 13px; color: #a29c91; font-size: 11px; transform: translateY(-50%); }
+    input:disabled, select:disabled { background: #f6f4ef; color: #9b948a; }
+    select { appearance: none; padding-right: 34px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23948d82' stroke-width='1.6'%3E%3Cpath d='m7 10 5 5 5-5'/%3E%3C/svg%3E"); background-position: right 11px center; background-repeat: no-repeat; }
+    .choice { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+    .choice label { position: relative; }
+    .choice input { position: absolute; opacity: 0; }
+    .choice span { display: block; padding: 10px; border: 1px solid #e5e0d7; border-radius: 8px; color: #7d776c; text-align: center; font-size: 11px; cursor: pointer; }
+    .choice input:checked + span { border-color: #e2a28d; color: #a45237; background: #fff5f1; font-weight: 700; }
+    .choice input:focus-visible + span { outline: 3px solid rgba(218,119,86,.42); outline-offset: 2px; }
+    .choice input:disabled + span { opacity: .55; cursor: not-allowed; }
+    .more-settings { margin-top: 20px; border-top: 1px solid #efebe3; }
+    .more-settings summary { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 14px 0 0; color: #665f55; font-size: 11px; font-weight: 650; cursor: pointer; list-style: none; }
+    .more-settings summary::-webkit-details-marker { display: none; }
+    .more-settings summary:before { content: "+"; color: var(--accent-dark); font-size: 15px; line-height: 1; }
+    .more-settings[open] summary:before { content: "−"; }
+    .more-settings summary span { margin-left: auto; color: #a49d92; font-size: 10px; font-weight: 400; }
+    .more-settings .field { margin-top: 16px; }
+    .fixed-setting { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 20px; padding: 13px 0; border-top: 1px solid #efebe3; border-bottom: 1px solid #efebe3; color: #625c52; font-size: 12px; }
+    .fixed-setting strong { color: #777067; font-size: 11px; font-weight: 550; }
+    .fixed-setting small { color: #a49d92; font-size: 10px; }
+    .start-button, .stop-button { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 43px; border-radius: 8px; font-size: 12px; font-weight: 700; }
+    .start-button { margin-top: 20px; border: 1px solid var(--accent); background: var(--accent); color: #fff; box-shadow: 0 3px 8px #da775626; }
+    .start-button:not(:disabled):hover { border-color: #c86849; background: #c86849; }
+    .start-button:disabled { border-color: #e4c7bb; background: #e4c7bb; box-shadow: none; color: #fffaf7; }
+    .start-note { margin: 8px 0 13px; color: #9b9388; font-size: 10px; line-height: 1.6; text-align: center; }
+    .stop-button { min-height: 39px; border: 1px solid #ead5cb; background: #fffaf7; color: #ac5d42; }
+    .stop-button:not(:disabled):hover { background: #fff0e9; }
+    .stop-button:disabled { border-color: #eee9e2; background: #faf9f5; color: #c2bbb0; }
+    .config-gate { min-height: 16px; margin-top: 10px; color: #a27866; font-size: 10px; line-height: 1.5; text-align: center; }
+    .job-card { padding: 20px 21px; }
+    .job-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+    .job-heading p { margin-top: 5px; color: #989186; font-size: 11px; }
+    .job-state { padding: 5px 9px; border: 1px solid #ebe6dc; border-radius: 6px; background: #f8f6f1; color: #8c8579; font-size: 10px; white-space: nowrap; }
+    .job-state.running { border-color: #f0d6cb; background: #fff4ee; color: #b66445; }
+    .job-state.error { border-color: #f6ded7; background: #fff2ee; color: #c3573d; }
+    .job-state.done { border-color: #dfefe3; background: #f0f8f1; color: #42825a; }
+    .phase-list { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 6px; list-style: none; margin: 20px 0 0; padding: 0; }
+    .phase-list li { min-width: 0; color: #aaa398; font-size: 10px; }
+    .phase-line { height: 4px; margin-bottom: 8px; border-radius: 5px; background: #edeae4; }
+    .phase-list li.active { color: #a9573a; font-weight: 700; }
+    .phase-list li.active .phase-line { background: var(--accent); }
+    .job-meta { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 17px; color: #999286; font-size: 10px; }
+    .job-meta strong { color: #655f55; font-weight: 600; }
+    .job-message { margin-top: 10px; color: #81796d; font-size: 11px; overflow-wrap: anywhere; }
+    .records { margin-top: 20px; }
+    .records-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; padding: 22px 21px 18px; }
+    .records-head p { margin-top: 5px; color: #9a9388; font-size: 11px; }
+    .records-count { color: #a49d92; font-size: 11px; white-space: nowrap; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    th { padding: 11px 21px; border-top: 1px solid #f0ece5; border-bottom: 1px solid #f0ece5; color: #a49d92; background: #fbfaf7; font-size: 10px; font-weight: 600; white-space: nowrap; }
+    td { padding: 15px 21px; border-bottom: 1px solid #f2efe9; color: #655e54; font-size: 11px; vertical-align: middle; }
+    tr:last-child td { border-bottom: 0; }
+    .record-id { color: #4d463d; font: 600 11px var(--code); overflow-wrap: anywhere; }
+    .subline { display: block; margin-top: 4px; color: #a29b90; font-size: 10px; }
+    .status-pill { display: inline-flex; align-items: center; gap: 6px; padding: 5px 8px; border-radius: 6px; background: #f4f2ed; color: #8a8377; white-space: nowrap; }
+    .status-pill:before { width: 6px; height: 6px; border-radius: 50%; background: currentColor; content: ""; }
+    .status-pill.success { background: #eff8f0; color: #288f4d; }
+    .status-pill.pending_review { background: #fff6e9; color: #b6833c; }
+    .status-pill.failure, .status-pill.interrupted { background: #fff0eb; color: #c55c42; }
+    #stopButton.active-stop { position:fixed;right:24px;bottom:20px;z-index:90;width:210px;box-shadow:0 8px 25px #743a2729;background:#fff7f3;border-color:#c5664b;color:#a34429; }
+    .status-pill.saving { background: #f2f0ec; color: #81796d; }
+    .row-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; min-width: 190px; }
+    .row-button { min-height: 29px; padding: 5px 8px; border: 1px solid #e8e3da; border-radius: 6px; background: #fffefa; color: #6c645a; font-size: 10px; white-space: nowrap; }
+    .row-button:not(:disabled):hover { border-color: #d7c1b5; background: #fcf6f2; }
+    .row-button.good { color: #27834b; }
+    .row-button.bad { color: #bd634d; }
+    .row-button:disabled { border-color: #f0ede7; color: #c8c1b8; }
+    .empty { padding: 42px 20px 45px; color: #aaa398; text-align: center; font-size: 11px; }
+    .empty svg { display: block; margin: 0 auto 11px; color: #c3bcb1; }
+    .empty strong { display: block; margin-bottom: 4px; color: #777065; font-size: 12px; font-weight: 650; }
+    dialog { width: min(780px,calc(100vw - 32px)); max-height: calc(100vh - 32px); padding: 0; overflow: auto; border: 1px solid var(--line); border-radius: 13px; background: var(--paper); color: var(--ink); box-shadow: 0 20px 70px #29231b36; }
+    dialog::backdrop { background: rgba(34,30,25,.48); }
+    .dialog-head { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 18px 20px; }
+    .dialog-head h2 { font-size: 14px; }
+    .dialog-head p { margin-top: 3px; color: #a19a8f; font: 10px var(--code); overflow-wrap: anywhere; }
+    .close-dialog { width: 30px; height: 30px; flex: none; border: 1px solid #eee9e2; border-radius: 7px; background: #faf9f6; color: #827a70; font-size: 19px; line-height: 1; }
+    .video-wrap { padding: 0 13px 13px; }
+    video { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 8px; background: #e7e3dc; }
+    .video-error { margin: 0 20px 17px; color: #b75d43; font-size: 11px; }
+    @media (max-width: 1160px) {
+      .app { grid-template-columns: 72px minmax(0,1fr); }
+      .sidebar { padding: 25px 12px; }
+      .brand { justify-content: center; padding: 0; }
+      .brand-copy, .side-caption, .side-link span, .sidebar-bottom { display: none; }
+      .side-link { justify-content: center; padding: 0; margin-top: 28px; }
+      .side-link + .side-link { margin-top: 8px; }
+      .topbar { padding-right: 26px; padding-left: 26px; }
+      .page { padding-right: 26px; padding-left: 26px; }
+    }
+    @media (max-width: 860px) {
+      .workspace { grid-template-columns: 1fr; }
+      .left-column { display: contents; }
+      .config { order: 1; }
+      .job-card { order: 2; }
+      .field { margin-top: 0; }
+      .fixed-setting { margin-top: 16px; }
+      .config-actions { display: grid; grid-template-columns: minmax(0,1fr) 140px; align-items: start; gap: 12px; }
+      .config-actions .start-button, .config-actions .stop-button { margin-top: 16px; }
+      .config-actions .stop-button { min-height: 43px; }
+      .start-note { text-align: left; }
+      .config-gate { text-align: left; }
+    }
+    @media (max-width: 620px) {
+      .app { display: block; }
+      .sidebar { min-height: auto; flex-direction: row; align-items: center; gap: 10px; padding: 10px 15px; border-right: 0; border-bottom: 1px solid var(--line); }
+      .brand { margin-right: auto; }
+      .brand-copy { display: block; }
+      .brand-mark { width: 32px; height: 32px; }
+      .side-link, .side-link + .side-link { width: 36px; min-height: 34px; margin: 0; }
+      .topbar { align-items: flex-start; flex-direction: column; gap: 9px; padding: 12px 17px; }
+      .top-status { justify-content: flex-start; gap: 7px; }
+      .device { font-size: 10px; }
+      .device + .device { padding-left: 8px; }
+      .page { padding: 25px 15px 45px; }
+      .intro { margin-bottom: 18px; }
+      .intro-note { display: none; }
+      .summary-item { display: block; min-height: 70px; padding: 12px; }
+      .summary-icon { display: none; }
+      .summary-value { margin-top: 5px; font-size: 19px; }
+      .workspace, .left-column { gap: 14px; }
+      .config-actions { grid-template-columns: minmax(0,1fr) 100px; }
+      .camera-content { padding: 0 9px; }
+      .card-head, .job-card { padding-right: 16px; padding-left: 16px; }
+      .head-kicker { display: none; }
+      .records { margin-top: 14px; }
+      th, td { padding-right: 14px; padding-left: 14px; }
+      .camera-detail { max-width: 220px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" aria-label="工作台导航">
+    <a class="brand" href="#top" aria-label="FR5 采集工作台">
+      <span class="brand-mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 16.5V7.5L12 3.5l7 4v9l-7 4-7-4Z" stroke="currentColor" stroke-width="1.5"/><path d="m8.5 14 3.5-5 3.5 5M9.5 12.7h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="brand-copy"><span class="brand-name">FR5 工作台</span><span class="brand-sub" style="display:block">COLLECTION STUDIO</span></span>
+    </a>
+    <div class="side-caption">工作空间</div>
+    <a class="side-link active" href="#top" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg><span>采集工作台</span></a>
+    <a class="side-link" href="http://127.0.0.1:8769/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m10 8 6 4-6 4z"/></svg><span>策略实验</span></a>
+    <a class="side-link" href="#records"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 5.5h14v13H5zM8 9h8M8 12h8M8 15h5"/></svg><span>采集记录</span></a>
+    <div class="sidebar-bottom"><strong>专注每一次采集</strong>记录真实过程，完成后再确认。</div>
+  </aside>
+  <div class="main" id="top">
+    <header class="topbar">
+      <div class="crumb">工作空间 <span>/</span> <strong>采集工作台</strong></div>
+      <div class="top-status" aria-label="设备与存储状态">
+        <div class="device"><span id="cameraDot" class="dot"></span><span>相机 <b id="cameraStatus">等待连接</b></span></div>
+        <div class="device"><span id="robotDot" class="dot"></span><span>机械臂 <b id="robotStatus">等待连接</b></span></div>
+        <div class="device"><span id="storageDot" class="dot"></span><span>数据4余量 <b id="storageStatus">—</b></span></div>
+      </div>
+    </header>
+    <main class="page">
+      <div class="intro">
+        <div><div class="eyebrow">COLLECTION WORKSPACE</div><h1>开始一轮新的采集</h1><p>摆好杯子，由视觉定位杯口；需要时可手动修正。</p></div>
+        <div class="intro-note">FR5 &nbsp; / &nbsp; COLLECTION</div>
+      </div>
+      <div id="alert" class="alert" role="alert" hidden><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 2.8 20h18.4L12 3Z"/><path d="M12 9v5m0 3h.01" stroke-linecap="round"/></svg><div id="alertText" class="alert-text"></div><button id="dismissError" type="button" aria-label="关闭操作提示">×</button></div>
+      <section class="summary" aria-label="采集概览">
+        <div class="summary-item"><span class="summary-icon success" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="m8.5 12 2.2 2.2 4.8-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="summary-label">新流程成功</div><div class="summary-value"><span id="successCount">—</span><small>条</small></div></div></div>
+        <div class="summary-item"><span class="summary-icon pending" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 7.5V12l3 2" stroke-linecap="round"/></svg></span><div><div class="summary-label">待确认</div><div class="summary-value"><span id="pendingCount">—</span><small>条</small></div></div></div>
+        <div class="summary-item"><span class="summary-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 12h8M8 15h5" stroke-linecap="round"/></svg></span><div><div class="summary-label">全部记录</div><div class="summary-value"><span id="totalCount">—</span><small>条</small></div></div></div>
+      </section>
+      <div class="workspace">
+        <div class="left-column">
+          <section class="card" aria-labelledby="cameraTitle">
+            <div class="card-head"><div class="head-title"><span class="head-symbol" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="12" cy="12.5" r="3"/><path d="m7 6 1-2h4l1 2"/></svg></span><h2 id="cameraTitle">实时画面</h2><span class="head-kicker">CAMERA VIEW</span></div><span class="live-indicator"><span id="liveDot" class="dot"></span><span id="liveText">等待画面</span></span></div>
+            <div class="camera-content">
+              <div id="cameraStage" class="camera-stage is-locked" tabindex="-1" aria-label="实时画面，正在使用视觉自动定位">
+                <img id="cameraImage" alt="相机实时画面" draggable="false" hidden>
+                <div id="cameraPlaceholder" class="camera-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="12" cy="12.5" r="3"/><path d="m7 6 1-2h4l1 2"/></svg><strong id="placeholderTitle">正在等待实时画面</strong><span id="placeholderDetail">连接相机后显示视觉定位结果</span></div>
+                <div id="cameraCorner" class="camera-corner" hidden><span class="dot ok"></span> LIVE</div>
+                <div id="marker" class="marker" hidden><span class="marker-center"></span><span class="marker-label"><span id="markerTitle" style="display:inline;margin:0;color:inherit;font:inherit">视觉定位</span><span id="markerCoords">—</span></span></div>
+              </div>
+              <div class="target-controls"><div class="mode-choice" role="group" aria-label="杯子定位方式"><button id="autoMode" type="button" aria-pressed="true">自动定位</button><button id="manualMode" type="button" aria-pressed="false">手动修正</button></div><button id="locateButton" class="locate-button" type="button" disabled>重新识别</button></div>
+              <div class="camera-footer"><div class="camera-hint"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 7v10M7 12h10" stroke-linecap="round"/></svg><div aria-live="polite"><strong id="selectionTitle">等待视觉定位</strong><div id="selectionDetail" class="camera-detail">根据当前标定与杯口外缘、深度进行定位</div></div></div><button id="clearSelection" class="text-button" type="button" disabled hidden>重新选点</button></div>
+            </div>
+          </section>
+          <section class="card job-card" aria-labelledby="jobTitle">
+            <div class="job-heading"><div><h2 id="jobTitle">当前任务</h2><p id="jobSubtitle">等待开始新一轮采集</p></div><span id="jobState" class="job-state">尚未开始</span></div>
+            <ol class="phase-list" aria-label="任务阶段"><li data-phase="approach"><div class="phase-line"></div>接近</li><li data-phase="grasp"><div class="phase-line"></div>夹取</li><li data-phase="hover"><div class="phase-line"></div>悬停</li><li data-phase="place"><div class="phase-line"></div>放回</li><li data-phase="retreat"><div class="phase-line"></div>退开</li></ol>
+            <div class="job-meta"><span>当前阶段 <strong id="jobPhase">—</strong></span><span>已用时间 <strong id="jobElapsed">—</strong></span><span id="actionsMeta" hidden>动作进度 <strong id="jobActions">—</strong></span></div>
+            <p id="jobMessage" class="job-message" hidden></p>
+            <button id="retrySave" class="locate-button" type="button" hidden>重试保存</button>
+          </section>
+        </div>
+        <section class="card config" aria-labelledby="configTitle">
+          <div class="config-head"><div><h2 id="configTitle">本轮配置</h2><p>确认好位置，再开始采集</p></div><span class="config-number">01 / 02</span></div>
+          <div class="field"><label class="field-label" for="holdSeconds">悬停时间 <span>抓起后保持</span></label><div class="input-wrap"><input id="holdSeconds" type="number" inputmode="decimal" min="0" step="any" value="5"><span>秒</span></div></div>
+          <details class="more-settings"><summary>更多采集设置 <span id="settingsSummary">1 次 · 交替起点</span></summary>
+            <fieldset class="field" style="border:0;padding:0;margin-left:0;margin-right:0;margin-bottom:0;min-width:0"><legend class="field-label" style="width:100%;padding:0">重复次数</legend><div class="choice"><label><input type="radio" name="repetitions" value="1" checked><span>1 次</span></label><label><input type="radio" name="repetitions" value="2"><span>2 次</span></label></div></fieldset>
+            <div class="field"><label class="field-label" for="startVariant">起始位置</label><select id="startVariant"><option value="alternating">交替起点</option><option value="left">左侧起点</option><option value="right">右侧起点</option><option value="current">保持当前位置</option></select></div>
+          </details>
+          <div class="fixed-setting"><span>退开距离</span><strong>短距离 <small>· 约 80 mm</small></strong></div>
+          <div class="config-actions"><div><button id="startButton" class="start-button" type="button" disabled><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m9 6 9 6-9 6V6Z" stroke-linejoin="round"/></svg>摆好杯子，开始采集</button><p class="start-note">点击表示杯子已摆好，手已离开工作区域。</p></div><button id="stopButton" class="stop-button" type="button" disabled><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="6" width="12" height="12" rx="1"/></svg>停止采集</button></div>
+          <div id="configGate" class="config-gate" aria-live="polite">等待设备状态</div>
+        </section>
+      </div>
+      <section class="card records" id="records" aria-labelledby="recordsTitle">
+        <div class="records-head"><div><h2 id="recordsTitle">采集记录</h2><p>查看真实记录，完成整轮后由你确认结果。</p></div><span id="recordsCount" class="records-count">等待记录</span></div>
+        <div id="tableWrap" class="table-wrap" hidden><table><thead><tr><th>采集时间 / 记录</th><th>状态</th><th>时长 / 帧数</th><th>悬停时间</th><th>操作</th></tr></thead><tbody id="episodeRows"></tbody></table></div>
+        <div id="emptyRecords" class="empty"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 12h8M8 15h5" stroke-linecap="round"/></svg><strong id="emptyTitle">正在等待记录</strong><span id="emptyDetail">连接后会显示真实采集结果</span></div>
+      </section>
+    </main>
+  </div>
+</div>
+<dialog id="replayDialog" aria-labelledby="replayTitle"><div class="dialog-head"><div><h2 id="replayTitle">采集回放</h2><p id="replayId"></p></div><button id="closeReplay" class="close-dialog" type="button" aria-label="关闭回放">×</button></div><div class="video-wrap"><video id="replayVideo" controls playsinline preload="metadata"></video></div><p id="videoError" class="video-error" role="alert" hidden>回放无法加载，请稍后重试。</p></dialog>
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const activeStates = new Set(['preparing', 'running', 'saving', 'stopping']);
+  const knownStates = new Set(['preparing', 'running', 'saving', 'completed', 'failed', 'stopping']);
+  const stateNames = { preparing: '准备中', running: '采集中', saving: '保存中', completed: '动作完成', failed: '未完成', stopping: '停止中' };
+  const episodeNames = { success: '已确认成功', pending_review: '待确认', interrupted: '已中断', failure: '失败', saving: '整理中' };
+  const phaseNames = {
+    prepare: '准备本轮', localize: '定位杯子', start_setup: '变换机械臂起点',
+    initial_open: '准备夹爪', approach: '接近', approach_clear: '接近', approach_near: '对准杯子', approach_contact: '接近杯口',
+    grasp: '夹取', close: '夹取', lift_probe: '尝试提起', lift_full: '提起', hover: '悬停', hold: '悬停',
+    place: '放回', return: '放回', release: '松开杯子', retreat: '退开', retreat_probe: '退开', retreat_clear: '退开', retreat_high: '退开'
+  };
+  let status = null;
+  let online = false;
+  let polling = null;
+  let operationError = '';
+  let statusError = '';
+  let selected = null;
+  let targetMode = 'auto';
+  let locateRequest = false;
+  let visionRevision = 0;
+  let locateVision = null;
+  let locateFailureBaseline = null;
+  let cameraReady = false;
+  let cameraError = false;
+  let framePending = false;
+  let frameStarted = 0;
+  let startRequest = false;
+  let waitingForStart = null;
+  let stopRequest = false;
+  let retrySaveRequest = false;
+  const pendingRows = new Set();
+  let episodeSignature = '';
+
+  const printable = value => {
+    if (value == null || value === '') return '';
+    if (typeof value === 'string') return value;
+    if (typeof value === 'object') {
+      if (typeof value.message === 'string') return value.message;
+      if (typeof value.error === 'string') return value.error;
+      try { return JSON.stringify(value); } catch (_) { return String(value); }
+    }
+    return String(value);
+  };
+  const finite = value => value !== null && value !== '' && Number.isFinite(Number(value));
+  const nonnegative = value => finite(value) && Number(value) >= 0;
+  const fmtNumber = value => nonnegative(value) ? String(Number(value)) : '—';
+  const fmtSeconds = value => nonnegative(value) ? `${Number(value).toFixed(Number(value) % 1 ? 1 : 0)} 秒` : '—';
+  const fmtElapsed = value => {
+    if (!nonnegative(value)) return '—';
+    const seconds = Math.floor(Number(value));
+    return seconds < 60 ? `${seconds} 秒` : `${Math.floor(seconds / 60)} 分 ${String(seconds % 60).padStart(2, '0')} 秒`;
+  };
+  const fmtStorage = bytes => {
+    if (!nonnegative(bytes)) return '—';
+    let value = Number(bytes), unit = 0;
+    const units = ['B', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB'];
+    while (value >= 1024 && unit < units.length - 1) { value /= 1024; unit++; }
+    return `${value.toFixed(unit && value < 100 ? 1 : 0)} ${units[unit]}`;
+  };
+  const fmtDate = value => {
+    if (value == null || value === '') return '时间未提供';
+    let input = value;
+    if (finite(value)) input = Number(value) < 1e12 ? Number(value) * 1000 : Number(value);
+    const date = new Date(input);
+    return Number.isNaN(date.getTime()) ? printable(value) : new Intl.DateTimeFormat('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }).format(date);
+  };
+  function nativeSize() {
+    const size = status && status.camera && status.camera.color_size;
+    let w, h;
+    if (Array.isArray(size)) [w, h] = size;
+    else if (size && typeof size === 'object') { w = size.width ?? size.w; h = size.height ?? size.h; }
+    if (!(finite(w) && finite(h) && Number(w) > 0 && Number(h) > 0)) {
+      w = $('cameraImage').naturalWidth; h = $('cameraImage').naturalHeight;
+    }
+    if (!(finite(w) && finite(h) && Number(w) > 0 && Number(h) > 0)) return null;
+    return [Math.floor(Number(w)), Math.floor(Number(h))];
+  }
+  function motionBusy() {
+    const job = status && status.job;
+    return !!(job && (activeStates.has(job.state) || !knownStates.has(job.state)));
+  }
+  function hasToken() { return !!(status && typeof status.csrf === 'string' && status.csrf); }
+  function canSelect() { return targetMode === 'manual' && online && status?.camera?.ok === true && cameraReady && !motionBusy() && !startRequest && !waitingForStart; }
+  function holdValid() { const value = $('holdSeconds').valueAsNumber; return Number.isFinite(value) && value > 0; }
+  function visionStatus() {
+    const vision = online && status?.vision && typeof status.vision === 'object' ? status.vision : null;
+    if (locateFailureBaseline !== null) return { vision: null, state: 'unavailable' };
+    const state = ['found', 'ambiguous', 'not_found', 'unavailable', 'checking'].includes(vision?.status) ? vision.status : 'unavailable';
+    return { vision, state };
+  }
+  function autoPoint() {
+    const { vision, state } = visionStatus();
+    const uv = vision?.cup_uv, size = nativeSize();
+    if (state !== 'found' || !Array.isArray(uv) || uv.length !== 2 || !uv.every(Number.isFinite) || !size) return null;
+    if (uv[0] < 0 || uv[1] < 0 || uv[0] >= size[0] || uv[1] >= size[1]) return null;
+    return { u: uv[0], v: uv[1], width: size[0], height: size[1] };
+  }
+  function visionTime(value) {
+    if (value == null || value === '') return null;
+    if (finite(value)) return Number(value) < 1e12 ? Number(value) * 1000 : Number(value);
+    const time = Date.parse(value);
+    return Number.isFinite(time) ? time : null;
+  }
+  function renderAlert() {
+    const messages = [statusError, operationError, online && status ? printable(status.last_error) : ''].filter(Boolean);
+    $('alertText').textContent = messages.join('\n');
+    $('alert').hidden = !messages.length;
+    $('dismissError').hidden = !operationError;
+  }
+  function setOperationError(message) { operationError = message; renderAlert(); }
+  $('dismissError').addEventListener('click', () => { operationError = ''; renderAlert(); });
+  function setDevice(dotId, textId, device, good, bad) {
+    const dot = $(dotId); dot.className = 'dot';
+    if (!online || !device || typeof device.ok !== 'boolean') { $(textId).textContent = online ? '状态未知' : '等待连接'; return; }
+    dot.classList.add(device.ok ? 'ok' : 'bad');
+    $(textId).textContent = device.ok ? good : bad;
+  }
+  function renderDevices() {
+    setDevice('cameraDot', 'cameraStatus', status?.camera, '已连接', '未就绪');
+    setDevice('robotDot', 'robotStatus', status?.robot, '已连接', '未就绪');
+    const storage = online ? status?.storage : null;
+    $('storageDot').className = 'dot' + (storage && typeof storage.ok === 'boolean' ? (storage.ok ? ' ok' : ' bad') : '');
+    $('storageStatus').textContent = !online ? '—' : storage?.ok === false ? '不可用' : fmtStorage(storage?.free_bytes);
+    $('successCount').textContent = online ? fmtNumber(status?.counts?.success) : '—';
+    $('pendingCount').textContent = online ? fmtNumber(status?.counts?.pending) : '—';
+    $('totalCount').textContent = online ? fmtNumber(status?.counts?.total) : '—';
+  }
+  function phaseGroup(phase) {
+    const p = String(phase || '').toLowerCase();
+    if (p === 'approach' || p.startsWith('approach_')) return 'approach';
+    if (['grasp', 'close'].includes(p)) return 'grasp';
+    if (['hover', 'hold', 'lift_probe', 'lift_full'].includes(p)) return 'hover';
+    if (['place', 'return', 'release'].includes(p)) return 'place';
+    if (p === 'retreat' || p.startsWith('retreat_')) return 'retreat';
+    return null;
+  }
+  function renderJob() {
+    const job = status?.job;
+    const usable = online && job;
+    const state = usable ? job.state : '';
+    const phase = usable && job.phase ? String(job.phase) : '';
+    $('jobState').textContent = !online ? '状态未知' : !job ? '尚未开始' : (stateNames[state] || printable(state) || '状态未知');
+    if (state === 'completed' && ['pending','failed'].includes(job?.storage_status)) $('jobState').textContent = '动作完成 · 待保存';
+    $('jobState').className = 'job-state' + (['preparing','running','stopping'].includes(state) ? ' running' : state === 'failed' ? ' error' : state === 'completed' ? ' done' : '');
+    $('jobSubtitle').textContent = !online ? '等待状态连接' : !job ? '等待开始新一轮采集' : printable(job.label) || (state === 'saving' ? '动作已结束，正在保存原始记录' : '本轮采集');
+    $('jobPhase').textContent = phase ? (phaseNames[phase] || phase) : '—';
+    $('jobElapsed').textContent = usable ? fmtElapsed(job.elapsed_s) : '—';
+    const showActions = usable && nonnegative(job.completed_actions) && nonnegative(job.total_actions);
+    $('actionsMeta').hidden = !showActions;
+    $('jobActions').textContent = showActions ? `${job.completed_actions} / ${job.total_actions}` : '—';
+    const message = usable ? printable(job.message) : '';
+    $('jobMessage').hidden = !message; $('jobMessage').textContent = message;
+    $('retrySave').hidden = !usable || job.storage_status !== 'failed';
+    $('retrySave').disabled = retrySaveRequest || !online || !hasToken();
+    $('retrySave').textContent = retrySaveRequest ? '正在提交重试' : '重试保存';
+    const group = usable && ['preparing','running','stopping'].includes(state) ? phaseGroup(phase) : null;
+    document.querySelectorAll('.phase-list li').forEach(node => {
+      const active = node.dataset.phase === group;
+      node.classList.toggle('active', active);
+      if (active) node.setAttribute('aria-current', 'step'); else node.removeAttribute('aria-current');
+    });
+  }
+  function contentRect() {
+    const stage = $('cameraStage');
+    const outer = stage.getBoundingClientRect();
+    const image = $('cameraImage');
+    const rect = image.getBoundingClientRect();
+    if (!rect.width || !rect.height || !image.naturalWidth || !image.naturalHeight) return null;
+    const scale = Math.min(rect.width / image.naturalWidth, rect.height / image.naturalHeight);
+    const width = image.naturalWidth * scale, height = image.naturalHeight * scale;
+    return { left: rect.left + (rect.width - width) / 2, top: rect.top + (rect.height - height) / 2,
+      width, height, outer: { left: outer.left + stage.clientLeft, top: outer.top + stage.clientTop, width: stage.clientWidth, height: stage.clientHeight } };
+  }
+  function drawMarker() {
+    const marker = $('marker');
+    const box = contentRect();
+    const point = targetMode === 'auto' ? (locateRequest ? null : autoPoint()) : selected;
+    if (!point || !cameraReady || !box) { marker.hidden = true; return; }
+    const x = (box.left - box.outer.left) + (point.u + .5) / point.width * box.width;
+    const y = (box.top - box.outer.top) + (point.v + .5) / point.height * box.height;
+    marker.style.left = `${x}px`; marker.style.top = `${y}px`;
+    marker.classList.toggle('auto', targetMode === 'auto');
+    marker.classList.toggle('flip-x', x > box.outer.width * .7);
+    marker.classList.toggle('flip-y', y > box.outer.height * .7);
+    $('markerTitle').textContent = targetMode === 'auto' ? '视觉定位' : '手动选点';
+    $('markerCoords').textContent = `${Math.round(point.u)}, ${Math.round(point.v)}`;
+    marker.hidden = false;
+  }
+  function renderCamera() {
+    const cameraOk = online && status?.camera?.ok === true;
+    const visible = cameraOk && cameraReady;
+    $('cameraImage').hidden = !visible;
+    $('cameraPlaceholder').hidden = visible;
+    $('cameraCorner').hidden = !visible;
+    $('liveDot').className = 'dot' + (visible ? ' ok' : online && status?.camera?.ok === false ? ' bad' : '');
+    $('liveText').textContent = visible ? '实时画面' : !online ? '等待连接' : cameraOk ? (cameraError ? '画面读取失败' : '等待画面') : '相机未就绪';
+    $('placeholderTitle').textContent = !online ? '正在等待状态连接' : cameraOk ? (cameraError ? '实时画面读取失败' : '正在等待实时画面') : '相机暂不可用';
+    $('placeholderDetail').textContent = cameraOk ? (cameraError ? '正在重试，请检查相机连接' : '连接相机后显示定位结果') : '请检查相机状态，恢复后再定位杯子';
+    $('cameraStage').classList.toggle('is-locked', !canSelect());
+    $('cameraStage').tabIndex = targetMode === 'manual' ? 0 : -1;
+    $('cameraStage').setAttribute('aria-label', targetMode === 'manual' ? '实时画面，点击杯口中心选点；选中后可用方向键微调' : '实时画面，正在使用视觉自动定位');
+    $('clearSelection').hidden = targetMode !== 'manual';
+    $('clearSelection').disabled = !selected || !canSelect();
+    if (targetMode === 'manual') {
+      $('selectionTitle').textContent = selected ? `已选择杯口中心 · ${selected.u}, ${selected.v}` : '请点击画面中的杯口中心';
+      let detail = selected ? `原始画面 ${selected.width} × ${selected.height} · 可用方向键微调` : '选点后，可用方向键微调位置';
+      if (visible && status?.camera?.received_at != null) detail += ` · 画面时间 ${fmtDate(status.camera.received_at)}`;
+      $('selectionDetail').textContent = detail;
+    } else {
+      const { vision, state } = visionStatus();
+      const point = autoPoint();
+      const titles = { found: '已自动定位杯子', ambiguous: '检测到多个候选杯子，可手动修正', not_found: '未找到杯子，可手动修正', unavailable: '视觉定位不可用，可手动修正', checking: '正在视觉定位杯子' };
+      $('selectionTitle').textContent = !online ? '等待视觉定位状态' : locateRequest ? '正在重新识别杯子' : locateFailureBaseline !== null ? '重新识别失败，可手动修正' : state === 'found' && !point ? '视觉定位坐标无效，可手动修正' : titles[state];
+      const details = [];
+      if (locateRequest) details.push('正在获取新的视觉定位结果');
+      else if (locateFailureBaseline !== null) details.push('请重新识别，或切换到手动修正');
+      else {
+        if (point) details.push(`原始画面 ${point.width} × ${point.height} · 坐标 ${Math.round(point.u)}, ${Math.round(point.v)}`);
+        if (state === 'found' && !point) details.push('未提供有效的原始画面坐标');
+        if (vision?.message) details.push(printable(vision.message));
+        if (vision?.received_at != null) details.push(`定位时间 ${fmtDate(vision.received_at)}`);
+      }
+      if (!details.length) details.push(vision ? '根据当前标定与杯口外缘、深度进行定位' : '状态中未提供视觉定位结果');
+      $('selectionDetail').textContent = details.join(' · ');
+    }
+    drawMarker();
+  }
+  function renderControls() {
+    const locked = motionBusy() || startRequest || !!waitingForStart;
+    $('stopButton').classList.toggle('active-stop', motionBusy() || !!waitingForStart);
+    $('holdSeconds').disabled = locked;
+    $('startVariant').disabled = locked;
+    document.querySelectorAll('input[name="repetitions"]').forEach(node => { node.disabled = locked; });
+    $('autoMode').disabled = locked;
+    $('manualMode').disabled = locked;
+    $('autoMode').setAttribute('aria-pressed', String(targetMode === 'auto'));
+    $('manualMode').setAttribute('aria-pressed', String(targetMode === 'manual'));
+    const cameraOk = online && status?.camera?.ok === true && cameraReady;
+    const robotOk = online && status?.robot?.ok === true;
+    const storageOk = online && status?.storage?.ok === true;
+    const { state: visionState } = visionStatus();
+    const targetReady = targetMode === 'auto' ? visionState === 'found' && !!autoPoint() : !!selected;
+    $('locateButton').hidden = targetMode !== 'auto';
+    $('locateButton').disabled = locked || locateRequest || !hasToken() || !cameraOk;
+    $('locateButton').textContent = locateRequest ? '正在识别' : '重新识别';
+    let reason = '';
+    if (waitingForStart) reason = '等待新一轮任务状态更新，请勿重复开始';
+    else if (startRequest) reason = '正在提交本轮采集';
+    else if (!online) reason = '等待设备状态连接';
+    else if (!hasToken()) reason = '缺少操作凭证，请刷新状态';
+    else if (motionBusy()) reason = status?.job?.state === 'saving' ? '正在保存原始记录，请稍候' : '任务进行中，配置暂不可修改';
+    else if (!cameraOk) reason = '等待相机画面';
+    else if (!robotOk) reason = '机械臂未就绪';
+    else if (!storageOk) reason = '存储空间状态不可用';
+    else if (!holdValid()) reason = '请输入大于 0 的悬停时间';
+    else if (locateRequest) reason = '正在重新识别杯子';
+    else if (!targetReady) reason = targetMode === 'manual' ? '先在实时画面选择杯口中心' : visionState === 'checking' ? '正在视觉定位杯子' : visionState === 'ambiguous' ? '检测到多个候选杯子，可手动修正' : visionState === 'not_found' ? '未找到杯子，可手动修正' : visionState === 'found' ? '视觉定位坐标无效，可手动修正' : '视觉定位不可用，可手动修正';
+    else if (status?.job?.state === 'completed') reason = '可以摆好下一杯，开始新的采集';
+    $('startButton').disabled = !!(locked || locateRequest || !online || !hasToken() || !cameraOk || !robotOk || !storageOk || !holdValid() || !targetReady);
+    $('stopButton').disabled = !hasToken() || !status?.job || !['preparing','running'].includes(status.job.state) || stopRequest;
+    $('configGate').textContent = reason;
+    renderCamera();
+  }
+  function appendText(parent, tag, value, className) {
+    const element = document.createElement(tag); element.textContent = value;
+    if (className) element.className = className;
+    parent.appendChild(element); return element;
+  }
+  function actionButton(parent, text, action, episode, disabled, title, extraClass) {
+    const button = appendText(parent, 'button', text, `row-button${extraClass ? ' ' + extraClass : ''}`);
+    button.type = 'button'; button.dataset.action = action; button.dataset.episode = String(episode.id);
+    button.disabled = disabled; if (title) button.title = title;
+    return button;
+  }
+  function renderEpisodes(force = false) {
+    const episodes = online && Array.isArray(status?.episodes) ? status.episodes : null;
+    const signature = JSON.stringify([episodes, online, [...pendingRows].sort(), !!status?.csrf]);
+    if (!force && signature === episodeSignature) return;
+    episodeSignature = signature;
+    $('episodeRows').replaceChildren();
+    const hasEpisodes = !!episodes?.length;
+    $('tableWrap').hidden = !hasEpisodes;
+    $('emptyRecords').hidden = hasEpisodes;
+    $('recordsCount').textContent = !online ? '等待记录' : episodes ? `共 ${episodes.length} 条记录` : '记录暂不可用';
+    $('emptyTitle').textContent = !online ? '正在等待记录' : episodes ? '还没有采集记录' : '记录暂不可用';
+    $('emptyDetail').textContent = !online ? '连接后会显示真实采集结果' : episodes ? '完成采集后，记录会显示在这里' : '状态中未提供采集记录';
+    if (!hasEpisodes) return;
+    for (const ep of episodes) {
+      if (!ep || ep.id == null) continue;
+      const row = document.createElement('tr');
+      const identity = appendText(row, 'td', fmtDate(ep.created_at));
+      appendText(identity, 'span', String(ep.id), 'subline record-id');
+      if (ep.reviewed && ep.review_statement) appendText(identity, 'span', printable(ep.review_statement), 'subline');
+      const result = document.createElement('td'); row.appendChild(result);
+      appendText(result, 'span', episodeNames[ep.status] || printable(ep.status) || '状态未知', `status-pill ${Object.hasOwn(episodeNames, ep.status) ? ep.status : ''}`);
+      const metrics = appendText(row, 'td', fmtSeconds(ep.duration_s));
+      appendText(metrics, 'span', nonnegative(ep.frames) ? `${fmtNumber(ep.frames)} 帧` : '帧数未提供', 'subline');
+      const hold = appendText(row, 'td', nonnegative(ep.actual_hold_seconds) ? `实际 ${fmtSeconds(ep.actual_hold_seconds)}` : '实际 —');
+      appendText(hold, 'span', nonnegative(ep.hold_seconds) ? `设定 ${fmtSeconds(ep.hold_seconds)}` : '设定 —', 'subline');
+      const actions = document.createElement('td'); row.appendChild(actions);
+      const group = document.createElement('div'); group.className = 'row-actions'; actions.appendChild(group);
+      const busy = pendingRows.has(String(ep.id));
+      if (ep.video_url) actionButton(group, '回放', 'open', ep, busy, '', '');
+      else actionButton(group, ep.status === 'saving' ? '生成回放' : busy ? '正在生成' : '生成回放', 'replay', ep, busy || !hasToken() || ep.status === 'saving', ep.status === 'saving' ? '录像正在整理' : '', '');
+      if (ep.can_retry_save) actionButton(group, '重试保存', 'retry_save', ep, busy || !hasToken(), '继续保存这条记录', '');
+      const canReview = !busy && hasToken() && !ep.reviewed && ep.can_review !== false;
+      actionButton(group, '成功', 'success', ep, !canReview || ep.status !== 'pending_review', ep.status === 'saving' ? '录像整理完成后才能确认成功' : ep.status !== 'pending_review' ? '只有完成整轮且待确认的记录可以标记成功' : ep.reviewed ? '已确认' : '', 'good');
+      actionButton(group, '失败', 'failure', ep, !canReview || !['pending_review','interrupted','saving'].includes(ep.status), ep.reviewed ? '已确认' : '', 'bad');
+      $('episodeRows').appendChild(row);
+    }
+  }
+  function renderAll() { renderDevices(); renderJob(); renderControls(); renderEpisodes(); renderAlert(); }
+  async function refreshStatus() {
+    if (polling) return polling;
+    polling = (async () => {
+      const revisionAtRequest = visionRevision;
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 5000);
+      try {
+        const response = await fetch('/api/status', { cache: 'no-store', signal: controller.signal, headers: { 'Accept': 'application/json' } });
+        let data;
+        try { data = await response.json(); }
+        catch (_) { throw new Error(response.ok ? '状态格式不正确' : `服务返回 ${response.status}，状态内容无法读取`); }
+        if (!response.ok) throw new Error(printable(data?.error) || `服务返回 ${response.status}`);
+        if (!data || typeof data !== 'object' || Array.isArray(data) || data.ok === false) throw new Error(printable(data?.error) || '状态格式不正确');
+        if (revisionAtRequest === visionRevision && locateFailureBaseline !== null && JSON.stringify(data.vision ?? null) !== locateFailureBaseline) locateFailureBaseline = null;
+        if (revisionAtRequest !== visionRevision) data.vision = status?.vision ?? null;
+        else if (locateVision) {
+          const incoming = data.vision ?? null;
+          const incomingText = JSON.stringify(incoming);
+          const resultText = JSON.stringify(locateVision.value);
+          const incomingTime = visionTime(incoming?.received_at);
+          const resultTime = visionTime(locateVision.value.received_at);
+          if (incomingText === resultText) locateVision = null;
+          else if (incomingTime != null && resultTime != null ? incomingTime <= resultTime : incomingText === locateVision.previous) data.vision = locateVision.value;
+          else locateVision = null;
+        }
+        status = data; online = true; statusError = '';
+        if (waitingForStart && data.job?.id != null) {
+          const currentId = String(data.job.id);
+          if ((waitingForStart.expectedId && currentId === waitingForStart.expectedId) || currentId !== waitingForStart.previousId) waitingForStart = null;
+        }
+        const size = nativeSize();
+        if (selected && (!data.camera?.ok || motionBusy() || (size && (size[0] !== selected.width || size[1] !== selected.height)))) selected = null;
+        if (!data.camera?.ok) cameraReady = false;
+        renderAll(); return true;
+      } catch (error) {
+        online = false; cameraReady = false; selected = null;
+        statusError = `状态读取失败：${error.name === 'AbortError' ? '连接超时' : printable(error.message || error)}`;
+        renderAll(); return false;
+      } finally { clearTimeout(timeout); }
+    })();
+    try { return await polling; } finally { polling = null; }
+  }
+  async function post(path, payload) {
+    if (!hasToken()) { const error = new Error('缺少操作凭证，请等待状态更新'); error.definitive = true; throw error; }
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 15000);
+    try {
+      const response = await fetch(path, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json', 'X-FR5-CSRF': status.csrf }, body: JSON.stringify(payload), signal: controller.signal });
+      let result;
+      try { result = await response.json(); } catch (_) { throw new Error(`服务返回无法识别的结果（${response.status}）`); }
+      if (!response.ok || !result || result.ok !== true) {
+        const error = new Error(printable(result?.error) || `服务返回 ${response.status}`);
+        error.definitive = !!(result && result.ok === false) || (response.status >= 400 && response.status < 500);
+        throw error;
+      }
+      return result;
+    } catch (error) {
+      if (error.name === 'AbortError') throw new Error('连接超时');
+      throw error;
+    } finally { clearTimeout(timeout); }
+  }
+  function updateCamera() {
+    if (!online || status?.camera?.ok !== true || document.hidden) return;
+    if (framePending && Date.now() - frameStarted < 3000) return;
+    framePending = true; frameStarted = Date.now();
+    $('cameraImage').src = `/camera.jpg?ts=${Date.now()}`;
+  }
+  $('cameraImage').addEventListener('load', () => { framePending = false; cameraError = false; cameraReady = online && status?.camera?.ok === true; renderControls(); });
+  $('cameraImage').addEventListener('error', () => {
+    framePending = false; cameraReady = false; cameraError = true; selected = null;
+    renderControls();
+  });
+  $('cameraStage').addEventListener('click', event => {
+    if (!canSelect()) return;
+    const box = contentRect(), size = nativeSize();
+    if (!box || !size) return;
+    const x = (event.clientX - box.left) / box.width, y = (event.clientY - box.top) / box.height;
+    if (x < 0 || x >= 1 || y < 0 || y >= 1) return;
+    selected = { u: Math.min(size[0] - 1, Math.floor(x * size[0])), v: Math.min(size[1] - 1, Math.floor(y * size[1])), width: size[0], height: size[1] };
+    renderControls();
+  });
+  $('cameraStage').addEventListener('keydown', event => {
+    if (!selected || !canSelect()) return;
+    const moves = { ArrowLeft: [-1,0], ArrowRight: [1,0], ArrowUp: [0,-1], ArrowDown: [0,1] };
+    if (!moves[event.key]) return;
+    event.preventDefault();
+    const step = event.shiftKey ? 10 : 1;
+    selected.u = Math.max(0, Math.min(selected.width - 1, selected.u + moves[event.key][0] * step));
+    selected.v = Math.max(0, Math.min(selected.height - 1, selected.v + moves[event.key][1] * step));
+    renderControls();
+  });
+  $('clearSelection').addEventListener('click', () => { if (canSelect()) { selected = null; renderControls(); } });
+  function setTargetMode(mode) {
+    if (!['auto', 'manual'].includes(mode) || motionBusy() || startRequest || waitingForStart || mode === targetMode) return;
+    targetMode = mode; selected = null; renderControls();
+  }
+  $('autoMode').addEventListener('click', () => setTargetMode('auto'));
+  $('manualMode').addEventListener('click', () => setTargetMode('manual'));
+  $('locateButton').addEventListener('click', async () => {
+    if ($('locateButton').disabled || targetMode !== 'auto') return;
+    locateRequest = true; operationError = ''; renderAll();
+    try {
+      const result = await post('/api/locate', {});
+      if (!result.vision || typeof result.vision !== 'object' || Array.isArray(result.vision)) throw new Error('服务未返回视觉定位结果');
+      if (status) {
+        locateFailureBaseline = null;
+        locateVision = { value: result.vision, previous: JSON.stringify(status.vision ?? null) };
+        status.vision = result.vision; visionRevision++;
+      }
+      await refreshStatus();
+    } catch (error) {
+      locateVision = null;
+      locateFailureBaseline = JSON.stringify(status?.vision ?? null);
+      visionRevision++;
+      setOperationError(`重新识别失败：${printable(error.message || error)}`);
+    } finally { locateRequest = false; renderAll(); }
+  });
+  window.addEventListener('resize', drawMarker);
+  $('holdSeconds').addEventListener('input', renderControls);
+  function renderSettingsSummary() {
+    const repetitions = document.querySelector('input[name="repetitions"]:checked');
+    const variant = $('startVariant').selectedOptions[0];
+    $('settingsSummary').textContent = `${repetitions.value} 次 · ${variant.textContent}`;
+  }
+  document.querySelectorAll('input[name="repetitions"]').forEach(node => node.addEventListener('change', renderSettingsSummary));
+  $('startVariant').addEventListener('change', renderSettingsSummary);
+  $('startButton').addEventListener('click', async () => {
+    if ($('startButton').disabled || !holdValid() || (targetMode === 'manual' && !selected)) return;
+    const previousId = status?.job?.id == null ? null : String(status.job.id);
+    const payload = { target_mode: targetMode, hold_seconds: $('holdSeconds').valueAsNumber, repetitions: Number(document.querySelector('input[name="repetitions"]:checked').value), start_variant: $('startVariant').value };
+    if (targetMode === 'manual') payload.cup_uv = [selected.u, selected.v];
+    startRequest = true; operationError = ''; renderAll();
+    try {
+      const result = await post('/api/start', payload);
+      targetMode = 'auto'; selected = null; locateVision = null;
+      waitingForStart = { previousId, expectedId: result.job?.id != null ? String(result.job.id) : result.job_id != null ? String(result.job_id) : null };
+      await refreshStatus();
+    } catch (error) {
+      if (!error.definitive) { selected = null; waitingForStart = { previousId, expectedId: null }; }
+      setOperationError(`开始采集失败：${printable(error.message || error)}${error.definitive ? '' : '。请求结果尚未确认，请留意任务状态。'}`);
+      await refreshStatus();
+    } finally { startRequest = false; renderAll(); }
+  });
+  $('stopButton').addEventListener('click', async () => {
+    if ($('stopButton').disabled || stopRequest) return;
+    stopRequest = true; operationError = ''; renderAll();
+    try { await post('/api/stop', {}); await refreshStatus(); }
+    catch (error) { setOperationError(`停止采集失败：${printable(error.message || error)}`); await refreshStatus(); }
+    finally { stopRequest = false; renderAll(); }
+  });
+  $('retrySave').addEventListener('click', async () => {
+    const episode = status?.job?.episode;
+    if (!episode || $('retrySave').disabled) return;
+    retrySaveRequest = true; operationError = ''; renderAll();
+    try { await post('/api/retry_save', {episode}); await refreshStatus(); }
+    catch (error) { setOperationError(`重试保存失败：${printable(error.message || error)}`); }
+    finally { retrySaveRequest = false; renderAll(); }
+  });
+  $('episodeRows').addEventListener('click', async event => {
+    const button = event.target.closest('button[data-action]');
+    if (!button || button.disabled || !online) return;
+    const id = button.dataset.episode;
+    const ep = status?.episodes?.find(item => String(item.id) === id);
+    if (!ep || pendingRows.has(id)) return;
+    if (button.dataset.action === 'open') {
+      if (!ep.video_url) return;
+      let url;
+      try { url = new URL(ep.video_url, location.href); } catch (_) { setOperationError('回放地址无效'); return; }
+      if (!['http:', 'https:'].includes(url.protocol) || url.origin !== location.origin) { setOperationError('回放地址不是本地同源地址'); return; }
+      $('replayId').textContent = id;
+      $('videoError').hidden = true;
+      $('replayVideo').src = url.href;
+      $('replayDialog').showModal();
+      return;
+    }
+    pendingRows.add(id); operationError = ''; renderAll();
+    try {
+      if (button.dataset.action === 'retry_save') {
+        if (!ep.can_retry_save) return;
+        await post('/api/retry_save', {episode:ep.id});
+      } else if (button.dataset.action === 'replay') {
+        if (ep.video_url || ep.status === 'saving') return;
+        await post('/api/replay', { episode: ep.id });
+      } else {
+        const verdict = button.dataset.action;
+        if (!['success','failure'].includes(verdict) || ep.reviewed || (verdict === 'success' && ep.status !== 'pending_review') || (verdict === 'failure' && !['pending_review','interrupted','saving'].includes(ep.status))) return;
+        await post('/api/review', { episode: ep.id, verdict, statement: verdict === 'success' ? '整轮成功' : '整轮失败' });
+      }
+      await refreshStatus();
+    } catch (error) {
+      const label = button.dataset.action === 'retry_save' ? '重试保存失败' : button.dataset.action === 'replay' ? '生成回放失败' : '保存评价失败';
+      setOperationError(`${label}：${printable(error.message || error)}`);
+      await refreshStatus();
+    } finally { pendingRows.delete(id); renderEpisodes(true); renderAlert(); }
+  });
+  $('closeReplay').addEventListener('click', () => $('replayDialog').close());
+  $('replayDialog').addEventListener('close', () => { const video = $('replayVideo'); video.pause(); video.removeAttribute('src'); video.load(); });
+  $('replayVideo').addEventListener('error', () => { if ($('replayDialog').open) $('videoError').hidden = false; });
+  renderAll();
+  refreshStatus();
+  setInterval(refreshStatus, 1000);
+  setInterval(updateCamera, 1000 / 3);
+})();
+</script>
+</body>
+</html>

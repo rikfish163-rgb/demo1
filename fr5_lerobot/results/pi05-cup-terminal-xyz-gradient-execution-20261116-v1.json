@@ -1,0 +1,26 @@
+{
+  "schema": "fr5-cup-terminal-xyz-gradient-execution-v1",
+  "command": [
+    "/home/data4/hts/demo1/fr5-learning/.venv/bin/python",
+    "/home/data4/hts/demo1/fr5-learning/src/fr5-pi05-cup-terminal-xyz-20261116-v12/fr5_lerobot/diagnostics/probe_cup_terminal_gradients.py",
+    "--checkpoint",
+    "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-cup-fixed-clock-n3-20261116-v7/step-000128",
+    "--inputs",
+    "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-approach-support-20261115-v4/inputs.json",
+    "--gpu",
+    "9",
+    "--output",
+    "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-xyz-gradient-probe-20261116-v1.json"
+  ],
+  "source": "/home/data4/hts/demo1/fr5-learning/src/fr5-pi05-cup-terminal-xyz-20261116-v12",
+  "gpu": 9,
+  "log": "/home/data4/hts/demo1/fr5-learning/logs/pi05-cup-terminal-xyz-gradient-probe-20261116-v1.log",
+  "started_at_unix": 1794838143.9332218,
+  "status": "completed",
+  "robot_commands": 0,
+  "optimizer_steps": 0,
+  "task_success_verified": false,
+  "pid": 1061326,
+  "exit_code": 1,
+  "finished_at_unix": 1794838268.2063036
+}

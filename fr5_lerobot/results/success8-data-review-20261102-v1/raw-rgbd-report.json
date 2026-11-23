@@ -1,0 +1,2222 @@
+{
+  "schema": "fr5-success8-raw-rgbd-independent-audit-v1",
+  "provenance_path": "/home/data4/hts/demo1/fr5-learning/datasets/fr5-joint-stream-20261102-v2-compacted/meta/stream_provenance.json",
+  "provenance_sha256": "46e677f00d4761f27543c03ce63d4e3057a41af8d3e32d7ca152c5065fd3135e",
+  "dataset_info_path": "/home/data4/hts/demo1/fr5-learning/datasets/fr5-joint-stream-20261102-v2-compacted/meta/info.json",
+  "dataset_info_sha256": "6a3dd82489e3541c290817f567686db82cec263e00b433ab9885bec54c555d6b",
+  "dataset_features": {
+    "observation.state": {
+      "dtype": "float32",
+      "shape": [
+        8
+      ],
+      "names": [
+        "joint_1_rad",
+        "joint_2_rad",
+        "joint_3_rad",
+        "joint_4_rad",
+        "joint_5_rad",
+        "joint_6_rad",
+        "gripper_fraction",
+        "gripper_measurement_valid"
+      ]
+    },
+    "observation.images.front": {
+      "dtype": "video",
+      "shape": [
+        360,
+        640,
+        3
+      ],
+      "names": [
+        "height",
+        "width",
+        "channels"
+      ],
+      "info": {
+        "video.height": 360,
+        "video.width": 640,
+        "video.codec": "h264",
+        "video.pix_fmt": "yuv420p",
+        "video.fps": 6,
+        "video.channels": 3,
+        "has_audio": false,
+        "video.g": 2,
+        "video.crf": 30,
+        "video.preset": null,
+        "video.fast_decode": 0,
+        "video.video_backend": "pyav",
+        "video.extra_options": {},
+        "is_depth_map": false
+      }
+    },
+    "action": {
+      "dtype": "float32",
+      "shape": [
+        7
+      ],
+      "names": [
+        "joint_target_1_rad",
+        "joint_target_2_rad",
+        "joint_target_3_rad",
+        "joint_target_4_rad",
+        "joint_target_5_rad",
+        "joint_target_6_rad",
+        "gripper_target_fraction"
+      ]
+    },
+    "timestamp": {
+      "dtype": "float32",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "frame_index": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "episode_index": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "index": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "task_index": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "names": null
+    }
+  },
+  "dataset_total_frames": 3855,
+  "source_count": 8,
+  "expected_source_frames": 4209,
+  "counts": {
+    "capture_lines": 4209,
+    "parsed_frames": 4209,
+    "robot_joints_valid_six_finite": 4209,
+    "robot_tcp_valid_six_finite": 4209,
+    "robot_gripper_position_numeric_finite": 4209,
+    "robot_gripper_active_numeric_finite": 4209,
+    "robot_gripper_fault_numeric_finite": 4209,
+    "robot_gripper_fault_id_numeric_finite": 4209,
+    "robot_gripper_motiondone_numeric_finite": 4209,
+    "robot_gripper_speed_numeric_finite": 4209,
+    "robot_gripper_current_numeric_finite": 4209,
+    "gripper_valid_recorded_true": 3981,
+    "gripper_valid_recomputed_true": 3981,
+    "wire_packet_sha_match": 4209,
+    "wire_capture_match": 4209,
+    "wire_sequence_session_match": 4209,
+    "wire_media_metadata_match": 4209,
+    "wire_rgb_compressed_sha_match": 4209,
+    "wire_rgb_bytes_match": 4209,
+    "wire_depth_compressed_sha_match": 4209,
+    "wire_depth_bytes_match": 4209,
+    "rgb_file_exists": 4209,
+    "rgb_file_jpeg_sha_match": 4209,
+    "rgb_original_array_sha_record_present": 4209,
+    "rgb_file_equals_wire_jpeg_yes": 4209,
+    "rgb_decoded": 4209,
+    "depth_file_exists": 4209,
+    "depth_decoded": 4209,
+    "depth_pixels": 969753600,
+    "depth_finite_pixels": 969753600,
+    "depth_finite_nonzero_pixels": 936931140,
+    "depth_negative_pixels": 0,
+    "depth_nonfinite_pixels": 0,
+    "depth_frames_with_zero_or_nonfinite": 4209,
+    "depth_materialized_float32_source_sha_match": 4209,
+    "depth_wire_decoded_float32_source_sha_match": 4209,
+    "depth_wire_decoded_equals_npz_yes": 4209,
+    "gripper_valid_recorded_false": 228,
+    "gripper_valid_recomputed_false": 228,
+    "gripper_invalid_reason_motiondone_not_1_2_3": 228
+  },
+  "categories": {
+    "pixel_rgb": {
+      "\"source color pixels, resized without rectification\"": 4209
+    },
+    "pixel_depth": {
+      "\"SDK depth_to_color grid, resized independently\"": 4209
+    },
+    "same_pixel_correspondence_verified": {
+      "false": 4209
+    },
+    "raw_depth_in_source_packet": {
+      "false": 4209
+    },
+    "raw_depth_retained_in_bundle": {
+      "false": 4209
+    },
+    "capture_alignment": {
+      "\"depth_to_color\"": 4209
+    },
+    "capture_depth_unit": {
+      "\"mm\"": 4209
+    },
+    "aligned_depth_unit_mm": {
+      "1.0": 4209
+    },
+    "raw_depth_unit_mm": {
+      "1.0": 4209
+    },
+    "source_image_size": {
+      "{\"height\":1080,\"width\":1920}": 4209
+    },
+    "resize_method": {
+      "\"nearest\"": 4209
+    },
+    "aligned_profile_format": {
+      "\"OBFormat.Y16\"": 4209
+    },
+    "raw_profile_format": {
+      "\"OBFormat.Y16\"": 4209
+    },
+    "depth_codec": {
+      "\"uint16le-rowdelta-zlib\"": 4209
+    },
+    "depth_media_unit": {
+      "\"mm\"": 4209
+    },
+    "rgb_lossy": {
+      "true": 4209
+    },
+    "depth_lossless": {
+      "true": 4209
+    },
+    "sync_clock": {
+      "\"host_monotonic\"": 4209
+    },
+    "decoded_rgb_shape": {
+      "[360,640,3]": 4209
+    },
+    "decoded_rgb_dtype": {
+      "\"uint8\"": 4209
+    },
+    "decoded_depth_shape": {
+      "[360,640]": 4209
+    },
+    "decoded_depth_dtype": {
+      "\"float32\"": 4209
+    }
+  },
+  "distributions": {
+    "robot_minus_camera_s": {
+      "count": 4209,
+      "min": -0.00507781400665408,
+      "p01": -0.004904916561208665,
+      "p05": -0.004499914796906523,
+      "median": 1.8300997908227146e-05,
+      "p95": 0.004482207795081194,
+      "p99": 0.00489642936270684,
+      "max": 0.005032911998569034,
+      "mean": -1.9767969852962493e-05
+    },
+    "abs_robot_minus_camera_s": {
+      "count": 4209,
+      "min": 4.159956006333232e-07,
+      "p01": 4.724119586171582e-05,
+      "p05": 0.00027424799918662757,
+      "median": 0.002485769997292664,
+      "p95": 0.004735812601575162,
+      "p99": 0.004956645037746057,
+      "max": 0.00507781400665408,
+      "mean": 0.002494366419297883
+    },
+    "recorded_sync_skew_s": {
+      "count": 4209,
+      "min": -0.00507781400665408,
+      "p01": -0.004904916561208665,
+      "p05": -0.004499914796906523,
+      "median": 1.8300997908227146e-05,
+      "p95": 0.004482207795081194,
+      "p99": 0.00489642936270684,
+      "max": 0.005032911998569034,
+      "mean": -1.9767969852962493e-05
+    },
+    "device_color_minus_depth_s": {
+      "count": 4209,
+      "min": -0.016115,
+      "p01": -0.01538376,
+      "p05": -0.0139316,
+      "median": 0.001562,
+      "p95": 0.015880599999999998,
+      "p99": 0.017252200000000002,
+      "max": 0.017829,
+      "mean": 0.0012474343074364456
+    },
+    "depth_finite_fraction": {
+      "count": 4209,
+      "min": 1.0,
+      "p01": 1.0,
+      "p05": 1.0,
+      "median": 1.0,
+      "p95": 1.0,
+      "p99": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "depth_finite_nonzero_fraction": {
+      "count": 4209,
+      "min": 0.9606727430555555,
+      "p01": 0.9619491319444444,
+      "p05": 0.9633307291666666,
+      "median": 0.9659505208333333,
+      "p95": 0.9700112847222222,
+      "p99": 0.9706940972222222,
+      "max": 0.9715581597222223,
+      "mean": 0.9661538147422191
+    },
+    "camera_frame_gap_s": {
+      "count": 4201,
+      "min": 0.09973261999402894,
+      "p01": 0.09993790899898158,
+      "p05": 0.09998475499742199,
+      "median": 0.20010855599684874,
+      "p95": 0.20021235800231807,
+      "p99": 0.2002625570021337,
+      "max": 0.2114721859979909,
+      "mean": 0.16650106058652456
+    },
+    "robot_frame_gap_s": {
+      "count": 4201,
+      "min": 0.08997847599675879,
+      "p01": 0.09988616299960995,
+      "p05": 0.09994053000264103,
+      "median": 0.19996110299689462,
+      "p95": 0.2001120839995565,
+      "p99": 0.20303151899861405,
+      "max": 0.21038153700646944,
+      "mean": 0.16649751075481992
+    }
+  },
+  "sources": [
+    {
+      "source_index": 0,
+      "trial": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized",
+      "expected_source_frames": 649,
+      "capture_lines": 649,
+      "counts": {
+        "capture_lines": 649,
+        "parsed_frames": 649,
+        "robot_joints_valid_six_finite": 649,
+        "robot_tcp_valid_six_finite": 649,
+        "robot_gripper_position_numeric_finite": 649,
+        "robot_gripper_active_numeric_finite": 649,
+        "robot_gripper_fault_numeric_finite": 649,
+        "robot_gripper_fault_id_numeric_finite": 649,
+        "robot_gripper_motiondone_numeric_finite": 649,
+        "robot_gripper_speed_numeric_finite": 649,
+        "robot_gripper_current_numeric_finite": 649,
+        "gripper_valid_recorded_true": 627,
+        "gripper_valid_recomputed_true": 627,
+        "wire_packet_sha_match": 649,
+        "wire_capture_match": 649,
+        "wire_sequence_session_match": 649,
+        "wire_media_metadata_match": 649,
+        "wire_rgb_compressed_sha_match": 649,
+        "wire_rgb_bytes_match": 649,
+        "wire_depth_compressed_sha_match": 649,
+        "wire_depth_bytes_match": 649,
+        "rgb_file_exists": 649,
+        "rgb_file_jpeg_sha_match": 649,
+        "rgb_original_array_sha_record_present": 649,
+        "rgb_file_equals_wire_jpeg_yes": 649,
+        "rgb_decoded": 649,
+        "depth_file_exists": 649,
+        "depth_decoded": 649,
+        "depth_pixels": 149529600,
+        "depth_finite_pixels": 149529600,
+        "depth_finite_nonzero_pixels": 144384493,
+        "depth_negative_pixels": 0,
+        "depth_nonfinite_pixels": 0,
+        "depth_frames_with_zero_or_nonfinite": 649,
+        "depth_materialized_float32_source_sha_match": 649,
+        "depth_wire_decoded_float32_source_sha_match": 649,
+        "depth_wire_decoded_equals_npz_yes": 649,
+        "gripper_valid_recorded_false": 22,
+        "gripper_valid_recomputed_false": 22,
+        "gripper_invalid_reason_motiondone_not_1_2_3": 22
+      },
+      "capture_journal_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized/continuous/capture.jsonl",
+      "capture_journal_sha256_actual": "f25d7cc2b4615d5483a730e8cba7bc934abf801f1c88b1768d34bbee07215802",
+      "capture_journal_sha256_expected": "f25d7cc2b4615d5483a730e8cba7bc934abf801f1c88b1768d34bbee07215802",
+      "capture_journal_sha256_match": true,
+      "frames_stream_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/frames.stream",
+      "frames_stream_sha256_actual": "58e5cf3373042c878ab568f8e28237e1b6d6dac45c2d9220ebfcc4e5809701a4",
+      "frames_stream_sha256_expected": "58e5cf3373042c878ab568f8e28237e1b6d6dac45c2d9220ebfcc4e5809701a4",
+      "frames_stream_sha256_match": true,
+      "user_review_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized/user-review.json",
+      "user_review_sha256_actual": "f7bdff13bbc40eec4de525ba9358c35ef8ce510f461b3462b569879ec14f1bd1",
+      "user_review_sha256_match": true,
+      "user_review_verdict": "success",
+      "categories": {
+        "pixel_rgb": {
+          "\"source color pixels, resized without rectification\"": 649
+        },
+        "pixel_depth": {
+          "\"SDK depth_to_color grid, resized independently\"": 649
+        },
+        "same_pixel_correspondence_verified": {
+          "false": 649
+        },
+        "raw_depth_in_source_packet": {
+          "false": 649
+        },
+        "raw_depth_retained_in_bundle": {
+          "false": 649
+        },
+        "capture_alignment": {
+          "\"depth_to_color\"": 649
+        },
+        "capture_depth_unit": {
+          "\"mm\"": 649
+        },
+        "aligned_depth_unit_mm": {
+          "1.0": 649
+        },
+        "raw_depth_unit_mm": {
+          "1.0": 649
+        },
+        "source_image_size": {
+          "{\"height\":1080,\"width\":1920}": 649
+        },
+        "resize_method": {
+          "\"nearest\"": 649
+        },
+        "aligned_profile_format": {
+          "\"OBFormat.Y16\"": 649
+        },
+        "raw_profile_format": {
+          "\"OBFormat.Y16\"": 649
+        },
+        "depth_codec": {
+          "\"uint16le-rowdelta-zlib\"": 649
+        },
+        "depth_media_unit": {
+          "\"mm\"": 649
+        },
+        "rgb_lossy": {
+          "true": 649
+        },
+        "depth_lossless": {
+          "true": 649
+        },
+        "sync_clock": {
+          "\"host_monotonic\"": 649
+        },
+        "decoded_rgb_shape": {
+          "[360,640,3]": 649
+        },
+        "decoded_rgb_dtype": {
+          "\"uint8\"": 649
+        },
+        "decoded_depth_shape": {
+          "[360,640]": 649
+        },
+        "decoded_depth_dtype": {
+          "\"float32\"": 649
+        }
+      },
+      "distributions": {
+        "robot_minus_camera_s": {
+          "count": 649,
+          "min": -0.00507781400665408,
+          "p01": -0.004929826759616844,
+          "p05": -0.004642128202249296,
+          "median": 0.0003966349977417849,
+          "p95": 0.004582323999784421,
+          "p99": 0.004906781517784111,
+          "max": 0.005014064998249523,
+          "mean": 0.00025511391970369526
+        },
+        "abs_robot_minus_camera_s": {
+          "count": 649,
+          "min": 4.159956006333232e-07,
+          "p01": 4.05869196401909e-05,
+          "p05": 0.00030485620227409526,
+          "median": 0.0027510690051713027,
+          "p95": 0.00481175299937604,
+          "p99": 0.004978593040432315,
+          "max": 0.00507781400665408,
+          "mean": 0.002661911278682993
+        },
+        "recorded_sync_skew_s": {
+          "count": 649,
+          "min": -0.00507781400665408,
+          "p01": -0.004929826759616844,
+          "p05": -0.004642128202249296,
+          "median": 0.0003966349977417849,
+          "p95": 0.004582323999784421,
+          "p99": 0.004906781517784111,
+          "max": 0.005014064998249523,
+          "mean": 0.00025511391970369526
+        },
+        "device_color_minus_depth_s": {
+          "count": 649,
+          "min": -0.016091,
+          "p01": -0.01547956,
+          "p05": -0.0145358,
+          "median": 0.000236,
+          "p95": 0.0163476,
+          "p99": 0.01737668,
+          "max": 0.017789,
+          "mean": 0.00038995377503852073
+        },
+        "depth_finite_fraction": {
+          "count": 649,
+          "min": 1.0,
+          "p01": 1.0,
+          "p05": 1.0,
+          "median": 1.0,
+          "p95": 1.0,
+          "p99": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        },
+        "depth_finite_nonzero_fraction": {
+          "count": 649,
+          "min": 0.9613802083333334,
+          "p01": 0.9618380208333334,
+          "p05": 0.9623020833333333,
+          "median": 0.9649045138888889,
+          "p95": 0.9705781250000001,
+          "p99": 0.9708552083333334,
+          "max": 0.9714930555555555,
+          "mean": 0.9655913812382299
+        },
+        "camera_frame_gap_s": {
+          "count": 648,
+          "min": 0.09973261999402894,
+          "p01": 0.09994424574637378,
+          "p05": 0.09998271384865802,
+          "median": 0.20010709350026445,
+          "p95": 0.20022771665171604,
+          "p99": 0.20027703414016287,
+          "max": 0.2114721859979909,
+          "mean": 0.1666292537067847
+        },
+        "robot_frame_gap_s": {
+          "count": 648,
+          "min": 0.08997847599675879,
+          "p01": 0.09988390011931188,
+          "p05": 0.09993644665009924,
+          "median": 0.1999653839993698,
+          "p95": 0.2001231464499142,
+          "p99": 0.20998204196119333,
+          "max": 0.2100852110015694,
+          "mean": 0.16663968320988065
+        }
+      }
+    },
+    {
+      "source_index": 1,
+      "trial": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-183700-cc83dc/materialized",
+      "expected_source_frames": 370,
+      "capture_lines": 370,
+      "counts": {
+        "capture_lines": 370,
+        "parsed_frames": 370,
+        "robot_joints_valid_six_finite": 370,
+        "robot_tcp_valid_six_finite": 370,
+        "robot_gripper_position_numeric_finite": 370,
+        "robot_gripper_active_numeric_finite": 370,
+        "robot_gripper_fault_numeric_finite": 370,
+        "robot_gripper_fault_id_numeric_finite": 370,
+        "robot_gripper_motiondone_numeric_finite": 370,
+        "robot_gripper_speed_numeric_finite": 370,
+        "robot_gripper_current_numeric_finite": 370,
+        "gripper_valid_recorded_true": 348,
+        "gripper_valid_recomputed_true": 348,
+        "wire_packet_sha_match": 370,
+        "wire_capture_match": 370,
+        "wire_sequence_session_match": 370,
+        "wire_media_metadata_match": 370,
+        "wire_rgb_compressed_sha_match": 370,
+        "wire_rgb_bytes_match": 370,
+        "wire_depth_compressed_sha_match": 370,
+        "wire_depth_bytes_match": 370,
+        "rgb_file_exists": 370,
+        "rgb_file_jpeg_sha_match": 370,
+        "rgb_original_array_sha_record_present": 370,
+        "rgb_file_equals_wire_jpeg_yes": 370,
+        "rgb_decoded": 370,
+        "depth_file_exists": 370,
+        "depth_decoded": 370,
+        "depth_pixels": 85248000,
+        "depth_finite_pixels": 85248000,
+        "depth_finite_nonzero_pixels": 82312259,
+        "depth_negative_pixels": 0,
+        "depth_nonfinite_pixels": 0,
+        "depth_frames_with_zero_or_nonfinite": 370,
+        "depth_materialized_float32_source_sha_match": 370,
+        "depth_wire_decoded_float32_source_sha_match": 370,
+        "depth_wire_decoded_equals_npz_yes": 370,
+        "gripper_valid_recorded_false": 22,
+        "gripper_valid_recomputed_false": 22,
+        "gripper_invalid_reason_motiondone_not_1_2_3": 22
+      },
+      "capture_journal_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-183700-cc83dc/materialized/continuous/capture.jsonl",
+      "capture_journal_sha256_actual": "e1aac392c9d7ee5bc46d9ce15faa1f47ef570a4c30c536c4ae75803b562a504c",
+      "capture_journal_sha256_expected": "e1aac392c9d7ee5bc46d9ce15faa1f47ef570a4c30c536c4ae75803b562a504c",
+      "capture_journal_sha256_match": true,
+      "frames_stream_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-183700-cc83dc/frames.stream",
+      "frames_stream_sha256_actual": "597ff598f697ff98a80304eea1aaddc9dbbcbb0d6a8ec3e87ecdc4f197e762ed",
+      "frames_stream_sha256_expected": "597ff598f697ff98a80304eea1aaddc9dbbcbb0d6a8ec3e87ecdc4f197e762ed",
+      "frames_stream_sha256_match": true,
+      "user_review_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-183700-cc83dc/materialized/user-review.json",
+      "user_review_sha256_actual": "b168b74fabb144c38d1d1c6a75cad34a761cdbe2c30f3c69284acf21cb802808",
+      "user_review_sha256_match": true,
+      "user_review_verdict": "success",
+      "categories": {
+        "pixel_rgb": {
+          "\"source color pixels, resized without rectification\"": 370
+        },
+        "pixel_depth": {
+          "\"SDK depth_to_color grid, resized independently\"": 370
+        },
+        "same_pixel_correspondence_verified": {
+          "false": 370
+        },
+        "raw_depth_in_source_packet": {
+          "false": 370
+        },
+        "raw_depth_retained_in_bundle": {
+          "false": 370
+        },
+        "capture_alignment": {
+          "\"depth_to_color\"": 370
+        },
+        "capture_depth_unit": {
+          "\"mm\"": 370
+        },
+        "aligned_depth_unit_mm": {
+          "1.0": 370
+        },
+        "raw_depth_unit_mm": {
+          "1.0": 370
+        },
+        "source_image_size": {
+          "{\"height\":1080,\"width\":1920}": 370
+        },
+        "resize_method": {
+          "\"nearest\"": 370
+        },
+        "aligned_profile_format": {
+          "\"OBFormat.Y16\"": 370
+        },
+        "raw_profile_format": {
+          "\"OBFormat.Y16\"": 370
+        },
+        "depth_codec": {
+          "\"uint16le-rowdelta-zlib\"": 370
+        },
+        "depth_media_unit": {
+          "\"mm\"": 370
+        },
+        "rgb_lossy": {
+          "true": 370
+        },
+        "depth_lossless": {
+          "true": 370
+        },
+        "sync_clock": {
+          "\"host_monotonic\"": 370
+        },
+        "decoded_rgb_shape": {
+          "[360,640,3]": 370
+        },
+        "decoded_rgb_dtype": {
+          "\"uint8\"": 370
+        },
+        "decoded_depth_shape": {
+          "[360,640]": 370
+        },
+        "decoded_depth_dtype": {
+          "\"float32\"": 370
+        }
+      },
+      "distributions": {
+        "robot_minus_camera_s": {
+          "count": 370,
+          "min": -0.00502486499317456,
+          "p01": -0.004857453928343603,
+          "p05": -0.004450152050412726,
+          "median": -0.00021218249821686186,
+          "p95": 0.004533230950619327,
+          "p99": 0.004948913428379455,
+          "max": 0.005032911998569034,
+          "mean": -0.00010363505952645445
+        },
+        "abs_robot_minus_camera_s": {
+          "count": 370,
+          "min": 1.4116005331743509e-05,
+          "p01": 8.571179772843606e-05,
+          "p05": 0.00021691799956897738,
+          "median": 0.002571633998741163,
+          "p95": 0.004749678650478017,
+          "p99": 0.005001060646754922,
+          "max": 0.005032911998569034,
+          "mean": 0.002519056437902052
+        },
+        "recorded_sync_skew_s": {
+          "count": 370,
+          "min": -0.00502486499317456,
+          "p01": -0.004857453928343603,
+          "p05": -0.004450152050412726,
+          "median": -0.00021218249821686186,
+          "p95": 0.004533230950619327,
+          "p99": 0.004948913428379455,
+          "max": 0.005032911998569034,
+          "mean": -0.00010363505952645445
+        },
+        "device_color_minus_depth_s": {
+          "count": 370,
+          "min": -0.016077,
+          "p01": -0.01576893,
+          "p05": -0.01408465,
+          "median": 0.004453,
+          "p95": 0.015046700000000001,
+          "p99": 0.01669388,
+          "max": 0.017107,
+          "mean": 0.0020539918918918917
+        },
+        "depth_finite_fraction": {
+          "count": 370,
+          "min": 1.0,
+          "p01": 1.0,
+          "p05": 1.0,
+          "median": 1.0,
+          "p95": 1.0,
+          "p99": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        },
+        "depth_finite_nonzero_fraction": {
+          "count": 370,
+          "min": 0.9621918402777778,
+          "p01": 0.96283125,
+          "p05": 0.9631482204861112,
+          "median": 0.9656966145833333,
+          "p95": 0.9675718315972223,
+          "p99": 0.9681434027777778,
+          "max": 0.9685026041666667,
+          "mean": 0.9655623475037538
+        },
+        "camera_frame_gap_s": {
+          "count": 369,
+          "min": 0.09988712199992733,
+          "p01": 0.09994924424012425,
+          "p05": 0.09999363260139944,
+          "median": 0.20011991500359727,
+          "p95": 0.20020410980068845,
+          "p99": 0.20024360419949516,
+          "max": 0.20026890999724856,
+          "mean": 0.1662410484037872
+        },
+        "robot_frame_gap_s": {
+          "count": 369,
+          "min": 0.09965487199951895,
+          "p01": 0.09989016528154025,
+          "p05": 0.09994635140028549,
+          "median": 0.19996656500006793,
+          "p95": 0.20012807679740946,
+          "p99": 0.20297063159785467,
+          "max": 0.21008265599812148,
+          "mean": 0.16623835034418735
+        }
+      }
+    },
+    {
+      "source_index": 2,
+      "trial": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-190231-0c1c42/materialized",
+      "expected_source_frames": 402,
+      "capture_lines": 402,
+      "counts": {
+        "capture_lines": 402,
+        "parsed_frames": 402,
+        "robot_joints_valid_six_finite": 402,
+        "robot_tcp_valid_six_finite": 402,
+        "robot_gripper_position_numeric_finite": 402,
+        "robot_gripper_active_numeric_finite": 402,
+        "robot_gripper_fault_numeric_finite": 402,
+        "robot_gripper_fault_id_numeric_finite": 402,
+        "robot_gripper_motiondone_numeric_finite": 402,
+        "robot_gripper_speed_numeric_finite": 402,
+        "robot_gripper_current_numeric_finite": 402,
+        "gripper_valid_recorded_true": 377,
+        "gripper_valid_recomputed_true": 377,
+        "wire_packet_sha_match": 402,
+        "wire_capture_match": 402,
+        "wire_sequence_session_match": 402,
+        "wire_media_metadata_match": 402,
+        "wire_rgb_compressed_sha_match": 402,
+        "wire_rgb_bytes_match": 402,
+        "wire_depth_compressed_sha_match": 402,
+        "wire_depth_bytes_match": 402,
+        "rgb_file_exists": 402,
+        "rgb_file_jpeg_sha_match": 402,
+        "rgb_original_array_sha_record_present": 402,
+        "rgb_file_equals_wire_jpeg_yes": 402,
+        "rgb_decoded": 402,
+        "depth_file_exists": 402,
+        "depth_decoded": 402,
+        "depth_pixels": 92620800,
+        "depth_finite_pixels": 92620800,
+        "depth_finite_nonzero_pixels": 89770193,
+        "depth_negative_pixels": 0,
+        "depth_nonfinite_pixels": 0,
+        "depth_frames_with_zero_or_nonfinite": 402,
+        "depth_materialized_float32_source_sha_match": 402,
+        "depth_wire_decoded_float32_source_sha_match": 402,
+        "depth_wire_decoded_equals_npz_yes": 402,
+        "gripper_valid_recorded_false": 25,
+        "gripper_valid_recomputed_false": 25,
+        "gripper_invalid_reason_motiondone_not_1_2_3": 25
+      },
+      "capture_journal_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-190231-0c1c42/materialized/continuous/capture.jsonl",
+      "capture_journal_sha256_actual": "39f720c548ad87bc2956345e9f67c2a23b10e5d0e08ccc6de60a66aee907e641",
+      "capture_journal_sha256_expected": "39f720c548ad87bc2956345e9f67c2a23b10e5d0e08ccc6de60a66aee907e641",
+      "capture_journal_sha256_match": true,
+      "frames_stream_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-190231-0c1c42/frames.stream",
+      "frames_stream_sha256_actual": "08131a4d67916aee18859452c12d1147083e6bad2d5bc7d4414ca5aca572d0aa",
+      "frames_stream_sha256_expected": "08131a4d67916aee18859452c12d1147083e6bad2d5bc7d4414ca5aca572d0aa",
+      "frames_stream_sha256_match": true,
+      "user_review_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-190231-0c1c42/materialized/user-review.json",
+      "user_review_sha256_actual": "c2398f86c4bda88ce52334d35e7f79fc45f09fe67c096601cd8dacc9e614dc2a",
+      "user_review_sha256_match": true,
+      "user_review_verdict": "success",
+      "categories": {
+        "pixel_rgb": {
+          "\"source color pixels, resized without rectification\"": 402
+        },
+        "pixel_depth": {
+          "\"SDK depth_to_color grid, resized independently\"": 402
+        },
+        "same_pixel_correspondence_verified": {
+          "false": 402
+        },
+        "raw_depth_in_source_packet": {
+          "false": 402
+        },
+        "raw_depth_retained_in_bundle": {
+          "false": 402
+        },
+        "capture_alignment": {
+          "\"depth_to_color\"": 402
+        },
+        "capture_depth_unit": {
+          "\"mm\"": 402
+        },
+        "aligned_depth_unit_mm": {
+          "1.0": 402
+        },
+        "raw_depth_unit_mm": {
+          "1.0": 402
+        },
+        "source_image_size": {
+          "{\"height\":1080,\"width\":1920}": 402
+        },
+        "resize_method": {
+          "\"nearest\"": 402
+        },
+        "aligned_profile_format": {
+          "\"OBFormat.Y16\"": 402
+        },
+        "raw_profile_format": {
+          "\"OBFormat.Y16\"": 402
+        },
+        "depth_codec": {
+          "\"uint16le-rowdelta-zlib\"": 402
+        },
+        "depth_media_unit": {
+          "\"mm\"": 402
+        },
+        "rgb_lossy": {
+          "true": 402
+        },
+        "depth_lossless": {
+          "true": 402
+        },
+        "sync_clock": {
+          "\"host_monotonic\"": 402
+        },
+        "decoded_rgb_shape": {
+          "[360,640,3]": 402
+        },
+        "decoded_rgb_dtype": {
+          "\"uint8\"": 402
+        },
+        "decoded_depth_shape": {
+          "[360,640]": 402
+        },
+        "decoded_depth_dtype": {
+          "\"float32\"": 402
+        }
+      },
+      "distributions": {
+        "robot_minus_camera_s": {
+          "count": 402,
+          "min": -0.00500647699664114,
+          "p01": -0.0048775838413712335,
+          "p05": -0.004462592304480495,
+          "median": -5.538850018638186e-05,
+          "p95": 0.004311174501344794,
+          "p99": 0.004863844791980228,
+          "max": 0.0049901509992196225,
+          "mean": -8.466049512750955e-05
+        },
+        "abs_robot_minus_camera_s": {
+          "count": 402,
+          "min": 2.9279995942488313e-05,
+          "p01": 7.212741635157726e-05,
+          "p05": 0.00028231460055394564,
+          "median": 0.0024711694968573283,
+          "p95": 0.004696864348443341,
+          "p99": 0.004974393707962009,
+          "max": 0.00500647699664114,
+          "mean": 0.0024690035794599826
+        },
+        "recorded_sync_skew_s": {
+          "count": 402,
+          "min": -0.00500647699664114,
+          "p01": -0.0048775838413712335,
+          "p05": -0.004462592304480495,
+          "median": -5.538850018638186e-05,
+          "p95": 0.004311174501344794,
+          "p99": 0.004863844791980228,
+          "max": 0.0049901509992196225,
+          "mean": -8.466049512750955e-05
+        },
+        "device_color_minus_depth_s": {
+          "count": 402,
+          "min": -0.015384,
+          "p01": -0.015074490000000001,
+          "p05": -0.0132323,
+          "median": -0.0020855,
+          "p95": 0.01564645,
+          "p99": 0.01733849,
+          "max": 0.017799,
+          "mean": -0.0004879975124378112
+        },
+        "depth_finite_fraction": {
+          "count": 402,
+          "min": 1.0,
+          "p01": 1.0,
+          "p05": 1.0,
+          "median": 1.0,
+          "p95": 1.0,
+          "p99": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        },
+        "depth_finite_nonzero_fraction": {
+          "count": 402,
+          "min": 0.9666362847222222,
+          "p01": 0.966870876736111,
+          "p05": 0.9673500434027777,
+          "median": 0.969411892361111,
+          "p95": 0.9705208333333334,
+          "p99": 0.9707594184027778,
+          "max": 0.9709201388888888,
+          "mean": 0.9692228203600056
+        },
+        "camera_frame_gap_s": {
+          "count": 401,
+          "min": 0.09986472200398566,
+          "p01": 0.09996592599782161,
+          "p05": 0.09999386200070148,
+          "median": 0.2001101439964259,
+          "p95": 0.2001928819954628,
+          "p99": 0.20023550699988846,
+          "max": 0.20031623099930584,
+          "mean": 0.16644739500498643
+        },
+        "robot_frame_gap_s": {
+          "count": 401,
+          "min": 0.08999969700380461,
+          "p01": 0.09990646900405409,
+          "p05": 0.09995165799773531,
+          "median": 0.19996363799873507,
+          "p95": 0.2001023759949021,
+          "p99": 0.20294148600078188,
+          "max": 0.21003816300071776,
+          "mean": 0.16643876290772439
+        }
+      }
+    },
+    {
+      "source_index": 3,
+      "trial": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized",
+      "expected_source_frames": 754,
+      "capture_lines": 754,
+      "counts": {
+        "capture_lines": 754,
+        "parsed_frames": 754,
+        "robot_joints_valid_six_finite": 754,
+        "robot_tcp_valid_six_finite": 754,
+        "robot_gripper_position_numeric_finite": 754,
+        "robot_gripper_active_numeric_finite": 754,
+        "robot_gripper_fault_numeric_finite": 754,
+        "robot_gripper_fault_id_numeric_finite": 754,
+        "robot_gripper_motiondone_numeric_finite": 754,
+        "robot_gripper_speed_numeric_finite": 754,
+        "robot_gripper_current_numeric_finite": 754,
+        "gripper_valid_recorded_true": 709,
+        "gripper_valid_recomputed_true": 709,
+        "wire_packet_sha_match": 754,
+        "wire_capture_match": 754,
+        "wire_sequence_session_match": 754,
+        "wire_media_metadata_match": 754,
+        "wire_rgb_compressed_sha_match": 754,
+        "wire_rgb_bytes_match": 754,
+        "wire_depth_compressed_sha_match": 754,
+        "wire_depth_bytes_match": 754,
+        "rgb_file_exists": 754,
+        "rgb_file_jpeg_sha_match": 754,
+        "rgb_original_array_sha_record_present": 754,
+        "rgb_file_equals_wire_jpeg_yes": 754,
+        "rgb_decoded": 754,
+        "depth_file_exists": 754,
+        "depth_decoded": 754,
+        "depth_pixels": 173721600,
+        "depth_finite_pixels": 173721600,
+        "depth_finite_nonzero_pixels": 167602815,
+        "depth_negative_pixels": 0,
+        "depth_nonfinite_pixels": 0,
+        "depth_frames_with_zero_or_nonfinite": 754,
+        "depth_materialized_float32_source_sha_match": 754,
+        "depth_wire_decoded_float32_source_sha_match": 754,
+        "depth_wire_decoded_equals_npz_yes": 754,
+        "gripper_valid_recorded_false": 45,
+        "gripper_valid_recomputed_false": 45,
+        "gripper_invalid_reason_motiondone_not_1_2_3": 45
+      },
+      "capture_journal_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/continuous/capture.jsonl",
+      "capture_journal_sha256_actual": "61bcc2e45227ae96ce9c793718fc20095b6c10d54eb96f2a80d2419e143834b3",
+      "capture_journal_sha256_expected": "61bcc2e45227ae96ce9c793718fc20095b6c10d54eb96f2a80d2419e143834b3",
+      "capture_journal_sha256_match": true,
+      "frames_stream_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/frames.stream",
+      "frames_stream_sha256_actual": "0a628f661ed97fcf37848a91e18fffbf691309b937e51b431d361d1a1db0f2f2",
+      "frames_stream_sha256_expected": "0a628f661ed97fcf37848a91e18fffbf691309b937e51b431d361d1a1db0f2f2",
+      "frames_stream_sha256_match": true,
+      "user_review_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-191451-8c9277/materialized/user-review.json",
+      "user_review_sha256_actual": "ca0f81d7e6b4b7c5db67f7a488b466c4c48215ba01b943b35db18106df5a039b",
+      "user_review_sha256_match": true,
+      "user_review_verdict": "success",
+      "categories": {
+        "pixel_rgb": {
+          "\"source color pixels, resized without rectification\"": 754
+        },
+        "pixel_depth": {
+          "\"SDK depth_to_color grid, resized independently\"": 754
+        },
+        "same_pixel_correspondence_verified": {
+          "false": 754
+        },
+        "raw_depth_in_source_packet": {
+          "false": 754
+        },
+        "raw_depth_retained_in_bundle": {
+          "false": 754
+        },
+        "capture_alignment": {
+          "\"depth_to_color\"": 754
+        },
+        "capture_depth_unit": {
+          "\"mm\"": 754
+        },
+        "aligned_depth_unit_mm": {
+          "1.0": 754
+        },
+        "raw_depth_unit_mm": {
+          "1.0": 754
+        },
+        "source_image_size": {
+          "{\"height\":1080,\"width\":1920}": 754
+        },
+        "resize_method": {
+          "\"nearest\"": 754
+        },
+        "aligned_profile_format": {
+          "\"OBFormat.Y16\"": 754
+        },
+        "raw_profile_format": {
+          "\"OBFormat.Y16\"": 754
+        },
+        "depth_codec": {
+          "\"uint16le-rowdelta-zlib\"": 754
+        },
+        "depth_media_unit": {
+          "\"mm\"": 754
+        },
+        "rgb_lossy": {
+          "true": 754
+        },
+        "depth_lossless": {
+          "true": 754
+        },
+        "sync_clock": {
+          "\"host_monotonic\"": 754
+        },
+        "decoded_rgb_shape": {
+          "[360,640,3]": 754
+        },
+        "decoded_rgb_dtype": {
+          "\"uint8\"": 754
+        },
+        "decoded_depth_shape": {
+          "[360,640]": 754
+        },
+        "decoded_depth_dtype": {
+          "\"float32\"": 754
+        }
+      },
+      "distributions": {
+        "robot_minus_camera_s": {
+          "count": 754,
+          "min": -0.005031901004258543,
+          "p01": -0.004873610418799217,
+          "p05": -0.0043972037470666695,
+          "median": 9.233300079358742e-05,
+          "p95": 0.004518772145092953,
+          "p99": 0.004875193812622456,
+          "max": 0.004983996004739311,
+          "mean": 2.82126657063554e-05
+        },
+        "abs_robot_minus_camera_s": {
+          "count": 754,
+          "min": 5.270048859529197e-07,
+          "p01": 5.528347071958706e-05,
+          "p05": 0.0002983472990308655,
+          "median": 0.0024542265018681064,
+          "p95": 0.004703348150724196,
+          "p99": 0.004938525304678479,
+          "max": 0.005031901004258543,
+          "mean": 0.0024630151619303747
+        },
+        "recorded_sync_skew_s": {
+          "count": 754,
+          "min": -0.005031901004258543,
+          "p01": -0.004873610418799217,
+          "p05": -0.0043972037470666695,
+          "median": 9.233300079358742e-05,
+          "p95": 0.004518772145092953,
+          "p99": 0.004875193812622456,
+          "max": 0.004983996004739311,
+          "mean": 2.82126657063554e-05
+        },
+        "device_color_minus_depth_s": {
+          "count": 754,
+          "min": -0.015504,
+          "p01": -0.01508271,
+          "p05": -0.01344705,
+          "median": 0.003266,
+          "p95": 0.01590505,
+          "p99": 0.017326480000000002,
+          "max": 0.017743,
+          "mean": 0.0024668766578249336
+        },
+        "depth_finite_fraction": {
+          "count": 754,
+          "min": 1.0,
+          "p01": 1.0,
+          "p05": 1.0,
+          "median": 1.0,
+          "p95": 1.0,
+          "p99": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        },
+        "depth_finite_nonzero_fraction": {
+          "count": 754,
+          "min": 0.9606727430555555,
+          "p01": 0.9614458333333333,
+          "p05": 0.9623606770833334,
+          "median": 0.965,
+          "p95": 0.9663847656250001,
+          "p99": 0.9669028211805556,
+          "max": 0.9675737847222222,
+          "mean": 0.9647782141080901
+        },
+        "camera_frame_gap_s": {
+          "count": 753,
+          "min": 0.09984290600550594,
+          "p01": 0.09993584535637638,
+          "p05": 0.09998690299689769,
+          "median": 0.20010639500105754,
+          "p95": 0.20022274239890975,
+          "p99": 0.20026310596091207,
+          "max": 0.2003333449974889,
+          "mean": 0.16651589794023247
+        },
+        "robot_frame_gap_s": {
+          "count": 753,
+          "min": 0.09976899600587785,
+          "p01": 0.09986113595921779,
+          "p05": 0.09993112019874388,
+          "median": 0.1999676960040233,
+          "p95": 0.20010695880337154,
+          "p99": 0.20103154868324055,
+          "max": 0.2100360760014155,
+          "mean": 0.16651249036254656
+        }
+      }
+    },
+    {
+      "source_index": 4,
+      "trial": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-192509-307a80/materialized",
+      "expected_source_frames": 435,
+      "capture_lines": 435,
+      "counts": {
+        "capture_lines": 435,
+        "parsed_frames": 435,
+        "robot_joints_valid_six_finite": 435,
+        "robot_tcp_valid_six_finite": 435,
+        "robot_gripper_position_numeric_finite": 435,
+        "robot_gripper_active_numeric_finite": 435,
+        "robot_gripper_fault_numeric_finite": 435,
+        "robot_gripper_fault_id_numeric_finite": 435,
+        "robot_gripper_motiondone_numeric_finite": 435,
+        "robot_gripper_speed_numeric_finite": 435,
+        "robot_gripper_current_numeric_finite": 435,
+        "gripper_valid_recorded_true": 412,
+        "gripper_valid_recomputed_true": 412,
+        "wire_packet_sha_match": 435,
+        "wire_capture_match": 435,
+        "wire_sequence_session_match": 435,
+        "wire_media_metadata_match": 435,
+        "wire_rgb_compressed_sha_match": 435,
+        "wire_rgb_bytes_match": 435,
+        "wire_depth_compressed_sha_match": 435,
+        "wire_depth_bytes_match": 435,
+        "rgb_file_exists": 435,
+        "rgb_file_jpeg_sha_match": 435,
+        "rgb_original_array_sha_record_present": 435,
+        "rgb_file_equals_wire_jpeg_yes": 435,
+        "rgb_decoded": 435,
+        "depth_file_exists": 435,
+        "depth_decoded": 435,
+        "depth_pixels": 100224000,
+        "depth_finite_pixels": 100224000,
+        "depth_finite_nonzero_pixels": 96917918,
+        "depth_negative_pixels": 0,
+        "depth_nonfinite_pixels": 0,
+        "depth_frames_with_zero_or_nonfinite": 435,
+        "depth_materialized_float32_source_sha_match": 435,
+        "depth_wire_decoded_float32_source_sha_match": 435,
+        "depth_wire_decoded_equals_npz_yes": 435,
+        "gripper_valid_recorded_false": 23,
+        "gripper_valid_recomputed_false": 23,
+        "gripper_invalid_reason_motiondone_not_1_2_3": 23
+      },
+      "capture_journal_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-192509-307a80/materialized/continuous/capture.jsonl",
+      "capture_journal_sha256_actual": "d0eb583390d41cd01b683ab3296630e50d84e4e46769264c0b7d11de10d6611d",
+      "capture_journal_sha256_expected": "d0eb583390d41cd01b683ab3296630e50d84e4e46769264c0b7d11de10d6611d",
+      "capture_journal_sha256_match": true,
+      "frames_stream_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-192509-307a80/frames.stream",
+      "frames_stream_sha256_actual": "7ee257bcd567e907dea107223e4f5d3c10180ca1db43926ea28005abb3ff81a9",
+      "frames_stream_sha256_expected": "7ee257bcd567e907dea107223e4f5d3c10180ca1db43926ea28005abb3ff81a9",
+      "frames_stream_sha256_match": true,
+      "user_review_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261031-192509-307a80/materialized/user-review.json",
+      "user_review_sha256_actual": "5185b20135e31b92438fe2773bdc4bffbfc7feb45d3987196b600a424ed38c16",
+      "user_review_sha256_match": true,
+      "user_review_verdict": "success",
+      "categories": {
+        "pixel_rgb": {
+          "\"source color pixels, resized without rectification\"": 435
+        },
+        "pixel_depth": {
+          "\"SDK depth_to_color grid, resized independently\"": 435
+        },
+        "same_pixel_correspondence_verified": {
+          "false": 435
+        },
+        "raw_depth_in_source_packet": {
+          "false": 435
+        },
+        "raw_depth_retained_in_bundle": {
+          "false": 435
+        },
+        "capture_alignment": {
+          "\"depth_to_color\"": 435
+        },
+        "capture_depth_unit": {
+          "\"mm\"": 435
+        },
+        "aligned_depth_unit_mm": {
+          "1.0": 435
+        },
+        "raw_depth_unit_mm": {
+          "1.0": 435
+        },
+        "source_image_size": {
+          "{\"height\":1080,\"width\":1920}": 435
+        },
+        "resize_method": {
+          "\"nearest\"": 435
+        },
+        "aligned_profile_format": {
+          "\"OBFormat.Y16\"": 435
+        },
+        "raw_profile_format": {
+          "\"OBFormat.Y16\"": 435
+        },
+        "depth_codec": {
+          "\"uint16le-rowdelta-zlib\"": 435
+        },
+        "depth_media_unit": {
+          "\"mm\"": 435
+        },
+        "rgb_lossy": {
+          "true": 435
+        },
+        "depth_lossless": {
+          "true": 435
+        },
+        "sync_clock": {
+          "\"host_monotonic\"": 435
+        },
+        "decoded_rgb_shape": {
+          "[360,640,3]": 435
+        },
+        "decoded_rgb_dtype": {
+          "\"uint8\"": 435
+        },
+        "decoded_depth_shape": {
+          "[360,640]": 435
+        },
+        "decoded_depth_dtype": {
+          "\"float32\"": 435
+        }
+      },
+      "distributions": {
+        "robot_minus_camera_s": {
+          "count": 435,
+          "min": -0.004953231000399683,
+          "p01": -0.004839895441400586,
+          "p05": -0.00438747329681064,
+          "median": -0.00028259299870114774,
+          "p95": 0.004191481899761128,
+          "p99": 0.004807383281295184,
+          "max": 0.005014401001972146,
+          "mean": -0.0002695134916341457
+        },
+        "abs_robot_minus_camera_s": {
+          "count": 435,
+          "min": 1.7831000150181353e-05,
+          "p01": 4.23773008515127e-05,
+          "p05": 0.0002307121983903926,
+          "median": 0.0022164399997564033,
+          "p95": 0.004618961898813723,
+          "p99": 0.0049273126796470015,
+          "max": 0.005014401001972146,
+          "mean": 0.002310570149502487
+        },
+        "recorded_sync_skew_s": {
+          "count": 435,
+          "min": -0.004953231000399683,
+          "p01": -0.004839895441400586,
+          "p05": -0.00438747329681064,
+          "median": -0.00028259299870114774,
+          "p95": 0.004191481899761128,
+          "p99": 0.004807383281295184,
+          "max": 0.005014401001972146,
+          "mean": -0.0002695134916341457
+        },
+        "device_color_minus_depth_s": {
+          "count": 435,
+          "min": -0.015354,
+          "p01": -0.014837659999999999,
+          "p05": -0.0129442,
+          "median": 0.005265,
+          "p95": 0.016162499999999996,
+          "p99": 0.017318659999999996,
+          "max": 0.017829,
+          "mean": 0.003767064367816092
+        },
+        "depth_finite_fraction": {
+          "count": 435,
+          "min": 1.0,
+          "p01": 1.0,
+          "p05": 1.0,
+          "median": 1.0,
+          "p95": 1.0,
+          "p99": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        },
+        "depth_finite_nonzero_fraction": {
+          "count": 435,
+          "min": 0.9640277777777778,
+          "p01": 0.9643144965277778,
+          "p05": 0.9648815104166667,
+          "median": 0.9671961805555556,
+          "p95": 0.9685759548611111,
+          "p99": 0.9691664930555556,
+          "max": 0.9693706597222222,
+          "mean": 0.9670130707215837
+        },
+        "camera_frame_gap_s": {
+          "count": 434,
+          "min": 0.09986804999789456,
+          "p01": 0.09990788258852262,
+          "p05": 0.09997943969865446,
+          "median": 0.20011791849901783,
+          "p95": 0.20022369195139617,
+          "p99": 0.20028024639985234,
+          "max": 0.20029366399830906,
+          "mean": 0.1664744678663683
+        },
+        "robot_frame_gap_s": {
+          "count": 434,
+          "min": 0.09982782800216228,
+          "p01": 0.09990999554465815,
+          "p05": 0.09995171525042679,
+          "median": 0.19997276499998407,
+          "p95": 0.20009791670017876,
+          "p99": 0.20236959194946397,
+          "max": 0.21000494000327308,
+          "mean": 0.16645605726497695
+        }
+      }
+    },
+    {
+      "source_index": 5,
+      "trial": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-165538-d95608/materialized",
+      "expected_source_frames": 376,
+      "capture_lines": 376,
+      "counts": {
+        "capture_lines": 376,
+        "parsed_frames": 376,
+        "robot_joints_valid_six_finite": 376,
+        "robot_tcp_valid_six_finite": 376,
+        "robot_gripper_position_numeric_finite": 376,
+        "robot_gripper_active_numeric_finite": 376,
+        "robot_gripper_fault_numeric_finite": 376,
+        "robot_gripper_fault_id_numeric_finite": 376,
+        "robot_gripper_motiondone_numeric_finite": 376,
+        "robot_gripper_speed_numeric_finite": 376,
+        "robot_gripper_current_numeric_finite": 376,
+        "gripper_valid_recorded_true": 353,
+        "gripper_valid_recomputed_true": 353,
+        "wire_packet_sha_match": 376,
+        "wire_capture_match": 376,
+        "wire_sequence_session_match": 376,
+        "wire_media_metadata_match": 376,
+        "wire_rgb_compressed_sha_match": 376,
+        "wire_rgb_bytes_match": 376,
+        "wire_depth_compressed_sha_match": 376,
+        "wire_depth_bytes_match": 376,
+        "rgb_file_exists": 376,
+        "rgb_file_jpeg_sha_match": 376,
+        "rgb_original_array_sha_record_present": 376,
+        "rgb_file_equals_wire_jpeg_yes": 376,
+        "rgb_decoded": 376,
+        "depth_file_exists": 376,
+        "depth_decoded": 376,
+        "depth_pixels": 86630400,
+        "depth_finite_pixels": 86630400,
+        "depth_finite_nonzero_pixels": 83759585,
+        "depth_negative_pixels": 0,
+        "depth_nonfinite_pixels": 0,
+        "depth_frames_with_zero_or_nonfinite": 376,
+        "depth_materialized_float32_source_sha_match": 376,
+        "depth_wire_decoded_float32_source_sha_match": 376,
+        "depth_wire_decoded_equals_npz_yes": 376,
+        "gripper_valid_recorded_false": 23,
+        "gripper_valid_recomputed_false": 23,
+        "gripper_invalid_reason_motiondone_not_1_2_3": 23
+      },
+      "capture_journal_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-165538-d95608/materialized/continuous/capture.jsonl",
+      "capture_journal_sha256_actual": "391cba5138093772ceb3b169bc89a16762b33c5b4954cd2337d53f2b0df2dd2c",
+      "capture_journal_sha256_expected": "391cba5138093772ceb3b169bc89a16762b33c5b4954cd2337d53f2b0df2dd2c",
+      "capture_journal_sha256_match": true,
+      "frames_stream_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-165538-d95608/frames.stream",
+      "frames_stream_sha256_actual": "1e41f5c540956fae7e6787055f4d9dd2b55414a34b2b31ed6beb380ebaa64ddc",
+      "frames_stream_sha256_expected": "1e41f5c540956fae7e6787055f4d9dd2b55414a34b2b31ed6beb380ebaa64ddc",
+      "frames_stream_sha256_match": true,
+      "user_review_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-165538-d95608/materialized/user-review.json",
+      "user_review_sha256_actual": "3e2f24748583affdb7ae041205b952d9215fe23ea765d90aca3906d7cc35f14d",
+      "user_review_sha256_match": true,
+      "user_review_verdict": "success",
+      "categories": {
+        "pixel_rgb": {
+          "\"source color pixels, resized without rectification\"": 376
+        },
+        "pixel_depth": {
+          "\"SDK depth_to_color grid, resized independently\"": 376
+        },
+        "same_pixel_correspondence_verified": {
+          "false": 376
+        },
+        "raw_depth_in_source_packet": {
+          "false": 376
+        },
+        "raw_depth_retained_in_bundle": {
+          "false": 376
+        },
+        "capture_alignment": {
+          "\"depth_to_color\"": 376
+        },
+        "capture_depth_unit": {
+          "\"mm\"": 376
+        },
+        "aligned_depth_unit_mm": {
+          "1.0": 376
+        },
+        "raw_depth_unit_mm": {
+          "1.0": 376
+        },
+        "source_image_size": {
+          "{\"height\":1080,\"width\":1920}": 376
+        },
+        "resize_method": {
+          "\"nearest\"": 376
+        },
+        "aligned_profile_format": {
+          "\"OBFormat.Y16\"": 376
+        },
+        "raw_profile_format": {
+          "\"OBFormat.Y16\"": 376
+        },
+        "depth_codec": {
+          "\"uint16le-rowdelta-zlib\"": 376
+        },
+        "depth_media_unit": {
+          "\"mm\"": 376
+        },
+        "rgb_lossy": {
+          "true": 376
+        },
+        "depth_lossless": {
+          "true": 376
+        },
+        "sync_clock": {
+          "\"host_monotonic\"": 376
+        },
+        "decoded_rgb_shape": {
+          "[360,640,3]": 376
+        },
+        "decoded_rgb_dtype": {
+          "\"uint8\"": 376
+        },
+        "decoded_depth_shape": {
+          "[360,640]": 376
+        },
+        "decoded_depth_dtype": {
+          "\"float32\"": 376
+        }
+      },
+      "distributions": {
+        "robot_minus_camera_s": {
+          "count": 376,
+          "min": -0.00499437699909322,
+          "p01": -0.004927873002088745,
+          "p05": -0.004615625501173781,
+          "median": -0.00032442750307382084,
+          "p95": 0.004481052254050155,
+          "p99": 0.004865410252023139,
+          "max": 0.004972421003913041,
+          "mean": -0.00020870053991684664
+        },
+        "abs_robot_minus_camera_s": {
+          "count": 376,
+          "min": 8.426002750638872e-06,
+          "p01": 4.2259745896444656e-05,
+          "p05": 0.00015349125169450417,
+          "median": 0.002446376998705091,
+          "p95": 0.004770152248966042,
+          "p99": 0.0049624192506598774,
+          "max": 0.00499437699909322,
+          "mean": 0.00246438188566978
+        },
+        "recorded_sync_skew_s": {
+          "count": 376,
+          "min": -0.00499437699909322,
+          "p01": -0.004927873002088745,
+          "p05": -0.004615625501173781,
+          "median": -0.00032442750307382084,
+          "p95": 0.004481052254050155,
+          "p99": 0.004865410252023139,
+          "max": 0.004972421003913041,
+          "mean": -0.00020870053991684664
+        },
+        "device_color_minus_depth_s": {
+          "count": 376,
+          "min": -0.015526,
+          "p01": -0.015104,
+          "p05": -0.01341875,
+          "median": -0.0025335,
+          "p95": 0.01555375,
+          "p99": 0.017239,
+          "max": 0.017658,
+          "mean": -0.0004158005319148935
+        },
+        "depth_finite_fraction": {
+          "count": 376,
+          "min": 1.0,
+          "p01": 1.0,
+          "p05": 1.0,
+          "median": 1.0,
+          "p95": 1.0,
+          "p99": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        },
+        "depth_finite_nonzero_fraction": {
+          "count": 376,
+          "min": 0.9637065972222222,
+          "p01": 0.9641861979166667,
+          "p05": 0.9645876736111111,
+          "median": 0.9670052083333334,
+          "p95": 0.9685980902777778,
+          "p99": 0.9692827690972223,
+          "max": 0.9696571180555555,
+          "mean": 0.9668613442856088
+        },
+        "camera_frame_gap_s": {
+          "count": 375,
+          "min": 0.09986934100015787,
+          "p01": 0.09994773197715404,
+          "p05": 0.09999386070121545,
+          "median": 0.20011590299691306,
+          "p95": 0.2002153186040232,
+          "p99": 0.20025665285778815,
+          "max": 0.20038479399954667,
+          "mean": 0.16651655909599503
+        },
+        "robot_frame_gap_s": {
+          "count": 375,
+          "min": 0.09980932000325993,
+          "p01": 0.09989272324368358,
+          "p05": 0.0999499889992876,
+          "median": 0.19997300099930726,
+          "p95": 0.20012468999775593,
+          "p99": 0.20476514604146354,
+          "max": 0.21006904599926202,
+          "mean": 0.1665148580559956
+        }
+      }
+    },
+    {
+      "source_index": 6,
+      "trial": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-chat-20261101-171627-cbdf83/materialized",
+      "expected_source_frames": 471,
+      "capture_lines": 471,
+      "counts": {
+        "capture_lines": 471,
+        "parsed_frames": 471,
+        "robot_joints_valid_six_finite": 471,
+        "robot_tcp_valid_six_finite": 471,
+        "robot_gripper_position_numeric_finite": 471,
+        "robot_gripper_active_numeric_finite": 471,
+        "robot_gripper_fault_numeric_finite": 471,
+        "robot_gripper_fault_id_numeric_finite": 471,
+        "robot_gripper_motiondone_numeric_finite": 471,
+        "robot_gripper_speed_numeric_finite": 471,
+        "robot_gripper_current_numeric_finite": 471,
+        "gripper_valid_recorded_true": 449,
+        "gripper_valid_recomputed_true": 449,
+        "wire_packet_sha_match": 471,
+        "wire_capture_match": 471,
+        "wire_sequence_session_match": 471,
+        "wire_media_metadata_match": 471,
+        "wire_rgb_compressed_sha_match": 471,
+        "wire_rgb_bytes_match": 471,
+        "wire_depth_compressed_sha_match": 471,
+        "wire_depth_bytes_match": 471,
+        "rgb_file_exists": 471,
+        "rgb_file_jpeg_sha_match": 471,
+        "rgb_original_array_sha_record_present": 471,
+        "rgb_file_equals_wire_jpeg_yes": 471,
+        "rgb_decoded": 471,
+        "depth_file_exists": 471,
+        "depth_decoded": 471,
+        "depth_pixels": 108518400,
+        "depth_finite_pixels": 108518400,
+        "depth_finite_nonzero_pixels": 104894293,
+        "depth_negative_pixels": 0,
+        "depth_nonfinite_pixels": 0,
+        "depth_frames_with_zero_or_nonfinite": 471,
+        "depth_materialized_float32_source_sha_match": 471,
+        "depth_wire_decoded_float32_source_sha_match": 471,
+        "depth_wire_decoded_equals_npz_yes": 471,
+        "gripper_valid_recorded_false": 22,
+        "gripper_valid_recomputed_false": 22,
+        "gripper_invalid_reason_motiondone_not_1_2_3": 22
+      },
+      "capture_journal_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-chat-20261101-171627-cbdf83/materialized/continuous/capture.jsonl",
+      "capture_journal_sha256_actual": "92e3faf0d8397e490846cb832072e5e169b9d0849a1810cc42402acabce1f588",
+      "capture_journal_sha256_expected": "92e3faf0d8397e490846cb832072e5e169b9d0849a1810cc42402acabce1f588",
+      "capture_journal_sha256_match": true,
+      "frames_stream_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-chat-20261101-171627-cbdf83/frames.stream",
+      "frames_stream_sha256_actual": "a1c5cb8e584af03b18bd13c29ef6b5dee4a61758296d0708856f6d2988346b77",
+      "frames_stream_sha256_expected": "a1c5cb8e584af03b18bd13c29ef6b5dee4a61758296d0708856f6d2988346b77",
+      "frames_stream_sha256_match": true,
+      "user_review_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-chat-20261101-171627-cbdf83/materialized/user-review.json",
+      "user_review_sha256_actual": "d079e1cb20825f29ca2be37abe3af24b13e1349493b7db6308ebea01216aa705",
+      "user_review_sha256_match": true,
+      "user_review_verdict": "success",
+      "categories": {
+        "pixel_rgb": {
+          "\"source color pixels, resized without rectification\"": 471
+        },
+        "pixel_depth": {
+          "\"SDK depth_to_color grid, resized independently\"": 471
+        },
+        "same_pixel_correspondence_verified": {
+          "false": 471
+        },
+        "raw_depth_in_source_packet": {
+          "false": 471
+        },
+        "raw_depth_retained_in_bundle": {
+          "false": 471
+        },
+        "capture_alignment": {
+          "\"depth_to_color\"": 471
+        },
+        "capture_depth_unit": {
+          "\"mm\"": 471
+        },
+        "aligned_depth_unit_mm": {
+          "1.0": 471
+        },
+        "raw_depth_unit_mm": {
+          "1.0": 471
+        },
+        "source_image_size": {
+          "{\"height\":1080,\"width\":1920}": 471
+        },
+        "resize_method": {
+          "\"nearest\"": 471
+        },
+        "aligned_profile_format": {
+          "\"OBFormat.Y16\"": 471
+        },
+        "raw_profile_format": {
+          "\"OBFormat.Y16\"": 471
+        },
+        "depth_codec": {
+          "\"uint16le-rowdelta-zlib\"": 471
+        },
+        "depth_media_unit": {
+          "\"mm\"": 471
+        },
+        "rgb_lossy": {
+          "true": 471
+        },
+        "depth_lossless": {
+          "true": 471
+        },
+        "sync_clock": {
+          "\"host_monotonic\"": 471
+        },
+        "decoded_rgb_shape": {
+          "[360,640,3]": 471
+        },
+        "decoded_rgb_dtype": {
+          "\"uint8\"": 471
+        },
+        "decoded_depth_shape": {
+          "[360,640]": 471
+        },
+        "decoded_depth_dtype": {
+          "\"float32\"": 471
+        }
+      },
+      "distributions": {
+        "robot_minus_camera_s": {
+          "count": 471,
+          "min": -0.005002232996048406,
+          "p01": -0.004916139400302199,
+          "p05": -0.004521990002103848,
+          "median": 0.00013331999798538163,
+          "p95": 0.004477195496292552,
+          "p99": 0.004890798596898094,
+          "max": 0.004979342993465252,
+          "mean": 1.9696445832490692e-05
+        },
+        "abs_robot_minus_camera_s": {
+          "count": 471,
+          "min": 2.261299960082397e-05,
+          "p01": 7.545129701611586e-05,
+          "p05": 0.0003211580005881842,
+          "median": 0.002653458999702707,
+          "p95": 0.004730074997496558,
+          "p99": 0.004956066900194856,
+          "max": 0.005002232996048406,
+          "mean": 0.002618594203446967
+        },
+        "recorded_sync_skew_s": {
+          "count": 471,
+          "min": -0.005002232996048406,
+          "p01": -0.004916139400302199,
+          "p05": -0.004521990002103848,
+          "median": 0.00013331999798538163,
+          "p95": 0.004477195496292552,
+          "p99": 0.004890798596898094,
+          "max": 0.004979342993465252,
+          "mean": 1.9696445832490692e-05
+        },
+        "device_color_minus_depth_s": {
+          "count": 471,
+          "min": -0.015922,
+          "p01": -0.015574300000000001,
+          "p05": -0.014515,
+          "median": 0.004387,
+          "p95": 0.0161395,
+          "p99": 0.0171659,
+          "max": 0.017474,
+          "mean": 0.001793783439490446
+        },
+        "depth_finite_fraction": {
+          "count": 471,
+          "min": 1.0,
+          "p01": 1.0,
+          "p05": 1.0,
+          "median": 1.0,
+          "p95": 1.0,
+          "p99": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        },
+        "depth_finite_nonzero_fraction": {
+          "count": 471,
+          "min": 0.9631467013888889,
+          "p01": 0.9633927951388889,
+          "p05": 0.9639431423611111,
+          "median": 0.9662152777777778,
+          "p95": 0.9704427083333333,
+          "p99": 0.9709774305555556,
+          "max": 0.9715581597222223,
+          "mean": 0.9666037556764568
+        },
+        "camera_frame_gap_s": {
+          "count": 470,
+          "min": 0.09984487600013381,
+          "p01": 0.09993203278601868,
+          "p05": 0.09997896470013075,
+          "median": 0.20008914949721657,
+          "p95": 0.2001927881003212,
+          "p99": 0.2003427832487796,
+          "max": 0.20977538299484877,
+          "mean": 0.16647487261914337
+        },
+        "robot_frame_gap_s": {
+          "count": 470,
+          "min": 0.08999619400128722,
+          "p01": 0.09987946129840566,
+          "p05": 0.09993238164825016,
+          "median": 0.19992905949766282,
+          "p95": 0.20010254335102218,
+          "p99": 0.20995540970106957,
+          "max": 0.21038153700646944,
+          "mean": 0.1664678952170126
+        }
+      }
+    },
+    {
+      "source_index": 7,
+      "trial": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized",
+      "expected_source_frames": 752,
+      "capture_lines": 752,
+      "counts": {
+        "capture_lines": 752,
+        "parsed_frames": 752,
+        "robot_joints_valid_six_finite": 752,
+        "robot_tcp_valid_six_finite": 752,
+        "robot_gripper_position_numeric_finite": 752,
+        "robot_gripper_active_numeric_finite": 752,
+        "robot_gripper_fault_numeric_finite": 752,
+        "robot_gripper_fault_id_numeric_finite": 752,
+        "robot_gripper_motiondone_numeric_finite": 752,
+        "robot_gripper_speed_numeric_finite": 752,
+        "robot_gripper_current_numeric_finite": 752,
+        "gripper_valid_recorded_true": 706,
+        "gripper_valid_recomputed_true": 706,
+        "wire_packet_sha_match": 752,
+        "wire_capture_match": 752,
+        "wire_sequence_session_match": 752,
+        "wire_media_metadata_match": 752,
+        "wire_rgb_compressed_sha_match": 752,
+        "wire_rgb_bytes_match": 752,
+        "wire_depth_compressed_sha_match": 752,
+        "wire_depth_bytes_match": 752,
+        "rgb_file_exists": 752,
+        "rgb_file_jpeg_sha_match": 752,
+        "rgb_original_array_sha_record_present": 752,
+        "rgb_file_equals_wire_jpeg_yes": 752,
+        "rgb_decoded": 752,
+        "depth_file_exists": 752,
+        "depth_decoded": 752,
+        "depth_pixels": 173260800,
+        "depth_finite_pixels": 173260800,
+        "depth_finite_nonzero_pixels": 167289584,
+        "depth_negative_pixels": 0,
+        "depth_nonfinite_pixels": 0,
+        "depth_frames_with_zero_or_nonfinite": 752,
+        "depth_materialized_float32_source_sha_match": 752,
+        "depth_wire_decoded_float32_source_sha_match": 752,
+        "depth_wire_decoded_equals_npz_yes": 752,
+        "gripper_valid_recorded_false": 46,
+        "gripper_valid_recomputed_false": 46,
+        "gripper_invalid_reason_motiondone_not_1_2_3": 46
+      },
+      "capture_journal_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/continuous/capture.jsonl",
+      "capture_journal_sha256_actual": "e7415cc1f0f5409b23e86bd5ac03d502700e14e7737c79d50e16bdc61e8c63ed",
+      "capture_journal_sha256_expected": "e7415cc1f0f5409b23e86bd5ac03d502700e14e7737c79d50e16bdc61e8c63ed",
+      "capture_journal_sha256_match": true,
+      "frames_stream_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/frames.stream",
+      "frames_stream_sha256_actual": "79a4e0eedc78a3be853762b3d6495d5c7d9d75ce581beb9d106ab9851ac1cb65",
+      "frames_stream_sha256_expected": "79a4e0eedc78a3be853762b3d6495d5c7d9d75ce581beb9d106ab9851ac1cb65",
+      "frames_stream_sha256_match": true,
+      "user_review_path": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-ui-20261101-172307-9c19b2/materialized/user-review.json",
+      "user_review_sha256_actual": "dde2d18c5b09e5d66e6402bc4a552657513584db59cc28b801e80b31279e432a",
+      "user_review_sha256_match": true,
+      "user_review_verdict": "success",
+      "categories": {
+        "pixel_rgb": {
+          "\"source color pixels, resized without rectification\"": 752
+        },
+        "pixel_depth": {
+          "\"SDK depth_to_color grid, resized independently\"": 752
+        },
+        "same_pixel_correspondence_verified": {
+          "false": 752
+        },
+        "raw_depth_in_source_packet": {
+          "false": 752
+        },
+        "raw_depth_retained_in_bundle": {
+          "false": 752
+        },
+        "capture_alignment": {
+          "\"depth_to_color\"": 752
+        },
+        "capture_depth_unit": {
+          "\"mm\"": 752
+        },
+        "aligned_depth_unit_mm": {
+          "1.0": 752
+        },
+        "raw_depth_unit_mm": {
+          "1.0": 752
+        },
+        "source_image_size": {
+          "{\"height\":1080,\"width\":1920}": 752
+        },
+        "resize_method": {
+          "\"nearest\"": 752
+        },
+        "aligned_profile_format": {
+          "\"OBFormat.Y16\"": 752
+        },
+        "raw_profile_format": {
+          "\"OBFormat.Y16\"": 752
+        },
+        "depth_codec": {
+          "\"uint16le-rowdelta-zlib\"": 752
+        },
+        "depth_media_unit": {
+          "\"mm\"": 752
+        },
+        "rgb_lossy": {
+          "true": 752
+        },
+        "depth_lossless": {
+          "true": 752
+        },
+        "sync_clock": {
+          "\"host_monotonic\"": 752
+        },
+        "decoded_rgb_shape": {
+          "[360,640,3]": 752
+        },
+        "decoded_rgb_dtype": {
+          "\"uint8\"": 752
+        },
+        "decoded_depth_shape": {
+          "[360,640]": 752
+        },
+        "decoded_depth_dtype": {
+          "\"float32\"": 752
+        }
+      },
+      "distributions": {
+        "robot_minus_camera_s": {
+          "count": 752,
+          "min": -0.005011677996662911,
+          "p01": -0.00490289909488638,
+          "p05": -0.004444809501728741,
+          "median": 0.00028147899865871295,
+          "p95": 0.004413888648923603,
+          "p99": 0.0048762353782512945,
+          "max": 0.005027607003285084,
+          "mean": -1.4938074458614016e-05
+        },
+        "abs_robot_minus_camera_s": {
+          "count": 752,
+          "min": 3.702996764332056e-06,
+          "p01": 3.178304003085941e-05,
+          "p05": 0.00028953640030522366,
+          "median": 0.002387815504334867,
+          "p95": 0.00473141814727569,
+          "p99": 0.004936494249777752,
+          "max": 0.005027607003285084,
+          "mean": 0.0024261178351441637
+        },
+        "recorded_sync_skew_s": {
+          "count": 752,
+          "min": -0.005011677996662911,
+          "p01": -0.00490289909488638,
+          "p05": -0.004444809501728741,
+          "median": 0.00028147899865871295,
+          "p95": 0.004413888648923603,
+          "p99": 0.0048762353782512945,
+          "max": 0.005027607003285084,
+          "mean": -1.4938074458614016e-05
+        },
+        "device_color_minus_depth_s": {
+          "count": 752,
+          "min": -0.016115,
+          "p01": -0.01541445,
+          "p05": -0.01377115,
+          "median": 2.6000000000000002e-05,
+          "p95": 0.015344799999999995,
+          "p99": 0.017032850000000002,
+          "max": 0.017766,
+          "mean": 0.00032757978723404286
+        },
+        "depth_finite_fraction": {
+          "count": 752,
+          "min": 1.0,
+          "p01": 1.0,
+          "p05": 1.0,
+          "median": 1.0,
+          "p95": 1.0,
+          "p99": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        },
+        "depth_finite_nonzero_fraction": {
+          "count": 752,
+          "min": 0.9629817708333334,
+          "p01": 0.9632444010416666,
+          "p05": 0.9636414930555556,
+          "median": 0.965646701388889,
+          "p95": 0.9672458767361111,
+          "p99": 0.9679600694444445,
+          "max": 0.9686501736111112,
+          "mean": 0.9655362551713947
+        },
+        "camera_frame_gap_s": {
+          "count": 751,
+          "min": 0.09984608399827266,
+          "p01": 0.0999448475013196,
+          "p05": 0.09998482949958998,
+          "median": 0.2001104819937609,
+          "p95": 0.20020804200248676,
+          "p99": 0.20024559799639974,
+          "max": 0.20042880000255536,
+          "mean": 0.16655600115712618
+        },
+        "robot_frame_gap_s": {
+          "count": 751,
+          "min": 0.0998333140014438,
+          "p01": 0.0998894365002343,
+          "p05": 0.09994224900219706,
+          "median": 0.19996259400068084,
+          "p95": 0.20010591299796943,
+          "p99": 0.2019962000013038,
+          "max": 0.2100201979992562,
+          "mean": 0.16655235171638003
+        }
+      }
+    }
+  ],
+  "training_checkpoint_evidence": {
+    "training-report.json": {
+      "path": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-stream-workspace-only-vision-n10-gpu9-20261102-v1/step-000250/training-report.json",
+      "sha256": "eeaac1592741e887821cf8be4265b1d4f214f99ec9a8e78d14d37f401723a79d",
+      "relevant_content": {
+        "dataset_path": "/home/data4/hts/demo1/fr5-learning/datasets/fr5-joint-stream-20261102-v2-compacted",
+        "dataset_fingerprint": "975ff43702e29ae5b1dcf2467a363452493d86b4839dade4e12dbd1500cfcc24",
+        "training_data_kind": "captured",
+        "train_episodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "heldout_episodes": [
+          7
+        ],
+        "image_profile": "workspace-only-v1",
+        "steps_completed": 250
+      }
+    },
+    "config.json": {
+      "path": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-stream-workspace-only-vision-n10-gpu9-20261102-v1/step-000250/config.json",
+      "sha256": "4827c5143de468548e91daf3b0211247a77867d379b6e7d71d64f299d887e636",
+      "relevant_content": {
+        "input_features": {
+          "observation.images.base_0_rgb": {
+            "type": "VISUAL",
+            "shape": [
+              3,
+              224,
+              224
+            ]
+          },
+          "observation.images.left_wrist_0_rgb": {
+            "type": "VISUAL",
+            "shape": [
+              3,
+              224,
+              224
+            ]
+          },
+          "observation.images.right_wrist_0_rgb": {
+            "type": "VISUAL",
+            "shape": [
+              3,
+              224,
+              224
+            ]
+          },
+          "observation.state": {
+            "type": "STATE",
+            "shape": [
+              8
+            ]
+          }
+        },
+        "output_features": {
+          "action": {
+            "type": "ACTION",
+            "shape": [
+              7
+            ]
+          }
+        }
+      }
+    },
+    "policy_preprocessor.json": {
+      "path": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-stream-workspace-only-vision-n10-gpu9-20261102-v1/step-000250/policy_preprocessor.json",
+      "sha256": "87155cff2ed5f375075782c4025c5987d298bba76bb43b6299415af01b5dc400",
+      "relevant_content": {
+        "rename_map": {
+          "observation.images.front": "observation.images.base_0_rgb"
+        }
+      }
+    },
+    "image_profile.json": {
+      "path": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-stream-workspace-only-vision-n10-gpu9-20261102-v1/step-000250/image_profile.json",
+      "sha256": "cc0287a506039e945d84a1146cd74334636cd7ebbedbe5969280ad382983a8d4",
+      "relevant_content": {
+        "full_view_retained": false,
+        "name": "workspace-only-v1",
+        "output_image_keys": [
+          "observation.images.front"
+        ],
+        "physical_camera_count": 1,
+        "schema": "fr5-stream-image-profile-v1",
+        "source_key": "observation.images.front",
+        "workspace_crop_coordinates": "xyxy_half_open",
+        "workspace_crop_xyxy": [
+          240,
+          100,
+          640,
+          360
+        ],
+        "workspace_is_physical_wrist_camera": false,
+        "workspace_key": "observation.images.front",
+        "workspace_view_source": "crop_of_front_camera"
+      }
+    }
+  },
+  "per_frame_table": "/home/data4/hts/demo1/fr5-learning/audits/success8-data-review-20261102-v1/raw-rgbd-frames.jsonl",
+  "sample_copies": [
+    {
+      "source_index": 0,
+      "frame_index": 0,
+      "kind": "rgb",
+      "source": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized/continuous/frames/000000.jpg",
+      "copy": "/home/data4/hts/demo1/fr5-learning/audits/success8-data-review-20261102-v1/sample-source00-frame000000-rgb.jpg",
+      "sha256": "3e96070a3906a9b8a3c3235babfedf27bd79419cd867e2c06254e2cb8d076eeb",
+      "copy_sha256_matches": true
+    },
+    {
+      "source_index": 0,
+      "frame_index": 0,
+      "kind": "depth",
+      "source": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized/continuous/frames/000000.npz",
+      "copy": "/home/data4/hts/demo1/fr5-learning/audits/success8-data-review-20261102-v1/sample-source00-frame000000-depth.npz",
+      "sha256": "c3d57062aa70619650560f37c7176d796bdcba26d6c20683cecd0519924efc73",
+      "copy_sha256_matches": true
+    },
+    {
+      "source_index": 0,
+      "frame_index": 325,
+      "kind": "rgb",
+      "source": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized/continuous/frames/000325.jpg",
+      "copy": "/home/data4/hts/demo1/fr5-learning/audits/success8-data-review-20261102-v1/sample-source00-frame000325-rgb.jpg",
+      "sha256": "271b7f487a28b0a41081c246afc434915960433ee76b5de3831ffdb40cdcd016",
+      "copy_sha256_matches": true
+    },
+    {
+      "source_index": 0,
+      "frame_index": 325,
+      "kind": "depth",
+      "source": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized/continuous/frames/000325.npz",
+      "copy": "/home/data4/hts/demo1/fr5-learning/audits/success8-data-review-20261102-v1/sample-source00-frame000325-depth.npz",
+      "sha256": "f6088cf5da9a1941ccdcd1ce9e7ed9f5e1f926acade95683fb3f4524057df9f1",
+      "copy_sha256_matches": true
+    },
+    {
+      "source_index": 0,
+      "frame_index": 648,
+      "kind": "rgb",
+      "source": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized/continuous/frames/000648.jpg",
+      "copy": "/home/data4/hts/demo1/fr5-learning/audits/success8-data-review-20261102-v1/sample-source00-frame000648-rgb.jpg",
+      "sha256": "34208de3232a7d5ee3073cfd41b3d7d8ea0135020fa24341fee661fb5aa2b32a",
+      "copy_sha256_matches": true
+    },
+    {
+      "source_index": 0,
+      "frame_index": 648,
+      "kind": "depth",
+      "source": "/home/data4/hts/demo1/fr5-learning/recording-spool/cup-system-20261031-06/materialized/continuous/frames/000648.npz",
+      "copy": "/home/data4/hts/demo1/fr5-learning/audits/success8-data-review-20261102-v1/sample-source00-frame000648-depth.npz",
+      "sha256": "c16fdf3ad68dcf46bfb495233902dee8b0150d1cc3b6e342e82120fe9fba98fc",
+      "copy_sha256_matches": true
+    }
+  ],
+  "definitions": {
+    "depth_finite_nonzero_fraction": "finite and != 0 pixels / all decoded pixels; negative pixels counted separately",
+    "gripper_feedback_valid": "finite position 0..100, active=1, fault=0, fault_id=0, motiondone in {1,2,3}, speed=0; not grasp-success evidence",
+    "robot_minus_camera_s": "robot.received_monotonic minus camera.source_timestamp_monotonic, host timestamps; not an exposure-time guarantee",
+    "depth_integrity_scope": "wire compressed payload SHA and materialized/reconstructed float32 source SHA are separate; does not prove native Y16 retention or pixel correspondence",
+    "rgb_integrity_scope": "JPEG bytes checked against wire SHA and wire payload; original pre-JPEG RGB source SHA cannot be verified from lossy JPEG alone",
+    "physical_success_scope": "source user-review verdict retained as evidence; this audit does not independently assert physical success"
+  }
+}

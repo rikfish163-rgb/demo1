@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lerobot_robot_fairino"
+version = "0.2.0"
+description = "FR5/Gemini recording and pi0.5 stream policy adapters"
+requires-python = ">=3.10"
+dependencies = ["lerobot==0.4.4", "numpy>=1.24"]
+
+[project.scripts]
+fr5-record-observations = "lerobot_robot_fairino.record:main"
+fr5-check-dataset = "lerobot_robot_fairino.verify:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+lerobot_robot_fairino = ["web/*.html"]
+

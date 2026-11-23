@@ -1,0 +1,13 @@
+{
+  "logical_episode": 2,
+  "source": "/dev/shm/fr5-episode-000002",
+  "user_verdict": "success",
+  "user_statement": "成功，计入示范",
+  "summary_sha256": "f429255c5f1fa70b4517e637f8f06e2515922cf86b921f130335b82890ad3693",
+  "scope_sha256": "20a1f7692f7ee05c5c982354d937f3331ebbed4e8b53bcb132df409aac20ea13",
+  "raw_capture_continuous": true,
+  "storage_finalization_recovered": true,
+  "actual_complete_trials": 1,
+  "training_ready": false,
+  "recorded_at_unix": 1793268969.7354498
+}

@@ -1,0 +1,1655 @@
+{
+  "schema": "fr5-jev-pi05-live-timing-v1",
+  "episode": "/home/dianrobot/.local/state/fr5-recording-spool/jev-pi05-history5000-gripper-reobserve-20261122T223204-v2",
+  "clock": {
+    "durations": "seconds",
+    "monotonic": "host_monotonic",
+    "wall_time": "UTC+08:00, estimated from first wire timestamp pair",
+    "percentiles": "p50 median; p90/p95/p99 nearest-rank"
+  },
+  "counts": {
+    "chunks": 50,
+    "prediction_records": 50,
+    "submitted_targets": 128,
+    "acknowledged_targets": 127,
+    "unacknowledged_targets_at_stop": 1,
+    "wire_records": 7840,
+    "servoj": 7823,
+    "move_gripper": 14,
+    "gripper_completion_feedback_exact": 1
+  },
+  "termination": {
+    "reason": "explicit_duration_limit",
+    "termination_source": "explicit_duration_limit",
+    "error": null,
+    "failed": null,
+    "journal_error": null,
+    "summary_stage": "final_control_snapshot",
+    "wire_callbacks_drained": true,
+    "outcome": "pending_review",
+    "task_success_verified": false,
+    "max_session_s": 90.0
+  },
+  "unacknowledged_tail_target": {
+    "sequence": 127,
+    "delivery_token": 128,
+    "request_id": "db8532b00cd6448bbae61b723c4be83b",
+    "action_index": 2,
+    "delivery_status": "unacknowledged_at_stop",
+    "prefix_consumed_steps": 3,
+    "ack_prefix_consumed_steps": null,
+    "gripper_target_percent": 77,
+    "submitted_monotonic": 10073.983303783,
+    "acknowledged_monotonic": null,
+    "target_monotonic": 10074.149970449665,
+    "predicted_source_target_monotonic": 10073.4262682,
+    "source_age_at_submit_s": 1.057035582998651,
+    "source_age_at_ack_s": null,
+    "scheduled_target_lateness_s": 0.7237022496647114,
+    "submit_to_ack_s": null,
+    "prefix_retired_cause": null,
+    "gripper_commands_before": null,
+    "gripper_commands_after": null,
+    "termination_source": "explicit_duration_limit",
+    "ordered_pending": {
+      "token": 128,
+      "version": 128,
+      "joints": [
+        67.64870704942085,
+        -39.379831320112864,
+        53.6358431368985,
+        -8.549045548234186,
+        134.98392207631645,
+        4.4486716804980855
+      ],
+      "gripper": 77,
+      "joint_ack": false,
+      "gripper_ack": true
+    },
+    "stopmotion_issued_monotonic": 10074.14716582,
+    "submit_to_stop_s": 0.16386203700130864,
+    "scheduled_target_minus_stop_s": 0.002804629664751701
+  },
+  "definitions": {
+    "server_inference_s": "reply.inference_seconds reported by the inference server",
+    "client_predict_minus_server_inference_s": "client predict interval minus server inference; includes transport and other work",
+    "source_age": "host monotonic event time minus request.source_time",
+    "scheduled_target_lateness_s": "target_monotonic minus predicted_source_target_monotonic",
+    "submit_to_ack_s": "logged acknowledgement minus logged submission; includes joint endpoint and any gripper completion",
+    "rpc_return_to_ack_s": "logged acknowledgement minus MoveGripper RPC return; not the exact feedback duration",
+    "surrounding_servoj_gap_s": "next ServoJ issue minus previous ServoJ return; an upper bound on the contained peripheral lock pause",
+    "completion_detection_bounds": "RPC return to the earliest available next ServoJ issue or target ACK; null when neither upper bound is recorded",
+    "prediction_observation": "current request state at request.source_time; invalid current state stays invalid",
+    "observation_after_monotonic": "previous request retirement ACK used as the lower bound for the next current observation",
+    "prefix_consumed_steps": "submitted cursor and ACK cursor are recorded separately; only real ACKs contribute retirement causes",
+    "completion_to_next_s_bounds": "next request/source/observation-ready time minus completion upper/lower bounds",
+    "submit_to_stop_s": "StopMotion issue minus tail submission, measured for the unacknowledged target",
+    "scheduled_target_minus_stop_s": "scheduled tail target time minus StopMotion issue; positive means the stop was issued before the scheduled target"
+  },
+  "prediction_distributions_s": {
+    "server_inference_s": {
+      "count": 50,
+      "min": 0.33065511495806277,
+      "mean": 0.3555980613362044,
+      "p50": 0.34166215907316655,
+      "p90": 0.3632429838180542,
+      "p95": 0.3764413429889828,
+      "p99": 0.7886376199312508,
+      "max": 0.7886376199312508,
+      "sum": 17.77990306681022
+    },
+    "observation_wait_s": {
+      "count": 50,
+      "min": 0.0013756789994658902,
+      "mean": 0.21342592409993813,
+      "p50": 0.2196974485013925,
+      "p90": 0.25166806599918345,
+      "p95": 0.279716766999627,
+      "p99": 0.3641241360001004,
+      "max": 0.3641241360001004,
+      "sum": 10.671296204996906
+    },
+    "observation_ready_to_predict_s": {
+      "count": 50,
+      "min": 0.000690455999574624,
+      "mean": 0.0009279848002552171,
+      "p50": 0.0007764149995637126,
+      "p90": 0.0012455800006136997,
+      "p95": 0.0015869439994276036,
+      "p99": 0.0034352470011072,
+      "max": 0.0034352470011072,
+      "sum": 0.046399240012760856
+    },
+    "client_predict_elapsed_s": {
+      "count": 50,
+      "min": 0.4818345660005434,
+      "mean": 0.5346089113397102,
+      "p50": 0.5217996889987262,
+      "p90": 0.5544499669995275,
+      "p95": 0.5787765529985336,
+      "p99": 1.0405840399998851,
+      "max": 1.0405840399998851,
+      "sum": 26.73044556698551
+    },
+    "client_predict_minus_server_inference_s": {
+      "count": 50,
+      "min": 0.12353695278397936,
+      "mean": 0.17901085000350578,
+      "p50": 0.17458302597788133,
+      "p90": 0.20024174404716177,
+      "p95": 0.20463980312706553,
+      "p99": 0.2519464200686343,
+      "max": 0.2519464200686343,
+      "sum": 8.950542500175288
+    },
+    "reply_to_precheck_s": {
+      "count": 50,
+      "min": 0.0007387320001726039,
+      "mean": 0.0009583231401120429,
+      "p50": 0.0008580840003560297,
+      "p90": 0.0014972130011301488,
+      "p95": 0.0015313959993363824,
+      "p99": 0.0016215579998970497,
+      "max": 0.0016215579998970497,
+      "sum": 0.047916157005602145
+    },
+    "prefix_precheck_s": {
+      "count": 50,
+      "min": 0.039755241999955615,
+      "mean": 0.04511034800005291,
+      "p50": 0.044945954001377686,
+      "p90": 0.04734807000022556,
+      "p95": 0.04876766799861798,
+      "p99": 0.051928415001384565,
+      "max": 0.051928415001384565,
+      "sum": 2.2555174000026454
+    },
+    "source_age_at_reply_s": {
+      "count": 50,
+      "min": 0.5636865540000144,
+      "mean": 0.65249190541992,
+      "p50": 0.6328893234995121,
+      "p90": 0.7110339409991866,
+      "p95": 0.751120176000768,
+      "p99": 1.1428577219994622,
+      "max": 1.1428577219994622,
+      "sum": 32.624595270996
+    },
+    "source_age_at_prefix_ready_s": {
+      "count": 50,
+      "min": 0.6123802420006541,
+      "mean": 0.6985605765600849,
+      "p50": 0.6791594679998525,
+      "p90": 0.7573769029986579,
+      "p95": 0.7973375239998859,
+      "p99": 1.1833623749989783,
+      "max": 1.1833623749989783,
+      "sum": 34.928028828004244
+    }
+  },
+  "target_distributions_s": {
+    "source_age_at_submit_s": {
+      "count": 128,
+      "min": 0.6275789629999053,
+      "mean": 0.8811333177343386,
+      "p50": 0.8615733645001455,
+      "p90": 1.0933342370008177,
+      "p95": 1.1429903370008105,
+      "p99": 1.4143459309998434,
+      "max": 1.5939959329989506,
+      "sum": 112.78506466999534
+    },
+    "source_age_at_ack_s": {
+      "count": 127,
+      "min": 0.8075567619998765,
+      "mean": 1.2746989843306538,
+      "p50": 1.0739638000013656,
+      "p90": 2.3948333719999937,
+      "p95": 3.0640425279998453,
+      "p99": 3.3937225440004113,
+      "max": 3.8596644809986174,
+      "sum": 161.88677100999303
+    },
+    "scheduled_target_lateness_s": {
+      "count": 128,
+      "min": 0.6275789629999053,
+      "mean": 0.7300916510671129,
+      "p50": 0.710843545998614,
+      "p90": 0.8022846856656543,
+      "p95": 0.8299542363311048,
+      "p99": 1.247679264331964,
+      "max": 1.260662599665011,
+      "sum": 93.45173133659046
+    },
+    "submit_to_ack_s": {
+      "count": 127,
+      "min": 0.17036201900009473,
+      "mean": 0.3949507238031208,
+      "p50": 0.1790693740003917,
+      "p90": 1.4713077980013622,
+      "p95": 2.2785163300013664,
+      "p99": 2.4779341379999096,
+      "max": 2.4888717440007895,
+      "sum": 50.15874192299634
+    }
+  },
+  "target_ack_by_gripper_change_s": {
+    "with_move_gripper": {
+      "count": 14,
+      "min": 1.4639066660001845,
+      "mean": 2.1427073310717657,
+      "p50": 2.2751028935008435,
+      "p90": 2.4779341379999096,
+      "p95": 2.4888717440007895,
+      "p99": 2.4888717440007895,
+      "max": 2.4888717440007895,
+      "sum": 29.99790263500472
+    },
+    "without_move_gripper": {
+      "count": 113,
+      "min": 0.17036201900009473,
+      "mean": 0.17841450697337718,
+      "p50": 0.17893015099980403,
+      "p90": 0.1797423850002815,
+      "p95": 0.18028102700009185,
+      "p99": 0.18113866199928452,
+      "max": 0.18283087000054365,
+      "sum": 20.16083928799162
+    }
+  },
+  "prefix_consumed_steps": {
+    "submitted": {
+      "1": 50,
+      "2": 40,
+      "3": 38
+    },
+    "acknowledged": {
+      "1": 50,
+      "2": 40,
+      "3": 37
+    }
+  },
+  "prefix_retirement": {
+    "acknowledgement_cause_counts": {
+      "null": 78,
+      "native_gripper_command_completed": 14,
+      "execution_prefix_completed": 35
+    },
+    "consumed_steps_by_cause": {
+      "null": {
+        "1": 40,
+        "2": 38
+      },
+      "native_gripper_command_completed": {
+        "3": 2,
+        "2": 2,
+        "1": 10
+      },
+      "execution_prefix_completed": {
+        "3": 35
+      }
+    },
+    "next_observation_distributions_s": {
+      "native_gripper_command_completed": {
+        "ack_to_next_request_s": {
+          "count": 14,
+          "min": 9.714500083646271e-05,
+          "mean": 0.0001406726427636126,
+          "p50": 0.00012302049981371965,
+          "p90": 0.00017561099957674742,
+          "p95": 0.00031062699963513296,
+          "p99": 0.00031062699963513296,
+          "max": 0.00031062699963513296,
+          "sum": 0.0019694169986905763
+        },
+        "ack_to_next_source_s": {
+          "count": 14,
+          "min": 0.0464157950009394,
+          "mean": 0.11773737249989479,
+          "p50": 0.11762013099996693,
+          "p90": 0.17466810199948668,
+          "p95": 0.18148724999991828,
+          "p99": 0.18148724999991828,
+          "max": 0.18148724999991828,
+          "sum": 1.648323214998527
+        },
+        "ack_to_next_observation_ready_s": {
+          "count": 14,
+          "min": 0.1238741149991256,
+          "mean": 0.22240788335706643,
+          "p50": 0.22596180799973808,
+          "p90": 0.2798558499998762,
+          "p95": 0.2884227110007487,
+          "p99": 0.2884227110007487,
+          "max": 0.2884227110007487,
+          "sum": 3.11371036699893
+        }
+      },
+      "execution_prefix_completed": {
+        "ack_to_next_request_s": {
+          "count": 35,
+          "min": 8.006800089788157e-05,
+          "mean": 0.00013155548591125158,
+          "p50": 0.00010869799916690681,
+          "p90": 0.00024303099962708075,
+          "p95": 0.0002614620007079793,
+          "p99": 0.0003489199989417102,
+          "max": 0.0003489199989417102,
+          "sum": 0.004604442006893805
+        },
+        "ack_to_next_source_s": {
+          "count": 35,
+          "min": 0.0013315029991645133,
+          "mean": 0.09369311831443546,
+          "p50": 0.09533460800048488,
+          "p90": 0.1645983989983506,
+          "p95": 0.1887640390013985,
+          "p99": 0.26832396300051187,
+          "max": 0.26832396300051187,
+          "sum": 3.279259141005241
+        },
+        "ack_to_next_observation_ready_s": {
+          "count": 35,
+          "min": 0.15187790900017717,
+          "mean": 0.21607954337154556,
+          "p50": 0.22013171600156056,
+          "p90": 0.2473710009999195,
+          "p95": 0.2517736249992595,
+          "p99": 0.3642563390003488,
+          "max": 0.3642563390003488,
+          "sum": 7.562784018004095
+        }
+      }
+    }
+  },
+  "gripper_distributions_s": {
+    "submit_to_rpc_issue_s": {
+      "count": 14,
+      "min": 0.17203002200039919,
+      "mean": 0.17595630057179992,
+      "p50": 0.17545114900076442,
+      "p90": 0.1788035369991121,
+      "p95": 0.1789510540002084,
+      "p99": 0.1789510540002084,
+      "max": 0.1789510540002084,
+      "sum": 2.463388208005199
+    },
+    "rpc_elapsed_s": {
+      "count": 14,
+      "min": 0.014021832001162693,
+      "mean": 0.017336138357027915,
+      "p50": 0.01726372199937032,
+      "p90": 0.020939666999765905,
+      "p95": 0.023457461000361945,
+      "p99": 0.023457461000361945,
+      "max": 0.023457461000361945,
+      "sum": 0.24270593699839083
+    },
+    "rpc_return_to_ack_s": {
+      "count": 14,
+      "min": 1.274910011999964,
+      "mean": 1.949414892142938,
+      "p50": 2.077379975500662,
+      "p90": 2.285664375000124,
+      "p95": 2.290374905000135,
+      "p99": 2.290374905000135,
+      "max": 2.290374905000135,
+      "sum": 27.29180849000113
+    },
+    "submit_to_ack_s": {
+      "count": 14,
+      "min": 1.4639066660001845,
+      "mean": 2.1427073310717657,
+      "p50": 2.2751028935008435,
+      "p90": 2.4779341379999096,
+      "p95": 2.4888717440007895,
+      "p99": 2.4888717440007895,
+      "max": 2.4888717440007895,
+      "sum": 29.99790263500472
+    },
+    "surrounding_servoj_gap_s": {
+      "count": 14,
+      "min": 1.287257273999785,
+      "mean": 1.963803784070998,
+      "p50": 2.0952946029992745,
+      "p90": 2.2997939659999247,
+      "p95": 2.3077606599999854,
+      "p99": 2.3077606599999854,
+      "max": 2.3077606599999854,
+      "sum": 27.493252976993972
+    },
+    "recorded_completion_to_ack_s": {
+      "count": 1,
+      "min": 0.005608207000477705,
+      "mean": 0.005608207000477705,
+      "p50": 0.005608207000477705,
+      "p90": 0.005608207000477705,
+      "p95": 0.005608207000477705,
+      "p99": 0.005608207000477705,
+      "max": 0.005608207000477705,
+      "sum": 0.005608207000477705
+    },
+    "ack_to_next_request_s": {
+      "count": 14,
+      "min": 9.714500083646271e-05,
+      "mean": 0.0001406726427636126,
+      "p50": 0.00012302049981371965,
+      "p90": 0.00017561099957674742,
+      "p95": 0.00031062699963513296,
+      "p99": 0.00031062699963513296,
+      "max": 0.00031062699963513296,
+      "sum": 0.0019694169986905763
+    },
+    "ack_to_next_source_s": {
+      "count": 14,
+      "min": 0.0464157950009394,
+      "mean": 0.11773737249989479,
+      "p50": 0.11762013099996693,
+      "p90": 0.17466810199948668,
+      "p95": 0.18148724999991828,
+      "p99": 0.18148724999991828,
+      "max": 0.18148724999991828,
+      "sum": 1.648323214998527
+    },
+    "ack_to_next_observation_ready_s": {
+      "count": 14,
+      "min": 0.1238741149991256,
+      "mean": 0.22240788335706643,
+      "p50": 0.22596180799973808,
+      "p90": 0.2798558499998762,
+      "p95": 0.2884227110007487,
+      "p99": 0.2884227110007487,
+      "max": 0.2884227110007487,
+      "sum": 3.11371036699893
+    },
+    "recorded_completion_to_next_request_s": {
+      "count": 1,
+      "min": 0.005723310001485515,
+      "mean": 0.005723310001485515,
+      "p50": 0.005723310001485515,
+      "p90": 0.005723310001485515,
+      "p95": 0.005723310001485515,
+      "p99": 0.005723310001485515,
+      "max": 0.005723310001485515,
+      "sum": 0.005723310001485515
+    },
+    "recorded_completion_to_next_source_s": {
+      "count": 1,
+      "min": 0.09299494600054459,
+      "mean": 0.09299494600054459,
+      "p50": 0.09299494600054459,
+      "p90": 0.09299494600054459,
+      "p95": 0.09299494600054459,
+      "p99": 0.09299494600054459,
+      "max": 0.09299494600054459,
+      "sum": 0.09299494600054459
+    },
+    "recorded_completion_to_next_observation_ready_s": {
+      "count": 1,
+      "min": 0.18173700800070947,
+      "mean": 0.18173700800070947,
+      "p50": 0.18173700800070947,
+      "p90": 0.18173700800070947,
+      "p95": 0.18173700800070947,
+      "p99": 0.18173700800070947,
+      "max": 0.18173700800070947,
+      "sum": 0.18173700800070947
+    },
+    "recorded_rpc_return_to_completion_s": {
+      "count": 1,
+      "min": 2.0420445929994457,
+      "mean": 2.0420445929994457,
+      "p50": 2.0420445929994457,
+      "p90": 2.0420445929994457,
+      "p95": 2.0420445929994457,
+      "p99": 2.0420445929994457,
+      "max": 2.0420445929994457,
+      "sum": 2.0420445929994457
+    },
+    "completion_wait_after_rpc_upper_bound_s": {
+      "count": 14,
+      "min": 1.2686807570007659,
+      "mean": 1.9446356870713706,
+      "p50": 2.07296304349984,
+      "p90": 2.280890793001163,
+      "p95": 2.2830472419991565,
+      "p99": 2.2830472419991565,
+      "max": 2.2830472419991565,
+      "sum": 27.22489961899919
+    }
+  },
+  "move_gripper": [
+    {
+      "number": 1,
+      "wire_sequence": 70,
+      "target_sequence": 2,
+      "delivery_token": 3,
+      "request_id": "2735fca88c3f4cdfa906dd2da9936b81",
+      "action_index": 2,
+      "target_percent": 76,
+      "submitted_monotonic": 9984.502365298,
+      "rpc_issued_monotonic": 9984.680760182,
+      "rpc_returned_monotonic": 9984.695078568,
+      "rpc_callback_monotonic": 9984.69533355,
+      "rpc_return_code": 0,
+      "rpc_error": null,
+      "acknowledged_monotonic": 9986.768033846,
+      "submit_to_rpc_issue_s": 0.17839488400022674,
+      "rpc_elapsed_s": 0.014318386000013561,
+      "rpc_return_to_ack_s": 2.0729552779994265,
+      "submit_to_ack_s": 2.2656685479996668,
+      "previous_servoj_returned_monotonic": 9984.679546963,
+      "next_servoj_issued_monotonic": 9986.76261796,
+      "surrounding_servoj_gap_s": 2.083070996999595,
+      "completion_detection_monotonic_bounds": [
+        9984.695078568,
+        9986.76261796
+      ],
+      "completion_wait_after_rpc_s_bounds": [
+        0.0,
+        2.067539391999162
+      ],
+      "recorded_completion_feedback": null,
+      "recorded_rpc_return_to_completion_s": null,
+      "recorded_completion_to_ack_s": null,
+      "retirement_target_sequence": 2,
+      "fresh_prediction_observation": {
+        "observation_source_monotonic": 9986.904326896,
+        "gripper_position_percent": 76.0,
+        "valid": true,
+        "request_id": "6eed620361724de18d9601b74d2e2abb",
+        "observation_kind": "request"
+      },
+      "first_valid_post_ack_prediction_observation": {
+        "observation_source_monotonic": 9986.904326896,
+        "gripper_position_percent": 76.0,
+        "valid": true,
+        "request_id": "6eed620361724de18d9601b74d2e2abb",
+        "observation_kind": "request"
+      },
+      "next_request_id": "6eed620361724de18d9601b74d2e2abb",
+      "next_requested_monotonic": 9986.768134303,
+      "next_source_monotonic": 9986.904326896,
+      "next_observation_after_monotonic": 9986.768033846,
+      "next_observation_ready_monotonic": 9986.9838737,
+      "ack_to_next_request_s": 0.00010045700037153438,
+      "recorded_completion_to_next_request_s": null,
+      "completion_to_next_request_s_bounds": [
+        0.00551634300063597,
+        2.073055734999798
+      ],
+      "ack_to_next_source_s": 0.1362930499999493,
+      "recorded_completion_to_next_source_s": null,
+      "completion_to_next_source_s_bounds": [
+        0.14170893600021373,
+        2.2092483279993758
+      ],
+      "ack_to_next_observation_ready_s": 0.21583985399956873,
+      "recorded_completion_to_next_observation_ready_s": null,
+      "completion_to_next_observation_ready_s_bounds": [
+        0.22125573999983317,
+        2.288795131998995
+      ]
+    },
+    {
+      "number": 2,
+      "wire_sequence": 227,
+      "target_sequence": 4,
+      "delivery_token": 5,
+      "request_id": "6eed620361724de18d9601b74d2e2abb",
+      "action_index": 1,
+      "target_percent": 79,
+      "submitted_monotonic": 9987.835253602,
+      "rpc_issued_monotonic": 9988.010136051,
+      "rpc_returned_monotonic": 9988.024250256,
+      "rpc_callback_monotonic": 9988.02449216,
+      "rpc_return_code": 0,
+      "rpc_error": null,
+      "acknowledged_monotonic": 9989.299160268,
+      "submit_to_rpc_issue_s": 0.1748824490005063,
+      "rpc_elapsed_s": 0.014114204999714275,
+      "rpc_return_to_ack_s": 1.274910011999964,
+      "submit_to_ack_s": 1.4639066660001845,
+      "previous_servoj_returned_monotonic": 9988.005673739,
+      "next_servoj_issued_monotonic": 9989.292931013,
+      "surrounding_servoj_gap_s": 1.287257273999785,
+      "completion_detection_monotonic_bounds": [
+        9988.024250256,
+        9989.292931013
+      ],
+      "completion_wait_after_rpc_s_bounds": [
+        0.0,
+        1.2686807570007659
+      ],
+      "recorded_completion_feedback": null,
+      "recorded_rpc_return_to_completion_s": null,
+      "recorded_completion_to_ack_s": null,
+      "retirement_target_sequence": 4,
+      "fresh_prediction_observation": {
+        "observation_source_monotonic": 9989.401797679,
+        "gripper_position_percent": 79.0,
+        "valid": true,
+        "request_id": "732e545563ad4d55869350445808adbf",
+        "observation_kind": "request"
+      },
+      "first_valid_post_ack_prediction_observation": {
+        "observation_source_monotonic": 9989.401797679,
+        "gripper_position_percent": 79.0,
+        "valid": true,
+        "request_id": "732e545563ad4d55869350445808adbf",
+        "observation_kind": "request"
+      },
+      "next_request_id": "732e545563ad4d55869350445808adbf",
+      "next_requested_monotonic": 9989.299271457,
+      "next_source_monotonic": 9989.401797679,
+      "next_observation_after_monotonic": 9989.299160268,
+      "next_observation_ready_monotonic": 9989.489808711,
+      "ack_to_next_request_s": 0.00011118899965367746,
+      "recorded_completion_to_next_request_s": null,
+      "completion_to_next_request_s_bounds": [
+        0.006340443998851697,
+        1.2750212009996176
+      ],
+      "ack_to_next_source_s": 0.10263741100061452,
+      "recorded_completion_to_next_source_s": null,
+      "completion_to_next_source_s_bounds": [
+        0.10886666599981254,
+        1.3775474230005784
+      ],
+      "ack_to_next_observation_ready_s": 0.1906484430001001,
+      "recorded_completion_to_next_observation_ready_s": null,
+      "completion_to_next_observation_ready_s_bounds": [
+        0.1968776979992981,
+        1.465558455000064
+      ]
+    },
+    {
+      "number": 3,
+      "wire_sequence": 350,
+      "target_sequence": 5,
+      "delivery_token": 6,
+      "request_id": "732e545563ad4d55869350445808adbf",
+      "action_index": 0,
+      "target_percent": 90,
+      "submitted_monotonic": 9990.087053573,
+      "rpc_issued_monotonic": 9990.265361454,
+      "rpc_returned_monotonic": 9990.279383286,
+      "rpc_callback_monotonic": 9990.279684681,
+      "rpc_return_code": 0,
+      "rpc_error": null,
+      "acknowledged_monotonic": 9991.930077224,
+      "submit_to_rpc_issue_s": 0.17830788100036443,
+      "rpc_elapsed_s": 0.014021832001162693,
+      "rpc_return_to_ack_s": 1.6506939379996766,
+      "submit_to_ack_s": 1.8430236510012037,
+      "previous_servoj_returned_monotonic": 9990.263774529,
+      "next_servoj_issued_monotonic": 9991.925180058,
+      "surrounding_servoj_gap_s": 1.6614055290010583,
+      "completion_detection_monotonic_bounds": [
+        9990.279383286,
+        9991.925180058
+      ],
+      "completion_wait_after_rpc_s_bounds": [
+        0.0,
+        1.6457967719998123
+      ],
+      "recorded_completion_feedback": null,
+      "recorded_rpc_return_to_completion_s": null,
+      "recorded_completion_to_ack_s": null,
+      "retirement_target_sequence": 5,
+      "fresh_prediction_observation": {
+        "observation_source_monotonic": 9991.999375585,
+        "gripper_position_percent": 90.0,
+        "valid": true,
+        "request_id": "b37c6f975d4a44b3a80020416f949c98",
+        "observation_kind": "request"
+      },
+      "first_valid_post_ack_prediction_observation": {
+        "observation_source_monotonic": 9991.999375585,
+        "gripper_position_percent": 90.0,
+        "valid": true,
+        "request_id": "b37c6f975d4a44b3a80020416f949c98",
+        "observation_kind": "request"
+      },
+      "next_request_id": "b37c6f975d4a44b3a80020416f949c98",
+      "next_requested_monotonic": 9991.930246176,
+      "next_source_monotonic": 9991.999375585,
+      "next_observation_after_monotonic": 9991.930077224,
+      "next_observation_ready_monotonic": 9992.162520794,
+      "ack_to_next_request_s": 0.00016895199951250106,
+      "recorded_completion_to_next_request_s": null,
+      "completion_to_next_request_s_bounds": [
+        0.005066117999376729,
+        1.650862889999189
+      ],
+      "ack_to_next_source_s": 0.06929836099880049,
+      "recorded_completion_to_next_source_s": null,
+      "completion_to_next_source_s_bounds": [
+        0.07419552699866472,
+        1.719992298998477
+      ],
+      "ack_to_next_observation_ready_s": 0.2324435699993046,
+      "recorded_completion_to_next_observation_ready_s": null,
+      "completion_to_next_observation_ready_s_bounds": [
+        0.23734073599916883,
+        1.8831375079989812
+      ]
+    },
+    {
+      "number": 4,
+      "wire_sequence": 477,
+      "target_sequence": 6,
+      "delivery_token": 7,
+      "request_id": "b37c6f975d4a44b3a80020416f949c98",
+      "action_index": 0,
+      "target_percent": 98,
+      "submitted_monotonic": 9992.757936469,
+      "rpc_issued_monotonic": 9992.929966491,
+      "rpc_returned_monotonic": 9992.944487857,
+      "rpc_callback_monotonic": 9992.944763161,
+      "rpc_return_code": 0,
+      "rpc_error": null,
+      "acknowledged_monotonic": 9994.450776655,
+      "submit_to_rpc_issue_s": 0.17203002200039919,
+      "rpc_elapsed_s": 0.01452136599982623,
+      "rpc_return_to_ack_s": 1.5062887980002415,
+      "submit_to_ack_s": 1.692840186000467,
+      "previous_servoj_returned_monotonic": 9992.928278167,
+      "next_servoj_issued_monotonic": 9994.448866563,
+      "surrounding_servoj_gap_s": 1.5205883959988569,
+      "completion_detection_monotonic_bounds": [
+        9992.944487857,
+        9994.448866563
+      ],
+      "completion_wait_after_rpc_s_bounds": [
+        0.0,
+        1.5043787060003524
+      ],
+      "recorded_completion_feedback": null,
+      "recorded_rpc_return_to_completion_s": null,
+      "recorded_completion_to_ack_s": null,
+      "retirement_target_sequence": 6,
+      "fresh_prediction_observation": {
+        "observation_source_monotonic": 9994.49719245,
+        "gripper_position_percent": 98.0,
+        "valid": true,
+        "request_id": "b53d4ad248134e1ca29d211e544f93ee",
+        "observation_kind": "request"
+      },
+      "first_valid_post_ack_prediction_observation": {
+        "observation_source_monotonic": 9994.49719245,
+        "gripper_position_percent": 98.0,
+        "valid": true,
+        "request_id": "b53d4ad248134e1ca29d211e544f93ee",
+        "observation_kind": "request"
+      },
+      "next_request_id": "b53d4ad248134e1ca29d211e544f93ee",
+      "next_requested_monotonic": 9994.450910078,
+      "next_source_monotonic": 9994.49719245,
+      "next_observation_after_monotonic": 9994.450776655,
+      "next_observation_ready_monotonic": 9994.66021134,
+      "ack_to_next_request_s": 0.00013342300007934682,
+      "recorded_completion_to_next_request_s": null,
+      "completion_to_next_request_s_bounds": [
+        0.0020435149999684654,
+        1.5064222210003209
+      ],
+      "ack_to_next_source_s": 0.0464157950009394,
+      "recorded_completion_to_next_source_s": null,
+      "completion_to_next_source_s_bounds": [
+        0.048325887000828516,
+        1.552704593001181
+      ],
+      "ack_to_next_observation_ready_s": 0.20943468500081508,
+      "recorded_completion_to_next_observation_ready_s": null,
+      "completion_to_next_observation_ready_s_bounds": [
+        0.2113447770007042,
+        1.7157234830010566
+      ]
+    },
+    {
+      "number": 5,
+      "wire_sequence": 607,
+      "target_sequence": 7,
+      "delivery_token": 8,
+      "request_id": "b53d4ad248134e1ca29d211e544f93ee",
+      "action_index": 0,
+      "target_percent": 100,
+      "submitted_monotonic": 9995.298404594,
+      "rpc_issued_monotonic": 9995.477355648,
+      "rpc_returned_monotonic": 9995.491628685,
+      "rpc_callback_monotonic": 9995.491969351,
+      "rpc_return_code": 0,
+      "rpc_error": null,
+      "acknowledged_monotonic": 9996.769712392,
+      "submit_to_rpc_issue_s": 0.1789510540002084,
+      "rpc_elapsed_s": 0.014273037000748445,
+      "rpc_return_to_ack_s": 1.2780837070004054,
+      "submit_to_ack_s": 1.4713077980013622,
+      "previous_servoj_returned_monotonic": 9995.475969568,
+      "next_servoj_issued_monotonic": 9996.763651726,
+      "surrounding_servoj_gap_s": 1.2876821579993702,
+      "completion_detection_monotonic_bounds": [
+        9995.491628685,
+        9996.763651726
+      ],
+      "completion_wait_after_rpc_s_bounds": [
+        0.0,
+        1.2720230409995565
+      ],
+      "recorded_completion_feedback": null,
+      "recorded_rpc_return_to_completion_s": null,
+      "recorded_completion_to_ack_s": null,
+      "retirement_target_sequence": 7,
+      "fresh_prediction_observation": {
+        "observation_source_monotonic": 9996.895202181,
+        "gripper_position_percent": 100.0,
+        "valid": true,
+        "request_id": "e6a9ec840a7f4e47867389d033d076f1",
+        "observation_kind": "request"
+      },
+      "first_valid_post_ack_prediction_observation": {
+        "observation_source_monotonic": 9996.895202181,
+        "gripper_position_percent": 100.0,
+        "valid": true,
+        "request_id": "e6a9ec840a7f4e47867389d033d076f1",
+        "observation_kind": "request"
+      },
+      "next_request_id": "e6a9ec840a7f4e47867389d033d076f1",
+      "next_requested_monotonic": 9996.769823907,
+      "next_source_monotonic": 9996.895202181,
+      "next_observation_after_monotonic": 9996.769712392,
+      "next_observation_ready_monotonic": 9996.989192438,
+      "ack_to_next_request_s": 0.00011151499893458094,
+      "recorded_completion_to_next_request_s": null,
+      "completion_to_next_request_s_bounds": [
+        0.00617218099978345,
+        1.27819522199934
+      ],
+      "ack_to_next_source_s": 0.12548978899940266,
+      "recorded_completion_to_next_source_s": null,
+      "completion_to_next_source_s_bounds": [
+        0.13155045500025153,
+        1.403573495999808
+      ],
+      "ack_to_next_observation_ready_s": 0.21948004600017157,
+      "recorded_completion_to_next_observation_ready_s": null,
+      "completion_to_next_observation_ready_s_bounds": [
+        0.22554071200102044,
+        1.497563753000577
+      ]
+    },
+    {
+      "number": 6,
+      "wire_sequence": 1255,
+      "target_sequence": 17,
+      "delivery_token": 18,
+      "request_id": "b8e526b1a26248e5a685ca0c047a0197",
+      "action_index": 0,
+      "target_percent": 76,
+      "submitted_monotonic": 10001.761681376,
+      "rpc_issued_monotonic": 10001.936731239,
+      "rpc_returned_monotonic": 10001.953935262,
+      "rpc_callback_monotonic": 10001.954244046,
+      "rpc_return_code": 0,
+      "rpc_error": null,
+      "acknowledged_monotonic": 10004.055362031,
+      "submit_to_rpc_issue_s": 0.17504986300082237,
+      "rpc_elapsed_s": 0.017204022999067092,
+      "rpc_return_to_ack_s": 2.101426769000682,
+      "submit_to_ack_s": 2.2936806550005713,
+      "previous_servoj_returned_monotonic": 10001.935279425,
+      "next_servoj_issued_monotonic": 10004.049299258,
+      "surrounding_servoj_gap_s": 2.1140198329994746,
+      "completion_detection_monotonic_bounds": [
+        10001.953935262,
+        10004.049299258
+      ],
+      "completion_wait_after_rpc_s_bounds": [
+        0.0,
+        2.095363996000742
+      ],
+      "recorded_completion_feedback": null,
+      "recorded_rpc_return_to_completion_s": null,
+      "recorded_completion_to_ack_s": null,
+      "retirement_target_sequence": 17,
+      "fresh_prediction_observation": {
+        "observation_source_monotonic": 10004.188631862,
+        "gripper_position_percent": 76.0,
+        "valid": true,
+        "request_id": "0092d8a2fa384f9a9b4354e8ed179350",
+        "observation_kind": "request"
+      },
+      "first_valid_post_ack_prediction_observation": {
+        "observation_source_monotonic": 10004.188631862,
+        "gripper_position_percent": 76.0,
+        "valid": true,
+        "request_id": "0092d8a2fa384f9a9b4354e8ed179350",
+        "observation_kind": "request"
+      },
+      "next_request_id": "0092d8a2fa384f9a9b4354e8ed179350",
+      "next_requested_monotonic": 10004.055479775,
+      "next_source_monotonic": 10004.188631862,
+      "next_observation_after_monotonic": 10004.055362031,
+      "next_observation_ready_monotonic": 10004.325092366,
+      "ack_to_next_request_s": 0.00011774399899877608,
+      "recorded_completion_to_next_request_s": null,
+      "completion_to_next_request_s_bounds": [
+        0.006180516998938401,
+        2.1015445129996806
+      ],
+      "ack_to_next_source_s": 0.13326983099977951,
+      "recorded_completion_to_next_source_s": null,
+      "completion_to_next_source_s_bounds": [
+        0.13933260399971914,
+        2.2346966000004613
+      ],
+      "ack_to_next_observation_ready_s": 0.26973033499962185,
+      "recorded_completion_to_next_observation_ready_s": null,
+      "completion_to_next_observation_ready_s_bounds": [
+        0.27579310799956147,
+        2.3711571040003037
+      ]
+    },
+    {
+      "number": 7,
+      "wire_sequence": 1739,
+      "target_sequence": 25,
+      "delivery_token": 26,
+      "request_id": "7a9fc2a3226c4f71a170a15d357f336e",
+      "action_index": 1,
+      "target_percent": 100,
+      "submitted_monotonic": 10007.734994559,
+      "rpc_issued_monotonic": 10007.909754291,
+      "rpc_returned_monotonic": 10007.927264322,
+      "rpc_callback_monotonic": 10007.927616851,
+      "rpc_return_code": 0,
+      "rpc_error": null,
+      "acknowledged_monotonic": 10010.212928697,
+      "submit_to_rpc_issue_s": 0.17475973200089356,
+      "rpc_elapsed_s": 0.017510030998892034,
+      "rpc_return_to_ack_s": 2.285664375000124,
+      "submit_to_ack_s": 2.4779341379999096,
+      "previous_servoj_returned_monotonic": 10007.908361149,
+      "next_servoj_issued_monotonic": 10010.208155115,
+      "surrounding_servoj_gap_s": 2.2997939659999247,
+      "completion_detection_monotonic_bounds": [
+        10007.927264322,
+        10010.208155115
+      ],
+      "completion_wait_after_rpc_s_bounds": [
+        0.0,
+        2.280890793001163
+      ],
+      "recorded_completion_feedback": null,
+      "recorded_rpc_return_to_completion_s": null,
+      "recorded_completion_to_ack_s": null,
+      "retirement_target_sequence": 25,
+      "fresh_prediction_observation": {
+        "observation_source_monotonic": 10010.382804114,
+        "gripper_position_percent": 100.0,
+        "valid": true,
+        "request_id": "66edd81b94c347abb0449675045cdae3",
+        "observation_kind": "request"
+      },
+      "first_valid_post_ack_prediction_observation": {
+        "observation_source_monotonic": 10010.382804114,
+        "gripper_position_percent": 100.0,
+        "valid": true,
+        "request_id": "66edd81b94c347abb0449675045cdae3",
+        "observation_kind": "request"
+      },
+      "next_request_id": "66edd81b94c347abb0449675045cdae3",
+      "next_requested_monotonic": 10010.21306778,
+      "next_source_monotonic": 10010.382804114,
+      "next_observation_after_monotonic": 10010.212928697,
+      "next_observation_ready_monotonic": 10010.492784547,
+      "ack_to_next_request_s": 0.00013908300024922937,
+      "recorded_completion_to_next_request_s": null,
+      "completion_to_next_request_s_bounds": [
+        0.004912664999210392,
+        2.285803458000373
+      ],
+      "ack_to_next_source_s": 0.16987541700109432,
+      "recorded_completion_to_next_source_s": null,
+      "completion_to_next_source_s_bounds": [
+        0.17464899900005548,
+        2.4555397920012183
+      ],
+      "ack_to_next_observation_ready_s": 0.2798558499998762,
+      "recorded_completion_to_next_observation_ready_s": null,
+      "completion_to_next_observation_ready_s_bounds": [
+        0.2846294319988374,
+        2.565520225
+      ]
+    },
+    {
+      "number": 8,
+      "wire_sequence": 2540,
+      "target_sequence": 38,
+      "delivery_token": 39,
+      "request_id": "9245b752701942bcb2fd5230a7128a85",
+      "action_index": 0,
+      "target_percent": 76,
+      "submitted_monotonic": 10016.427066608,
+      "rpc_issued_monotonic": 10016.605127081,
+      "rpc_returned_monotonic": 10016.625779613,
+      "rpc_callback_monotonic": 10016.626080209,
+      "rpc_return_code": 0,
+      "rpc_error": null,
+      "acknowledged_monotonic": 10018.705582938,
+      "submit_to_rpc_issue_s": 0.1780604730010964,
+      "rpc_elapsed_s": 0.020652531999076018,
+      "rpc_return_to_ack_s": 2.079803325001194,
+      "submit_to_ack_s": 2.2785163300013664,
+      "previous_servoj_returned_monotonic": 10016.603325615,
+      "next_servoj_issued_monotonic": 10018.70022223,
+      "surrounding_servoj_gap_s": 2.096896614999423,
+      "completion_detection_monotonic_bounds": [
+        10016.625779613,
+        10018.70022223
+      ],
+      "completion_wait_after_rpc_s_bounds": [
+        0.0,
+        2.0744426170003862
+      ],
+      "recorded_completion_feedback": null,
+      "recorded_rpc_return_to_completion_s": null,
+      "recorded_completion_to_ack_s": null,
+      "retirement_target_sequence": 38,
+      "fresh_prediction_observation": {
+        "observation_source_monotonic": 10018.775272485,
+        "gripper_position_percent": 76.0,
+        "valid": true,
+        "request_id": "a5fb3ac4ad844e40b4aa42c5b9bb62f5",
+        "observation_kind": "request"
+      },
+      "first_valid_post_ack_prediction_observation": {
+        "observation_source_monotonic": 10018.775272485,
+        "gripper_position_percent": 76.0,
+        "valid": true,
+        "request_id": "a5fb3ac4ad844e40b4aa42c5b9bb62f5",
+        "observation_kind": "request"
+      },
+      "next_request_id": "a5fb3ac4ad844e40b4aa42c5b9bb62f5",
+      "next_requested_monotonic": 10018.705706376,
+      "next_source_monotonic": 10018.775272485,
+      "next_observation_after_monotonic": 10018.705582938,
+      "next_observation_ready_monotonic": 10018.829457053,
+      "ack_to_next_request_s": 0.0001234379997185897,
+      "recorded_completion_to_next_request_s": null,
+      "completion_to_next_request_s_bounds": [
+        0.00548414600052638,
+        2.0799267630009126
+      ],
+      "ack_to_next_source_s": 0.0696895469991432,
+      "recorded_completion_to_next_source_s": null,
+      "completion_to_next_source_s_bounds": [
+        0.075050254999951,
+        2.1494928720003372
+      ],
+      "ack_to_next_observation_ready_s": 0.1238741149991256,
+      "recorded_completion_to_next_observation_ready_s": null,
+      "completion_to_next_observation_ready_s_bounds": [
+        0.12923482299993339,
+        2.2036774400003196
+      ]
+    },
+    {
+      "number": 9,
+      "wire_sequence": 3153,
+      "target_sequence": 48,
+      "delivery_token": 49,
+      "request_id": "046f570bc32e42cc8d39fb1d548de2fb",
+      "action_index": 0,
+      "target_percent": 100,
+      "submitted_monotonic": 10023.41994506,
+      "rpc_issued_monotonic": 10023.592683237,
+      "rpc_returned_monotonic": 10023.610006658,
+      "rpc_callback_monotonic": 10023.610247549,
+      "rpc_return_code": 0,
+      "rpc_error": null,
+      "acknowledged_monotonic": 10025.882195469,
+      "submit_to_rpc_issue_s": 0.17273817699970095,
+      "rpc_elapsed_s": 0.017323420999673544,
+      "rpc_return_to_ack_s": 2.2721888109990687,
+      "submit_to_ack_s": 2.462250408998443,
+      "previous_servoj_returned_monotonic": 10023.59119924,
+      "next_servoj_issued_monotonic": 10025.876152021,
+      "surrounding_servoj_gap_s": 2.284952780999447,
+      "completion_detection_monotonic_bounds": [
+        10023.610006658,
+        10025.876152021
+      ],
+      "completion_wait_after_rpc_s_bounds": [
+        0.0,
+        2.266145362998941
+      ],
+      "recorded_completion_feedback": null,
+      "recorded_rpc_return_to_completion_s": null,
+      "recorded_completion_to_ack_s": null,
+      "retirement_target_sequence": 48,
+      "fresh_prediction_observation": {
+        "observation_source_monotonic": 10025.991945942,
+        "gripper_position_percent": 100.0,
+        "valid": true,
+        "request_id": "94ad1f5b988d4757aff50c20e51db9b0",
+        "observation_kind": "request"
+      },
+      "first_valid_post_ack_prediction_observation": {
+        "observation_source_monotonic": 10025.991945942,
+        "gripper_position_percent": 100.0,
+        "valid": true,
+        "request_id": "94ad1f5b988d4757aff50c20e51db9b0",
+        "observation_kind": "request"
+      },
+      "next_request_id": "94ad1f5b988d4757aff50c20e51db9b0",
+      "next_requested_monotonic": 10025.882318072,
+      "next_source_monotonic": 10025.991945942,
+      "next_observation_after_monotonic": 10025.882195469,
+      "next_observation_ready_monotonic": 10026.17061818,
+      "ack_to_next_request_s": 0.0001226029999088496,
+      "recorded_completion_to_next_request_s": null,
+      "completion_to_next_request_s_bounds": [
+        0.006166051000036532,
+        2.2723114139989775
+      ],
+      "ack_to_next_source_s": 0.1097504730005312,
+      "recorded_completion_to_next_source_s": null,
+      "completion_to_next_source_s_bounds": [
+        0.11579392100065888,
+        2.3819392839996
+      ],
+      "ack_to_next_observation_ready_s": 0.2884227110007487,
+      "recorded_completion_to_next_observation_ready_s": null,
+      "completion_to_next_observation_ready_s_bounds": [
+        0.29446615900087636,
+        2.5606115219998173
+      ]
+    },
+    {
+      "number": 10,
+      "wire_sequence": 4118,
+      "target_sequence": 64,
+      "delivery_token": 65,
+      "request_id": "cab49a3c5a0f4a88ab49eb81d8b5d26a",
+      "action_index": 0,
+      "target_percent": 76,
+      "submitted_monotonic": 10033.408794035,
+      "rpc_issued_monotonic": 10033.585279521,
+      "rpc_returned_monotonic": 10033.605526866,
+      "rpc_callback_monotonic": 10033.605798663,
+      "rpc_return_code": 0,
+      "rpc_error": null,
+      "acknowledged_monotonic": 10035.680483492,
+      "submit_to_rpc_issue_s": 0.17648548599936476,
+      "rpc_elapsed_s": 0.02024734500082559,
+      "rpc_return_to_ack_s": 2.07495662600013,
+      "submit_to_ack_s": 2.2716894570003205,
+      "previous_servoj_returned_monotonic": 10033.583317745,
+      "next_servoj_issued_monotonic": 10035.677010336,
+      "surrounding_servoj_gap_s": 2.093692590999126,
+      "completion_detection_monotonic_bounds": [
+        10033.605526866,
+        10035.677010336
+      ],
+      "completion_wait_after_rpc_s_bounds": [
+        0.0,
+        2.0714834699992934
+      ],
+      "recorded_completion_feedback": null,
+      "recorded_rpc_return_to_completion_s": null,
+      "recorded_completion_to_ack_s": null,
+      "retirement_target_sequence": 64,
+      "fresh_prediction_observation": {
+        "observation_source_monotonic": 10035.760441752,
+        "gripper_position_percent": 76.0,
+        "valid": true,
+        "request_id": "6d1f7910e86c4aa88e66317f899e5baf",
+        "observation_kind": "request"
+      },
+      "first_valid_post_ack_prediction_observation": {
+        "observation_source_monotonic": 10035.760441752,
+        "gripper_position_percent": 76.0,
+        "valid": true,
+        "request_id": "6d1f7910e86c4aa88e66317f899e5baf",
+        "observation_kind": "request"
+      },
+      "next_request_id": "6d1f7910e86c4aa88e66317f899e5baf",
+      "next_requested_monotonic": 10035.680626019,
+      "next_source_monotonic": 10035.760441752,
+      "next_observation_after_monotonic": 10035.680483492,
+      "next_observation_ready_monotonic": 10035.837727168,
+      "ack_to_next_request_s": 0.00014252700020733755,
+      "recorded_completion_to_next_request_s": null,
+      "completion_to_next_request_s_bounds": [
+        0.00361568300104409,
+        2.0750991530003375
+      ],
+      "ack_to_next_source_s": 0.07995825999933004,
+      "recorded_completion_to_next_source_s": null,
+      "completion_to_next_source_s_bounds": [
+        0.08343141600016679,
+        2.1549148859994602
+      ],
+      "ack_to_next_observation_ready_s": 0.15724367599977995,
+      "recorded_completion_to_next_observation_ready_s": null,
+      "completion_to_next_observation_ready_s_bounds": [
+        0.1607168320006167,
+        2.23220030199991
+      ]
+    },
+    {
+      "number": 11,
+      "wire_sequence": 5074,
+      "target_sequence": 80,
+      "delivery_token": 81,
+      "request_id": "9c2927e7eaec4b5380c49098fc32ef45",
+      "action_index": 0,
+      "target_percent": 100,
+      "submitted_monotonic": 10043.139976116,
+      "rpc_issued_monotonic": 10043.314008953,
+      "rpc_returned_monotonic": 10043.33494862,
+      "rpc_callback_monotonic": 10043.335246052,
+      "rpc_return_code": 0,
+      "rpc_error": null,
+      "acknowledged_monotonic": 10045.590687483,
+      "submit_to_rpc_issue_s": 0.17403283700150496,
+      "rpc_elapsed_s": 0.020939666999765905,
+      "rpc_return_to_ack_s": 2.255738862999351,
+      "submit_to_ack_s": 2.450711367000622,
+      "previous_servoj_returned_monotonic": 10043.311995534,
+      "next_servoj_issued_monotonic": 10045.587311037,
+      "surrounding_servoj_gap_s": 2.2753155029986374,
+      "completion_detection_monotonic_bounds": [
+        10043.33494862,
+        10045.587311037
+      ],
+      "completion_wait_after_rpc_s_bounds": [
+        0.0,
+        2.252362416998949
+      ],
+      "recorded_completion_feedback": null,
+      "recorded_rpc_return_to_completion_s": null,
+      "recorded_completion_to_ack_s": null,
+      "retirement_target_sequence": 80,
+      "fresh_prediction_observation": {
+        "observation_source_monotonic": 10045.752790673,
+        "gripper_position_percent": 100.0,
+        "valid": true,
+        "request_id": "70aaeec347d04b8ea5bd7520c1dc81bb",
+        "observation_kind": "request"
+      },
+      "first_valid_post_ack_prediction_observation": {
+        "observation_source_monotonic": 10045.752790673,
+        "gripper_position_percent": 100.0,
+        "valid": true,
+        "request_id": "70aaeec347d04b8ea5bd7520c1dc81bb",
+        "observation_kind": "request"
+      },
+      "next_request_id": "70aaeec347d04b8ea5bd7520c1dc81bb",
+      "next_requested_monotonic": 10045.590784628,
+      "next_source_monotonic": 10045.752790673,
+      "next_observation_after_monotonic": 10045.590687483,
+      "next_observation_ready_monotonic": 10045.840850279,
+      "ack_to_next_request_s": 9.714500083646271e-05,
+      "recorded_completion_to_next_request_s": null,
+      "completion_to_next_request_s_bounds": [
+        0.003473591001238674,
+        2.2558360080001876
+      ],
+      "ack_to_next_source_s": 0.1621031899994705,
+      "recorded_completion_to_next_source_s": null,
+      "completion_to_next_source_s_bounds": [
+        0.1654796359998727,
+        2.4178420529988216
+      ],
+      "ack_to_next_observation_ready_s": 0.25016279600095004,
+      "recorded_completion_to_next_observation_ready_s": null,
+      "completion_to_next_observation_ready_s_bounds": [
+        0.25353924200135225,
+        2.505901659000301
+      ]
+    },
+    {
+      "number": 12,
+      "wire_sequence": 5583,
+      "target_sequence": 89,
+      "delivery_token": 90,
+      "request_id": "13edbb2d7b864cfdade60f670597fa24",
+      "action_index": 2,
+      "target_percent": 76,
+      "submitted_monotonic": 10049.470122774,
+      "rpc_issued_monotonic": 10049.648926311,
+      "rpc_returned_monotonic": 10049.663282466,
+      "rpc_callback_monotonic": 10049.663591542,
+      "rpc_return_code": 0,
+      "rpc_error": null,
+      "acknowledged_monotonic": 10051.764352749,
+      "submit_to_rpc_issue_s": 0.1788035369991121,
+      "rpc_elapsed_s": 0.01435615499940468,
+      "rpc_return_to_ack_s": 2.1010702830008086,
+      "submit_to_ack_s": 2.2942299749993253,
+      "previous_servoj_returned_monotonic": 10049.646449516,
+      "next_servoj_issued_monotonic": 10051.763873537,
+      "surrounding_servoj_gap_s": 2.117424021000261,
+      "completion_detection_monotonic_bounds": [
+        10049.663282466,
+        10051.763873537
+      ],
+      "completion_wait_after_rpc_s_bounds": [
+        0.0,
+        2.100591071000963
+      ],
+      "recorded_completion_feedback": null,
+      "recorded_rpc_return_to_completion_s": null,
+      "recorded_completion_to_ack_s": null,
+      "retirement_target_sequence": 89,
+      "fresh_prediction_observation": {
+        "observation_source_monotonic": 10051.945839999,
+        "gripper_position_percent": 76.0,
+        "valid": true,
+        "request_id": "816af116985a4d3588d6ba725c0f48bc",
+        "observation_kind": "request"
+      },
+      "first_valid_post_ack_prediction_observation": {
+        "observation_source_monotonic": 10051.945839999,
+        "gripper_position_percent": 76.0,
+        "valid": true,
+        "request_id": "816af116985a4d3588d6ba725c0f48bc",
+        "observation_kind": "request"
+      },
+      "next_request_id": "816af116985a4d3588d6ba725c0f48bc",
+      "next_requested_monotonic": 10051.76452836,
+      "next_source_monotonic": 10051.945839999,
+      "next_observation_after_monotonic": 10051.764352749,
+      "next_observation_ready_monotonic": 10052.011309331,
+      "ack_to_next_request_s": 0.00017561099957674742,
+      "recorded_completion_to_next_request_s": null,
+      "completion_to_next_request_s_bounds": [
+        0.000654822999422322,
+        2.1012458940003853
+      ],
+      "ack_to_next_source_s": 0.18148724999991828,
+      "recorded_completion_to_next_source_s": null,
+      "completion_to_next_source_s_bounds": [
+        0.18196646199976385,
+        2.282557533000727
+      ],
+      "ack_to_next_observation_ready_s": 0.24695658199925674,
+      "recorded_completion_to_next_observation_ready_s": null,
+      "completion_to_next_observation_ready_s_bounds": [
+        0.24743579399910232,
+        2.3480268650000653
+      ]
+    },
+    {
+      "number": 13,
+      "wire_sequence": 6545,
+      "target_sequence": 105,
+      "delivery_token": 106,
+      "request_id": "e058de73c07240338e57cc8cc55acb04",
+      "action_index": 0,
+      "target_percent": 100,
+      "submitted_monotonic": 10059.273292184,
+      "rpc_issued_monotonic": 10059.448331562,
+      "rpc_returned_monotonic": 10059.471789023,
+      "rpc_callback_monotonic": 10059.472023297,
+      "rpc_return_code": 0,
+      "rpc_error": null,
+      "acknowledged_monotonic": 10061.762163928,
+      "submit_to_rpc_issue_s": 0.17503937800029234,
+      "rpc_elapsed_s": 0.023457461000361945,
+      "rpc_return_to_ack_s": 2.290374905000135,
+      "submit_to_ack_s": 2.4888717440007895,
+      "previous_servoj_returned_monotonic": 10059.447075605,
+      "next_servoj_issued_monotonic": 10061.754836265,
+      "surrounding_servoj_gap_s": 2.3077606599999854,
+      "completion_detection_monotonic_bounds": [
+        10059.471789023,
+        10061.754836265
+      ],
+      "completion_wait_after_rpc_s_bounds": [
+        0.0,
+        2.2830472419991565
+      ],
+      "recorded_completion_feedback": null,
+      "recorded_rpc_return_to_completion_s": null,
+      "recorded_completion_to_ack_s": null,
+      "retirement_target_sequence": 105,
+      "fresh_prediction_observation": {
+        "observation_source_monotonic": 10061.93683203,
+        "gripper_position_percent": 100.0,
+        "valid": true,
+        "request_id": "1584f7e457fd41e1a93734005a4bb2e8",
+        "observation_kind": "request"
+      },
+      "first_valid_post_ack_prediction_observation": {
+        "observation_source_monotonic": 10061.93683203,
+        "gripper_position_percent": 100.0,
+        "valid": true,
+        "request_id": "1584f7e457fd41e1a93734005a4bb2e8",
+        "observation_kind": "request"
+      },
+      "next_request_id": "1584f7e457fd41e1a93734005a4bb2e8",
+      "next_requested_monotonic": 10061.762474555,
+      "next_source_monotonic": 10061.93683203,
+      "next_observation_after_monotonic": 10061.762163928,
+      "next_observation_ready_monotonic": 10062.015652831,
+      "ack_to_next_request_s": 0.00031062699963513296,
+      "recorded_completion_to_next_request_s": null,
+      "completion_to_next_request_s_bounds": [
+        0.007638290000613779,
+        2.2906855319997703
+      ],
+      "ack_to_next_source_s": 0.17466810199948668,
+      "recorded_completion_to_next_source_s": null,
+      "completion_to_next_source_s_bounds": [
+        0.18199576500046533,
+        2.465043006999622
+      ],
+      "ack_to_next_observation_ready_s": 0.2534889029993792,
+      "recorded_completion_to_next_observation_ready_s": null,
+      "completion_to_next_observation_ready_s_bounds": [
+        0.26081656600035785,
+        2.5438638079995144
+      ]
+    },
+    {
+      "number": 14,
+      "wire_sequence": 7174,
+      "target_sequence": 115,
+      "delivery_token": 116,
+      "request_id": "03138523fd444d368f2c6e4af3974f2f",
+      "action_index": 0,
+      "target_percent": 77,
+      "submitted_monotonic": 10066.599537535,
+      "rpc_issued_monotonic": 10066.77538997,
+      "rpc_returned_monotonic": 10066.795156446,
+      "rpc_callback_monotonic": 10066.795444871,
+      "rpc_return_code": 0,
+      "rpc_error": null,
+      "acknowledged_monotonic": 10068.842809246,
+      "submit_to_rpc_issue_s": 0.17585243500070646,
+      "rpc_elapsed_s": 0.019766475999858812,
+      "rpc_return_to_ack_s": 2.0476527999999234,
+      "submit_to_ack_s": 2.2432717110004887,
+      "previous_servoj_returned_monotonic": 10066.773917775,
+      "next_servoj_issued_monotonic": 10068.837310428,
+      "surrounding_servoj_gap_s": 2.0633926529990276,
+      "completion_detection_monotonic_bounds": [
+        10066.795156446,
+        10068.837310428
+      ],
+      "completion_wait_after_rpc_s_bounds": [
+        0.0,
+        2.0421539819999452
+      ],
+      "recorded_completion_feedback": {
+        "target_percent": 77,
+        "position_percent": 77.0,
+        "motiondone": 1,
+        "feedback_monotonic": 10068.831033071,
+        "command_began_monotonic": 10066.774113429,
+        "completed_monotonic": 10068.837201039
+      },
+      "recorded_rpc_return_to_completion_s": 2.0420445929994457,
+      "recorded_completion_to_ack_s": 0.005608207000477705,
+      "retirement_target_sequence": 115,
+      "fresh_prediction_observation": {
+        "observation_source_monotonic": 10068.930195985,
+        "gripper_position_percent": 77.0,
+        "valid": true,
+        "request_id": "49ee61f817d24feb8e78bf9c73fde042",
+        "observation_kind": "request"
+      },
+      "first_valid_post_ack_prediction_observation": {
+        "observation_source_monotonic": 10068.930195985,
+        "gripper_position_percent": 77.0,
+        "valid": true,
+        "request_id": "49ee61f817d24feb8e78bf9c73fde042",
+        "observation_kind": "request"
+      },
+      "next_request_id": "49ee61f817d24feb8e78bf9c73fde042",
+      "next_requested_monotonic": 10068.842924349,
+      "next_source_monotonic": 10068.930195985,
+      "next_observation_after_monotonic": 10068.842809246,
+      "next_observation_ready_monotonic": 10069.018938047,
+      "ack_to_next_request_s": 0.00011510300100781024,
+      "recorded_completion_to_next_request_s": 0.005723310001485515,
+      "completion_to_next_request_s_bounds": [
+        0.005613921000986011,
+        2.0477679030009313
+      ],
+      "ack_to_next_source_s": 0.08738673900006688,
+      "recorded_completion_to_next_source_s": 0.09299494600054459,
+      "completion_to_next_source_s_bounds": [
+        0.09288555700004508,
+        2.1350395389999903
+      ],
+      "ack_to_next_observation_ready_s": 0.17612880100023176,
+      "recorded_completion_to_next_observation_ready_s": 0.18173700800070947,
+      "completion_to_next_observation_ready_s_bounds": [
+        0.18162761900020996,
+        2.223781601000155
+      ]
+    }
+  ],
+  "servo": {
+    "wire_method_counts": {
+      "ServoMoveStart": 1,
+      "ServoJ": 7823,
+      "MoveGripper": 14,
+      "StopMotion": 1,
+      "ServoMoveEnd": 1
+    },
+    "servoj_return_codes": {
+      "0": 7823
+    },
+    "servoj_errors": [],
+    "servoj_rpc_s": {
+      "count": 7823,
+      "min": 0.002753163000306813,
+      "mean": 0.0030199623533176904,
+      "p50": 0.002963495000585681,
+      "p90": 0.0031671180004195776,
+      "p95": 0.0033193899998877896,
+      "p99": 0.00413354500051355,
+      "max": 0.006238346999452915,
+      "sum": 23.625165490004292
+    },
+    "servoj_issue_interval_s": {
+      "count": 7822,
+      "min": 0.00623485700089077,
+      "mean": 0.011505992986959687,
+      "p50": 0.007999575001122139,
+      "p90": 0.00807340900064446,
+      "p95": 0.008166773000993999,
+      "p99": 0.00854045199957909,
+      "max": 2.3109093969997048,
+      "sum": 89.99987714399867
+    },
+    "servoj_return_to_next_issue_s": {
+      "count": 7822,
+      "min": 0.0011664249996101717,
+      "mean": 0.00848603449603613,
+      "p50": 0.0050412029995641205,
+      "p90": 0.005162767000001622,
+      "p95": 0.005218958998739254,
+      "p99": 0.00556609300110722,
+      "max": 2.3077606599999854,
+      "sum": 66.37776182799462
+    },
+    "lifecycle_rpc": [
+      {
+        "method": "ServoMoveStart",
+        "sequence": 1,
+        "issued_monotonic": 9984.137627024,
+        "returned_monotonic": 9984.140229782,
+        "return_code": 0,
+        "error": null
+      },
+      {
+        "method": "StopMotion",
+        "sequence": 7839,
+        "issued_monotonic": 10074.14716582,
+        "returned_monotonic": 10074.147980818,
+        "return_code": 0,
+        "error": null
+      },
+      {
+        "method": "ServoMoveEnd",
+        "sequence": 7840,
+        "issued_monotonic": 10074.148301902,
+        "returned_monotonic": 10074.16248132,
+        "return_code": 0,
+        "error": null
+      }
+    ],
+    "final_snapshot": {
+      "status": "closed",
+      "reason": "explicit_duration_limit",
+      "failure": null,
+      "callback_failure": null,
+      "stop_result": 0,
+      "servo_end_result": 0,
+      "servo_commands": 7823,
+      "gripper_commands": 14,
+      "servo_overruns": 0,
+      "peripheral_servo_pauses": 14,
+      "peripheral_servo_pause_seconds": 27.48910250899462,
+      "gripper_command_inflight": false,
+      "ordered_last_token": 128,
+      "ordered_acknowledged_token": 127,
+      "ordered_pending": {
+        "token": 128,
+        "version": 128,
+        "joints": [
+          67.64870704942085,
+          -39.379831320112864,
+          53.6358431368985,
+          -8.549045548234186,
+          134.98392207631645,
+          4.4486716804980855
+        ],
+        "gripper": 77,
+        "joint_ack": false,
+        "gripper_ack": true
+      },
+      "pending_callbacks": 0,
+      "inflight_commands": 0,
+      "undelivered_callbacks": [],
+      "startup_inflight": false,
+      "workers_alive": []
+    }
+  },
+  "final_lateness_stop": {
+    "recorded_error": null,
+    "timing_chain_available": false
+  },
+  "limitations": [
+    "13 次夹爪命令的精确完成反馈未写入这些本地控制日志；完成区间及预测采样不等于精确反馈时间。",
+    "客户端预测总耗时减去服务端推理耗时仍包含传输及其他处理，不能归因于单一环节。",
+    "ServoJ RPC 返回码和夹爪完成反馈不证明物体、轨迹或策略任务结果。"
+  ]
+}

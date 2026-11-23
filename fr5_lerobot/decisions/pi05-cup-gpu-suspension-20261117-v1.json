@@ -1,0 +1,61 @@
+{
+  "schema": "fr5-cup-gpu-suspension-v1",
+  "client_date": "2026-11-17",
+  "observed_at_utc": "2026-11-17T04:14:43.118251+00:00",
+  "status": "gpu_suspended_by_user",
+  "training_status": "training_completed_evaluation_pending",
+  "training_exit_code": 0,
+  "completed_optimizer_steps": 256,
+  "training_pid": 1125050,
+  "training_pid_present": false,
+  "signal_sent": false,
+  "stop_action": "already_completed_before_stop_check",
+  "project_gpu_processes": [],
+  "other_gpu_processes": [
+    {
+      "pid": 1552075,
+      "same_os_user": false
+    },
+    {
+      "pid": 1552187,
+      "same_os_user": false
+    },
+    {
+      "pid": 1552191,
+      "same_os_user": false
+    },
+    {
+      "pid": 1733076,
+      "same_os_user": false
+    }
+  ],
+  "saved_checkpoints": [
+    {
+      "optimizer_step": 128,
+      "path": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-cup-terminal-xyz-terminal-n3-20261116-v11/step-000128",
+      "training_report_status": "training_not_task_verified"
+    },
+    {
+      "optimizer_step": 256,
+      "path": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-cup-terminal-xyz-terminal-n3-20261116-v11/step-000256",
+      "training_report_status": "training_not_task_verified"
+    }
+  ],
+  "gpu_jobs_started_after_stop_request": 0,
+  "gpu_evaluation_status": "suspended_by_user",
+  "new_demonstrations": 0,
+  "training_sources": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "heldout_source": 7,
+  "failed_trials_training": false,
+  "robot_commands": 0,
+  "task_success_verified": false,
+  "training_execution": "/home/data4/hts/demo1/fr5-learning/audits/pi05-cup-terminal-xyz-adam-offload-training-execution-20261116-v11.json"
+}

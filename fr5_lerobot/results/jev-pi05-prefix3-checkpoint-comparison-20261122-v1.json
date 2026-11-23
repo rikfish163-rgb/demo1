@@ -1,0 +1,1107 @@
+{
+  "schema": "fr5-jev-pi05-prefix3-checkpoint-comparison-v1",
+  "created_unix": 1795341415.2722504,
+  "dataset": "/home/data4/hts/demo1/fr5-learning/datasets/fr5-joint-stream-20261102-v1",
+  "comparison": {
+    "prefix_steps": 3,
+    "fps": 6,
+    "native_chunk_steps": 50,
+    "samples_per_source": 12,
+    "draws_per_anchor": 3,
+    "seed": 20261121,
+    "same_459_saved_records_verified": true,
+    "matched_fields": [
+      "split",
+      "source_index",
+      "row_index",
+      "source_capture_frame",
+      "case_index",
+      "draw",
+      "seed",
+      "tags",
+      "events",
+      "holds",
+      "source_grid_time_monotonic",
+      "state",
+      "target_absolute",
+      "valid_mask"
+    ],
+    "train_sources": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "validation_source": 7,
+    "validation_unique_anchors": 24,
+    "validation_prediction_draws": 72,
+    "validation_close_and_open_event_anchors_each": 2,
+    "train_unique_anchors": 129,
+    "train_prediction_draws": 387,
+    "grasp_offset_flange_mm": [
+      5.208,
+      8.072,
+      162.0
+    ],
+    "method": "Saved unfiltered native model outputs; FR5 modeled grasp-point position against recorded labels; switch is the first valid prediction closer to the new recorded gripper command.",
+    "censoring": "For predictions not switched within prefix3, the observed lower bound is retained; the delay mean is only among switched predictions."
+  },
+  "models": {
+    "parent_history5000": {
+      "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-jev-history-balanced-base-20261121-v2/step-005000",
+      "evaluation": "/home/data4/hts/demo1/fr5-learning/evaluations/jev-pi05-history-balanced-step5000-base-control-20261121-v2",
+      "cpu_report": "/home/data4/hts/demo1/fr5-learning/diagnostics/jev-pi05-history5000-prefix3-baseline-20261122-v1.json",
+      "configured_prefix_steps": 10,
+      "splits": {
+        "train": {
+          "unique_anchors": 129,
+          "prediction_draws": 387,
+          "position_first_mm": {
+            "count": 387,
+            "mean": 1.4464051858289912,
+            "p95": 4.087736271121179,
+            "max": 6.942718040342089
+          },
+          "position_prefix3_mm": {
+            "count": 1119,
+            "mean": 1.8116554444507182,
+            "p95": 5.350549471730564,
+            "max": 13.111791200521726
+          },
+          "recorded_hold_prefix3_mm": {
+            "count": 72,
+            "mean": 0.8174964717023615,
+            "p95": 1.4923723642862197,
+            "max": 1.8490133262138508
+          },
+          "hold_opening_at_least_2pp_vs_valid_anchor": {
+            "eligible_draws": 33,
+            "eligible_points": 99,
+            "missing_points": 0,
+            "draws_at_least_2pp": 0,
+            "points_at_least_2pp": 0,
+            "maximum_increase_pp": 0.0,
+            "maximum_witness": {
+              "source_index": 2,
+              "cycle": 1,
+              "source_capture_frame": 253,
+              "row_index": 1268,
+              "draw": 0,
+              "seed": 20261256,
+              "tick": 1,
+              "raw_gripper_fraction": 0.7582018971443176,
+              "projected_integer_percent": 76,
+              "increase_percentage_points": 0.0
+            }
+          },
+          "events": {
+            "close_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 24,
+                "matched_steps": 23,
+                "ties": 0,
+                "match_fraction": 0.9583333333333334
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 24,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 23,
+                "late": 1,
+                "never_switched_in_horizon": 0,
+                "timing_error_when_switched_s": {
+                  "count": 24,
+                  "mean": 0.006944444444444444,
+                  "p95": 0.0,
+                  "max": 0.16666666666666666
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 0,
+                  "mean": null,
+                  "p95": null,
+                  "max": null
+                }
+              }
+            },
+            "open_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 24,
+                "matched_steps": 23,
+                "ties": 0,
+                "match_fraction": 0.9583333333333334
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 24,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 23,
+                "late": 1,
+                "never_switched_in_horizon": 0,
+                "timing_error_when_switched_s": {
+                  "count": 24,
+                  "mean": 0.006944444444444444,
+                  "p95": 0.0,
+                  "max": 0.16666666666666666
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 0,
+                  "mean": null,
+                  "p95": null,
+                  "max": null
+                }
+              }
+            }
+          }
+        },
+        "validation": {
+          "unique_anchors": 24,
+          "prediction_draws": 72,
+          "position_first_mm": {
+            "count": 72,
+            "mean": 1.434337719818024,
+            "p95": 4.283130319670694,
+            "max": 6.6243899022594315
+          },
+          "position_prefix3_mm": {
+            "count": 210,
+            "mean": 1.8708230550978746,
+            "p95": 5.809106810088795,
+            "max": 12.918015667945479
+          },
+          "recorded_hold_prefix3_mm": {
+            "count": 18,
+            "mean": 0.6327713209242494,
+            "p95": 1.3703297683293818,
+            "max": 1.5689020338286224
+          },
+          "hold_opening_at_least_2pp_vs_valid_anchor": {
+            "eligible_draws": 6,
+            "eligible_points": 18,
+            "missing_points": 0,
+            "draws_at_least_2pp": 0,
+            "points_at_least_2pp": 0,
+            "maximum_increase_pp": -2.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "cycle": 1,
+              "source_capture_frame": 236,
+              "row_index": 3679,
+              "draw": 0,
+              "seed": 20261526,
+              "tick": 1,
+              "raw_gripper_fraction": 0.7588712573051453,
+              "projected_integer_percent": 76,
+              "increase_percentage_points": -2.0
+            }
+          },
+          "events": {
+            "close_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 6,
+                "matched_steps": 6,
+                "ties": 0,
+                "match_fraction": 1.0
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 6,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 6,
+                "late": 0,
+                "never_switched_in_horizon": 0,
+                "timing_error_when_switched_s": {
+                  "count": 6,
+                  "mean": 0.0,
+                  "p95": 0.0,
+                  "max": 0.0
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 0,
+                  "mean": null,
+                  "p95": null,
+                  "max": null
+                }
+              }
+            },
+            "open_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 6,
+                "matched_steps": 0,
+                "ties": 0,
+                "match_fraction": 0.0
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 6,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 0,
+                "late": 2,
+                "never_switched_in_horizon": 4,
+                "timing_error_when_switched_s": {
+                  "count": 2,
+                  "mean": 0.25,
+                  "p95": 0.32499999999999996,
+                  "max": 0.3333333333333333
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 4,
+                  "mean": 0.3333333333333333,
+                  "p95": 0.3333333333333333,
+                  "max": 0.3333333333333333
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "control_500": {
+      "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-jev-history-prefix3-control-20261122-v1/step-000500",
+      "evaluation": "/home/data4/hts/demo1/fr5-learning/evaluations/jev-pi05-history-prefix3-control-step500-20261122-v1",
+      "cpu_report": "/home/data4/hts/demo1/fr5-learning/evaluations/jev-pi05-history-prefix3-control-step500-20261122-v1/grasp-support-prefix3.json",
+      "configured_prefix_steps": 3,
+      "splits": {
+        "train": {
+          "unique_anchors": 129,
+          "prediction_draws": 387,
+          "position_first_mm": {
+            "count": 387,
+            "mean": 1.5472054958495425,
+            "p95": 4.463565975453659,
+            "max": 6.596992015500412
+          },
+          "position_prefix3_mm": {
+            "count": 1119,
+            "mean": 1.8967396044054337,
+            "p95": 5.363741128524412,
+            "max": 12.691368978923405
+          },
+          "recorded_hold_prefix3_mm": {
+            "count": 72,
+            "mean": 0.8604471070026845,
+            "p95": 1.5947109307938716,
+            "max": 1.932297508076929
+          },
+          "hold_opening_at_least_2pp_vs_valid_anchor": {
+            "eligible_draws": 33,
+            "eligible_points": 99,
+            "missing_points": 0,
+            "draws_at_least_2pp": 0,
+            "points_at_least_2pp": 0,
+            "maximum_increase_pp": 0.0,
+            "maximum_witness": {
+              "source_index": 2,
+              "cycle": 1,
+              "source_capture_frame": 253,
+              "row_index": 1268,
+              "draw": 0,
+              "seed": 20261256,
+              "tick": 1,
+              "raw_gripper_fraction": 0.7574988007545471,
+              "projected_integer_percent": 76,
+              "increase_percentage_points": 0.0
+            }
+          },
+          "events": {
+            "close_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 24,
+                "matched_steps": 21,
+                "ties": 0,
+                "match_fraction": 0.875
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 24,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 21,
+                "late": 3,
+                "never_switched_in_horizon": 0,
+                "timing_error_when_switched_s": {
+                  "count": 24,
+                  "mean": 0.027777777777777776,
+                  "p95": 0.16666666666666666,
+                  "max": 0.3333333333333333
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 0,
+                  "mean": null,
+                  "p95": null,
+                  "max": null
+                }
+              }
+            },
+            "open_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 24,
+                "matched_steps": 24,
+                "ties": 0,
+                "match_fraction": 1.0
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 24,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 24,
+                "late": 0,
+                "never_switched_in_horizon": 0,
+                "timing_error_when_switched_s": {
+                  "count": 24,
+                  "mean": 0.0,
+                  "p95": 0.0,
+                  "max": 0.0
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 0,
+                  "mean": null,
+                  "p95": null,
+                  "max": null
+                }
+              }
+            }
+          }
+        },
+        "validation": {
+          "unique_anchors": 24,
+          "prediction_draws": 72,
+          "position_first_mm": {
+            "count": 72,
+            "mean": 1.4677246394123296,
+            "p95": 4.498376824412174,
+            "max": 6.22518780269792
+          },
+          "position_prefix3_mm": {
+            "count": 210,
+            "mean": 1.880217228832882,
+            "p95": 5.485831979823127,
+            "max": 12.361335549144306
+          },
+          "recorded_hold_prefix3_mm": {
+            "count": 18,
+            "mean": 0.5935729100469469,
+            "p95": 1.1921370743179494,
+            "max": 1.3141870067381312
+          },
+          "hold_opening_at_least_2pp_vs_valid_anchor": {
+            "eligible_draws": 6,
+            "eligible_points": 18,
+            "missing_points": 0,
+            "draws_at_least_2pp": 0,
+            "points_at_least_2pp": 0,
+            "maximum_increase_pp": -2.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "cycle": 1,
+              "source_capture_frame": 236,
+              "row_index": 3679,
+              "draw": 0,
+              "seed": 20261526,
+              "tick": 1,
+              "raw_gripper_fraction": 0.7591642141342163,
+              "projected_integer_percent": 76,
+              "increase_percentage_points": -2.0
+            }
+          },
+          "events": {
+            "close_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 6,
+                "matched_steps": 5,
+                "ties": 0,
+                "match_fraction": 0.8333333333333334
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 6,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 5,
+                "late": 1,
+                "never_switched_in_horizon": 0,
+                "timing_error_when_switched_s": {
+                  "count": 6,
+                  "mean": 0.027777777777777776,
+                  "p95": 0.125,
+                  "max": 0.16666666666666666
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 0,
+                  "mean": null,
+                  "p95": null,
+                  "max": null
+                }
+              }
+            },
+            "open_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 6,
+                "matched_steps": 0,
+                "ties": 0,
+                "match_fraction": 0.0
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 6,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 0,
+                "late": 1,
+                "never_switched_in_horizon": 5,
+                "timing_error_when_switched_s": {
+                  "count": 1,
+                  "mean": 0.16666666666666666,
+                  "p95": 0.16666666666666666,
+                  "max": 0.16666666666666666
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 5,
+                  "mean": 0.3333333333333333,
+                  "p95": 0.3333333333333333,
+                  "max": 0.3333333333333333
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "weight8_500": {
+      "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-jev-history-prefix3-weight8-20261122-v1/step-000500",
+      "evaluation": "/home/data4/hts/demo1/fr5-learning/evaluations/jev-pi05-history-prefix3-weight8-step500-20261122-v1",
+      "cpu_report": "/home/data4/hts/demo1/fr5-learning/evaluations/jev-pi05-history-prefix3-weight8-step500-20261122-v1/grasp-support-prefix3.json",
+      "configured_prefix_steps": 3,
+      "splits": {
+        "train": {
+          "unique_anchors": 129,
+          "prediction_draws": 387,
+          "position_first_mm": {
+            "count": 387,
+            "mean": 1.5656379641254115,
+            "p95": 4.375755535449754,
+            "max": 6.596355898562697
+          },
+          "position_prefix3_mm": {
+            "count": 1119,
+            "mean": 1.9100448315180014,
+            "p95": 5.364218013704333,
+            "max": 12.755289629467528
+          },
+          "recorded_hold_prefix3_mm": {
+            "count": 72,
+            "mean": 0.8952043574372094,
+            "p95": 1.6368891962975112,
+            "max": 1.9479999382395032
+          },
+          "hold_opening_at_least_2pp_vs_valid_anchor": {
+            "eligible_draws": 33,
+            "eligible_points": 99,
+            "missing_points": 0,
+            "draws_at_least_2pp": 0,
+            "points_at_least_2pp": 0,
+            "maximum_increase_pp": 0.0,
+            "maximum_witness": {
+              "source_index": 2,
+              "cycle": 1,
+              "source_capture_frame": 253,
+              "row_index": 1268,
+              "draw": 0,
+              "seed": 20261256,
+              "tick": 1,
+              "raw_gripper_fraction": 0.7574988007545471,
+              "projected_integer_percent": 76,
+              "increase_percentage_points": 0.0
+            }
+          },
+          "events": {
+            "close_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 24,
+                "matched_steps": 22,
+                "ties": 0,
+                "match_fraction": 0.9166666666666666
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 24,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 22,
+                "late": 2,
+                "never_switched_in_horizon": 0,
+                "timing_error_when_switched_s": {
+                  "count": 24,
+                  "mean": 0.013888888888888888,
+                  "p95": 0.1416666666666663,
+                  "max": 0.16666666666666666
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 0,
+                  "mean": null,
+                  "p95": null,
+                  "max": null
+                }
+              }
+            },
+            "open_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 24,
+                "matched_steps": 24,
+                "ties": 0,
+                "match_fraction": 1.0
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 24,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 24,
+                "late": 0,
+                "never_switched_in_horizon": 0,
+                "timing_error_when_switched_s": {
+                  "count": 24,
+                  "mean": 0.0,
+                  "p95": 0.0,
+                  "max": 0.0
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 0,
+                  "mean": null,
+                  "p95": null,
+                  "max": null
+                }
+              }
+            }
+          }
+        },
+        "validation": {
+          "unique_anchors": 24,
+          "prediction_draws": 72,
+          "position_first_mm": {
+            "count": 72,
+            "mean": 1.465132787995135,
+            "p95": 4.553091668283986,
+            "max": 6.343085037747163
+          },
+          "position_prefix3_mm": {
+            "count": 210,
+            "mean": 1.8925367770626638,
+            "p95": 5.44249959038186,
+            "max": 12.498582208300894
+          },
+          "recorded_hold_prefix3_mm": {
+            "count": 18,
+            "mean": 0.6212851234706575,
+            "p95": 1.4021131925522183,
+            "max": 1.4298056426231796
+          },
+          "hold_opening_at_least_2pp_vs_valid_anchor": {
+            "eligible_draws": 6,
+            "eligible_points": 18,
+            "missing_points": 0,
+            "draws_at_least_2pp": 0,
+            "points_at_least_2pp": 0,
+            "maximum_increase_pp": -2.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "cycle": 1,
+              "source_capture_frame": 236,
+              "row_index": 3679,
+              "draw": 0,
+              "seed": 20261526,
+              "tick": 1,
+              "raw_gripper_fraction": 0.758812665939331,
+              "projected_integer_percent": 76,
+              "increase_percentage_points": -2.0
+            }
+          },
+          "events": {
+            "close_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 6,
+                "matched_steps": 5,
+                "ties": 0,
+                "match_fraction": 0.8333333333333334
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 6,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 5,
+                "late": 1,
+                "never_switched_in_horizon": 0,
+                "timing_error_when_switched_s": {
+                  "count": 6,
+                  "mean": 0.027777777777777776,
+                  "p95": 0.125,
+                  "max": 0.16666666666666666
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 0,
+                  "mean": null,
+                  "p95": null,
+                  "max": null
+                }
+              }
+            },
+            "open_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 6,
+                "matched_steps": 0,
+                "ties": 0,
+                "match_fraction": 0.0
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 6,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 0,
+                "late": 2,
+                "never_switched_in_horizon": 4,
+                "timing_error_when_switched_s": {
+                  "count": 2,
+                  "mean": 0.25,
+                  "p95": 0.32499999999999996,
+                  "max": 0.3333333333333333
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 4,
+                  "mean": 0.3333333333333333,
+                  "p95": 0.3333333333333333,
+                  "max": 0.3333333333333333
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "control_1000": {
+      "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-jev-history-prefix3-control-20261122-v1/step-001000",
+      "evaluation": "/home/data4/hts/demo1/fr5-learning/evaluations/jev-pi05-history-prefix3-control-step1000-20261122-v1",
+      "cpu_report": "/home/data4/hts/demo1/fr5-learning/evaluations/jev-pi05-history-prefix3-control-step1000-20261122-v1/grasp-support-prefix3.json",
+      "configured_prefix_steps": 3,
+      "splits": {
+        "train": {
+          "unique_anchors": 129,
+          "prediction_draws": 387,
+          "position_first_mm": {
+            "count": 387,
+            "mean": 1.4310294093345945,
+            "p95": 4.183469104153279,
+            "max": 6.739139705929187
+          },
+          "position_prefix3_mm": {
+            "count": 1119,
+            "mean": 1.8025306870711255,
+            "p95": 5.2723276878680405,
+            "max": 12.777357618940737
+          },
+          "recorded_hold_prefix3_mm": {
+            "count": 72,
+            "mean": 0.7665578020133356,
+            "p95": 1.357722977115529,
+            "max": 1.728864369220263
+          },
+          "hold_opening_at_least_2pp_vs_valid_anchor": {
+            "eligible_draws": 33,
+            "eligible_points": 99,
+            "missing_points": 0,
+            "draws_at_least_2pp": 0,
+            "points_at_least_2pp": 0,
+            "maximum_increase_pp": 0.0,
+            "maximum_witness": {
+              "source_index": 2,
+              "cycle": 1,
+              "source_capture_frame": 253,
+              "row_index": 1268,
+              "draw": 0,
+              "seed": 20261256,
+              "tick": 1,
+              "raw_gripper_fraction": 0.757733166217804,
+              "projected_integer_percent": 76,
+              "increase_percentage_points": 0.0
+            }
+          },
+          "events": {
+            "close_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 24,
+                "matched_steps": 23,
+                "ties": 0,
+                "match_fraction": 0.9583333333333334
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 24,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 23,
+                "late": 1,
+                "never_switched_in_horizon": 0,
+                "timing_error_when_switched_s": {
+                  "count": 24,
+                  "mean": 0.006944444444444444,
+                  "p95": 0.0,
+                  "max": 0.16666666666666666
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 0,
+                  "mean": null,
+                  "p95": null,
+                  "max": null
+                }
+              }
+            },
+            "open_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 24,
+                "matched_steps": 23,
+                "ties": 0,
+                "match_fraction": 0.9583333333333334
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 24,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 23,
+                "late": 1,
+                "never_switched_in_horizon": 0,
+                "timing_error_when_switched_s": {
+                  "count": 24,
+                  "mean": 0.006944444444444444,
+                  "p95": 0.0,
+                  "max": 0.16666666666666666
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 0,
+                  "mean": null,
+                  "p95": null,
+                  "max": null
+                }
+              }
+            }
+          }
+        },
+        "validation": {
+          "unique_anchors": 24,
+          "prediction_draws": 72,
+          "position_first_mm": {
+            "count": 72,
+            "mean": 1.3620453940464017,
+            "p95": 4.011963406783329,
+            "max": 6.206904098649284
+          },
+          "position_prefix3_mm": {
+            "count": 210,
+            "mean": 1.7879364886986786,
+            "p95": 5.312414186969286,
+            "max": 12.01963616876555
+          },
+          "recorded_hold_prefix3_mm": {
+            "count": 18,
+            "mean": 0.5649790172839134,
+            "p95": 1.4847947917059943,
+            "max": 1.6665995250750525
+          },
+          "hold_opening_at_least_2pp_vs_valid_anchor": {
+            "eligible_draws": 6,
+            "eligible_points": 18,
+            "missing_points": 0,
+            "draws_at_least_2pp": 0,
+            "points_at_least_2pp": 0,
+            "maximum_increase_pp": -2.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "cycle": 1,
+              "source_capture_frame": 236,
+              "row_index": 3679,
+              "draw": 0,
+              "seed": 20261526,
+              "tick": 1,
+              "raw_gripper_fraction": 0.7586954832077026,
+              "projected_integer_percent": 76,
+              "increase_percentage_points": -2.0
+            }
+          },
+          "events": {
+            "close_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 6,
+                "matched_steps": 5,
+                "ties": 0,
+                "match_fraction": 0.8333333333333334
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 6,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 5,
+                "late": 1,
+                "never_switched_in_horizon": 0,
+                "timing_error_when_switched_s": {
+                  "count": 6,
+                  "mean": 0.027777777777777776,
+                  "p95": 0.125,
+                  "max": 0.16666666666666666
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 0,
+                  "mean": null,
+                  "p95": null,
+                  "max": null
+                }
+              }
+            },
+            "open_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 6,
+                "matched_steps": 0,
+                "ties": 0,
+                "match_fraction": 0.0
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 6,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 0,
+                "late": 2,
+                "never_switched_in_horizon": 4,
+                "timing_error_when_switched_s": {
+                  "count": 2,
+                  "mean": 0.25,
+                  "p95": 0.32499999999999996,
+                  "max": 0.3333333333333333
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 4,
+                  "mean": 0.3333333333333333,
+                  "p95": 0.3333333333333333,
+                  "max": 0.3333333333333333
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "weight8_1000": {
+      "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-jev-history-prefix3-weight8-20261122-v1/step-001000",
+      "evaluation": "/home/data4/hts/demo1/fr5-learning/evaluations/jev-pi05-history-prefix3-weight8-step1000-20261122-v1",
+      "cpu_report": "/home/data4/hts/demo1/fr5-learning/evaluations/jev-pi05-history-prefix3-weight8-step1000-20261122-v1/grasp-support-prefix3.json",
+      "configured_prefix_steps": 3,
+      "splits": {
+        "train": {
+          "unique_anchors": 129,
+          "prediction_draws": 387,
+          "position_first_mm": {
+            "count": 387,
+            "mean": 1.4433599522837184,
+            "p95": 4.274316929232683,
+            "max": 6.2570590464899265
+          },
+          "position_prefix3_mm": {
+            "count": 1119,
+            "mean": 1.8132510861063127,
+            "p95": 5.409335457297131,
+            "max": 12.571354611322805
+          },
+          "recorded_hold_prefix3_mm": {
+            "count": 72,
+            "mean": 0.7990868732955594,
+            "p95": 1.3685378924668177,
+            "max": 1.7859700243399164
+          },
+          "hold_opening_at_least_2pp_vs_valid_anchor": {
+            "eligible_draws": 33,
+            "eligible_points": 99,
+            "missing_points": 0,
+            "draws_at_least_2pp": 0,
+            "points_at_least_2pp": 0,
+            "maximum_increase_pp": 0.0,
+            "maximum_witness": {
+              "source_index": 2,
+              "cycle": 1,
+              "source_capture_frame": 253,
+              "row_index": 1268,
+              "draw": 0,
+              "seed": 20261256,
+              "tick": 1,
+              "raw_gripper_fraction": 0.7579675316810608,
+              "projected_integer_percent": 76,
+              "increase_percentage_points": 0.0
+            }
+          },
+          "events": {
+            "close_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 24,
+                "matched_steps": 23,
+                "ties": 0,
+                "match_fraction": 0.9583333333333334
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 24,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 23,
+                "late": 1,
+                "never_switched_in_horizon": 0,
+                "timing_error_when_switched_s": {
+                  "count": 24,
+                  "mean": 0.006944444444444444,
+                  "p95": 0.0,
+                  "max": 0.16666666666666666
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 0,
+                  "mean": null,
+                  "p95": null,
+                  "max": null
+                }
+              }
+            },
+            "open_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 24,
+                "matched_steps": 24,
+                "ties": 0,
+                "match_fraction": 1.0
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 24,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 24,
+                "late": 0,
+                "never_switched_in_horizon": 0,
+                "timing_error_when_switched_s": {
+                  "count": 24,
+                  "mean": 0.0,
+                  "p95": 0.0,
+                  "max": 0.0
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 0,
+                  "mean": null,
+                  "p95": null,
+                  "max": null
+                }
+              }
+            }
+          }
+        },
+        "validation": {
+          "unique_anchors": 24,
+          "prediction_draws": 72,
+          "position_first_mm": {
+            "count": 72,
+            "mean": 1.3713410252927396,
+            "p95": 4.3081171684581445,
+            "max": 6.334295746139427
+          },
+          "position_prefix3_mm": {
+            "count": 210,
+            "mean": 1.8345846603868434,
+            "p95": 5.429456932463538,
+            "max": 12.22520987977188
+          },
+          "recorded_hold_prefix3_mm": {
+            "count": 18,
+            "mean": 0.7063501486135901,
+            "p95": 1.5812378021644504,
+            "max": 1.8167756540250333
+          },
+          "hold_opening_at_least_2pp_vs_valid_anchor": {
+            "eligible_draws": 6,
+            "eligible_points": 18,
+            "missing_points": 0,
+            "draws_at_least_2pp": 0,
+            "points_at_least_2pp": 0,
+            "maximum_increase_pp": -2.0,
+            "maximum_witness": {
+              "source_index": 7,
+              "cycle": 1,
+              "source_capture_frame": 236,
+              "row_index": 3679,
+              "draw": 0,
+              "seed": 20261526,
+              "tick": 1,
+              "raw_gripper_fraction": 0.7590470314025879,
+              "projected_integer_percent": 76,
+              "increase_percentage_points": -2.0
+            }
+          },
+          "events": {
+            "close_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 6,
+                "matched_steps": 6,
+                "ties": 0,
+                "match_fraction": 1.0
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 6,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 6,
+                "late": 0,
+                "never_switched_in_horizon": 0,
+                "timing_error_when_switched_s": {
+                  "count": 6,
+                  "mean": 0.0,
+                  "p95": 0.0,
+                  "max": 0.0
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 0,
+                  "mean": null,
+                  "p95": null,
+                  "max": null
+                }
+              }
+            },
+            "open_at": {
+              "first_step_switch_match": {
+                "eligible_valid_steps": 6,
+                "matched_steps": 0,
+                "ties": 0,
+                "match_fraction": 0.0
+              },
+              "prefix3_switch_timing": {
+                "prediction_draws": 6,
+                "target_not_in_horizon": 0,
+                "early": 0,
+                "same_label_step": 0,
+                "late": 2,
+                "never_switched_in_horizon": 4,
+                "timing_error_when_switched_s": {
+                  "count": 2,
+                  "mean": 0.3333333333333333,
+                  "p95": 0.3333333333333333,
+                  "max": 0.3333333333333333
+                },
+                "censored_late_lower_bound_s": {
+                  "count": 4,
+                  "mean": 0.3333333333333333,
+                  "p95": 0.3333333333333333,
+                  "max": 0.3333333333333333
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "candidate_judgment": {
+    "primary": "parent_history5000",
+    "position_comparison": "control_1000",
+    "basis": "Parent matches close at first step 6/6 versus control_1000 5/6 and has hold-prefix P95 1.370 mm versus 1.485 mm; control_1000 lowers prefix mean/P95 from 1.871/5.809 mm to 1.788/5.312 mm. Both switch open in prefix 2/6 and match open first 0/6. Weight8_1000 matches close 6/6 but has hold-prefix P95 1.581 mm and the same 2/6 prefix open switches.",
+    "scope": "Provisional prioritization on repeated old same-cup recorded diagnostics; not a real-robot success or generalization result."
+  },
+  "physical_attempts": 0,
+  "robot_commands_sent": 0,
+  "limitations": [
+    "Source 7 is an old same-cup trajectory used for prior model selection, not an independent new-object test.",
+    "Draws are predictions, not independent real-world attempts.",
+    "Recorded future labels and fixed-anchor open-loop predictions do not simulate physical contact or closed-loop execution."
+  ]
+}

@@ -1,0 +1,694 @@
+{
+  "schema": "fr5-cup-terminal-xyz-clean256-assessment-v1",
+  "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-cup-terminal-xyz-clean-n3-20261116-v9/step-000256",
+  "evaluation_dir": "/home/data4/hts/demo1/fr5-learning/evaluations/pi05-cup-terminal-xyz-clean256-suite-20261116-v9",
+  "seeds": 12,
+  "fit_seeds": 6,
+  "training_support": {
+    "five_second": {
+      "draws": 312,
+      "unique_anchors": 26,
+      "matched_false": 0,
+      "positive_label_draws": 216,
+      "wrong_direction_on_positive_labels": 29,
+      "recorded_move_over_half_mm_draws": 180,
+      "opposed_recorded_move_draws": 1,
+      "recorded_move_at_most_point_two_mm_draws": 120,
+      "predicted_move_over_two_mm_on_steady_draws": 31,
+      "early_close_against_recorded_labels": 80,
+      "median_xyz_next3_mae_mm": 0.3375295135709975,
+      "median_endpoint_error_mm": 0.9854780922425964,
+      "maximum_endpoint_error_mm": 6.776440838340581,
+      "fully_open_steady_drift_draws": 31
+    },
+    "original": {
+      "draws": 312,
+      "unique_anchors": 26,
+      "matched_false": 0,
+      "positive_label_draws": 216,
+      "wrong_direction_on_positive_labels": 29,
+      "recorded_move_over_half_mm_draws": 180,
+      "opposed_recorded_move_draws": 1,
+      "recorded_move_at_most_point_two_mm_draws": 120,
+      "predicted_move_over_two_mm_on_steady_draws": 31,
+      "early_close_against_recorded_labels": 80,
+      "median_xyz_next3_mae_mm": 0.33477279875013566,
+      "median_endpoint_error_mm": 0.9673480891567674,
+      "maximum_endpoint_error_mm": 6.776440838340581,
+      "fully_open_steady_drift_draws": 31
+    }
+  },
+  "timing": {
+    "heldout-five-second": {
+      "selected": {
+        "prefix_3": {
+          "gate": "inconclusive",
+          "assessable_draws_gate": "pass",
+          "failure_draws_including_train_fit": 0,
+          "critical_unassessed_draws": 0,
+          "true_five_second_training_fit": {
+            "observer": "setdown",
+            "seeds": [
+              20261105,
+              20261113,
+              20261114,
+              20261115,
+              20261116,
+              20261117
+            ],
+            "cycles": [
+              [
+                0,
+                1
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                5,
+                1
+              ]
+            ],
+            "eligible_draws": 126,
+            "draws_by_phase": {
+              "deadline_before": 6,
+              "deadline_minus_1s": 30,
+              "hover_early": 30,
+              "hover_late": 30,
+              "hover_middle": 30
+            },
+            "worst_down_mm": 0.41361312283722534,
+            "failure_count": 0,
+            "failures": []
+          }
+        },
+        "prefix_10": {
+          "gate": "fail",
+          "assessable_draws_gate": "fail",
+          "failure_draws_including_train_fit": 20,
+          "critical_unassessed_draws": 0,
+          "true_five_second_training_fit": {
+            "observer": "setdown",
+            "seeds": [
+              20261105,
+              20261113,
+              20261114,
+              20261115,
+              20261116,
+              20261117
+            ],
+            "cycles": [
+              [
+                0,
+                1
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                5,
+                1
+              ]
+            ],
+            "eligible_draws": 126,
+            "draws_by_phase": {
+              "deadline_before": 6,
+              "deadline_minus_1s": 30,
+              "hover_early": 30,
+              "hover_late": 30,
+              "hover_middle": 30
+            },
+            "worst_down_mm": 0.8796812245973675,
+            "failure_count": 0,
+            "failures": []
+          }
+        }
+      },
+      "raw_first": {
+        "prefix_3": {
+          "gate": "fail",
+          "assessable_draws_gate": "fail",
+          "failure_draws_including_train_fit": 9,
+          "critical_unassessed_draws": 0,
+          "true_five_second_training_fit": {
+            "observer": "setdown",
+            "seeds": [
+              20261105,
+              20261113,
+              20261114,
+              20261115,
+              20261116,
+              20261117
+            ],
+            "cycles": [
+              [
+                0,
+                1
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                5,
+                1
+              ]
+            ],
+            "eligible_draws": 126,
+            "draws_by_phase": {
+              "deadline_before": 6,
+              "deadline_minus_1s": 30,
+              "hover_early": 30,
+              "hover_late": 30,
+              "hover_middle": 30
+            },
+            "worst_down_mm": 0.41361312283722534,
+            "failure_count": 0,
+            "failures": []
+          }
+        },
+        "prefix_10": {
+          "gate": "fail",
+          "assessable_draws_gate": "fail",
+          "failure_draws_including_train_fit": 29,
+          "critical_unassessed_draws": 0,
+          "true_five_second_training_fit": {
+            "observer": "setdown",
+            "seeds": [
+              20261105,
+              20261113,
+              20261114,
+              20261115,
+              20261116,
+              20261117
+            ],
+            "cycles": [
+              [
+                0,
+                1
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                5,
+                1
+              ]
+            ],
+            "eligible_draws": 126,
+            "draws_by_phase": {
+              "deadline_before": 6,
+              "deadline_minus_1s": 30,
+              "hover_early": 30,
+              "hover_late": 30,
+              "hover_middle": 30
+            },
+            "worst_down_mm": 0.8796812245973675,
+            "failure_count": 0,
+            "failures": []
+          }
+        }
+      }
+    },
+    "heldout-original": {
+      "selected": {
+        "prefix_3": {
+          "gate": "inconclusive",
+          "assessable_draws_gate": "pass",
+          "failure_draws_including_train_fit": 0,
+          "critical_unassessed_draws": 0,
+          "true_five_second_training_fit": {
+            "observer": "setdown",
+            "seeds": [
+              20261105,
+              20261113,
+              20261114,
+              20261115,
+              20261116,
+              20261117
+            ],
+            "cycles": [
+              [
+                0,
+                1
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                5,
+                1
+              ]
+            ],
+            "eligible_draws": 126,
+            "draws_by_phase": {
+              "deadline_before": 6,
+              "deadline_minus_1s": 30,
+              "hover_early": 30,
+              "hover_late": 30,
+              "hover_middle": 30
+            },
+            "worst_down_mm": 0.41361312283722534,
+            "failure_count": 0,
+            "failures": []
+          }
+        },
+        "prefix_10": {
+          "gate": "fail",
+          "assessable_draws_gate": "fail",
+          "failure_draws_including_train_fit": 18,
+          "critical_unassessed_draws": 0,
+          "true_five_second_training_fit": {
+            "observer": "setdown",
+            "seeds": [
+              20261105,
+              20261113,
+              20261114,
+              20261115,
+              20261116,
+              20261117
+            ],
+            "cycles": [
+              [
+                0,
+                1
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                5,
+                1
+              ]
+            ],
+            "eligible_draws": 126,
+            "draws_by_phase": {
+              "deadline_before": 6,
+              "deadline_minus_1s": 30,
+              "hover_early": 30,
+              "hover_late": 30,
+              "hover_middle": 30
+            },
+            "worst_down_mm": 0.8796812245973675,
+            "failure_count": 0,
+            "failures": []
+          }
+        }
+      },
+      "raw_first": {
+        "prefix_3": {
+          "gate": "fail",
+          "assessable_draws_gate": "fail",
+          "failure_draws_including_train_fit": 8,
+          "critical_unassessed_draws": 0,
+          "true_five_second_training_fit": {
+            "observer": "setdown",
+            "seeds": [
+              20261105,
+              20261113,
+              20261114,
+              20261115,
+              20261116,
+              20261117
+            ],
+            "cycles": [
+              [
+                0,
+                1
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                5,
+                1
+              ]
+            ],
+            "eligible_draws": 126,
+            "draws_by_phase": {
+              "deadline_before": 6,
+              "deadline_minus_1s": 30,
+              "hover_early": 30,
+              "hover_late": 30,
+              "hover_middle": 30
+            },
+            "worst_down_mm": 0.41361312283722534,
+            "failure_count": 0,
+            "failures": []
+          }
+        },
+        "prefix_10": {
+          "gate": "fail",
+          "assessable_draws_gate": "fail",
+          "failure_draws_including_train_fit": 26,
+          "critical_unassessed_draws": 0,
+          "true_five_second_training_fit": {
+            "observer": "setdown",
+            "seeds": [
+              20261105,
+              20261113,
+              20261114,
+              20261115,
+              20261116,
+              20261117
+            ],
+            "cycles": [
+              [
+                0,
+                1
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                5,
+                1
+              ]
+            ],
+            "eligible_draws": 126,
+            "draws_by_phase": {
+              "deadline_before": 6,
+              "deadline_minus_1s": 30,
+              "hover_early": 30,
+              "hover_late": 30,
+              "hover_middle": 30
+            },
+            "worst_down_mm": 0.8796812245973675,
+            "failure_count": 0,
+            "failures": []
+          }
+        }
+      }
+    }
+  },
+  "recovered_feedback": {
+    "five_second": {
+      "total": 48,
+      "assessed": 48,
+      "unassessed": 0,
+      "reported_matched": 48,
+      "trace_matched": 0,
+      "single_draw_without_selector": 48,
+      "draw_counts": {
+        "1": 48
+      },
+      "first_selected_complete_actions_equal": 48,
+      "first": {
+        "prefix_3": {
+          "early_close_draws": 0,
+          "early_open_draws": 0,
+          "early_close_events": 0,
+          "early_open_events": 0,
+          "late_open_assessed": 0,
+          "late_or_missing_open": 0,
+          "late_open_status": {
+            "release_deadline_outside_prefix": 24,
+            "already_open_at_observation": 24
+          }
+        },
+        "prefix_10": {
+          "early_close_draws": 0,
+          "early_open_draws": 0,
+          "early_close_events": 0,
+          "early_open_events": 0,
+          "late_open_assessed": 0,
+          "late_or_missing_open": 0,
+          "late_open_status": {
+            "release_deadline_outside_prefix": 24,
+            "already_open_at_observation": 24
+          }
+        }
+      },
+      "selected": {
+        "prefix_3": {
+          "early_close_draws": 0,
+          "early_open_draws": 0,
+          "early_close_events": 0,
+          "early_open_events": 0,
+          "late_open_assessed": 0,
+          "late_or_missing_open": 0,
+          "late_open_status": {
+            "release_deadline_outside_prefix": 24,
+            "already_open_at_observation": 24
+          }
+        },
+        "prefix_10": {
+          "early_close_draws": 0,
+          "early_open_draws": 0,
+          "early_close_events": 0,
+          "early_open_events": 0,
+          "late_open_assessed": 0,
+          "late_or_missing_open": 0,
+          "late_open_status": {
+            "release_deadline_outside_prefix": 24,
+            "already_open_at_observation": 24
+          }
+        }
+      }
+    },
+    "original": {
+      "total": 48,
+      "assessed": 48,
+      "unassessed": 0,
+      "reported_matched": 48,
+      "trace_matched": 0,
+      "single_draw_without_selector": 48,
+      "draw_counts": {
+        "1": 48
+      },
+      "first_selected_complete_actions_equal": 48,
+      "first": {
+        "prefix_3": {
+          "early_close_draws": 0,
+          "early_open_draws": 0,
+          "early_close_events": 0,
+          "early_open_events": 0,
+          "late_open_assessed": 0,
+          "late_or_missing_open": 0,
+          "late_open_status": {
+            "release_deadline_outside_prefix": 24,
+            "already_open_at_observation": 24
+          }
+        },
+        "prefix_10": {
+          "early_close_draws": 0,
+          "early_open_draws": 0,
+          "early_close_events": 0,
+          "early_open_events": 0,
+          "late_open_assessed": 0,
+          "late_or_missing_open": 0,
+          "late_open_status": {
+            "release_deadline_outside_prefix": 24,
+            "already_open_at_observation": 24
+          }
+        }
+      },
+      "selected": {
+        "prefix_3": {
+          "early_close_draws": 0,
+          "early_open_draws": 0,
+          "early_close_events": 0,
+          "early_open_events": 0,
+          "late_open_assessed": 0,
+          "late_or_missing_open": 0,
+          "late_open_status": {
+            "release_deadline_outside_prefix": 24,
+            "already_open_at_observation": 24
+          }
+        },
+        "prefix_10": {
+          "early_close_draws": 0,
+          "early_open_draws": 0,
+          "early_close_events": 0,
+          "early_open_events": 0,
+          "late_open_assessed": 0,
+          "late_or_missing_open": 0,
+          "late_open_status": {
+            "release_deadline_outside_prefix": 24,
+            "already_open_at_observation": 24
+          }
+        }
+      }
+    }
+  },
+  "status": "offline_assessed_not_released",
+  "controller_verified": false,
+  "robot_commands": 0,
+  "task_success_verified": false,
+  "known_failure": "Native sampled translation still exceeds 2 mm at recorded stationary inputs.",
+  "limitations": [
+    "source7 invalid feedback remains unassessed",
+    "original fit raw-first timing now assessed; bounded selection fit pending",
+    "recorded-input assessment is not closed-loop or physical success"
+  ],
+  "training_timing_fit": {
+    "predictions": "raw_first",
+    "score": "/home/data4/hts/demo1/fr5-learning/evaluations/pi05-cup-terminal-xyz-clean256-suite-20261116-v9/training-timing-fit-score.json",
+    "prefix_3": {
+      "gate": "fail",
+      "summary": {
+        "draws": 600,
+        "assessed": 498,
+        "unassessed": 102,
+        "passed": 486,
+        "failure_draws": 12,
+        "failure_counts": {
+          "late_normal_close": 4,
+          "late_supported_open": 8
+        },
+        "late_open_assessable": 48,
+        "checks": {
+          "geometry": {
+            "unassessed": 60,
+            "assessed": 540
+          },
+          "early_open": {
+            "unassessed": 60,
+            "not_applicable": 180,
+            "assessed": 360
+          },
+          "normal_close": {
+            "unassessed": 60,
+            "assessed": 30,
+            "not_applicable": 510
+          },
+          "late_open": {
+            "not_applicable": 510,
+            "unassessed": 42,
+            "assessed": 48
+          },
+          "hover": {
+            "not_applicable": 474,
+            "assessed": 126
+          }
+        },
+        "unassessed_reasons": {
+          "close_deadline_outside_prefix": 30,
+          "invalid_gripper_feedback": 180,
+          "release_deadline_outside_prefix": 12
+        }
+      }
+    },
+    "prefix_10": {
+      "gate": "fail",
+      "summary": {
+        "draws": 600,
+        "assessed": 528,
+        "unassessed": 72,
+        "passed": 481,
+        "failure_draws": 49,
+        "failure_counts": {
+          "late_normal_close": 11,
+          "late_supported_open": 8,
+          "open_above_support_proxy": 20,
+          "open_before_stable_support_proxy": 4,
+          "open_below_support_proxy": 4,
+          "open_while_target_moving": 2
+        },
+        "late_open_assessable": 48,
+        "checks": {
+          "geometry": {
+            "unassessed": 60,
+            "assessed": 540
+          },
+          "early_open": {
+            "unassessed": 60,
+            "not_applicable": 180,
+            "assessed": 360
+          },
+          "normal_close": {
+            "unassessed": 30,
+            "assessed": 60,
+            "not_applicable": 510
+          },
+          "late_open": {
+            "not_applicable": 510,
+            "unassessed": 42,
+            "assessed": 48
+          },
+          "hover": {
+            "not_applicable": 474,
+            "assessed": 126
+          }
+        },
+        "unassessed_reasons": {
+          "invalid_gripper_feedback": 180,
+          "observation_lacks_stable_contact_ready_proxy": 12
+        }
+      }
+    },
+    "label_vs_command_mismatch_points_first10": 11,
+    "selected_complete_proposals_status": "evaluation_pending"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "case_id": "logical-cup-success-000001",
+  "robot_id": "J1",
+  "tags": [
+    "cup",
+    "grasp",
+    "lift",
+    "gripper_feedback",
+    "fixed_attitude",
+    "continuous_workflow"
+  ],
+  "observed_outcome": "User accepted one complete logical task: displaced approach, low-force exterior closing, cup followed10mm then50mm lift, original-support replacement, opening and withdrawal. Closing stabilized at77percent status2 with force10. Two original recording segments retained; no continuous-capture claim across their gap.",
+  "applicability": "Same FR5/J1, Gemini335, gray75mm-mouth/110mm-high cup, measured attitude about[91.78,-2.94,-65.75]deg, open100percent and bounded closing90,80,76; plan fresh IK/FK and cup-relative target from current image.",
+  "limitations": "Only one user-confirmed logical task, same cup/workspace; not generalized policy or a collision/TCP calibration certificate. Need current visual alignment, actual hold feedback, cup-follow and support checks.",
+  "evidence": [
+    "4090:/home/data4/hts/demo1/fr5-learning/datasets/fr5-success-episode-000001/summary.json",
+    "4090:/home/data4/hts/demo1/fr5-learning/datasets/fr5-success-episode-000001/user-review.json",
+    "4090:/home/data4/hts/demo1/fr5-learning/reviews/full-process-20261029/clean-manifest.json",
+    "/home/dianrobot/demo1/fr5_jev/results/pi05-reboot-audit-20261029/audit.json"
+  ],
+  "user_statement": "记录为成功 你把中间那个黑色的说明删除 前后是一样的 应该可以视为一段轨迹",
+  "recorded_unix": 1793266193.6027205,
+  "grants_execution_permission": false
+}

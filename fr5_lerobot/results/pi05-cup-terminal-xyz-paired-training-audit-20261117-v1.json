@@ -1,0 +1,341 @@
+{
+  "schema": "fr5-cup-training-pair-audit-v1",
+  "device": "cpu",
+  "paths": {
+    "clean": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-cup-terminal-xyz-clean-n3-20261116-v9/step-000256",
+    "terminal": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-cup-terminal-xyz-terminal-n3-20261116-v11/step-000256",
+    "parent": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-cup-fixed-clock-n3-20261116-v7/step-000128"
+  },
+  "data": {
+    "source_count": 8,
+    "train_sources": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "heldout_sources": [
+      7
+    ],
+    "rows": 4193,
+    "train_rows": 3443,
+    "validation_rows": 750
+  },
+  "shared_field_count": 50,
+  "shared_fields_equal": [
+    "dataset_path",
+    "source_provenance",
+    "train_episodes",
+    "heldout_episodes",
+    "heldout_physical_source",
+    "camera_aligned_targets",
+    "cup_relative_data",
+    "cup_tracking_data",
+    "relative_action_statistics",
+    "anchor_coverage",
+    "initialized_from",
+    "initialized_from_steps",
+    "resumed_from",
+    "optimizer_restored",
+    "optimizer_migration",
+    "seed",
+    "batch_size",
+    "gradient_accumulation",
+    "effective_batch_size",
+    "target_steps",
+    "learning_rate",
+    "lr_schedule",
+    "rank",
+    "adaptation",
+    "trainable_parameters",
+    "trainable_expert_parameters",
+    "vision_lora",
+    "vision_lora_initialization",
+    "action_representation",
+    "action_label_origin",
+    "gripper_target_origin",
+    "chunk_size",
+    "n_action_steps",
+    "target_timebase_hz",
+    "image_profile",
+    "observation_context_profile",
+    "sampling",
+    "sampling_profile",
+    "sampler_report",
+    "sampler_migration",
+    "normalization_from",
+    "normalization_fallbacks",
+    "cup_roll_state_bounds_rad",
+    "first_action_weight",
+    "executed_prefix_weight",
+    "vertical_weight",
+    "gripper_weight",
+    "tail_attention_and_loss_mask",
+    "prefix_training",
+    "prefix_cache"
+  ],
+  "shared_fields_different": [],
+  "sampling_equal_at_every_optimizer_step": true,
+  "metrics": {
+    "clean": {
+      "optimizer_step_count": 256,
+      "steps_are_contiguous_1_to_256": true,
+      "loss_gradient_lr_finite": true,
+      "gradient_positive_count": 256,
+      "learning_rates": [
+        1e-06
+      ],
+      "sample_count": 1024,
+      "sample_count_by_source": {
+        "0": 149,
+        "1": 145,
+        "2": 138,
+        "3": 173,
+        "4": 136,
+        "5": 148,
+        "6": 135
+      },
+      "last_loss": 0.059006220602896065
+    },
+    "terminal": {
+      "optimizer_step_count": 256,
+      "steps_are_contiguous_1_to_256": true,
+      "loss_gradient_lr_finite": true,
+      "gradient_positive_count": 256,
+      "learning_rates": [
+        1e-06
+      ],
+      "sample_count": 1024,
+      "sample_count_by_source": {
+        "0": 149,
+        "1": 145,
+        "2": 138,
+        "3": 173,
+        "4": 136,
+        "5": 148,
+        "6": 135
+      },
+      "last_loss": 0.07150170794920996,
+      "moment_bytes": [
+        3485335808
+      ],
+      "moment_devices_between_updates": [
+        "cpu"
+      ],
+      "peak_allocated_mib_recorded_across_all_steps": 20279.75
+    }
+  },
+  "configuration_values": [
+    {
+      "file": "normalization.json",
+      "clean_equals_terminal": true,
+      "clean_equals_parent": true,
+      "terminal_equals_parent": true
+    },
+    {
+      "file": "policy_preprocessor.json",
+      "clean_equals_terminal": true,
+      "clean_equals_parent": true,
+      "terminal_equals_parent": true
+    },
+    {
+      "file": "policy_postprocessor.json",
+      "clean_equals_terminal": true,
+      "clean_equals_parent": true,
+      "terminal_equals_parent": true
+    },
+    {
+      "file": "action_representation.json",
+      "clean_equals_terminal": true,
+      "clean_equals_parent": true,
+      "terminal_equals_parent": true
+    },
+    {
+      "file": "observation_context.json",
+      "clean_equals_terminal": true,
+      "clean_equals_parent": true,
+      "terminal_equals_parent": true
+    },
+    {
+      "file": "image_profile.json",
+      "clean_equals_terminal": true,
+      "clean_equals_parent": true,
+      "terminal_equals_parent": true
+    }
+  ],
+  "normalizer_tensors": [
+    {
+      "model": "clean",
+      "file": "policy_preprocessor_step_2_normalizer_processor.safetensors",
+      "tensor_count": 4,
+      "keys_equal_to_parent": true,
+      "all_tensors_equal_to_parent": true,
+      "unequal_tensors": []
+    },
+    {
+      "model": "terminal",
+      "file": "policy_preprocessor_step_2_normalizer_processor.safetensors",
+      "tensor_count": 4,
+      "keys_equal_to_parent": true,
+      "all_tensors_equal_to_parent": true,
+      "unequal_tensors": []
+    },
+    {
+      "model": "clean",
+      "file": "policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+      "tensor_count": 4,
+      "keys_equal_to_parent": true,
+      "all_tensors_equal_to_parent": true,
+      "unequal_tensors": []
+    },
+    {
+      "model": "terminal",
+      "file": "policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+      "tensor_count": 4,
+      "keys_equal_to_parent": true,
+      "all_tensors_equal_to_parent": true,
+      "unequal_tensors": []
+    }
+  ],
+  "representative_parameter_updates": [
+    {
+      "model": "clean",
+      "component": "vision_lora",
+      "file": "adapter_model.safetensors",
+      "tensor": "model.paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.0.self_attn.q_proj.lora_B.weight",
+      "shape": [
+        1152,
+        32
+      ],
+      "changed_from_parent": true,
+      "finite": true,
+      "max_absolute_change": 7.746845949441195e-05,
+      "delta_l2": 0.0036024453584104776,
+      "parent_l2": 0.25201162695884705
+    },
+    {
+      "model": "terminal",
+      "component": "vision_lora",
+      "file": "adapter_model.safetensors",
+      "tensor": "model.paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.0.self_attn.q_proj.lora_B.weight",
+      "shape": [
+        1152,
+        32
+      ],
+      "changed_from_parent": true,
+      "finite": true,
+      "max_absolute_change": 7.263734005391598e-05,
+      "delta_l2": 0.003624191740527749,
+      "parent_l2": 0.25201162695884705
+    },
+    {
+      "model": "clean",
+      "component": "language_lora",
+      "file": "adapter_model.safetensors",
+      "tensor": "model.paligemma_with_expert.paligemma.model.language_model.layers.0.self_attn.q_proj.lora_B.weight",
+      "shape": [
+        2048,
+        32
+      ],
+      "changed_from_parent": true,
+      "finite": true,
+      "max_absolute_change": 7.891887798905373e-05,
+      "delta_l2": 0.004850670229643583,
+      "parent_l2": 0.3283660411834717
+    },
+    {
+      "model": "terminal",
+      "component": "language_lora",
+      "file": "adapter_model.safetensors",
+      "tensor": "model.paligemma_with_expert.paligemma.model.language_model.layers.0.self_attn.q_proj.lora_B.weight",
+      "shape": [
+        2048,
+        32
+      ],
+      "changed_from_parent": true,
+      "finite": true,
+      "max_absolute_change": 7.338401337619871e-05,
+      "delta_l2": 0.004785895813256502,
+      "parent_l2": 0.3283660411834717
+    },
+    {
+      "model": "clean",
+      "component": "action_expert",
+      "file": "expert_model.safetensors",
+      "tensor": "model.paligemma_with_expert.gemma_expert.model.layers.0.self_attn.q_proj.base_layer.weight",
+      "shape": [
+        2048,
+        1024
+      ],
+      "changed_from_parent": true,
+      "finite": true,
+      "max_absolute_change": 7.84844160079956e-05,
+      "delta_l2": 0.022730238735675812,
+      "parent_l2": 49.666259765625
+    },
+    {
+      "model": "terminal",
+      "component": "action_expert",
+      "file": "expert_model.safetensors",
+      "tensor": "model.paligemma_with_expert.gemma_expert.model.layers.0.self_attn.q_proj.base_layer.weight",
+      "shape": [
+        2048,
+        1024
+      ],
+      "changed_from_parent": true,
+      "finite": true,
+      "max_absolute_change": 9.621679782867432e-05,
+      "delta_l2": 0.02622058056294918,
+      "parent_l2": 49.666259765625
+    },
+    {
+      "model": "clean",
+      "component": "action_projection",
+      "file": "projections.safetensors",
+      "tensor": "model.action_out_proj.weight",
+      "shape": [
+        32,
+        1024
+      ],
+      "changed_from_parent": true,
+      "finite": true,
+      "max_absolute_change": 6.208568811416626e-05,
+      "delta_l2": 0.0013347029453143477,
+      "parent_l2": 3.494379758834839
+    },
+    {
+      "model": "terminal",
+      "component": "action_projection",
+      "file": "projections.safetensors",
+      "tensor": "model.action_out_proj.weight",
+      "shape": [
+        32,
+        1024
+      ],
+      "changed_from_parent": true,
+      "finite": true,
+      "max_absolute_change": 6.678549107164145e-05,
+      "delta_l2": 0.0013407174265012145,
+      "parent_l2": 3.494379758834839
+    }
+  ],
+  "method_difference": {
+    "clean": "clean",
+    "terminal": "terminal",
+    "terminal_coefficient": 6.0,
+    "terminal_margin_mm": 0.25,
+    "native_denoising_steps": 10,
+    "terminal_memory_method": "checkpoint_native_denoise_steps_cpu_adamw_moments_between_gpu_updates"
+  },
+  "robot_commands": 0,
+  "task_success_verified": false,
+  "limitations": [
+    "Saved training metadata and metrics establish the paired run configuration; they do not establish inference quality.",
+    "Four representative components are compared directly; this is not a scan of every saved parameter.",
+    "The optimizer moment equivalence result is recorded separately from this CPU audit."
+  ],
+  "status": "paired_training_consistent"
+}

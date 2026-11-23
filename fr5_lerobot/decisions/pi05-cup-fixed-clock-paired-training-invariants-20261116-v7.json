@@ -1,0 +1,82 @@
+{
+  "schema": "fr5-cup-fixed-clock-paired-training-invariants-v1",
+  "parameters_and_prepared_data_equal": {
+    "dataset_path": true,
+    "dataset_fingerprint": true,
+    "initialized_from": true,
+    "initialized_from_steps": true,
+    "optimizer_restored": true,
+    "learning_rate": true,
+    "lr_schedule": true,
+    "seed": true,
+    "rank": true,
+    "adaptation_mode": true,
+    "action_representation": true,
+    "n_action_steps": true,
+    "image_profile": true,
+    "sampling_profile": true,
+    "first_action_weight": true,
+    "executed_prefix_weight": true,
+    "vertical_weight": true,
+    "gripper_weight": true,
+    "batch_size": true,
+    "gradient_accumulation": true,
+    "anchor_coverage": true,
+    "sampler_report": true,
+    "cup_boundary_loss": true,
+    "source_provenance": true,
+    "cup_relative_data": true,
+    "cup_tracking_data": true,
+    "camera_aligned_targets": true
+  },
+  "normalization_matches_parent": {
+    "noisy_control": true,
+    "fixed": true
+  },
+  "recorded_sampling_equal": true,
+  "recorded_sampling_rows": {
+    "noisy_control": 128,
+    "fixed": 128
+  },
+  "profiles": {
+    "noisy_control": "state-history-physical-cup-setdown-v1",
+    "fixed": "state-history-physical-cup-setdown-fixed-v1"
+  },
+  "heldout_diagnostics": {
+    "noisy_control": {
+      "closing_gripper_target_mae": 0.019821659723917643,
+      "closing_target_count": 15,
+      "evaluation_kind": "heldout_physical_source_offline_diagnostic_not_task_success",
+      "gripper_target_mae": 0.011627927422523499,
+      "next_tcp_rpy_mae_deg": 0.006607528782797415,
+      "next_tcp_xyz_mae_mm": 0.49967551603913307,
+      "samples": 32
+    },
+    "fixed": {
+      "closing_gripper_target_mae": 0.01956389347712199,
+      "closing_target_count": 15,
+      "evaluation_kind": "heldout_physical_source_offline_diagnostic_not_task_success",
+      "gripper_target_mae": 0.011667829006910324,
+      "next_tcp_rpy_mae_deg": 0.005928814307929325,
+      "next_tcp_xyz_mae_mm": 0.4558499592045943,
+      "samples": 32
+    }
+  },
+  "anchor_coverage": {
+    "eligible_anchors": 3443,
+    "eligible_closing_target_changes": 8,
+    "eligible_opening_target_changes": 8,
+    "eligible_tail_anchors": 343,
+    "sampled_closing_target_changes": 7,
+    "sampled_opening_target_changes": 7,
+    "sampled_unique_anchors": 306,
+    "sampled_unique_tail_anchors": 20,
+    "supervised_closing_target_changes": 8,
+    "supervised_opening_target_changes": 8,
+    "supervised_unique_target_frames": 2514,
+    "tail_strategy": "all_anchors_eligible_real_targets_preserved_padding_masked_in_attention_and_loss"
+  },
+  "robot_commands": 0,
+  "task_success_verified": false,
+  "passed": true
+}

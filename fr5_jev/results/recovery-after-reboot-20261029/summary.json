@@ -1,0 +1,178 @@
+{
+  "outcome": "interrupted",
+  "scope_sha256": "fb7706488e103cf8cb95252c9fe5922756d6e67d0ce9ba17a14610e5d0e5777e",
+  "peak_height_mm": 10.000575499465484,
+  "released": false,
+  "failed": null,
+  "commands": 6,
+  "dataset": {
+    "schema_version": 1,
+    "created_utc": "2026-10-29T11:20:14.836227+00:00",
+    "finished_utc": "2026-10-29T11:20:26.438977+00:00",
+    "repo_id": null,
+    "dataset_kind": "agent_teacher_action_journal",
+    "lerobot_version": "0.4.4",
+    "task": "Recovery only: return already held cup10mm to original support; not a new pickup episode",
+    "has_action_labels": true,
+    "outcome": "interrupted",
+    "outcome_source": "operator_label",
+    "grasp_success_verified": false,
+    "gripper_feedback_verified": false,
+    "training_ready": false,
+    "nominal_fps": 6,
+    "storage_mode": "journal_only",
+    "materialized_lerobot_dataset": false,
+    "recorded_frames": 69,
+    "metadata": {
+      "scope_sha256": "fb7706488e103cf8cb95252c9fe5922756d6e67d0ce9ba17a14610e5d0e5777e",
+      "scope": {
+        "robot_ip": "192.168.58.2",
+        "max_lift_mm": 10,
+        "closing_targets": [
+          90,
+          80,
+          76
+        ],
+        "closing_speed": 5,
+        "force": 10,
+        "move_speed": 1,
+        "return_to_original_support": true,
+        "only_prealigned_instance": true,
+        "reviewed_at_unix": 1793272814.5500672,
+        "same_cup_and_contact_pose": true,
+        "both_fingers_outside_cup": true,
+        "vertical_swept_path_clear": true,
+        "no_visible_hands": true,
+        "initial_tcp": [
+          -61.765879956577606,
+          -584.9346602278526,
+          89.83912329203842,
+          91.77985382080078,
+          -2.9347360134124756,
+          -65.75154113769531
+        ],
+        "authorization_source": "User authorized autonomous cup pickup/replacement and recovery. Current camera reconnected and live scene reviewed; return already held cup from10mm probe to original support, no new lift or closure.",
+        "evidence": [
+          "/dev/shm/fr5-post-reboot-current/color.jpg"
+        ],
+        "recovery_only": true,
+        "source_support_provenance": "Exact episode000005 contact_tcp printed in this conversation before reboot; original RAM scope lost. Current pose/visible scene match probe endpoint, all states stable.",
+        "reviewed_actual_start": [
+          -61.7639045715332,
+          -584.932861328125,
+          99.8358383178711,
+          91.78022003173828,
+          -2.9340286254882812,
+          -65.75165557861328
+        ],
+        "max_session_s": 900
+      },
+      "image_width": 640,
+      "image_height": 360,
+      "action_semantics": "actual MoveL endpoint joint targets plus explicit gripper targets",
+      "prealigned_only": true,
+      "independent_astra_api_calls": 0
+    },
+    "source_camera_serial": "CP1E54200015",
+    "data_valid": true,
+    "storage_complete": true,
+    "errors": [],
+    "cleanup_errors": [],
+    "frames_with_command_executed_false": 0,
+    "frames_with_invalid_gripper_feedback": 0,
+    "command_sources": [
+      "agent_teacher"
+    ],
+    "robot_commands_sent_by_writer": 0,
+    "action_definition": {
+      "space": "absolute joint target degrees (6), gripper target percent (1)",
+      "source": "Explicit keyboard/agent_teacher command.target only; never copied from observed state",
+      "executed": "Caller-reported command flag, preserved in capture.jsonl; hold may be false"
+    },
+    "timing_clock": "host_monotonic",
+    "timestamp_semantics": {
+      "frame_index": "Sequential journal row index; not an external capture frame index",
+      "camera": "Original source_timestamp_unix and source_timestamp_monotonic when supplied",
+      "robot": "Original timestamp and received_monotonic when supplied",
+      "command": "Original issued_unix and issued_monotonic when supplied",
+      "ordering": "sync_clock selects the source clock; no nominal LeRobot timestamps are stored"
+    },
+    "pairing_boundary": {
+      "rule": "Caller supplies last effective operator target at camera time in timing_clock",
+      "validation": "Command issue <= camera capture in the same timing_clock; Unix fields retained for audit",
+      "limitation": "Latched target alongside observation; not a future action, completion proof or acknowledgement",
+      "training": "Review temporal action horizon, synchronization and operator labels before ACT training"
+    },
+    "depth_storage": "External ContinuousCapture only; no depth file is written by this journal",
+    "units": {
+      "joint": "deg",
+      "pose_xyz": "mm",
+      "pose_rotation": "deg",
+      "gripper": "percent",
+      "depth": "mm"
+    },
+    "discard_policy": "Discarded episodes remain on disk for audit; exclude from training",
+    "measured_camera_sample_fps": 6.07657749806308,
+    "camera_interval_s": {
+      "median": 0.17813609349991566,
+      "max": 0.29999018999978944
+    },
+    "sync_abs_skew_ms_max": 4.921975000343082,
+    "action_age_s": {
+      "min": 0.04450414400025693,
+      "max": 2.150226008000118
+    },
+    "not_training_ready_reason": "Journal-only output needs verified external RGB-D evidence and dataset curation; Episode discarded or interrupted by operator",
+    "external_capture": {
+      "root": "/dev/shm/fr5-recovery-after-reboot-20261029/continuous",
+      "capture_log": "/dev/shm/fr5-recovery-after-reboot-20261029/continuous/capture.jsonl",
+      "report_file": "/dev/shm/fr5-recovery-after-reboot-20261029/continuous/report.json",
+      "matching_rule": "Match camera serial and source timestamp in timing_clock; journal and capture frame indices may differ",
+      "media_paths": "Read rgb_file and depth_file from the matching external capture row; resolve them relative to root"
+    },
+    "external_capture_verified": false,
+    "local_rgb_frames_written": 0,
+    "local_depth_frames_written": 0,
+    "storage_complete_scope": "Successfully flushed journal rows only; external capture completeness is reported separately",
+    "data_valid_scope": "Validated observation/issued-command pairs only; external media persistence is not verified here",
+    "recorded_frames_semantics": "Successfully flushed capture.jsonl rows; a failed write may leave an unconfirmed tail"
+  },
+  "continuous_capture": {
+    "schema_version": 1,
+    "dataset_kind": "teacher_execution_evidence",
+    "task": "Recovery only: return already held cup10mm to original support; not a new pickup episode",
+    "metadata": {
+      "external_command_journal": "/dev/shm/fr5-recovery-after-reboot-20261029/target-command-journal.json",
+      "external_command_reports": "command-NNNN.json; actual guarded send"
+    },
+    "outcome": "interrupted",
+    "outcome_source": "caller_label",
+    "outcome_evidence": [
+      "/dev/shm/fr5-recovery-after-reboot-20261029/after-return/color.jpg"
+    ],
+    "capture_complete": true,
+    "error": null,
+    "frames": 70,
+    "requested_fps": 6.0,
+    "timing_clock": "host_monotonic",
+    "unique_camera_fps": 6.065696419147224,
+    "max_frame_gap_s": 0.29999018999978944,
+    "max_sync_skew_ms": 4.921975000343082,
+    "frames_with_invalid_gripper_feedback": 0,
+    "command_attempts": 0,
+    "commands_without_rpc_return": 0,
+    "has_target_action_labels": false,
+    "training_ready": false,
+    "not_training_ready_reason": "Raw RPC/JOG events are not continuous target action vectors; outcome and timing also require review.",
+    "timestamp_semantics": "timing_clock orders camera/robot/events; original Unix timestamps retained for audit; no hardware synchronization",
+    "units": {
+      "joint": "deg",
+      "pose_xyz": "mm",
+      "gripper": "percent",
+      "depth": "mm"
+    }
+  },
+  "evidence": [
+    "/dev/shm/fr5-recovery-after-reboot-20261029/after-return/color.jpg"
+  ]
+}

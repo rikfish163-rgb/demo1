@@ -1,0 +1,3882 @@
+{
+  "schema": "fr5-jev-pi05-position-support-prefix3-v1",
+  "checkpoint": "/home/data4/hts/demo1/fr5-learning/checkpoints/pi05-fr5-jev-history-prefix3-control-20261122-v1/step-000500",
+  "evaluation": "/home/data4/hts/demo1/fr5-learning/evaluations/jev-pi05-history-prefix3-control-step500-20261122-v1",
+  "compared_prefix_steps": 3,
+  "position_metrics": {
+    "train": {
+      "unique_anchors": 129,
+      "prediction_draws": 387,
+      "position": {
+        "all": {
+          "first": {
+            "grasp_position_error_mm": {
+              "count": 387,
+              "mean": 1.5472054958495425,
+              "p95": 4.463565975453659,
+              "max": 6.596992015500412
+            },
+            "absolute_vertical_error_mm": {
+              "count": 387,
+              "mean": 0.9252204288860534,
+              "p95": 2.8769898573779,
+              "max": 5.60709890933046
+            },
+            "signed_vertical_error_mean_mm": 0.45937153238763245,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 219,
+                "mean": 1.0893997302733973,
+                "p95": 2.647976475079663,
+                "max": 3.959584479690455
+              },
+              "recorded_displacement_mm": {
+                "count": 219,
+                "mean": 0.09306071898270576,
+                "p95": 0.666788521931789,
+                "max": 0.8069264227178222
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 24,
+                "mean": 0.7960388785339383,
+                "p95": 1.3679392586690176,
+                "max": 1.4700620120873718
+              },
+              "absolute_vertical_error_mm": {
+                "count": 24,
+                "mean": 0.6398036983201969,
+                "p95": 1.315487472249586,
+                "max": 1.3899990761086372
+              }
+            }
+          },
+          "prefix": {
+            "grasp_position_error_mm": {
+              "count": 1119,
+              "mean": 1.8967396044054337,
+              "p95": 5.363741128524412,
+              "max": 12.691368978923405
+            },
+            "absolute_vertical_error_mm": {
+              "count": 1119,
+              "mean": 1.2497758255465525,
+              "p95": 4.685245210024605,
+              "max": 12.680398773130065
+            },
+            "signed_vertical_error_mean_mm": 0.5750300686919219,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 606,
+                "mean": 1.3173342006219106,
+                "p95": 4.308243120116082,
+                "max": 6.135921622614239
+              },
+              "recorded_displacement_mm": {
+                "count": 606,
+                "mean": 0.0683480369434789,
+                "p95": 0.43803222160990846,
+                "max": 0.9891903979995175
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 72,
+                "mean": 0.8604471070026845,
+                "p95": 1.5947109307938716,
+                "max": 1.932297508076929
+              },
+              "absolute_vertical_error_mm": {
+                "count": 72,
+                "mean": 0.6502233349204256,
+                "p95": 1.4414440163364959,
+                "max": 1.869312314791614
+              }
+            }
+          },
+          "full": {
+            "grasp_position_error_mm": {
+              "count": 18141,
+              "mean": 7.251135934855254,
+              "p95": 27.35901019614677,
+              "max": 117.9558869413356
+            },
+            "absolute_vertical_error_mm": {
+              "count": 18141,
+              "mean": 5.260169841644489,
+              "p95": 24.43825603409961,
+              "max": 87.11722580555829
+            },
+            "signed_vertical_error_mean_mm": 0.6866999508334554,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 3579,
+                "mean": 2.3737639292917145,
+                "p95": 10.13402037698672,
+                "max": 60.29634587210436
+              },
+              "recorded_displacement_mm": {
+                "count": 3579,
+                "mean": 0.11110040131631338,
+                "p95": 0.3103018642074359,
+                "max": 0.9977623535204522
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 696,
+                "mean": 4.273665506275567,
+                "p95": 19.152716828127613,
+                "max": 37.05660485888389
+              },
+              "absolute_vertical_error_mm": {
+                "count": 696,
+                "mean": 4.125376094855467,
+                "p95": 19.130214488644448,
+                "max": 37.0431482795325
+              }
+            }
+          }
+        },
+        "uniform": {
+          "first": {
+            "grasp_position_error_mm": {
+              "count": 252,
+              "mean": 1.9126689301523114,
+              "p95": 4.821940134395703,
+              "max": 6.596992015500412
+            },
+            "absolute_vertical_error_mm": {
+              "count": 252,
+              "mean": 1.0745790028141593,
+              "p95": 3.258537872655606,
+              "max": 5.60709890933046
+            },
+            "signed_vertical_error_mean_mm": 0.5228948187845943,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 84,
+                "mean": 1.5059642212641573,
+                "p95": 3.041073968793221,
+                "max": 3.959584479690455
+              },
+              "recorded_displacement_mm": {
+                "count": 84,
+                "mean": 0.035540348708810586,
+                "p95": 0.11807714710249609,
+                "max": 0.43803222160990846
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 6,
+                "mean": 0.7510525672296139,
+                "p95": 1.3755565777129877,
+                "max": 1.4700620120873718
+              },
+              "absolute_vertical_error_mm": {
+                "count": 6,
+                "mean": 0.6611323346119539,
+                "p95": 1.2735080892141966,
+                "max": 1.3899990761086372
+              }
+            }
+          },
+          "prefix": {
+            "grasp_position_error_mm": {
+              "count": 714,
+              "mean": 2.3264449606519753,
+              "p95": 6.15577535086698,
+              "max": 12.691368978923405
+            },
+            "absolute_vertical_error_mm": {
+              "count": 714,
+              "mean": 1.4337200704269846,
+              "p95": 5.256299485397545,
+              "max": 12.680398773130065
+            },
+            "signed_vertical_error_mean_mm": 0.6076589551564445,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 243,
+                "mean": 2.001061507276138,
+                "p95": 5.222600085427085,
+                "max": 6.135921622614239
+              },
+              "recorded_displacement_mm": {
+                "count": 243,
+                "mean": 0.0620172183827809,
+                "p95": 0.16153885753303804,
+                "max": 0.9891903979995175
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 18,
+                "mean": 0.6931175794780275,
+                "p95": 1.1487435352144655,
+                "max": 1.4700620120873718
+              },
+              "absolute_vertical_error_mm": {
+                "count": 18,
+                "mean": 0.5426439150447414,
+                "p95": 0.9939297206675385,
+                "max": 1.3899990761086372
+              }
+            }
+          },
+          "full": {
+            "grasp_position_error_mm": {
+              "count": 11391,
+              "mean": 8.675640624757024,
+              "p95": 29.94252503029501,
+              "max": 117.9558869413356
+            },
+            "absolute_vertical_error_mm": {
+              "count": 11391,
+              "mean": 5.706119895227564,
+              "p95": 23.533171185939644,
+              "max": 87.11722580555829
+            },
+            "signed_vertical_error_mean_mm": -0.24148604621246864,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 1137,
+                "mean": 3.8403205584501285,
+                "p95": 14.066109747957011,
+                "max": 60.29634587210436
+              },
+              "recorded_displacement_mm": {
+                "count": 1137,
+                "mean": 0.10952067722490105,
+                "p95": 0.6314836861644381,
+                "max": 0.9891903979995175
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 183,
+                "mean": 5.024601223106696,
+                "p95": 19.073343946407572,
+                "max": 34.31337388074593
+              },
+              "absolute_vertical_error_mm": {
+                "count": 183,
+                "mean": 4.898581882627327,
+                "p95": 19.046057380624585,
+                "max": 34.271614265865765
+              }
+            }
+          }
+        },
+        "close_before": {
+          "first": {
+            "grasp_position_error_mm": {
+              "count": 24,
+              "mean": 0.9655877169425287,
+              "p95": 1.6320576521231382,
+              "max": 1.7391346968548729
+            },
+            "absolute_vertical_error_mm": {
+              "count": 24,
+              "mean": 0.696101410439938,
+              "p95": 1.4967347725743017,
+              "max": 1.7102437762424358
+            },
+            "signed_vertical_error_mean_mm": 0.44712969604299485,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 24,
+                "mean": 0.9654283849207728,
+                "p95": 1.6398351631887467,
+                "max": 1.7287412301217338
+              },
+              "recorded_displacement_mm": {
+                "count": 24,
+                "mean": 0.014372407689908946,
+                "p95": 0.026288615424969998,
+                "max": 0.026288615424969998
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "prefix": {
+            "grasp_position_error_mm": {
+              "count": 72,
+              "mean": 0.9442198191798636,
+              "p95": 1.7783458835501151,
+              "max": 2.131603127097867
+            },
+            "absolute_vertical_error_mm": {
+              "count": 72,
+              "mean": 0.6920231023624923,
+              "p95": 1.642132691500556,
+              "max": 1.8122723355277088
+            },
+            "signed_vertical_error_mean_mm": 0.3200121982420612,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 72,
+                "mean": 0.9419597785907816,
+                "p95": 1.7713906896318277,
+                "max": 2.135837790399122
+              },
+              "recorded_displacement_mm": {
+                "count": 72,
+                "mean": 0.01782445742338699,
+                "p95": 0.03219205140373678,
+                "max": 0.03975758562438358
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "full": {
+            "grasp_position_error_mm": {
+              "count": 1200,
+              "mean": 1.745343393436192,
+              "p95": 5.126481455786134,
+              "max": 9.512312755141068
+            },
+            "absolute_vertical_error_mm": {
+              "count": 1200,
+              "mean": 1.5824496562008141,
+              "p95": 5.068525156593309,
+              "max": 9.49518185084392
+            },
+            "signed_vertical_error_mean_mm": 0.3552075550089075,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 486,
+                "mean": 1.0786537897311155,
+                "p95": 2.6190129639836672,
+                "max": 8.404206318291207
+              },
+              "recorded_displacement_mm": {
+                "count": 486,
+                "mean": 0.0693796727652067,
+                "p95": 0.1321424789687544,
+                "max": 0.8743251429916992
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          }
+        },
+        "close_at": {
+          "first": {
+            "grasp_position_error_mm": {
+              "count": 24,
+              "mean": 0.7288063835415617,
+              "p95": 1.333230599172828,
+              "max": 1.5179151020332273
+            },
+            "absolute_vertical_error_mm": {
+              "count": 24,
+              "mean": 0.4569530597128857,
+              "p95": 1.216813815785548,
+              "max": 1.3712457908614226
+            },
+            "signed_vertical_error_mean_mm": 0.049341107723738155,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 24,
+                "mean": 0.7287676952551405,
+                "p95": 1.3340631030653884,
+                "max": 1.5224745249287115
+              },
+              "recorded_displacement_mm": {
+                "count": 24,
+                "mean": 0.00828762165442072,
+                "p95": 0.01168907600944219,
+                "max": 0.01168907600944219
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "prefix": {
+            "grasp_position_error_mm": {
+              "count": 72,
+              "mean": 0.8628736001187666,
+              "p95": 1.767821973898826,
+              "max": 2.146503044660149
+            },
+            "absolute_vertical_error_mm": {
+              "count": 72,
+              "mean": 0.6149599906901698,
+              "p95": 1.4812310775279642,
+              "max": 2.013581686619588
+            },
+            "signed_vertical_error_mean_mm": 0.24175082699478048,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 72,
+                "mean": 0.8615679252174444,
+                "p95": 1.7657188544966682,
+                "max": 2.1368513311430766
+              },
+              "recorded_displacement_mm": {
+                "count": 72,
+                "mean": 0.010312069818683874,
+                "p95": 0.016633368905206773,
+                "max": 0.020507378990506395
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "full": {
+            "grasp_position_error_mm": {
+              "count": 1200,
+              "mean": 1.7628000834055566,
+              "p95": 5.040118966283666,
+              "max": 8.719398175236295
+            },
+            "absolute_vertical_error_mm": {
+              "count": 1200,
+              "mean": 1.574075191924968,
+              "p95": 5.027395392465964,
+              "max": 8.714253577969288
+            },
+            "signed_vertical_error_mean_mm": 0.3129127241908268,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 462,
+                "mean": 1.2066878808230266,
+                "p95": 3.247667895229733,
+                "max": 9.448300519422563
+              },
+              "recorded_displacement_mm": {
+                "count": 462,
+                "mean": 0.06982374811018176,
+                "p95": 0.14605616044108516,
+                "max": 0.8715480218948123
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          }
+        },
+        "hold_start": {
+          "first": {
+            "grasp_position_error_mm": {
+              "count": 24,
+              "mean": 0.7960388785339383,
+              "p95": 1.3679392586690176,
+              "max": 1.4700620120873718
+            },
+            "absolute_vertical_error_mm": {
+              "count": 24,
+              "mean": 0.6398036983201969,
+              "p95": 1.315487472249586,
+              "max": 1.3899990761086372
+            },
+            "signed_vertical_error_mean_mm": 0.2516559862756142,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 24,
+                "mean": 0.790003804831111,
+                "p95": 1.4617353800406208,
+                "max": 1.5301797523143112
+              },
+              "recorded_displacement_mm": {
+                "count": 24,
+                "mean": 0.07381479421377984,
+                "p95": 0.2232845534174079,
+                "max": 0.2232845534174079
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 24,
+                "mean": 0.7960388785339383,
+                "p95": 1.3679392586690176,
+                "max": 1.4700620120873718
+              },
+              "absolute_vertical_error_mm": {
+                "count": 24,
+                "mean": 0.6398036983201969,
+                "p95": 1.315487472249586,
+                "max": 1.3899990761086372
+              }
+            }
+          },
+          "prefix": {
+            "grasp_position_error_mm": {
+              "count": 72,
+              "mean": 0.8604471070026845,
+              "p95": 1.5947109307938716,
+              "max": 1.932297508076929
+            },
+            "absolute_vertical_error_mm": {
+              "count": 72,
+              "mean": 0.6502233349204256,
+              "p95": 1.4414440163364959,
+              "max": 1.869312314791614
+            },
+            "signed_vertical_error_mean_mm": -0.011510336557462055,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 72,
+                "mean": 0.853788105089063,
+                "p95": 1.5031355419367405,
+                "max": 1.76499844913105
+              },
+              "recorded_displacement_mm": {
+                "count": 72,
+                "mean": 0.09736128707762627,
+                "p95": 0.26182310105618467,
+                "max": 0.2810361486664385
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 72,
+                "mean": 0.8604471070026845,
+                "p95": 1.5947109307938716,
+                "max": 1.932297508076929
+              },
+              "absolute_vertical_error_mm": {
+                "count": 72,
+                "mean": 0.6502233349204256,
+                "p95": 1.4414440163364959,
+                "max": 1.869312314791614
+              }
+            }
+          },
+          "full": {
+            "grasp_position_error_mm": {
+              "count": 1200,
+              "mean": 8.025404393388008,
+              "p95": 25.607003253937197,
+              "max": 37.46189043804792
+            },
+            "absolute_vertical_error_mm": {
+              "count": 1200,
+              "mean": 7.909286434235548,
+              "p95": 25.584512304774442,
+              "max": 37.42443458440319
+            },
+            "signed_vertical_error_mean_mm": -6.34170230744079,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 720,
+                "mean": 4.5866968350529636,
+                "p95": 20.55296352329626,
+                "max": 37.01260877776293
+              },
+              "recorded_displacement_mm": {
+                "count": 720,
+                "mean": 0.13901470662806106,
+                "p95": 0.30701611128348055,
+                "max": 0.7864731802485442
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 696,
+                "mean": 4.273665506275567,
+                "p95": 19.152716828127613,
+                "max": 37.05660485888389
+              },
+              "absolute_vertical_error_mm": {
+                "count": 696,
+                "mean": 4.125376094855467,
+                "p95": 19.130214488644448,
+                "max": 37.0431482795325
+              }
+            }
+          }
+        },
+        "hold_end": {
+          "first": {
+            "grasp_position_error_mm": {
+              "count": 24,
+              "mean": 1.208350579549499,
+              "p95": 2.454007994193316,
+              "max": 2.716001538455929
+            },
+            "absolute_vertical_error_mm": {
+              "count": 24,
+              "mean": 1.0976852494946339,
+              "p95": 2.3796134846323023,
+              "max": 2.7008127204755112
+            },
+            "signed_vertical_error_mean_mm": 0.5906225491467983,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 24,
+                "mean": 1.0530910102183366,
+                "p95": 2.142628597691991,
+                "max": 2.6143025989683335
+              },
+              "recorded_displacement_mm": {
+                "count": 24,
+                "mean": 0.6463423529351275,
+                "p95": 0.8069264227178222,
+                "max": 0.8069264227178222
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "prefix": {
+            "grasp_position_error_mm": {
+              "count": 72,
+              "mean": 2.6456938168522415,
+              "p95": 5.0904280573225575,
+              "max": 7.653655786657822
+            },
+            "absolute_vertical_error_mm": {
+              "count": 72,
+              "mean": 2.5638565319142823,
+              "p95": 5.068284530833234,
+              "max": 7.572949447478635
+            },
+            "signed_vertical_error_mean_mm": 2.3948356317983372,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 24,
+                "mean": 1.0530910102183366,
+                "p95": 2.142628597691991,
+                "max": 2.6143025989683335
+              },
+              "recorded_displacement_mm": {
+                "count": 24,
+                "mean": 0.6463423529351275,
+                "p95": 0.8069264227178222,
+                "max": 0.8069264227178222
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "full": {
+            "grasp_position_error_mm": {
+              "count": 1200,
+              "mean": 17.255572067963172,
+              "p95": 39.24237994635629,
+              "max": 54.08043603622339
+            },
+            "absolute_vertical_error_mm": {
+              "count": 1200,
+              "mean": 17.176939146082702,
+              "p95": 39.22774874314619,
+              "max": 54.08036548614653
+            },
+            "signed_vertical_error_mean_mm": 16.9770381464375,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 24,
+                "mean": 1.0530910102183366,
+                "p95": 2.142628597691991,
+                "max": 2.6143025989683335
+              },
+              "recorded_displacement_mm": {
+                "count": 24,
+                "mean": 0.6463423529351275,
+                "p95": 0.8069264227178222,
+                "max": 0.8069264227178222
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          }
+        },
+        "open_before": {
+          "first": {
+            "grasp_position_error_mm": {
+              "count": 24,
+              "mean": 0.7976294550538761,
+              "p95": 2.01114520249239,
+              "max": 2.2350646753891676
+            },
+            "absolute_vertical_error_mm": {
+              "count": 24,
+              "mean": 0.5540281716111389,
+              "p95": 1.6147516317776165,
+              "max": 1.9171636328110395
+            },
+            "signed_vertical_error_mean_mm": 0.3781024977766568,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 24,
+                "mean": 0.7805012034060373,
+                "p95": 2.0051149977942893,
+                "max": 2.2140654625536604
+              },
+              "recorded_displacement_mm": {
+                "count": 24,
+                "mean": 0.03033574693818213,
+                "p95": 0.07097418275661035,
+                "max": 0.07097418275661035
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "prefix": {
+            "grasp_position_error_mm": {
+              "count": 72,
+              "mean": 0.7687394527244898,
+              "p95": 1.6042112667902038,
+              "max": 2.2350646753891676
+            },
+            "absolute_vertical_error_mm": {
+              "count": 72,
+              "mean": 0.5281887976743138,
+              "p95": 1.3826755861890287,
+              "max": 1.9171636328110395
+            },
+            "signed_vertical_error_mean_mm": 0.17560047990554317,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 72,
+                "mean": 0.7617420851148304,
+                "p95": 1.62186572320702,
+                "max": 2.2140654625536604
+              },
+              "recorded_displacement_mm": {
+                "count": 72,
+                "mean": 0.0378267531503728,
+                "p95": 0.09005750116876159,
+                "max": 0.10409083236960658
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "full": {
+            "grasp_position_error_mm": {
+              "count": 1200,
+              "mean": 1.4068254200096582,
+              "p95": 3.257952587991633,
+              "max": 6.619546319639916
+            },
+            "absolute_vertical_error_mm": {
+              "count": 1200,
+              "mean": 0.755881373381028,
+              "p95": 2.032549417343508,
+              "max": 4.024851934017292
+            },
+            "signed_vertical_error_mean_mm": 0.23775268112487175,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 483,
+                "mean": 0.8192141920085386,
+                "p95": 1.735684070980906,
+                "max": 2.695394313546118
+              },
+              "recorded_displacement_mm": {
+                "count": 483,
+                "mean": 0.12906292535685623,
+                "p95": 0.25059904152288787,
+                "max": 0.9977623535204522
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          }
+        },
+        "open_at": {
+          "first": {
+            "grasp_position_error_mm": {
+              "count": 24,
+              "mean": 0.670123731715074,
+              "p95": 1.3150900012159092,
+              "max": 1.490647633238784
+            },
+            "absolute_vertical_error_mm": {
+              "count": 24,
+              "mean": 0.4612434572489483,
+              "p95": 1.2513980938969698,
+              "max": 1.3984133876924574
+            },
+            "signed_vertical_error_mean_mm": 0.3202368797660113,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 24,
+                "mean": 0.6619071031404269,
+                "p95": 1.2926212369810575,
+                "max": 1.485350868540584
+              },
+              "recorded_displacement_mm": {
+                "count": 24,
+                "mean": 0.017883880045625064,
+                "p95": 0.03354964826850149,
+                "max": 0.03354964826850149
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "prefix": {
+            "grasp_position_error_mm": {
+              "count": 72,
+              "mean": 0.7809349008031179,
+              "p95": 1.5720958715415507,
+              "max": 2.640544380184447
+            },
+            "absolute_vertical_error_mm": {
+              "count": 72,
+              "mean": 0.564048815388716,
+              "p95": 1.4904015583322179,
+              "max": 2.0623762523693046
+            },
+            "signed_vertical_error_mean_mm": 0.06282231497830162,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 72,
+                "mean": 0.7786970768426618,
+                "p95": 1.5967645951718274,
+                "max": 2.5888435821529483
+              },
+              "recorded_displacement_mm": {
+                "count": 72,
+                "mean": 0.022695095733168927,
+                "p95": 0.04763733517751679,
+                "max": 0.0553537902748678
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "full": {
+            "grasp_position_error_mm": {
+              "count": 1200,
+              "mean": 1.5020653660914605,
+              "p95": 3.430169398755339,
+              "max": 5.277446733269057
+            },
+            "absolute_vertical_error_mm": {
+              "count": 1200,
+              "mean": 0.7565932801810104,
+              "p95": 2.086413528500123,
+              "max": 4.161137252191779
+            },
+            "signed_vertical_error_mean_mm": 0.39277635183046145,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 459,
+                "mean": 0.7829117533283255,
+                "p95": 1.5847871265659261,
+                "max": 3.204452429140438
+              },
+              "recorded_displacement_mm": {
+                "count": 459,
+                "mean": 0.11525209489099485,
+                "p95": 0.3047839612156263,
+                "max": 0.9900513783329684
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          }
+        }
+      },
+      "switch_timing": {
+        "close_before": {
+          "prefix": {
+            "prediction_draws": 24,
+            "target_not_in_horizon": 0,
+            "early": 8,
+            "same_label_step": 8,
+            "late": 4,
+            "never_switched_in_horizon": 4,
+            "timing_error_when_switched_s": {
+              "count": 20,
+              "mean": -0.03333333333333333,
+              "p95": 0.16666666666666666,
+              "max": 0.16666666666666666
+            },
+            "censored_late_lower_bound_s": {
+              "count": 4,
+              "mean": 0.16666666666666666,
+              "p95": 0.16666666666666666,
+              "max": 0.16666666666666666
+            }
+          },
+          "full": {
+            "prediction_draws": 24,
+            "target_not_in_horizon": 0,
+            "early": 8,
+            "same_label_step": 8,
+            "late": 8,
+            "never_switched_in_horizon": 0,
+            "timing_error_when_switched_s": {
+              "count": 24,
+              "mean": 0.034722222222222224,
+              "p95": 0.3333333333333333,
+              "max": 0.5
+            },
+            "censored_late_lower_bound_s": {
+              "count": 0,
+              "mean": null,
+              "p95": null,
+              "max": null
+            }
+          }
+        },
+        "close_at": {
+          "prefix": {
+            "prediction_draws": 24,
+            "target_not_in_horizon": 0,
+            "early": 0,
+            "same_label_step": 21,
+            "late": 3,
+            "never_switched_in_horizon": 0,
+            "timing_error_when_switched_s": {
+              "count": 24,
+              "mean": 0.027777777777777776,
+              "p95": 0.16666666666666666,
+              "max": 0.3333333333333333
+            },
+            "censored_late_lower_bound_s": {
+              "count": 0,
+              "mean": null,
+              "p95": null,
+              "max": null
+            }
+          },
+          "full": {
+            "prediction_draws": 24,
+            "target_not_in_horizon": 0,
+            "early": 0,
+            "same_label_step": 21,
+            "late": 3,
+            "never_switched_in_horizon": 0,
+            "timing_error_when_switched_s": {
+              "count": 24,
+              "mean": 0.027777777777777776,
+              "p95": 0.16666666666666666,
+              "max": 0.3333333333333333
+            },
+            "censored_late_lower_bound_s": {
+              "count": 0,
+              "mean": null,
+              "p95": null,
+              "max": null
+            }
+          }
+        },
+        "open_before": {
+          "prefix": {
+            "prediction_draws": 24,
+            "target_not_in_horizon": 0,
+            "early": 14,
+            "same_label_step": 7,
+            "late": 3,
+            "never_switched_in_horizon": 0,
+            "timing_error_when_switched_s": {
+              "count": 24,
+              "mean": -0.07638888888888888,
+              "p95": 0.16666666666666666,
+              "max": 0.16666666666666666
+            },
+            "censored_late_lower_bound_s": {
+              "count": 0,
+              "mean": null,
+              "p95": null,
+              "max": null
+            }
+          },
+          "full": {
+            "prediction_draws": 24,
+            "target_not_in_horizon": 0,
+            "early": 14,
+            "same_label_step": 7,
+            "late": 3,
+            "never_switched_in_horizon": 0,
+            "timing_error_when_switched_s": {
+              "count": 24,
+              "mean": -0.07638888888888888,
+              "p95": 0.16666666666666666,
+              "max": 0.16666666666666666
+            },
+            "censored_late_lower_bound_s": {
+              "count": 0,
+              "mean": null,
+              "p95": null,
+              "max": null
+            }
+          }
+        },
+        "open_at": {
+          "prefix": {
+            "prediction_draws": 24,
+            "target_not_in_horizon": 0,
+            "early": 0,
+            "same_label_step": 24,
+            "late": 0,
+            "never_switched_in_horizon": 0,
+            "timing_error_when_switched_s": {
+              "count": 24,
+              "mean": 0.0,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "censored_late_lower_bound_s": {
+              "count": 0,
+              "mean": null,
+              "p95": null,
+              "max": null
+            }
+          },
+          "full": {
+            "prediction_draws": 24,
+            "target_not_in_horizon": 0,
+            "early": 0,
+            "same_label_step": 24,
+            "late": 0,
+            "never_switched_in_horizon": 0,
+            "timing_error_when_switched_s": {
+              "count": 24,
+              "mean": 0.0,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "censored_late_lower_bound_s": {
+              "count": 0,
+              "mean": null,
+              "p95": null,
+              "max": null
+            }
+          }
+        }
+      }
+    },
+    "validation": {
+      "unique_anchors": 24,
+      "prediction_draws": 72,
+      "position": {
+        "all": {
+          "first": {
+            "grasp_position_error_mm": {
+              "count": 72,
+              "mean": 1.4677246394123296,
+              "p95": 4.498376824412174,
+              "max": 6.22518780269792
+            },
+            "absolute_vertical_error_mm": {
+              "count": 72,
+              "mean": 0.9460014620702404,
+              "p95": 4.012890668025396,
+              "max": 6.144428819738124
+            },
+            "signed_vertical_error_mean_mm": 0.07815678036522063,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 45,
+                "mean": 1.0337403368961884,
+                "p95": 3.1417373322468483,
+                "max": 4.256221650332332
+              },
+              "recorded_displacement_mm": {
+                "count": 45,
+                "mean": 0.0671590927962388,
+                "p95": 0.3672983281630748,
+                "max": 0.37587659354870095
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 6,
+                "mean": 0.6057052869286118,
+                "p95": 1.0892340154163747,
+                "max": 1.097281017753096
+              },
+              "absolute_vertical_error_mm": {
+                "count": 6,
+                "mean": 0.40245006141608525,
+                "p95": 1.0052449345309284,
+                "max": 1.0905093059770365
+              }
+            }
+          },
+          "prefix": {
+            "grasp_position_error_mm": {
+              "count": 210,
+              "mean": 1.880217228832882,
+              "p95": 5.485831979823127,
+              "max": 12.361335549144306
+            },
+            "absolute_vertical_error_mm": {
+              "count": 210,
+              "mean": 1.2964089602859183,
+              "p95": 5.119988177370354,
+              "max": 12.33310398018699
+            },
+            "signed_vertical_error_mean_mm": 0.09367509589908558,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 123,
+                "mean": 1.271770350000793,
+                "p95": 4.576550440656402,
+                "max": 6.4617841050057025
+              },
+              "recorded_displacement_mm": {
+                "count": 123,
+                "mean": 0.0460542387646606,
+                "p95": 0.08802749648043283,
+                "max": 0.37587659354870095
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 18,
+                "mean": 0.5935729100469469,
+                "p95": 1.1921370743179494,
+                "max": 1.3141870067381312
+              },
+              "absolute_vertical_error_mm": {
+                "count": 18,
+                "mean": 0.41816213126929824,
+                "p95": 1.1197131113555612,
+                "max": 1.2852013418338686
+              }
+            }
+          },
+          "full": {
+            "grasp_position_error_mm": {
+              "count": 3453,
+              "mean": 8.190805275326804,
+              "p95": 29.72091442507009,
+              "max": 93.98463937853762
+            },
+            "absolute_vertical_error_mm": {
+              "count": 3453,
+              "mean": 6.813238500762736,
+              "p95": 29.718480357895704,
+              "max": 93.98270156296478
+            },
+            "signed_vertical_error_mean_mm": -0.8712012454203076,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 666,
+                "mean": 1.598149709107812,
+                "p95": 6.263550434253201,
+                "max": 22.704003607443905
+              },
+              "recorded_displacement_mm": {
+                "count": 666,
+                "mean": 0.09401039769445167,
+                "p95": 0.2452766417980939,
+                "max": 0.9777238525034146
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 147,
+                "mean": 2.292997752996762,
+                "p95": 13.654739863286204,
+                "max": 15.044955592749341
+              },
+              "absolute_vertical_error_mm": {
+                "count": 147,
+                "mean": 2.1064202767604185,
+                "p95": 13.62648570364926,
+                "max": 15.019620798344476
+              }
+            }
+          }
+        },
+        "uniform": {
+          "first": {
+            "grasp_position_error_mm": {
+              "count": 36,
+              "mean": 2.2474564507549797,
+              "p95": 5.036169881841248,
+              "max": 6.22518780269792
+            },
+            "absolute_vertical_error_mm": {
+              "count": 36,
+              "mean": 1.4278506066820063,
+              "p95": 5.015041118444987,
+              "max": 6.144428819738124
+            },
+            "signed_vertical_error_mean_mm": 0.026876451278686393,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 9,
+                "mean": 2.280132092093995,
+                "p95": 3.918812754952415,
+                "max": 4.256221650332332
+              },
+              "recorded_displacement_mm": {
+                "count": 9,
+                "mean": 0.010819674181952971,
+                "p95": 0.01798747596924903,
+                "max": 0.01798747596924903
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "prefix": {
+            "grasp_position_error_mm": {
+              "count": 102,
+              "mean": 2.8341724672199953,
+              "p95": 7.802495514915155,
+              "max": 12.361335549144306
+            },
+            "absolute_vertical_error_mm": {
+              "count": 102,
+              "mean": 1.840550914057736,
+              "p95": 7.7963088280271675,
+              "max": 12.33310398018699
+            },
+            "signed_vertical_error_mean_mm": -0.21425740156184211,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 27,
+                "mean": 2.9949091941119974,
+                "p95": 5.523753071980189,
+                "max": 6.4617841050057025
+              },
+              "recorded_displacement_mm": {
+                "count": 27,
+                "mean": 0.02298112365007476,
+                "p95": 0.08459100124268722,
+                "max": 0.08459100124268722
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "full": {
+            "grasp_position_error_mm": {
+              "count": 1653,
+              "mean": 11.89577507213299,
+              "p95": 69.26057106719576,
+              "max": 93.98463937853762
+            },
+            "absolute_vertical_error_mm": {
+              "count": 1653,
+              "mean": 10.218125063556737,
+              "p95": 67.77873086567602,
+              "max": 93.98270156296478
+            },
+            "signed_vertical_error_mean_mm": -3.773236940432855,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 81,
+                "mean": 3.8297780612797165,
+                "p95": 9.900446515547726,
+                "max": 22.704003607443905
+              },
+              "recorded_displacement_mm": {
+                "count": 81,
+                "mean": 0.17408836858365576,
+                "p95": 0.8270894431575375,
+                "max": 0.9777238525034146
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          }
+        },
+        "close_before": {
+          "first": {
+            "grasp_position_error_mm": {
+              "count": 6,
+              "mean": 0.7041643937642941,
+              "p95": 1.3251048801400682,
+              "max": 1.4673155147661114
+            },
+            "absolute_vertical_error_mm": {
+              "count": 6,
+              "mean": 0.45776837311528834,
+              "p95": 1.1427338692427362,
+              "max": 1.3987658238912246
+            },
+            "signed_vertical_error_mean_mm": 0.2747999329269793,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 6,
+                "mean": 0.707984837096999,
+                "p95": 1.3181735114958608,
+                "max": 1.461271028596028
+              },
+              "recorded_displacement_mm": {
+                "count": 6,
+                "mean": 0.01566254093582899,
+                "p95": 0.022604823427003717,
+                "max": 0.022604823427003717
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "prefix": {
+            "grasp_position_error_mm": {
+              "count": 18,
+              "mean": 0.8545688740992649,
+              "p95": 1.5976758424987438,
+              "max": 1.8024546919315778
+            },
+            "absolute_vertical_error_mm": {
+              "count": 18,
+              "mean": 0.6167756331490892,
+              "p95": 1.4443611858622107,
+              "max": 1.7027349036978023
+            },
+            "signed_vertical_error_mean_mm": 0.4129165110297966,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 18,
+                "mean": 0.8482462310832365,
+                "p95": 1.5863957546988188,
+                "max": 1.7862634317737662
+              },
+              "recorded_displacement_mm": {
+                "count": 18,
+                "mean": 0.023838353317453223,
+                "p95": 0.04523818189409606,
+                "max": 0.04523818189409606
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "full": {
+            "grasp_position_error_mm": {
+              "count": 300,
+              "mean": 1.84783577011551,
+              "p95": 5.076742704817396,
+              "max": 7.279333383718114
+            },
+            "absolute_vertical_error_mm": {
+              "count": 300,
+              "mean": 1.7066205251348137,
+              "p95": 5.067743310472691,
+              "max": 7.271843913360868
+            },
+            "signed_vertical_error_mean_mm": -1.2166238985231295,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 111,
+                "mean": 0.8448190199053534,
+                "p95": 1.7614561242344382,
+                "max": 2.2160046059794283
+              },
+              "recorded_displacement_mm": {
+                "count": 111,
+                "mean": 0.057555065980019776,
+                "p95": 0.09067663644899031,
+                "max": 0.7381318743696014
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          }
+        },
+        "close_at": {
+          "first": {
+            "grasp_position_error_mm": {
+              "count": 6,
+              "mean": 0.6835898935420102,
+              "p95": 1.2228175929901144,
+              "max": 1.4029227598184408
+            },
+            "absolute_vertical_error_mm": {
+              "count": 6,
+              "mean": 0.4197688787454368,
+              "p95": 0.9533176380748429,
+              "max": 1.1130136703157945
+            },
+            "signed_vertical_error_mean_mm": 0.34784961902295447,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 6,
+                "mean": 0.6793199445799188,
+                "p95": 1.215105377121172,
+                "max": 1.3929601490110426
+              },
+              "recorded_displacement_mm": {
+                "count": 6,
+                "mean": 0.012771210429848268,
+                "p95": 0.013708740878058685,
+                "max": 0.013708740878058685
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "prefix": {
+            "grasp_position_error_mm": {
+              "count": 18,
+              "mean": 0.7800147836867217,
+              "p95": 1.4941547101811499,
+              "max": 2.0111357622365076
+            },
+            "absolute_vertical_error_mm": {
+              "count": 18,
+              "mean": 0.4977273290456144,
+              "p95": 1.2075210012670565,
+              "max": 1.7430625433242142
+            },
+            "signed_vertical_error_mean_mm": 0.3665212172327641,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 18,
+                "mean": 0.7751707960327844,
+                "p95": 1.4815451291093158,
+                "max": 1.983526682999536
+              },
+              "recorded_displacement_mm": {
+                "count": 18,
+                "mean": 0.021392392940505447,
+                "p95": 0.03245871094312035,
+                "max": 0.03245871094312035
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "full": {
+            "grasp_position_error_mm": {
+              "count": 300,
+              "mean": 2.3756490683282396,
+              "p95": 6.735543392862472,
+              "max": 9.25102201196779
+            },
+            "absolute_vertical_error_mm": {
+              "count": 300,
+              "mean": 2.2269517559179066,
+              "p95": 6.724864673360292,
+              "max": 9.24458806924386
+            },
+            "signed_vertical_error_mean_mm": -1.7375438343146024,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 105,
+                "mean": 0.8839246220100638,
+                "p95": 1.938666728124365,
+                "max": 3.365522081387343
+              },
+              "recorded_displacement_mm": {
+                "count": 105,
+                "mean": 0.0585003710141861,
+                "p95": 0.10357516752886947,
+                "max": 0.7529957514939976
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          }
+        },
+        "hold_start": {
+          "first": {
+            "grasp_position_error_mm": {
+              "count": 6,
+              "mean": 0.6057052869286118,
+              "p95": 1.0892340154163747,
+              "max": 1.097281017753096
+            },
+            "absolute_vertical_error_mm": {
+              "count": 6,
+              "mean": 0.40245006141608525,
+              "p95": 1.0052449345309284,
+              "max": 1.0905093059770365
+            },
+            "signed_vertical_error_mean_mm": 0.010612772098203513,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 6,
+                "mean": 0.6112648554302416,
+                "p95": 1.1039139643190756,
+                "max": 1.1282347309893084
+              },
+              "recorded_displacement_mm": {
+                "count": 6,
+                "mean": 0.046016026186020915,
+                "p95": 0.07542133156308092,
+                "max": 0.07542133156308092
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 6,
+                "mean": 0.6057052869286118,
+                "p95": 1.0892340154163747,
+                "max": 1.097281017753096
+              },
+              "absolute_vertical_error_mm": {
+                "count": 6,
+                "mean": 0.40245006141608525,
+                "p95": 1.0052449345309284,
+                "max": 1.0905093059770365
+              }
+            }
+          },
+          "prefix": {
+            "grasp_position_error_mm": {
+              "count": 18,
+              "mean": 0.5935729100469469,
+              "p95": 1.1921370743179494,
+              "max": 1.3141870067381312
+            },
+            "absolute_vertical_error_mm": {
+              "count": 18,
+              "mean": 0.41816213126929824,
+              "p95": 1.1197131113555612,
+              "max": 1.2852013418338686
+            },
+            "signed_vertical_error_mean_mm": 0.2512642330361593,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 18,
+                "mean": 0.5863364242325992,
+                "p95": 1.1474720035845747,
+                "max": 1.2564832149577523
+              },
+              "recorded_displacement_mm": {
+                "count": 18,
+                "mean": 0.04592720242884499,
+                "p95": 0.0806865905275881,
+                "max": 0.0806865905275881
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 18,
+                "mean": 0.5935729100469469,
+                "p95": 1.1921370743179494,
+                "max": 1.3141870067381312
+              },
+              "absolute_vertical_error_mm": {
+                "count": 18,
+                "mean": 0.41816213126929824,
+                "p95": 1.1197131113555612,
+                "max": 1.2852013418338686
+              }
+            }
+          },
+          "full": {
+            "grasp_position_error_mm": {
+              "count": 300,
+              "mean": 5.00483316988511,
+              "p95": 24.046591798040474,
+              "max": 29.726053403550356
+            },
+            "absolute_vertical_error_mm": {
+              "count": 300,
+              "mean": 4.8506756144713625,
+              "p95": 24.041529257807376,
+              "max": 29.725675914340954
+            },
+            "signed_vertical_error_mean_mm": 2.509636126557057,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 153,
+                "mean": 2.37993754815515,
+                "p95": 13.634715575788562,
+                "max": 14.976248562242487
+              },
+              "recorded_displacement_mm": {
+                "count": 153,
+                "mean": 0.07213798131978881,
+                "p95": 0.10189808411140387,
+                "max": 0.4066346323702183
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 147,
+                "mean": 2.292997752996762,
+                "p95": 13.654739863286204,
+                "max": 15.044955592749341
+              },
+              "absolute_vertical_error_mm": {
+                "count": 147,
+                "mean": 2.1064202767604185,
+                "p95": 13.62648570364926,
+                "max": 15.019620798344476
+              }
+            }
+          }
+        },
+        "hold_end": {
+          "first": {
+            "grasp_position_error_mm": {
+              "count": 6,
+              "mean": 0.5314744212860354,
+              "p95": 0.7586401835708536,
+              "max": 0.7791084246843439
+            },
+            "absolute_vertical_error_mm": {
+              "count": 6,
+              "mean": 0.3925917467710415,
+              "p95": 0.6225205909139717,
+              "max": 0.6416353083013746
+            },
+            "signed_vertical_error_mean_mm": -0.1787133106705833,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 6,
+                "mean": 0.7195418117495663,
+                "p95": 1.0098153585462646,
+                "max": 1.0448357225237117
+              },
+              "recorded_displacement_mm": {
+                "count": 6,
+                "mean": 0.35443093008463594,
+                "p95": 0.37587659354870095,
+                "max": 0.37587659354870095
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "prefix": {
+            "grasp_position_error_mm": {
+              "count": 18,
+              "mean": 1.9113603099061776,
+              "p95": 3.985022966099673,
+              "max": 4.058793814658808
+            },
+            "absolute_vertical_error_mm": {
+              "count": 18,
+              "mean": 1.8341121094372221,
+              "p95": 3.9445424618539175,
+              "max": 4.049568884105383
+            },
+            "signed_vertical_error_mean_mm": 1.6436770902900137,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 6,
+                "mean": 0.7195418117495663,
+                "p95": 1.0098153585462646,
+                "max": 1.0448357225237117
+              },
+              "recorded_displacement_mm": {
+                "count": 6,
+                "mean": 0.35443093008463594,
+                "p95": 0.37587659354870095,
+                "max": 0.37587659354870095
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "full": {
+            "grasp_position_error_mm": {
+              "count": 300,
+              "mean": 11.93714605116967,
+              "p95": 27.799785125004597,
+              "max": 32.87388674279463
+            },
+            "absolute_vertical_error_mm": {
+              "count": 300,
+              "mean": 11.84772119579927,
+              "p95": 27.79312994048126,
+              "max": 32.87106393267413
+            },
+            "signed_vertical_error_mean_mm": 11.610530362704178,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 6,
+                "mean": 0.7195418117495663,
+                "p95": 1.0098153585462646,
+                "max": 1.0448357225237117
+              },
+              "recorded_displacement_mm": {
+                "count": 6,
+                "mean": 0.35443093008463594,
+                "p95": 0.37587659354870095,
+                "max": 0.37587659354870095
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          }
+        },
+        "open_before": {
+          "first": {
+            "grasp_position_error_mm": {
+              "count": 6,
+              "mean": 0.9623238737274226,
+              "p95": 1.862696332400454,
+              "max": 1.87657945481288
+            },
+            "absolute_vertical_error_mm": {
+              "count": 6,
+              "mean": 0.7150428999323495,
+              "p95": 1.7291200793041206,
+              "max": 1.7968238111967025
+            },
+            "signed_vertical_error_mean_mm": -0.004662630657859286,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 6,
+                "mean": 0.9795093290619649,
+                "p95": 1.9004040533728193,
+                "max": 1.9340617262282567
+              },
+              "recorded_displacement_mm": {
+                "count": 6,
+                "mean": 0.046975318048176916,
+                "p95": 0.0665972861380242,
+                "max": 0.0665972861380242
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "prefix": {
+            "grasp_position_error_mm": {
+              "count": 18,
+              "mean": 0.9597624541024634,
+              "p95": 2.042222622796453,
+              "max": 2.7671911682424972
+            },
+            "absolute_vertical_error_mm": {
+              "count": 18,
+              "mean": 0.7694247304339802,
+              "p95": 1.9366569813836976,
+              "max": 2.7290449457766783
+            },
+            "signed_vertical_error_mean_mm": -0.22699467544672716,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 18,
+                "mean": 0.9714815145720276,
+                "p95": 2.071645089145661,
+                "max": 2.851284145677627
+              },
+              "recorded_displacement_mm": {
+                "count": 18,
+                "mean": 0.05450251163061196,
+                "p95": 0.08802749648043283,
+                "max": 0.08802749648043283
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "full": {
+            "grasp_position_error_mm": {
+              "count": 300,
+              "mean": 3.4855045493101806,
+              "p95": 9.606249963189862,
+              "max": 10.8586756248731
+            },
+            "absolute_vertical_error_mm": {
+              "count": 300,
+              "mean": 0.7832334093412758,
+              "p95": 1.8760727737204392,
+              "max": 3.9775104034872726
+            },
+            "signed_vertical_error_mean_mm": -0.2501492601142909,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 108,
+                "mean": 1.0149633113957746,
+                "p95": 1.9160005387369463,
+                "max": 2.851284145677627
+              },
+              "recorded_displacement_mm": {
+                "count": 108,
+                "mean": 0.12665330747112294,
+                "p95": 0.24435443598021947,
+                "max": 0.2479103766164594
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          }
+        },
+        "open_at": {
+          "first": {
+            "grasp_position_error_mm": {
+              "count": 6,
+              "mean": 0.6406990991697018,
+              "p95": 1.1028052497416574,
+              "max": 1.2403672154032348
+            },
+            "absolute_vertical_error_mm": {
+              "count": 6,
+              "mean": 0.3972919447706455,
+              "p95": 0.8725506424637217,
+              "max": 0.9442508860789189
+            },
+            "signed_vertical_error_mean_mm": 0.32673627399083455,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 6,
+                "mean": 0.6352336106617308,
+                "p95": 1.0914850155292222,
+                "max": 1.2287098563261252
+              },
+              "recorded_displacement_mm": {
+                "count": 6,
+                "mean": 0.011607659014350348,
+                "p95": 0.012154890895067395,
+                "max": 0.012154890895067395
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "prefix": {
+            "grasp_position_error_mm": {
+              "count": 18,
+              "mean": 0.7762776902954084,
+              "p95": 1.333566032285135,
+              "max": 1.8594710507456824
+            },
+            "absolute_vertical_error_mm": {
+              "count": 18,
+              "mean": 0.558780757006673,
+              "p95": 1.2689395574643587,
+              "max": 1.4847514714904122
+            },
+            "signed_vertical_error_mean_mm": -0.14038298180223624,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 18,
+                "mean": 0.776984697333587,
+                "p95": 1.355087639506499,
+                "max": 1.8678067694834137
+              },
+              "recorded_displacement_mm": {
+                "count": 18,
+                "mean": 0.016428175737774376,
+                "p95": 0.026756623740986567,
+                "max": 0.026756623740986567
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "full": {
+            "grasp_position_error_mm": {
+              "count": 300,
+              "mean": 4.079479462750044,
+              "p95": 8.954141536206135,
+              "max": 10.064471497291132
+            },
+            "absolute_vertical_error_mm": {
+              "count": 300,
+              "mean": 0.7033035429168352,
+              "p95": 1.878891977725834,
+              "max": 2.8656198474077
+            },
+            "signed_vertical_error_mean_mm": -0.15284028931193058,
+            "target_within_1mm_of_anchor": {
+              "predicted_displacement_mm": {
+                "count": 102,
+                "mean": 0.8774995432609397,
+                "p95": 1.9447207442871783,
+                "max": 2.9217413579851375
+              },
+              "recorded_displacement_mm": {
+                "count": 102,
+                "mean": 0.08957217450627633,
+                "p95": 0.18078550910681573,
+                "max": 0.18350944299587327
+              }
+            },
+            "recorded_hold": {
+              "grasp_position_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              },
+              "absolute_vertical_error_mm": {
+                "count": 0,
+                "mean": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          }
+        }
+      },
+      "switch_timing": {
+        "close_before": {
+          "prefix": {
+            "prediction_draws": 6,
+            "target_not_in_horizon": 0,
+            "early": 5,
+            "same_label_step": 0,
+            "late": 1,
+            "never_switched_in_horizon": 0,
+            "timing_error_when_switched_s": {
+              "count": 6,
+              "mean": -0.1111111111111111,
+              "p95": 0.08333333333333333,
+              "max": 0.16666666666666666
+            },
+            "censored_late_lower_bound_s": {
+              "count": 0,
+              "mean": null,
+              "p95": null,
+              "max": null
+            }
+          },
+          "full": {
+            "prediction_draws": 6,
+            "target_not_in_horizon": 0,
+            "early": 5,
+            "same_label_step": 0,
+            "late": 1,
+            "never_switched_in_horizon": 0,
+            "timing_error_when_switched_s": {
+              "count": 6,
+              "mean": -0.1111111111111111,
+              "p95": 0.08333333333333333,
+              "max": 0.16666666666666666
+            },
+            "censored_late_lower_bound_s": {
+              "count": 0,
+              "mean": null,
+              "p95": null,
+              "max": null
+            }
+          }
+        },
+        "close_at": {
+          "prefix": {
+            "prediction_draws": 6,
+            "target_not_in_horizon": 0,
+            "early": 0,
+            "same_label_step": 5,
+            "late": 1,
+            "never_switched_in_horizon": 0,
+            "timing_error_when_switched_s": {
+              "count": 6,
+              "mean": 0.027777777777777776,
+              "p95": 0.125,
+              "max": 0.16666666666666666
+            },
+            "censored_late_lower_bound_s": {
+              "count": 0,
+              "mean": null,
+              "p95": null,
+              "max": null
+            }
+          },
+          "full": {
+            "prediction_draws": 6,
+            "target_not_in_horizon": 0,
+            "early": 0,
+            "same_label_step": 5,
+            "late": 1,
+            "never_switched_in_horizon": 0,
+            "timing_error_when_switched_s": {
+              "count": 6,
+              "mean": 0.027777777777777776,
+              "p95": 0.125,
+              "max": 0.16666666666666666
+            },
+            "censored_late_lower_bound_s": {
+              "count": 0,
+              "mean": null,
+              "p95": null,
+              "max": null
+            }
+          }
+        },
+        "open_before": {
+          "prefix": {
+            "prediction_draws": 6,
+            "target_not_in_horizon": 0,
+            "early": 0,
+            "same_label_step": 0,
+            "late": 3,
+            "never_switched_in_horizon": 3,
+            "timing_error_when_switched_s": {
+              "count": 3,
+              "mean": 0.16666666666666666,
+              "p95": 0.16666666666666666,
+              "max": 0.16666666666666666
+            },
+            "censored_late_lower_bound_s": {
+              "count": 3,
+              "mean": 0.16666666666666666,
+              "p95": 0.16666666666666666,
+              "max": 0.16666666666666666
+            }
+          },
+          "full": {
+            "prediction_draws": 6,
+            "target_not_in_horizon": 0,
+            "early": 0,
+            "same_label_step": 0,
+            "late": 6,
+            "never_switched_in_horizon": 0,
+            "timing_error_when_switched_s": {
+              "count": 6,
+              "mean": 0.3333333333333333,
+              "p95": 0.7083333333333334,
+              "max": 0.8333333333333334
+            },
+            "censored_late_lower_bound_s": {
+              "count": 0,
+              "mean": null,
+              "p95": null,
+              "max": null
+            }
+          }
+        },
+        "open_at": {
+          "prefix": {
+            "prediction_draws": 6,
+            "target_not_in_horizon": 0,
+            "early": 0,
+            "same_label_step": 0,
+            "late": 1,
+            "never_switched_in_horizon": 5,
+            "timing_error_when_switched_s": {
+              "count": 1,
+              "mean": 0.16666666666666666,
+              "p95": 0.16666666666666666,
+              "max": 0.16666666666666666
+            },
+            "censored_late_lower_bound_s": {
+              "count": 5,
+              "mean": 0.3333333333333333,
+              "p95": 0.3333333333333333,
+              "max": 0.3333333333333333
+            }
+          },
+          "full": {
+            "prediction_draws": 6,
+            "target_not_in_horizon": 0,
+            "early": 0,
+            "same_label_step": 0,
+            "late": 6,
+            "never_switched_in_horizon": 0,
+            "timing_error_when_switched_s": {
+              "count": 6,
+              "mean": 0.5277777777777778,
+              "p95": 0.7916666666666667,
+              "max": 0.8333333333333334
+            },
+            "censored_late_lower_bound_s": {
+              "count": 0,
+              "mean": null,
+              "p95": null,
+              "max": null
+            }
+          }
+        }
+      }
+    }
+  },
+  "support_metrics": {
+    "all": {
+      "release_anchors": {
+        "before": {
+          "draws": 30,
+          "stable_reference_draws": 30,
+          "first_ge_90": {
+            "within_prefix": 27,
+            "before_recorded_release_command": 14,
+            "height_minus_reference_mm": {
+              "count": 27,
+              "min": -2.743456861803077,
+              "mean": 0.16779318192837597,
+              "median": 0.17058138931434358,
+              "p95": 1.2647611852089355,
+              "max": 1.6636016526983641
+            },
+            "distance_from_reference_mm": {
+              "count": 27,
+              "min": 0.04850300516103599,
+              "mean": 0.7626927195872663,
+              "median": 0.5914446501509227,
+              "p95": 1.8468381590319216,
+              "max": 2.7854890980351965
+            }
+          },
+          "first_ge_98": {
+            "within_prefix": 27,
+            "before_recorded_release_command": 14,
+            "height_minus_reference_mm": {
+              "count": 27,
+              "min": -2.743456861803077,
+              "mean": 0.16779318192837597,
+              "median": 0.17058138931434358,
+              "p95": 1.2647611852089355,
+              "max": 1.6636016526983641
+            },
+            "distance_from_reference_mm": {
+              "count": 27,
+              "min": 0.04850300516103599,
+              "mean": 0.7626927195872663,
+              "median": 0.5914446501509227,
+              "p95": 1.8468381590319216,
+              "max": 2.7854890980351965
+            }
+          },
+          "nearest_label_switch": {
+            "matched_draws": 27,
+            "censored_draws": 3,
+            "target_outside_horizon": 0,
+            "timing_error_s": {
+              "count": 27,
+              "min": -0.16666666666666666,
+              "mean": -0.049382716049382706,
+              "median": -0.16666666666666666,
+              "p95": 0.16666666666666666,
+              "max": 0.16666666666666666
+            },
+            "at_label_distance_from_reference_mm": {
+              "count": 30,
+              "min": 0.2326779220744291,
+              "mean": 0.7289651324678296,
+              "median": 0.6182099332885719,
+              "p95": 1.4482495459968527,
+              "max": 1.7154395331316215
+            },
+            "at_label_raw_gripper_percent": {
+              "count": 30,
+              "min": 75.76778531074524,
+              "mean": 92.61664390563965,
+              "median": 100.08703470230103,
+              "p95": 100.24762511253357,
+              "max": 100.27947425842285
+            },
+            "max_wait_distance_from_reference_mm": {
+              "count": 9,
+              "min": 0.2645526305874707,
+              "mean": 0.7830900917107236,
+              "median": 0.7666323913792594,
+              "p95": 1.4464746347734034,
+              "max": 1.5993122167814569
+            }
+          }
+        },
+        "at": {
+          "draws": 30,
+          "stable_reference_draws": 30,
+          "first_ge_90": {
+            "within_prefix": 25,
+            "before_recorded_release_command": 0,
+            "height_minus_reference_mm": {
+              "count": 25,
+              "min": -1.4823879589437283,
+              "mean": 0.24490525092341517,
+              "median": 0.27175888427173706,
+              "p95": 1.2224756785019264,
+              "max": 1.3994924633570687
+            },
+            "distance_from_reference_mm": {
+              "count": 25,
+              "min": 0.19552751327332332,
+              "mean": 0.71524802063229,
+              "median": 0.6908228128003902,
+              "p95": 1.463667797502747,
+              "max": 1.8677613675596936
+            }
+          },
+          "first_ge_98": {
+            "within_prefix": 25,
+            "before_recorded_release_command": 0,
+            "height_minus_reference_mm": {
+              "count": 25,
+              "min": -1.0897358461505007,
+              "mean": 0.24127458419489012,
+              "median": 0.27175888427173706,
+              "p95": 1.2224756785019264,
+              "max": 1.3994924633570687
+            },
+            "distance_from_reference_mm": {
+              "count": 25,
+              "min": 0.19552751327332332,
+              "mean": 0.6901086400987478,
+              "median": 0.6908228128003902,
+              "p95": 1.3255498663313237,
+              "max": 1.4897698214352224
+            }
+          },
+          "nearest_label_switch": {
+            "matched_draws": 25,
+            "censored_draws": 5,
+            "target_outside_horizon": 0,
+            "timing_error_s": {
+              "count": 25,
+              "min": 0.0,
+              "mean": 0.006666666666666666,
+              "median": 0.0,
+              "p95": 0.0,
+              "max": 0.16666666666666666
+            },
+            "at_label_distance_from_reference_mm": {
+              "count": 30,
+              "min": 0.19552751327332332,
+              "mean": 0.6605298201592599,
+              "median": 0.6489277745481701,
+              "p95": 1.300529308605537,
+              "max": 1.4897698214352224
+            },
+            "at_label_raw_gripper_percent": {
+              "count": 30,
+              "min": 75.67291259765625,
+              "mean": 95.02463281154633,
+              "median": 100.09924173355103,
+              "p95": 100.1802271604538,
+              "max": 100.24776458740234
+            },
+            "max_wait_distance_from_reference_mm": {
+              "count": 6,
+              "min": 0.6311873562982254,
+              "mean": 1.037286916520625,
+              "median": 1.1518344115977799,
+              "p95": 1.2528095910518517,
+              "max": 1.2608302157502678
+            }
+          }
+        }
+      },
+      "recorded_hold_prefix": {
+        "draws_with_recorded_hold_ticks": 39,
+        "hold_ticks_across_draws": 117,
+        "draws_by_anchor_relation": {
+          "within_hold": 39
+        },
+        "draws_ge_90_by_anchor_relation": {},
+        "draws_ge_98_by_anchor_relation": {},
+        "draws_with_hold_target_at_least_90_percent": 0,
+        "draws_with_hold_target_at_least_98_percent": 0,
+        "per_draw_min_raw_gripper_percent": {
+          "count": 39,
+          "min": 75.60696005821228,
+          "mean": 75.7682034602532,
+          "median": 75.76038837432861,
+          "p95": 75.8899199962616,
+          "max": 75.94075202941895
+        },
+        "per_draw_max_raw_gripper_percent": {
+          "count": 39,
+          "min": 75.7550597190857,
+          "mean": 75.86903893030606,
+          "median": 75.85564851760864,
+          "p95": 75.96872389316559,
+          "max": 76.12311840057373
+        },
+        "projected_vs_anchor_measured": {
+          "eligible_draws": 39,
+          "eligible_points": 117,
+          "missing_points": 0,
+          "draws_at_least_2pp": 0,
+          "points_at_least_2pp": 0,
+          "maximum_increase_pp": 0.0,
+          "maximum_witness": {
+            "source_index": 2,
+            "cycle": 1,
+            "source_capture_frame": 253,
+            "row_index": 1268,
+            "draw": 0,
+            "seed": 20261256,
+            "tick": 1,
+            "raw_gripper_fraction": 0.7574988007545471,
+            "projected_integer_percent": 76,
+            "increase_percentage_points": 0.0
+          }
+        },
+        "projected_vs_anchor_last_command": {
+          "eligible_draws": 39,
+          "eligible_points": 117,
+          "missing_points": 0,
+          "draws_at_least_2pp": 0,
+          "points_at_least_2pp": 0,
+          "maximum_increase_pp": 0.0,
+          "maximum_witness": {
+            "source_index": 0,
+            "cycle": 1,
+            "source_capture_frame": 310,
+            "row_index": 310,
+            "draw": 0,
+            "seed": 20261145,
+            "tick": 1,
+            "raw_gripper_fraction": 0.7577319145202637,
+            "projected_integer_percent": 76,
+            "increase_percentage_points": 0.0
+          }
+        },
+        "projected_vs_nominal_last_command": {
+          "eligible_draws": 39,
+          "eligible_points": 117,
+          "missing_points": 0,
+          "draws_at_least_2pp": 0,
+          "points_at_least_2pp": 0,
+          "maximum_increase_pp": 0.0,
+          "maximum_witness": {
+            "source_index": 0,
+            "cycle": 1,
+            "source_capture_frame": 310,
+            "row_index": 310,
+            "draw": 0,
+            "seed": 20261145,
+            "tick": 1,
+            "raw_gripper_fraction": 0.7577319145202637,
+            "projected_integer_percent": 76,
+            "increase_percentage_points": 0.0
+          }
+        }
+      },
+      "recorded_hold_full": {
+        "draws_with_recorded_hold_ticks": 69,
+        "hold_ticks_across_draws": 1653,
+        "draws_by_anchor_relation": {
+          "before_hold": 30,
+          "within_hold": 39
+        },
+        "draws_ge_90_by_anchor_relation": {},
+        "draws_ge_98_by_anchor_relation": {},
+        "draws_with_hold_target_at_least_90_percent": 0,
+        "draws_with_hold_target_at_least_98_percent": 0,
+        "per_draw_min_raw_gripper_percent": {
+          "count": 69,
+          "min": 75.4967987537384,
+          "mean": 75.75676363447438,
+          "median": 75.7517397403717,
+          "p95": 75.98025918006897,
+          "max": 76.04107856750488
+        },
+        "per_draw_max_raw_gripper_percent": {
+          "count": 69,
+          "min": 75.81862807273865,
+          "mean": 76.03685743566872,
+          "median": 76.03044509887695,
+          "p95": 76.22311592102051,
+          "max": 76.3113021850586
+        },
+        "projected_vs_anchor_measured": {
+          "eligible_draws": 69,
+          "eligible_points": 1653,
+          "missing_points": 0,
+          "draws_at_least_2pp": 0,
+          "points_at_least_2pp": 0,
+          "maximum_increase_pp": 0.0,
+          "maximum_witness": {
+            "source_index": 2,
+            "cycle": 1,
+            "source_capture_frame": 218,
+            "row_index": 1233,
+            "draw": 0,
+            "seed": 20261253,
+            "tick": 35,
+            "raw_gripper_fraction": 0.7599879503250122,
+            "projected_integer_percent": 76,
+            "increase_percentage_points": 0.0
+          }
+        },
+        "projected_vs_anchor_last_command": {
+          "eligible_draws": 69,
+          "eligible_points": 1653,
+          "missing_points": 0,
+          "draws_at_least_2pp": 0,
+          "points_at_least_2pp": 0,
+          "maximum_increase_pp": 0.0,
+          "maximum_witness": {
+            "source_index": 0,
+            "cycle": 1,
+            "source_capture_frame": 294,
+            "row_index": 294,
+            "draw": 0,
+            "seed": 20261142,
+            "tick": 16,
+            "raw_gripper_fraction": 0.7582305073738098,
+            "projected_integer_percent": 76,
+            "increase_percentage_points": 0.0
+          }
+        },
+        "projected_vs_nominal_last_command": {
+          "eligible_draws": 69,
+          "eligible_points": 1653,
+          "missing_points": 0,
+          "draws_at_least_2pp": 0,
+          "points_at_least_2pp": 0,
+          "maximum_increase_pp": 0.0,
+          "maximum_witness": {
+            "source_index": 0,
+            "cycle": 1,
+            "source_capture_frame": 294,
+            "row_index": 294,
+            "draw": 0,
+            "seed": 20261142,
+            "tick": 16,
+            "raw_gripper_fraction": 0.7582305073738098,
+            "projected_integer_percent": 76,
+            "increase_percentage_points": 0.0
+          }
+        }
+      },
+      "first_open_from_recorded_contact_anchors": {
+        "after_close_before_lift_probe": {
+          "anchor_draws": 9,
+          "jaw_contact_reported_anchor_draws": 6,
+          "unknown_anchor_jaw_feedback_draws": 3,
+          "first_ge_90_within_prefix": 0,
+          "first_ge_90_source_phase_at_nominal_time": {},
+          "first_ge_90_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          },
+          "first_ge_98_within_prefix": 0,
+          "first_ge_98_source_phase_at_nominal_time": {},
+          "first_ge_98_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "lift_probe_before_full": {
+          "anchor_draws": 12,
+          "jaw_contact_reported_anchor_draws": 12,
+          "unknown_anchor_jaw_feedback_draws": 0,
+          "first_ge_90_within_prefix": 0,
+          "first_ge_90_source_phase_at_nominal_time": {},
+          "first_ge_90_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          },
+          "first_ge_98_within_prefix": 0,
+          "first_ge_98_source_phase_at_nominal_time": {},
+          "first_ge_98_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "lift_full_before_hold": {
+          "anchor_draws": 12,
+          "jaw_contact_reported_anchor_draws": 12,
+          "unknown_anchor_jaw_feedback_draws": 0,
+          "first_ge_90_within_prefix": 0,
+          "first_ge_90_source_phase_at_nominal_time": {},
+          "first_ge_90_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          },
+          "first_ge_98_within_prefix": 0,
+          "first_ge_98_source_phase_at_nominal_time": {},
+          "first_ge_98_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "recorded_hold": {
+          "anchor_draws": 69,
+          "jaw_contact_reported_anchor_draws": 69,
+          "unknown_anchor_jaw_feedback_draws": 0,
+          "first_ge_90_within_prefix": 0,
+          "first_ge_90_source_phase_at_nominal_time": {},
+          "first_ge_90_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          },
+          "first_ge_98_within_prefix": 0,
+          "first_ge_98_source_phase_at_nominal_time": {},
+          "first_ge_98_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "return_before_release": {
+          "anchor_draws": 84,
+          "jaw_contact_reported_anchor_draws": 84,
+          "unknown_anchor_jaw_feedback_draws": 0,
+          "first_ge_90_within_prefix": 53,
+          "first_ge_90_source_phase_at_nominal_time": {
+            "after_release": 39,
+            "return_before_release": 14
+          },
+          "first_ge_90_height_minus_reference_mm": {
+            "count": 53,
+            "min": -2.743456861803077,
+            "mean": 0.1915033640272051,
+            "median": 0.17613857931666335,
+            "p95": 1.3519164154238659,
+            "max": 1.6636016526983641
+          },
+          "first_ge_98_within_prefix": 53,
+          "first_ge_98_source_phase_at_nominal_time": {
+            "after_release": 39,
+            "return_before_release": 14
+          },
+          "first_ge_98_height_minus_reference_mm": {
+            "count": 53,
+            "min": -2.743456861803077,
+            "mean": 0.18979078538167443,
+            "median": 0.17613857931666335,
+            "p95": 1.3519164154238659,
+            "max": 1.6636016526983641
+          }
+        }
+      }
+    },
+    "train": {
+      "release_anchors": {
+        "before": {
+          "draws": 24,
+          "stable_reference_draws": 24,
+          "first_ge_90": {
+            "within_prefix": 24,
+            "before_recorded_release_command": 14,
+            "height_minus_reference_mm": {
+              "count": 24,
+              "min": -0.8314195778590909,
+              "mean": 0.2269987864518815,
+              "median": 0.17335998431550348,
+              "p95": 0.8333928672853395,
+              "max": 1.4393889735165104
+            },
+            "distance_from_reference_mm": {
+              "count": 24,
+              "min": 0.04850300516103599,
+              "mean": 0.6416371677917859,
+              "median": 0.5909628578699588,
+              "p95": 1.0798007999687256,
+              "max": 1.7154395331316215
+            }
+          },
+          "first_ge_98": {
+            "within_prefix": 24,
+            "before_recorded_release_command": 14,
+            "height_minus_reference_mm": {
+              "count": 24,
+              "min": -0.8314195778590909,
+              "mean": 0.2269987864518815,
+              "median": 0.17335998431550348,
+              "p95": 0.8333928672853395,
+              "max": 1.4393889735165104
+            },
+            "distance_from_reference_mm": {
+              "count": 24,
+              "min": 0.04850300516103599,
+              "mean": 0.6416371677917859,
+              "median": 0.5909628578699588,
+              "p95": 1.0798007999687256,
+              "max": 1.7154395331316215
+            }
+          },
+          "nearest_label_switch": {
+            "matched_draws": 24,
+            "censored_draws": 0,
+            "target_outside_horizon": 0,
+            "timing_error_s": {
+              "count": 24,
+              "min": -0.16666666666666666,
+              "mean": -0.07638888888888888,
+              "median": -0.16666666666666666,
+              "p95": 0.16666666666666666,
+              "max": 0.16666666666666666
+            },
+            "at_label_distance_from_reference_mm": {
+              "count": 24,
+              "min": 0.2326779220744291,
+              "mean": 0.7141916752910192,
+              "median": 0.6182099332885719,
+              "p95": 1.2439406426260402,
+              "max": 1.7154395331316215
+            },
+            "at_label_raw_gripper_percent": {
+              "count": 24,
+              "min": 75.76778531074524,
+              "mean": 96.7015191912651,
+              "median": 100.12684464454651,
+              "p95": 100.25336861610413,
+              "max": 100.27947425842285
+            },
+            "max_wait_distance_from_reference_mm": {
+              "count": 3,
+              "min": 0.2645526305874707,
+              "mean": 0.5680571291317896,
+              "median": 0.6105190696622159,
+              "p95": 0.8072416253973356,
+              "max": 0.8290996871456823
+            }
+          }
+        },
+        "at": {
+          "draws": 24,
+          "stable_reference_draws": 24,
+          "first_ge_90": {
+            "within_prefix": 24,
+            "before_recorded_release_command": 0,
+            "height_minus_reference_mm": {
+              "count": 24,
+              "min": -0.4882238334392042,
+              "mean": 0.3168758013345461,
+              "median": 0.30945177990151207,
+              "p95": 1.2469065214102109,
+              "max": 1.3994924633570687
+            },
+            "distance_from_reference_mm": {
+              "count": 24,
+              "min": 0.19552751327332332,
+              "mean": 0.6672266311769816,
+              "median": 0.6787455027992524,
+              "p95": 1.308144058744875,
+              "max": 1.4897698214352224
+            }
+          },
+          "first_ge_98": {
+            "within_prefix": 24,
+            "before_recorded_release_command": 0,
+            "height_minus_reference_mm": {
+              "count": 24,
+              "min": -0.4882238334392042,
+              "mean": 0.2967333521259481,
+              "median": 0.30945177990151207,
+              "p95": 1.2469065214102109,
+              "max": 1.3994924633570687
+            },
+            "distance_from_reference_mm": {
+              "count": 24,
+              "min": 0.19552751327332332,
+              "mean": 0.6692502282459776,
+              "median": 0.6787455027992524,
+              "p95": 1.308144058744875,
+              "max": 1.4897698214352224
+            }
+          },
+          "nearest_label_switch": {
+            "matched_draws": 24,
+            "censored_draws": 0,
+            "target_outside_horizon": 0,
+            "timing_error_s": {
+              "count": 24,
+              "min": 0.0,
+              "mean": 0.0,
+              "median": 0.0,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "at_label_distance_from_reference_mm": {
+              "count": 24,
+              "min": 0.19552751327332332,
+              "mean": 0.6672266311769816,
+              "median": 0.6787455027992524,
+              "p95": 1.308144058744875,
+              "max": 1.4897698214352224
+            },
+            "at_label_raw_gripper_percent": {
+              "count": 24,
+              "min": 93.42983365058899,
+              "mean": 99.80962574481964,
+              "median": 100.10451674461365,
+              "p95": 100.183807015419,
+              "max": 100.24776458740234
+            },
+            "max_wait_distance_from_reference_mm": {
+              "count": 0,
+              "min": null,
+              "mean": null,
+              "median": null,
+              "p95": null,
+              "max": null
+            }
+          }
+        }
+      },
+      "recorded_hold_prefix": {
+        "draws_with_recorded_hold_ticks": 33,
+        "hold_ticks_across_draws": 99,
+        "draws_by_anchor_relation": {
+          "within_hold": 33
+        },
+        "draws_ge_90_by_anchor_relation": {},
+        "draws_ge_98_by_anchor_relation": {},
+        "draws_with_hold_target_at_least_90_percent": 0,
+        "draws_with_hold_target_at_least_98_percent": 0,
+        "per_draw_min_raw_gripper_percent": {
+          "count": 33,
+          "min": 75.60696005821228,
+          "mean": 75.76263077331312,
+          "median": 75.75446367263794,
+          "p95": 75.89162945747375,
+          "max": 75.94075202941895
+        },
+        "per_draw_max_raw_gripper_percent": {
+          "count": 33,
+          "min": 75.7550597190857,
+          "mean": 75.87249170650135,
+          "median": 75.85564851760864,
+          "p95": 75.97101092338562,
+          "max": 76.12311840057373
+        },
+        "projected_vs_anchor_measured": {
+          "eligible_draws": 33,
+          "eligible_points": 99,
+          "missing_points": 0,
+          "draws_at_least_2pp": 0,
+          "points_at_least_2pp": 0,
+          "maximum_increase_pp": 0.0,
+          "maximum_witness": {
+            "source_index": 2,
+            "cycle": 1,
+            "source_capture_frame": 253,
+            "row_index": 1268,
+            "draw": 0,
+            "seed": 20261256,
+            "tick": 1,
+            "raw_gripper_fraction": 0.7574988007545471,
+            "projected_integer_percent": 76,
+            "increase_percentage_points": 0.0
+          }
+        },
+        "projected_vs_anchor_last_command": {
+          "eligible_draws": 33,
+          "eligible_points": 99,
+          "missing_points": 0,
+          "draws_at_least_2pp": 0,
+          "points_at_least_2pp": 0,
+          "maximum_increase_pp": 0.0,
+          "maximum_witness": {
+            "source_index": 0,
+            "cycle": 1,
+            "source_capture_frame": 310,
+            "row_index": 310,
+            "draw": 0,
+            "seed": 20261145,
+            "tick": 1,
+            "raw_gripper_fraction": 0.7577319145202637,
+            "projected_integer_percent": 76,
+            "increase_percentage_points": 0.0
+          }
+        },
+        "projected_vs_nominal_last_command": {
+          "eligible_draws": 33,
+          "eligible_points": 99,
+          "missing_points": 0,
+          "draws_at_least_2pp": 0,
+          "points_at_least_2pp": 0,
+          "maximum_increase_pp": 0.0,
+          "maximum_witness": {
+            "source_index": 0,
+            "cycle": 1,
+            "source_capture_frame": 310,
+            "row_index": 310,
+            "draw": 0,
+            "seed": 20261145,
+            "tick": 1,
+            "raw_gripper_fraction": 0.7577319145202637,
+            "projected_integer_percent": 76,
+            "increase_percentage_points": 0.0
+          }
+        }
+      },
+      "recorded_hold_full": {
+        "draws_with_recorded_hold_ticks": 57,
+        "hold_ticks_across_draws": 1371,
+        "draws_by_anchor_relation": {
+          "before_hold": 24,
+          "within_hold": 33
+        },
+        "draws_ge_90_by_anchor_relation": {},
+        "draws_ge_98_by_anchor_relation": {},
+        "draws_with_hold_target_at_least_90_percent": 0,
+        "draws_with_hold_target_at_least_98_percent": 0,
+        "per_draw_min_raw_gripper_percent": {
+          "count": 57,
+          "min": 75.4967987537384,
+          "mean": 75.75619011594539,
+          "median": 75.74248313903809,
+          "p95": 75.9903335571289,
+          "max": 76.04107856750488
+        },
+        "per_draw_max_raw_gripper_percent": {
+          "count": 57,
+          "min": 75.81862807273865,
+          "mean": 76.04161574129472,
+          "median": 76.03164911270142,
+          "p95": 76.23697519302368,
+          "max": 76.3113021850586
+        },
+        "projected_vs_anchor_measured": {
+          "eligible_draws": 57,
+          "eligible_points": 1371,
+          "missing_points": 0,
+          "draws_at_least_2pp": 0,
+          "points_at_least_2pp": 0,
+          "maximum_increase_pp": 0.0,
+          "maximum_witness": {
+            "source_index": 2,
+            "cycle": 1,
+            "source_capture_frame": 218,
+            "row_index": 1233,
+            "draw": 0,
+            "seed": 20261253,
+            "tick": 35,
+            "raw_gripper_fraction": 0.7599879503250122,
+            "projected_integer_percent": 76,
+            "increase_percentage_points": 0.0
+          }
+        },
+        "projected_vs_anchor_last_command": {
+          "eligible_draws": 57,
+          "eligible_points": 1371,
+          "missing_points": 0,
+          "draws_at_least_2pp": 0,
+          "points_at_least_2pp": 0,
+          "maximum_increase_pp": 0.0,
+          "maximum_witness": {
+            "source_index": 0,
+            "cycle": 1,
+            "source_capture_frame": 294,
+            "row_index": 294,
+            "draw": 0,
+            "seed": 20261142,
+            "tick": 16,
+            "raw_gripper_fraction": 0.7582305073738098,
+            "projected_integer_percent": 76,
+            "increase_percentage_points": 0.0
+          }
+        },
+        "projected_vs_nominal_last_command": {
+          "eligible_draws": 57,
+          "eligible_points": 1371,
+          "missing_points": 0,
+          "draws_at_least_2pp": 0,
+          "points_at_least_2pp": 0,
+          "maximum_increase_pp": 0.0,
+          "maximum_witness": {
+            "source_index": 0,
+            "cycle": 1,
+            "source_capture_frame": 294,
+            "row_index": 294,
+            "draw": 0,
+            "seed": 20261142,
+            "tick": 16,
+            "raw_gripper_fraction": 0.7582305073738098,
+            "projected_integer_percent": 76,
+            "increase_percentage_points": 0.0
+          }
+        }
+      },
+      "first_open_from_recorded_contact_anchors": {
+        "after_close_before_lift_probe": {
+          "anchor_draws": 9,
+          "jaw_contact_reported_anchor_draws": 6,
+          "unknown_anchor_jaw_feedback_draws": 3,
+          "first_ge_90_within_prefix": 0,
+          "first_ge_90_source_phase_at_nominal_time": {},
+          "first_ge_90_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          },
+          "first_ge_98_within_prefix": 0,
+          "first_ge_98_source_phase_at_nominal_time": {},
+          "first_ge_98_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "lift_probe_before_full": {
+          "anchor_draws": 9,
+          "jaw_contact_reported_anchor_draws": 9,
+          "unknown_anchor_jaw_feedback_draws": 0,
+          "first_ge_90_within_prefix": 0,
+          "first_ge_90_source_phase_at_nominal_time": {},
+          "first_ge_90_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          },
+          "first_ge_98_within_prefix": 0,
+          "first_ge_98_source_phase_at_nominal_time": {},
+          "first_ge_98_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "lift_full_before_hold": {
+          "anchor_draws": 9,
+          "jaw_contact_reported_anchor_draws": 9,
+          "unknown_anchor_jaw_feedback_draws": 0,
+          "first_ge_90_within_prefix": 0,
+          "first_ge_90_source_phase_at_nominal_time": {},
+          "first_ge_90_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          },
+          "first_ge_98_within_prefix": 0,
+          "first_ge_98_source_phase_at_nominal_time": {},
+          "first_ge_98_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "recorded_hold": {
+          "anchor_draws": 57,
+          "jaw_contact_reported_anchor_draws": 57,
+          "unknown_anchor_jaw_feedback_draws": 0,
+          "first_ge_90_within_prefix": 0,
+          "first_ge_90_source_phase_at_nominal_time": {},
+          "first_ge_90_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          },
+          "first_ge_98_within_prefix": 0,
+          "first_ge_98_source_phase_at_nominal_time": {},
+          "first_ge_98_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "return_before_release": {
+          "anchor_draws": 69,
+          "jaw_contact_reported_anchor_draws": 69,
+          "unknown_anchor_jaw_feedback_draws": 0,
+          "first_ge_90_within_prefix": 49,
+          "first_ge_90_source_phase_at_nominal_time": {
+            "after_release": 35,
+            "return_before_release": 14
+          },
+          "first_ge_90_height_minus_reference_mm": {
+            "count": 49,
+            "min": -0.8314195778590909,
+            "mean": 0.25611471867682867,
+            "median": 0.2204790191605854,
+            "p95": 1.135037968410874,
+            "max": 1.4393889735165104
+          },
+          "first_ge_98_within_prefix": 49,
+          "first_ge_98_source_phase_at_nominal_time": {
+            "after_release": 35,
+            "return_before_release": 14
+          },
+          "first_ge_98_height_minus_reference_mm": {
+            "count": 49,
+            "min": -0.8314195778590909,
+            "mean": 0.2462490292685357,
+            "median": 0.2204790191605854,
+            "p95": 1.135037968410874,
+            "max": 1.4393889735165104
+          }
+        }
+      }
+    },
+    "validation": {
+      "release_anchors": {
+        "before": {
+          "draws": 6,
+          "stable_reference_draws": 6,
+          "first_ge_90": {
+            "within_prefix": 3,
+            "before_recorded_release_command": 0,
+            "height_minus_reference_mm": {
+              "count": 3,
+              "min": -2.743456861803077,
+              "mean": -0.3058516542596683,
+              "median": 0.16230024632570791,
+              "p95": 1.5134715120610984,
+              "max": 1.6636016526983641
+            },
+            "distance_from_reference_mm": {
+              "count": 3,
+              "min": 0.504770447971794,
+              "mean": 1.731137133951109,
+              "median": 1.903151855846336,
+              "p95": 2.6972553738163105,
+              "max": 2.7854890980351965
+            }
+          },
+          "first_ge_98": {
+            "within_prefix": 3,
+            "before_recorded_release_command": 0,
+            "height_minus_reference_mm": {
+              "count": 3,
+              "min": -2.743456861803077,
+              "mean": -0.3058516542596683,
+              "median": 0.16230024632570791,
+              "p95": 1.5134715120610984,
+              "max": 1.6636016526983641
+            },
+            "distance_from_reference_mm": {
+              "count": 3,
+              "min": 0.504770447971794,
+              "mean": 1.731137133951109,
+              "median": 1.903151855846336,
+              "p95": 2.6972553738163105,
+              "max": 2.7854890980351965
+            }
+          },
+          "nearest_label_switch": {
+            "matched_draws": 3,
+            "censored_draws": 3,
+            "target_outside_horizon": 0,
+            "timing_error_s": {
+              "count": 3,
+              "min": 0.16666666666666666,
+              "mean": 0.16666666666666666,
+              "median": 0.16666666666666666,
+              "p95": 0.16666666666666666,
+              "max": 0.16666666666666666
+            },
+            "at_label_distance_from_reference_mm": {
+              "count": 6,
+              "min": 0.2652168000490348,
+              "mean": 0.7880589611750706,
+              "median": 0.6242495408331816,
+              "p95": 1.5037887280264235,
+              "max": 1.5993122167814569
+            },
+            "at_label_raw_gripper_percent": {
+              "count": 6,
+              "min": 75.80202221870422,
+              "mean": 76.27714276313782,
+              "median": 75.99707543849945,
+              "p95": 77.51070410013199,
+              "max": 77.98919081687927
+            },
+            "max_wait_distance_from_reference_mm": {
+              "count": 6,
+              "min": 0.4646734548403631,
+              "mean": 0.8906065730001907,
+              "median": 0.7902844071654482,
+              "p95": 1.5037887280264235,
+              "max": 1.5993122167814569
+            }
+          }
+        },
+        "at": {
+          "draws": 6,
+          "stable_reference_draws": 6,
+          "first_ge_90": {
+            "within_prefix": 1,
+            "before_recorded_release_command": 0,
+            "height_minus_reference_mm": {
+              "count": 1,
+              "min": -1.4823879589437283,
+              "mean": -1.4823879589437283,
+              "median": -1.4823879589437283,
+              "p95": -1.4823879589437283,
+              "max": -1.4823879589437283
+            },
+            "distance_from_reference_mm": {
+              "count": 1,
+              "min": 1.8677613675596936,
+              "mean": 1.8677613675596936,
+              "median": 1.8677613675596936,
+              "p95": 1.8677613675596936,
+              "max": 1.8677613675596936
+            }
+          },
+          "first_ge_98": {
+            "within_prefix": 1,
+            "before_recorded_release_command": 0,
+            "height_minus_reference_mm": {
+              "count": 1,
+              "min": -1.0897358461505007,
+              "mean": -1.0897358461505007,
+              "median": -1.0897358461505007,
+              "p95": -1.0897358461505007,
+              "max": -1.0897358461505007
+            },
+            "distance_from_reference_mm": {
+              "count": 1,
+              "min": 1.1907105245652343,
+              "mean": 1.1907105245652343,
+              "median": 1.1907105245652343,
+              "p95": 1.1907105245652343,
+              "max": 1.1907105245652343
+            }
+          },
+          "nearest_label_switch": {
+            "matched_draws": 1,
+            "censored_draws": 5,
+            "target_outside_horizon": 0,
+            "timing_error_s": {
+              "count": 1,
+              "min": 0.16666666666666666,
+              "mean": 0.16666666666666666,
+              "median": 0.16666666666666666,
+              "p95": 0.16666666666666666,
+              "max": 0.16666666666666666
+            },
+            "at_label_distance_from_reference_mm": {
+              "count": 6,
+              "min": 0.3590051865647558,
+              "mean": 0.6337425760883727,
+              "median": 0.5649241153515157,
+              "p95": 1.0915203719182074,
+              "max": 1.2287477169566035
+            },
+            "at_label_raw_gripper_percent": {
+              "count": 6,
+              "min": 75.67291259765625,
+              "mean": 75.88466107845306,
+              "median": 75.87498426437378,
+              "p95": 76.02869123220444,
+              "max": 76.03287696838379
+            },
+            "max_wait_distance_from_reference_mm": {
+              "count": 6,
+              "min": 0.6311873562982254,
+              "mean": 1.037286916520625,
+              "median": 1.1518344115977799,
+              "p95": 1.2528095910518517,
+              "max": 1.2608302157502678
+            }
+          }
+        }
+      },
+      "recorded_hold_prefix": {
+        "draws_with_recorded_hold_ticks": 6,
+        "hold_ticks_across_draws": 18,
+        "draws_by_anchor_relation": {
+          "within_hold": 6
+        },
+        "draws_ge_90_by_anchor_relation": {},
+        "draws_ge_98_by_anchor_relation": {},
+        "draws_with_hold_target_at_least_90_percent": 0,
+        "draws_with_hold_target_at_least_98_percent": 0,
+        "per_draw_min_raw_gripper_percent": {
+          "count": 6,
+          "min": 75.71027874946594,
+          "mean": 75.79885323842366,
+          "median": 75.79984664916992,
+          "p95": 75.88392198085785,
+          "max": 75.88714361190796
+        },
+        "per_draw_max_raw_gripper_percent": {
+          "count": 6,
+          "min": 75.79618096351624,
+          "mean": 75.850048661232,
+          "median": 75.8442610502243,
+          "p95": 75.91189444065094,
+          "max": 75.91990232467651
+        },
+        "projected_vs_anchor_measured": {
+          "eligible_draws": 6,
+          "eligible_points": 18,
+          "missing_points": 0,
+          "draws_at_least_2pp": 0,
+          "points_at_least_2pp": 0,
+          "maximum_increase_pp": -2.0,
+          "maximum_witness": {
+            "source_index": 7,
+            "cycle": 1,
+            "source_capture_frame": 236,
+            "row_index": 3679,
+            "draw": 0,
+            "seed": 20261526,
+            "tick": 1,
+            "raw_gripper_fraction": 0.7591642141342163,
+            "projected_integer_percent": 76,
+            "increase_percentage_points": -2.0
+          }
+        },
+        "projected_vs_anchor_last_command": {
+          "eligible_draws": 6,
+          "eligible_points": 18,
+          "missing_points": 0,
+          "draws_at_least_2pp": 0,
+          "points_at_least_2pp": 0,
+          "maximum_increase_pp": 0.0,
+          "maximum_witness": {
+            "source_index": 7,
+            "cycle": 1,
+            "source_capture_frame": 236,
+            "row_index": 3679,
+            "draw": 0,
+            "seed": 20261526,
+            "tick": 1,
+            "raw_gripper_fraction": 0.7591642141342163,
+            "projected_integer_percent": 76,
+            "increase_percentage_points": 0.0
+          }
+        },
+        "projected_vs_nominal_last_command": {
+          "eligible_draws": 6,
+          "eligible_points": 18,
+          "missing_points": 0,
+          "draws_at_least_2pp": 0,
+          "points_at_least_2pp": 0,
+          "maximum_increase_pp": 0.0,
+          "maximum_witness": {
+            "source_index": 7,
+            "cycle": 1,
+            "source_capture_frame": 236,
+            "row_index": 3679,
+            "draw": 0,
+            "seed": 20261526,
+            "tick": 1,
+            "raw_gripper_fraction": 0.7591642141342163,
+            "projected_integer_percent": 76,
+            "increase_percentage_points": 0.0
+          }
+        }
+      },
+      "recorded_hold_full": {
+        "draws_with_recorded_hold_ticks": 12,
+        "hold_ticks_across_draws": 282,
+        "draws_by_anchor_relation": {
+          "before_hold": 6,
+          "within_hold": 6
+        },
+        "draws_ge_90_by_anchor_relation": {},
+        "draws_ge_98_by_anchor_relation": {},
+        "draws_with_hold_target_at_least_90_percent": 0,
+        "draws_with_hold_target_at_least_98_percent": 0,
+        "per_draw_min_raw_gripper_percent": {
+          "count": 12,
+          "min": 75.60771107673645,
+          "mean": 75.75948784748714,
+          "median": 75.78357756137848,
+          "p95": 75.84866434335709,
+          "max": 75.86500644683838
+        },
+        "per_draw_max_raw_gripper_percent": {
+          "count": 12,
+          "min": 75.92229843139648,
+          "mean": 76.0142554839452,
+          "median": 76.01003348827362,
+          "p95": 76.1021226644516,
+          "max": 76.10464692115784
+        },
+        "projected_vs_anchor_measured": {
+          "eligible_draws": 12,
+          "eligible_points": 282,
+          "missing_points": 0,
+          "draws_at_least_2pp": 0,
+          "points_at_least_2pp": 0,
+          "maximum_increase_pp": -2.0,
+          "maximum_witness": {
+            "source_index": 7,
+            "cycle": 1,
+            "source_capture_frame": 204,
+            "row_index": 3647,
+            "draw": 0,
+            "seed": 20261523,
+            "tick": 32,
+            "raw_gripper_fraction": 0.7589029669761658,
+            "projected_integer_percent": 76,
+            "increase_percentage_points": -2.0
+          }
+        },
+        "projected_vs_anchor_last_command": {
+          "eligible_draws": 12,
+          "eligible_points": 282,
+          "missing_points": 0,
+          "draws_at_least_2pp": 0,
+          "points_at_least_2pp": 0,
+          "maximum_increase_pp": 0.0,
+          "maximum_witness": {
+            "source_index": 7,
+            "cycle": 1,
+            "source_capture_frame": 204,
+            "row_index": 3647,
+            "draw": 0,
+            "seed": 20261523,
+            "tick": 32,
+            "raw_gripper_fraction": 0.7589029669761658,
+            "projected_integer_percent": 76,
+            "increase_percentage_points": 0.0
+          }
+        },
+        "projected_vs_nominal_last_command": {
+          "eligible_draws": 12,
+          "eligible_points": 282,
+          "missing_points": 0,
+          "draws_at_least_2pp": 0,
+          "points_at_least_2pp": 0,
+          "maximum_increase_pp": 0.0,
+          "maximum_witness": {
+            "source_index": 7,
+            "cycle": 1,
+            "source_capture_frame": 204,
+            "row_index": 3647,
+            "draw": 0,
+            "seed": 20261523,
+            "tick": 32,
+            "raw_gripper_fraction": 0.7589029669761658,
+            "projected_integer_percent": 76,
+            "increase_percentage_points": 0.0
+          }
+        }
+      },
+      "first_open_from_recorded_contact_anchors": {
+        "after_close_before_lift_probe": {
+          "anchor_draws": 0,
+          "jaw_contact_reported_anchor_draws": 0,
+          "unknown_anchor_jaw_feedback_draws": 0,
+          "first_ge_90_within_prefix": 0,
+          "first_ge_90_source_phase_at_nominal_time": {},
+          "first_ge_90_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          },
+          "first_ge_98_within_prefix": 0,
+          "first_ge_98_source_phase_at_nominal_time": {},
+          "first_ge_98_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "lift_probe_before_full": {
+          "anchor_draws": 3,
+          "jaw_contact_reported_anchor_draws": 3,
+          "unknown_anchor_jaw_feedback_draws": 0,
+          "first_ge_90_within_prefix": 0,
+          "first_ge_90_source_phase_at_nominal_time": {},
+          "first_ge_90_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          },
+          "first_ge_98_within_prefix": 0,
+          "first_ge_98_source_phase_at_nominal_time": {},
+          "first_ge_98_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "lift_full_before_hold": {
+          "anchor_draws": 3,
+          "jaw_contact_reported_anchor_draws": 3,
+          "unknown_anchor_jaw_feedback_draws": 0,
+          "first_ge_90_within_prefix": 0,
+          "first_ge_90_source_phase_at_nominal_time": {},
+          "first_ge_90_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          },
+          "first_ge_98_within_prefix": 0,
+          "first_ge_98_source_phase_at_nominal_time": {},
+          "first_ge_98_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "recorded_hold": {
+          "anchor_draws": 12,
+          "jaw_contact_reported_anchor_draws": 12,
+          "unknown_anchor_jaw_feedback_draws": 0,
+          "first_ge_90_within_prefix": 0,
+          "first_ge_90_source_phase_at_nominal_time": {},
+          "first_ge_90_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          },
+          "first_ge_98_within_prefix": 0,
+          "first_ge_98_source_phase_at_nominal_time": {},
+          "first_ge_98_height_minus_reference_mm": {
+            "count": 0,
+            "min": null,
+            "mean": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "return_before_release": {
+          "anchor_draws": 15,
+          "jaw_contact_reported_anchor_draws": 15,
+          "unknown_anchor_jaw_feedback_draws": 0,
+          "first_ge_90_within_prefix": 4,
+          "first_ge_90_source_phase_at_nominal_time": {
+            "after_release": 4
+          },
+          "first_ge_90_height_minus_reference_mm": {
+            "count": 4,
+            "min": -2.743456861803077,
+            "mean": -0.5999857304306833,
+            "median": -0.6600438563090102,
+            "p95": 1.4384064417424651,
+            "max": 1.6636016526983641
+          },
+          "first_ge_98_within_prefix": 4,
+          "first_ge_98_source_phase_at_nominal_time": {
+            "after_release": 4
+          },
+          "first_ge_98_height_minus_reference_mm": {
+            "count": 4,
+            "min": -2.743456861803077,
+            "mean": -0.5018227022323765,
+            "median": -0.46371779991239637,
+            "p95": 1.4384064417424651,
+            "max": 1.6636016526983641
+          }
+        }
+      }
+    }
+  },
+  "physical_attempts": 0,
+  "robot_commands_sent": 0,
+  "created_unix": 1795340062.9254348,
+  "server_report": "/home/data4/hts/demo1/fr5-learning/evaluations/jev-pi05-history-prefix3-control-step500-20261122-v1/grasp-support-prefix3.json"
+}
