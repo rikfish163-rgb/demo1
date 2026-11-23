@@ -1,6 +1,6 @@
-"""One entry point for FR5 collection, data4 training and standalone pi0.5.
+"""One entry point for FR5 collect/collect-object, data4 training and pi0.5 run.
 
-Motion occurs only in collect/run with --execute. Reviews contain the user's
+Motion occurs only in collect/collect-object/run with --execute. Reviews contain the user's
 actual whole-episode verdict. Publishing code, exporting data and training do
 not access robot actuators. All large artifacts remain on server4090 data4.
 """
@@ -325,6 +325,24 @@ def main():
     coll.add_argument('--retreat',choices=('short','full'),default='short')
     coll.add_argument('--planner-note',help='Actual current-chat scene/route reasoning for an episode-local LLM plan')
     coll.add_argument('--held-out',action='store_true');coll.add_argument('--execute',action='store_true')
+    object_coll = sub.add_parser('collect-object',help='Prepare or execute a whole-task object demonstration')
+    object_coll.add_argument('--name',required=True)
+    object_coll.add_argument('--object-description',required=True)
+    selection = object_coll.add_mutually_exclusive_group(required=True)
+    selection.add_argument('--rgb-pixel',type=float,nargs=2,metavar=('U','V'))
+    selection.add_argument('--mask',type=Path,metavar='PNG')
+    object_coll.add_argument('--support-rgb-pixel',type=float,nargs=2,metavar=('U','V'),
+                             help='Pixel on the supporting surface for measured support geometry')
+    object_coll.add_argument('--closing-percent',type=int,required=True)
+    object_coll.add_argument('--grasp-offset',type=float,nargs=3,metavar=('X','Y','Z'),required=True)
+    object_coll.add_argument('--approach',choices=('top-down','side','tilted'),default='tilted')
+    object_coll.add_argument('--grasp-below-top-mm',type=float,default=10.)
+    object_coll.add_argument('--side-retraction-mm',type=float,default=0.)
+    object_coll.add_argument('--tilt-from-down-deg',type=float,default=55.)
+    object_coll.add_argument('--tilted-closing-edge',choices=('long','short'),default='long')
+    object_coll.add_argument('--split',choices=('training_complete_trial','held_out_complete_trial'),
+                             default='training_complete_trial')
+    object_coll.add_argument('--execute',action='store_true')
     rev = sub.add_parser('review')
     rev.add_argument('--episode',required=True);rev.add_argument('--verdict',choices=('success','failure'),required=True)
     rev.add_argument('--statement',required=True,help='The actual user verdict, never an inferred approval')
@@ -396,6 +414,15 @@ def main():
     elif args.operation=='observe':
         with robot_lease():result=observe(args.name)
     elif args.operation=='collect':result=collect(args)
+    elif args.operation=='collect-object':
+        from fr5_jev.collect_object import collect as collect_object
+        result=collect_object(name=args.name,object_description=args.object_description,
+            rgb_pixel=args.rgb_pixel,support_rgb_pixel=args.support_rgb_pixel,
+            mask_path=args.mask,closing_percent=args.closing_percent,
+            grasp_offset=args.grasp_offset,approach=args.approach,
+            grasp_below_top_mm=args.grasp_below_top_mm,side_retraction_mm=args.side_retraction_mm,
+            tilt_from_down_deg=args.tilt_from_down_deg,tilted_closing_edge=args.tilted_closing_edge,
+            split=args.split,execute=args.execute)
     elif args.operation=='review':result=review(args.episode,args.verdict,args.statement)
     elif args.operation=='export-stream':
         dataset=simple_name(args.dataset)

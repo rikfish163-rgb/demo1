@@ -1,0 +1,136 @@
+{
+  "source": "llm_workflow_start_setup",
+  "training_demo": false,
+  "policy_task_attempt": false,
+  "training_source": {
+    "source_index": 5,
+    "frame_index": 0,
+    "row_index": 2600,
+    "original_recording": "cup-ui-20261101-165538-d95608"
+  },
+  "target_joints_deg": [
+    84.565575,
+    -60.267296,
+    92.861015,
+    -26.655661,
+    151.642227,
+    6.49999
+  ],
+  "motion_commands_sent": 0,
+  "gripper_commands_sent": 0,
+  "initial_state": {
+    "program_state": 1,
+    "robot_state": 1,
+    "main_code": 0,
+    "sub_code": 0,
+    "robot_mode": 0,
+    "tool": 0,
+    "user": 0,
+    "EmergencyStop": 0,
+    "motion_done": 1,
+    "mc_queue_len": 0,
+    "collisionState": 0,
+    "safety_stop0_state": 0,
+    "safety_stop1_state": 0,
+    "gripper_fault": 0,
+    "gripper_position": 100,
+    "rbtEnableState": 1,
+    "gripper_motiondone": 1,
+    "gripper_active": 1,
+    "gripper_speed": 0,
+    "gripper_current": 0,
+    "gripper_fault_id": 0,
+    "joints": [
+      72.9489974975586,
+      -23.66455078125,
+      21.242773056030273,
+      37.34764099121094,
+      92.73287963867188,
+      2.2940757274627686
+    ],
+    "tcp": [
+      -117.02333068847656,
+      -808.639404296875,
+      198.46226501464844,
+      124.88098907470703,
+      -0.31762823462486267,
+      -20.604398727416992
+    ],
+    "flange": [
+      -117.02333068847656,
+      -808.639404296875,
+      198.46226501464844,
+      124.88098907470703,
+      -0.31762823462486267,
+      -20.604398727416992
+    ],
+    "tcp_speed": [
+      0.3439697950098968,
+      0.030071996699688405
+    ],
+    "joint_speeds_deg_s": [
+      -0.02175510519890622,
+      0.0,
+      0.02175510519819568,
+      0.0,
+      0.0,
+      -0.021755105198018043
+    ],
+    "timestamp": 1795423050.5285
+  },
+  "target_tcp": [
+    -13.1433343887329,
+    -581.6326904296875,
+    201.9036865234375,
+    92.8172149658203,
+    -1.268753051757812,
+    -67.26773834228516
+  ],
+  "routes": {
+    "start_setup": [
+      [
+        -117.02333068847656,
+        -808.639404296875,
+        198.46226501464844,
+        124.88098907470703,
+        -0.31762823462486267,
+        -20.604398727416992
+      ],
+      [
+        -13.1433343887329,
+        -581.6326904296875,
+        201.9036865234375,
+        92.8172149658203,
+        -1.268753051757812,
+        -67.26773834228516
+      ]
+    ]
+  },
+  "table": {
+    "normal": [
+      -0.0007449075776291542,
+      0.00841511341370777,
+      0.9999643148527528
+    ],
+    "offset_mm": -7.230287624671422,
+    "inliers": 3230,
+    "rms_mm": 1.0768666835640928
+  },
+  "tool_table_clearance_mm": {
+    "-1": 99.44525169574625,
+    "1": 99.63939007848299,
+    "housing": 77.62894621218025
+  },
+  "kinematics": {
+    "minimum_joint_margin_deg": 23.357772827148494,
+    "maximum_joint_step_deg": 0.8817920684814275,
+    "max_fk_error_mm": 7.39602906254002e-05,
+    "max_fk_rotation_error_deg": 1.2496948244233863e-05,
+    "max_link_center_displacement_mm": 299.08899822653,
+    "max_urdf_flange_error_mm": 0.00029803567148157904
+  },
+  "sample_count": 251,
+  "final_sample_target_difference_deg": 8.000122068807514e-06,
+  "check_status": "passed",
+  "checked_unix": 1795423052.0427847
+}

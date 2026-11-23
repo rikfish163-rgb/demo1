@@ -1,0 +1,22 @@
+{
+  "checked_unix": 1795425651.9142826,
+  "episode": "fr5-purple-collect-entry-20261123T172051-v1",
+  "execute_requested": false,
+  "entry": "fr5_runtime.system.main:collect-object",
+  "task_success_verified": false,
+  "status": "rejected",
+  "error": "RuntimeError: kex_exchange_identification: Connection closed by remote host\nConnection closed by 198.18.0.9 port 41380\n",
+  "functions": [
+    "<module>",
+    "main",
+    "collect",
+    "_server_ready",
+    "remote_json"
+  ],
+  "failure_phase": "server_storage_precheck",
+  "scene_capture_started": false,
+  "motion_commands_sent": 0,
+  "gripper_commands_sent": 0,
+  "local_episode_exists": false,
+  "completed_unix": 1795425653.793167
+}

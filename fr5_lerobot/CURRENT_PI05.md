@@ -4,11 +4,13 @@
 
 新 `fr5_jev` 教师示范由官方 `gpt-6-luna` 选择阶段，采用 **55° 斜上方抓取**。实测闭爪停在 **68%**，TCP 提升 **50.54 mm**，保持 **5.27 秒**，完成返回；松爪前模型选择 `observe_scene`，记录以 `interrupted` 结束。完整 **183 帧**及 **30.338 秒**录像已恢复归档，新增成功训练来源数仍为 **0**。
 
-11 月 23 日恢复检查时，机械臂静止在返回位置，夹爪未激活且反馈无效。14:56 单次开爪请求返回 0，12 秒内仍无有效全开反馈，状态包随后报告 `gripper_fault=1`；该恢复记录保留实际命令及 596 个反馈样本，机械臂运动命令为 0。当前需现场处理夹爪状态后继续采集。
+11 月 23 日 15:54 实查时，夹爪已激活、全开 100%、完成反馈有效、故障为 0。16:39 已用一次 `MoveL` 将空夹爪准备到训练来源 5 的真实首帧关节状态；六个不同反馈帧确认停稳，最大关节误差为 **0.00087°**。[准备实测](results/jev-pi05-source5-start-setup-20261123-v1.json)标为 `training_demo=false`，用于后续实测起点准备。
+
+当前紫块位置的四个斜抓端点均返回控制器 IK 112。[可达摆位规划](results/jev-purple-prospective-placement-20261123-v1.json)选取物体顶面中心 `[-180, -900, 123] mm`，投影至原始 RGB 约 `(1236, 564)`；1,129 个路径样点通过 IK/FK 和工具桌面检查。该摆位尚待现场落实，执行前重新采集 RGB-D。4090 SSH 入口目前在密钥交换前被重置，新录制、源码发布和模型部署需先恢复服务器连接。
 
 训练仅用用户验收成功的 `fr5_jev` 真实示范，两组模型均从完整 π0.5 基础权重完成 **5,000 个优化步**，随后完成两组三点执行窗口各 **1,000 步**的追加微调。十个完整检查点、基础权重对照及五模型同输入比较均已完成。当前实机模型保持 **history/5,000**，control/追加 1,000 步保留为位置对照。
 
-运行时在夹爪完成 ACK 后退役剩余前缀，从新鲜真实观测继续，materializer 相关 **35 项测试通过**。本轮提交 128 个目标、完成 127 个 ACK，尾目标在时间截止时停止；全部 wire callback 已排空，`StopMotion` 和 `ServoEnd` 均返回 0。OpenAI 官方 `gpt-6-luna` 已完成真实调用，HTTP 200，返回 `observe_scene`；新 `whole_task` 采集入口的 **48 项测试通过**。
+运行时在夹爪完成 ACK 后退役剩余前缀，从新鲜真实观测继续，materializer 相关 **35 项测试通过**。本轮提交 128 个目标、完成 127 个 ACK，尾目标在时间截止时停止；全部 wire callback 已排空，`StopMotion` 和 `ServoEnd` 均返回 0。官方 `gpt-6-luna` 已用于真实阶段决策；首次配对观测、单次重观测与继续执行的 **21 项定向测试通过**，数据入口 **53 项测试及一项采集联调通过**。
 
 ## 模型、数据与结果
 
@@ -102,15 +104,15 @@ J1 为 FR5 V5.0，控制器 `V3.8.15-QX`、Web 软件 `v3.8.4.2`、本地 SDK `V
 
 同一真实 RGB-D 中的绿色可见支撑面主要高度约为桌面上方 63.0 mm。原侧抓接触处，名义外壳距未腐蚀绿色点云最小约 2.74 mm，带已有 12 mm 余量的外壳与绿色点重叠。当前候选采用距紫块可见顶部下方 5 mm、沿工具轴反向后退 21 mm 的浅侧抓，带余量外壳到绿色可见点的最小距离为 10.39 mm。完整 1,409 个路径样点通过控制器 IK/FK 和工具桌面净空检查，关节余量 42.19°，最大 FK 位置误差 0.00008 mm；该候选预检的运动、夹爪控制命令均为 0。[可见支撑测量](results/jev-purple-support-geometry-20261122-v1.json)和[候选路径预检](results/jev-purple-support-aware-side-preflight-20261122-v1.json)保留证据。该候选须由新鲜观测重建，浅抓接触及隐藏体积由现场验证。
 
-[物体采集准备](../fr5_jev/prepare_object_session.py)支持新鲜 RGB-D 中选取真实物体，构造俯抓或侧向完整路线，并按完整物理来源指定训练或独立留出角色。`--grasp-below-top-mm` 和 `--side-retraction-mm` 根据物体和支撑改变接触位置，真实工具偏移单独保存。[prepare_from_routes](../fr5_jev/whole_task_collection.py)接收实测几何、物体描述与完整路线；[数据追加入口](training/prepare_jev_pi05_dataset.py)将新增独立留出排除在训练和统计量之外。采集通过 `fr5_jev` 保存真实观测、实际命令、反馈与用户验收。已发布及回读核对 `R/src/fr5-jev-pi05-tools-20261122-v10/`：阶段续行要求决策服务的实际匹配回答，保持结束还须满足真实持续时间；请求观察、等待、人工介入或调用失败时进入已有停止分支。决策相关 26 项、物体几何及准备相关 19 项测试已通过。
+[物体采集准备](../fr5_jev/prepare_object_session.py)支持俯抓、侧抓和斜抓完整路线，并按完整物理来源指定训练或独立留出角色。`--grasp-below-top-mm`、`--side-retraction-mm`、`--tilt-from-down-deg` 和 `--tilted-closing-edge` 定义实际接触位置与工具朝向，真实工具偏移单独保存。[prepare_from_routes](../fr5_jev/whole_task_collection.py)接收实测几何、物体描述与完整路线；[数据追加入口](training/prepare_jev_pi05_dataset.py)将新增独立留出排除在训练和统计量之外。服务器当前源码快照为 `R/src/fr5-jev-pi05-tools-20261122-v12/`；新观测链及斜抓朝向改动已在本机完成，待连接恢复后发布。
 
 采集决策已接入 OpenAI 官方 [POST /v1/decisions](https://api.openai.com/v1/decisions)，模型为 `gpt-6-luna`。一次真实调用返回 HTTP 200，回复模型为 `gpt-6-luna`，选择 `observe_scene`，实测时延 2.771 秒。凭据以 `600` 权限保存在本机。
 
-新 `whole_task` 入口的 48 项测试通过，后续采集使用 `current_codex_chat+gpt-6-luna`：当前聊天提供路线计划，官方模型执行阶段决策，记录 `selected_by=openai_decisions`。真实观测、实际命令与反馈仍由 `fr5_jev` 保存，成功示范经用户验收后纳入训练来源。
+后续采集使用 `current_codex_chat+gpt-6-luna`：当前聊天提供路线计划，官方模型执行阶段决策，记录 `selected_by=openai_decisions`。首次决策读取上一命令完成后的真实配对观测；选择 `observe_scene` 后录制新 JSON/JPEG，再以真实图像请求同阶段决策。匹配阶段动作后继续，连续要求观察或请求人工介入时停止。数据入口验证原始请求、响应、实际帧及 JPEG 字节的一致性，成功示范经用户验收后纳入训练来源。
 
 55° 斜抓示范为 `fr5-purple-tilted-luna-teacher-20261122T235616-v1`，采用可见顶部下方 10 mm、真实工具偏移 `[5.208, 8.072, 162] mm`、闭爪目标 0%、夹持力 10%。742 个路径样点通过 IK/FK 和工具桌面预检，最小关节余量 36.41°；张开工具对紫绿可见点云的扫掠检查通过。记录包含八次 `MoveL` 和一次 `MoveGripper`，完整提升、保持与返回阶段；松爪和撤离未执行。服务器物化目录为 `R/recording-spool/fr5-purple-tilted-luna-teacher-20261122T235616-v1/materialized/`，录像为 `R/reviews/fr5-purple-tilted-luna-teacher-20261122T235616-v1/full-process.mp4`。
 
-[物体路线生成](../fr5_jev/object_geometry.py)和[采集准备](../fr5_jev/prepare_object_session.py)已支持 `--approach tilted --tilt-from-down-deg 55`，从当前真实观测重建整条接近、提升、保持、原位放回与撤离路线。斜抓几何、长边开口、CLI 参数和既有准备入口的 24 项定向测试通过。
+[物体路线生成](../fr5_jev/object_geometry.py)和[采集准备](../fr5_jev/prepare_object_session.py)支持 `--approach tilted --tilt-from-down-deg 55`，默认跨长边闭合；`--tilted-closing-edge short` 准备转 90°、跨短边闭合的候选。接触位、工具轴、法兰偏移、正常方向提升与完整返回连续性均保存。当前斜抓几何与准备入口的 14 项定向测试通过。
 
 历史 Jev 采集服务为 `typesafe/jev-1.13.0[slow]`，曾实际返回 HTTP 402／`wallet_empty`，余额为 0 且无免费 decision allowance。
 
@@ -125,9 +127,10 @@ J1 为 FR5 V5.0，控制器 `V3.8.15-QX`、Web 软件 `v3.8.4.2`、本地 SDK `V
 - 夹爪完成后重观测规则已在 22:32 实机试验中运行至时限，未出现旧目标超时；紫块抓取仍未观察到成功。
 - 尚无新增经用户验收的成功多物体数据；官方 `gpt-6-luna` 本次真实调用返回 `observe_scene`，新的完整抓起、保持与放回轨迹仍须实机采集和验收。
 - 55° 斜抓教师示范已完成提升、五秒保持和返回，松爪前要求新观测，原记录保持中断状态。
-- 11 月 23 日夹爪未激活，单次开爪后出现故障反馈，当前实机采集需要现场恢复。
+- 4090 SSH 入口连接被重置，尚无已配置的替代连接；[连接实查](results/jev-pi05-ssh-readonly-20261123-v2.json)保留有效端点和实际结果。
+- 当前紫块需移到已规划的可达区，再按新观测重建路线。
 - 紫绿部件的连接关系、浅侧抓接触与隐藏体积仍待现场验证。
-- 当前 J2、J3 超出全部训练状态范围，归一化值约为 1.161、-1.314。新增真实示范须覆盖当前起始姿态、接近和撤离，训练来源重算统计量；[状态覆盖证据](results/jev-pi05-live-state-training-coverage-20261122-v2.json)保留实际值。
+- 11 月 22 日实测起点的 J2、J3 曾超出训练范围；当前已准备到来源 5 的真实起点。新增示范继续覆盖新任务的接近、保持、返回和撤离，并由训练来源重算统计量；[原状态覆盖证据](results/jev-pi05-live-state-training-coverage-20261122-v2.json)保留实际值。
 - 夹持点偏移是经验参考；FK 和工具桌面检查覆盖相应几何范围，接触、物体跟随、全臂及线缆须由实机检查与视频确认。
 - 预训练知识和离线拟合改善不能替代独立物体抓起、保持、放回及用户验收。抓取范围受可达空间、80 mm 夹爪开口、物体形状、材质和负载约束。
 

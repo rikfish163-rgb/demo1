@@ -2,7 +2,7 @@
 
 本包提供 FR5、Gemini 相机的记录适配、用户验收、stream 数据导出、π0.5 微调和连续策略执行。当前使用 8 条用户确认成功的教师示范；π0.5 完整实机抓起并放回成功数为 **0**。
 
-[当前产物](CURRENT_PI05.md) · [π0.5 原理](docs/pi05-fr5-principles.md) · [FR5/Jev 实验](docs/jev-pi05-experiment.md) · [代码、证据与服务器路径](PI05_FILES.md) · [历史抓杯记录](PI05_CUP_RUNBOOK.md)
+[当前产物](CURRENT_PI05.md) · [π0.5 原理](docs/pi05-fr5-principles.md) · [FR5/Jev 实验](docs/jev-pi05-experiment.md) · [新物体采集](docs/jev-pi05-first-object-trial.md) · [代码、证据与服务器路径](PI05_FILES.md) · [历史抓杯记录](PI05_CUP_RUNBOOK.md)
 
 ## 环境与入口
 
@@ -12,7 +12,7 @@
 
 | 工作 | 入口 |
 | --- | --- |
-| 教师采集、结果确认 | `./fr5-system collect`、`review`；`./run-collection-console.sh` |
+| 教师采集、结果确认 | `./fr5-system collect-object`、`collect`、`review`；`./run-collection-console.sh` |
 | 用户已确认源导出 | `./fr5-system export-stream`；`lerobot_robot_fairino.export_stream_policy` |
 | 真实 Jev 来源审计与训练划分 | `training/prepare_jev_pi05_dataset.py` |
 | 微调 | `./fr5-system train-stream`；`training/train_stream_pi05.py` |
@@ -43,7 +43,16 @@
 
 普通关节策略运行通过 `fr5-system run --scene-json <本轮实测桌面场景.json>` 接收桌面平面；`--prefix-steps 3` 可在检查点配置的前缀内选择前三点后重新观测，并分别记录检查点配置和实际消费长度。执行前检查整个待消费前缀的关节限位和工具到桌面的净空，保存只读 FK 结果及预检耗时。默认运行只预览，`--execute` 进入实机执行。
 
-新物体通过 `fr5_jev.prepare_object_session` 的俯抓或侧向入口准备，彩色目标可用 `--rgb-pixel`，低饱和度或复合表面可用原始 RGB 网格的 `--mask`。准备和完整采集均使用真实 `fr5_jev` 观测、决策、命令和反馈；整条试验在准备时指定训练或独立留出角色。
+新物体使用 [`collect-object`](docs/jev-pi05-first-object-trial.md)，将变量设为本轮名称、物体描述、原始 RGB 像素和实际夹爪参数后，在工程根目录执行：
+
+```bash
+./fr5-system collect-object \
+  --name "$TRIAL_NAME" --object-description "$OBJECT_DESC" \
+  --rgb-pixel "$RGB_U" "$RGB_V" \
+  --closing-percent "$CLOSE_PCT" --grasp-offset "$GX" "$GY" "$GZ"
+```
+
+默认采用 55° 倾斜、跨可见长边闭合，先验证服务器，再取 fresh RGB-D、检查目标/可选支撑扫掠、桌面及完整 IK/FK 路径，并上传证据；默认仅准备。`--rgb-pixel` 与 `--mask` 二选一，`--support-rgb-pixel` 可选；独立留出角色用 `--split held_out_complete_trial`。正式采集加 `--execute`，每次调用使用新名称和新观测，完成释放、撤离后自动归档与录像，结果仍须用户验收。
 
 [离线评估](training/evaluate_jev_pi05.py)保存未经筛选的完整模型动作和真实标签，[位置与时序分析](training/summarize_jev_pi05.py)将关节误差换算为夹持点毫米误差，并统计夹爪切换时间。当前配方和评分定义见[实验文档](docs/jev-pi05-experiment.md)。
 

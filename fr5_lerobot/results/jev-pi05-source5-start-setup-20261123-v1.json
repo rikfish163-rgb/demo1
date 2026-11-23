@@ -1,0 +1,153 @@
+{
+  "source": "llm_workflow_start_setup",
+  "training_demo": false,
+  "policy_task_attempt": false,
+  "status": "completed",
+  "training_source": {
+    "source_index": 5,
+    "frame_index": 0,
+    "row_index": 2600,
+    "original_recording": "cup-ui-20261101-165538-d95608"
+  },
+  "target_joints_deg": [
+    84.565575,
+    -60.267296,
+    92.861015,
+    -26.655661,
+    151.642227,
+    6.49999
+  ],
+  "final_joints_deg": [
+    84.5649185180664,
+    -60.267295837402344,
+    92.8612289428711,
+    -26.65500831604004,
+    151.64222717285156,
+    6.4995551109313965
+  ],
+  "final_tcp_mm_deg": [
+    -13.149728775024414,
+    -581.630126953125,
+    201.90188598632812,
+    92.81761932373047,
+    -1.2675538063049316,
+    -67.26837158203125
+  ],
+  "gripper": {
+    "active": 1,
+    "position": 100,
+    "motiondone": 1,
+    "fault": 0
+  },
+  "wire_calls": [
+    {
+      "method": "MoveL",
+      "args": [
+        [
+          84.565575,
+          -60.267296,
+          92.861015,
+          -26.655661,
+          151.642227,
+          6.49999
+        ],
+        [
+          -13.1433343887329,
+          -581.6326904296875,
+          201.9036865234375,
+          92.8172149658203,
+          -1.268753051757812,
+          -67.26773834228516
+        ],
+        0,
+        0,
+        10,
+        0,
+        100,
+        -1,
+        0,
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        0,
+        0,
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "issued_monotonic": 37841.950759303,
+      "return_code": 0,
+      "issued_unix": 1795423164.5597303,
+      "returned_monotonic": 37849.156702419,
+      "returned_unix": 1795423171.7656736
+    }
+  ],
+  "motion_commands_sent": 1,
+  "gripper_commands_sent": 0,
+  "preflight": {
+    "sample_count": 251,
+    "kinematics": {
+      "minimum_joint_margin_deg": 23.357772827148494,
+      "maximum_joint_step_deg": 0.8817787170410156,
+      "max_fk_error_mm": 0.0000660191335177883,
+      "max_fk_rotation_error_deg": 0.000012145996095114242,
+      "max_link_center_displacement_mm": 299.0890946979409,
+      "max_urdf_flange_error_mm": 0.0002927357627176326
+    },
+    "tool_table_clearance_mm": {
+      "1": 99.59454979677417,
+      "-1": 99.38224665810624,
+      "housing": 77.67385168318869
+    },
+    "final_target_error_deg": 0.000008000122068807514,
+    "table": {
+      "normal": [
+        -0.00011406730485283716,
+        0.009584283329628759,
+        0.9999540631957586
+      ],
+      "offset_mm": -8.369995926328864,
+      "inliers": 3294,
+      "rms_mm": 1.0774973333269104
+    },
+    "routes": {
+      "start_setup": [
+        [
+          -117.02362823486328,
+          -808.640380859375,
+          198.4639434814453,
+          124.88055419921875,
+          -0.317476749420166,
+          -20.604270935058594
+        ],
+        [
+          -13.1433343887329,
+          -581.6326904296875,
+          201.9036865234375,
+          92.8172149658203,
+          -1.268753051757812,
+          -67.26773834228516
+        ]
+      ]
+    }
+  },
+  "feedback_verification": {
+    "source": "/home/dianrobot/.local/state/fr5-system/monitor/fr5-current-device-20261123T164124.json",
+    "frame_count": 6,
+    "distinct_frame_counters": 6,
+    "max_joint_error_deg": 0.0008701217041000575,
+    "verified_unix": 1795423284.6760883,
+    "basis": "stopped feedback measured after the single successful MoveL request"
+  },
+  "raw_control_record": "/home/dianrobot/.local/state/fr5-system/jev-pi05-source5-start-setup-20261123T163922.json",
+  "worker_exitcode": 1,
+  "worker_final_write_error": "deque was not JSON serializable"
+}
